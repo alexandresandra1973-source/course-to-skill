@@ -124,3 +124,46 @@ def separating_power(criteria: list[Criterion],
 def element_availability(probes: list[Probe], arms: dict[str, str]) -> list[dict]:
     return [{"element": p.label,
              **{a: p.present_in(t) for a, t in arms.items()}} for p in probes]
+
+
+# --------------------------------------------------------------------------
+# Teto ESTRUTURAL a partir de score_anchors pré-declaradas (v0.1.3+)
+#
+# Quando a régua pré-declara em que faixa cada critério pontua sob um perfil de
+# comportamento (execução completa × recusa fail-closed disciplinada), o teto
+# deixa de ser hipotético: a banda de margem fica determinada antes da rodada.
+# --------------------------------------------------------------------------
+
+@dataclass
+class AnchoredProfile:
+    """Perfil de comportamento: para cada critério, qual âncora se aplica."""
+    name: str
+    anchor_by_criterion: dict[str, str]
+
+
+def profile_band(criteria: list[Criterion],
+                 anchors: dict[str, dict[str, list[float]]],
+                 profile: AnchoredProfile) -> dict:
+    """Faixa [min, max] do total ponderado sob um perfil de âncoras."""
+    lo = hi = 0.0
+    detail = []
+    for c in criteria:
+        aname = profile.anchor_by_criterion.get(c.name)
+        if aname is None or aname not in anchors.get(c.name, {}):
+            raise KeyError(f"âncora '{aname}' ausente para {c.name}")
+        a, b = anchors[c.name][aname]
+        lo += c.weight * a
+        hi += c.weight * b
+        detail.append({"criterion": c.name, "weight": c.weight, "anchor": aname,
+                       "range": [a, b],
+                       "weighted": [round(c.weight * a, 4), round(c.weight * b, 4)]})
+    return {"profile": profile.name, "min": round(lo, 4), "max": round(hi, 4),
+            "detail": detail}
+
+
+def margin_band(full_band: dict, other_band: dict) -> dict:
+    """Banda de margem implicada: pior caso do completo menos melhor do outro,
+    e melhor caso do completo menos pior do outro."""
+    lo = round(full_band["min"] - other_band["max"], 4)
+    hi = round(full_band["max"] - other_band["min"], 4)
+    return {"margin_min": lo, "margin_max": hi, "structural_ceiling": hi}
