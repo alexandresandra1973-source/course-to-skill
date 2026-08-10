@@ -51,7 +51,8 @@ def measure(field: str, values: list, domain_size: int,
     H = 0.0 if H == 0 else H          # evita -0.0 na apresentacao
     hn = H / math.log2(domain_size) if domain_size > 1 else 0.0
     if n < n_min:
-        state = "UNDERPOWERED"
+        # ADR-0014: distinct==1 com base pequena e suspeito, mas inconcluso.
+        state = "SUSPECT_UNDERPOWERED" if len(counts) == 1 else "UNDERPOWERED"
     elif len(counts) == 1:
         state = "COLLAPSED"
     elif hn < theta:

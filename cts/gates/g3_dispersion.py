@@ -25,7 +25,9 @@ def run(fields: dict[str, list], domains: dict[str, int], subject: str,
 
     collapsed = [m for m in measured if m.state == "COLLAPSED"]
     near = [m for m in measured if m.state == "NEAR_COLLAPSED"]
-    under = [m for m in measured if m.state == "UNDERPOWERED"]
+    under = [m for m in measured if m.state.endswith("UNDERPOWERED")]
+    suspect = [m for m in measured if m.state == "SUSPECT_UNDERPOWERED"]
+    under_epistemic = [m for m in under if m.field in EPISTEMIC]
     okf = [m for m in measured if m.state == "OK"]
 
     blocking = [m for m in collapsed if m.field in EPISTEMIC]
@@ -48,6 +50,10 @@ def run(fields: dict[str, list], domains: dict[str, int], subject: str,
             "collapsed_epistemic_blocking": len(blocking),
             "near_collapsed": len(near),
             "underpowered": len(under),
+            "suspect_underpowered": len(suspect),
+            "underpowered_epistemic": len(under_epistemic),
+            "underpowered_fields": [m.field for m in under_epistemic],
+            "n_missing_to_test": {m.field: N_MIN - m.n for m in under_epistemic},
             "ok": len(okf),
             "theta_provisorio": theta,
             "theta_status": "EM_ABERTO — nao calibrado (ADR-0005)",
@@ -62,7 +68,7 @@ def run(fields: dict[str, list], domains: dict[str, int], subject: str,
         findings=[{"field": m.field, "state": m.state, "H_norm": m.h_norm,
                    "distinct": m.distinct, "n": m.n,
                    "blocking": m.field in EPISTEMIC and m.state == "COLLAPSED"}
-                  for m in measured if m.state in ("COLLAPSED", "NEAR_COLLAPSED")],
+                  for m in measured if m.state in ("COLLAPSED", "NEAR_COLLAPSED", "SUSPECT_UNDERPOWERED")],
         note=("campo de valor unico carrega 0 bits e nao pode mudar o "
               "comportamento de consumidor nenhum (R2); `status` e' operacional "
               "e nao bloqueia"),

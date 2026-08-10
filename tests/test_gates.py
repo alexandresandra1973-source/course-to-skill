@@ -254,3 +254,41 @@ def test_portao_nunca_devolve_booleano_nu():
                                                     "UNDERPOWERED",
                                                     "NOT_ESTABLISHED", "DATA_DEFECT")
     assert r.subject and isinstance(r.evidence, dict) and r.evidence
+
+
+# --------------------------------------------------- ADR-0014 (emenda)
+
+def test_adr0014_suspect_underpowered_preserva_o_sinal():
+    m = measure("decision.origin_class", ["A"] * 8, 2)
+    assert m.state == "SUSPECT_UNDERPOWERED"
+    assert m.distinct == 1
+
+
+def test_adr0014_underpowered_epistemico_trava_s2():
+    class OK:
+        state = "PASS"
+        evidence: dict = {}
+
+    class G3:
+        state = "WARN"
+        evidence = {"underpowered_epistemic": 4, "collapsed_epistemic_blocking": 0,
+                    "underpowered_fields": ["decision.origin_class"]}
+    r = g6_ceiling.run(vault_sealed=True, g2=OK(), g3=G3(), g4=OK(), g5=OK(),
+                       n_holdout=99, threshold=0.80, requested_level="S2_MODELED",
+                       subject="fixture", corpus_stats={})
+    assert r.state == "FAIL"
+    assert r.evidence["ceiling_reached"] == "S1_ANCHORED"
+
+
+def test_adr0014_sem_underpowered_s2_libera():
+    class OK:
+        state = "PASS"
+        evidence: dict = {}
+
+    class G3:
+        state = "PASS"
+        evidence = {"underpowered_epistemic": 0, "collapsed_epistemic_blocking": 0}
+    r = g6_ceiling.run(vault_sealed=True, g2=OK(), g3=G3(), g4=OK(), g5=OK(),
+                       n_holdout=16, threshold=0.80, requested_level="S2_MODELED",
+                       subject="fixture", corpus_stats={})
+    assert r.state == "PASS"

@@ -57,10 +57,13 @@ def run(*, vault_sealed: bool, g2, g3, g4, g5,
                 f"({getattr(g2,'evidence',{}).get('records_anchored_ok','?')}/"
                 f"{getattr(g2,'evidence',{}).get('records','?')} ancoradas)"):
             reached = "S1_ANCHORED"
-            if note("S2_MODELED", g3 is not None and g3.state in ("PASS", "WARN"),
+            # ADR-0014: campo epistemico UNDERPOWERED impede afirmar S2_MODELED.
+            n_under = (getattr(g3, "evidence", {}) or {}).get("underpowered_epistemic", 0)
+            s2_ok = (g3 is not None and g3.state in ("PASS", "WARN") and n_under == 0)
+            if note("S2_MODELED", s2_ok,
                     f"G3={getattr(g3,'state','AUSENTE')} "
                     f"({getattr(g3,'evidence',{}).get('collapsed_epistemic_blocking','?')}"
-                    " campos epistemicos colapsados)"):
+                    f" colapsados, {n_under} epistemicos UNDERPOWERED — ADR-0014)"):
                 reached = "S2_MODELED"
                 if note("S3_AUDITED", g4 is not None and g4.state == "PASS",
                         "G4 fora do escopo da fatia vertical (Adversario nao implementado)"):
