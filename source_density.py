@@ -152,6 +152,11 @@ def main() -> int:
                   "sha256": sha256(P001_TRANSCRIPT.read_bytes()),
                   "video_id": p1_meta["source"]["video_id"]})
 
+    # CANÁRIO DE CALIBRAÇÃO. O PILOT-001 é sabidamente uma fonte FINA: uma
+    # tabela de decisão multi-ramo e o resto checklist linear. Se o medidor não
+    # o classificar assim, ele não está apto a qualificar fonte nenhuma.
+    canary_pass = p1["one_page_test"]["verdict"] == "FINA"
+
     cand = load_candidate()
     c = None
     if cand:
@@ -216,7 +221,37 @@ def main() -> int:
           f"{'sim' if t['fits_in_one_page'] else 'não'} | **{t['verdict']}** |")
     w("")
 
-    if c:
+    w("## Canário de calibração")
+    w("")
+    w("| | |")
+    w("|---|---|")
+    w("| exigido | PILOT-001 deve sair **FINA** |")
+    w(f"| medidor deu | **{p1['one_page_test']['verdict']}** |")
+    w(f"| resultado | **{'APROVADO' if canary_pass else 'REPROVADO'}** |")
+    w("")
+    if not canary_pass:
+        w("O PILOT-001 tem **uma** tabela de decisão multi-ramo e o resto é "
+          "checklist linear. O medidor conta 49 pontos porque `if`, `when`, "
+          "`should` e `make sure` são cola de discurso em aula falada — "
+          "**26 dos 49 não são decisão nenhuma**. Diagnóstico item a item em "
+          "`DENSITY-METER-CALIBRATION.md`.")
+        w("")
+
+    if not canary_pass:
+        w("## Veredito")
+        w("")
+        w("**NÃO EMITIDO — medidor reprovado no canário.**")
+        w("")
+        w("Nenhum veredito de qualificação sai deste relatório enquanto a "
+          "contagem léxica não separar metodologia de discurso. Emitir um "
+          "número que já se sabe errado no caso conhecido, para decidir sobre o "
+          "caso desconhecido, seria o pior uso possível deste instrumento.")
+        w("")
+        w("As contagens de superfície abaixo continuam válidas — duração, "
+          "palavras, palavras/min, limiares e frameworks nomeados são o que "
+          "dizem ser. O que não vale é `decisões/min` e o teste da uma página.")
+        w("")
+    elif c:
         ratio = round(c["decision_density_per_minute"]
                       / p1["decision_density_per_minute"], 3)
         qualifies = not c["one_page_test"]["fits_in_one_page"]
@@ -272,6 +307,8 @@ def main() -> int:
         w("")
 
     OUT.write_text("\n".join(L) + "\n", encoding="utf-8")
+    print(f"canário de calibração: "
+          f"{'APROVADO' if canary_pass else 'REPROVADO — veredito suprimido'}")
     print(f"PILOT-001: {p1['distinct_decision_points']} decisões / "
           f"{p1['duration_minutes']} min = {p1['decision_density_per_minute']}/min "
           f"| uma página: {p1['one_page_test']['verdict']}")

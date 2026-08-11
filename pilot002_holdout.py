@@ -47,6 +47,7 @@ HELDOUT = [
     ("Managing Your Context Window and Token Usage", "44:40", "50:00"),
 ]
 EXPECTED_LAST_MARK = "1:21:35"
+EXPECTED_CHAPTERS = 14
 DURATION_S = 4897  # da página do vídeo, já apurado em PILOT-002-CANDIDATE-METADATA
 
 
@@ -142,6 +143,12 @@ def g0_seal() -> dict:
             "last_mark_expected": EXPECTED_LAST_MARK,
             "last_mark_matches_expected": marks_orig[-1] == EXPECTED_LAST_MARK,
             "last_mark_normalized": to_mark(mmss_to_s(marks_orig[-1])),
+        },
+        "chapters": {
+            "found": len(headings),
+            "expected": EXPECTED_CHAPTERS,
+            "matches_expected": len(headings) == EXPECTED_CHAPTERS,
+            "titles": headings,
         },
         "sections": headings,
     }
@@ -375,11 +382,15 @@ def main() -> int:
         + yaml.safe_dump(seal, allow_unicode=True, sort_keys=False, width=100),
         encoding="utf-8")
     m = seal["marks"]
+    ch = seal["chapters"]
     print(f"G0: {m['in_docx']} marcas | última {m['last_mark_docx']} "
           f"(esperada {m['last_mark_expected']}: "
           f"{'CONFERE' if m['last_mark_matches_expected'] else 'DIVERGE'}) | "
+          f"capítulos {ch['found']}/{ch['expected']}: "
+          f"{'CONFERE' if ch['matches_expected'] else 'DIVERGE'} | "
           f"timestamps sobreviveram: {m['timestamps_survived_copy']}")
-    if not m["last_mark_matches_expected"] or not m["timestamps_survived_copy"]:
+    if (not m["last_mark_matches_expected"] or not m["timestamps_survived_copy"]
+            or not ch["matches_expected"]):
         print("G0 FALHOU — não sigo para o corte")
         return 2
 
