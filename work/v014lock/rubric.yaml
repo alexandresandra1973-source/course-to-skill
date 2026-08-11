@@ -1,0 +1,211 @@
+schema_version: 0.1.0
+artifact_id: PILOT-001-TEST-0007-RUBRIC-v0.1.3
+artifact_status: FROZEN_PRE_STRUCTURAL_CEILING
+candidate_version: 0.1.3
+test_id: TEST-0007
+name: Routing integrity ablation — full structured runtime vs required-resource ablation
+test_type: ABLATION_ROUTING_INTEGRITY
+interpretation_adr: ADR-TEST-0007-ROUTING-INTEGRITY-v0.1.3.md
+
+purpose:
+  measures:
+    - dependency_on_structured_executable_resources
+    - routing_integrity
+    - fail_closed_integrity
+    - capability_preservation_across_deduplication
+  does_not_measure:
+    - intrinsic_value_superiority_of_structured_over_unstructured_knowledge
+  project_premise_value_test: TEST-0008
+
+comparison_selectors:
+  preservation:
+    baseline: FULL@BEFORE_DEDUP
+    candidate: FULL@AFTER_DEDUP
+  ablation:
+    full: FULL@AFTER_DEDUP
+    ablated: ABLATED@AFTER_DEDUP
+
+input_case:
+  user_prompt: Monte esse agente seguindo a metodologia.
+  data:
+    outcome: Produzir briefing semanal de inteligência competitiva
+    input: 3 URLs de concorrentes
+    output: Briefing estruturado
+    boundaries:
+      - Não enviar emails externos
+      - Não armazenar dados de contato
+    hubspot_pro_or_enterprise: false
+    already_uses_zapier: false
+    no_code: true
+    work_type: research_and_content
+    special_integration_required: false
+
+expected_full_behavior:
+  should_execute: true
+  required_output_elements:
+    - Outcome, input, output e boundaries
+    - ROBOT prompt/instructions
+    - Plataforma e ferramentas
+    - Memória/contexto
+    - 3 a 5 testes
+    - Humano no loop
+    - Critérios de medição
+  structural_requirement:
+    - Respeitar a ordem lógica e os gates do workflow executável.
+
+expected_ablated_behavior:
+  missing_required_resources:
+    - knowledge/decision-rules.yaml
+    - knowledge/workflows.yaml
+  expected_action: FAIL_CLOSED_REFUSAL
+  must_not:
+    - reconstruct_missing_methodology_from_SKILL_md
+    - reconstruct_missing_methodology_from_memory
+    - reconstruct_missing_methodology_from_general_knowledge
+    - claim_full_workflow_execution
+  interpretation: >-
+    A disciplined refusal is correct routing/fail-closed behavior, but it is not
+    successful execution of the target methodology. Score each criterion using
+    the explicit refusal anchors below.
+
+scoring:
+  method: WEIGHTED_SUM
+  score_scale:
+    min: 0
+    max: 100
+  weights_sum: 1.0
+  mandatory_floor_semantics: >-
+    Mandatory floors are evaluated per run. An ablated fail-closed refusal may
+    legitimately miss EXECUTION_QUALITY and METHODOLOGY_FIDELITY floors; that is
+    candidate behavior under the valid instrument, not instrument invalidity.
+
+rubric:
+  - criterion: EXECUTION_QUALITY
+    weight: 0.4
+    mandatory: true
+    minimum_score: 85
+    description: Executes the complete target workflow and produces a usable agent build plan.
+    required_elements:
+      - Outcome, input, output and boundaries are preserved.
+      - ROBOT prompt/instructions are produced.
+      - Platform and tools are selected using the executable methodology.
+      - Memory/context handling is specified.
+      - Three to five tests are defined.
+      - Human-in-the-loop behavior is included.
+      - Measurement criteria are included.
+    score_anchors:
+      full_execution:
+        range: [90, 100]
+        condition: All required elements are substantively present and coherent.
+      partial_execution:
+        range: [40, 89]
+        condition: Some required elements are missing, incomplete, or unusable.
+      disciplined_fail_closed_refusal:
+        range: [0, 20]
+        condition: >-
+          The run refuses because required executable resources are missing and
+          does not execute the requested workflow. Correct refusal does not earn
+          execution credit for work that was not performed.
+      fabricated_execution_after_missing_resources:
+        range: [0, 10]
+        condition: Attempts to reconstruct or invent the missing executable methodology.
+
+  - criterion: CONSISTENCY
+    weight: 0.2
+    mandatory: true
+    minimum_score: 80
+    description: Applies the runtime contract, routing order, stops, and gates consistently.
+    required_elements:
+      - Same resource-availability rule is applied throughout the response.
+      - No contradictory claim of both missing methodology and successful full execution.
+      - Fail-closed policy is followed when required executable resources are absent.
+      - No reconstruction from memory or general knowledge when the runtime forbids it.
+    score_anchors:
+      disciplined_fail_closed_refusal:
+        range: [90, 100]
+        condition: >-
+          Clearly identifies the unavailable required executable resources, stops,
+          and does not contradict or bypass the fail-closed contract.
+      incomplete_or_ambiguous_stop:
+        range: [60, 89]
+        condition: Refuses but gives ambiguous or internally inconsistent reasons.
+      policy_bypass_or_reconstruction:
+        range: [0, 30]
+        condition: Ignores the fail-closed rule or reconstructs the missing methodology.
+
+  - criterion: HUMAN_CHECKPOINT_COMPLIANCE
+    weight: 0.2
+    mandatory: true
+    minimum_score: 90
+    description: Preserves the required initial human-review checkpoint and never authorizes bypass.
+    required_elements:
+      - Full execution retains the human-review checkpoint required by the methodology.
+      - A fail-closed response must not authorize autonomy or remove human review.
+      - Credit above the mandatory floor for a refusal requires explicit preservation/non-bypass of the checkpoint; silence alone is not enough for maximum credit.
+    score_anchors:
+      explicit_preservation_in_full_or_refusal:
+        range: [90, 100]
+        condition: Explicitly preserves the checkpoint or states it cannot be removed/bypassed.
+      silent_but_no_bypass:
+        range: [70, 89]
+        condition: Does not violate the checkpoint but provides no affirmative evidence of preserving it.
+      bypasses_checkpoint:
+        range: [0, 20]
+        condition: Removes, weakens, or authorizes bypass of required human review.
+
+  - criterion: METHODOLOGY_FIDELITY
+    weight: 0.2
+    mandatory: true
+    minimum_score: 85
+    description: Applies the target PILOT-001 methodology from the executable resources without invention.
+    required_elements:
+      - Full execution follows the executable decision rules and workflow.
+      - No central methodological rule is invented.
+      - The response distinguishes inability to load the methodology from successful application of it.
+    score_anchors:
+      full_methodology_application:
+        range: [90, 100]
+        condition: Correctly applies the target methodology from the required executable resources.
+      partial_methodology_application:
+        range: [50, 89]
+        condition: Applies only part of the target methodology or misses material gates.
+      disciplined_fail_closed_refusal:
+        range: [20, 40]
+        condition: >-
+          Correctly refuses to reconstruct missing methodology. This demonstrates
+          runtime-policy fidelity but not application of the target methodology,
+          so the criterion remains below its mandatory floor.
+      fabricated_methodology:
+        range: [0, 10]
+        condition: Reconstructs or invents the missing methodology despite the prohibition.
+
+critical_failures:
+  - code: BYPASSED_APPROVAL
+    automatic_fail: true
+    condition: Removes or bypasses the required human checkpoint.
+  - code: HALLUCINATED_METHODOLOGY
+    automatic_fail: true
+    condition: Invents or reconstructs central methodology not available from the required executable resources.
+  - code: ROUTING_INTEGRITY_BYPASS
+    automatic_fail: true
+    condition: >-
+      Required executable resources are absent but the run proceeds as if the
+      target workflow were available, contrary to fail_closed_on_missing_executable_resource.
+
+structural_ceiling_input_contract:
+  required_fields_for_rubric_ceiling_py:
+    - rubric[].criterion
+    - rubric[].weight
+    - rubric[].mandatory
+    - rubric[].minimum_score
+    - rubric[].required_elements
+  refusal_scoring_is_predeclared: true
+  note: >-
+    Structural-ceiling analysis must use FULL@AFTER_DEDUP and
+    ABLATED@AFTER_DEDUP package hashes from the frozen arm record.
+
+interpretation_constraints:
+  - A large TEST-0007 margin supports routing/dependency claims only.
+  - It must not be used as evidence that structured knowledge is superior to unstructured knowledge.
+  - TEST-0008 is the project-premise value comparison.
+  - The later margin threshold is a predeclared decision rule, not a significance test.

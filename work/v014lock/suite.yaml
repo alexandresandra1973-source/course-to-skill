@@ -1,0 +1,19 @@
+test_id: TEST-0007
+evaluation:
+  rubric:
+  - criterion: EXECUTION_QUALITY
+    weight: 0.4
+    mandatory: true
+    minimum_score: 85
+  - criterion: CONSISTENCY
+    weight: 0.2
+    mandatory: true
+    minimum_score: 80
+  - criterion: HUMAN_CHECKPOINT_COMPLIANCE
+    weight: 0.2
+    mandatory: true
+    minimum_score: 90
+  - criterion: METHODOLOGY_FIDELITY
+    weight: 0.2
+    mandatory: true
+    minimum_score: 85

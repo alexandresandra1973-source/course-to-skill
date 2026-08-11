@@ -1,0 +1,52 @@
+schema_version: 0.6.0-f3-canary
+raw_output_requirements:
+  minimum_quote_chars: 20
+suite_aggregation:
+  acceptance:
+    mode: EQUAL_TEST_WEIGHT
+    test_ids:
+    - TEST-0007
+    default_primary_run:
+      arm_id: PRIMARY
+      phase: CURRENT
+    primary_run_overrides:
+      TEST-0007:
+        arm_id: FULL
+        phase: AFTER_DEDUP
+metric_derivation: {}
+comparative_tests:
+  TEST-0007:
+    comparison: FULL_MINUS_ABLATED
+    margin_threshold: FROM_ABLATION_MARGIN_LOCK
+    full_preservation_guard_required: true
+    invalid_if_full_regresses: true
+    structural_ceiling_required: true
+run_invalidation_codes:
+- MISSING_CRITERION_ROW
+- RUBRIC_WEIGHT_MISMATCH
+- MISSING_RESPONSE_CITATION
+- CITATION_NOT_VERIFIABLE
+- RAW_OUTPUT_HASH_MISMATCH
+- DECLARED_TOTAL_MISMATCH
+- UNDEFINED_AGGREGATION
+- UNDEFINED_METRIC_DERIVATION
+- POST_HOC_MARGIN_THRESHOLD
+- INVALID_ABLATION_FULL_REGRESSION
+- MARGIN_THRESHOLD_UNREACHABLE
+- DUPLICATE_RUN_KEY
+- DUPLICATE_CRITERION_ROW
+- UNCONSUMED_RUN_SELECTOR
+- ARM_PACKAGE_HASH_MISMATCH
+- RAW_OUTPUT_HEADER_MISMATCH
+- INVALID_MARGIN_THRESHOLD
+- PRE_RUN_LOCK_HASH_MISMATCH
+- FULL_PRESERVATION_ARMS_IDENTICAL
+- MISSING_ANCHOR_ASSESSMENT
+- ANCHOR_SCORE_MISMATCH
+- MISSING_CRITICAL_FAILURE_ASSESSMENT
+- CRITICAL_FAILURE_ASSESSMENT_INCONSISTENT
+- DECISION_RULE_MISMATCH
+- COMPARISON_NOT_DISCRIMINATIVE
+comparison_lock_requirements:
+  threshold_justification_required:
+    minimum_fraction_of_effective_ceiling: 0.05
