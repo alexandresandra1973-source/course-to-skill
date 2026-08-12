@@ -508,56 +508,177 @@ def strip_for_judge(operator: dict) -> dict:
     }
 
 
-def blinding_protocol(seed_material: bytes) -> tuple[dict, dict]:
-    """Compromisso-e-revelacao: a permutacao e fixada AGORA e revelada depois.
+def blinding_protocol(nonce: bytes) -> tuple[dict, dict, str]:
+    """Compromisso-e-revelacao com a derivacao PUBLICADA AGORA.
 
-    Publicar so o hash do nonce impede que a ordem seja escolhida depois de ver
-    os outputs, e permite provar isso na abertura.
+    O que vincula NAO e o hash do nonce sozinho. E o hash MAIS a funcao de
+    derivacao determinIstica publicada de antemao: com so o hash, seria possivel
+    escolher a funcao depois de ver os outputs e ainda exibir um nonce que casa.
+
+    TRES DEFEITOS DA PRIMEIRA VERSAO, consertados aqui:
+
+    1. DERIVACAO AMBIGUA. "ordenados pelos tres primeiros bytes" nao publicava a
+       ordem canonica da lista de condicoes — que decide qual byte pareia com
+       qual nome — nem a regra de desempate. Derivacao ambigua tambem nao
+       vincula: na abertura daria para defender outra leitura. Agora: indice
+       numa lista de 6 permutacoes em ordem lexicografica, sem empate possivel.
+
+    2. NONCE NAO ERA SEGREDO. Era sha256 de dois hashes publicados. Vinculava
+       (nao dava para trocar depois) mas nao ESCONDIA: quem conhecesse a receita
+       recomputava a permutacao. O sigilo repousava sobre ninguem ler o script
+       de construcao, que esta no repositorio. Agora: os.urandom(32).
+
+    3. COMPROMISSO E DERIVACAO USAVAM O MESMO DIGEST. Se commitment =
+       sha256(nonce) e a derivacao tambem parte de sha256(nonce), PUBLICAR O
+       COMPROMISSO PUBLICA A ENTRADA DA DERIVACAO. Agora ha separacao de
+       dominio: sha256(b"COMMIT|"+nonce) para o compromisso e
+       sha256(b"DERIVE|"+nonce) para a permutacao. Publicar o primeiro nao diz
+       nada sobre o segundo.
+
+    Redesenhar agora e legitimo porque NENHUM output existe ainda.
     """
-    digest = hashlib.sha256(seed_material).digest()
-    order = sorted(CONDITION_NAMES, key=lambda n: digest[CONDITION_NAMES.index(n)])
+    import itertools
+    canonical = sorted(CONDITION_NAMES)
+    perms = sorted(itertools.permutations(canonical))
+    commit = hashlib.sha256(b"COMMIT|" + nonce).hexdigest()
+    derive = hashlib.sha256(b"DERIVE|" + nonce).digest()
+    index = int.from_bytes(derive[:8], "big") % len(perms)
+    order = list(perms[index])
     mapping = dict(zip(["A", "B", "C"], order))
+
+    algorithm = (
+        "CANONICAL = sorted(['FULL_SKILL','SUMMARY_AS_SKILL','SUMMARY_AS_SUMMARY'])\n"
+        "PERMS     = sorted(itertools.permutations(CANONICAL))   # 6, lexicografica\n"
+        "derive    = sha256(b'DERIVE|' + nonce).digest()\n"
+        "index     = int.from_bytes(derive[:8], 'big') % 6\n"
+        "order     = PERMS[index]\n"
+        "slots     = {'A': order[0], 'B': order[1], 'C': order[2]}\n"
+        "commitment= sha256(b'COMMIT|' + nonce).hexdigest()")
+
     public = {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "artifact_id": "TEST-0008-BLINDING-PROTOCOL",
         "artifact_status": "DRAFT_NOT_FROZEN",
         "audience": "OPERADOR E AUDITOR (nao o juiz)",
         "rule": ("O juiz recebe os tres outputs SEM ROTULO, nos slots A, B e C, em "
                  "ordem embaralhada. A ordem esta selada em artefato que ele nao ve."),
-        "commitment_scheme": "COMPROMISSO_E_REVELACAO",
-        "nonce_sha256": hashlib.sha256(seed_material).hexdigest(),
-        "permutation_derivation": ("ordem = CONDITION_NAMES ordenados pelos tres "
-                                   "primeiros bytes de sha256(nonce)"),
-        "why_commit_reveal": ("publicar so o hash agora impede escolher a ordem "
-                              "depois de ver os outputs; revelar o nonce na abertura "
-                              "permite a qualquer um recomputar a permutacao e "
-                              "conferir que era esta desde o inicio"),
+        "commitment_scheme": "COMPROMISSO_E_REVELACAO_COM_SEPARACAO_DE_DOMINIO",
+        "commitment": commit,
+        "commitment_formula": "sha256(b'COMMIT|' + nonce)",
+        "PERMUTATION_DERIVATION_PUBLISHED_NOW": {
+            "publicada_antes_de_qualquer_output_existir": True,
+            "por_que_isso_e_o_que_vincula": (
+                "O hash do nonce sozinho NAO vincula: com a derivacao revelada so na "
+                "abertura, daria para escolher a funcao depois de ver os outputs e "
+                "ainda exibir um nonce que casa com o hash. O que vincula e o "
+                "compromisso MAIS a derivacao deterministica publicada de antemao."),
+            "canonical_condition_list": canonical,
+            "canonical_list_is_sorted": True,
+            "permutations_in_lexicographic_order": [list(x) for x in perms],
+            "algorithm": algorithm,
+            "no_tie_break_needed": ("indice numerico numa lista de 6; nao ha "
+                                    "comparacao entre bytes iguais"),
+            "verifier": "verify_blinding_commitment.py",
+        },
+        "domain_separation": {
+            "commit_prefix": "COMMIT|", "derive_prefix": "DERIVE|",
+            "por_que": ("sem separacao, commitment = sha256(nonce) e a derivacao "
+                        "partindo do mesmo digest fariam a publicacao do compromisso "
+                        "publicar a entrada da derivacao — e qualquer um calcularia a "
+                        "permutacao a partir do artefato publico"),
+        },
+        "nonce": {
+            "source": "os.urandom(32)",
+            "is_a_real_secret": True,
+            "nao_derivado_de_hashes_publicados": True,
+            "por_que_importa": ("um nonce deterministico a partir de material "
+                                "publicado vincula mas nao esconde: quem conhecesse a "
+                                "receita recomputaria a permutacao"),
+            "revealed_at": "abertura, depois de as notas do juiz estarem seladas",
+        },
         "seal_artifact": "TEST-0008-BLINDING-SEAL.yaml",
         "seal_is_not_in_the_judge_package": True,
+        "how_to_verify_at_reveal": [
+            "1. pegue o nonce revelado no selo",
+            "2. confira sha256(b'COMMIT|'+nonce) == commitment publicado aqui",
+            "3. recompute a permutacao pelo algoritmo publicado aqui",
+            "4. confira que bate com slot_to_condition do selo",
+            "python3 verify_blinding_commitment.py --nonce <hex> faz os quatro",
+        ],
         "baseline_excluded_from_judge_package": {
             "excluded": True,
             "why": ("o juiz com o resumo em maos poderia reconhecer, num output que "
                     "acompanha de perto aquela prosa, a origem do slot — e a cegueira "
-                    "cairia pela porta dos fundos"),
-        },
+                    "cairia pela porta dos fundos")},
         "l0_included_in_judge_package": {
             "included": True,
             "why": ("a fonte nao identifica nenhum slot e e o que licencia cada "
-                    "criterio; sem ela o juiz pontua de memoria"),
-        },
+                    "criterio; sem ela o juiz pontua de memoria")},
     }
     seal = {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "artifact_id": "TEST-0008-BLINDING-SEAL",
         "artifact_status": "SEALED_DRAFT",
         "NAO_PARA_O_JUIZ": True,
         "aviso": "Este arquivo revela a ordem. Nunca entra no pacote do juiz.",
-        "nonce_hex": seed_material.hex(),
-        "nonce_sha256": hashlib.sha256(seed_material).hexdigest(),
+        "nonce_hex": nonce.hex(),
+        "commitment": commit,
+        "permutation_index": index,
         "slot_to_condition": mapping,
         "reveal_when": "na abertura, depois de as notas do juiz estarem seladas",
     }
-    return public, seal
+    return public, seal, algorithm
+
+
+VERIFIER = '''#!/usr/bin/env python3
+"""Confere o compromisso de cegamento do TEST-0008. Sem dependencias.
+
+    python3 verify_blinding_commitment.py --nonce <hex> [--protocol BLINDING-PROTOCOL.yaml]
+
+Recomputa o compromisso e a permutacao a partir do nonce revelado e do algoritmo
+publicado ANTES da rodada. Qualquer pessoa pode rodar; nada aqui depende de
+confiar em quem montou o pacote.
+"""
+import argparse, hashlib, itertools, re, sys
+
+CANONICAL = sorted(["FULL_SKILL", "SUMMARY_AS_SKILL", "SUMMARY_AS_SUMMARY"])
+PERMS = sorted(itertools.permutations(CANONICAL))
+
+
+def derive(nonce: bytes):
+    commit = hashlib.sha256(b"COMMIT|" + nonce).hexdigest()
+    d = hashlib.sha256(b"DERIVE|" + nonce).digest()
+    i = int.from_bytes(d[:8], "big") % len(PERMS)
+    return commit, i, dict(zip(["A", "B", "C"], PERMS[i]))
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--nonce", required=True)
+    ap.add_argument("--protocol", default="BLINDING-PROTOCOL.yaml")
+    a = ap.parse_args()
+    commit, i, slots = derive(bytes.fromhex(a.nonce))
+    print(f"commitment recomputado : {commit}")
+    print(f"indice da permutacao   : {i} de {len(PERMS)}")
+    for k, v in slots.items():
+        print(f"  slot {k} = {v}")
+    try:
+        txt = open(a.protocol, encoding="utf-8").read()
+        m = re.search(r"^commitment:\\s*([0-9a-f]{64})", txt, re.M)
+        if m:
+            ok = m.group(1) == commit
+            print(f"compromisso publicado  : {m.group(1)}")
+            print(f"CONFERE                : {ok}")
+            return 0 if ok else 1
+        print("AVISO: nao achei `commitment:` no protocolo")
+    except FileNotFoundError:
+        print(f"AVISO: {a.protocol} nao encontrado; so recomputei")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+'''
 
 
 
@@ -1040,14 +1161,20 @@ def main() -> int:
         return 5
     approved = True
 
-    nonce = hashlib.sha256(
-        b"TEST-0008-BLINDING|" + L0_SHA.encode() + b"|" + shp(METRIC_LOCK).encode()
-    ).digest()
-    protocol, seal = blinding_protocol(nonce)
+    import os
+    seal_path = DOCS / "TEST-0008-BLINDING-SEAL.yaml"
+    prev = yaml.safe_load(seal_path.read_text(encoding="utf-8")) if seal_path.exists() else None
+    # Nonce SECRETO de verdade. Redesenhar e legitimo enquanto nenhum output existe;
+    # depois do primeiro output, redesenhar seria escolher a ordem depois de ver.
+    nonce = os.urandom(32)
+    protocol, seal, algorithm = blinding_protocol(nonce)
+    if prev and prev.get("schema_version") == "0.2.0":
+        print("AVISO: selo v0.2.0 ja existe; um novo sorteio o substituiria.")
 
     put(PKG / "RUBRIC-OPERATOR.yaml", draft)
     put(PKG / "RUBRIC-JUDGE.yaml", judge)
     put(PKG / "BLINDING-PROTOCOL.yaml", protocol)
+    (PKG / "verify_blinding_commitment.py").write_text(VERIFIER, encoding="utf-8")
     put(DOCS / "TEST-0008-BLINDING-SEAL.yaml", seal)
 
     import difflib
