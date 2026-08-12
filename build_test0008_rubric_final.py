@@ -179,6 +179,64 @@ METRICS = ["TOTAL_SCORE", "DECISION_ACCURACY", "METHODOLOGY_FIDELITY",
            "EXECUTION_QUALITY", "HALLUCINATION_RATE", "CONSISTENCY",
            "HUMAN_CHECKPOINT_COMPLIANCE"]
 
+# ---------------------------------------------------------- CLASSES DE MÉTRICA
+# HALLUCINATION_RATE não é uma métrica sem critério: é uma métrica de OUTRA
+# CLASSE. As seis medem o output contra um ENSINAMENTO da fonte — logo exigem
+# âncora em L0, e é dela que vem o critério. Ela mede o output contra a FONTE:
+# afirma-se algo que a fonte não sustenta? Não há ensinamento a ancorar, porque
+# o que se mede é a AUSÊNCIA de invenção, não a presença de um passo.
+#
+# Sem esta declaração o auditor cobraria — com razão — a âncora que ela não pode
+# ter, e leria como defeito o que é diferença de classe.
+METRIC_CLASSES = {
+    "TOTAL_SCORE": {
+        "metric_class": "AGREGADO",
+        "measures_against": "os oito critérios ponderados, não uma fonte externa",
+        "l0_anchor_required": False,
+        "por_que_nao_requer_ancora": ("é a soma ponderada dos critérios; a ancoragem "
+                                      "está nos critérios que a compõem, não nela"),
+        "criteria_backing": "ALL",
+    },
+    "DECISION_ACCURACY": {"metric_class": "CONFORMIDADE"},
+    "METHODOLOGY_FIDELITY": {"metric_class": "CONFORMIDADE"},
+    "EXECUTION_QUALITY": {"metric_class": "CONFORMIDADE"},
+    "CONSISTENCY": {"metric_class": "CONFORMIDADE"},
+    "HUMAN_CHECKPOINT_COMPLIANCE": {"metric_class": "CONFORMIDADE"},
+    "HALLUCINATION_RATE": {
+        "metric_class": "INTEGRIDADE",
+        "measures_against": "a FONTE, não um ensinamento da fonte",
+        "l0_anchor_required": False,
+        "anchoring_requirement_applies": False,
+        "por_que_a_exigencia_de_ancora_NAO_se_aplica": (
+            "As métricas de CONFORMIDADE perguntam: o output faz o que a fonte "
+            "ENSINA? Cada uma tem um passo ensinado, logo tem span e citação. Esta "
+            "pergunta outra coisa: o output afirma algo que a fonte NÃO SUSTENTA? "
+            "O objeto medido é a ausência de invenção. Não existe passo a ancorar, "
+            "e exigir um obrigaria a inventar um span — que é precisamente o defeito "
+            "que a métrica existe para detectar."),
+        "criteria_backing": "NENHUM, POR CLASSE — não por omissão",
+        "definicao_vem_de": "TEST-0008-METRIC-LOCK.yaml",
+        "polarity": "LOWER_IS_BETTER",
+        "sinal_invertido_antes_de_entrar_em_margem": True,
+        "numerador_denominador_e_regra_de_zero": "declarados no metric lock",
+    },
+}
+CLASS_CONFORMIDADE_DEFAULTS = {
+    "measures_against": "um ENSINAMENTO da fonte",
+    "l0_anchor_required": True,
+    "anchoring_requirement_applies": True,
+    "por_que_requer_ancora": ("mede se o output faz o que a fonte ensina; sem span e "
+                             "citação não há como distinguir o que a fonte ensina do "
+                             "que o avaliador acha que ela deveria ensinar"),
+}
+
+# Nomes que NÃO podem viajar na rubrica do juiz. Ver `strip_for_judge`.
+CONDITION_NAMES = ["FULL_SKILL", "SUMMARY_AS_SUMMARY", "SUMMARY_AS_SKILL"]
+OPERATOR_ONLY_VOCAB = ["condicao_que_o_produz", "condição", "condition", "braço",
+                       "enquadramento", "framing", "baseline", "comparison_id",
+                       "primary_metric", "diagnóstica", "diagnostic", "PARA_O_AUDITOR",
+                       "auditor", "premissa"]
+
 
 def wsum(items, key="weight") -> Decimal:
     return sum((Decimal(str(i[key])) for i in items), Decimal("0"))
@@ -283,6 +341,226 @@ def canary(tr: Transcript, baseline_norm: str, rejected_terms: list[str],
     return rows
 
 
+def canary_blinding_and_classes(operator: dict, judge: dict,
+                                built: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+
+    def rec(case, expect, got, ok, note=""):
+        rows.append({"case": case, "expect": expect, "got": got, "passed": ok,
+                     "note": note})
+
+    # ---- L1: a régua do juiz não pode conter nome de condição
+    hits = scan_leaks(judge)
+    rec("L1_REGUA_DO_JUIZ_SEM_NOME_DE_CONDICAO", "zero vazamentos",
+        "limpa" if not hits else hits[:3], not hits)
+
+    contaminated = json.loads(json.dumps(judge))
+    first = contaminated["rubric"][0]["score_anchors"]["ASSERCAO_SEM_SUBSTANCIA"]
+    first["observable_definition"] += " (típico de SUMMARY_AS_SKILL)"
+    mut = scan_leaks(contaminated)
+    rec("L1_REGUA_DO_JUIZ_SEM_NOME_DE_CONDICAO",
+        "FIXTURE CONTAMINADA É REJEITADA",
+        [h["term"] for h in mut] or "PASSOU — sem poder de detecção",
+        any(h["severity"] == "FORBIDDEN_CONDITION_NAME" for h in mut),
+        "injeta um nome de condição numa âncora; o varredor tem de pegar")
+
+    op_hits = scan_leaks(operator)
+    rec("L2_REGUA_DO_OPERADOR_MANTEM_A_COLUNA",
+        "o operador CONTÉM os nomes (é o ponto da separação)",
+        f"{len(op_hits)} ocorrências no operador, 0 no juiz",
+        len(op_hits) > 0 and not hits,
+        "se as duas estivessem limpas, não haveria separação — haveria perda")
+
+    # ---- M: classes de métrica
+    no_class = [m for m in METRICS if m not in METRIC_CLASSES]
+    rec("M1_TODA_METRICA_TEM_CLASSE", "nenhuma sem classe",
+        "todas" if not no_class else no_class, not no_class)
+
+    backed = {}
+    for m in METRICS:
+        backed[m] = [c["criterion"] for c in built if c["maps_to_metric"] == m]
+    conf = [m for m, v in METRIC_CLASSES.items()
+            if v["metric_class"] == "CONFORMIDADE"]
+    orphan_conf = [m for m in conf if not backed[m]]
+    rec("M2_CONFORMIDADE_TEM_CRITERIO", "toda métrica de CONFORMIDADE tem critério",
+        {m: backed[m] for m in conf} if not orphan_conf else orphan_conf,
+        not orphan_conf)
+
+    # o mutante é o defeito real que o revisor encontrou
+    fake_classes = dict(METRIC_CLASSES)
+    fake_classes["HALLUCINATION_RATE"] = {"metric_class": "CONFORMIDADE"}
+    fake_orphans = [m for m, v in fake_classes.items()
+                    if v["metric_class"] == "CONFORMIDADE" and not backed.get(m)]
+    rec("M2_CONFORMIDADE_TEM_CRITERIO",
+        "MUTANTE: HALLUCINATION_RATE como CONFORMIDADE é REJEITADA",
+        fake_orphans or "PASSOU — sem poder de detecção",
+        "HALLUCINATION_RATE" in fake_orphans,
+        "é exatamente o defeito apontado: métrica órfã. O canário o pega agora")
+
+    integ = [m for m, v in METRIC_CLASSES.items()
+             if v["metric_class"] == "INTEGRIDADE"]
+    ok_i = all(not backed[m] and METRIC_CLASSES[m]["l0_anchor_required"] is False
+               and METRIC_CLASSES[m]["anchoring_requirement_applies"] is False
+               for m in integ)
+    rec("M3_INTEGRIDADE_SEM_ANCORA_POR_CLASSE",
+        "INTEGRIDADE: sem critério, sem exigência de âncora, com razão escrita",
+        {m: METRIC_CLASSES[m]["criteria_backing"] for m in integ}, ok_i)
+
+    total = [m for m, v in METRIC_CLASSES.items() if v["metric_class"] == "AGREGADO"]
+    rec("M4_AGREGADO_E_SO_A_PRIMARIA", "só TOTAL_SCORE é AGREGADO",
+        total, total == ["TOTAL_SCORE"])
+    return rows
+
+
+
+# ------------------------------------------------------- CEGAMENTO DO JUIZ
+def walk_strings(o, path="$"):
+    if isinstance(o, dict):
+        # SÓ valores. Nome de campo é estrutura do documento, não conteúdo que o
+        # juiz lê como informação sobre o experimento.
+        for k, v in o.items():
+            yield from walk_strings(v, f"{path}.{k}")
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            yield from walk_strings(v, f"{path}[{i}]")
+    elif isinstance(o, str):
+        yield path, o
+
+
+def scan_leaks(doc) -> list[dict]:
+    """Procura na rubrica do juiz o que só o operador pode saber.
+
+    Duas listas, ambas de rejeição dura:
+      - CONDITION_NAMES: identificador de condição. Se o juiz souber qual output
+        e qual, classifica por EXPECTATIVA. É fatal aqui porque as condicoes 2 e
+        3 tem conteudo BYTE-IDENTICO e diferem so no enquadramento: sabendo qual
+        e qual, o juiz pontua a 3 mais baixo por rotulo e F sai negativo por
+        construcao, medindo o rotulo em vez do efeito.
+      - OPERATOR_ONLY_VOCAB: o vocabulario do desenho. Uma regua de pontuacao nao
+        tem por que conter 'condicao', 'enquadramento' ou 'baseline'; se contem,
+        esta contando ao juiz como o experimento e montado.
+
+    LIMITE DECLARADO: pega o literal e variantes proximas. Uma parafrase — "o
+    artefato compilado", "a versao em prosa" — NAO e pega. E triagem, nao prova.
+    """
+    hits = []
+    for path, text in walk_strings(doc):
+        low = text.lower()
+        for name in CONDITION_NAMES:
+            for form in (name, name.replace("_", " "), name.replace("_", "-")):
+                if form.lower() in low:
+                    hits.append({"severity": "FORBIDDEN_CONDITION_NAME",
+                                 "term": name, "path": path,
+                                 "excerpt": text[:120]})
+                    break
+        for term in OPERATOR_ONLY_VOCAB:
+            if term.lower() in low:
+                hits.append({"severity": "OPERATOR_ONLY_VOCABULARY",
+                             "term": term, "path": path, "excerpt": text[:120]})
+    return hits
+
+
+def strip_for_judge(operator: dict) -> dict:
+    """A regua do juiz: faixas definidas SO por comportamento observavel.
+
+    As definicoes comportamentais NAO sao alteradas — o problema nunca foi a
+    definicao, foi o rotulo viajar junto com ela.
+    """
+    keep_criterion = ("criterion", "weight", "mandatory", "minimum_score",
+                      "description", "l0_span", "l0_excerpt", "score_anchors")
+    rubric = []
+    for c in operator["rubric"]:
+        row = {k: c[k] for k in keep_criterion}
+        row["score_anchors"] = {
+            name: {"range": a["range"], "observable_definition": a["condition"],
+                   "l0_anchor": {"span": a["l0_anchor"]["span"],
+                                 "quote": a["l0_anchor"]["quote"]}}
+            for name, a in c["score_anchors"].items()}
+        rubric.append(row)
+    return {
+        "schema_version": "0.3.0",
+        "artifact_id": "PILOT-001-TEST-0008-RUBRIC-JUDGE",
+        "artifact_status": "DRAFT_NOT_FROZEN",
+        "test_id": "TEST-0008", "candidate_version": "0.1.4",
+        "audience": "JUIZ",
+        "blinding": {
+            "outputs_are_unlabelled": True,
+            "slots": ["A", "B", "C"],
+            "order_is_shuffled": True,
+            "order_recorded_where_the_judge_cannot_see": True,
+            "instruction": ("Pontue cada slot SOMENTE pelo que o texto do slot faz. "
+                            "Nao infira origem, nao compare slots entre si para "
+                            "decidir nota, nao ordene os slots antes de pontuar."),
+        },
+        "scoring_method": operator["scoring_method"],
+        "score_scale": operator["score_scale"],
+        "weights_sum": operator["weights"]["sum"],
+        "score_bands": [{"name": n, "range": [lo, hi], "observable_definition": cond}
+                        for n, lo, hi, cond in REGIMES],
+        "band_rule": ("As faixas sao definidas por COMPORTAMENTO OBSERVAVEL no texto "
+                      "pontuado. Nenhuma faixa corresponde a uma origem, e nenhuma "
+                      "origem e conhecida por quem pontua."),
+        "citation_requirement": ("toda nota exige citacao literal do slot pontuado, "
+                                 "com intervalo de linhas; nota sem citacao e invalida"),
+        "rubric": rubric,
+        "not_frozen_note": ("Rascunho de régua. Nenhuma rodada de pontuação pode "
+                            "ocorrer antes do congelamento formal."),
+    }
+
+
+def blinding_protocol(seed_material: bytes) -> tuple[dict, dict]:
+    """Compromisso-e-revelacao: a permutacao e fixada AGORA e revelada depois.
+
+    Publicar so o hash do nonce impede que a ordem seja escolhida depois de ver
+    os outputs, e permite provar isso na abertura.
+    """
+    digest = hashlib.sha256(seed_material).digest()
+    order = sorted(CONDITION_NAMES, key=lambda n: digest[CONDITION_NAMES.index(n)])
+    mapping = dict(zip(["A", "B", "C"], order))
+    public = {
+        "schema_version": "0.1.0",
+        "artifact_id": "TEST-0008-BLINDING-PROTOCOL",
+        "artifact_status": "DRAFT_NOT_FROZEN",
+        "audience": "OPERADOR E AUDITOR (nao o juiz)",
+        "rule": ("O juiz recebe os tres outputs SEM ROTULO, nos slots A, B e C, em "
+                 "ordem embaralhada. A ordem esta selada em artefato que ele nao ve."),
+        "commitment_scheme": "COMPROMISSO_E_REVELACAO",
+        "nonce_sha256": hashlib.sha256(seed_material).hexdigest(),
+        "permutation_derivation": ("ordem = CONDITION_NAMES ordenados pelos tres "
+                                   "primeiros bytes de sha256(nonce)"),
+        "why_commit_reveal": ("publicar so o hash agora impede escolher a ordem "
+                              "depois de ver os outputs; revelar o nonce na abertura "
+                              "permite a qualquer um recomputar a permutacao e "
+                              "conferir que era esta desde o inicio"),
+        "seal_artifact": "TEST-0008-BLINDING-SEAL.yaml",
+        "seal_is_not_in_the_judge_package": True,
+        "baseline_excluded_from_judge_package": {
+            "excluded": True,
+            "why": ("o juiz com o resumo em maos poderia reconhecer, num output que "
+                    "acompanha de perto aquela prosa, a origem do slot — e a cegueira "
+                    "cairia pela porta dos fundos"),
+        },
+        "l0_included_in_judge_package": {
+            "included": True,
+            "why": ("a fonte nao identifica nenhum slot e e o que licencia cada "
+                    "criterio; sem ela o juiz pontua de memoria"),
+        },
+    }
+    seal = {
+        "schema_version": "0.1.0",
+        "artifact_id": "TEST-0008-BLINDING-SEAL",
+        "artifact_status": "SEALED_DRAFT",
+        "NAO_PARA_O_JUIZ": True,
+        "aviso": "Este arquivo revela a ordem. Nunca entra no pacote do juiz.",
+        "nonce_hex": seed_material.hex(),
+        "nonce_sha256": hashlib.sha256(seed_material).hexdigest(),
+        "slot_to_condition": mapping,
+        "reveal_when": "na abertura, depois de as notas do juiz estarem seladas",
+    }
+    return public, seal
+
+
+
 AUDITOR = """# PACOTE DE AUDITORIA — rubrica do TEST-0008
 
 **Não congelado.** `artifact_status: DRAFT_NOT_FROZEN`.
@@ -339,11 +617,16 @@ O que a verificação mecânica fez, e o que **não** consegue fazer:
 - FEITO: nenhuma citação vem do baseline em vez do L0;
 - FEITO: nenhum dos 12 termos estruturais rejeitados por falta de âncora em L0
   aparece nos critérios;
+- FEITO: a régua do juiz não contém nome de condição nem vocabulário de desenho
+  — e o varredor foi provado com uma fixture contaminada, que ele rejeita;
 - **NÃO FEITO, e não é possível:** detectar um critério cuja *escolha* foi
   influenciada por ter lido o baseline ou a Skill. Isso é semântico. Neste
   projeto, proxy mecânico para propriedade semântica já falhou três vezes
   (`PROXY-LIMITS-AND-RESTING-STATE.yaml`). A varredura limpa o caminho; ela não
   responde à pergunta 1.
+- **NÃO FEITO, mesmo limite:** o varredor de cegamento pega o literal e variantes
+  próximas. Uma paráfrase — "o artefato compilado", "a versão em prosa" — passa.
+  Leia a régua do juiz com esse olho.
 
 ---
 
@@ -399,12 +682,27 @@ um, não só a soma: cada uma cita L0. O maior peso (0,20) está em
 `HUMAN_REVIEW_30_DAYS` porque é o único passo que L0 qualifica com
 "No exceptions". Discorde se a hierarquia não se sustentar na fonte.
 
-**4.2 — `HALLUCINATION_RATE`.** É a única métrica canônica **sem âncora positiva
-em L0**, porque mede ausência. Está fora do vetor ponderado; sua definição
-(numerador, denominador, denominador zero, polaridade `LOWER_IS_BETTER`) foi
-**declarada** no metric lock, não herdada do RELEASE — o RELEASE traz
-`HALLUCINATION_CONTROL` como critério, não `HALLUCINATION_RATE` como métrica
-computável. Decida se uma métrica assim pode ficar no vetor de sete.
+**4.2 — `HALLUCINATION_RATE` e as classes de métrica. Não cobre âncora dela.**
+Os 8 critérios alimentam 5 métricas de `CONFORMIDADE`; com `TOTAL_SCORE`
+(`AGREGADO`) são 6. A sétima não tem critério — e isso é **classe, não omissão**:
+
+| classe | métricas | mede contra | âncora em L0 |
+|---|---|---|---|
+| `AGREGADO` | TOTAL_SCORE | os oito critérios ponderados | não se aplica |
+| `CONFORMIDADE` | 5 | um **ensinamento** da fonte | **exigida** |
+| `INTEGRIDADE` | HALLUCINATION_RATE | a **fonte** | **não se aplica** |
+
+As de conformidade perguntam *o output faz o que a fonte ensina?* — cada uma tem
+um passo ensinado, logo tem span e citação. A de integridade pergunta *o output
+afirma algo que a fonte não sustenta?* O objeto medido é a **ausência de
+invenção**. Não há passo a ancorar, e exigir um obrigaria a inventar um span —
+que é exatamente o defeito que essa métrica existe para detectar.
+
+O que cabe conferir: se a definição no `METRIC-LOCK.yaml` — numerador,
+denominador, regra de denominador zero e polaridade `LOWER_IS_BETTER` — basta
+para torná-la computável por um juiz. Ela foi **declarada** ali, não herdada do
+RELEASE: o RELEASE traz `HALLUCINATION_CONTROL` como critério, não
+`HALLUCINATION_RATE` como métrica computável.
 
 **4.3 — Paridade de informação.** As condições 2 e 3 têm o resumo **byte a byte
 idêntico** (`dac83c3d70e0…`); só o enquadramento difere. Confirme, e confirme que
@@ -416,11 +714,50 @@ dependentes por construção. Confirme que nada as trata como testes separados.
 
 ---
 
+## 4.5 — As DUAS réguas e o cegamento do juiz
+
+A tabela de faixas da §2 **nomeia a condição que produz cada faixa**. Isso é
+informação de operador e **não pode viajar até quem pontua**: se o juiz a visse,
+classificaria por **expectativa** em vez de observação.
+
+É fatal precisamente aqui. As condições 2 e 3 têm conteúdo **byte-idêntico** e
+diferem só no enquadramento. Sabendo qual é qual, o juiz pontuaria a 3 mais
+baixo por rótulo, e **`F` sairia negativo por construção** — mediria o rótulo, e
+não o efeito de enquadramento que existe para medir.
+
+Por isso o pacote traz duas réguas, amarradas por hash em `RUBRIC-BINDING.yaml`:
+
+- `RUBRIC-OPERATOR.yaml` — mantém a coluna de condição;
+- `RUBRIC-JUDGE.yaml` — faixas definidas **só por comportamento observável**,
+  sem nenhuma menção a condição e sem o vocabulário do desenho.
+
+**As definições comportamentais são idênticas nas duas.** Confira em
+`RUBRIC-OPERATOR-vs-JUDGE.diff` que o que sai é rótulo e vocabulário de
+processo, e **não** conteúdo de julgamento. Se alguma definição mudou de sentido
+entre as duas, reprove — a comparação deixaria de medir a mesma coisa.
+
+`BLINDING-PROTOCOL.yaml` descreve o resto: os três outputs vão sem rótulo, nos
+slots A/B/C, em ordem embaralhada, e a ordem está selada **fora deste pacote**
+por compromisso-e-revelação — publica-se agora só o `nonce_sha256`, e o nonce é
+revelado na abertura, o que impede escolher a ordem depois de ver os outputs.
+
+Duas assimetrias deliberadas no pacote do juiz, e cabe a você contestá-las:
+**L0 entra** (não identifica slot algum e é o que licencia cada critério);
+**o baseline não entra** — com o resumo em mãos, o juiz poderia reconhecer num
+output que acompanha aquela prosa a origem do slot, e a cegueira cairia pela
+porta dos fundos.
+
+---
+
 ## 5. Conteúdo do pacote
 
 | arquivo | o que é |
 |---|---|
-| `RUBRIC-DRAFT.yaml` | o rascunho, sete métricas, papel duplo |
+| `RUBRIC-OPERATOR.yaml` | o rascunho completo, sete métricas, papel duplo |
+| `RUBRIC-JUDGE.yaml` | a régua cega, sem rótulo de condição |
+| `RUBRIC-OPERATOR-vs-JUDGE.diff` | o que sai de uma para a outra |
+| `RUBRIC-BINDING.yaml` | as duas amarradas por hash |
+| `BLINDING-PROTOCOL.yaml` | slots, embaralhamento e compromisso-e-revelação |
 | `L0/transcript-original-en.txt` | a fonte, cópia de transporte com hash |
 | `BASELINE/SUMMARY.md` | o baseline (condições 2 e 3) |
 | `BASELINE/PROVENANCE.yaml` | 23 elementos com span, 12 rejeitados sem âncora |
@@ -603,6 +940,26 @@ def main() -> int:
                 "o scorer calcula margem = left.recomputed_total − right.recomputed_total; "
                 "TOTAL_SCORE é a métrica de decisão por construção do instrumento"),
             "diagnostic_metrics": [m for m in METRICS if m != "TOTAL_SCORE"],
+            "metric_classes": {
+                m: ({**CLASS_CONFORMIDADE_DEFAULTS, **METRIC_CLASSES[m],
+                     "criteria_backing": [c["criterion"] for c in built
+                                          if c["maps_to_metric"] == m]}
+                    if METRIC_CLASSES[m]["metric_class"] == "CONFORMIDADE"
+                    else METRIC_CLASSES[m])
+                for m in METRICS},
+            "por_que_classes": (
+                "Sem elas, HALLUCINATION_RATE aparece como métrica ÓRFÃ — sétima "
+                "métrica sem critério — e o auditor cobra, com razão, a âncora que "
+                "ela não pode ter. Ela não é órfã: é de OUTRA CLASSE. As de "
+                "CONFORMIDADE medem o output contra um ENSINAMENTO da fonte e por "
+                "isso exigem span e citação. A de INTEGRIDADE mede o output contra a "
+                "FONTE — afirma-se algo que ela não sustenta? — e não há ensinamento "
+                "a ancorar."),
+            "aritmetica_das_classes": {
+                "criterios": 8, "metricas_de_CONFORMIDADE": 5,
+                "AGREGADO": 1, "INTEGRIDADE": 1, "total": 7,
+                "checagem": "5 + 1 + 1 = 7",
+            },
             "FRONTEIRA_PARA_O_ADR": {
                 "regra": ("As métricas diagnósticas NUNCA sustentam a alegação da "
                           "premissa sozinhas. Elas só EXPLICAM um resultado primário."),
@@ -646,16 +1003,16 @@ def main() -> int:
         },
 
         "hallucination_rate": {
+            **METRIC_CLASSES["HALLUCINATION_RATE"],
             "is_weighted_criterion": False,
-            "por_que_nao": ("mede AUSÊNCIA de afirmação não sustentada, não a presença "
-                            "de um passo ensinado. É a única métrica canônica sem "
-                            "âncora POSITIVA em L0; forçá-la a critério ponderado "
-                            "exigiria inventar um span."),
-            "definicao_vem_de": "TEST-0008-METRIC-LOCK.yaml",
-            "polarity": "LOWER_IS_BETTER",
-            "sinal_invertido_antes_de_entrar_em_margem": True,
-            "PARA_O_AUDITOR": ("decidir se métrica sem âncora positiva pode ficar no "
-                               "vetor de sete. É decisão de desenho, não fato."),
+            "NAO_E_ORFA": ("não tem critério POR CLASSE, não por omissão. Ver "
+                           "metrics.metric_classes."),
+            "PARA_O_AUDITOR": ("não cobre âncora em L0 desta métrica: a exigência de "
+                               "ancoragem vale para as seis de CONFORMIDADE e não se "
+                               "aplica a esta. O que cabe conferir é se a definição "
+                               "do metric lock — numerador, denominador, regra de "
+                               "denominador zero e polaridade — é suficiente para "
+                               "torná-la computável por um juiz."),
         },
 
         "not_frozen_note": ("Rascunho. Não é lock, registry nem opening record. "
@@ -673,7 +1030,90 @@ def main() -> int:
                        else yaml.safe_dump(data, allow_unicode=True, sort_keys=False,
                                            width=100), encoding="utf-8")
 
-    put(PKG / "RUBRIC-DRAFT.yaml", draft)
+    judge = strip_for_judge(draft)
+    rows += canary_blinding_and_classes(draft, judge, built)
+    if not all(r["passed"] for r in rows):
+        print("CANÁRIO DE CEGAMENTO/CLASSES REPROVADO — nada publicado.")
+        for r in rows:
+            if not r["passed"]:
+                print(f"  {r['case']}: esperava {r['expect']}, obteve {r['got']}")
+        return 5
+    approved = True
+
+    nonce = hashlib.sha256(
+        b"TEST-0008-BLINDING|" + L0_SHA.encode() + b"|" + shp(METRIC_LOCK).encode()
+    ).digest()
+    protocol, seal = blinding_protocol(nonce)
+
+    put(PKG / "RUBRIC-OPERATOR.yaml", draft)
+    put(PKG / "RUBRIC-JUDGE.yaml", judge)
+    put(PKG / "BLINDING-PROTOCOL.yaml", protocol)
+    put(DOCS / "TEST-0008-BLINDING-SEAL.yaml", seal)
+
+    import difflib
+    op_txt = yaml.safe_dump(draft, allow_unicode=True, sort_keys=False, width=100)
+    ju_txt = yaml.safe_dump(judge, allow_unicode=True, sort_keys=False, width=100)
+    diff = "".join(difflib.unified_diff(op_txt.splitlines(True), ju_txt.splitlines(True),
+                                        "RUBRIC-OPERATOR.yaml", "RUBRIC-JUDGE.yaml"))
+    (PKG / "RUBRIC-OPERATOR-vs-JUDGE.diff").write_text(diff, encoding="utf-8")
+    put(PKG / "RUBRIC-BINDING.yaml", {
+        "schema_version": "0.1.0",
+        "artifact_id": "TEST-0008-RUBRIC-BINDING",
+        "artifact_status": "DRAFT_NOT_FROZEN",
+        "operator": {"file": "RUBRIC-OPERATOR.yaml", "sha256": shp(PKG / "RUBRIC-OPERATOR.yaml")},
+        "judge": {"file": "RUBRIC-JUDGE.yaml", "sha256": shp(PKG / "RUBRIC-JUDGE.yaml")},
+        "diff": {"file": "RUBRIC-OPERATOR-vs-JUDGE.diff",
+                 "sha256": sh(diff.encode()), "lines": diff.count(chr(10))},
+        "invariante": ("as definições comportamentais das faixas são IDÊNTICAS nas "
+                       "duas; o que a do juiz não tem é o rótulo da condição que "
+                       "produz cada faixa, e o vocabulário do desenho"),
+        "verificado_por": "canário L1 e L2",
+        "por_que_duas": (
+            "A tabela de faixas nomeava a condição que produz cada uma. Se o juiz a "
+            "visse, classificaria por EXPECTATIVA e não por observação. É fatal aqui "
+            "porque as condições 2 e 3 têm conteúdo BYTE-IDÊNTICO e diferem só no "
+            "enquadramento: sabendo qual é qual, o juiz pontuaria a 3 mais baixo por "
+            "rótulo, e F sairia negativo por construção — mediria o rótulo, não o "
+            "efeito de enquadramento."),
+    })
+
+    # pacote do juiz: só o que ele pode ver
+    JPKG = DOCS / "TEST-0008-JUDGE-PACKAGE"
+    if JPKG.exists():
+        shutil.rmtree(JPKG)
+    (JPKG / "L0").mkdir(parents=True)
+    (JPKG / "slots").mkdir()
+    put(JPKG / "RUBRIC-JUDGE.yaml", judge)
+    (JPKG / "L0/transcript-original-en.txt").write_bytes(L0.read_bytes())
+    put(JPKG / "README-JUIZ.md",
+        "# Instruções de pontuação — TEST-0008\n\n"
+        "Você recebe três textos em `slots/`, nomeados **A**, **B** e **C**, em "
+        "ordem embaralhada. Não há rótulo, e não há como inferir origem: pontue "
+        "cada slot **só pelo que o texto do slot faz**.\n\n"
+        "1. Use `RUBRIC-JUDGE.yaml`. Cada critério tem quatro faixas definidas por "
+        "comportamento observável.\n"
+        "2. Toda nota exige **citação literal do slot pontuado**, com intervalo de "
+        "linhas. Nota sem citação é inválida.\n"
+        "3. Não compare os slots entre si para decidir nota, e não os ordene antes "
+        "de pontuar. Cada slot é pontuado isoladamente, contra a régua e a fonte.\n"
+        "4. `L0/transcript-original-en.txt` é a fonte. É contra ela que os critérios "
+        "foram ancorados; cada critério traz o trecho e o intervalo de tempo.\n\n"
+        "Se algo neste pacote sugerir a origem de um slot, **pare e reporte** — é "
+        "defeito do pacote, não seu.\n",
+        )
+    (JPKG / "slots/PENDENTE.md").write_text(
+        "# Vazio por enquanto\n\nOs três outputs entram aqui como `A.md`, `B.md` e "
+        "`C.md` depois da rodada cega. A correspondência slot→condição está selada "
+        "fora deste pacote.\n", encoding="utf-8")
+    jsums = {str(q.relative_to(JPKG)): shp(q) for q in sorted(JPKG.rglob("*")) if q.is_file()}
+    (JPKG / "SHA256SUMS.txt").write_text(
+        "".join(f"{v}  {k}\n" for k, v in jsums.items()), encoding="utf-8")
+    jleaks = [h for q in JPKG.rglob("*.yaml") if q.name != "SHA256SUMS.txt"
+              for h in scan_leaks(yaml.safe_load(q.read_text(encoding="utf-8")))]
+    if jleaks:
+        print("ABORTA: vazamento no PACOTE DO JUIZ:", jleaks[:3])
+        return 6
+
     put(PKG / "README-AUDITOR.md", AUDITOR)
     (PKG / "L0/transcript-original-en.txt").write_bytes(L0.read_bytes())
     put(PKG / "L0/TRANSPORT-RECORD.yaml", {
@@ -710,6 +1150,11 @@ def main() -> int:
         "decisao_do_alexandre": "aplicada, congelada, não reaberta",
         "decisao_do_auditor": ("se há circularidade — do baseline OU da Skill — e se "
                                "a fronteira dos três regimes se sustenta"),
+        "judge_package": {"path": "TEST-0008-JUDGE-PACKAGE/",
+                          "files": len(jsums), "leak_scan": "LIMPO"},
+        "blinding_seal": {"path": "TEST-0008-BLINDING-SEAL.yaml",
+                          "sha256": shp(DOCS / "TEST-0008-BLINDING-SEAL.yaml"),
+                          "NAO_PARA_O_JUIZ": True},
         "binds_to": {
             "metric_lock": {"path": METRIC_LOCK.name, "sha256": shp(METRIC_LOCK)},
             "scorer_v2_report": {"path": SCORER_REPORT.name, "sha256": shp(SCORER_REPORT)},
