@@ -3,3 +3,4 @@ work/*.json
 work/*.jsonl
 tests/_tmp/
 __pycache__/
+.venv/
