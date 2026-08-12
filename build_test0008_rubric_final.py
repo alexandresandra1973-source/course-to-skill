@@ -24,6 +24,18 @@ from pathlib import Path
 
 import yaml
 
+
+class NoAlias(yaml.SafeDumper):
+    """Repete a citação por extenso em vez de emitir &id/*id.
+
+    O serializador transformava citação repetida em âncora YAML, o que sinaliza
+    a repetição mais do que o texto sozinho e foi lido como pista.
+    """
+
+    def ignore_aliases(self, data):
+        return True
+
+
 DRIVE = Path("/mnt/g/Meu Drive/Chat GPT")
 CL = DRIVE / "Course-to-Skill-Claude"
 DOCS = CL / "docs"
@@ -129,7 +141,7 @@ REGIMES = [
 # desenho. Mudou o vocabulário.
 CRITERIA = [
     {"criterion": "OUTCOME_CONTRACT", "weight": "0.18",
-     "metric": "DECISION_ACCURACY", "minimum_score": 80,
+     "metric": "DECISION_ACCURACY", "minimum_score": 70,
      "description": "Declara outcome, input, output e boundaries antes de escolher ferramenta.",
      "quote": "Step one, start with the outcome. Before you open anything, write down three things. What information you'll give, what output you want back, and clear boundaries.",
      "weight_quote": "You'll end up automating a task instead of owning an outcome.",
@@ -139,7 +151,7 @@ CRITERIA = [
      "b3_quote": "The most common mistake is opening the platform before you've defined what you actually want",
      "b4_quote": "You'll end up automating a task instead of owning an outcome."},
     {"criterion": "ROBOT_PROMPT_STRUCTURE", "weight": "0.12",
-     "metric": "METHODOLOGY_FIDELITY", "minimum_score": 85,
+     "metric": "METHODOLOGY_FIDELITY", "minimum_score": 70,
      "description": "Escreve as instruções com role, objective, boundaries, output e tone.",
      "quote": "Structure your system prompt using this robot framework. role, objective, boundaries, output, tone. Every great agent prompt has all five.",
      "weight_quote": "Vague instructions equal vague output every time.",
@@ -149,7 +161,7 @@ CRITERIA = [
      "b3_quote": "Vague instructions equal vague output every time.",
      "b4_quote": "Weak instructions equal a weak agent"},
     {"criterion": "TOOL_SELECTION", "weight": "0.10",
-     "metric": "DECISION_ACCURACY", "minimum_score": 80,
+     "metric": "DECISION_ACCURACY", "minimum_score": 70,
      "description": "Escolhe plataforma e conecta só as ferramentas que o outcome exige.",
      "quote": "Step three, choose your platform and connect the tools. This is where you choose what you're building in and what it's going to connect to.",
      "weight_quote": "The model matters less than you think.",
@@ -159,7 +171,7 @@ CRITERIA = [
      "b3_quote": "Without tools, your agent is just a chatbot with a fancy hat.",
      "b4_quote": "Whatever platform you choose, one of the first things you want to look at is what it can actually connect to"},
     {"criterion": "MEMORY_CONTEXT", "weight": "0.08",
-     "metric": "EXECUTION_QUALITY", "minimum_score": 75,
+     "metric": "EXECUTION_QUALITY", "minimum_score": 70,
      "description": "Alimenta o agente com contexto de negócio, não só instruções.",
      "quote": "Step four, feed it memory. This is what separates a generic bot from one that actually understands your business.",
      "weight_quote": "you give it context about who you are, who you serve, and what good looks like for you",
@@ -175,7 +187,7 @@ CRITERIA = [
                               "As duas faixas de baixo herdam a citação do passo, e "
                               "isso fica declarado em vez de disfarçado.")},
     {"criterion": "TESTING_ITERATION", "weight": "0.12",
-     "metric": "EXECUTION_QUALITY", "minimum_score": 80,
+     "metric": "EXECUTION_QUALITY", "minimum_score": 70,
      "description": "Roda de três a cinco vezes, registra falhas e volta ao prompt.",
      "quote": "Step five, test it, break it, fix it. Run it three to five times.",
      "weight_quote": "Go back to the system prompt and tighten it.",
@@ -199,7 +211,7 @@ CRITERIA = [
      "b3_quote": "Skip this and you risk a weird auto reply going to 4,000 leads.",
      "b4_quote": "Any agent that touches money, messaging, or the customer needs a review step in the first 30 days. No exceptions."},
     {"criterion": "MEASUREMENT", "weight": "0.08",
-     "metric": "EXECUTION_QUALITY", "minimum_score": 75,
+     "metric": "EXECUTION_QUALITY", "minimum_score": 70,
      "description": "Fecha com as duas perguntas de medição e a decisão de expandir ou refazer.",
      "quote": "In step seven, measure it with these two questions. Is it saving you at least 2 hours a week?",
      "weight_quote": "If both are yes, expand it. If either's a no, go back and rebuild it.",
@@ -475,6 +487,53 @@ def canary_blinding_and_classes(operator: dict, judge: dict,
         "INTEGRIDADE: sem critério, sem exigência de âncora, com razão escrita",
         {m: METRIC_CLASSES[m]["criteria_backing"] for m in integ}, ok_i)
 
+    # ---- P: a faixa do meio tem de ser mensurável nos critérios não-portão
+    band2_lo = dict((n, lo) for n, lo, _, _ in REGIMES)["APLICADO_SEM_CRITERIO"]
+    nongate = [c for c in built if not c["is_gate_criterion"]]
+    cortados = [c["criterion"] for c in nongate if c["minimum_score"] > band2_lo]
+    rec("P1_FAIXA_DO_MEIO_MENSURAVEL",
+        f"piso <= {band2_lo} em todo critério não-portão",
+        "nenhum cortado" if not cortados else cortados, not cortados,
+        "piso acima de 70 converteria diferença mensurável em reprovação binária — "
+        "o mesmo argumento que derrubou o gate-only")
+
+    def simula(nota_nongate: int, nota_human: int, nota_order: int):
+        """Um braço inteiro nesta configuração: falha de piso e total ponderado."""
+        falhas, total = [], Decimal("0")
+        for c in built:
+            n = (nota_human if c["criterion"] == "HUMAN_REVIEW_30_DAYS"
+                 else nota_order if c["criterion"] == "STEP_ORDER_INTEGRITY"
+                 else nota_nongate)
+            if n < c["minimum_score"]:
+                falhas.append(c["criterion"])
+            total += Decimal(str(c["weight"])) * n
+        return falhas, total
+
+    # braço em 70-89 nos não-portão, passando o portão
+    f_mid, t_mid = simula(75, 90, 80)
+    f_top, t_top = simula(95, 95, 95)
+    margem = t_top - t_mid
+    rec("P2_BRACO_EM_70_89_PRODUZ_MARGEM",
+        "sem falha de piso nos não-portão E margem > 0",
+        f"falhas={f_mid or 'nenhuma'} · margem={margem}",
+        not f_mid and margem > 0,
+        "é o caso que o TEST-0008 existe para quantificar: aplicou os sete passos "
+        "sem registrar o critério")
+    # mutante: os pisos antigos
+    old_floors = {"OUTCOME_CONTRACT": 80, "ROBOT_PROMPT_STRUCTURE": 85,
+                  "TOOL_SELECTION": 80, "MEMORY_CONTEXT": 75,
+                  "TESTING_ITERATION": 80, "MEASUREMENT": 75}
+    mut_fail = [c["criterion"] for c in built
+                if 75 < old_floors.get(c["criterion"], 0)]
+    rec("P2_BRACO_EM_70_89_PRODUZ_MARGEM",
+        "MUTANTE com os pisos antigos REPROVA o mesmo braço",
+        mut_fail or "PASSOU — sem poder de detecção", bool(mut_fail),
+        "com 80/85 o braço em 75 reprovava em bloco e a margem virava invalidação")
+    rec("P3_PORTAO_MANTEM_PISO_ALTO",
+        "HUMAN_REVIEW=90 e STEP_ORDER=80, por decisão registrada",
+        {c["criterion"]: c["minimum_score"] for c in built if c["is_gate_criterion"]},
+        all(c["minimum_score"] >= 80 for c in built if c["is_gate_criterion"]))
+
     total = [m for m, v in METRIC_CLASSES.items() if v["metric_class"] == "AGREGADO"]
     rec("M4_AGREGADO_E_SO_A_PRIMARIA", "só TOTAL_SCORE é AGREGADO",
         total, total == ["TOTAL_SCORE"])
@@ -567,17 +626,19 @@ def strip_for_judge(operator: dict) -> dict:
         "weights_sum": operator["weights"]["sum"],
         "score_bands": [{"name": n, "range": [lo, hi], "observable_definition": cond}
                         for n, lo, hi, cond in REGIMES],
-        "scoring_cautions": [
-            ("A FORMA do texto — tabelas, títulos, listas numeradas — não é "
-             "evidência de faixa alta por si. O que conta é se o critério de "
-             "decisão e a precedência estão REGISTRADOS, em qualquer formato, "
-             "inclusive em texto corrido."),
-            ("Extensão não é nota: um texto longo que não registra o critério "
-             "fica abaixo de um curto que registra."),
-            ("Vocabulário da fonte reproduzido sem o conteúdo correspondente é "
-             "ENUNCIADO_SEM_EXECUCAO, não faixa alta."),
-            ("Pontue cada critério contra o trecho da fonte citado nele, não "
-             "contra o que você sabe sobre o assunto."),
+        # Regras de pontuação escritas como PROPRIEDADE POSITIVA do que a faixa
+        # exige. A versão anterior antecipava modos de engano ("um texto longo
+        # que não registra...", "vocabulário reproduzido sem o conteúdo...") e
+        # cada advertência declarava a existência do material contra o qual
+        # protegia — uma leitura cega da régua as chamou de "negativo
+        # fotográfico dos materiais". As que não se deixam escrever como
+        # propriedade positiva foram REMOVIDAS: a régua de quem pontua não é
+        # lugar de aviso sobre materiais.
+        "scoring_rules": [
+            ("O que separa as faixas é o REGISTRO, no próprio texto, do critério "
+             "de decisão e da precedência que governam o passo. O formato do "
+             "registro é indiferente: tabela, lista e texto corrido valem igual."),
+            ("Cada critério é pontuado contra o trecho da fonte citado nele."),
         ],
         "citation_requirement": ("toda nota exige citação literal do texto pontuado, "
                                  "com intervalo de linhas; nota sem citação é inválida"),
@@ -1119,6 +1180,39 @@ def main() -> int:
         "scoring_method": "WEIGHTED_SUM",
         "score_scale": {"min": 0, "max": 100},
 
+        "PISOS_OBRIGATORIOS_PARA_O_ADR": {
+            "regra": ("Os pisos existem para REPROVAR ENUNCIADO_SEM_EXECUCAO e "
+                      "AUSENTE_OU_CONTRARIO. NÃO existem para reprovar aplicação sem "
+                      "critério registrado — essa é exatamente a diferença que o "
+                      "TEST-0008 existe para QUANTIFICAR."),
+            "consequencia_pratica": ("piso de todo critério não-portão = 70, o início "
+                                     "da faixa APLICADO_SEM_CRITERIO. A faixa do meio "
+                                     "fica inteira acima do piso e portanto mensurável."),
+            "defeito_corrigido": {
+                "o_que_era": ("pisos entre 75 e 90 em 8 de 8 critérios, todos acima do "
+                              "início da faixa do meio"),
+                "efeito": ("um texto que aplicava os sete passos corretamente sem "
+                           "registrar o critério reprovava em bloco: nota 70-79 batia "
+                           "no piso em 6 de 8 critérios"),
+                "por_que_e_o_mesmo_erro_do_gate_only": (
+                    "piso converte diferença MENSURÁVEL em reprovação BINÁRIA. É o "
+                    "argumento que derrubou a variante gate-only, aplicado agora ao "
+                    "próprio piso."),
+                "encontrado_por": ("leitura cega da régua: 'o desenho pressupõe que "
+                                   "quase tudo falhe; o resultado interessante é onde'"),
+            },
+            "excecoes_por_decisao_registrada": {
+                "HUMAN_REVIEW_30_DAYS": {"piso": 90,
+                    "por_que": ("é portão; L0 qualifica o passo com 'No exceptions'. "
+                                "Aqui a reprovação binária é o comportamento desejado.")},
+                "STEP_ORDER_INTEGRITY": {"piso": 80,
+                    "por_que": "é portão; a ordem é conteúdo, não forma"},
+                "custo_declarado": ("nesses dois, a faixa do meio NÃO é integralmente "
+                                    "mensurável — e isso é escolha, não descuido"),
+            },
+            "travado_pelo_canario": ["P1", "P2", "P3"],
+        },
+
         "anchor_regimes": {
             "por_que_quatro_e_nao_duas": (
                 "Recusa e execução completa deixariam invisível o regime do meio, e é "
@@ -1280,8 +1374,8 @@ def main() -> int:
 
     def put(dst: Path, data) -> None:
         dst.write_text(data if isinstance(data, str)
-                       else yaml.safe_dump(data, allow_unicode=True, sort_keys=False,
-                                           width=100), encoding="utf-8")
+                       else yaml.dump(data, Dumper=NoAlias, allow_unicode=True,
+                                      sort_keys=False, width=100), encoding="utf-8")
 
     judge = strip_for_judge(draft)
     rows += canary_blinding_and_classes(draft, judge, built)
@@ -1310,8 +1404,8 @@ def main() -> int:
     put(DOCS / "TEST-0008-BLINDING-SEAL.yaml", seal)
 
     import difflib
-    op_txt = yaml.safe_dump(draft, allow_unicode=True, sort_keys=False, width=100)
-    ju_txt = yaml.safe_dump(judge, allow_unicode=True, sort_keys=False, width=100)
+    op_txt = yaml.dump(draft, Dumper=NoAlias, allow_unicode=True, sort_keys=False, width=100)
+    ju_txt = yaml.dump(judge, Dumper=NoAlias, allow_unicode=True, sort_keys=False, width=100)
     diff = "".join(difflib.unified_diff(op_txt.splitlines(True), ju_txt.splitlines(True),
                                         "RUBRIC-OPERATOR.yaml", "RUBRIC-JUDGE.yaml"))
     (PKG / "RUBRIC-OPERATOR-vs-JUDGE.diff").write_text(diff, encoding="utf-8")

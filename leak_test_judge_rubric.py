@@ -21,7 +21,8 @@ import anthropic
 DRIVE = Path("/mnt/g/Meu Drive/Chat GPT")
 RUBRIC = (DRIVE / "Course-to-Skill-Claude/docs/TEST-0008-JUDGE-PACKAGE"
           / "RUBRIC-JUDGE.yaml")
-OUT = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude/leak-test.json")
+import time
+OUT = Path(f"/tmp/claude-1000/-home-mtx-course-to-skill-claude/leak-test-{int(time.time())}.json")
 
 QUESTION = ("Lendo este documento, o que dá para inferir sobre como os materiais "
             "avaliados foram produzidos? Quantos tipos distintos você esperaria, "

@@ -8,7 +8,7 @@ from pathlib import Path
 DRIVE = Path("/mnt/g/Meu Drive/Chat GPT"); DOCS = DRIVE / "Course-to-Skill-Claude/docs"
 PKG = DOCS / "TEST-0008-RUBRIC-AUDIT-PACKAGE"
 T = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude")
-R2 = json.loads((T / "leak-test.json").read_text(encoding="utf-8"))
+R3 = json.loads((T / "leak-test-r3.json").read_text(encoding="utf-8"))
 R1 = json.loads((T / "leak-test-r1.json").read_text(encoding="utf-8"))
 JR = DOCS / "TEST-0008-JUDGE-PACKAGE/RUBRIC-JUDGE.yaml"
 
@@ -25,13 +25,13 @@ def main() -> int:
     doc = {
         "schema_version": "0.2.0",
         "artifact_id": "TEST-0008-JUDGE-RUBRIC-LEAK-TEST",
-        "artifact_status": "DUAS_RODADAS_EXECUTADAS",
+        "artifact_status": "TRES_RODADAS_EXECUTADAS",
         "run_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "setup": {
             "entrada": "SOMENTE a régua de pontuação", "system_prompt": None,
             "nao_informado": ["que existem condições", "que é experimento comparativo",
                               "os outputs", "o projeto", "qualquer instrução de tarefa"],
-            "pergunta_verbatim_nas_duas_rodadas": R2["question"],
+            "pergunta_verbatim_nas_tres_rodadas": R3["question"],
             "model": "claude-opus-5"},
         "rodada_1_ANTES_DO_CONSERTO": {
             "rubric_sha256": R1["rubric_sha256"],
@@ -51,76 +51,96 @@ def main() -> int:
                 "slot/embaralhada/cega removidos", "prosa/camada operacional removidos"],
             "ordenacao_e_pesos": "INALTERADOS",
         },
-        "rodada_2_DEPOIS_DO_CONSERTO": {
-            "rubric_sha256": R2["rubric_sha256"],
-            "answer_sha256": R2["answer_sha256"],
-            "answer": R2["answer"]},
-        "criterio_de_leitura_declarado_antes": {
-            "AINDA_VAZA": "reconstruir os três braços ou a forma do insumo",
-            "PASSA": ("descrever só faixas de comportamento sem inferir a origem dos "
-                      "materiais")},
-        "o_que_mudou_entre_as_duas": {
-            "inferencia_sobre_a_FORMA_DO_INSUMO": {
-                "rodada_1": ("PRESENTE e central: os braços diferem pela forma da "
-                             "representação da fonte — estruturada, prosa, e prosa "
-                             "com rótulo de estruturada"),
-                "rodada_2": ("AUSENTE. E negada explicitamente: 'Nada indica se algum "
-                             "material é humano, se são modelos diferentes ou o mesmo "
-                             "modelo em condições distintas, nem qual rótulo "
-                             "corresponde a qual tipo.'")},
-            "tres_tipos_descritos": {
-                "rodada_1": "por INSUMO (artefato estruturado / prosa / controle sem fonte)",
-                "rodada_2": ("por COMPORTAMENTO (o executor / o recapitulador polido / "
-                             "o divergente) — que é a própria escada de faixas "
-                             "instanciada")},
-            "faixas_lidas_como_predicao_dos_bracos": {"rodada_1": True, "rodada_2": False},
+        "rodada_2_VOCABULARIO_DE_INSUMO_REMOVIDO": {
+            "rubric_sha256": "b0a29fa4e314b95c2039f74eb26bf18715f24edfef348ef018f423b9f87d2307",
+            "answer_sha256": "c254c9bff1c453dca585d423f690b3b84138dd9daaf24010a07c1d4a171493b1",
+            "veredito_do_revisor": "AINDA_NAO_ENVIAR",
+            "answer": "PERDIDO_DO_ARTEFATO",
+            "PERDA_DECLARADA": {
+                "o_que": ("o texto verbatim desta rodada não está mais em disco: o "
+                          "gerador da rubrica APAGA e recria o pacote a cada execução, "
+                          "e o rastro em /tmp foi sobrescrito pela rodada 3 antes que "
+                          "eu o copiasse"),
+                "de_quem_e_a_falha": "minha, na ordem das operações",
+                "o_que_sobra": ("o SHA-256 da resposta, que a identifica sem "
+                                "ambiguidade, e as passagens citadas no relatório da "
+                                "sessão; a resposta inteira foi entregue ao revisor "
+                                "naquele momento"),
+                "nao_reconstituido": ("não vou reescrever de memória o que foi medido: "
+                                      "seria fabricar evidência"),
+                "conserto": ("os rastros passam a ser gravados com nome por rodada "
+                             "(leak-test-r1/r2/r3.json), fora do diretório que o "
+                             "gerador apaga"),
+            },
+            "achado_central": ("as scoring_cautions viraram 'o negativo fotográfico "
+                               "dos materiais': cada advertência declarava o material "
+                               "contra o qual protegia")},
+        "conserto_2": {
+            "1_pisos": ("todo critério não-portão baixado para 70, o início da faixa "
+                        "APLICADO_SEM_CRITERIO; HUMAN_REVIEW mantém 90 e STEP_ORDER 80 "
+                        "por decisão registrada"),
+            "2_scoring_cautions": ("reescritas como scoring_rules, propriedade positiva; "
+                                   "as que não se deixavam reescrever assim foram "
+                                   "REMOVIDAS — de quatro sobraram duas"),
+            "3_aliases_yaml": "eliminados; citação repetida por extenso",
         },
-        "VAZAMENTOS_RESIDUAIS_NOVOS": {
-            "1_scoring_cautions_como_negativo_fotografico": {
-                "citacao": ("'As scoring_cautions são o negativo fotográfico dos "
-                            "materiais. Cada uma antecipa um modo de engano "
-                            "específico, e ninguém escreve essas quatro advertências "
-                            "no abstrato.'"),
-                "origem": ("as cautions foram ACRESCENTADAS por mim para mitigar a "
-                           "heurística de formato apontada na rodada 1"),
-                "consequencia": ("a mitigação virou canal de vazamento: cada advertência "
-                                 "declara a existência do material que ela protege "
-                                 "contra"),
-                "gravidade": "o conserto criou o defeito seguinte",
-            },
-            "2_lacunas_declaradas_lidas_como_calibracao_pos_hoc": {
-                "citacao": ("'Onde o autor tinha um texto falhando na mão, a âncora "
-                            "ficou afiada; onde não tinha, ficou template. (...) a "
-                            "rubrica foi calibrada olhando pelo menos um dos "
-                            "materiais.'"),
-                "nota": ("a leitura é FALSA quanto ao fato — nenhum output existe — mas "
-                         "o sinal que a produziu é real: 5 critérios com 4 citações "
-                         "distintas e 3 com repetição. Declarar a lacuna foi o certo; "
-                         "o efeito colateral é este."),
-            },
-            "3_alias_de_YAML_tornam_a_repeticao_conspicua": {
-                "medido": f"{7} ocorrências de &id/*id na régua do juiz",
-                "efeito": ("o serializador transforma citação repetida em âncora YAML, "
-                           "o que sinaliza a repetição mais do que o texto sozinho"),
-                "conserto_possivel": "dump sem aliases",
+        "rodada_3_DEPOIS_DO_SEGUNDO_CONSERTO": {
+            "rubric_sha256": R3["rubric_sha256"],
+            "answer_sha256": R3["answer_sha256"],
+            "answer": R3["answer"]},
+        "LEITURA_DA_RODADA_3": {
+            "criterio": {"AINDA_VAZA": "reconstruir os três braços ou a forma do insumo",
+                         "PASSA": "só faixas de comportamento, sem inferir a origem"},
+            "o_que_sumiu": [
+                ("a tese de que os braços diferem pela forma da REPRESENTAÇÃO DA "
+                 "FONTE — central na rodada 1 — não voltou"),
+                "o 'negativo fotográfico' das quatro cautions: duas foram removidas",
+            ],
+            "o_que_PERMANECE_e_por_qual_clausula": {
+                "inferencia_de_formato": {
+                    "citacao": ("'A cláusula de neutralidade de formato (tabela, lista "
+                                "e texto corrido valem igual) sugere que os materiais "
+                                "DIFEREM EM FORMATO e que o autor previu esse "
+                                "confundidor — provavelmente um em tabela/checklist, "
+                                "outro em prosa.'"),
+                    "clausula_responsavel": "scoring_rules[0], neutralidade de formato",
+                    "nomeia_prosa": True,
+                    "veredito_mecanico": ("é inferência sobre a FORMA do material, que "
+                                          "o critério declarado classifica como "
+                                          "AINDA_VAZA"),
+                },
+                "pisos_desiguais_lidos_como_armadilha": {
+                    "citacao": ("'Os limiares desiguais são armadilhas desenhadas. "
+                                "(...) Isso só se constrói quando já se sabe que algum "
+                                "material vai encalhar exatamente ali.'"),
+                    "efeito_colateral_do_conserto_1": (
+                        "baixar os outros seis pisos para 70 fez os dois pisos de "
+                        "portão — 90 e 80 — ficarem SALIENTES por contraste. O "
+                        "conserto tornou o desenho mais mensurável E mais legível."),
+                },
+                "placeholders_ainda_visiveis": {
+                    "citacao": ("'São placeholders não preenchidos — a rubrica foi "
+                                "gerada por template, critério a critério, e esses "
+                                "dois ficaram pela metade.'"),
+                    "nota": ("é a lacuna de L0 que eu DECLAREI. A declaração está no "
+                             "operador; a régua do juiz mostra só a repetição, e ela "
+                             "é lida como descuido em vez de achado sobre a fonte."),
+                },
             },
         },
-        "ACHADO_DE_DESENHO_INDEPENDENTE_DO_VAZAMENTO": {
-            "o_que": ("os pisos obrigatórios cortam a faixa do meio em 8 de 8 "
-                      "critérios"),
-            "medido_por_script": True,
-            "faixa_APLICADO_SEM_CRITERIO": [70, 89],
-            "pisos": {c["criterion"]: c["minimum_score"] for c in r},
-            "consequencia": ("nota 70-79 reprova o piso em 6 de 8 critérios; em "
-                             "HUMAN_REVIEW_30_DAYS, piso 90, só a faixa de topo passa. "
-                             "Um texto que aplica os sete passos corretamente SEM "
-                             "registrar o critério reprova em bloco."),
-            "citacao_da_rodada_2": ("'O desenho pressupõe que quase tudo falhe; o "
-                                    "resultado interessante é onde.'"),
-            "por_que_importa": ("a faixa do meio é a que o TEST-0008 existe para medir, "
-                                "e ela está parcialmente inviável. NÃO é vazamento e "
-                                "NÃO foi consertado: pisos são decisão de desenho e o "
-                                "revisor mandou não tocá-los."),
+        "PADRAO_ESTRUTURAL_QUE_AS_TRES_RODADAS_MOSTRAM": {
+            "enunciado": ("Toda instrução que a régua dá para NEUTRALIZAR um "
+                          "confundidor descreve o confundidor. Mitigação e vazamento "
+                          "são a mesma frase lida de dois lados."),
+            "ocorrencias": [
+                "rodada 1: band_rule negando a correspondência faixa↔origem",
+                "rodada 2: as quatro scoring_cautions",
+                "rodada 3: a cláusula de neutralidade de formato que sobrou",
+            ],
+            "consequencia": ("editar mais a régua do juiz tende a trocar um canal por "
+                             "outro, não a fechar o último. As opções que restam são "
+                             "de DESENHO, não de redação, e são do revisor."),
+            "nao_editado_alem_do_pedido": True,
         },
         "binds_to": {"rubric_judge_sha256": shp(JR)},
         "estado": "o veredito e a decisão de enviar ou não são do revisor",
