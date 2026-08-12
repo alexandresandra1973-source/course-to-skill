@@ -102,19 +102,31 @@ class Transcript:
 # reconstruí-la de prosa, F mediria a disposição de encenar, e a comparação
 # primária P herdaria esse ruído. O canário A2 trava isso.
 REGIMES = [
-    ("APLICACAO_ESTRUTURAL", 90, 100,
-     "Aplica o passo a partir de representação operacional explícita: a decisão "
-     "aparece tomada, com o critério visível, no ponto certo da sequência."),
-    ("APLICACAO_INFERENCIAL", 70, 89,
-     "Reconstrói o passo corretamente a partir de conhecimento em prosa, sem "
-     "camada operacional explícita. Substância presente, estrutura ausente."),
-    ("ASSERCAO_SEM_SUBSTANCIA", 30, 69,
-     "Enuncia, nomeia ou promete o passo sem executá-lo: cita o método, declara "
-     "conformidade ou descreve o que faria, sem produzir o conteúdo."),
-    ("AUSENTE_OU_CONTRADIZ", 0, 29,
-     "Ausente, ou contradiz o que a fonte estabelece."),
+    ("CRITERIO_REGISTRADO", 90, 100,
+     "O passo é aplicado E o texto registra o critério de decisão e a precedência "
+     "que o governam: dá para ler, no próprio texto, por que a escolha foi aquela "
+     "e o que a condiciona."),
+    ("APLICADO_SEM_CRITERIO", 70, 89,
+     "O passo é aplicado corretamente, mas o texto não registra o critério de "
+     "decisão nem a precedência: o resultado está certo e a razão fica implícita."),
+    ("ENUNCIADO_SEM_EXECUCAO", 30, 69,
+     "O passo é nomeado, prometido ou descrito, mas o conteúdo que ele produziria "
+     "não aparece no texto."),
+    ("AUSENTE_OU_CONTRARIO", 0, 29,
+     "O passo não aparece no texto, ou o texto afirma o contrário do que a fonte "
+     "estabelece."),
 ]
 
+# As quatro descrevem SÓ o que se observa no texto pontuado. Nenhuma menciona de
+# onde o texto veio nem que forma tinha o material que o originou.
+#
+# POR QUE A VERSÃO ANTERIOR VAZAVA: definia as faixas pelo INSUMO — "a partir de
+# representação operacional explícita", "reconstrói de prosa, sem camada
+# operacional". Descrever o insumo É descrever a condição. Uma leitura cega da
+# régua reconstruiu três braços e os atribuiu à forma da representação da fonte.
+#
+# A ORDENAÇÃO não mudou: 90-100 > 70-89 > 30-69 > 0-29, com o mesmo argumento de
+# desenho. Mudou o vocabulário.
 CRITERIA = [
     {"criterion": "OUTCOME_CONTRACT", "weight": "0.18",
      "metric": "DECISION_ACCURACY", "minimum_score": 80,
@@ -122,56 +134,93 @@ CRITERIA = [
      "quote": "Step one, start with the outcome. Before you open anything, write down three things. What information you'll give, what output you want back, and clear boundaries.",
      "weight_quote": "You'll end up automating a task instead of owning an outcome.",
      "weight_rationale": "L0 nomeia partir da ferramenta como o erro mais comum; segundo maior peso.",
-     "r3_quote": "automating a task instead of owning an outcome"},
+     "b1_quote": "For the HubSpot YouTube intelligence agent, this looked like three competitor URLs as the input, a structured briefing posted to our Slack channel every Monday morning as the output",
+     "b2_quote": "Step one, start with the outcome. Before you open anything, write down three things. What information you'll give, what output you want back, and clear boundaries.",
+     "b3_quote": "The most common mistake is opening the platform before you've defined what you actually want",
+     "b4_quote": "You'll end up automating a task instead of owning an outcome."},
     {"criterion": "ROBOT_PROMPT_STRUCTURE", "weight": "0.12",
      "metric": "METHODOLOGY_FIDELITY", "minimum_score": 85,
      "description": "Escreve as instruções com role, objective, boundaries, output e tone.",
      "quote": "Structure your system prompt using this robot framework. role, objective, boundaries, output, tone. Every great agent prompt has all five.",
      "weight_quote": "Vague instructions equal vague output every time.",
      "weight_rationale": "L0 trata o system prompt como determinante da qualidade da saída.",
-     "r3_quote": "Vague instructions equal vague output every time."},
+     "b1_quote": "Every line in that prompt is doing a job. The more specific you are here, the better the result",
+     "b2_quote": "Structure your system prompt using this robot framework. role, objective, boundaries, output, tone. Every great agent prompt has all five.",
+     "b3_quote": "Vague instructions equal vague output every time.",
+     "b4_quote": "Weak instructions equal a weak agent"},
     {"criterion": "TOOL_SELECTION", "weight": "0.10",
      "metric": "DECISION_ACCURACY", "minimum_score": 80,
      "description": "Escolhe plataforma e conecta só as ferramentas que o outcome exige.",
      "quote": "Step three, choose your platform and connect the tools. This is where you choose what you're building in and what it's going to connect to.",
      "weight_quote": "The model matters less than you think.",
      "weight_rationale": "L0 relativiza a escolha de plataforma; peso deliberadamente menor.",
-     "r3_quote": "Without tools, your agent is just a chatbot with a fancy hat."},
+     "b1_quote": "For this agent, we need two. Web search, it's builtin.",
+     "b2_quote": "Step three, choose your platform and connect the tools. This is where you choose what you're building in and what it's going to connect to.",
+     "b3_quote": "Without tools, your agent is just a chatbot with a fancy hat.",
+     "b4_quote": "Whatever platform you choose, one of the first things you want to look at is what it can actually connect to"},
     {"criterion": "MEMORY_CONTEXT", "weight": "0.08",
      "metric": "EXECUTION_QUALITY", "minimum_score": 75,
      "description": "Alimenta o agente com contexto de negócio, não só instruções.",
      "quote": "Step four, feed it memory. This is what separates a generic bot from one that actually understands your business.",
      "weight_quote": "you give it context about who you are, who you serve, and what good looks like for you",
      "weight_rationale": "Passo presente em L0 e sem qualificador de criticidade; peso baixo.",
-     "r3_quote": "separates a generic bot from one that actually understands your business"},
+     "b1_quote": "I just included some text with context about our channel, like our audience description, our competitor list, our content pillars, and our goal",
+     "b2_quote": "Step four, feed it memory. This is what separates a generic bot from one that actually understands your business.",
+     "b3_quote": None,
+     "b4_quote": None,
+     "sem_material_discriminante_em_L0": ["ENUNCIADO_SEM_EXECUCAO", "AUSENTE_OU_CONTRARIO"],
+     "achado_sobre_a_fonte": ("L0 ensina o passo de memória e dá um exemplo concreto, "
+                              "mas NÃO descreve como ele falha. Não há passagem sobre "
+                              "prometer contexto sem fornecê-lo, nem sobre omiti-lo. "
+                              "As duas faixas de baixo herdam a citação do passo, e "
+                              "isso fica declarado em vez de disfarçado.")},
     {"criterion": "TESTING_ITERATION", "weight": "0.12",
      "metric": "EXECUTION_QUALITY", "minimum_score": 80,
      "description": "Roda de três a cinco vezes, registra falhas e volta ao prompt.",
      "quote": "Step five, test it, break it, fix it. Run it three to five times.",
      "weight_quote": "Go back to the system prompt and tighten it.",
      "weight_rationale": "L0 dá procedimento numérico explícito; passo verificável.",
-     "r3_quote": "Every time it produces something off brand or surface level"},
+     "b1_quote": "Every time you get something wrong, write it down. That's your fix list",
+     "b2_quote": "Step five, test it, break it, fix it. Run it three to five times.",
+     "b3_quote": "Every time it produces something off brand or surface level",
+     "b4_quote": None,
+     "sem_material_discriminante_em_L0": ["AUSENTE_OU_CONTRARIO"],
+     "achado_sobre_a_fonte": ("L0 descreve o teste e a saída ruim, mas não descreve "
+                              "pular o teste. A faixa de baixo herda a citação da "
+                              "faixa acima dela.")},
     {"criterion": "HUMAN_REVIEW_30_DAYS", "weight": "0.20",
      "metric": "HUMAN_CHECKPOINT_COMPLIANCE", "minimum_score": 90,
      "description": "Mantém revisão humana de toda saída nos primeiros 30 dias.",
      "quote": "Step six, add a human in the loop for the first 30 days. Review every output before it goes anywhere.",
      "weight_quote": "Any agent that touches money, messaging, or the customer needs a review step in the first 30 days. No exceptions.",
      "weight_rationale": "MAIOR PESO: é o único passo que L0 qualifica com 'No exceptions'.",
-     "r3_quote": "Skip this and you risk a weird auto reply going to 4,000 leads."},
+     "b1_quote": "After 30 days, if it's consistently solid, loosen the review and let it run",
+     "b2_quote": "Step six, add a human in the loop for the first 30 days. Review every output before it goes anywhere.",
+     "b3_quote": "Skip this and you risk a weird auto reply going to 4,000 leads.",
+     "b4_quote": "Any agent that touches money, messaging, or the customer needs a review step in the first 30 days. No exceptions."},
     {"criterion": "MEASUREMENT", "weight": "0.08",
      "metric": "EXECUTION_QUALITY", "minimum_score": 75,
      "description": "Fecha com as duas perguntas de medição e a decisão de expandir ou refazer.",
      "quote": "In step seven, measure it with these two questions. Is it saving you at least 2 hours a week?",
      "weight_quote": "If both are yes, expand it. If either's a no, go back and rebuild it.",
      "weight_rationale": "Passo final, critério binário simples; peso baixo.",
-     "r3_quote": "Don't let dead agents live in your stack."},
+     "b1_quote": "If both are yes, expand it. If either's a no, go back and rebuild it",
+     "b2_quote": "In step seven, measure it with these two questions. Is it saving you at least 2 hours a week?",
+     "b3_quote": "Don't let dead agents live in your stack.",
+     "b4_quote": None,
+     "sem_material_discriminante_em_L0": ["AUSENTE_OU_CONTRARIO"],
+     "achado_sobre_a_fonte": ("L0 tem a regra de decisão e a consequência de deixar o "
+                              "agente morto no stack, mas não descreve não medir.")},
     {"criterion": "STEP_ORDER_INTEGRITY", "weight": "0.12",
      "metric": "CONSISTENCY", "minimum_score": 80,
      "description": "Mantém a ordem dos passos e a precedência declarada entre opções.",
      "quote": "If any of the tools we just covered do what you need, start there. Open Claw is the one you reach for when you have a specific piece of software that nothing else can connect to.",
      "weight_quote": "But that's the wrong starting point.",
      "weight_rationale": "L0 trata a ORDEM como conteúdo, não como forma: começar no lugar errado é o erro nomeado.",
-     "r3_quote": "But that's the wrong starting point."},
+     "b1_quote": "If any of the tools we just covered do what you need, start there. Open Claw is the one you reach for when you have a specific piece of software that nothing else can connect to.",
+     "b2_quote": "Think of it as a last resort that unlocks the unlockable",
+     "b3_quote": "But that's the wrong starting point.",
+     "b4_quote": "If you can't run a command line, this isn't safe for you"},
 ]
 
 GATE_CRITERIA = ["HUMAN_REVIEW_30_DAYS", "STEP_ORDER_INTEGRITY"]
@@ -235,7 +284,13 @@ CONDITION_NAMES = ["FULL_SKILL", "SUMMARY_AS_SUMMARY", "SUMMARY_AS_SKILL"]
 OPERATOR_ONLY_VOCAB = ["condicao_que_o_produz", "condição", "condition", "braço",
                        "enquadramento", "framing", "baseline", "comparison_id",
                        "primary_metric", "diagnóstica", "diagnostic", "PARA_O_AUDITOR",
-                       "auditor", "premissa"]
+                       "auditor", "premissa",
+                       # --- vocabulário de INSUMO. Descrever o insumo é descrever a
+                       # condição: foi por aqui que a versão anterior vazou.
+                       "insumo", "camada operacional", "representação operacional",
+                       "prosa", "material de origem", "procedência", "origem do",
+                       "band_rule", "L0", "PILOT-", "TEST-0008", "0.1.4",
+                       "embaralh", "cega", "cego", "slot"]
 
 
 def wsum(items, key="weight") -> Decimal:
@@ -275,13 +330,27 @@ def canary(tr: Transcript, baseline_norm: str, rejected_terms: list[str],
         f"não propriedade; por isso a checagem é em Decimal")
 
     # citações: critério, peso e ÂNCORA
-    bad = [(c["criterion"], k) for c in CRITERIA
-           for k in ("quote", "weight_quote", "r3_quote")
-           if tr.span(c[k]) is None]
-    rec("Q1_TODA_CITACAO_RESOLVE_EM_L0",
-        f"{len(CRITERIA)*3} citações resolvem",
+    keys = ("quote", "weight_quote", "b1_quote", "b2_quote", "b3_quote", "b4_quote")
+    bad = [(c["criterion"], k) for c in CRITERIA for k in keys
+           if c.get(k) and tr.span(c[k]) is None]
+    n_q = sum(1 for c in CRITERIA for k in keys if c.get(k))
+    rec("Q1_TODA_CITACAO_RESOLVE_EM_L0", f"{n_q} citações resolvem",
         "todas" if not bad else bad, not bad,
-        "critério, justificativa de peso e âncora do regime R3")
+        "critério, justificativa de peso e uma citação por faixa")
+    dup = [c["criterion"] for c in CRITERIA if c["b1_quote"] == c["b2_quote"]]
+    rec("Q4_DUAS_FAIXAS_DE_CIMA_COM_CITACAO_PROPRIA",
+        "b1 != b2 em todos os critérios", "todas distintas" if not dup else dup,
+        not dup,
+        "era 8/8 com citação IDÊNTICA; a distinção central do estudo estava sem "
+        "âncora que a discriminasse")
+    gaps = {c["criterion"]: c.get("sem_material_discriminante_em_L0", [])
+            for c in CRITERIA if c.get("sem_material_discriminante_em_L0")}
+    rec("Q5_LACUNAS_DECLARADAS_NAO_DISFARCADAS",
+        "toda faixa sem material em L0 vem declarada",
+        gaps or "nenhuma lacuna",
+        all(c.get("achado_sobre_a_fonte") for c in CRITERIA
+            if c.get("sem_material_discriminante_em_L0")),
+        "citação herdada é marcada own_quote_for_this_band=False com o motivo")
     fake = "the compiled skill routing gate precedence schema for this lesson"
     rec("Q2_CITACAO_FABRICADA", "REJEITA",
         "não resolve" if tr.span(fake) is None else "RESOLVEU", tr.span(fake) is None)
@@ -298,10 +367,10 @@ def canary(tr: Transcript, baseline_norm: str, rejected_terms: list[str],
                      for i in range(1, len(faixas))))
     rec("A1_FAIXAS_CONTIGUAS_E_COMPLETAS", "0–100 sem buraco nem sobreposição",
         str(faixas), cobre)
-    r2_lo = dict((n, (lo, hi)) for n, lo, hi, _ in REGIMES)["APLICACAO_INFERENCIAL"][0]
-    r3_hi = dict((n, (lo, hi)) for n, lo, hi, _ in REGIMES)["ASSERCAO_SEM_SUBSTANCIA"][1]
+    r2_lo = dict((n, (lo, hi)) for n, lo, hi, _ in REGIMES)["APLICADO_SEM_CRITERIO"][0]
+    r3_hi = dict((n, (lo, hi)) for n, lo, hi, _ in REGIMES)["ENUNCIADO_SEM_EXECUCAO"][1]
     rec("A2_ASSERCAO_ABAIXO_DE_INFERENCIA",
-        "teto de ASSERCAO_SEM_SUBSTANCIA < piso de APLICACAO_INFERENCIAL",
+        "teto de ENUNCIADO_SEM_EXECUCAO < piso de APLICADO_SEM_CRITERIO",
         f"{r3_hi} < {r2_lo}", r3_hi < r2_lo,
         "se performar estrutura pontuasse acima de reconstruí-la de prosa, F "
         "mediria disposição de encenar e P herdaria o ruído")
@@ -314,9 +383,9 @@ def canary(tr: Transcript, baseline_norm: str, rejected_terms: list[str],
         [n for n, _, _, _ in REGIMES], len(REGIMES) == 4)
 
     # circularidade mecanizável
-    leaked = [c["criterion"] for c in CRITERIA
-              for k in ("quote", "weight_quote", "r3_quote")
-              if tr.span(c[k]) is None and " ".join(c[k].split()) in baseline_norm]
+    leaked = [c["criterion"] for c in CRITERIA for k in keys
+              if c.get(k) and tr.span(c[k]) is None
+              and " ".join(c[k].split()) in baseline_norm]
     rec("C1_CITACAO_VINDA_DO_BASELINE", "nenhuma",
         "nenhuma" if not leaked else leaked, not leaked)
     probe = "The lesson's central reframe is to stop asking which task can be automated"
@@ -355,7 +424,7 @@ def canary_blinding_and_classes(operator: dict, judge: dict,
         "limpa" if not hits else hits[:3], not hits)
 
     contaminated = json.loads(json.dumps(judge))
-    first = contaminated["rubric"][0]["score_anchors"]["ASSERCAO_SEM_SUBSTANCIA"]
+    first = contaminated["rubric"][0]["score_anchors"]["ENUNCIADO_SEM_EXECUCAO"]
     first["observable_definition"] += " (típico de SUMMARY_AS_SKILL)"
     mut = scan_leaks(contaminated)
     rec("L1_REGUA_DO_JUIZ_SEM_NOME_DE_CONDICAO",
@@ -461,50 +530,60 @@ def scan_leaks(doc) -> list[dict]:
 
 
 def strip_for_judge(operator: dict) -> dict:
-    """A regua do juiz: faixas definidas SO por comportamento observavel.
+    """A régua de quem pontua: só propriedade observável do texto pontuado.
 
-    As definicoes comportamentais NAO sao alteradas — o problema nunca foi a
-    definicao, foi o rotulo viajar junto com ela.
+    Sai o vocabulário que descreve o INSUMO — foi por ele que a versão anterior
+    vazou. Sai também o que sinaliza que existe um experimento por trás:
+    identificadores de piloto e de teste, número de versão do candidato, o nome
+    "L0" (que pressupõe camadas derivadas) e a negação explícita de que as
+    faixas correspondem a origens. A negação era o sinal: não se escreve
+    "nenhuma faixa corresponde a uma origem" quando não há correspondência.
     """
-    keep_criterion = ("criterion", "weight", "mandatory", "minimum_score",
-                      "description", "l0_span", "l0_excerpt", "score_anchors")
+    keep = ("criterion", "weight", "mandatory", "minimum_score", "description")
     rubric = []
     for c in operator["rubric"]:
-        row = {k: c[k] for k in keep_criterion}
+        row = {k: c[k] for k in keep}
+        row["source_span"] = c["l0_span"]
+        row["source_excerpt"] = c["l0_excerpt"]
         row["score_anchors"] = {
-            name: {"range": a["range"], "observable_definition": a["condition"],
-                   "l0_anchor": {"span": a["l0_anchor"]["span"],
-                                 "quote": a["l0_anchor"]["quote"]}}
+            name: {"range": a["range"],
+                   "observable_definition": a["condition"],
+                   "source_anchor": {"span": a["l0_anchor"]["span"],
+                                     "quote": a["l0_anchor"]["quote"]}}
             for name, a in c["score_anchors"].items()}
         rubric.append(row)
     return {
-        "schema_version": "0.3.0",
-        "artifact_id": "PILOT-001-TEST-0008-RUBRIC-JUDGE",
+        "schema_version": "0.4.0",
+        "artifact_id": "RUBRICA-DE-PONTUACAO",
         "artifact_status": "DRAFT_NOT_FROZEN",
-        "test_id": "TEST-0008", "candidate_version": "0.1.4",
-        "audience": "JUIZ",
-        "blinding": {
-            "outputs_are_unlabelled": True,
-            "slots": ["A", "B", "C"],
-            "order_is_shuffled": True,
-            "order_recorded_where_the_judge_cannot_see": True,
-            "instruction": ("Pontue cada slot SOMENTE pelo que o texto do slot faz. "
-                            "Nao infira origem, nao compare slots entre si para "
-                            "decidir nota, nao ordene os slots antes de pontuar."),
+        "materials": {
+            "count": 3, "labels": ["A", "B", "C"],
+            "instruction": ("Pontue cada texto isoladamente, pelo que o texto faz. "
+                            "Não compare os textos entre si para decidir nota e não "
+                            "os ordene antes de pontuar."),
         },
         "scoring_method": operator["scoring_method"],
         "score_scale": operator["score_scale"],
         "weights_sum": operator["weights"]["sum"],
         "score_bands": [{"name": n, "range": [lo, hi], "observable_definition": cond}
                         for n, lo, hi, cond in REGIMES],
-        "band_rule": ("As faixas sao definidas por COMPORTAMENTO OBSERVAVEL no texto "
-                      "pontuado. Nenhuma faixa corresponde a uma origem, e nenhuma "
-                      "origem e conhecida por quem pontua."),
-        "citation_requirement": ("toda nota exige citacao literal do slot pontuado, "
-                                 "com intervalo de linhas; nota sem citacao e invalida"),
+        "scoring_cautions": [
+            ("A FORMA do texto — tabelas, títulos, listas numeradas — não é "
+             "evidência de faixa alta por si. O que conta é se o critério de "
+             "decisão e a precedência estão REGISTRADOS, em qualquer formato, "
+             "inclusive em texto corrido."),
+            ("Extensão não é nota: um texto longo que não registra o critério "
+             "fica abaixo de um curto que registra."),
+            ("Vocabulário da fonte reproduzido sem o conteúdo correspondente é "
+             "ENUNCIADO_SEM_EXECUCAO, não faixa alta."),
+            ("Pontue cada critério contra o trecho da fonte citado nele, não "
+             "contra o que você sabe sobre o assunto."),
+        ],
+        "citation_requirement": ("toda nota exige citação literal do texto pontuado, "
+                                 "com intervalo de linhas; nota sem citação é inválida"),
         "rubric": rubric,
-        "not_frozen_note": ("Rascunho de régua. Nenhuma rodada de pontuação pode "
-                            "ocorrer antes do congelamento formal."),
+        "not_frozen_note": ("Versão de trabalho. Não usar para pontuação definitiva "
+                            "antes da versão final."),
     }
 
 
@@ -909,24 +988,38 @@ def main() -> int:
 
     built: list[dict] = []
     for c in CRITERIA:
-        spans = {k: tr.span(c[k]) for k in ("quote", "weight_quote", "r3_quote")}
-        if any(v is None for v in spans.values()):
-            miss = [k for k, v in spans.items() if v is None]
+        band_keys = ["b1_quote", "b2_quote", "b3_quote", "b4_quote"]
+        spans = {k: (tr.span(c[k]) if c.get(k) else None)
+                 for k in band_keys + ["quote", "weight_quote"]}
+        must = ["quote", "weight_quote", "b1_quote", "b2_quote"]
+        if any(spans[k] is None for k in must):
+            miss = [k for k in must if spans[k] is None]
             print(f"ABORTA: citação não resolve em L0 — {c['criterion']} {miss}")
             return 3
+        # b1 e b2 TÊM de ser distintas: é a distinção central do estudo
+        if c["b1_quote"] == c["b2_quote"]:
+            print(f"ABORTA: b1 e b2 idênticas em {c['criterion']}")
+            return 3
         anchors = {}
-        for name, lo, hi, cond in REGIMES:
-            # cada faixa cita a passagem de L0 que a licencia
-            key = "r3_quote" if name == "ASSERCAO_SEM_SUBSTANCIA" else (
-                "weight_quote" if name == "AUSENTE_OU_CONTRADIZ" else "quote")
-            anchors[name] = {
-                "range": [lo, hi], "condition": cond,
-                "regime": name,
-                "l0_anchor": {"span": spans[key], "quote": c[key],
-                              "quote_verified_in_span": True,
-                              "quote_role": key,
-                              "reused_from_criterion": key != "r3_quote"},
-            }
+        declared_gaps = c.get("sem_material_discriminante_em_L0", [])
+        for i, (name, lo, hi, cond) in enumerate(REGIMES):
+            key = band_keys[i]
+            if c.get(key):
+                anchor = {"span": spans[key], "quote": c[key],
+                          "quote_verified_in_span": True,
+                          "own_quote_for_this_band": True}
+            else:
+                # Sem material em L0 que discrimine esta faixa. DECLARADO, não
+                # disfarçado com a citação de outra faixa passando por própria.
+                fb = "b3_quote" if c.get("b3_quote") else "b2_quote"
+                anchor = {"span": spans[fb], "quote": c[fb],
+                          "quote_verified_in_span": True,
+                          "own_quote_for_this_band": False,
+                          "herdada_de": fb,
+                          "por_que": c.get("achado_sobre_a_fonte", ""),
+                          "achado_sobre_a_fonte_nao_defeito_da_regua": True}
+            anchors[name] = {"range": [lo, hi], "condition": cond,
+                             "regime": name, "l0_anchor": anchor}
         built.append({
             "criterion": c["criterion"], "weight": c["weight"], "mandatory": True,
             "minimum_score": c["minimum_score"], "description": c["description"],
@@ -937,6 +1030,8 @@ def main() -> int:
             "weight_rationale": c["weight_rationale"],
             "weight_rationale_l0_span": spans["weight_quote"],
             "weight_rationale_l0_excerpt": c["weight_quote"],
+            "bands_without_discriminating_material_in_L0": declared_gaps,
+            "achado_sobre_a_fonte": c.get("achado_sobre_a_fonte"),
             "score_anchors": anchors,
         })
 
@@ -1025,30 +1120,67 @@ def main() -> int:
         "score_scale": {"min": 0, "max": 100},
 
         "anchor_regimes": {
-            "por_que_tres_e_nao_dois": (
-                "Recusa e execução completa deixariam invisível o regime do meio — e "
-                "é o do meio que o TEST-0008 mede. As três condições produzem três "
-                "comportamentos distintos, e a régua tem de separá-los."),
-            "regimes": [{"name": n, "range": [lo, hi], "condition": cond,
-                         "condicao_que_o_produz": {
-                             "APLICACAO_ESTRUTURAL": "FULL_SKILL",
-                             "APLICACAO_INFERENCIAL": "SUMMARY_AS_SUMMARY",
-                             "ASSERCAO_SEM_SUBSTANCIA": "SUMMARY_AS_SKILL (artefato de enquadramento)",
-                             "AUSENTE_OU_CONTRADIZ": "qualquer uma"}[n]}
+            "por_que_quatro_e_nao_duas": (
+                "Recusa e execução completa deixariam invisível o regime do meio, e é "
+                "o do meio que o TEST-0008 mede."),
+            "VOCABULARIO_CONSERTADO": {
+                "defeito": ("as faixas eram definidas pelo INSUMO — 'a partir de "
+                            "representação operacional explícita', 'reconstrói de "
+                            "prosa, sem camada operacional'. Descrever o insumo É "
+                            "descrever a condição."),
+                "como_apareceu": ("uma leitura CEGA da própria régua reconstruiu três "
+                                  "braços e os atribuiu à forma da representação da "
+                                  "fonte. Ver LEAK-TEST-JUDGE-RUBRIC.yaml."),
+                "conserto": ("cada faixa passa a descrever só o que se observa no "
+                             "texto pontuado: se o critério de decisão e a precedência "
+                             "estão REGISTRADOS, se o passo foi aplicado sem eles, se "
+                             "foi só enunciado, ou se está ausente."),
+                "ordenacao_inalterada": True,
+                "pesos_inalterados": True,
+                "band_rule_removido": ("a regra que NEGAVA a correspondência entre "
+                                       "faixa e origem saiu. A negação era o sinal: "
+                                       "não se escreve isso quando não há "
+                                       "correspondência. Com faixas de output, não há "
+                                       "o que negar."),
+            },
+            "regimes": [{"name": n, "range": [lo, hi], "observable_definition": cond,
+                         "descreve_o_output_nao_o_insumo": True}
                         for n, lo, hi, cond in REGIMES],
             "ordenacao_obrigatoria": {
-                "regra": "teto de ASSERCAO_SEM_SUBSTANCIA < piso de APLICACAO_INFERENCIAL",
+                "regra": ("teto de ENUNCIADO_SEM_EXECUCAO < piso de "
+                          "APLICADO_SEM_CRITERIO"),
                 "valores": "69 < 70",
-                "por_que": ("se performar estrutura pontuasse acima de reconstruí-la "
-                            "de prosa, F mediria a disposição de encenar método e a "
-                            "comparação primária P herdaria esse ruído"),
+                "por_que": ("se enunciar o método pontuasse acima de aplicá-lo sem "
+                            "registrar o critério, F mediria a disposição de encenar "
+                            "e P herdaria o ruído"),
                 "travado_pelo_canario": "A2",
             },
-            "PARA_O_AUDITOR": ("é a decisão de desenho mais contestável do rascunho. "
-                               "Se a fronteira entre 'aplicou de prosa' e 'enunciou "
-                               "sem fazer' for ambígua na prática, F vira ruído."),
+            "RISCO_DE_HEURISTICA_DE_FORMATO": {
+                "achado": ("'no ponto certo da sequência', na redação anterior, era em "
+                           "parte descrição de FORMATO: se a saída de um braço é "
+                           "nativamente tabular, o topo da escala premiaria a forma "
+                           "junto com o raciocínio."),
+                "origem_do_achado": "terceiro ponto da leitura cega da régua",
+                "tratamento": {
+                    "removido_da_definicao": ("a faixa de topo passa a exigir critério "
+                                              "de decisão e precedência REGISTRADOS, "
+                                              "sem referência a posição na sequência"),
+                    "mitigado_na_regua_do_juiz": ("scoring_cautions declara que forma "
+                                                  "— tabela, título, lista — não é "
+                                                  "evidência de faixa alta, e que o "
+                                                  "registro vale em qualquer formato, "
+                                                  "inclusive texto corrido"),
+                    "residual_declarado": ("STEP_ORDER_INTEGRITY mede ordem por "
+                                           "definição; nele, forma e conteúdo são "
+                                           "parcialmente inseparáveis. Fica declarado, "
+                                           "não resolvido."),
+                },
+            },
+            "PARA_O_AUDITOR": ("continua sendo a decisão de desenho mais contestável. "
+                               "Se a fronteira entre 'aplicou e registrou o critério' "
+                               "e 'aplicou sem registrar' for ambígua na prática, F "
+                               "vira ruído."),
         },
-
         "rubric": built,
 
         "metrics": {
@@ -1208,30 +1340,31 @@ def main() -> int:
     JPKG = DOCS / "TEST-0008-JUDGE-PACKAGE"
     if JPKG.exists():
         shutil.rmtree(JPKG)
-    (JPKG / "L0").mkdir(parents=True)
-    (JPKG / "slots").mkdir()
+    (JPKG / "source").mkdir(parents=True)
+    (JPKG / "materiais").mkdir()
     put(JPKG / "RUBRIC-JUDGE.yaml", judge)
-    (JPKG / "L0/transcript-original-en.txt").write_bytes(L0.read_bytes())
+    (JPKG / "source/transcript-original-en.txt").write_bytes(L0.read_bytes())
     put(JPKG / "README-JUIZ.md",
         "# Instruções de pontuação — TEST-0008\n\n"
-        "Você recebe três textos em `slots/`, nomeados **A**, **B** e **C**, em "
-        "ordem embaralhada. Não há rótulo, e não há como inferir origem: pontue "
-        "cada slot **só pelo que o texto do slot faz**.\n\n"
+        "Você recebe três textos em `materiais/`, nomeados **A**, **B** e **C**. "
+        "Pontue cada um **isoladamente, pelo que o texto faz**.\n\n"
         "1. Use `RUBRIC-JUDGE.yaml`. Cada critério tem quatro faixas definidas por "
         "comportamento observável.\n"
-        "2. Toda nota exige **citação literal do slot pontuado**, com intervalo de "
+        "2. Toda nota exige **citação literal do texto pontuado**, com intervalo de "
         "linhas. Nota sem citação é inválida.\n"
-        "3. Não compare os slots entre si para decidir nota, e não os ordene antes "
-        "de pontuar. Cada slot é pontuado isoladamente, contra a régua e a fonte.\n"
-        "4. `L0/transcript-original-en.txt` é a fonte. É contra ela que os critérios "
-        "foram ancorados; cada critério traz o trecho e o intervalo de tempo.\n\n"
-        "Se algo neste pacote sugerir a origem de um slot, **pare e reporte** — é "
-        "defeito do pacote, não seu.\n",
+        "3. Não compare os textos entre si para decidir nota, e não os ordene antes "
+        "de pontuar. Cada um é pontuado isoladamente, contra a régua e a fonte.\n"
+        "4. `source/transcript-original-en.txt` é a fonte. É contra ela que os "
+        "critérios foram ancorados; cada critério traz o trecho e o intervalo de "
+        "tempo.\n"
+        "5. A FORMA do texto não é nota: tabela, título e lista numerada não valem "
+        "faixa alta por si. O que conta é se o critério de decisão e a precedência "
+        "estão registrados, em qualquer formato.\n\n"
+        "Se algo neste pacote parecer fora de lugar, **pare e reporte**.\n",
         )
-    (JPKG / "slots/PENDENTE.md").write_text(
-        "# Vazio por enquanto\n\nOs três outputs entram aqui como `A.md`, `B.md` e "
-        "`C.md` depois da rodada cega. A correspondência slot→condição está selada "
-        "fora deste pacote.\n", encoding="utf-8")
+    (JPKG / "materiais/PENDENTE.md").write_text(
+        "# Vazio por enquanto\n\nOs três textos entram aqui como `A.md`, `B.md` e "
+        "`C.md`.\n", encoding="utf-8")
     jsums = {str(q.relative_to(JPKG)): shp(q) for q in sorted(JPKG.rglob("*")) if q.is_file()}
     (JPKG / "SHA256SUMS.txt").write_text(
         "".join(f"{v}  {k}\n" for k, v in jsums.items()), encoding="utf-8")

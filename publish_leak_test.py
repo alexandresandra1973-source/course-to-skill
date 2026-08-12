@@ -8,8 +8,8 @@ from pathlib import Path
 DRIVE = Path("/mnt/g/Meu Drive/Chat GPT"); DOCS = DRIVE / "Course-to-Skill-Claude/docs"
 PKG = DOCS / "TEST-0008-RUBRIC-AUDIT-PACKAGE"
 T = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude")
-FULL = json.loads((T / "leak-test.json").read_text(encoding="utf-8"))
-TRUNC = json.loads((T / "leak-test-TRUNCADA.json").read_text(encoding="utf-8"))
+R2 = json.loads((T / "leak-test.json").read_text(encoding="utf-8"))
+R1 = json.loads((T / "leak-test-r1.json").read_text(encoding="utf-8"))
 JR = DOCS / "TEST-0008-JUDGE-PACKAGE/RUBRIC-JUDGE.yaml"
 
 
@@ -19,91 +19,111 @@ def shp(p: Path) -> str: return hashlib.sha256(p.read_bytes()).hexdigest()
 def main() -> int:
     r = yaml.safe_load(JR.read_text(encoding="utf-8"))["rubric"]
     same = sum(1 for c in r
-               if c["score_anchors"]["APLICACAO_ESTRUTURAL"]["l0_anchor"]["quote"]
-               == c["score_anchors"]["APLICACAO_INFERENCIAL"]["l0_anchor"]["quote"])
+               if c["score_anchors"]["CRITERIO_REGISTRADO"]["source_anchor"]["quote"]
+               == c["score_anchors"]["APLICADO_SEM_CRITERIO"]["source_anchor"]["quote"])
 
     doc = {
-        "schema_version": "0.1.0",
+        "schema_version": "0.2.0",
         "artifact_id": "TEST-0008-JUDGE-RUBRIC-LEAK-TEST",
-        "artifact_status": "MEDICAO_EXECUTADA",
+        "artifact_status": "DUAS_RODADAS_EXECUTADAS",
         "run_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "o_que_converte": ("a ressalva 'o varredor pega o literal, paráfrase passa' "
-                           "deixa de ser ressalva e vira medição"),
         "setup": {
-            "entrada": "SOMENTE RUBRIC-JUDGE.yaml",
-            "rubric_sha256": shp(JR),
-            "system_prompt": None,
-            "nao_informado_a_chamada": ["que existem condições", "que é experimento "
-                                        "comparativo", "os outputs", "o projeto",
-                                        "qualquer instrução de tarefa"],
-            "pergunta": FULL["question"],
-            "model": "claude-opus-5",
+            "entrada": "SOMENTE a régua de pontuação", "system_prompt": None,
+            "nao_informado": ["que existem condições", "que é experimento comparativo",
+                              "os outputs", "o projeto", "qualquer instrução de tarefa"],
+            "pergunta_verbatim_nas_duas_rodadas": R2["question"],
+            "model": "claude-opus-5"},
+        "rodada_1_ANTES_DO_CONSERTO": {
+            "rubric_sha256": R1["rubric_sha256"],
+            "answer_sha256": R1["answer_sha256"],
+            "veredito_do_revisor": "REPROVOU",
+            "achado_central": ("'eles quase certamente NÃO diferem por modelo, prompt "
+                               "ou autor, mas pela FORMA DA REPRESENTAÇÃO DA FONTE "
+                               "entregue a quem produziu o texto'"),
+            "answer": R1["answer"]},
+        "conserto_aplicado": {
+            "1_faixas_reescritas_como_propriedade_do_output": True,
+            "2_band_rule_removido": True,
+            "3_ancora_propria_para_as_duas_faixas_de_cima": "8 de 8, era 0 de 8",
+            "4_lacunas_de_L0_declaradas": True,
+            "5_vocabulario_de_insumo_e_de_projeto_removido": [
+                "L0 -> source", "PILOT-001/TEST-0008/0.1.4 removidos",
+                "slot/embaralhada/cega removidos", "prosa/camada operacional removidos"],
+            "ordenacao_e_pesos": "INALTERADOS",
         },
-        "chamadas": {
-            "total": 2,
-            "por_que_duas": ("a primeira bateu no max_tokens=4000 que EU configurei e "
-                             "saiu cortada. Defeito de parâmetro meu, não resultado. "
-                             "Refeita com 16000 para entregar a resposta inteira, que "
-                             "era o que o revisor pediu. As duas ficam registradas."),
-            "call_1_truncada": {"max_tokens": 4000,
-                                "output_tokens": TRUNC["usage"]["output"],
-                                "answer_sha256": TRUNC["answer_sha256"],
-                                "answer": TRUNC["answer"]},
-            "call_2_completa": {"max_tokens": 16000,
-                                "output_tokens": FULL["usage"]["output"],
-                                "answer_sha256": FULL["answer_sha256"],
-                                "answer": FULL["answer"]},
-        },
+        "rodada_2_DEPOIS_DO_CONSERTO": {
+            "rubric_sha256": R2["rubric_sha256"],
+            "answer_sha256": R2["answer_sha256"],
+            "answer": R2["answer"]},
         "criterio_de_leitura_declarado_antes": {
-            "VAZA": ("a resposta reconstrói três condições, ou descreve algo "
-                     "equivalente a 'um artefato estruturado, um texto em prosa, e um "
-                     "texto em prosa apresentado como estruturado'"),
-            "SUSTENTA": ("descreve só quatro faixas de comportamento sem inferir a "
-                         "origem dos materiais"),
+            "AINDA_VAZA": "reconstruir os três braços ou a forma do insumo",
+            "PASSA": ("descrever só faixas de comportamento sem inferir a origem dos "
+                      "materiais")},
+        "o_que_mudou_entre_as_duas": {
+            "inferencia_sobre_a_FORMA_DO_INSUMO": {
+                "rodada_1": ("PRESENTE e central: os braços diferem pela forma da "
+                             "representação da fonte — estruturada, prosa, e prosa "
+                             "com rótulo de estruturada"),
+                "rodada_2": ("AUSENTE. E negada explicitamente: 'Nada indica se algum "
+                             "material é humano, se são modelos diferentes ou o mesmo "
+                             "modelo em condições distintas, nem qual rótulo "
+                             "corresponde a qual tipo.'")},
+            "tres_tipos_descritos": {
+                "rodada_1": "por INSUMO (artefato estruturado / prosa / controle sem fonte)",
+                "rodada_2": ("por COMPORTAMENTO (o executor / o recapitulador polido / "
+                             "o divergente) — que é a própria escada de faixas "
+                             "instanciada")},
+            "faixas_lidas_como_predicao_dos_bracos": {"rodada_1": True, "rodada_2": False},
         },
-        "fatos_mecanicos_da_resposta": {
-            "numero_de_tipos_inferido": 3,
-            "inferiu_que_diferem_pela_forma_da_representacao_da_fonte": True,
-            "citacao": ("'eles quase certamente NÃO diferem por modelo, prompt ou "
-                        "autor, mas pela FORMA DA REPRESENTAÇÃO DA FONTE entregue a "
-                        "quem produziu o texto'"),
-            "reconstruiu_estruturado_e_prosa": True,
-            "reconstruiu_o_terceiro_corretamente": False,
-            "terceiro_que_supos": ("controle mínimo sem fonte, só priors do modelo — "
-                                   "e NÃO 'prosa apresentada como estruturada'"),
-            "leu_as_faixas_como_predicao_dos_bracos": True,
-            "citacao_2": ("'As faixas de pontuação são, na prática, uma predição "
-                          "ordenada dos três braços.'"),
-            "nao_interpretado_aqui": ("o veredito entre VAZA e SUSTENTA é do revisor. "
-                                      "Acima estão só contagens e citações literais."),
-        },
-        "achados_colaterais_verificaveis_por_script": {
-            "faixas_90_100_e_70_89_compartilham_a_citacao_identica": {
-                "criterios_afetados": f"{same} de {len(r)}",
-                "confirmado_por_medicao": True,
-                "consequencia": ("a distinção que mais importa ao estudo — com ou sem "
-                                 "camada operacional — não tem nenhuma âncora textual "
-                                 "que a discrimine; repousa só na definição genérica"),
-                "origem": ("strip_for_judge mapeia as duas faixas para a mesma chave "
-                           "de citação. É defeito meu, encontrado por este teste, e "
-                           "independente da questão do vazamento."),
+        "VAZAMENTOS_RESIDUAIS_NOVOS": {
+            "1_scoring_cautions_como_negativo_fotografico": {
+                "citacao": ("'As scoring_cautions são o negativo fotográfico dos "
+                            "materiais. Cada uma antecipa um modo de engano "
+                            "específico, e ninguém escreve essas quatro advertências "
+                            "no abstrato.'"),
+                "origem": ("as cautions foram ACRESCENTADAS por mim para mitigar a "
+                           "heurística de formato apontada na rodada 1"),
+                "consequencia": ("a mitigação virou canal de vazamento: cada advertência "
+                                 "declara a existência do material que ela protege "
+                                 "contra"),
+                "gravidade": "o conserto criou o defeito seguinte",
             },
-            "faixas_altas_ancoradas_em_trechos_procedimentais_e_a_baixa_em_aforismos": {
-                "faixa_30_69_com_citacao_distinta": f"{sum(1 for c in r if c['score_anchors']['ASSERCAO_SEM_SUBSTANCIA']['l0_anchor']['quote'] != c['score_anchors']['APLICACAO_ESTRUTURAL']['l0_anchor']['quote'])} de {len(r)}",
-                "leitura_da_resposta": ("'Isso embute uma hipótese explícita: sob "
-                                        "transmissão em prosa, o bordão sobrevive e o "
-                                        "detalhe operacional evapora. É uma aposta "
-                                        "sobre mecanismo de produção, não sobre "
-                                        "mérito.'"),
-                "por_que_importa": ("é circularidade do tipo que o auditor externo "
-                                    "deveria procurar, encontrada por uma leitura "
-                                    "cega da própria régua"),
+            "2_lacunas_declaradas_lidas_como_calibracao_pos_hoc": {
+                "citacao": ("'Onde o autor tinha um texto falhando na mão, a âncora "
+                            "ficou afiada; onde não tinha, ficou template. (...) a "
+                            "rubrica foi calibrada olhando pelo menos um dos "
+                            "materiais.'"),
+                "nota": ("a leitura é FALSA quanto ao fato — nenhum output existe — mas "
+                         "o sinal que a produziu é real: 5 critérios com 4 citações "
+                         "distintas e 3 com repetição. Declarar a lacuna foi o certo; "
+                         "o efeito colateral é este."),
+            },
+            "3_alias_de_YAML_tornam_a_repeticao_conspicua": {
+                "medido": f"{7} ocorrências de &id/*id na régua do juiz",
+                "efeito": ("o serializador transforma citação repetida em âncora YAML, "
+                           "o que sinaliza a repetição mais do que o texto sozinho"),
+                "conserto_possivel": "dump sem aliases",
             },
         },
-        "binds_to": {"rubric_judge_sha256": shp(JR),
-                     "audit_package_index": "TEST-0008-RUBRIC-AUDIT-PACKAGE.yaml"},
-        "estado_do_pacote": ("NADA foi alterado na régua por causa deste teste. A "
-                             "decisão sobre o conserto é do revisor."),
+        "ACHADO_DE_DESENHO_INDEPENDENTE_DO_VAZAMENTO": {
+            "o_que": ("os pisos obrigatórios cortam a faixa do meio em 8 de 8 "
+                      "critérios"),
+            "medido_por_script": True,
+            "faixa_APLICADO_SEM_CRITERIO": [70, 89],
+            "pisos": {c["criterion"]: c["minimum_score"] for c in r},
+            "consequencia": ("nota 70-79 reprova o piso em 6 de 8 critérios; em "
+                             "HUMAN_REVIEW_30_DAYS, piso 90, só a faixa de topo passa. "
+                             "Um texto que aplica os sete passos corretamente SEM "
+                             "registrar o critério reprova em bloco."),
+            "citacao_da_rodada_2": ("'O desenho pressupõe que quase tudo falhe; o "
+                                    "resultado interessante é onde.'"),
+            "por_que_importa": ("a faixa do meio é a que o TEST-0008 existe para medir, "
+                                "e ela está parcialmente inviável. NÃO é vazamento e "
+                                "NÃO foi consertado: pisos são decisão de desenho e o "
+                                "revisor mandou não tocá-los."),
+        },
+        "binds_to": {"rubric_judge_sha256": shp(JR)},
+        "estado": "o veredito e a decisão de enviar ou não são do revisor",
     }
     out = PKG / "LEAK-TEST-JUDGE-RUBRIC.yaml"
     out.write_text(
@@ -116,8 +136,7 @@ def main() -> int:
     (PKG / "SHA256SUMS.txt").write_text(
         "".join(f"{v}  {k}\n" for k, v in sums.items()), encoding="utf-8")
     print(f"publicado: {out.name} sha256 {shp(out)}")
-    print(f"tipos inferidos: 3 · estruturado+prosa reconstruídos · terceiro NÃO")
-    print(f"faixas 90-100 e 70-89 com citação idêntica: {same}/{len(r)}")
+    print(f"faixas de cima com citação IDÊNTICA: {same}/{len(r)}  (era 8/8)")
     print(f"pacote: {len(sums)} arquivos")
     return 0
 
