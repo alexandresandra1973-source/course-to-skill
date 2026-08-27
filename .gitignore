@@ -11,3 +11,9 @@ __pycache__/
 *.csv
 __pycache__/
 *.pyc
+.env
+*.key
+.anthropic*
+*.csv
+__pycache__/
+*.pyc
