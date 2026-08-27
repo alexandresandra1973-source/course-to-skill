@@ -5,3 +5,9 @@ tests/_tmp/
 __pycache__/
 .venv/
 .env
+.env
+*.key
+.anthropic*
+*.csv
+__pycache__/
+*.pyc
