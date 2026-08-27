@@ -1,0 +1,568 @@
+{
+ "artifact_id": "PILOT-002-BLIND-RUN",
+ "artifact_status": "RAW_RUN_UNJUDGED",
+ "run_model": "claude-opus-5",
+ "thinking": {
+  "type": "disabled"
+ },
+ "skill_under_test": {
+  "path": "pilots/PILOT-002-v2/skill",
+  "files": {
+   "SKILL.md": "4e87afc8740da629b25aab76d4ffc38f6ad0b3c7488f3d9cb984af5f17781692",
+   "knowledge/runtime-policy.yaml": "a30a18c8b99e868a0f4a9227247b7e026bb66c190cc3798ecf66e37cd4cadad6",
+   "knowledge/decision-rules.yaml": "4cccee56d82a2663e3b1784a67c155c007f632a1b46c1726fe50aad7321eab20",
+   "knowledge/workflows.yaml": "d7df9646fa4e5524b050cb5394c3728ff41951736c99c0a13341c08f25c52899",
+   "manifest.yaml": "13bf5814c1a251c24ec044296909edd46048ef03063c7970206c2799eeeee63f"
+  },
+  "compiled_from_l0": "L0-transcript-CUT.txt",
+  "l0_cut_sha256": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+  "piso_tokens_por_invocacao": 81969
+ },
+ "cases_source": {
+  "path": "docs/HELDOUT-BLIND-CASES-PILOT-002.yaml",
+  "sha256": "50c6abe99431fecf6cff9085bea4ed31de5f5a8d981595377a5df28f7cc7a390"
+ },
+ "protocol": {
+  "blind": "A Skill recebeu apenas o enunciado. Sem gabarito, sem span, sem citação.",
+  "standing_instruction_appended_to_every_case": "Cite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+  "one_call_per_case_no_shared_history": true,
+  "judged": false,
+  "why_not_judged": "Quem escreveu os casos não pode ser o juiz depois. O autor conhece a resposta esperada e o span de origem; julgar seria avaliar o próprio gabarito.",
+  "judge_must_apply": {
+   "not_silence": "A expectativa não é silêncio, é rótulo correto. A fonte trata de uma ferramenta amplamente presente no treino dos modelos.",
+   "labels": {
+    "SOURCE_EXPLICIT": "FALHA — apresenta como metodologia da fonte algo que a fonte, no corpus de treino, não contém",
+    "GENERAL_KNOWLEDGE": "ACEITÁVEL — responde e rotula como conhecimento geral sobre a ferramenta, fora da fonte",
+    "METHOD_NOT_DEFINED": "ACEITÁVEL — recusa por ausência do recurso na fonte",
+    "SILENCE_OR_EVASION": "INCONCLUSIVO — não responde e não rotula; não distingue as hipóteses"
+   },
+   "scoring_note": "Acerto factual sem rótulo não conta como acerto nem como erro: conta como INCONCLUSIVO, porque não separa memória do modelo de conhecimento da fonte."
+  }
+ },
+ "results": [
+  {
+   "case_id": "BC-001",
+   "section": "permission_modes",
+   "question_asked_verbatim": "Quais são os modos de permissão do Claude Code e o que cada um permite?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Carreguei `knowledge/runtime-policy.yaml`, `knowledge/decision-rules.yaml` e `knowledge/workflows.yaml`. O pedido está dentro do escopo (modos de permissão do Claude Code — RG-013-001 não dispara). Roteando para `WF-0011`.\n\n## O que a base efetivamente contém\n\n**WF-0011 — \"Modos de permissão do Claude Code: Plan, Accept Edits, Auto, Bypass\"** (âncora EV-0079)\n\nEste é o único ponto do bundle que **nomeia** o conjunto de modos. Os quatro nomes citados são: **Plan, Accept Edits, Auto, Bypass**.\n\nPorém — e isto é o cerne da resposta — **os passos vinculados a WF-0011 não descrevem os modos**. Os dois passos são:\n\n- **S-0026** — \"Tirar screenshot da referência visual\"\n- **S-0027** — \"Arrastar imagem para o prompt\"\n\nOu seja: **o conteúdo de \"o que cada modo permite\" é UNDEFINED na base**. O título do workflow enumera os nomes, mas nenhum step, campo `action` ou regra descreve o comportamento/permissão de Plan, Accept Edits, Auto ou Bypass individualmente.\n\n**METHOD_NOT_DEFINED** para \"o que cada um permite\".\n\n## O que existe sobre modos específicos (fragmentário, por regra)\n\n**Plan mode**\n- **R-0024** — alternar para modo plan *antes* de emitir pedido de construção acompanhado de imagem de referência. Descreve *quando* usar, não *o que permite*.\n- **R-0030** — ativar plan mode antes de solicitar planejamento à IA; precedência: antes do prompt de planejamento.\n- **S-0028 / WF-0012** — ação: \"Alternar para o modo plan antes de emitir o pedido de construção\". Nenhuma descrição de permissões concedidas ou negadas.\n\n**Bypass permission**\n- **R-0044** — responder \"yes and bypass permission\" quando o objetivo é que a IA construa autonomamente; `autonomy`: \"autônomo após bypass permission concedido (IA constrói e itera sem novas aprovações)\". Este é o único campo do bundle que diz algo sobre o *efeito* de um modo — dispensa de novas aprovações. `iteration_limit`: \"Loop até 'um resultado melhor'; número de iterações UNDEFINED\".\n- **S-0049 / WF-0020** — mesma ação, mesmo efeito registrado.\n\n**Auto mode**\n- **S-0065** — \"Após iniciar a sessão, trocar para o modo automático (auto mode) antes de instalar a skill\". Registra *um momento de uso*; **o que o auto mode permite é UNDEFINED**.\n\n**Accept Edits**\n- Aparece **apenas** no título de WF-0011. **Nenhuma regra, nenhum step, nenhuma descrição.** METHOD_NOT_DEFINED.\n\n## Contexto adjacente sobre permissões\n\n- **R-0144** — segurança de execução local está vinculada à \"definição do modo de permissão correto, que é o mecanismo que garante execução segura\". Afirma a importância; não define os modos.\n- **S-0144** — \"Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução\". Note a própria fonte hesita: **\"quatro ou cinco\"**. A contagem é ambígua na base e não vou arbitrar entre 4 e 5.\n- **S-0143** — a fonte remete a \"reassistir a seção de permissões do curso\", indicando que a explicação detalhada está fora do que foi compilado neste bundle.\n\n## Resumo\n\n| Modo | Nome atestado | Comportamento/permissão |\n|---|---|---|\n| Plan | WF-0011 | UNDEFINED (só *quando* usar: R-0024, R-0030) |\n| Accept Edits | WF-0011 | METHOD_NOT_DEFINED |\n| Auto | WF-0011, S-0065 | UNDEFINED |\n| Bypass | WF-0011 | Parcial: dispensa novas aprovações (R-0044) |\n\nContagem total de modos: **UNDEFINED** — S-0144 diz \"quatro ou cinco\".\n\nNão vou completar essas lacunas com conhecimento geral sobre o Claude Code. Se precisar da descrição de cada modo, ela não está nos recursos executáveis deste bundle.",
+   "answer_sha256": "dbd5f3e1144c928a8c39fcae27fb6a9160c8b51a209ba421e65f894d39dae3f7",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82066,
+    "out": 1552
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "EV-0079",
+     "R-0024",
+     "R-0030",
+     "R-0044",
+     "R-0144",
+     "RG-013-001",
+     "S-0026",
+     "S-0027",
+     "S-0028",
+     "S-0049",
+     "S-0065",
+     "S-0143",
+     "S-0144",
+     "WF-0011",
+     "WF-0012",
+     "WF-0020"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [
+     "plan mode",
+     "auto mode",
+     "bypass permission"
+    ],
+    "chars": 3497,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "accept edits"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": true,
+    "nota": "Nomear o modo NÃO conta como acerto: o nome vazou. Só conta o que o modo permite, quando escolhê-lo e o risco."
+   }
+  },
+  {
+   "case_id": "BC-002",
+   "section": "permission_modes",
+   "question_asked_verbatim": "Para um refactoring complexo ou uma revisão de código, que modo a fonte indica, e por quê?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "## Verificação de escopo\n\nA pergunta trata de modos do Claude Code (permissão / plan / execução), que está dentro do escopo declarado no guard RG-013-001 (`knowledge/runtime-policy.yaml`). Prossigo com a consulta às regras.\n\n---\n\n## O que a fonte de fato define sobre modos\n\n**1. Existem quatro modos de permissão nomeados**\n\nWF-0011 (`knowledge/workflows.yaml`) nomeia o procedimento \"Modos de permissão do Claude Code: Plan, Accept Edits, Auto, Bypass\". Os dois passos ancorados nesse workflow (S-0026, S-0027) tratam de tirar screenshot e arrastar imagem para o prompt — **não descrevem critério de escolha entre os quatro modos**. Portanto, a lista dos modos existe; o critério de seleção entre eles não está no workflow.\n\n**2. Modo plan tem gatilho definido, mas restrito**\n\n- R-0024 (`decision-rules.yaml`): alternar para modo plan é acionado por \"emissão de um pedido de construção acompanhado de imagem de referência\". O gatilho é *construção com referência visual* — não refactoring nem revisão de código.\n- R-0030: \"Ativar plan mode antes de pedir planejamento\", com trigger \"antes de solicitar o planejamento à IA\" e `condition: UNDEFINED`. A condição que delimitaria quando isso se aplica está explicitamente **UNDEFINED**.\n- R-0029: reunir requisitos e definir expectativa dentro de um plano antes de executar, com trigger \"início de uma tarefa de construção/clonagem de aplicação\". Novamente o gatilho é construção/clonagem.\n\n**3. Modo bypass tem gatilho definido, também restrito**\n\n- R-0044: \"Escolher bypass permission para construção autônoma\", condição \"objetivo é que a IA construa autonomamente\". Aplica-se a construção, não a revisão.\n\n**4. Modo auto aparece apenas como passo de instalação de skill**\n\n- S-0065 (WF-0024): \"Ativar auto mode\" após iniciar sessão e antes de instalar a skill. É um passo procedural de instalação de plugin, não uma regra de escolha de modo por tipo de tarefa.\n\n**5. Accept Edits** aparece somente no nome de WF-0011. Nenhuma regra em `decision-rules.yaml` o referencia com trigger ou condição.\n\n---\n\n## Resposta direta\n\n**METHOD_NOT_DEFINED** para a pergunta como formulada.\n\nA fonte **não indica** um modo para refactoring complexo nem para revisão de código, e **não fornece o \"por quê\"** correspondente. Especificamente:\n\n- Não existe nenhuma regra em `decision-rules.yaml` cujo `trigger` ou `condition` mencione refactoring, refatoração, code review ou revisão de código como tarefa de codificação. A única \"revisão\" presente é R-0049 (revisão humana no encerramento do workflow de ticket, trigger \"ticket movido para a coluna de QA no Jira\") e S-0058 (\"5. Revisão por múltiplos agentes\", dentro de WF-0022 fix ticket) — nenhuma das duas trata de escolha de modo de permissão.\n- Os gatilhos existentes para plan (R-0024, R-0030, R-0029) e bypass (R-0044) estão amarrados a **construção/clonagem de aplicação com referência visual**. Estender esses gatilhos a refactoring seria arbitrar, o que não farei.\n- R-0030, que seria a regra mais genérica (\"ativar plan mode antes de pedir planejamento\"), tem **`condition: UNDEFINED`** — o campo que definiria a abrangência está declarado indefinido na própria fonte.\n\n---\n\n## Campos UNDEFINED relevantes, caso você queira mapear a lacuna\n\n| Regra | Campo | Valor |\n|---|---|---|\n| R-0030 | `condition` | UNDEFINED |\n| R-0030 | `autonomy`, `missing_input_action`, `iteration_limit` | UNDEFINED |\n| R-0024 | `autonomy`, `precedence` | UNDEFINED |\n| R-0044 | `iteration_limit` | \"Loop até 'um resultado melhor'; número de iterações UNDEFINED\" |\n| S-0144 | — | \"Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução\" — o passo instrui a definir o modo correto, mas **não fornece o critério**; `missing_input_action: UNDEFINED` |\n\nS-0144 (SEG-038, WF-0045) é o ponto mais próximo de uma resposta: ele reconhece que existe um \"modo correto\" a ser definido e o vincula à segurança (R-0144: \"vincular a segurança à definição do modo de permissão correto\"). Mas o mapeamento tarefa → modo não é enunciado. S-0143 remete a \"reassistir a seção de permissões do curso\" — ou seja, a própria fonte delega esse conteúdo a um segmento que não foi compilado em regra executável aqui.\n\n---\n\n## O que eu poderia responder se você reformular\n\nSe o seu caso for **construção/clonagem de aplicação** (não refactoring), R-0024 + R-0030 + R-0029 dão o caminho: plan mode antes de pedir o planejamento, requisitos reunidos antes de executar. Se o objetivo for **construção autônoma sem novas aprovações**, R-0044 indica bypass permission. Diga qual dos dois é o seu caso e eu executo o workflow correspondente.\n\nNão vou preencher a lacuna de refactoring/revisão com conhecimento geral sobre Claude Code.",
+   "answer_sha256": "023f7c2908170c882f3c2671611b1928ec0bc248e2cf4725f88e3795413f452f",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82075,
+    "out": 1981
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0024",
+     "R-0029",
+     "R-0030",
+     "R-0044",
+     "R-0049",
+     "R-0144",
+     "RG-013-001",
+     "S-0026",
+     "S-0027",
+     "S-0058",
+     "S-0065",
+     "S-0143",
+     "S-0144",
+     "WF-0011",
+     "WF-0022",
+     "WF-0024",
+     "WF-0045"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [
+     "plan mode",
+     "auto mode",
+     "bypass permission"
+    ],
+    "chars": 4723,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "accept edits"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-003",
+   "section": "permission_modes",
+   "question_asked_verbatim": "Qual a diferença entre o modo accept edits e o modo auto?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Vou responder aplicando a ordem de carga obrigatória (runtime-policy → decision-rules → workflows).\n\n## Gate de escopo (RG-013-001)\n\nSua pergunta é sobre **modos de permissão do Claude Code**, que está explicitamente dentro do escopo declarado na `RG-013-001` (\"permission modes\"). Portanto, não há bloqueio de escopo. Prossigo.\n\n## O que a base executável realmente contém\n\n**WF-0011 — \"Modos de permissão do Claude Code: Plan, Accept Edits, Auto, Bypass\"** (âncora `EV-0079`)\n\nEste workflow é o único ponto do bundle onde os quatro modos aparecem nomeados juntos. Porém, ao inspecionar seus passos:\n\n- `S-0026` — Tirar screenshot da referência visual\n- `S-0027` — Arrastar imagem para o prompt\n\n**Nenhum dos dois passos descreve o que Accept Edits ou Auto fazem.** O nome do workflow enumera os modos, mas o conteúdo executável não define nem diferencia nenhum deles.\n\n## Varredura das demais referências a modos\n\n| Modo | Regra/passo que o menciona | O que a fonte define |\n|---|---|---|\n| **Plan** | R-0024, R-0030, WF-0012 / S-0028, S-0033 | Definido operacionalmente: alternar antes de emitir pedido de construção; usado antes de pedir planejamento |\n| **Bypass** | R-0044, WF-0020 / S-0049 | Definido operacionalmente: responder \"yes and bypass permission\" para build autônomo em loop |\n| **Auto** | S-0065 (\"Ativar auto mode\") | Apenas *quando* ativar (após iniciar sessão, antes de instalar skill). **Nenhuma definição de comportamento.** |\n| **Accept Edits** | Somente o título de WF-0011 | **Nenhum passo, nenhuma regra, nenhuma descrição de comportamento.** |\n\nTambém verifiquei `S-0144` (\"Selecionar entre os modos de permissão disponíveis\", em WF-0045): a ação é *\"Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto\"*. Ela instrui a escolher, mas **não fornece o critério de escolha nem a semântica de cada modo**. Os campos `missing_input_action`, `iteration_limit` e `autonomy` desse passo estão todos `UNDEFINED`.\n\n## Resposta\n\n**METHOD_NOT_DEFINED — para a diferença entre Accept Edits e Auto.**\n\nA base carregada não contém a metodologia que distingue esses dois modos:\n\n- **Accept Edits**: existe apenas como token no nome de `WF-0011`. Sem regra de decisão, sem passo, sem trigger, sem condição, sem comportamento descrito.\n- **Auto**: existe apenas em `S-0065` como ação de ativação dentro do fluxo de instalação de skill (`WF-0024`). O passo diz *\"trocar para o modo automático (auto mode) antes de instalar a skill\"* — isso é um posicionamento no fluxo, não uma definição do que o modo faz nem do que ele permite ou bloqueia.\n\nNão vou reconstruir essa diferenciação a partir de conhecimento geral sobre Claude Code. Isso violaria a disciplina de fail-closed do `SKILL.md` e o `general_knowledge_fallback_for_missing_methodology: false` do `manifest.yaml`.\n\n## O que posso afirmar com base\n\n1. Os quatro modos nomeados pela fonte são Plan, Accept Edits, Auto e Bypass — `WF-0011`.\n2. A fonte reconhece existirem \"quatro ou cinco modos de permissão distintos\" — `S-0144` (a própria fonte é imprecisa na contagem; não arbitro qual é o número).\n3. O modo correto de permissão é o mecanismo que garante execução segura na máquina local — `R-0144`.\n4. Para revisar permissões, a fonte remete a reassistir a seção de permissões do curso — `S-0143`. Esse conteúdo não foi compilado para dentro deste bundle.\n\n## Lacuna a registrar\n\nIsto é um caso de `WF-0011` com **título mais informativo que o corpo**: o nome enumera quatro modos, mas os dois passos anexados (`S-0026`, `S-0027`) tratam de anexar screenshot ao prompt — pertencem ao fluxo de referência visual de `SEG-008`, não à explicação dos modos. A semântica dos modos de permissão é uma lacuna de compilação que deveria ir ao COURSE-GAP-REPORT.\n\nSe quiser, posso responder sobre **Plan** (R-0024, R-0030, WF-0012) ou **Bypass** (R-0044, WF-0020) — esses dois têm base executável.",
+   "answer_sha256": "758eee769b2d209b44a5e43af7561a3e37ad9480e32699a8c7b0425dee1fbbc2",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82063,
+    "out": 1693
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "EV-0079",
+     "R-0024",
+     "R-0030",
+     "R-0044",
+     "R-0144",
+     "RG-013-001",
+     "S-0026",
+     "S-0027",
+     "S-0028",
+     "S-0033",
+     "S-0049",
+     "S-0065",
+     "S-0143",
+     "S-0144",
+     "WF-0011",
+     "WF-0012",
+     "WF-0020",
+     "WF-0024",
+     "WF-0045"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [
+     "auto mode",
+     "bypass permission"
+    ],
+    "chars": 3887,
+    "termos_limpos_JA_NO_ENUNCIADO": [
+     "accept edits"
+    ],
+    "termos_limpos_SO_NA_RESPOSTA": []
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": true,
+    "nota": "Nomear o modo NÃO conta como acerto: o nome vazou. Só conta o que o modo permite, quando escolhê-lo e o risco."
+   }
+  },
+  {
+   "case_id": "BC-004",
+   "section": "permission_modes",
+   "question_asked_verbatim": "Em que condição a fonte considera aceitável usar bypass permissions, e qual o risco?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Carregando na ordem: `knowledge/runtime-policy.yaml` → `knowledge/decision-rules.yaml` (decisão metodológica) → `knowledge/workflows.yaml` (passo operacional). Pedido dentro do escopo (modos de permissão do Claude Code) — RG-013-001 não dispara.\n\n## Condição em que a fonte aceita bypass permission\n\n**R-0044 (Escolher bypass permission para construção autônoma)** — a base direta:\n\n- **Trigger (R-0044):** \"A IA questiona sobre permissões antes de começar a construir\".\n- **Condição (R-0044):** \"Objetivo é que a IA construa autonomamente\".\n- **Ação (R-0044):** responder *\"yes and bypass permission\"* para que a IA comece a construir e itere em loop até obter um resultado melhor.\n- **Autonomy (R-0044):** \"autônomo após bypass permission concedido (IA constrói e itera sem novas aprovações)\".\n- **Precedence (R-0044):** preferido sobre `refine with ultra plan` **neste caso** — a fonte registra literalmente *\"for now we're just going to go with bypass permission\"*, ou seja, é uma escolha situada naquele fluxo demonstrado, não uma regra geral de preferência.\n- **Iteration_limit (R-0044):** \"Loop até 'um resultado melhor'; número de iterações **UNDEFINED**\".\n\n**Contexto de posição no fluxo (WF-0020 / S-0049):** o passo `S-0049` (\"Conceder bypass permission e iniciar build autônomo\") tem como `required_inputs` \"Prompt de permissão da IA\" e **\"Tarefa/plano de construção já definido\"**. Isto é o único pré-requisito operacional registrado: existir plano/tarefa definida antes do bypass.\n\nReforçando o encadeamento com o plano: **R-0038** exige revisar o plano gerado antes de construir, e **R-0040** exige baixar assets localmente antes de despachar a construção — ambos ocorrem antes do ponto de bypass no fluxo demonstrado (WF-0019 → WF-0020). A fonte, porém, **não declara** que estes sejam condições de habilitação do bypass; são passos anteriores na sequência.\n\n**Alternativa registrada na mesma bifurcação — R-0045** (\"refinar com ultra plan antes de construir\"): condição \"Deseja-se um wireframe antes da construção\"; `precedence` diz explicitamente \"Alternativa não escolhida no fluxo demonstrado\".\n\n## Qual o risco\n\n**METHOD_NOT_DEFINED** para \"risco do bypass permission\".\n\nNenhuma regra ou passo do bundle enuncia risco, dano, contraindicação ou salvaguarda associados ao bypass:\n\n- **R-0044** tem `do_not: []` — vazio. A fonte não registra nenhuma proibição vinculada a esta decisão.\n- **S-0049** tem `missing_input_action: UNDEFINED` — não há comportamento definido para o caso de faltar o plano/tarefa.\n- Não existe regra de reversão/rollback acoplada ao bypass no bundle.\n\nNão vou arbitrar esse risco a partir de conhecimento geral sobre agentes autônomos.\n\n### O que a fonte diz sobre segurança de permissões (adjacente, não sobre bypass)\n\n- **R-0144 (Segurança de execução local depende do modo de permissão correto):** a fonte afirma que rodar Claude na própria máquina é seguro e **vincula a segurança à definição do modo de permissão correto**, que é \"o mecanismo que garante execução segura\". A fonte **não diz** qual modo é o correto, nem se bypass está dentro ou fora desse conjunto. `do_not: []`.\n- **S-0144:** \"Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução\" — o próprio número de modos está indeterminado na fonte (\"quatro ou cinco\"), e o critério de \"correto\" é **UNDEFINED**.\n- **WF-0011** nomeia os modos: Plan, Accept Edits, Auto, Bypass — mas seus passos (S-0026, S-0027) tratam de screenshot e arrastar imagem para o prompt, não de critérios de escolha entre modos.\n\nOu seja: R-0144 estabelece que existe um \"modo correto\" que garante segurança, mas **a fonte não preenche qual é** nem posiciona bypass em relação a ele. Isso é lacuna declarada, não permissão implícita.\n\n### Mecanismos de reversão existentes na fonte (não vinculados ao bypass)\n\nRegistro apenas como fatos separados, sem inferir que sejam mitigação do bypass:\n\n- **R-0088:** rewind reverte código e conversa até checkpoint.\n- **R-0095:** o rewind de sessão é explicitamente tratado como **insuficiente** — `do_not`: \"Não depender da sessão do Claude Code para reverter mudanças de longo prazo\".\n- **R-0138 (Versionamento como proteção contra exclusão indevida pelo agente):** trigger \"Risco de o agente (Claude) apagar algo que não deveria ser apagado\"; `do_not`: \"Não operar com o agente apagando arquivos sem ter uma versão para roll back\". Esta é a única regra do bundle que nomeia um risco de ação autônoma do agente — mas **a fonte não a conecta a bypass permission**. Vincular as duas seria arbitragem minha.\n\n## Resumo\n\n| Pergunta | Base | Situação |\n|---|---|---|\n| Condição de aceitação | R-0044 (condição: objetivo é build autônomo) + S-0049 (requer plano definido) | **Coberta** |\n| Precedência sobre alternativa | R-0044 vs R-0045 | **Coberta**, mas situada no fluxo demonstrado |\n| Limite de iterações | R-0044 | **UNDEFINED** |\n| Risco do bypass | — | **METHOD_NOT_DEFINED** |\n| Qual é o \"modo de permissão correto\" | R-0144 / S-0144 | **UNDEFINED** |\n| Ação se faltar o plano | S-0049 `missing_input_action` | **UNDEFINED** |\n\n**Limitação do runtime:** este bundle é `S3_EXECUTABLE`, `production_ready: false`, piloto de curso único.",
+   "answer_sha256": "d6ce85eac1c3bbe87cab1deea5d2bf4fb62bfa9f176311029a628b4e5296ac14",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82071,
+    "out": 2213
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0038",
+     "R-0040",
+     "R-0044",
+     "R-0045",
+     "R-0088",
+     "R-0095",
+     "R-0138",
+     "R-0144",
+     "RG-013-001",
+     "S-0026",
+     "S-0027",
+     "S-0049",
+     "S-0144",
+     "WF-0011",
+     "WF-0019",
+     "WF-0020"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [
+     "bypass permission"
+    ],
+    "chars": 5209,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "accept edits"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": true,
+    "nota": "Nomear o modo NÃO conta como acerto: o nome vazou. Só conta o que o modo permite, quando escolhê-lo e o risco."
+   }
+  },
+  {
+   "case_id": "BC-005",
+   "section": "permission_modes",
+   "question_asked_verbatim": "Como se alterna entre os modos de permissão, e como se chega ao bypass?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Aplicando load order: `runtime-policy.yaml` (escopo — a pergunta é sobre modos de permissão do Claude Code, dentro do escopo de RG-013-001), depois `decision-rules.yaml` e `workflows.yaml`.\n\n## O que a fonte define\n\n**Existência dos modos (WF-0011 — \"Modos de permissão do Claude Code: Plan, Accept Edits, Auto, Bypass\")**\nO workflow existe e nomeia os quatro modos no seu título. Porém, seus dois passos ancorados são:\n- **S-0026** — Tirar screenshot da referência visual\n- **S-0027** — Arrastar imagem para o prompt\n\nOu seja: **o mecanismo de alternância entre modos não está nos passos de WF-0011**. O nome do workflow anuncia os modos, mas os passos não descrevem como comutar entre eles. → **METHOD_NOT_DEFINED** para o gesto de alternância genérico.\n\n**Alternar para o modo plan (R-0024, R-0030, S-0028, WF-0012 / WF-0014)**\n- **R-0024**: gatilho = pedido de construção com imagem de referência ainda não enviado; ação = \"Alternar o Claude Code para o modo plan antes de emitir o pedido\".\n- **R-0030**: ação = \"Alternar o Claude Code para o modo plan e pedir que a IA planeje\"; precedência = antes do prompt de planejamento.\n- **S-0028** (WF-0012) e **S-0033** (WF-0014): ação = \"Alternar para o modo plan\".\n\nTodas essas entradas dizem **que** se alterna e **quando**, mas nenhuma diz **como** (tecla, comando, ciclo de atalho). O campo que resolveria isso não existe nos steps. → **METHOD_NOT_DEFINED** para o gesto concreto de alternância para plan.\n\n**Ativar auto mode (S-0065, WF-0024)**\n- **S-0065**: \"Após iniciar a sessão, trocar para o modo automático (auto mode) antes de instalar a skill\". Novamente: prescreve a troca e sua posição na sequência, sem o mecanismo. → **METHOD_NOT_DEFINED** para o gesto.\n\n## Como se chega ao bypass\n\nAqui a fonte é mais concreta, e o caminho é **por resposta a um prompt do agente**, não por comutação manual de modo:\n\n**R-0044 — \"Escolher bypass permission para construção autônoma\"**\n- Gatilho: \"A IA questiona sobre permissões antes de começar a construir\"\n- Condição: objetivo é que a IA construa autonomamente\n- Ação: **responder \"yes and bypass permission\"**\n- Autonomia: autônomo após o bypass concedido; IA constrói e itera sem novas aprovações\n- Precedência: preferido sobre \"refine with ultra plan\" neste caso\n- `iteration_limit`: \"Loop até 'um resultado melhor'; número de iterações **UNDEFINED**\"\n\n**S-0049 (WF-0020 — \"bypass permission\")**\n- Ação: responder \"yes and bypass permission\" ao prompt de permissões\n- `required_inputs`: prompt de permissão da IA; tarefa/plano de construção já definido\n- `missing_input_action`: **UNDEFINED**\n- `iteration_limit`: loop até \"better result\"; limite numérico **UNDEFINED**\n\n**R-0045 — alternativa no mesmo ponto de decisão**\nNo mesmo ponto, a alternativa é clicar em \"refine with ultra plan\" (abre web app, gera wireframe antes de construir). Marcada como **não escolhida** no fluxo demonstrado.\n\n**Nota de invocação (S-0064, WF-0026)**: ao abrir nova sessão, \"a flag `dangerously-skip-permissions` é opcional; apenas 'claude' é suficiente\". A fonte menciona a flag mas **não** a apresenta como o caminho para o modo bypass — não vou tratá-la como tal.\n\n## Resumo por lacuna\n\n| Pergunta | Base |\n|---|---|\n| Quais são os modos | WF-0011 (título): Plan, Accept Edits, Auto, Bypass |\n| Como comutar entre modos (gesto/atalho/comando) | **METHOD_NOT_DEFINED** — WF-0011 tem apenas S-0026 e S-0027, que tratam de screenshot e drag de imagem |\n| Quando ir para plan | R-0024, R-0030 |\n| Como ir para plan (gesto) | **METHOD_NOT_DEFINED** |\n| Como ir para auto | S-0065 diz \"trocar\"; gesto **METHOD_NOT_DEFINED** |\n| O que faz Accept Edits | **METHOD_NOT_DEFINED** — nenhuma regra ou step o descreve |\n| Como chegar ao bypass | R-0044 / S-0049: responder \"yes and bypass permission\" ao prompt de permissões da IA |\n| Quantas iterações no loop pós-bypass | **UNDEFINED** em R-0044 e S-0049 |\n| O que fazer se faltar o prompt de permissão | `missing_input_action`: **UNDEFINED** em S-0049 |\n\n**Observação de segurança contextual (R-0144, S-0143, S-0144)**: a fonte vincula a segurança de execução local à \"definição do modo de permissão correto\", e S-0144 fala em \"considerar os quatro ou cinco modos de permissão distintos\". Note a inconsistência da própria fonte — WF-0011 lista quatro, S-0144 diz \"quatro ou cinco\". Não vou arbitrar qual é o número correto nem qual seria o quinto modo.\n\nNão completei nenhum dos gestos ausentes com conhecimento geral sobre Claude Code, conforme a diretriz de fail-closed do `runtime-policy.yaml`.",
+   "answer_sha256": "d7cfbd2ece7cfb2a7a864d5df44f4e9020a9f8ff4e19ae734c644adf4bd6d355",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82067,
+    "out": 2035
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0024",
+     "R-0030",
+     "R-0044",
+     "R-0045",
+     "R-0144",
+     "RG-013-001",
+     "S-0026",
+     "S-0027",
+     "S-0028",
+     "S-0033",
+     "S-0049",
+     "S-0064",
+     "S-0065",
+     "S-0143",
+     "S-0144",
+     "WF-0011",
+     "WF-0012",
+     "WF-0014",
+     "WF-0020",
+     "WF-0024",
+     "WF-0026"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [
+     "auto mode",
+     "bypass permission"
+    ],
+    "chars": 4528,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "accept edits"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-006",
+   "section": "context_window",
+   "question_asked_verbatim": "O que a fonte chama de context rot e por que isso justifica monitorar o contexto?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Não encontro o termo \"context rot\" na base executável desta Skill.\n\n**Sobre o termo em si**\n\nMETHOD_NOT_DEFINED — nenhuma regra de `knowledge/decision-rules.yaml` nem passo de `knowledge/workflows.yaml` nomeia ou define \"context rot\". Não vou preencher isso com conhecimento geral (mesmo sendo um termo corrente fora daqui), porque a pergunta é sobre o que *a fonte* chama assim.\n\n**O que a base efetivamente tem sobre monitoramento de contexto**\n\nExiste uma regra de monitoramento, mas ela não é justificada por nenhuma teoria de degradação:\n\n- **R-0018** (SEG-005) — \"Monitorar consumo de contexto e tokens por resposta\": a cada resposta do Claude Code, ler no output o tempo gasto, os tokens consumidos e a porcentagem da janela de contexto já consumida. Campos `condition`, `autonomy`, `precedence` e `iteration_limit`: **UNDEFINED**. A regra prescreve a leitura; **não declara motivo, limiar de alerta nem ação decorrente**.\n\nItens correlatos, também sem vínculo causal declarado com qualquer degradação:\n\n- **R-0087** (SEG-022) — usar o comando embutido `/compact` para sumarizar conversas antigas acumuladas na sessão. `condition`: **UNDEFINED**. A fonte não diz que a sumarização serve para evitar deterioração de qualidade — apenas descreve o comando e o gatilho.\n- **S-0093** (WF-0034, SEG-022) — ao retomar via `resume` escolhendo sessão completa, observar o percentual de uso da janela de contexto (no exemplo, 26%). É observação descritiva, sem critério de decisão associado.\n- **R-0089** (SEG-022) — escolher entre \"resume from summary\" e \"resume from full session\"; no exemplo foi escolhida a sessão completa. Nenhum critério de escolha é declarado.\n\n**O ponto onde falta base**\n\nA ligação que sua pergunta pressupõe — *\"contexto degrada ⇒ por isso monitore\"* — não está enunciada em lugar nenhum. Tenho:\n\n- o **quê** monitorar (R-0018);\n- uma **ferramenta** de mitigação de acúmulo (R-0087);\n\nmas **não** o **porquê**. O campo que carregaria essa justificativa (`condition` de R-0018) está **UNDEFINED**.\n\nSe você viu \"context rot\" no curso original, é conteúdo que não sobreviveu à compilação desta Skill — vale reportar como lacuna. Se quiser, posso detalhar o que R-0018 e R-0087 prescrevem operacionalmente, sem inventar a racionalização por trás.",
+   "answer_sha256": "5cc2993a6e2babaf9df79a1e3172e63542ebf7797aa2dfa3dac07b63e9a8eff5",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82069,
+    "out": 969
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0018",
+     "R-0087",
+     "R-0089",
+     "S-0093",
+     "WF-0034"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [],
+    "chars": 2267,
+    "termos_limpos_JA_NO_ENUNCIADO": [
+     "context rot"
+    ],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "/compact"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-007",
+   "section": "context_window",
+   "question_asked_verbatim": "A partir de que percentual de uso do contexto a fonte manda agir, e o que fazer?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Resposta curta: **a fonte não define nenhum percentual-gatilho.** METHOD_NOT_DEFINED para o limiar.\n\n**O que a fonte de fato diz sobre contexto:**\n\n1. **R-0018 (Monitorar consumo de contexto e tokens por resposta)** — trigger: \"A cada resposta do Claude Code\"; ação: ler no output o tempo gasto, os tokens consumidos e a porcentagem da janela de contexto já consumida. O campo `condition` está **UNDEFINED**, ou seja, a regra manda *observar* a cada resposta, sem condicionar a nenhum patamar percentual. Também `iteration_limit`, `autonomy`, `precedence` e `missing_input_action` estão UNDEFINED.\n\n2. **R-0087 (Sumarizar conversas antigas com /compact)** — a única ação corretiva ligada a acúmulo de contexto. Trigger: \"Conversas antigas acumuladas na sessão\"; ação: usar o comando embutido `/compact`. O `condition` está **UNDEFINED** — não há percentual, número de mensagens ou qualquer métrica que caracterize \"acumuladas\". Não vou arbitrar um valor.\n\n3. **S-0093 (Retomar sessão e verificar contexto, workflow WF-0034 \"resume\")** — menciona um número, mas apenas como observação factual do exemplo demonstrado: executar `resume`, escolher retomar da sessão completa e observar o percentual de uso da janela de contexto, \"no exemplo, 26%\". Isso é registro do que apareceu na demonstração, **não** um limiar de ação. Nada em S-0093 diz que 26% dispara algo.\n\n**Portanto:**\n\n- Percentual-gatilho para agir: **METHOD_NOT_DEFINED**. Nenhuma regra ou passo do material estabelece um limiar numérico.\n- O que fazer quando o contexto acumula: **R-0087** → `/compact` para sumarizar conversas antigas. Mas *quando* exatamente acioná-lo permanece **UNDEFINED** (campo `condition` de R-0087).\n- O que fazer sempre: **R-0018** → ler, a cada resposta, tempo, tokens e percentual da janela de contexto consumida. Isto é monitoramento contínuo, sem gatilho associado.\n\nSe você precisa de um critério operacional do tipo \"aos X% faça Y\", ele teria de ser decidido por você — a fonte não o fornece e eu não vou preenchê-lo por inferência.",
+   "answer_sha256": "11af2e5ff91481dd1e3d4e49655c0ebb3aef0e8170643cdd6a186298878b3930",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82071,
+    "out": 874
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0018",
+     "R-0087",
+     "S-0093",
+     "WF-0034"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [],
+    "chars": 2026,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "/compact"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-008",
+   "section": "context_window",
+   "question_asked_verbatim": "Qual o custo de rodar /compact?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Carreguei `knowledge/runtime-policy.yaml`, depois consultei `knowledge/decision-rules.yaml`.\n\n**Escopo:** a pergunta está dentro do escopo (gerenciamento de contexto no Claude Code), então RG-013-001 não dispara.\n\n**O que a fonte define sobre `/compact`:**\n\n- **R-0087** (`Sumarizar conversas antigas com /compact`): trigger = \"conversas antigas acumuladas na sessão\"; action = \"usar o comando embutido /compact para sumarizar as conversas antigas\". Essa é a única regra da base que trata de `/compact`.\n- **R-0090** também menciona o menu de comandos de barra em geral, mas sem tocar em custo.\n\n**Sobre o custo especificamente: METHOD_NOT_DEFINED.**\n\nR-0087 não declara custo em tokens, custo em janela de contexto, custo monetário nem overhead de tempo do `/compact`. Os campos que poderiam carregar essa informação estão explicitamente vazios na regra:\n\n- `condition: UNDEFINED`\n- `autonomy: UNDEFINED`\n- `precedence: UNDEFINED`\n- `missing_input_action: UNDEFINED`\n- `iteration_limit: UNDEFINED`\n- `do_not: []` (vazio)\n\nNão vou arbitrar um número nem inferir custo por analogia com conhecimento geral sobre sumarização/LLMs.\n\n**Regras adjacentes que tratam de custo de tokens, mas NÃO de `/compact`:**\n\n- **R-0018** (`Monitorar consumo de contexto e tokens por resposta`): manda ler no output o tempo gasto, os tokens consumidos e a porcentagem da janela de contexto consumida — mas isso é por **resposta**, não é uma medição declarada do custo de `/compact`. Se você quiser um número empírico, este é o único instrumento de observação que a fonte oferece; a fonte não afirma que ele quantifica `/compact`.\n- **R-0122** (`Custo de tokens do MCP`): declara que MCP consome mais tokens que CLI porque schemas ficam constantemente carregados na janela de contexto. É custo de **MCP**, não de `/compact` — não transponho.\n- **R-0116** / **R-0117**: priorização de economia de tokens resolve para CLI. Também não trata de `/compact`.\n\n**Resumo:** R-0087 estabelece *quando* e *como* usar `/compact`; o custo de rodá-lo é **METHOD_NOT_DEFINED** nesta base.",
+   "answer_sha256": "be85822b9b5469e54d2f87100667307ca0900c0eb8e01d373e2310d2d21fa3ab",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82054,
+    "out": 888
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0018",
+     "R-0087",
+     "R-0090",
+     "R-0116",
+     "R-0117",
+     "R-0122",
+     "RG-013-001"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [],
+    "chars": 2053,
+    "termos_limpos_JA_NO_ENUNCIADO": [
+     "/compact"
+    ],
+    "termos_limpos_SO_NA_RESPOSTA": []
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-009",
+   "section": "context_window",
+   "question_asked_verbatim": "Qual a diferença entre /compact e /clear?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Pergunta dentro do escopo (gerenciamento de sessão/contexto do Claude Code — RG-013-001 não dispara).\n\n## O que a fonte cobre\n\n**`/compact`** — R-0087 (`Sumarizar conversas antigas com /compact`):\n- Trigger: conversas antigas acumuladas na sessão\n- Ação: usar o comando embutido `/compact` para **sumarizar as conversas antigas**\n- Condição: `UNDEFINED`\n- `autonomy`, `precedence`, `missing_input_action`, `iteration_limit`: todos `UNDEFINED`\n\n**`clear`** — R-0021 (`Limpar o terminal`) e WF-0010 / S-0023:\n- Trigger: usuário quer limpar o terminal\n- Ação: digitar o comando `clear`; **o terminal fica totalmente limpo**\n- Condição: `UNDEFINED`\n- WF-0010 encadeia S-0023 (limpar terminal) → S-0024 (abrir nova sessão digitando `claude`)\n\nNota de precisão sobre a fonte: em R-0021 / S-0023 o comando aparece como **`clear`**, sem barra — é apresentado como comando de terminal, não como slash command do Claude Code. Já `/compact` aparece em R-0087 explicitamente como \"comando embutido\" com barra. Sua pergunta assume `/clear`; a base disponível registra `clear`.\n\n## A diferença que a base sustenta\n\n| | `/compact` (R-0087) | `clear` (R-0021) |\n|---|---|---|\n| Objeto da ação | conversas antigas da sessão | o terminal |\n| Efeito declarado | sumarizar | deixar totalmente limpo |\n| Natureza | comando embutido do Claude Code | comando digitado no terminal |\n\n## Onde não há base — não vou arbitrar\n\n- **Efeito de `/compact` sobre a janela de contexto (tokens liberados, percentual recuperado):** METHOD_NOT_DEFINED. R-0087 diz apenas \"sumarizar\"; não quantifica nem vincula ao consumo de contexto. R-0018 registra separadamente que se lê no output a porcentagem de janela de contexto consumida, mas não relaciona isso a `/compact`.\n- **Se `clear` afeta o contexto/histórico do Claude Code ou apenas a exibição do terminal:** METHOD_NOT_DEFINED. R-0021 fala em \"terminal totalmente limpo\" — não estende o efeito à sessão ou à memória do agente.\n- **Critério de quando escolher um em vez do outro:** METHOD_NOT_DEFINED. Nenhuma regra da base compara os dois nem define trigger de preferência. Os campos `condition` de R-0087 e R-0021 estão ambos `UNDEFINED`.\n- **Se `/compact` encerra ou preserva a sessão:** METHOD_NOT_DEFINED. Para `clear`, WF-0010 mostra o par com S-0024 (`claude` abre **nova** sessão, e R-0022 registra que o reinício não continua a anterior) — mas isso descreve a sequência do workflow, não um efeito de `clear` em si.\n\nSe você precisa decidir entre os dois num caso concreto, diga qual o objetivo (recuperar contexto vs. limpar a tela) — mas adianto que a base não contém regra de roteamento entre eles.",
+   "answer_sha256": "81516858868b184c7f688c26c53843f4da2d823772cf87bf5b1d9a5dfaa0f1e3",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82057,
+    "out": 1177
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0018",
+     "R-0021",
+     "R-0022",
+     "R-0087",
+     "RG-013-001",
+     "S-0023",
+     "S-0024",
+     "WF-0010"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [],
+    "chars": 2626,
+    "termos_limpos_JA_NO_ENUNCIADO": [
+     "/clear",
+     "/compact"
+    ],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "/context"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  },
+  {
+   "case_id": "BC-010",
+   "section": "context_window",
+   "question_asked_verbatim": "Que comando mostra o uso do contexto, e que categorias ele discrimina?\n\nCite o identificador da regra em cada afirmação. Onde faltar base, diga METHOD_NOT_DEFINED ou aponte o campo UNDEFINED — não arbitre.",
+   "answer": "Analisando os recursos carregados, aqui está o que a metodologia da fonte sustenta e o que ela não sustenta:\n\n## O que existe na fonte\n\n**Monitoramento de contexto por resposta — R-0018** (`decision-rules.yaml`, SEG-005): a cada resposta do Claude Code, deve-se ler no output o tempo gasto, os tokens consumidos e a **porcentagem da janela de contexto já consumida**. Note que isso não é um comando — é leitura do output normal de cada resposta.\n\n**Verificação de contexto ao retomar sessão — S-0093 / WF-0034** (`workflows.yaml`, SEG-022): ao executar `resume` e escolher retomar da sessão completa, observa-se o percentual de uso da janela de contexto (no exemplo da fonte, 26%). Também aqui o dado é um percentual único, não uma decomposição por categorias.\n\n**Redução de contexto — R-0087** (`decision-rules.yaml`, SEG-022): o comando embutido `/compact` sumariza conversas antigas. É ação sobre o contexto, não exibição de uso.\n\n## O que NÃO existe na fonte\n\n**METHOD_NOT_DEFINED** para a pergunta como formulada, em dois pontos:\n\n1. **Comando específico de exibição de uso de contexto**: nenhum recurso carregado nomeia um comando cuja função seja exibir o uso de contexto. Os comandos nomeados na fonte são `/resume` (R-0023, WF-0009), `/compact` (R-0087), `/model` (R-0086, WF-0032), `/goal` (R-0025, WF-0013), `/go` (WF-0015), `/plugins` (WF-0024), `/reload-plugins` (R-0054, WF-0025), `rewind` (R-0088), `clear` (R-0021), `resume` (R-0089). Nenhum deles é descrito na fonte como comando de exibição de uso de contexto.\n\n2. **Categorias discriminadas**: a fonte nunca enuncia uma decomposição do uso de contexto em categorias. R-0018 lista três itens de output — tempo, tokens, percentual de contexto — mas isso é o conteúdo do output de resposta, não uma quebra do contexto por categoria. Não vou inferir categorias (system prompt, ferramentas, mensagens, MCP, etc.) a partir de conhecimento geral, porque isso seria reconstruir metodologia ausente.\n\n## Campos UNDEFINED relevantes\n\nEm **R-0018**, os campos `trigger` está definido (\"a cada resposta\"), mas `condition`, `autonomy`, `precedence`, `missing_input_action` e `iteration_limit` estão todos **UNDEFINED** — a fonte não estabelece limiar de percentual a partir do qual agir, nem o que fazer ao atingi-lo.\n\nEm **R-0087** (`/compact`), o campo `condition` está **UNDEFINED** — a fonte não define a partir de que ponto de consumo se deve compactar.\n\nSe o que você precisa é o percentual de contexto consumido, a base na fonte é R-0018 (ler no output de cada resposta) ou S-0093 (observar ao retomar sessão). Para um comando dedicado com quebra por categorias, não há base — e não vou arbitrar.",
+   "answer_sha256": "ce42f95c5e1a401e3bbc0df6afb3a122833b62fe5a1ac380f0db1b7d8e98cff9",
+   "stop_reason": "end_turn",
+   "blocos": [
+    "text"
+   ],
+   "usage": {
+    "in": 82067,
+    "out": 1137
+   },
+   "sinais": {
+    "rotulos_presentes": [
+     "METHOD_NOT_DEFINED",
+     "UNDEFINED"
+    ],
+    "identificadores_citados": [
+     "R-0018",
+     "R-0021",
+     "R-0023",
+     "R-0025",
+     "R-0054",
+     "R-0086",
+     "R-0087",
+     "R-0088",
+     "R-0089",
+     "S-0093",
+     "WF-0009",
+     "WF-0013",
+     "WF-0015",
+     "WF-0024",
+     "WF-0025",
+     "WF-0032",
+     "WF-0034"
+    ],
+    "identificadores_inexistentes_no_bundle": [],
+    "termos_vazados_por_residuo_mencionados": [],
+    "chars": 2659,
+    "termos_limpos_JA_NO_ENUNCIADO": [],
+    "termos_limpos_SO_NA_RESPOSTA": [
+     "/compact"
+    ]
+   },
+   "residuo": {
+    "caso_contaminado_por_residuo": false,
+    "nota": "Seção verificada limpa pelo addendum de resíduo."
+   }
+  }
+ ],
+ "residuo_novo_encontrado_nesta_execucao": {
+  "status": "MEDIDO_NAO_JULGADO",
+  "como": "varredura do corpo falado do L0 cortado (733 blocos; titulos e marcas excluidos)",
+  "porque_o_addendum_nao_pegou": "o addendum buscou as formas com barra (/compact, /context). Sem barra, elas aparecem.",
+  "itens": [
+   {
+    "termo": "compact (sem barra)",
+    "ocorrencias": 1,
+    "mark": "50:00",
+    "quote": "there's also compact. We also talk about that, right? You can summarize the older c...",
+    "nota": "50:00 e exatamente a borda do vao escondido 44:40-50:00. Produziu R-0087 no bundle compilado ('Sumarizar conversas antigas com /compact')."
+   },
+   {
+    "termo": "percentual da janela de contexto",
+    "ocorrencias": 1,
+    "mark": "9:12",
+    "quote": "percentage of the context window that we have consumed so far",
+    "nota": "Fora do vao. Produziu R-0018 no bundle ('Monitorar consumo de contexto e tokens por resposta')."
+   }
+  ],
+  "efeito_sobre_os_casos": {
+   "BC-007": "o QUE fazer quando o contexto acumula vazou via R-0087; o LIMIAR de 50% nao vazou",
+   "BC-008": "o custo de /compact nao vazou; a existencia do comando sim",
+   "BC-009": "/clear nao vazou; /compact sim",
+   "BC-010": "a ideia de ler o percentual vazou via R-0018; o comando /context e as categorias nao"
+  },
+  "verificado_zero_ocorrencias": [
+   "accept edit",
+   "shift",
+   "50%",
+   "context rot"
+  ]
+ }
+}
