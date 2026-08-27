@@ -1,0 +1,183 @@
+# HELDOUT-RESIDUE-ADDENDUM 2 — PILOT-002
+# ADITIVO. Varredura por RADICAL. Nenhum artefato base foi tocado.
+schema_version: 0.1.0
+artifact_id: PILOT-002-HELDOUT-RESIDUE-ADDENDUM-2
+artifact_status: ADDENDUM_ONLY_BASE_ARTIFACTS_UNMODIFIED
+pilot_id: PILOT-002
+published_at_utc: '2026-08-27T20:24:48+00:00'
+generator: p002_residue_addendum2.py
+supersedes: null
+nature:
+  additive_only: true
+  base_artifacts_mutated: false
+  statement: Aditivo ao addendum 1. Nem o lock, nem os casos congelados, nem o freeze record, nem o addendum
+    1 foram abertos para escrita. Este artefato acrescenta e se amarra por hash.
+why_this_addendum_exists: 'O addendum 1 buscou FORMA LITERAL — `/compact`, `/context`, `accept edits`
+  — e declarou limpos termos que estavam presentes em outra forma. Esta varredura busca por RADICAL sobre
+  o mesmo corpo falado e publica o que mais apareceu. Ver REGRA: buscar por radical, nunca por forma exata.'
+binds_to:
+  heldout_lock:
+    path: docs/HELDOUT-LOCK-PILOT-002.yaml
+    sha256: 921a6bb85116efe2c885d2e543a01c4b54a47fdfb84d0fe0fe81b1905ad2d3a8
+  blind_cases:
+    path: docs/HELDOUT-BLIND-CASES-PILOT-002.yaml
+    sha256: 50c6abe99431fecf6cff9085bea4ed31de5f5a8d981595377a5df28f7cc7a390
+  blind_cases_freeze_record:
+    path: docs/HELDOUT-BLIND-CASES-FREEZE-RECORD-PILOT-002.yaml
+    sha256: f1d3b3a5b4148b155001a7921e4754ac0eddd18d501b5b8915e2b9d81a3e6c03
+  residue_addendum_1:
+    path: docs/HELDOUT-RESIDUE-ADDENDUM-PILOT-002.yaml
+    sha256: 9ff1d11a38e5a8e832b96f922da309f7dd25e8a3af75936e246f99b17ec3da36
+  l0_cut:
+    path: pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt
+    sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  l0_intact:
+    path: pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+    sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+method:
+  scan_scope: corpo falado do L0 cortado; linhas de título e marcas de tempo excluídas da busca (733 blocos)
+  search_kind: RADICAL/substring, não forma literal
+  held_out_spans_absent_from_scan_corpus: true
+  cut_interval: SEMIABERTO [início, fim). O bloco na marca de fim sobrevive ao corte e é o primeiro bloco
+    depois dele.
+  boundary_blocks_that_survived:
+  - '15:08'
+  - '50:00'
+  quotes_verified_at_publish_time: true
+  cost_disclosed: busca por radical produz falso positivo. Todos os que apareceram estão listados em false_positives,
+    não descartados em silêncio.
+newly_disclosed_residue:
+  count: 5
+  items:
+  - leak_id: RES2-001
+    radical: danger / skip
+    mark: '29:02'
+    quote: just going to type in claw dangerously skip or in this case, just type in claw is fine
+    o_que_vaza: a rota de linha de comando para o modo sem restrição (`--dangerously-skip-permissions`),
+      em fala de demonstração
+    afeta:
+    - BC-005
+    gravidade: ALTA — o addendum 1 declarou BC-005 'segue como estava'. Metade da resposta esperada de
+      BC-005 é a flag de pular permissões, e ela está no corpo falado fora do vão.
+    continua_fora: 'Shift+Tab para ciclar entre modos: `shift` tem ZERO ocorrências no corpo falado.'
+  - leak_id: RES2-002
+    radical: permiss
+    mark: 78:17–78:24
+    quote: we talked about there's different five or four different permission mode. Setting the right
+      permission mode here is going to help you
+    o_que_vaza: 'a CONTAGEM aproximada de modos (ASR: ''five or four'') e a noção de que escolher o modo
+      certo importa'
+    afeta:
+    - BC-001
+    gravidade: MÉDIA — BC-001 já testava semântica e não nomeação pelo addendum 1. Agora a contagem também
+      não conta.
+    continua_fora: o que cada modo permite; nenhuma linha da tabela de modos.
+  - leak_id: RES2-003
+    radical: compact / summar
+    mark: '50:00'
+    quote: there's also compact. We also talk about that, right? You can summarize the older conversations
+    o_que_vaza: a existência do comando de compactação e que ele resume conversas antigas
+    afeta:
+    - BC-008
+    - BC-009
+    gravidade: ALTA — o addendum 1 listou `/compact` como verificado limpo. Buscou COM barra; sem barra
+      a palavra está lá, em 50:00, exatamente na borda do vão 44:40–50:00. Produziu R-0087 no bundle compilado.
+    continua_fora: o CUSTO de compactar (perda de informação) — que é exatamente o que BC-008 pergunta.
+  - leak_id: RES2-004
+    radical: percent / window
+    mark: 9:12 e 51:16
+    quote: percentage of the context window that we have consumed so far  |  currently you can see we're
+      at 26% for the context window here
+    o_que_vaza: ler o percentual de janela de contexto consumida, duas vezes, ambas fora do vão
+    afeta:
+    - BC-010
+    - BC-007
+    gravidade: MÉDIA — o addendum 1 listou `/context` como limpo. O COMANDO com barra segue ausente; o
+      COMPORTAMENTO de ler o percentual não. Produziu R-0018 no bundle.
+    continua_fora: o comando `/context`, suas quatro categorias (system prompts, skills, memories, messages)
+      e o limiar de 50% — `50%` tem ZERO ocorrências.
+  - leak_id: RES2-005
+    radical: review
+    mark: 26:14 e 27:02
+    quote: We have multiple agent spin up here to actually do the review  |  we're going to have a human
+      here to review that process
+    o_que_vaza: revisão automatizada com humano no laço, em demonstração de workflow agêntico
+    afeta:
+    - BC-003
+    gravidade: BAIXA — CANDIDATO, NÃO CONFIRMADO. É revisão de workflow agêntico, não a camada de IA que
+      revisa o script do modo auto. Semanticamente próximo, não idêntico. Registro sem arbitrar.
+    continua_fora: '`accept edits` tem ZERO ocorrências; a distinção entre accept edits e auto continua
+      integralmente fora.'
+false_positives:
+  count: 5
+  items:
+  - radical: rot
+    casa_com: protocol
+    marks:
+    - 0:34
+    - '63:53'
+    - '64:01'
+    - '68:17'
+    nota: NÃO é `context rot`. `context rot` tem zero ocorrências.
+  - radical: fresh
+    casa_com: refresh / fresh design
+    marks:
+    - '28:40'
+    - '31:00'
+    - '59:44'
+    - '61:17'
+    nota: NÃO é `fresh context`.
+  - radical: window
+    casa_com: Windows (sistema operacional)
+    marks:
+    - '4:48'
+    nota: as outras quatro ocorrências são janela de contexto de verdade.
+  - radical: clear
+    casa_com: clear a terminal / clear plan / clear difference
+    marks:
+    - '10:48'
+    - '10:54'
+    - '17:48'
+    - '43:42'
+    nota: NÃO é `/clear`. O comando segue ausente.
+  - radical: flag
+    casa_com: flagging (num diff)
+    marks:
+    - '71:12'
+    nota: não é flag de linha de comando.
+verified_zero_occurrences:
+  radicals:
+  - accept
+  - shift
+  - approv
+  - sandbox
+  - virtual environ
+  - test environ
+  - human in the loop
+  - cycle
+  - degrad
+  - thread
+  - memor
+  - monitor
+  - context rot
+  - 50%
+  statement: zero ocorrências no corpo falado do L0 cortado
+effect_on_blind_cases:
+  statement: 'Correção material do addendum 1: ele declarou BC-005 e a seção inteira de janela de contexto
+    como intocadas. Não estão.'
+  BC-001: contaminado (nomes pelo addendum 1, contagem por RES2-002)
+  BC-002: sem vazamento novo
+  BC-003: contaminado quanto a nomes; RES2-005 é candidato não confirmado
+  BC-004: contaminado quanto ao nome; condição e risco seguem fora
+  BC-005: REVISADO — era 'intocado', agora contaminado por RES2-001
+  BC-006: sem vazamento novo; `context rot` segue com zero ocorrências
+  BC-007: parcial — ler percentual vazou; o limiar de 50% não
+  BC-008: parcial — existência do compact vazou; o custo não
+  BC-009: parcial — compact vazou; `/clear` não
+  BC-010: parcial — ler percentual vazou; `/context` e as categorias não
+does_not:
+- não altera o lock congelado
+- não altera os casos cegos nem o freeze record
+- não altera o addendum 1
+- não recorta nada a mais do L0
+- não julga nenhuma resposta da execução cega

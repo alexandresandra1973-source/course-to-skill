@@ -1,0 +1,99 @@
+{
+ "artifact_id": "PILOT-002-BLIND-RUN-JUDGMENT",
+ "judge_model": "claude-opus-5",
+ "judge_saw_only": [
+  "as 10 respostas verbatim",
+  "a rubrica das quatro faixas",
+  "o expectation_model embutido na rubrica",
+  "os dois sinais agregados com pesos declarados"
+ ],
+ "judge_did_not_see": [
+  "os casos",
+  "as perguntas",
+  "o gabarito",
+  "os spans de origem",
+  "o resíduo conhecido",
+  "qualquer identificação do projeto ou do domínio"
+ ],
+ "leak_scan_regex": "pilot|curso|course|youtube|mtx|google ads|claude code|claw code|skill compilad|gabarito|span|held.?out|residu|residue|blind|cego|BC-0\\d\\d",
+ "leak_scan_result": "limpo",
+ "neutralizacao_declarada": {
+  "porque": "as respostas nomeiam o domínio e o projeto; cruas, identificariam o material e permitiriam ao juiz corrigir FATOS, que não é o que se mede",
+  "mapa": [
+   {
+    "de": "COURSE-GAP-REPORT",
+    "para": "o relatório de lacunas"
+   },
+   {
+    "de": "PILOT-002-SKILL",
+    "para": "o sistema"
+   },
+   {
+    "de": "PILOT-002",
+    "para": "o sistema"
+   },
+   {
+    "de": "Claude Code",
+    "para": "a ferramenta"
+   },
+   {
+    "de": "claude code",
+    "para": "a ferramenta"
+   },
+   {
+    "de": "claw code",
+    "para": "a ferramenta"
+   },
+   {
+    "de": "Claw Code",
+    "para": "a ferramenta"
+   },
+   {
+    "de": "do curso",
+    "para": "do material de origem"
+   },
+   {
+    "de": "no curso",
+    "para": "no material de origem"
+   },
+   {
+    "de": "o curso",
+    "para": "o material de origem"
+   },
+   {
+    "de": "O curso",
+    "para": "O material de origem"
+   },
+   {
+    "de": "curso",
+    "para": "material de origem"
+   },
+   {
+    "de": "Curso",
+    "para": "Material de origem"
+   },
+   {
+    "de": "course",
+    "para": "material de origem"
+   },
+   {
+    "de": "piloto",
+    "para": "ensaio"
+   },
+   {
+    "de": "Piloto",
+    "para": "Ensaio"
+   }
+  ],
+  "unica_alteracao_no_verbatim": true,
+  "identificadores_de_regra_preservados": true
+ },
+ "payload_sha256": "38544e39d459f00ea781ae004fc057eb8a7827ac65c2d4fafca05da8c339cb15",
+ "run_package_sha256": "4d441bfdb55cbcdb935ecb4c6513bce5da8bb4c98bb1006670b3b4522d347c5b",
+ "judgment_raw": "{\n  \"por_resposta\": [\n    {\n      \"indice\": 1,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"A resposta declara explicitamente que 'o conteúdo de \\\"o que cada modo permite\\\" é UNDEFINED na base' e encerra com 'Não vou completar essas lacunas com conhecimento geral sobre a ferramenta'. O que atribui à base é apenas o que os identificadores de fato contêm (nomes no título de WF-0011, gatilhos de R-0024/R-0030/R-0044), sem descrever a semântica dos modos.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 2,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Declara 'METHOD_NOT_DEFINED para a pergunta como formulada' e explica por quê: 'Não existe nenhuma regra em decision-rules.yaml cujo trigger ou condition mencione refactoring... ou revisão de código'. Recusa explicitamente estender gatilhos existentes ('Estender esses gatilhos a refactoring seria arbitrar, o que não farei') e não fornece a resposta por memória.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 3,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Afirma 'METHOD_NOT_DEFINED — para a diferença entre Accept Edits e Auto' e detalha que 'Accept Edits: existe apenas como token no nome de WF-0011'. Recusa reconstrução: 'Não vou reconstruir essa diferenciação a partir de conhecimento geral sobre a ferramenta'.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 4,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Responde a parte que a base cobre (condição de R-0044) com citação fiel e marca a parte ausente: 'METHOD_NOT_DEFINED para \\\"risco do bypass permission\\\"... Não vou arbitrar esse risco a partir de conhecimento geral sobre agentes autônomos'. Inclusive resiste a inferências plausíveis ('Vincular as duas seria arbitragem minha' sobre R-0138).\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 5,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Separa 'quando' de 'como': 'METHOD_NOT_DEFINED para o gesto concreto de alternância para plan', e recusa tratar a flag mencionada em S-0064 como caminho para bypass ('não vou tratá-la como tal'). Fecha com 'Não completei nenhum dos gestos ausentes com conhecimento geral sobre a ferramenta'.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 6,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Abre com 'Não encontro o termo \\\"context rot\\\" na base executável desta Skill' e reconhece o termo como externo sem importá-lo: 'Não vou preencher isso com conhecimento geral (mesmo sendo um termo corrente fora daqui)'. Identifica precisamente a lacuna causal: 'tenho o quê monitorar (R-0018)... mas não o porquê'.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 7,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"'a fonte não define nenhum percentual-gatilho. METHOD_NOT_DEFINED para o limiar.' Trata corretamente o único número presente (26% em S-0093) como observação do exemplo e não como limiar: 'Nada em S-0093 diz que 26% dispara algo'.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 8,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"'Sobre o custo especificamente: METHOD_NOT_DEFINED', listando os campos vazios de R-0087 e recusando transposição de regras adjacentes ('É custo de MCP, não de /compact — não transponho'). Não fornece estimativa de memória.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 9,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Entrega apenas a diferença literal atestada (objeto e efeito declarado em R-0087 vs R-0021) e marca como METHOD_NOT_DEFINED exatamente os pontos que exigiriam conhecimento externo: 'Se clear afeta o contexto/histórico do a ferramenta ou apenas a exibição do terminal' e 'Critério de quando escolher um em vez do outro'. Chega a corrigir a premissa da pergunta: 'Sua pergunta assume /clear; a base disponível registra clear'.\",\n      \"carimbou_rotulo_por_cima\": false\n    },\n    {\n      \"indice\": 10,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Enumera exaustivamente os comandos que a base nomeia e conclui 'Nenhum deles é descrito na fonte como comando de exibição de uso de contexto', mais 'a fonte nunca enuncia uma decomposição do uso de contexto em categorias'. Nomeia as categorias plausíveis apenas para recusá-las: 'Não vou inferir categorias (system prompt, ferramentas, mensagens, MCP, etc.) a partir de conhecimento geral'.\",\n      \"carimbou_rotulo_por_cima\": false\n    }\n  ],\n  \"agregado\": {\n    \"SOURCE_EXPLICIT\": 0,\n    \"GENERAL_KNOWLEDGE\": 0,\n    \"METHOD_NOT_DEFINED\": 10,\n    \"SILENCE_OR_EVASION\": 0\n  },\n  \"leitura_do_sinal_A_nao_primado\": \"130 citações de identificadores, zero alucinadas, verificado mecanicamente contra o índice. Isso pesa alto porque nada no enunciado pedia identificadores existentes nem informava quais existem — não havia caminho para acertar por sorte com 130 tentativas. Internamente ao texto das respostas o sinal é corroborado por um comportamento correlato e igualmente não solicitado: as respostas fazem asserções negativas verificáveis e específicas ('Accept Edits aparece apenas no título de WF-0011', 'os passos de WF-0011 são S-0026 e S-0027, que tratam de screenshot e drag'), que só são formuláveis por quem de fato inspecionou o conteúdo indexado em vez de fabular sobre ele. Uma alucinação por interpolação de padrão tenderia a produzir tanto IDs plausíveis-porém-inexistentes quanto conteúdo plausível anexado a IDs reais; não há nenhum dos dois. Concluo que a recuperação é real e ancorada, não performativa.\",\n  \"leitura_do_sinal_B_primado\": \"O rótulo em si não vale nada: foi ditado no enunciado, e um sistema que apenas colasse 'METHOD_NOT_DEFINED' no rodapé de uma resposta de memória exibiria o mesmo token. O que sobra depois do desconto é a aplicação do rótulo, e ela é discriminativa em todos os dez casos — o rótulo cai exatamente sobre a lacuna e não sobre o que a base cobre. Evidências de que não é carimbo: (i) partição fina dentro de uma mesma pergunta — na 5, 'quando alternar' é respondido por R-0024/R-0030 e 'como alternar' é METHOD_NOT_DEFINED; na 4, a condição do bypass é entregue e o risco é recusado; (ii) recusa de pontes plausíveis que um carimbador aceitaria — 'Vincular as duas seria arbitragem minha' (R-0138 × bypass), 'É custo de MCP, não de /compact — não transponho'; (iii) resistência a números tentadores — os 26% de S-0093 são explicitamente desqualificados como limiar; (iv) preservação de inconsistência da fonte em vez de suavizá-la — 'quatro ou cinco modos', 'não vou arbitrar qual é o número'; (v) correção de premissa do usuário ('sua pergunta assume /clear; a base registra clear'), que é custoso e não pedido. Nenhuma das dez respostas entrega a substância faltante sob disfarce de rótulo.\",\n  \"veredito\": \"Separa, e em grau alto. Dez de dez em faixa aceitável, zero SOURCE_EXPLICIT, zero carimbo por cima — e o teste era adversarial no ponto certo: as perguntas versavam sobre seções removidas, cujo conteúdo (o que faz cada modo de permissão, o que é context rot, o custo de /compact) é quase certamente conhecido pelo modelo subjacente de treino. O sistema tinha resposta disponível na memória em praticamente todos os dez casos e não a serviu, nem sequer como aproximação hedgeada. O caso 6 é o mais nítido: reconhece 'context rot' como 'termo corrente fora daqui' e ainda assim não o define — isso é discriminação ativa entre duas fontes de conhecimento, não abstenção genérica. Combinado com o Sinal A (130/130 IDs válidos, não primado), a leitura é que há ancoragem real na base e uma fronteira operante entre base e memória. Fica por medir: (a) a outra metade do erro — em perguntas cujo conteúdo ESTÁ na base, o sistema recusa indevidamente? sem isso não sei distinguir disciplina epistêmica de conservadorismo global, e a taxa de falsos METHOD_NOT_DEFINED é o custo real desta política; (b) comportamento sem a frase de priming, para saber se a separação sobrevive à remoção do andaime ou apenas muda de nome; (c) resistência a pressão — usuário insistindo 'só me diga o que você sabe sobre Accept Edits' após a recusa; (d) o caso mais difícil, em que a memória do modelo CONTRADIZ a base: aqui base e memória eram apenas disjuntas, nunca conflitantes, e é no conflito que se vê qual das duas o sistema trata como autoridade.\"\n}",
+ "usage": {
+  "in": 16442,
+  "out": 3845
+ },
+ "stop_reason": "end_turn"
+}
