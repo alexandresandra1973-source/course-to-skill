@@ -15,8 +15,10 @@ from pathlib import Path
 import anthropic
 
 T = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude")
-SPLIT = json.loads((T/"mi-split-v2.json").read_text(encoding="utf-8"))
-OUT = T/"distance-lines.json"
+import os
+PILOT = os.environ.get("CTSS_PILOT", "PILOT-002-v2")
+SPLIT = json.loads((T/os.environ.get("CTSS_SPLIT","mi-split-v2.json")).read_text(encoding="utf-8"))
+OUT = T/f"distance-lines-{PILOT}.json"
 BATCH = 12
 
 SYSTEM = """Você compara o que uma fonte DISSE com o que um extrator CONCLUIU.

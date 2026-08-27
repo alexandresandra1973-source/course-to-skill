@@ -1,0 +1,54 @@
+artifact_id: PILOT-002-SKILL-COMPILATION-MANIFEST
+compiler: compiler-s3/0.1.0
+execution_mode: PER_SEGMENT
+invocations: 148
+monolithic_sweep_used: false
+evidence:
+  total: 2463
+  consumed: 2211
+  coverage_pct: 89.77
+  dispositions:
+    NON_METHODOLOGICAL: 229
+    CONSUMED_BY_RULE: 1491
+    GAP: 23
+    CONSUMED_BY_STEP: 720
+origin_classes:
+  SOURCE_EXPLICIT: 2169
+  GENUINE_INFERENCE: 188
+  PARAPHRASE: 59
+  TRANSCRIPTION_CORRECTION: 47
+course_content_evidence: 2275
+output:
+  rules: 835
+  steps: 601
+  workflows: 158
+rules_only_from_genuine_inference: 29
+undefined_fields:
+  autonomy: 1419
+  iteration_limit: 1368
+  missing_input_action: 1430
+  precedence: 741
+deduplication:
+  rule: IDENTICAL_NORMALIZED
+  rules_merged: 0
+  steps_merged: 0
+validation:
+  errors: 0
+  router_errors: 0
+  failclosed_template_byte_identical: true
+  template_sha256: 50848d02ac32c22aac843cc20d72c9f335f89027fcfa4911a50d7e8719ead814
+schema:
+  kind: SUBSET
+  preserved_by_name:
+  - autonomy
+  - precedence
+  - missing_input_action
+  - iteration_limit
+  discarded_from_legacy: 30
+files:
+  COURSE-GAP-REPORT.md: 7992efb36ffcc92faf9b4859cd8b703171338a09858ef42c3a88c4d2bef1f94e
+  SKILL.md: 008a72f815df70fb0b4f721f603196ef05dc46158e4e8c534d7736cc95513b82
+  decision-rules.yaml: c50c24bc6766fd873ac72943558e6231e2b5cb625c35414137492fe4e8388495
+  runtime-policy.yaml: 5f84b07e5d32cd9959a5ea8adc8d3c114ac0d2ff9f28f307c0c440e6a6f8f336
+  workflows.yaml: 4708ca7457aef80153db4c778e9a4a370f26f3e036869509e5f47de977a9148a
+  manifest.yaml: 0453c8afecdadfae136e9e1225849f35ad7cc552a89cda1ae65b77f8b61a34bb

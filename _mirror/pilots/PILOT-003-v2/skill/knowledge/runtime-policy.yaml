@@ -1,0 +1,93 @@
+schema_version: 0.2.0
+skill_id: PILOT-003-SKILL
+skill_version: 0.1.0
+origin_class: MODEL_INFERENCE
+purpose: Compiler/runtime precedence guards. These guards enforce routing and stopping; source methodology
+  remains in structured decision/workflow resources.
+precedence:
+- RG-013-001
+- RG-013-002
+- RG-013-003
+- RG-013-004
+guards:
+- guard_id: RG-013-001
+  priority: 0
+  name: Scope gate
+  trigger: Every request while this Skill is active.
+  condition: 'Primary request is outside Google Ads for ecommerce: campaign structure, keywords, Performance
+    Max, Shopping, Merchant Center, bidding, budgets, creatives, landing pages, tracking or account review
+    as taught in this course.'
+  action: Return METHOD_NOT_DEFINED and a brief scope explanation. Do not answer the external domain question
+    from general knowledge.
+  stop: true
+  status: ACTIVE
+  scope_justification:
+    kind: DECISAO_DE_INSTRUMENTO
+    rationale: delimita o que a Skill aceita responder. A fonte não enuncia a própria fronteira, então
+      isto é decisão de instrumento e NÃO conteúdo do curso.
+    nao_e_conteudo_da_fonte: true
+    derivado_dos_topicos_do_temporal_map: true
+- guard_id: RG-013-002
+  priority: 10
+  name: Outcome-before-routing gate
+  trigger: Any platform/tool recommendation request or task-framed automation request.
+  condition: No explicit outcome/function exists, including when only an isolated task such as automating
+    posts is supplied.
+  action: Ask exactly the outcome/function question from Q-0001. Do not ask platform-routing questions
+    yet. Do not recommend a platform.
+  stop: true
+  required_question_id: Q-0001
+  status: ACTIVE
+- guard_id: RG-013-003
+  priority: 20
+  name: Build-contract completeness gate
+  trigger: User asks to build/configure/mount an agent.
+  condition: Any of outcome, input, output, boundaries is missing.
+  action: Return MISSING_REQUIRED_INPUT; ask only for the first missing contract field using knowledge/questions.yaml;
+    stop before any build/configuration content. Never invent the missing field.
+  stop: true
+  decision_rule_id: ADR-0004
+  status: ACTIVE
+- guard_id: RG-013-004
+  priority: 30
+  name: Structured-resource routing gate
+  trigger: A request requires a methodology decision or full workflow.
+  condition: The required decision/workflow resource is unavailable.
+  action: Substitute {missing_executable_resources} from the unavailable entries in required_resources
+    and emit response_template exactly, with no text before or after. Do not reconstruct the missing executable
+    rule from SKILL.md, memory, prior context, or general knowledge.
+  response_template: 'METHOD_NOT_DEFINED
+
+
+    Execução interrompida: faltam os recursos executáveis obrigatórios: {missing_executable_resources}.
+
+
+    Não vou reconstruir nem executar a metodologia ausente usando SKILL.md, memória, contexto anterior
+    ou conhecimento geral.
+
+
+    Qualquer checkpoint de revisão humana aplicável permanece obrigatório e não pode ser removido, reduzido
+    ou contornado.'
+  template_substitution:
+    variable: missing_executable_resources
+    source: required_resources
+    selection: unavailable_only
+    order: preserve_required_resources_order
+    join_with: ', '
+  stop: true
+  required_resources:
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  status: ACTIVE
+provenance_note: These are runtime enforcement rules, not new teacher claims.
+derived_from:
+  canonical_runtime_policy_sha256: cab31454c9a7ea328298e964ddb4187e4ba072ca65c4f515de4d9eb09f5002eb
+  parameterized_fields:
+  - skill_id
+  - skill_version
+  - guards[RG-013-001].condition
+  immutable_fields:
+  - guards[RG-013-004].response_template
+  - guards[RG-013-004].template_substitution
+  - guards[RG-013-004].required_resources
+  - precedence

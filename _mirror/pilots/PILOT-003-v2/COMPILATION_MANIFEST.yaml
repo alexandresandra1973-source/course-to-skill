@@ -1,0 +1,27 @@
+pilot_id: PILOT-003
+compiler_version: compiler-v2/0.2.0-frozen
+runner: p003_pass2_ckpt.py (checkpoint por segmento, ext4)
+input:
+  l0_sha256: 04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192
+  temporal_map_sha256: 2c09e3ce74afce8c721e4a26205a31dbb2f4c7e0f5162cf8c190c7981dcf3d06
+  extent_s: 13857
+  held_out_applied: false
+pass2:
+  execution_mode: PER_SEGMENT
+  invocations: 148
+  segments: 148
+  errors: 0
+  zero_yield_count: 0
+  segments_with_zero_yield: []
+evidence:
+  total: 2463
+  aggregate_yield_per_segment: 16.6419
+deduplication:
+  rule: IDENTICAL_NORMALIZED_CLAIM
+  merged: 0
+coverage_gate:
+  covered_s: 10927
+  extent_s: 13857
+  l0_coverage_pct: 78.86
+  threshold: 0.735
+  result: SATISFIED

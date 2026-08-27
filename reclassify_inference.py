@@ -20,7 +20,8 @@ from detector_recall_fix import corrupted_name_lower
 
 DRIVE = Path("/mnt/g/Meu Drive/Chat GPT")
 T = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude")
-ALIAS = {"Claude": re.compile(r"\b(clawed|claw|clod|cloud|clawd|clode|clot)\b", re.I)}
+ALIAS = {"Claude": re.compile(r"\b(clawed|claw|clod|cloud|clawd|clode|clot)\b", re.I),
+         "ROAS": re.compile(r"\b(rows|roads|row)\b", re.I)}
 # Falsos positivos do caminho 2, revisados à mão e EXCLUÍDOS por nome: são
 # tradução (pt↔en), não corrupção do ASR.
 PATH2_REJECTED = {("Explorer", "explore"), ("Termos", "terms"), ("Agentes", "Agents"),
@@ -42,8 +43,10 @@ def classify(r: dict):
 
 
 out = {}
-for pid in ("PILOT-001-v2", "PILOT-002-v2"):
-    p = DRIVE / f"Course-to-Skill-Claude/pilots/{pid}/EVIDENCE.jsonl"
+import os
+PIDS = os.environ.get("CTSS_PIDS", "PILOT-001-v2,PILOT-002-v2").split(",")
+for pid in PIDS:
+    p = DRIVE / f"Course-to-Skill-Claude/pilots/{os.environ.get('CTSS_EVSUB', pid)}/EVIDENCE.jsonl"
     rows = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
     mi = [r for r in rows if r["epistemic_status"] == "MODEL_INFERENCE"]
     corr, gen, by_path = [], [], {}
@@ -68,7 +71,6 @@ for pid in ("PILOT-001-v2", "PILOT-002-v2"):
     print(f"    INFERÊNCIA GENUÍNA      : {len(gen):>3}  "
           f"= {100*len(gen)/len(rows):.1f}% do corpus")
 
-(T/"mi-split-v2.json").write_text(json.dumps(out, ensure_ascii=False, indent=1),
+(T/os.environ.get("CTSS_SPLIT","mi-split-v2.json")).write_text(json.dumps(out, ensure_ascii=False, indent=1),
                                   encoding="utf-8")
-a = out["PILOT-002-v2"]
-print(f"\nPILOT-002: 17,4% -> {a['genuine_pct_of_corpus']}% depois das duas âncoras novas")
+for k,v in out.items(): print(f"\n{k}: genuina {v['genuine_pct_of_corpus']}% do corpus")

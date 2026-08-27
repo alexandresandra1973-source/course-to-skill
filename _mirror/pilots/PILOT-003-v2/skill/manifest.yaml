@@ -1,0 +1,25 @@
+schema_version: 0.3.0
+skill:
+  id: PILOT-003-SKILL
+  name: Google Ads para E-commerce — PILOT-003
+  version: 0.1.0
+  status: CANDIDATE_PENDING_USE
+source:
+  type: single_course_pilot
+  course_id: PILOT-003-v2
+  l0_sha256: 04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192
+runtime:
+  entrypoint: SKILL.md
+  load_order:
+  - knowledge/runtime-policy.yaml
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  required_executable_resources:
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  fail_closed_on_missing_executable_resource: true
+  general_knowledge_fallback_for_missing_methodology: false
+maturity:
+  level: S3_EXECUTABLE
+  pilot_scope: true
+production_ready: false
