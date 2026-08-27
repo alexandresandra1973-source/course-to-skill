@@ -7,6 +7,54 @@ todo pedido inatendivel foi registrado. Nenhum conhecimento de Google Ads meu en
 
 ---
 
+> ## ⚠️ NOTA DE CORREÇÃO — anexada em 2026-08-27, corpo não reescrito
+>
+> O corpo abaixo carrega um erro aritmético **de uma única origem**: a soma do custo
+> da conta. Todas as parcelas citadas estão certas; a soma delas não. O defeito está
+> documentado em `PILOT-003-FINAL-REPORT.md`, seção *Reconciliação do ROAS*:
+>
+> | amarra | valor |
+> |---|---|
+> | sha256 do FINAL-REPORT | `cf1124bd3bd751eaca24cf15278081e7fe5118f64d817c83ee7bb1a645ea3d8c` |
+> | git blob | `87f49718bdcc6c52ffece93b8439eb56cff5ae0b` |
+> | commit que versionou os dois | `ed00f8b4aa3c375ce0619fd570dd02cae6d4329b` |
+>
+> ### O que está errado e o que é correto
+>
+> | # | grandeza | no corpo | **correto** | origem do correto |
+> |---|---|---|---|---|
+> | 1 | custo total da conta | 9.586,54 | **9.577,32** | linha `Total: Conta`, coluna `Custo` |
+> | 2 | ROAS da conta | 18,02 | **18,04** | linha `Total: Conta`, coluna `Valor conv. / custo` |
+> | 3 | reconciliação mensal §5.1 | R$ 3.195,51/mês | **R$ 3.192,44/mês** | 9.577,32 ÷ 90 × 30 |
+> | 4 | múltiplo do break-even | 9,0× | **9,02×** | 18,04 ÷ 2,0 |
+> | 5 | CPA da conta (§1.3) | R$ 125,51 | **R$ 125,40** | linha `Total: Conta`, coluna `Custo / conv.` |
+>
+> O item **5 não constava do defeito registrado no FINAL-REPORT** — foi encontrado ao
+> anexar esta nota, tem a mesma origem única (9.586,54 ÷ 76,38 = 125,51; o CSV traz
+> 125,40) e arrasta o AOV mínimo da conta na tabela §1.3 de R$ 251,02 para
+> **R$ 250,80**. Os CPAs por campanha (193,10 · 157,98 · 82,17) são verbatim do CSV
+> e **não** são afetados.
+>
+> ### O veredito não muda
+>
+> A diferença de custo é de **R$ 9,22 em R$ 9.577,32** — 0,096%. O múltiplo do
+> break-even vai de 9,0× para 9,02×, a queda de valor que ainda sobreviveria vai de
+> −88,9% para −88,91%, e a margem de segurança sobre a discrepância de R$7.730
+> permanece em ~20×. **Nenhuma conclusão de §2, §3, §4, §5, §8 ou §9 se altera em
+> direção**, e nenhuma muda de lado em relação a qualquer limiar da fonte.
+>
+> ### Por que nota e não reescrita
+>
+> O corpo é o output verbatim da Skill compilada e é *evidência do piloto*. Reescrevê-lo
+> apagaria o defeito que o piloto foi feito para detectar — a Skill estabeleceu a
+> disciplina que pegaria isso (*"custo/conv confere em todas as linhas"*), verificou as
+> linhas e não verificou o total. Uma auditoria nova, com dados novos, está em curso;
+> ela substitui este documento, não o corrige.
+
+---
+
+---
+
 # Auditoria MTX — conclusão com os dados 1, 5, 6, 11, 12 e 14
 
 ---

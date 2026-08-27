@@ -1,0 +1,762 @@
+{
+ "B_vencedores": [
+  {
+   "termo": "Total: Conta",
+   "campanha": "",
+   "conv": 76.38,
+   "custo": 9586.54,
+   "cpa": 125.52
+  },
+  {
+   "termo": "Total: Pesquisa",
+   "campanha": "",
+   "conv": 61.88,
+   "custo": 6786.65,
+   "cpa": 109.68
+  },
+  {
+   "termo": "Total: Termos de pesquisa",
+   "campanha": "",
+   "conv": 32.41,
+   "custo": 3026.5,
+   "cpa": 93.37
+  },
+  {
+   "termo": "Total: Outros termos de pesquisa",
+   "campanha": "",
+   "conv": 30.42,
+   "custo": 6463.0,
+   "cpa": 212.48
+  },
+  {
+   "termo": "Total: Performance Max",
+   "campanha": "",
+   "conv": 14.5,
+   "custo": 2799.89,
+   "cpa": 193.1
+  },
+  {
+   "termo": "fuel pak 4",
+   "campanha": "VENDAS|PERF-MAX",
+   "conv": 2.0,
+   "custo": 0.67,
+   "cpa": 0.34
+  },
+  {
+   "termo": "harley davidson lojas",
+   "campanha": "Conversão Vance & Hines",
+   "conv": 1.0,
+   "custo": 0.64,
+   "cpa": 0.64
+  },
+  {
+   "termo": "sissy bar road glide 2025",
+   "campanha": "VENDAS|ATUAL",
+   "conv": 1.0,
+   "custo": 0.87,
+   "cpa": 0.87
+  },
+  {
+   "termo": "motobox",
+   "campanha": "Conversão Vance & Hines",
+   "conv": 1.0,
+   "custo": 5.08,
+   "cpa": 5.08
+  },
+  {
+   "termo": "capacete harley davidson",
+   "campanha": "Conversão Vance & Hines",
+   "conv": 1.0,
+   "custo": 5.29,
+   "cpa": 5.29
+  },
+  {
+   "termo": "vance & hines backslash 450",
+   "campanha": "VENDAS|ATUAL",
+   "conv": 1.0,
+   "custo": 7.8,
+   "cpa": 7.8
+  },
+  {
+   "termo": "mtx imports",
+   "campanha": "VENDAS|PERF-MAX",
+   "conv": 1.0,
+   "custo": 30.47,
+   "cpa": 30.47
+  }
+ ],
+ "C_desperdicio": {
+  "n": 1099,
+  "custo_total": 2325.35,
+  "top": [
+   {
+    "termo": "mtx",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 58.46,
+    "cliques": 41.0
+   },
+   {
+    "termo": "vance hines",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 41.1,
+    "cliques": 24.0
+   },
+   {
+    "termo": "vance and hines",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 28.14,
+    "cliques": 10.0
+   },
+   {
+    "termo": "dynamite crew",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 26.31,
+    "cliques": 9.0
+   },
+   {
+    "termo": "motobox",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 25.3,
+    "cliques": 6.0
+   },
+   {
+    "termo": "hd peças",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 21.47,
+    "cliques": 19.0
+   },
+   {
+    "termo": "banco dynamite crew",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 18.37,
+    "cliques": 1.0
+   },
+   {
+    "termo": "vance & hines backslash 450",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 17.98,
+    "cliques": 1.0
+   },
+   {
+    "termo": "escapamento vance hines fat boy",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 16.98,
+    "cliques": 3.0
+   },
+   {
+    "termo": "auto star harley",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 16.28,
+    "cliques": 1.0
+   },
+   {
+    "termo": "hdpecas",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 15.37,
+    "cliques": 4.0
+   },
+   {
+    "termo": "harley davidson",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 15.22,
+    "cliques": 6.0
+   },
+   {
+    "termo": "hd peças",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 14.74,
+    "cliques": 5.0
+   },
+   {
+    "termo": "pastilha de freio creta",
+    "campanha": "VENDAS|PERF-MAX",
+    "custo": 13.75,
+    "cliques": 1.0
+   },
+   {
+    "termo": "peças harley davidson",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 13.03,
+    "cliques": 15.0
+   },
+   {
+    "termo": "villis design",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 12.82,
+    "cliques": 1.0
+   },
+   {
+    "termo": "vance & hines brasil",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 12.58,
+    "cliques": 12.0
+   },
+   {
+    "termo": "mochila harley davidson",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 12.37,
+    "cliques": 1.0
+   },
+   {
+    "termo": "jaqueta harley davidson 115 anos",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 12.07,
+    "cliques": 1.0
+   },
+   {
+    "termo": "vance and hines street bob",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 12.04,
+    "cliques": 1.0
+   },
+   {
+    "termo": "hd peças",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 11.21,
+    "cliques": 5.0
+   },
+   {
+    "termo": "wings custom",
+    "campanha": "VENDAS|PERF-MAX",
+    "custo": 11.07,
+    "cliques": 5.0
+   },
+   {
+    "termo": "touratech",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 11.07,
+    "cliques": 1.0
+   },
+   {
+    "termo": "kuryakyn",
+    "campanha": "VENDAS|PERF-MAX",
+    "custo": 11.05,
+    "cliques": 6.0
+   },
+   {
+    "termo": "hd pecas",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 10.87,
+    "cliques": 5.0
+   },
+   {
+    "termo": "escapamento vance hines fat boy",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 10.85,
+    "cliques": 8.0
+   },
+   {
+    "termo": "hd pecas",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 10.73,
+    "cliques": 2.0
+   },
+   {
+    "termo": "acessorios harley davidson",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 10.38,
+    "cliques": 9.0
+   },
+   {
+    "termo": "peças harley davidson",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.69,
+    "cliques": 13.0
+   },
+   {
+    "termo": "moto peças",
+    "campanha": "VENDAS|PERF-MAX",
+    "custo": 9.65,
+    "cliques": 3.0
+   },
+   {
+    "termo": "harley davidson",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.49,
+    "cliques": 4.0
+   },
+   {
+    "termo": "loja harley davidson sp",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.46,
+    "cliques": 8.0
+   },
+   {
+    "termo": "motobox brasil",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 9.34,
+    "cliques": 2.0
+   },
+   {
+    "termo": "tour pack chopped",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 9.28,
+    "cliques": 2.0
+   },
+   {
+    "termo": "roupas e acessórios harley davidson",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.26,
+    "cliques": 1.0
+   },
+   {
+    "termo": "hd pecas",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.12,
+    "cliques": 7.0
+   },
+   {
+    "termo": "loja mtx",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 9.02,
+    "cliques": 5.0
+   },
+   {
+    "termo": "harley parts",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 8.96,
+    "cliques": 5.0
+   },
+   {
+    "termo": "hdpeças",
+    "campanha": "VENDAS|PERF-MAX",
+    "custo": 8.55,
+    "cliques": 4.0
+   },
+   {
+    "termo": "drag specialties",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 8.13,
+    "cliques": 4.0
+   }
+  ]
+ },
+ "D_pmax": {
+  "n": 12145,
+  "custo": 679.98,
+  "top": [
+   {
+    "termo": "mtx imports",
+    "custo": 30.47,
+    "conv": 1.0
+   },
+   {
+    "termo": "pastilha de freio creta",
+    "custo": 13.75,
+    "conv": 0.0
+   },
+   {
+    "termo": "wings custom",
+    "custo": 11.07,
+    "conv": 0.0
+   },
+   {
+    "termo": "kuryakyn",
+    "custo": 11.05,
+    "conv": 0.0
+   },
+   {
+    "termo": "moto peças",
+    "custo": 9.65,
+    "conv": 0.0
+   },
+   {
+    "termo": "hdpeças",
+    "custo": 8.55,
+    "conv": 0.0
+   },
+   {
+    "termo": "hd peças",
+    "custo": 8.07,
+    "conv": 0.0
+   },
+   {
+    "termo": "dynamite crew",
+    "custo": 7.98,
+    "conv": 0.0
+   },
+   {
+    "termo": "peças originais harley davidson",
+    "custo": 7.69,
+    "conv": 0.0
+   },
+   {
+    "termo": "motobox",
+    "custo": 7.39,
+    "conv": 0.0
+   },
+   {
+    "termo": "luvas biltwell",
+    "custo": 7.34,
+    "conv": 0.0
+   },
+   {
+    "termo": "molas jj",
+    "custo": 6.27,
+    "conv": 0.0
+   },
+   {
+    "termo": "filtros k&n",
+    "custo": 6.24,
+    "conv": 0.0
+   },
+   {
+    "termo": "manopla original harley davidson",
+    "custo": 6.0,
+    "conv": 0.0
+   },
+   {
+    "termo": "roupas harley davidson",
+    "custo": 5.78,
+    "conv": 0.0
+   },
+   {
+    "termo": "cabo de vela harley",
+    "custo": 5.76,
+    "conv": 0.0
+   },
+   {
+    "termo": "07hd17sa",
+    "custo": 5.51,
+    "conv": 0.0
+   },
+   {
+    "termo": "harley davidson loja online",
+    "custo": 5.15,
+    "conv": 0.0
+   },
+   {
+    "termo": "vance hines",
+    "custo": 5.12,
+    "conv": 0.0
+   },
+   {
+    "termo": "comprar escapamento esportivo",
+    "custo": 5.0,
+    "conv": 0.0
+   },
+   {
+    "termo": "mtx importadora",
+    "custo": 4.91,
+    "conv": 0.0
+   },
+   {
+    "termo": "peças harley davidson",
+    "custo": 4.88,
+    "conv": 0.0
+   },
+   {
+    "termo": "ponteira sport glide",
+    "custo": 4.8,
+    "conv": 0.0
+   },
+   {
+    "termo": "brooklin race",
+    "custo": 4.74,
+    "conv": 0.0
+   },
+   {
+    "termo": "vance & hines usa",
+    "custo": 4.52,
+    "conv": 0.0
+   }
+  ]
+ },
+ "E_negativas": {
+  "Nenhum": 24607,
+  "Adicionado": 180,
+  "(vazio)": 5
+ },
+ "F_match": [
+  {
+   "tipo": "Correspondência ampla",
+   "campanha": "VENDAS|ATUAL",
+   "custo": 83.87,
+   "conv": 22.33,
+   "valor": 120624.39,
+   "n": 360
+  },
+  {
+   "tipo": "Correspondência ampla",
+   "campanha": "Conversão Vance & Hines",
+   "custo": 28.449999999999992,
+   "conv": 39.540000000000006,
+   "valor": 30781.830000000005,
+   "n": 132
+  },
+  {
+   "tipo": "Total: Correspondências de páginas de destino da AI Max",
+   "campanha": "",
+   "custo": 2.97,
+   "conv": 0.0,
+   "valor": 0.0,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Pesquisa",
+   "campanha": "",
+   "custo": 1.44,
+   "conv": 61.88,
+   "valor": 151406.21,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Todas as palavras-chave, exceto as removidas",
+   "campanha": " --",
+   "custo": 1.43,
+   "conv": 61.88,
+   "valor": 151406.21,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Palavras-chave na sua conta",
+   "campanha": "",
+   "custo": 1.43,
+   "conv": 61.88,
+   "valor": 151406.21,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Suas palavras-chave",
+   "campanha": "",
+   "custo": 1.43,
+   "conv": 61.88,
+   "valor": 151406.21,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Conta",
+   "campanha": "",
+   "custo": 1.13,
+   "conv": 76.38,
+   "valor": 172730.01,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Performance Max",
+   "campanha": "",
+   "custo": 0.75,
+   "conv": 14.5,
+   "valor": 21323.8,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Correspondências expandidas da AI Max",
+   "campanha": "",
+   "custo": 0.0,
+   "conv": 0.0,
+   "valor": 0.0,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Inclusões de URL na sua conta",
+   "campanha": "",
+   "custo": 0.0,
+   "conv": 0.0,
+   "valor": 0.0,
+   "n": 1
+  },
+  {
+   "tipo": "Total: Pesquisar palavras-chave na Rede de Display",
+   "campanha": "",
+   "custo": 0.0,
+   "conv": 0.0,
+   "valor": 0.0,
+   "n": 1
+  }
+ ],
+ "G_kw_sem_conv": {
+  "n": 59,
+  "custo": 88.98,
+  "top": [
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 4.41
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 4.14
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 3.84
+   },
+   {
+    "kw": "",
+    "match": "Total: Correspondências de páginas de destino da AI Max",
+    "campanha": "",
+    "custo": 2.97
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.95
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 2.88
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.71
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.54
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.35
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.34
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.22
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.14
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.13
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.08
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.05
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.03
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 2.02
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.89
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.89
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.87
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.81
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 1.77
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.73
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.7
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "Conversão Vance & Hines",
+    "custo": 1.64
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.63
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.48
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.46
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.43
+   },
+   {
+    "kw": "Ativado",
+    "match": "Correspondência ampla",
+    "campanha": "VENDAS|ATUAL",
+    "custo": 1.36
+   }
+  ]
+ },
+ "I_urls": [
+  {
+   "url": "(vazio)",
+   "custo": 122.89999999999999,
+   "conv": 400.27,
+   "n": 502
+  }
+ ]
+}

@@ -4,7 +4,7 @@ from __future__ import annotations
 import csv, io, json
 from pathlib import Path
 CSV = Path("/mnt/g/Meu Drive/Chat GPT/MTX-Google-Ads-Export")
-OUT = Path("/tmp/claude-1000/-home-mtx-course-to-skill-claude/p003-recortes.json")
+OUT = Path("/home/mtx/course-to-skill-claude/_mirror/pilots/PILOT-003-v2/apply/p003-recortes.json")
 
 
 def load(p):

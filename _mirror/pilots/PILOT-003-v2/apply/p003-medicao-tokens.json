@@ -1,0 +1,10 @@
+{
+ "modelo": "claude-opus-5",
+ "bundle_mais_overhead": 411665,
+ "overhead_msg_minima": 7,
+ "bundle_isolado": 411658,
+ "invocacao_completa": 436171,
+ "payload_desta_rodada": 24513,
+ "bytes_bundle": 880321,
+ "chars_bundle": 869045
+}
