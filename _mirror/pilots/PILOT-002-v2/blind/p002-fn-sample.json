@@ -1,0 +1,309 @@
+{
+ "artifact_id": "PILOT-002-FALSE-NEGATIVE-SAMPLE",
+ "artifact_status": "SAMPLE_DECLARED_BEFORE_ANY_QUESTION_WAS_ASKED",
+ "n": 12,
+ "funil_de_elegibilidade": [
+  {
+   "filtro": "total de regras",
+   "restam": 149
+  },
+  {
+   "filtro": "E1 origin_class SOURCE_EXPLICIT",
+   "restam": 143
+  },
+  {
+   "filtro": "E2 evidence_id resolvível",
+   "restam": 143
+  },
+  {
+   "filtro": "E3 evidência SOURCE_EXPLICIT",
+   "restam": 135
+  },
+  {
+   "filtro": "E4 citação verbatim no L0 cortado",
+   "restam": 72
+  },
+  {
+   "filtro": "E5 fora dos vãos escondidos",
+   "restam": 71
+  },
+  {
+   "filtro": "E6 action e trigger preenchidos",
+   "restam": 71
+  }
+ ],
+ "selecao": {
+  "metodo": "amostragem sistemática sobre a lista ordenada por rule_id",
+  "passo": 5,
+  "indices": [
+   0,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40,
+   45,
+   50,
+   55
+  ],
+  "semente_aleatoria": null,
+  "porque_nao_e_conveniencia": "o filtro é estrutural e o passo é aritmético; nenhuma regra foi lida antes de entrar. Reproduzível por qualquer um com o mesmo bundle."
+ },
+ "geracao_da_pergunta": {
+  "template": "Segundo a fonte, o que fazer quando: {trigger}?",
+  "porque_mecanica": "uniforme nos 12; nenhuma pergunta escrita à mão",
+  "a_action_nao_entra_na_pergunta": true,
+  "LIMITACAO_DECLARADA": "o trigger é texto VERBATIM da regra, o que torna a recuperação fácil. Logo a taxa medida é PISO do falso-negativo, não estimativa central: com formulação natural do usuário ela só pode ser maior. Um piso alto já condena; um piso baixo não absolve."
+ },
+ "criterio_de_pontuacao_DECLARADO_ANTES_DE_RODAR": {
+  "ACERTO": "responde substantivamente E cita o rule_id ancorado",
+  "ACERTO_PARCIAL": "responde substantivamente E cita regra existente, mas não a ancorada — o conteúdo pode viver em regra irmã",
+  "FALSO_NEGATIVO": "FALHA. Recusa, diz que a base não cobre, ou emite METHOD_NOT_DEFINED para o que ESTÁ na base",
+  "INCONCLUSIVO": "responde sem citar nada",
+  "rubrica": "INVERTIDA em relação ao teste de invenção: aqui recusar é falha"
+ },
+ "itens": [
+  {
+   "rule_id": "R-0001",
+   "name": "Verificar pré-requisitos materiais antes de iniciar o curso",
+   "trigger": "Antes de começar a acompanhar o curso de Claude Code",
+   "condition": "O aluno precisa dispor de um laptop funcionando e de uma assinatura Claude",
+   "action_esperada": "Confirmar posse de laptop operacional e de assinatura Claude ativa como condição para acompanhar o curso",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0006",
+    "span_s": [
+     50,
+     61
+    ],
+    "mark": "0:50",
+    "quote": "All you need here is just a laptop that's working and also a claw subscription here to follow on this",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Antes de começar a acompanhar o curso de Claude Code?"
+  },
+  {
+   "rule_id": "R-0008",
+   "name": "Recomendação: rodar Claude Code em IDE",
+   "trigger": "Ao definir o ambiente de execução do Claude Code",
+   "condition": "Sempre, como recomendação do instrutor (por limitações do desktop e do terminal)",
+   "action_esperada": "Usar uma IDE (integrated development environment), especificamente VS Code, para rodar o Claude Code; mantém-se o uso do terminal dentro da IDE somado à visualização de todos os arquivos alterados",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0030",
+    "span_s": [
+     248,
+     254
+    ],
+    "mark": "4:08",
+    "quote": "that's why my recommendation is using a IDE which stands for integrated development environment",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Ao definir o ambiente de execução do Claude Code?"
+  },
+  {
+   "rule_id": "R-0024",
+   "name": "Alternar para modo plan antes de pedido de construção com imagem de referência",
+   "trigger": "Emissão de um pedido de construção acompanhado de imagem de referência",
+   "condition": "O pedido ainda não foi enviado",
+   "action_esperada": "Alternar o Claude Code para o modo plan antes de emitir o pedido",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0084",
+    "span_s": [
+     938,
+     939
+    ],
+    "mark": "15:38",
+    "quote": "And the other thing you can see here that we're just switch over to the plan mode.",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Emissão de um pedido de construção acompanhado de imagem de referência?"
+  },
+  {
+   "rule_id": "R-0032",
+   "name": "Inspecionar estrutura de arquivos antes de decidir stack",
+   "trigger": "Opções de stack apresentadas pela IA",
+   "condition": "Dúvida sobre consequências da opção",
+   "action_esperada": "Rolar a resposta da IA para ver a estrutura de arquivos resultante de cada opção antes de decidir",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0109",
+    "span_s": [
+     1144,
+     1156
+    ],
+    "mark": "19:04",
+    "quote": "down here to see exactly what the file structure look like if you choose the second option or third option.",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Opções de stack apresentadas pela IA?"
+  },
+  {
+   "rule_id": "R-0037",
+   "name": "Ignorar termos técnicos desconhecidos",
+   "trigger": "Saída da IA contém termos técnicos desconhecidos",
+   "condition": "UNDEFINED",
+   "action_esperada": "Prosseguir normalmente; termos desconhecidos não são um problema",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0106",
+    "span_s": [
+     1107,
+     1119
+    ],
+    "mark": "18:27",
+    "quote": "some technical terms that you probably never heard of it. That's fine.",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Saída da IA contém termos técnicos desconhecidos?"
+  },
+  {
+   "rule_id": "R-0062",
+   "name": "Instalar apenas skills necessárias",
+   "trigger": "Decisão sobre instalar uma skill",
+   "condition": "A skill corresponde ao que você realmente quer ou precisa fazer (ex.: finanças, marketing, construção de aplicações)",
+   "action_esperada": "Instalar somente as skills realmente desejadas/necessárias para o propósito pretendido",
+   "do_not": [
+    "Não instalar skills que não são realmente desejadas ou necessárias"
+   ],
+   "ancora": {
+    "evidence_id": "EV-0201",
+    "span_s": [
+     2054,
+     2065
+    ],
+    "mark": "34:14",
+    "quote": "installing skills that you actually really want or actually really needs. Right? anything that you're trying to do.",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Decisão sobre instalar uma skill?"
+  },
+  {
+   "rule_id": "R-0068",
+   "name": "Não tocar em node_modules",
+   "trigger": "Desenvolvedor considera editar conteúdo de node_modules",
+   "condition": "Conteúdo é temporário, gerado ao instalar as dependências do package.json",
+   "action_esperada": "Não mexer no conteúdo de node_modules (necessidade muito rara)",
+   "do_not": [
+    "Não editar arquivos dentro de node_modules"
+   ],
+   "ancora": {
+    "evidence_id": "EV-0216",
+    "span_s": [
+     2231,
+     2236
+    ],
+    "mark": "37:11",
+    "quote": "So you don't really need to touch that. It's really really rare for people",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Desenvolvedor considera editar conteúdo de node_modules?"
+  },
+  {
+   "rule_id": "R-0073",
+   "name": "Alocar componentes customizados reutilizáveis na pasta components",
+   "trigger": "Quando existe um elemento visual pequeno da interface (card, ícone, sidebar inferior, botão, info panel)",
+   "condition": "O elemento é uma peça menor / componente customizado que pode ser reutilizável",
+   "action_esperada": "Guardar esse componente na pasta components",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0223",
+    "span_s": [
+     2283,
+     2288
+    ],
+    "mark": "38:03",
+    "quote": "components is whatever those small component that you see in your application",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Quando existe um elemento visual pequeno da interface (card, ícone, sidebar inferior, botão, info panel)?"
+  },
+  {
+   "rule_id": "R-0078",
+   "name": "Colocação de arquivo por escopo: universal vs específico do Claude Code",
+   "trigger": "Ao decidir em qual pasta colocar um arquivo de configuração/skill",
+   "condition": "Se o conteúdo deve valer para todos os frameworks de agentes de IA vs. apenas para o Claude Code",
+   "action_esperada": "Colocar na pasta 'agents' o que é universal para todos os frameworks de agentes de IA; colocar na pasta '.claude' o que é específico apenas do Claude Code",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0250",
+    "span_s": [
+     2520,
+     2531
+    ],
+    "mark": "42:00",
+    "quote": "everything that we put in the agents folder is going to be universal for all the AI agent frameworks but anything",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Ao decidir em qual pasta colocar um arquivo de configuração/skill?"
+  },
+  {
+   "rule_id": "R-0086",
+   "name": "Trocar para modelo mais potente quando necessário",
+   "trigger": "Necessidade de usar um modelo diferente ou mais poderoso durante a sessão",
+   "condition": "Sessão do Claude Code ativa no terminal",
+   "action_esperada": "Digitar /model no terminal e escolher a variante desejada no menu (ex.: Sonnet, Haiku ou outro modelo disponível)",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0267",
+    "span_s": [
+     3012,
+     3017
+    ],
+    "mark": "50:12",
+    "quote": "There's also model here. You can if you want to switch to most powerful model like the Fable 5 model, you can also do that.",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Necessidade de usar um modelo diferente ou mais poderoso durante a sessão?"
+  },
+  {
+   "rule_id": "R-0092",
+   "name": "Avaliar plugin antes de instalar",
+   "trigger": "Um plugin candidato é encontrado na interface de discovery de plugins",
+   "condition": "Ainda não há decisão sobre se o plugin é o adequado",
+   "action_esperada": "Pressionar enter sobre o plugin para abrir seus detalhes e ler mais sobre ele para avaliar se é o adequado antes de instalar",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0281",
+    "span_s": [
+     3126,
+     3132
+    ],
+    "mark": "52:06",
+    "quote": "if you want to actually learn more about it, you can just click on enter and just try learning more about it. Is it actually really the right one for you?",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Um plugin candidato é encontrado na interface de discovery de plugins?"
+  },
+  {
+   "rule_id": "R-0097",
+   "name": "Escolher GitHub como ferramenta de controle de versão",
+   "trigger": "Decisão sobre como configurar controle de versão",
+   "condition": "Busca-se a forma mais simples e mais barata",
+   "action_esperada": "Usar GitHub (gratuito) como plataforma de controle de versão",
+   "do_not": [],
+   "ancora": {
+    "evidence_id": "EV-0293",
+    "span_s": [
+     3227,
+     3234
+    ],
+    "mark": "53:47",
+    "quote": "And if you actually want to set up version controls, the simplest and the most cheapest way that you can do this",
+    "quote_verificada_no_L0_cortado": true
+   },
+   "pergunta": "Segundo a fonte, o que fazer quando: Decisão sobre como configurar controle de versão?"
+  }
+ ],
+ "bundle_sha256": {
+  "SKILL.md": "4e87afc8740da629b25aab76d4ffc38f6ad0b3c7488f3d9cb984af5f17781692",
+  "knowledge/decision-rules.yaml": "4cccee56d82a2663e3b1784a67c155c007f632a1b46c1726fe50aad7321eab20",
+  "knowledge/workflows.yaml": "d7df9646fa4e5524b050cb5394c3728ff41951736c99c0a13341c08f25c52899",
+  "knowledge/runtime-policy.yaml": "a30a18c8b99e868a0f4a9227247b7e026bb66c190cc3798ecf66e37cd4cadad6",
+  "manifest.yaml": "13bf5814c1a251c24ec044296909edd46048ef03063c7970206c2799eeeee63f"
+ }
+}

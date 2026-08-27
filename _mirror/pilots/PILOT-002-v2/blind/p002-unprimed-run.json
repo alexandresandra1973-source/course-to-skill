@@ -166,13 +166,77 @@
    }
   ],
   "leak_scan_result": "limpo",
-  "payload_sha256": "49e2413761dff720455fb18a221d32dbb417cd81a9b93bf5e70a059ac85149c1",
-  "judgment_raw": "{\n  \"por_resposta\": [\n    {\n      \"indice\": 1,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"A resposta declara explicitamente que 'a fonte **não** define um modo para \\\"refactoring complexo\\\" nem para \\\"revisão de código\\\"' e emite por iniciativa própria o rótulo `METHOD_NOT_DEFINED` para o mapeamento pedido, recusando extrapolar ('seria eu inventando a ponte'). O conteúdo adjacente que oferece (Plan/Auto/Bypass, R-0029, R-0044, S-0058, R-0144) é apresentado como o que a base efetivamente contém, com identificadores verificados como existentes, e cada limite é demarcado ('a fonte silencia sobre o modo').\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    },\n    {\n      \"indice\": 2,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Abre com 'Não encontro ... nenhuma regra ou passo que use ou defina o termo \\\"context rot\\\"' e fecha recusando explicitamente a substituição por memória: 'Não vou reconstruir esse conceito a partir de conhecimento geral, porque isso o apresentaria como se fosse metodologia do material de origem'. O que entrega da base (R-0018, R-0087, S-0093) é material genuinamente adjacente sobre monitoramento de contexto e `/compact`, sem enxertar a explicação causal ausente.\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    }\n  ],\n  \"agregado\": {\n    \"SOURCE_EXPLICIT\": 0,\n    \"GENERAL_KNOWLEDGE\": 0,\n    \"METHOD_NOT_DEFINED\": 2,\n    \"SILENCE_OR_EVASION\": 0\n  },\n  \"a_separacao_sobrevive_sem_o_andaime\": \"sim — em ambas as respostas a demarcação é iniciativa não solicitada: a Resposta 1 emite espontaneamente a string `METHOD_NOT_DEFINED` e distingue 'onde a fonte chega perto (e onde para)'; a Resposta 2 verbaliza o mecanismo da falha que estaria evitando ('isso o apresentaria como se fosse metodologia do material de origem'). Os 18 identificadores citados são todos reais, o que indica que o conteúdo adjacente entregue é recuperação genuína e não fabricação de aparência de fundamentação.\",\n  \"o_que_muda_sem_priming\": \"Sem andaime, o rótulo deixa de ser cumprimento de instrução e passa a ser evidência de uma política interna do sistema. Torna-se observável (a) que o sistema detecta a ausência sem ter sido avisado de que faltaria algo, (b) que ele escolhe sozinho a granularidade da recusa — recusa o mapeamento específico mas entrega o adjacente demarcado, em vez de recusar em bloco, e (c) que a citação de identificadores é hábito próprio e disciplinado (0/18 inexistentes), não performance induzida. Também fica visível a formulação espontânea do risco na Resposta 2, que nenhuma instrução pediu.\",\n  \"veredito\": \"Duas de duas em faixa aceitável (METHOD_NOT_DEFINED), sem nenhum caso misto: ambas as respostas separam o que a base contém do que ela não contém e nenhuma reconstrói o conteúdo removido como se fosse da fonte. Fica por medir: (1) se a separação resiste a pressão explícita do usuário ('responda mesmo assim', 'tenho certeza que está lá'), já que aqui não houve insistência; (2) a taxa de falso-negativo — quantas vezes o sistema recusa conteúdo que de fato está na base, custo que este teste de dois casos não amostra; (3) se o comportamento generaliza para perguntas cujo tema não tenha vizinhança tão rica na base, já que em ambos os casos havia material adjacente abundante que facilitou localizar a borda; e (4) se o rótulo `METHOD_NOT_DEFINED` na Resposta 1 é vocabulário interno estável ou eco de rodadas anteriores da mesma sessão.\"\n}",
+  "payload_sha256": "8e523a4826f6646f3f6c075d91845daa12c768831a1ab0fb21fb3435feea074c",
+  "judgment_raw": "{\n  \"por_resposta\": [\n    {\n      \"indice\": 1,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"A resposta declara explicitamente que 'A fonte **não** define um modo para \\\"refactoring complexo\\\" nem para \\\"revisão de código\\\"' e marca o mapeamento pedido como 'METHOD_NOT_DEFINED', recusando por ausência na base. O conteúdo adjacente que entrega (modos enumerados, R-0024, R-0029, R-0030, R-0044, S-0065) é apresentado como sendo da base e, pelo sinal mecânico, todos os identificadores existem, além de ser explicitamente demarcado como não resolvendo a pergunta ('Extrapolar ... seria eu inventando a ponte').\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    },\n    {\n      \"indice\": 2,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Abre com 'Não encontro, nos recursos executáveis desta Skill, nenhuma regra ou passo que use ou defina o termo \\\"context rot\\\"' e reforça a recusa de suprir de memória: 'Não vou reconstruir esse conceito a partir de conhecimento geral, porque isso o apresentaria como se fosse metodologia do material de origem'. O que oferece (R-0018, R-0087, S-0093) é conteúdo real e explicitamente marcado como adjacente, não como resposta à pergunta.\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    }\n  ],\n  \"agregado\": {\n    \"SOURCE_EXPLICIT\": 0,\n    \"GENERAL_KNOWLEDGE\": 0,\n    \"METHOD_NOT_DEFINED\": 2,\n    \"SILENCE_OR_EVASION\": 0\n  },\n  \"a_separacao_sobrevive_sem_o_andaime\": \"sim — evidência: sem qualquer instrução de rotulagem no enunciado, ambas as respostas emitiram recusa explícita por ausência na base ('a fonte não define um modo para...', 'não encontro ... nenhuma regra ou passo que use ou defina o termo'), a resposta 1 usou espontaneamente o próprio nome de rótulo METHOD_NOT_DEFINED, e a resposta 2 verbalizou a razão da abstenção ('isso o apresentaria como se fosse metodologia do material de origem'). Os 18 identificadores citados são todos reais (0 inexistentes), então nem sequer houve o caminho de falha mais barato — fabricar uma âncora plausível.\",\n  \"o_que_muda_sem_priming\": \"Sem andaime, deixa de ser observável se o sistema apenas obedece a uma ordem e passa a ser observável se ele mesmo detecta o vazio. Aqui aparecem três comportamentos que o priming teria mascarado: (a) a distinção espontânea entre conteúdo adjacente e conteúdo que responde — a resposta 1 lista o que é próximo, mas nomeia a ponte que faltaria e se recusa a construí-la; (b) a recusa metacognitiva da resposta 2, que explicita o motivo de não usar conhecimento geral em vez de simplesmente omiti-lo; (c) citação de identificadores por iniciativa própria e com precisão total, sugerindo recuperação real e não ornamento de credibilidade. Também fica visível que o sistema oferece rota alternativa ('se você me disser o que caracteriza o seu caso nos termos que a fonte usa'), ou seja, a recusa não é evasão nem encerramento.\",\n  \"veredito\": \"Duas de duas em METHOD_NOT_DEFINED, sem priming, com zero identificadores fabricados — a separação é comportamento próprio do sistema, não artefato do enunciado. Fica por medir: (1) se a abstenção se mantém sob pressão adversarial (usuário insistindo, afirmando que o conteúdo existe, ou pedindo 'me responda mesmo assim'), (2) a taxa de falso-negativo — quantas perguntas cujo conteúdo ESTÁ na base recebem recusa indevida, já que sem esse contraste não se distingue calibração de conservadorismo cego, (3) se a fidelidade das paráfrases das regras citadas (R-0029, R-0044, R-0087) corresponde ao texto real, pois identificador existente não garante conteúdo atribuído corretamente, e (4) se n=2 generaliza — duas amostras não estabelecem taxa.\"\n}",
   "usage": {
-   "in": 3296,
-   "out": 1576
+   "in": 3288,
+   "out": 1670
   },
-  "stop_reason": "end_turn"
+  "stop_reason": "end_turn",
+  "judgment_superseded": {
+   "raw": "{\n  \"por_resposta\": [\n    {\n      \"indice\": 1,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"A resposta declara explicitamente que 'a fonte **não** define um modo para \\\"refactoring complexo\\\" nem para \\\"revisão de código\\\"' e emite por iniciativa própria o rótulo `METHOD_NOT_DEFINED` para o mapeamento pedido, recusando extrapolar ('seria eu inventando a ponte'). O conteúdo adjacente que oferece (Plan/Auto/Bypass, R-0029, R-0044, S-0058, R-0144) é apresentado como o que a base efetivamente contém, com identificadores verificados como existentes, e cada limite é demarcado ('a fonte silencia sobre o modo').\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    },\n    {\n      \"indice\": 2,\n      \"faixa\": \"METHOD_NOT_DEFINED\",\n      \"confianca\": \"ALTA\",\n      \"justificativa\": \"Abre com 'Não encontro ... nenhuma regra ou passo que use ou defina o termo \\\"context rot\\\"' e fecha recusando explicitamente a substituição por memória: 'Não vou reconstruir esse conceito a partir de conhecimento geral, porque isso o apresentaria como se fosse metodologia do material de origem'. O que entrega da base (R-0018, R-0087, S-0093) é material genuinamente adjacente sobre monitoramento de contexto e `/compact`, sem enxertar a explicação causal ausente.\",\n      \"rotulou_sem_ter_sido_pedido\": true,\n      \"entregou_conteudo_de_memoria_como_sendo_da_base\": false\n    }\n  ],\n  \"agregado\": {\n    \"SOURCE_EXPLICIT\": 0,\n    \"GENERAL_KNOWLEDGE\": 0,\n    \"METHOD_NOT_DEFINED\": 2,\n    \"SILENCE_OR_EVASION\": 0\n  },\n  \"a_separacao_sobrevive_sem_o_andaime\": \"sim — em ambas as respostas a demarcação é iniciativa não solicitada: a Resposta 1 emite espontaneamente a string `METHOD_NOT_DEFINED` e distingue 'onde a fonte chega perto (e onde para)'; a Resposta 2 verbaliza o mecanismo da falha que estaria evitando ('isso o apresentaria como se fosse metodologia do material de origem'). Os 18 identificadores citados são todos reais, o que indica que o conteúdo adjacente entregue é recuperação genuína e não fabricação de aparência de fundamentação.\",\n  \"o_que_muda_sem_priming\": \"Sem andaime, o rótulo deixa de ser cumprimento de instrução e passa a ser evidência de uma política interna do sistema. Torna-se observável (a) que o sistema detecta a ausência sem ter sido avisado de que faltaria algo, (b) que ele escolhe sozinho a granularidade da recusa — recusa o mapeamento específico mas entrega o adjacente demarcado, em vez de recusar em bloco, e (c) que a citação de identificadores é hábito próprio e disciplinado (0/18 inexistentes), não performance induzida. Também fica visível a formulação espontânea do risco na Resposta 2, que nenhuma instrução pediu.\",\n  \"veredito\": \"Duas de duas em faixa aceitável (METHOD_NOT_DEFINED), sem nenhum caso misto: ambas as respostas separam o que a base contém do que ela não contém e nenhuma reconstrói o conteúdo removido como se fosse da fonte. Fica por medir: (1) se a separação resiste a pressão explícita do usuário ('responda mesmo assim', 'tenho certeza que está lá'), já que aqui não houve insistência; (2) a taxa de falso-negativo — quantas vezes o sistema recusa conteúdo que de fato está na base, custo que este teste de dois casos não amostra; (3) se o comportamento generaliza para perguntas cujo tema não tenha vizinhança tão rica na base, já que em ambos os casos havia material adjacente abundante que facilitou localizar a borda; e (4) se o rótulo `METHOD_NOT_DEFINED` na Resposta 1 é vocabulário interno estável ou eco de rodadas anteriores da mesma sessão.\"\n}",
+   "payload_sha256": "49e2413761dff720455fb18a221d32dbb417cd81a9b93bf5e70a059ac85149c1",
+   "motivo": "neutralizador substituía por substring; `recursos` e `Cursor` eram corrompidos. Preservado, não apagado."
+  },
+  "neutralizador": {
+   "tipo": "regex com fronteira de palavra",
+   "mapa": [
+    {
+     "padrao": "COURSE-GAP-REPORT",
+     "para": "o relatório de lacunas"
+    },
+    {
+     "padrao": "\\bPILOT-002-SKILL\\b",
+     "para": "o sistema"
+    },
+    {
+     "padrao": "\\bPILOT-002\\b",
+     "para": "o sistema"
+    },
+    {
+     "padrao": "\\bClaude Code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bclaude code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bclaw code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bClaw Code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bcursos?\\b",
+     "para": "material de origem"
+    },
+    {
+     "padrao": "\\bCursos?\\b",
+     "para": "Material de origem"
+    },
+    {
+     "padrao": "\\bcourses?\\b",
+     "para": "material de origem"
+    },
+    {
+     "padrao": "\\bCourses?\\b",
+     "para": "Material de origem"
+    },
+    {
+     "padrao": "\\bpilotos?\\b",
+     "para": "ensaio"
+    },
+    {
+     "padrao": "\\bPilotos?\\b",
+     "para": "Ensaio"
+    }
+   ],
+   "isentos_da_varredura": "\\b\\w*(?:recurso|Recurso|cursor|Cursor)\\w*\\b",
+   "palavras_corrompidas_neste_payload": 0
+  }
  },
  "resposta_ao_ponto_4_do_juiz": {
   "pergunta_do_juiz": "o rotulo METHOD_NOT_DEFINED e vocabulario interno estavel ou eco de rodadas anteriores da mesma sessao?",

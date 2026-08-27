@@ -1,0 +1,405 @@
+{
+ "artifact_id": "PILOT-002-FALSE-NEGATIVE-RUN",
+ "sample_sha256": "525a0eeac3ab15173dfbadc0fbbfc9f9eb26666c71f26426e623d4457bed6567",
+ "criterio_declarado_antes": {
+  "ACERTO": "responde substantivamente E cita o rule_id ancorado",
+  "ACERTO_PARCIAL": "responde substantivamente E cita regra existente, mas não a ancorada — o conteúdo pode viver em regra irmã",
+  "FALSO_NEGATIVO": "FALHA. Recusa, diz que a base não cobre, ou emite METHOD_NOT_DEFINED para o que ESTÁ na base",
+  "INCONCLUSIVO": "responde sem citar nada",
+  "rubrica": "INVERTIDA em relação ao teste de invenção: aqui recusar é falha"
+ },
+ "limitacao_declarada": "o trigger é texto VERBATIM da regra, o que torna a recuperação fácil. Logo a taxa medida é PISO do falso-negativo, não estimativa central: com formulação natural do usuário ela só pode ser maior. Um piso alto já condena; um piso baixo não absolve.",
+ "run_model": "claude-opus-5",
+ "thinking": {
+  "type": "disabled"
+ },
+ "results": [
+  {
+   "rule_id_ancorado": "R-0001",
+   "evidence_id": "EV-0006",
+   "pergunta": "Segundo a fonte, o que fazer quando: Antes de começar a acompanhar o curso de Claude Code?",
+   "nothing_appended": true,
+   "action_esperada": "Confirmar posse de laptop operacional e de assinatura Claude ativa como condição para acompanhar o curso",
+   "answer": "Segundo a fonte, essa situação corresponde à regra **R-0001 — \"Verificar pré-requisitos materiais antes de iniciar o curso\"** (`knowledge/decision-rules.yaml`, SEG-001, origem: SOURCE_EXPLICIT):\n\n**Gatilho:** antes de começar a acompanhar o curso de Claude Code.\n\n**Condição:** o aluno precisa dispor de um laptop funcionando e de uma assinatura Claude.\n\n**Ação:** confirmar posse de laptop operacional e de assinatura Claude ativa como condição para acompanhar o curso.\n\nCampos declarados como UNDEFINED na fonte: `autonomy`, `precedence`, `missing_input_action`, `iteration_limit`. Não há itens em `do_not`.\n\n**Regra relacionada na mesma etapa (R-0002 — \"Não exigir experiência técnica prévia\"):** o aluno não precisa ter experiência técnica ou de desenvolvedor anterior; o material prossegue sem esse requisito, e iniciantes absolutos não devem ser bloqueados por falta de experiência técnica prévia.\n\n**Passo correspondente no fluxo (S-0001):** instalar o Claude Code na máquina local é a primeira etapa da sequência do curso, e seus `required_inputs` são exatamente *laptop funcionando* e *assinatura Claude* — o que reforça a checagem de pré-requisitos antes de iniciar.\n\nEm seguida, a ordem ensinada é: instalação local primeiro (R-0005: \"instalar antes de decidir onde usar\") e depois cobrir os fundamentos do Claude Code (S-0002).",
+   "answer_sha256": "07b54b0c47d50ffa771393e3e9902be5b9d166843c7d5885568092d835943ae6",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0001",
+     "R-0002",
+     "R-0005",
+     "S-0001",
+     "S-0002"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1339
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0008",
+   "evidence_id": "EV-0030",
+   "pergunta": "Segundo a fonte, o que fazer quando: Ao definir o ambiente de execução do Claude Code?",
+   "nothing_appended": true,
+   "action_esperada": "Usar uma IDE (integrated development environment), especificamente VS Code, para rodar o Claude Code; mantém-se o uso do terminal dentro da IDE somado à visualização de todos os arquivos alterados",
+   "answer": "Segundo a metodologia da fonte (regra R-0008, `knowledge/decision-rules.yaml`):\n\n**Trigger:** Ao definir o ambiente de execução do Claude Code.\n\n**Condição:** Sempre — é a recomendação do instrutor, motivada pelas limitações tanto do app de desktop quanto do terminal isolado.\n\n**Ação:** Usar uma **IDE (integrated development environment)**, especificamente o **VS Code**, para rodar o Claude Code. Assim você mantém o uso do terminal *dentro* da IDE, somado à visualização de todos os arquivos alterados.\n\n**Precedência:** Esta recomendação do instrutor prevalece sobre o app de desktop e sobre o terminal isolado.\n\n---\n\nContexto das alternativas que essa regra suplanta (também na fonte):\n\n- **App de desktop** (R-0006): indicado para usuário não-técnico que quer apenas funcionalidades básicas — aceitando menos flexibilidade, poucas customizações e impossibilidade de explorar todos os recursos.\n- **Terminal** (R-0007): para usuário técnico que quer mais controle e explorar toda a funcionalidade — aceitando interface inferior e navegação difícil.\n\nRegras relacionadas na fonte:\n\n- **R-0131:** se o objetivo é usar todas as funcionalidades/customizações, preferir o terminal à versão desktop (não assuma que a desktop oferece as mesmas customizações).\n- **R-0145:** Cursor **não** é pré-requisito. Cursor, Antigravity e VS Code são tratados como equivalentes — qualquer IDE com terminal e edição de arquivos serve.\n- **R-0147:** se o objetivo é um começo simples e mínimo, adotar o VS Code.\n\nSe você quiser executar o passo a passo, os workflows aplicáveis são **WF-0005** (instalar o VS Code) e **WF-0008** (iniciar a sessão do Claude Code no terminal do VS Code). É só pedir.",
+   "answer_sha256": "653ff0bfee0dd19ac1f2967421b3ef89409242c3f10c71c5f9618b272a97587a",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0006",
+     "R-0007",
+     "R-0008",
+     "R-0131",
+     "R-0145",
+     "R-0147",
+     "WF-0005",
+     "WF-0008"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1684
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0024",
+   "evidence_id": "EV-0084",
+   "pergunta": "Segundo a fonte, o que fazer quando: Emissão de um pedido de construção acompanhado de imagem de referência?",
+   "nothing_appended": true,
+   "action_esperada": "Alternar o Claude Code para o modo plan antes de emitir o pedido",
+   "answer": "Segundo a fonte (regra R-0024, evidência EV-0084, segmento SEG-008):\n\n**Trigger:** Emissão de um pedido de construção acompanhado de imagem de referência\n**Condição:** O pedido ainda não foi enviado\n**Ação:** Alternar o Claude Code para o **modo plan** *antes* de emitir o pedido.\n\nEsse passo corresponde ao workflow **WF-0012 (Modo plan)**, cujo passo único (S-0028) é: \"Alternar para o modo plan antes de emitir o pedido de construção\", tendo como input requerido a imagem de referência já anexada ao prompt.\n\nContexto imediatamente anterior na fonte — workflow **WF-0011** (modos de permissão: Plan, Accept Edits, Auto, Bypass):\n\n1. **S-0026** — Tirar screenshot da referência visual: capturar a tela/interface que servirá de referência.\n2. **S-0027** — Arrastar a imagem diretamente para dentro do prompt e verificar que o *file path* da imagem aparece na entrada.\n\nDepois disso é que se aplica a alternância para o modo plan (S-0028), antes de submeter o pedido.\n\nCampos não definidos na fonte para esta regra: `autonomy`, `precedence`, `missing_input_action` e `iteration_limit` estão todos como UNDEFINED — ou seja, a fonte não especifica limites de iteração nem comportamento em caso de input faltante para este ponto específico.",
+   "answer_sha256": "74dca2cc2f13ea0b08bf9d50c2a8a483d149cbff43e3598082b0771e95fe9313",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "EV-0084",
+     "R-0024",
+     "S-0026",
+     "S-0027",
+     "S-0028",
+     "WF-0011",
+     "WF-0012"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1237
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0032",
+   "evidence_id": "EV-0109",
+   "pergunta": "Segundo a fonte, o que fazer quando: Opções de stack apresentadas pela IA?",
+   "nothing_appended": true,
+   "action_esperada": "Rolar a resposta da IA para ver a estrutura de arquivos resultante de cada opção antes de decidir",
+   "answer": "Segundo a metodologia da fonte, aplica-se a regra **R-0032 — \"Inspecionar estrutura de arquivos antes de decidir stack\"**:\n\n**Trigger:** Opções de stack apresentadas pela IA\n**Condição:** Dúvida sobre consequências da opção\n**Ação:** Rolar a resposta da IA para ver a estrutura de arquivos resultante de cada opção antes de decidir\n\nOu seja: antes de escolher, você desce na resposta do Claude Code para visualizar qual estrutura de arquivos cada opção vai gerar, e só então decide.\n\n**Regra complementar da fonte (R-0031 — \"Escolha de tech stack por popularidade\"):**\n- Trigger: IA pergunta qual tech stack usar\n- Condição: múltiplas opções de stack oferecidas\n- Ação: escolher a opção mais popular (a primeira, Next.js + React); a escolha específica não importa muito\n\n**Onde isso acontece no fluxo:** este é um dos pontos do passo S-0038 do workflow `/go` (WF-0015) — \"Responder às perguntas do usuário disparadas pela IA\": minimizar o file explorer e responder às perguntas que o Claude faz antes de produzir o plano (tech stack, email gate, conteúdo, fidelity bar).\n\nCampos que a fonte não define para essas regras: `autonomy`, `precedence`, `missing_input_action` e `iteration_limit` estão todos como UNDEFINED.",
+   "answer_sha256": "659c7dd56ea435a00d1c2142d2e3cbe217234d96fea5960fdd3804a0ae506949",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0031",
+     "R-0032",
+     "S-0038",
+     "WF-0015"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1217
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0037",
+   "evidence_id": "EV-0106",
+   "pergunta": "Segundo a fonte, o que fazer quando: Saída da IA contém termos técnicos desconhecidos?",
+   "nothing_appended": true,
+   "action_esperada": "Prosseguir normalmente; termos desconhecidos não são um problema",
+   "answer": "Segundo a fonte (regra R-0037, segmento SEG-005 do curso, evidência EV-0106):\n\n**Trigger:** A saída da IA contém termos técnicos desconhecidos.\n\n**Ação:** Prosseguir normalmente — termos desconhecidos não são um problema.\n\nOu seja, o curso trata isso como um não-problema: você não precisa entender cada termo técnico que aparece na resposta do Claude Code para continuar o trabalho.\n\nContexto em que essa regra aparece na fonte: ela está no bloco de planejamento (plan mode, WF-0014), quando o Claude Code devolve o plano e faz perguntas ao usuário (tech stack, email gate, conteúdo, fidelity bar). Isso é coerente com outras regras da mesma fonte, que reforçam a mesma postura para o usuário não-técnico:\n\n- **R-0043** — na revisão do modelo de dados do plano, o revisor não técnico não deve se aprofundar no detalhe; basta notar que o modelo constrói uma lista de objetos com campos como ID e cor.\n- **R-0031** — na escolha do tech stack, escolher a opção mais popular (Next.js + React); a escolha específica não importa muito.\n- **R-0085** — arquivos de configuração não relacionados ao system prompt: não se preocupar com eles neste momento.\n- **R-0066** — `package-lock.json`: não exige atenção do desenvolvedor.\n- **R-0002** — o material não exige experiência técnica ou de desenvolvedor prévia.\n\n**Campos não definidos na fonte para R-0037:** `condition`, `autonomy`, `precedence`, `missing_input_action`, `iteration_limit` e `do_not` estão todos como UNDEFINED. Portanto a fonte não define, por exemplo, a partir de que ponto um termo desconhecido deixaria de ser ignorável.",
+   "answer_sha256": "59a1ae3e6ce20320a191eba08d67e08fa493e747294faa90fa1f1e7e17d5e9b2",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "EV-0106",
+     "R-0002",
+     "R-0031",
+     "R-0037",
+     "R-0043",
+     "R-0066",
+     "R-0085",
+     "WF-0014"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1583
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0062",
+   "evidence_id": "EV-0201",
+   "pergunta": "Segundo a fonte, o que fazer quando: Decisão sobre instalar uma skill?",
+   "nothing_appended": true,
+   "action_esperada": "Instalar somente as skills realmente desejadas/necessárias para o propósito pretendido",
+   "answer": "Segundo a fonte, a regra que cobre exatamente esse ponto de decisão é **R-0062 — \"Instalar apenas skills necessárias\"** (segmento SEG-016):\n\n**Gatilho:** Decisão sobre instalar uma skill.\n\n**Condição:** A skill corresponde ao que você realmente quer ou precisa fazer (por exemplo: finanças, marketing, construção de aplicações).\n\n**Ação:** Instalar somente as skills realmente desejadas/necessárias para o propósito pretendido.\n\n**Não fazer:** Não instalar skills que não são realmente desejadas ou necessárias.\n\nComplementarmente, a fonte traz outra regra aplicável no mesmo momento de decisão, **R-0092 — \"Avaliar plugin antes de instalar\"** (SEG-023):\n\n- **Gatilho:** Um plugin candidato é encontrado na interface de discovery de plugins.\n- **Condição:** Ainda não há decisão sobre se o plugin é o adequado.\n- **Ação:** Pressionar enter sobre o plugin para abrir seus detalhes e ler mais sobre ele para avaliar se é o adequado **antes** de instalar.\n\nE, no fluxo de instalação (WF-0024, passo S-0067), a fonte reforça: ao selecionar a skill com a barra de espaço e pressionar enter, **ler a descrição exibida sobre o que a skill faz**.\n\nUm ponto adjacente que a fonte também define, caso a decisão de instalar seja positiva, é o **escopo de instalação** (R-0053): se o objetivo é que todos os colaboradores que clonaram/forkaram o repositório possam usar a skill, escolher a segunda opção de escopo (instalar dentro do projeto atual, disponível para quem forkar ou clonar) — e **não** usar o escopo de usuário (global na máquina local) nem o escopo restrito somente a você no projeto atual.\n\nObservação de limite: os campos de autonomia, precedência, ação em caso de input faltante e limite de iteração dessas regras estão marcados como `UNDEFINED` na fonte — ou seja, o curso não os especifica.",
+   "answer_sha256": "7d5bf5566ac3845c9ae3178a4a4ef995c2c6cccd0aec4b1056c6eea0dd0d1352",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0053",
+     "R-0062",
+     "R-0092",
+     "S-0067",
+     "WF-0024"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1798
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0068",
+   "evidence_id": "EV-0216",
+   "pergunta": "Segundo a fonte, o que fazer quando: Desenvolvedor considera editar conteúdo de node_modules?",
+   "nothing_appended": true,
+   "action_esperada": "Não mexer no conteúdo de node_modules (necessidade muito rara)",
+   "answer": "Consultando `knowledge/decision-rules.yaml`, a regra aplicável é **R-0068 — \"Não tocar em node_modules\"** (SEG-017, origem: SOURCE_EXPLICIT):\n\n**Gatilho:** Desenvolvedor considera editar conteúdo de node_modules.\n\n**Condição:** O conteúdo é temporário, gerado ao instalar as dependências declaradas no `package.json`.\n\n**Ação segundo a fonte:** Não mexer no conteúdo de `node_modules` — a necessidade de fazê-lo é muito rara.\n\n**Do not:** Não editar arquivos dentro de `node_modules`.\n\nDuas regras vizinhas da fonte completam o quadro:\n\n- **R-0069 — node_modules listado no .gitignore:** por constar no `.gitignore`, `node_modules` é ignorado a cada commit/adição ao controle de versão.\n- **R-0101 — Não commitar node_modules nem pastas dot:** manter esses itens excluídos via gitignore, pois não são relevantes para o projeto.\n\nCampos declarados como UNDEFINED na fonte para R-0068: `autonomy`, `precedence`, `missing_input_action`, `iteration_limit`.\n\nEvidências: EV-0212, EV-0213, EV-0216.",
+   "answer_sha256": "6c2828c84eaf3490643ac0e6f25635d14994d3b68b40bd1addb0468a660c1bf2",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "EV-0212",
+     "EV-0213",
+     "EV-0216",
+     "R-0068",
+     "R-0069",
+     "R-0101"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 992
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0073",
+   "evidence_id": "EV-0223",
+   "pergunta": "Segundo a fonte, o que fazer quando: Quando existe um elemento visual pequeno da interface (card, ícone, sidebar inferior, botão, info panel)?",
+   "nothing_appended": true,
+   "action_esperada": "Guardar esse componente na pasta components",
+   "answer": "Segundo a fonte (regra R-0073, segmento SEG-018):\n\n**Condição:** o elemento é uma peça menor / componente customizado que pode ser reutilizável.\n\n**Ação:** guardar esse componente na pasta `components`.\n\nRegras relacionadas no mesmo segmento, que dão contexto a essa decisão:\n\n- **R-0072 — Criar componentes pequenos e compor em aplicações maiores:** ao construir a interface, decompor a aplicação inteira em componentes pequenos, criar cada peça separadamente e depois juntá-las (modelo de peças de Lego) para formar a aplicação maior.\n- **R-0074 — Reutilizar o mesmo componente para renderizar elementos diferentes:** quando itens distintos precisam ser exibidos no mesmo tipo de painel/elemento, usar o mesmo componente para renderizar o elemento diferente, em vez de criar um novo.\n- **R-0075 — Reunir componentes e biblioteca na pasta `application`:** essa pasta é o local de reunião de componentes e funções de biblioteca; dentro dela, `page.tsx` renderiza a homepage inteira.\n\nContraste explícito registrado pela fonte (R-0070): conteúdo que é arquivo de configuração, biblioteca ou utilitário — e **não** componente — vai na pasta `library` (lib); a fonte marca explicitamente \"não colocar componentes na pasta library\".",
+   "answer_sha256": "29a5fa26bcf09e977d51af3072be64eeab3f5f7608eb1f9595333920e7d1ec16",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0070",
+     "R-0072",
+     "R-0073",
+     "R-0074",
+     "R-0075"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1228
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0078",
+   "evidence_id": "EV-0250",
+   "pergunta": "Segundo a fonte, o que fazer quando: Ao decidir em qual pasta colocar um arquivo de configuração/skill?",
+   "nothing_appended": true,
+   "action_esperada": "Colocar na pasta 'agents' o que é universal para todos os frameworks de agentes de IA; colocar na pasta '.claude' o que é específico apenas do Claude Code",
+   "answer": "Segundo a fonte (regra R-0082 / R-0078, SEG-019–SEG-020):\n\n**Decisão: colocação de arquivo por escopo — universal vs específico do Claude Code**\n\n- **Gatilho:** ao decidir em qual pasta colocar um arquivo de configuração/skill.\n- **Condição:** o conteúdo deve valer para *todos* os frameworks de agentes de IA, ou apenas para o Claude Code?\n- **Ação:**\n  - Se é **universal** para todos os frameworks de agentes de IA → colocar na pasta **`agents`**.\n  - Se é **específico apenas do Claude Code** → colocar na pasta **`.claude`**.\n\n**Regra irmã para system prompts (R-0082):**\n- System prompt que deve valer para todos os frameworks de agentes de IA (inclusive futuros) → escrever em **`agents.md`**.\n- Regra ou ferramenta exclusiva do Claude Code → escrever em **`CLAUDE.md`**.\n\n**Não fazer:**\n- Não colocar regras universais somente no `CLAUDE.md`.\n- Não colocar regras exclusivas do Claude Code no `agents.md`.\n\n**Complementos relacionados na fonte:**\n- **R-0083:** para que o `CLAUDE.md` aproveite as instruções universais, referenciar o arquivo com `@agents.md` dentro do `CLAUDE.md`.\n- **R-0079:** quando uma skill aparece em `.claude/skills` e há cópia correspondente em `agents`, a **fonte da verdade é a versão em `agents`**; a entrada em `.claude/skills` é apenas referência.\n- **R-0080:** pasta com **seta no ícone** = pasta de referência (link) — não pertence de fato a `.claude`, apenas aponta para conteúdo que vive em outro lugar.\n- Verificação prática (S-0089): `settings.json` dentro de `.claude` contém apenas configurações do Claude Code, sem referenciar outra pasta — confirmando o critério de escopo.\n\n*Observação de maturidade: esta Skill é um piloto de curso único (`S3_EXECUTABLE`, `production_ready: false`).*",
+   "answer_sha256": "2b986fb20152ab492f6df07ea501308b3d875645a865c5f7cbc20b4a236a3401",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0078",
+     "R-0079",
+     "R-0080",
+     "R-0082",
+     "R-0083",
+     "S-0089"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 1734
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0086",
+   "evidence_id": "EV-0267",
+   "pergunta": "Segundo a fonte, o que fazer quando: Necessidade de usar um modelo diferente ou mais poderoso durante a sessão?",
+   "nothing_appended": true,
+   "action_esperada": "Digitar /model no terminal e escolher a variante desejada no menu (ex.: Sonnet, Haiku ou outro modelo disponível)",
+   "answer": "Segundo a fonte (regra R-0086, segmento SEG-022):\n\n**Gatilho:** necessidade de usar um modelo diferente ou mais poderoso durante a sessão.\n\n**Condição:** sessão do Claude Code ativa no terminal.\n\n**Ação:** digitar `/model` no terminal e escolher a variante desejada no menu (por exemplo, Sonnet, Haiku ou outro modelo disponível).\n\n**Procedimento correspondente — WF-0032 (`/model`):**\n1. **Trocar modelo (S-0095):** digitar `/model` no terminal e selecionar a variante desejada no menu. Entrada necessária: o modelo desejado.\n2. **Executar rewind (S-0094):** digitar `rewind`, selecionar o checkpoint anterior e confirmar a reversão de código e conversa. Entrada necessária: um checkpoint anterior.\n\n*(Observação: o passo 2 aparece agrupado sob este workflow na fonte, embora trate do comando `rewind`.)*\n\nCampos não especificados pela fonte para esta regra: autonomia, precedência, ação em caso de input faltante e limite de iteração — todos marcados como `UNDEFINED`.",
+   "answer_sha256": "22dcaab149ea6fa1a0729371068971addb475d494e6eb2f919ac917f0f10a15c",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0086",
+     "S-0094",
+     "S-0095",
+     "WF-0032"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 970
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0092",
+   "evidence_id": "EV-0281",
+   "pergunta": "Segundo a fonte, o que fazer quando: Um plugin candidato é encontrado na interface de discovery de plugins?",
+   "nothing_appended": true,
+   "action_esperada": "Pressionar enter sobre o plugin para abrir seus detalhes e ler mais sobre ele para avaliar se é o adequado antes de instalar",
+   "answer": "Segundo a fonte (regra R-0092, segmento SEG-023, evidência EV-0281):\n\n**Gatilho:** Um plugin candidato é encontrado na interface de discovery de plugins.\n\n**Condição:** Ainda não há decisão sobre se o plugin é o adequado.\n\n**Ação:** Pressionar **enter** sobre o plugin para abrir seus detalhes e **ler mais sobre ele** para avaliar se é o adequado — **antes** de instalar.\n\nEsse passo aparece também como etapa do fluxo `WF-0031` (S-0098 — \"Inspecionar detalhes do plugin\"), na sequência:\n\n1. Abrir o discovery de plugins (S-0096)\n2. Pesquisar entre os plugins listados, que vêm por padrão da própria Anthropic (S-0097)\n3. **Pressionar enter no plugin para ler mais detalhes e decidir se é o adequado** (S-0098)\n\nCampos não definidos na fonte para esta regra: `autonomy`, `precedence`, `missing_input_action`, `iteration_limit`. Não há itens em `do_not`.",
+   "answer_sha256": "a0601f6ec1813934ed6862d9cc4bc9fdfb1dfed72b71ec3f9d9f74972186e869",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "EV-0281",
+     "R-0092",
+     "S-0096",
+     "S-0097",
+     "S-0098",
+     "WF-0031"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 854
+   }
+  },
+  {
+   "rule_id_ancorado": "R-0097",
+   "evidence_id": "EV-0293",
+   "pergunta": "Segundo a fonte, o que fazer quando: Decisão sobre como configurar controle de versão?",
+   "nothing_appended": true,
+   "action_esperada": "Usar GitHub (gratuito) como plataforma de controle de versão",
+   "answer": "Segundo a fonte (regra R-0097, segmento SEG-024):\n\n**Trigger:** Decisão sobre como configurar controle de versão\n**Condição:** Busca-se a forma mais simples e mais barata\n**Ação:** Usar **GitHub (gratuito)** como plataforma de controle de versão\n\n---\n\n**Contexto que a fonte associa a essa decisão:**\n\n- **Por que adotar controle de versão (R-0095):** o *rewind* de sessão do Claude Code é insuficiente — a sessão pode desaparecer ao reiniciar o computador. Não se deve depender da sessão para reverter mudanças de longo prazo.\n- **Quando adotar (R-0096):** quando múltiplos membros de time trabalham no mesmo projeto **OU** quando se deseja reverter para uma mudança específica feita em semanas anteriores.\n- **Reforços adicionais (SEG-035):** adotar git/GitHub quando o projeto exige rollback (R-0136), quando é um projeto de longo prazo (R-0137), e como proteção contra o agente apagar algo indevidamente sem versão para reverter (R-0138).\n\n**Procedimento correspondente — WF-0035 \"set up version controls using GitHub\" (5 passos):**\n\n1. **S-0104 — Criar conta no GitHub:** navegar até github.com e fazer sign up para obter conta gratuita, que permite acompanhar todos os projetos de forma privada ou pública.\n2. **S-0105 — Criar repositório para o projeto:** para cada projeto criado, criar um repositório correspondente no GitHub (ex.: repositório \"loop maker\").\n3. **S-0106 — Abrir a árvore de commits:** clicar na seção de commits do repositório para visualizar a árvore inteira, que representa as diferentes versões do projeto.\n4. **S-0107 — Inspecionar a mudança de um commit:** clicar no commit desejado para ver exatamente qual mudança foi feita naquela versão.\n5. **S-0108 — Ler o diff por cores:** verde = o que está sendo adicionado; vermelho (à esquerda) = o que está sendo deletado.\n\n**Regras de operação relacionadas:**\n- **R-0098:** nomear cada commit descrevendo exatamente a mudança feita (não usar nomes que não descrevam a mudança).\n- **R-0099:** para variações do projeto (versão beta, versão dois), criar uma branch separada e commitar sobre ela, em vez de trabalhar na main.",
+   "answer_sha256": "5b8ecc6478364e300945c59a2f05ee6d8b8047f24348a953d165e10fabb8ff4b",
+   "stop_reason": "end_turn",
+   "sinais": {
+    "citou_a_regra_ancorada": true,
+    "identificadores_citados": [
+     "R-0095",
+     "R-0096",
+     "R-0097",
+     "R-0098",
+     "R-0099",
+     "R-0136",
+     "R-0137",
+     "R-0138",
+     "S-0104",
+     "S-0105",
+     "S-0106",
+     "S-0107",
+     "S-0108",
+     "WF-0035"
+    ],
+    "identificadores_inexistentes": [],
+    "token_de_recusa_presente": [],
+    "chars": 2099
+   }
+  }
+ ],
+ "mecanico": {
+  "n": 12,
+  "citou_a_regra_ancorada": 12,
+  "com_token_de_recusa": 0,
+  "identificadores_inexistentes_no_total": 0
+ },
+ "judge": {
+  "judge_model": "claude-opus-5",
+  "saw": [
+   "conteúdo esperado de cada item",
+   "resposta de cada item",
+   "a rubrica invertida"
+  ],
+  "did_not_see": [
+   "o rule_id ancorado",
+   "as perguntas",
+   "a base",
+   "qualquer identificação do projeto ou do domínio"
+  ],
+  "porque_nao_viu_o_rule_id": "para não julgar por casamento de string",
+  "leak_scan_result": "limpo",
+  "payload_sha256": "5dc9ebe6fa1412c272be35e8dcf36778dc3b0271895348f16f9350f336e96f35",
+  "judgment_raw": "{\n  \"por_item\": [\n    {\"indice\": 1, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"A resposta entrega exatamente a ação esperada (confirmar laptop funcional e assinatura Claude ativa antes de iniciar) e ancora em R-0001/SEG-001 e S-0001. Não há recusa nem evasiva.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 2, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde a substância esperada — usar IDE, especificamente VS Code, mantendo terminal dentro da IDE e visualização de todos os arquivos alterados — citando R-0008. Acrescenta contexto de alternativas sem descaracterizar o conteúdo.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 3, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega a ação esperada (alternar para modo plan antes de emitir o pedido) com identificadores R-0024, EV-0084, WF-0012/S-0028. A marcação de campos UNDEFINED é metadado, não recusa do conteúdo pedido.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 4, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Reproduz exatamente a ação esperada de rolar a resposta da IA para inspecionar a estrutura de arquivos de cada opção antes de decidir, citando R-0032 e o passo S-0038. Conteúdo complementar não desloca o foco.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 5, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde o esperado — prosseguir normalmente, termos desconhecidos não são problema — ancorado em R-0037/SEG-005/EV-0106. Os campos UNDEFINED são declarações de metadado sobre a regra, não negação do conteúdo.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 6, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega a ação esperada de instalar apenas as skills realmente desejadas/necessárias, com R-0062/SEG-016, inclusive o do_not correspondente. Regras adjacentes citadas ampliam sem substituir o conteúdo.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 7, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde exatamente 'não mexer no conteúdo de node_modules — necessidade muito rara', com R-0068, SEG-017 e evidências. Nenhuma recusa presente.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 8, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega a ação esperada (guardar o componente na pasta components) citando R-0073/SEG-018, mais o contraste com a pasta library. Substância plenamente correspondente.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 9, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Cobre as duas metades do critério esperado: universal para todos os frameworks vai em 'agents' e específico do Claude vai em '.claude', com R-0082/R-0078 e SEG-019–020. A nota sobre maturidade da skill não é recusa.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 10, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde exatamente digitar /model no terminal e escolher a variante no menu (Sonnet, Haiku etc.), com R-0086/SEG-022 e WF-0032/S-0095. Conteúdo esperado plenamente entregue.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 11, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega literalmente a ação esperada — pressionar enter sobre o plugin, abrir detalhes e ler antes de instalar — com R-0092, SEG-023, EV-0281 e S-0098. Sem qualquer evasiva.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 12, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde o esperado (usar GitHub gratuito como plataforma de controle de versão) citando R-0097/SEG-024, com procedimento WF-0035 detalhado. Substância e ancoragem presentes.\", \"recusou_faceta_que_estava_na_base\": false}\n  ],\n  \"agregado\": {\"ACERTO\": 12, \"ACERTO_PARCIAL\": 0, \"FALSO_NEGATIVO\": 0, \"INCONCLUSIVO\": 0},\n  \"taxa_de_falso_negativo\": \"0/12 — nenhuma recusa indevida. Em todos os casos em que o conteúdo estava comprovadamente na base, o sistema respondeu substantivamente e ancorou em identificadores internos (R-nnnn, SEG-nnn, WF-nnnn, S-nnnn, EV-nnnn).\",\n  \"disciplina_ou_conservadorismo\": \"Disciplina. O sistema não confundiu 'ser cauteloso' com 'não responder': entregou o conteúdo pedido em 12/12 e reservou a marcação de ausência para facetas de metadado genuinamente vazias (autonomy, precedence, missing_input_action, iteration_limit, do_not), sem estendê-la ao núcleo da resposta. O padrão de citar regra principal + regras vizinhas + passo de workflow indica recuperação com cobertura, não hedging; a única ressalva é verbosidade e algum ruído (item 10 agrupa um passo de 'rewind' sob /model, e o item 9 mistura R-0082 e R-0078 sem separar claramente qual ancora o quê).\",\n  \"veredito\": \"Serve para usar em cenários de consulta a base fechada: zero falsos negativos, ancoragem consistente e substância correta em todos os itens. Fica por medir (a) o comportamento simétrico — se recusa corretamente quando o conteúdo NÃO está na base, já que este teste não contém negativos verdadeiros; (b) precisão dos identificadores citados, que não foi verificável aqui por design; (c) se o excesso de contexto adjacente pode induzir o usuário a atribuir à fonte algo fora do escopo perguntado; e (d) robustez a perguntas ambíguas ou com múltiplas regras concorrentes, dado que campos de 'precedence' estão majoritariamente UNDEFINED.\"\n}",
+  "usage": {
+   "in": 9084,
+   "out": 2432
+  },
+  "stop_reason": "end_turn",
+  "judgment_superseded": {
+   "raw": "{\n  \"por_item\": [\n    {\"indice\": 1, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"A resposta entrega exatamente a ação esperada (confirmar laptop funcionando e assinatura Claude ativa antes de iniciar) e cita R-0001, SEG-001 e S-0001 como fundamento. Nenhuma recusa ou marcação de indisponibilidade sobre a substância pedida.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 2, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Reproduz o conteúdo esperado integralmente: usar IDE, especificamente VS Code, mantendo terminal dentro da IDE e visualização de todos os arquivos alterados, com identificador R-0008. Ainda acrescenta contexto de alternativas e workflows relacionados sem negar nada.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 3, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde exatamente 'alternar para o modo plan antes de emitir o pedido', ancorado em R-0024, EV-0084, SEG-008 e WF-0012/S-0028. A nota sobre campos UNDEFINED refere-se a metadados acessórios, não à faceta esperada.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 4, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega a ação esperada de rolar a resposta da IA para inspecionar a estrutura de arquivos de cada opção antes de decidir, citando R-0032 e o passo S-0038 do WF-0015. Conteúdo complementar (R-0031) não desloca o foco.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 5, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Diz explicitamente 'prosseguir normalmente — termos desconhecidos não são um problema', com R-0037, SEG-005 e EV-0106. A observação sobre campos UNDEFINED é sobre limites não especificados, não uma recusa da faceta perguntada.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 6, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Reproduz a regra R-0062 com o critério de instalar somente skills realmente desejadas/necessárias ao propósito, incluindo o do_not correspondente. Complementos (R-0092, R-0053) ampliam sem substituir o conteúdo esperado.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 7, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde exatamente 'não mexer no conteúdo de node_modules — a necessidade é muito rara', ancorado em R-0068, SEG-017 e evidências EV-0212/0213/0216. Regras vizinhas sobre .gitignore reforçam sem desviar.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 8, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega a ação esperada de guardar o componente na pasta components, com R-0073 e SEG-018 como fundamento. O contraste com a pasta library apenas delimita corretamente o critério.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 9, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Cobre as duas metades do conteúdo esperado: universal para todos os frameworks vai em 'agents', específico do produto vai em '.claude', citando R-0078/R-0082 e SEG-019–020. A nota de maturidade da Skill não constitui recusa.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 10, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde digitar /model no terminal e escolher a variante no menu (Sonnet, Haiku etc.), com R-0086, SEG-022 e WF-0032/S-0095. A observação sobre o passo rewind agrupado é transparência, não evasão.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 11, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Entrega literalmente a ação de pressionar enter sobre o plugin para abrir detalhes e avaliar antes de instalar, com R-0092, SEG-023, EV-0281 e S-0098 do WF-0031. Nenhuma faceta é recusada.\", \"recusou_faceta_que_estava_na_base\": false},\n    {\"indice\": 12, \"faixa\": \"ACERTO\", \"confianca\": \"ALTA\", \"justificativa\": \"Responde usar GitHub gratuito como plataforma de controle de versão, ancorado em R-0097 e SEG-024, com o critério de simplicidade/custo. O detalhamento do WF-0035 e regras correlatas amplia sem desviar do esperado.\", \"recusou_faceta_que_estava_na_base\": false}\n  ],\n  \"agregado\": {\"ACERTO\": 12, \"ACERTO_PARCIAL\": 0, \"FALSO_NEGATIVO\": 0, \"INCONCLUSIVO\": 0},\n  \"taxa_de_falso_negativo\": \"0/12 — nenhuma recusa, nenhum METHOD_NOT_DEFINED substituindo conteúdo presente, nenhuma evasiva. O sistema respondeu tudo o que estava ancorado na base.\",\n  \"disciplina_ou_conservadorismo\": \"Disciplina. O conjunto mostra recuperação positiva completa: em todos os doze casos o sistema entregou a substância esperada e a ancorou em identificador interno (R-####, SEG-###, EV-####, WF-####/S-####). As marcações UNDEFINED aparecem apenas sobre metadados periféricos (autonomy, precedence, missing_input_action, iteration_limit) e nunca sobre a faceta perguntada — isso é declaração honesta de lacuna de esquema, não recusa defensiva. O sistema também assinala espontaneamente o nível de maturidade (S3_EXECUTABLE, production_ready: false) sem usar isso como pretexto para não responder, o que separa cautela epistêmica de conservadorismo funcional.\",\n  \"veredito\": \"Serve para usar como camada de recuperação sobre esta base fechada: cobertura total, ancoragem consistente e boa contextualização por regras vizinhas. Fica por medir (a) a especificidade — este teste só verifica que o sistema responde quando tem, não que recusa quando não tem, então o risco de alucinação/over-answering em consultas fora da base permanece não avaliado; (b) a fidelidade literal dos identificadores citados, já que o avaliador não recebeu o mapeamento correto e alguns itens citam pares alternativos (ex.: R-0078/R-0082 no item 9) sem que se possa conferir; (c) a verbosidade — várias respostas anexam blocos extensos de regras correlatas que podem diluir a resposta direta; e (d) pequenos artefatos de higiene textual ('a ferramenta', 'rematerial de origems', 'Material de origemr'), que sugerem substituição automática de termos no corpus e merecem inspeção antes de uso em produção.\"\n}",
+   "payload_sha256": "9d96b9e8ae3be50717dc34f23afbcef7e67c1da10045e80dc897fdec3aabd151",
+   "motivo": "neutralizador substituía por substring; `recursos` e `Cursor` eram corrompidos. Preservado, não apagado."
+  },
+  "neutralizador": {
+   "tipo": "regex com fronteira de palavra",
+   "mapa": [
+    {
+     "padrao": "COURSE-GAP-REPORT",
+     "para": "o relatório de lacunas"
+    },
+    {
+     "padrao": "\\bPILOT-002-SKILL\\b",
+     "para": "o sistema"
+    },
+    {
+     "padrao": "\\bPILOT-002\\b",
+     "para": "o sistema"
+    },
+    {
+     "padrao": "\\bClaude Code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bclaude code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bclaw code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bClaw Code\\b",
+     "para": "a ferramenta"
+    },
+    {
+     "padrao": "\\bcursos?\\b",
+     "para": "material de origem"
+    },
+    {
+     "padrao": "\\bCursos?\\b",
+     "para": "Material de origem"
+    },
+    {
+     "padrao": "\\bcourses?\\b",
+     "para": "material de origem"
+    },
+    {
+     "padrao": "\\bCourses?\\b",
+     "para": "Material de origem"
+    },
+    {
+     "padrao": "\\bpilotos?\\b",
+     "para": "ensaio"
+    },
+    {
+     "padrao": "\\bPilotos?\\b",
+     "para": "Ensaio"
+    }
+   ],
+   "isentos_da_varredura": "\\b\\w*(?:recurso|Recurso|cursor|Cursor)\\w*\\b",
+   "palavras_corrompidas_neste_payload": 0
+  }
+ }
+}
