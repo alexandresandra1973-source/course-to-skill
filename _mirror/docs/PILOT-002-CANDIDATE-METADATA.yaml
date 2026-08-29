@@ -1,0 +1,68 @@
+# PILOT-002 candidato — metadados apurados, transcript pendente
+schema_version: 0.1.0
+artifact_id: PILOT-002-CANDIDATE-METADATA
+artifact_status: DRAFT_NOT_FROZEN
+note: Metadados apurados da pagina do YouTube em 2026-08-11. Transcript NAO obtido.
+source:
+  platform: YouTube
+  video_id: 7l6bXLAKyEI
+  url: https://www.youtube.com/watch?v=7l6bXLAKyEI
+  title: Claude Code Full Course – Autonomous Goals, MCP, and VS Code Setup
+  instructor: Eric
+  publisher: freeCodeCamp
+  article: https://www.freecodecamp.org/news/claude-code-full-course/
+  duration_seconds: 4897
+  duration_hms: 01:21:37
+  duration_claimed_by_article: 1.5-hour watch
+  duration_discrepancy_note: A pagina anuncia '1.5-hour watch' (5400s); o video tem 4897s (81.6 min).
+    Diferenca de 503s.
+chapters:
+- start_seconds: 0
+  start: 0:00
+  title: Introdução e Visão Geral do Curso
+- start_seconds: 153
+  start: '2:33'
+  title: Instalando o Claude Code na sua Máquina Local
+- start_seconds: 204
+  start: '3:24'
+  title: Escolhendo uma IDE e Instalando o VS Code
+- start_seconds: 411
+  start: '6:51'
+  title: Personalizando Temas do VS Code
+- start_seconds: 459
+  start: '7:39'
+  title: Iniciando e Gerenciando uma Sessão do Claude Code
+- start_seconds: 711
+  start: '11:51'
+  title: Entendendo os Modos de Permissão (Planejar, Aceitar Edições, Automático, Ignorar)
+- start_seconds: 903
+  start: '15:03'
+  title: Usando o Modo Planejar e Metas Autônomas (/goal)
+- start_seconds: 1464
+  start: '24:24'
+  title: Instalando e Ativando Habilidades do Claude
+- start_seconds: 2088
+  start: '34:48'
+  title: Explorando Estruturas de Arquivos e Diretórios
+- start_seconds: 2676
+  start: '44:36'
+  title: Gerenciando sua Janela de Contexto e Uso de Tokens
+- start_seconds: 3000
+  start: '50:00'
+  title: Comandos Essenciais de Barra Integrados
+- start_seconds: 3198
+  start: '53:18'
+  title: Gerenciando o Controle de Versão com o GitHub
+- start_seconds: 3764
+  start: '62:44'
+  title: Conectando Ferramentas e Implantando Aplicativos via MCP e CLI
+- start_seconds: 4317
+  start: '71:57'
+  title: Perguntas Frequentes (FAQ)
+transcript:
+  obtained: false
+  why: timedtext responde HTTP 200 com corpo vazio (exige PO token); innertube /player responde LOGIN_REQUIRED
+    ou UNPLAYABLE em ANDROID_VR, IOS, WEB e MWEB.
+  expected_paths:
+  - docs/PILOT-002-transcript.txt
+  - docs/PILOT-002/transcript.txt

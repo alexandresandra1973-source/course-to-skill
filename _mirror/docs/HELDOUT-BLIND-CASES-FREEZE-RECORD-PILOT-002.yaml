@@ -1,0 +1,27 @@
+# FREEZE RECORD dos casos cegos do PILOT-002
+schema_version: 0.1.0
+artifact_id: PILOT-002-HELDOUT-BLIND-CASES-FREEZE-RECORD
+artifact_status: FREEZE_RECORD
+frozen_at_utc: '2026-08-11T04:52:40+00:00'
+cases_file: HELDOUT-BLIND-CASES-PILOT-002.yaml
+cases_sha256: 50c6abe99431fecf6cff9085bea4ed31de5f5a8d981595377a5df28f7cc7a390
+case_count: 10
+declaration_no_skill_existed:
+  statement: Nenhuma Skill do PILOT-002 existia no momento em que estes casos foram escritos e congelados.
+  verified_by: varredura das três árvores por artefato de Skill
+  artifacts_searched:
+  - SKILL.md
+  - runtime-bundle
+  - decision-rules.yaml
+  - workflows.yaml
+  - manifest.yaml
+  artifacts_found: []
+  pilot002_tree_contents:
+  - Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt
+  - Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+  - Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt.docx
+source_hashes:
+  l0_intact_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  l0_cut_sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+authorship_separation_declared: true
+not_a_lock: Registro de congelamento destes casos. Não é lock de margem, registry nem opening record.

@@ -1,0 +1,116 @@
+{
+  "principio": "usar os runners ORIGINAIS do P003, parametrizando so o minimo",
+  "origem": "Course-to-Skill-Claude/runners-p003 (publicado pela Lenovo)",
+  "manifesto_lenovo": "RUNNERS-HASHES-EXT4-LENOVO-20260813.txt — 12/12 conferem",
+  "pino_no_compilation_manifest_do_p003": "AUSENTE: o COMPILATION_MANIFEST do PILOT-003 NOMEIA o runner ('runner: p003_pass2_ckpt.py (checkpoint por segmento, ext4)') mas NAO pina hash dele. A conferencia possivel foi contra o RUNNERS-HASHES da Lenovo, que passou 12/12.",
+  "runners": [
+    {
+      "original": "p003_pass1.py",
+      "original_sha256": "60f0bedcf92a153e08476be64592597b85610728cfaab7047e1b05a5a8a44e6a",
+      "copia": "p004_pass1.py",
+      "copia_sha256": "59512739011d0210da03357aeacb92d61268dbc860c82cc6f24f02f28f51fc7e",
+      "substituicoes": [
+        {
+          "de": "DRIVE = Path(\"/mnt/g/Meu Drive/Chat GPT\")",
+          "para": "DRIVE = Path(\"/Users/alexandresandra/p004-work\")",
+          "motivo": "raiz de trabalho: ext4 da Lenovo -> disco local do bot-04",
+          "ocorrencias": 1
+        },
+        {
+          "de": "SRC = DRIVE / \"Course-to-Skill-Claude/pilots/PILOT-003/00_SOURCE\"",
+          "para": "SRC = DRIVE / \"00_SOURCE\"",
+          "motivo": "insumos ja estao em disco local (disciplina do P003)",
+          "ocorrencias": 1
+        },
+        {
+          "de": "OUT = DRIVE / \"Course-to-Skill-Claude/pilots/PILOT-003/01_PASS1\"",
+          "para": "OUT = DRIVE / \"01_PASS1\"",
+          "motivo": "saida em disco local; Drive so na publicacao",
+          "ocorrencias": 1
+        },
+        {
+          "de": "(SRC/\"SOURCE-MANIFEST.yaml\")",
+          "para": "(SRC/\"SOURCE-MANIFEST-PILOT-004.yaml\")",
+          "motivo": "nome do manifesto do P004",
+          "ocorrencias": 1
+        },
+        {
+          "de": "\"pilot_id\":\"PILOT-003\"",
+          "para": "\"pilot_id\":\"PILOT-004\"",
+          "motivo": "id do piloto",
+          "ocorrencias": 1
+        },
+        {
+          "de": "Path(\"/tmp/claude-1000/-home-mtx-course-to-skill-claude/p003-pass1.json\")",
+          "para": "Path(\"/Users/alexandresandra/p004-work/01_PASS1/p004-pass1-calls.json\")",
+          "motivo": "rastro de chamadas: caminho da Lenovo -> local",
+          "ocorrencias": 1
+        },
+        {
+          "de": "\"\"\"PILOT-003 · (c) PASS 1 — temporal-map por janelas de 20 min. 12 chamadas.\"\"\"",
+          "para": "\"\"\"PILOT-004 · PASS 1 — temporal-map por janelas de 20 min.\nCopia do p003_pass1.py (sha256 60f0bedc…). Diff MINIMO: caminhos, nome do\nmanifesto e pilot_id. Nenhuma logica, prompt, schema, WIN ou TARGET alterado.\"\"\"",
+          "motivo": "cabecalho declara a procedencia e o escopo do diff",
+          "ocorrencias": 1
+        }
+      ],
+      "total_substituicoes": 7
+    },
+    {
+      "original": "p003_pass2_ckpt.py",
+      "original_sha256": "7364ff32ba2cb65a1fdb4cf1431a0435fb7daf96f7ff84528e9af341a596b08a",
+      "copia": "p004_pass2_ckpt.py",
+      "copia_sha256": "f593aa0425243c71c141df238ac67dab35c740ab8d357bd7b32750d269370f6e",
+      "substituicoes": [
+        {
+          "de": "DRIVE = Path(\"/mnt/g/Meu Drive/Chat GPT\"); CL = DRIVE / \"Course-to-Skill-Claude\"",
+          "para": "CL = Path(\"/Users/alexandresandra/p004-work\")",
+          "motivo": "raiz: ext4 da Lenovo -> disco local",
+          "ocorrencias": 1
+        },
+        {
+          "de": "sys.path.insert(0, str(CL / \"compiler-v2\"))",
+          "para": "sys.path.insert(0, str(CL / \"compiler-v2-snapshot\"))",
+          "motivo": "usa o snapshot LOCAL do compiler-v2 (conferido 18/18 vs Drive); o Drive nao e lido durante a execucao",
+          "ocorrencias": 1
+        },
+        {
+          "de": "W = Path(\"/tmp/claude-1000/-home-mtx-course-to-skill-claude/p003-work\")",
+          "para": "W = Path(\"/Users/alexandresandra/p004-work\")",
+          "motivo": "diretorio de trabalho local",
+          "ocorrencias": 1
+        },
+        {
+          "de": "EXPECT = {\"L0\": \"04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192\",\n          \"tmap\": \"2c09e3ce74afce8c721e4a26205a31dbb2f4c7e0f5162cf8c190c7981dcf3d06\"}",
+          "para": "EXPECT = {\"L0\": \"607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5\",\n          \"tmap\": \"__TMAP_SHA__\"}",
+          "motivo": "pinos de insumo: L0 e temporal-map do P004",
+          "ocorrencias": 1
+        },
+        {
+          "de": "(W/\"00_SOURCE/SOURCE-MANIFEST.yaml\")",
+          "para": "(W/\"00_SOURCE/SOURCE-MANIFEST-PILOT-004.yaml\")",
+          "motivo": "nome do manifesto do P004",
+          "ocorrencias": 1
+        },
+        {
+          "de": "\"pilot_id\": \"PILOT-003\", \"compiler_version\": \"compiler-v2/0.2.0-frozen\",",
+          "para": "\"pilot_id\": \"PILOT-004\", \"compiler_version\": \"compiler-v2/0.2.1-frozen\",",
+          "motivo": "id do piloto e versao do compilador re-congelado neste bloco",
+          "ocorrencias": 1
+        },
+        {
+          "de": "\"runner\": \"p003_pass2_ckpt.py (checkpoint por segmento, ext4)\",",
+          "para": "\"runner\": \"p004_pass2_ckpt.py — copia de p003_pass2_ckpt.py (sha256 7364ff32…) com diff minimo declarado; checkpoint por segmento, APFS\",",
+          "motivo": "declara a procedencia do runner no manifesto do PASS 2",
+          "ocorrencias": 1
+        },
+        {
+          "de": "\"\"\"PILOT-003 · PASS 2 com CHECKPOINT POR SEGMENTO e retomada. Tudo em ext4.",
+          "para": "\"\"\"PILOT-004 · PASS 2 com CHECKPOINT POR SEGMENTO e retomada. Tudo em disco local.\nCopia do p003_pass2_ckpt.py (sha256 7364ff32…). Diff MINIMO: caminhos, pinos de\ninsumo, pilot_id, compiler_version e nome do runner. Nenhuma logica alterada.",
+          "motivo": "cabecalho declara a procedencia e o escopo do diff",
+          "ocorrencias": 1
+        }
+      ],
+      "total_substituicoes": 8
+    }
+  ]
+}

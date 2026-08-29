@@ -1,0 +1,19 @@
+# Conversa CANDIDATA — o que anexar
+
+Uma conversa NOVA por braço. Nunca dois braços na mesma conversa.
+
+| ordem | braço | anexar | sha256 |
+|---|---|---|---|
+| 1 | `FULL@BEFORE_DEDUP` | `PILOT-001-TEST-0007-FULL-BEFORE_DEDUP-v0.1.4.zip` | `555a70295ca23f89878150ddf2b0c207fba393137f1b8e4383bd9be18e7cedfb` |
+| 2 | `FULL@AFTER_DEDUP` | `PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip` | `b30c1da365af5c06b38efd91715f72c8cc312d0efac8c4dd999ac811b690f028` |
+| 3 | `ABLATED@AFTER_DEDUP` | `PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.4.zip` | `da9b326dbd80af1711c67a5f95999118bdc54ce6b84b6e54dbd756b4d657a205` |
+
+Origem de cada pacote (não copiar, referenciar):
+
+- `FULL@BEFORE_DEDUP` → `Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/ARMS_WORDING_FROZEN/PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip :: PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN/PILOT-001-TEST-0007-FULL-BEFORE_DEDUP-v0.1.4.zip`
+- `FULL@AFTER_DEDUP` → `Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/ARMS_WORDING_FROZEN/PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip :: PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN/PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip`
+- `ABLATED@AFTER_DEDUP` → `Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/ARMS_WORDING_FROZEN/PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip :: PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN/PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.4.zip`
+
+Dentro do zip, anexar apenas `agent-input/runtime-bundle/` como Skill e
+seguir `agent-input/RUNNER_PROMPT.md`. Não fornecer régua, testes,
+respostas esperadas nem qualquer material judge-private.

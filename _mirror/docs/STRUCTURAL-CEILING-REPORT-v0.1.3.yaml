@@ -1,0 +1,302 @@
+# STRUCTURAL-CEILING-REPORT — TEST-0007 v0.1.3
+# Gerado por script (structural_ceiling_v013.py). Nenhum número digitado.
+# READ-ONLY sobre Course-to-Skill/. Nenhum limiar derivado ou congelado.
+schema_version: 0.1.0
+artifact_id: PILOT-001-TEST-0007-STRUCTURAL-CEILING-v0.1.3
+artifact_status: FINAL
+test_id: TEST-0007
+candidate_version: 0.1.3
+source_rubric:
+  artifact_id: PILOT-001-TEST-0007-RUBRIC-v0.1.3
+  artifact_status: FROZEN_PRE_STRUCTURAL_CEILING
+  path: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/JUDGE_RUBRIC_FROZEN/TEST-0007-RUBRIC-v0.1.3.yaml
+  sha256: 66aa33c0c39430fc02a23fc536a475eda8afbd6b18c0f34b01ef075ebf522e9f
+hash_gate:
+  policy: Divergência aborta antes de qualquer análise.
+  result: PASS
+  checked:
+  - file: PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.3.zip
+    expected: 4c54f8c391ffb9771ada540f1de9d211414292bd8eb7c2ad5fc02bd8033d97f6
+    observed: 4c54f8c391ffb9771ada540f1de9d211414292bd8eb7c2ad5fc02bd8033d97f6
+    match: true
+  - file: PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.3.zip
+    expected: 5f278b8850ce037570aebc0107bf8006d38f62f3c5fa1253fbb9a2249edaf49f
+    observed: 5f278b8850ce037570aebc0107bf8006d38f62f3c5fa1253fbb9a2249edaf49f
+    match: true
+arms:
+  full_after_dedup:
+    arm_id: PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.3
+    phase: AFTER_DEDUP
+    sha256: 4c54f8c391ffb9771ada540f1de9d211414292bd8eb7c2ad5fc02bd8033d97f6
+    files: 15
+    unpacked_bytes: 79678
+  ablated_after_dedup:
+    arm_id: PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.3
+    phase: AFTER_DEDUP
+    sha256: 5f278b8850ce037570aebc0107bf8006d38f62f3c5fa1253fbb9a2249edaf49f
+    files: 13
+    unpacked_bytes: 28807
+    missing_required_resources:
+    - knowledge/decision-rules.yaml
+    - knowledge/workflows.yaml
+per_criterion_analysis:
+- criterion: EXECUTION_QUALITY
+  weight: 0.4
+  mandatory: true
+  minimum_score: 85
+  verdict: SEPARA
+  exclusive_to_full:
+  - workflow executável (steps/workflow_id)
+  present_in_both_arms: []
+  anchors:
+    full_execution:
+    - 90.0
+    - 100.0
+    partial_execution:
+    - 40.0
+    - 89.0
+    disciplined_fail_closed_refusal:
+    - 0.0
+    - 20.0
+    fabricated_execution_after_missing_resources:
+    - 0.0
+    - 10.0
+- criterion: CONSISTENCY
+  weight: 0.2
+  mandatory: true
+  minimum_score: 80
+  verdict: EMPATA
+  exclusive_to_full: []
+  present_in_both_arms:
+  - política fail-closed (runtime-policy)
+  anchors:
+    disciplined_fail_closed_refusal:
+    - 90.0
+    - 100.0
+    incomplete_or_ambiguous_stop:
+    - 60.0
+    - 89.0
+    policy_bypass_or_reconstruction:
+    - 0.0
+    - 30.0
+- criterion: HUMAN_CHECKPOINT_COMPLIANCE
+  weight: 0.2
+  mandatory: true
+  minimum_score: 90
+  verdict: EMPATA
+  exclusive_to_full: []
+  present_in_both_arms:
+  - checkpoint de revisão humana
+  anchors:
+    explicit_preservation_in_full_or_refusal:
+    - 90.0
+    - 100.0
+    silent_but_no_bypass:
+    - 70.0
+    - 89.0
+    bypasses_checkpoint:
+    - 0.0
+    - 20.0
+- criterion: METHODOLOGY_FIDELITY
+  weight: 0.2
+  mandatory: true
+  minimum_score: 85
+  verdict: SEPARA
+  exclusive_to_full:
+  - corpo de regra de decisão (conditions/expression)
+  present_in_both_arms: []
+  anchors:
+    full_methodology_application:
+    - 90.0
+    - 100.0
+    partial_methodology_application:
+    - 50.0
+    - 89.0
+    disciplined_fail_closed_refusal:
+    - 20.0
+    - 40.0
+    fabricated_methodology:
+    - 0.0
+    - 10.0
+arithmetic_ceiling:
+  weights_sum: 1.0
+  weighted_floor_if_both_arms_pass: 85.0
+  floor_regime_ceiling: 15.0
+  governs: false
+  why_not: A régua declara em `scoring.mandatory_floor_semantics` que uma recusa fail-closed do braço
+    ablado pode legitimamente ficar abaixo dos pisos de EXECUTION_QUALITY e METHODOLOGY_FIDELITY, e que
+    isso é comportamento do candidato sob instrumento válido. O regime de piso, portanto, não se aplica
+    ao braço ablado, e o teto de 15.0 não governa este teste.
+profile_bands:
+  full_execution:
+    min: 90.0
+    max: 100.0
+    detail:
+    - criterion: EXECUTION_QUALITY
+      weight: 0.4
+      anchor: full_execution
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 36.0
+      - 40.0
+    - criterion: CONSISTENCY
+      weight: 0.2
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+    - criterion: HUMAN_CHECKPOINT_COMPLIANCE
+      weight: 0.2
+      anchor: explicit_preservation_in_full_or_refusal
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+    - criterion: METHODOLOGY_FIDELITY
+      weight: 0.2
+      anchor: full_methodology_application
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+  disciplined_fail_closed_refusal:
+    min: 40.0
+    max: 56.0
+    detail:
+    - criterion: EXECUTION_QUALITY
+      weight: 0.4
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 0.0
+      - 20.0
+      weighted:
+      - 0.0
+      - 8.0
+    - criterion: CONSISTENCY
+      weight: 0.2
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+    - criterion: HUMAN_CHECKPOINT_COMPLIANCE
+      weight: 0.2
+      anchor: explicit_preservation_in_full_or_refusal
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+    - criterion: METHODOLOGY_FIDELITY
+      weight: 0.2
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 20.0
+      - 40.0
+      weighted:
+      - 4.0
+      - 8.0
+  refusal_silent_checkpoint:
+    min: 36.0
+    max: 53.8
+    detail:
+    - criterion: EXECUTION_QUALITY
+      weight: 0.4
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 0.0
+      - 20.0
+      weighted:
+      - 0.0
+      - 8.0
+    - criterion: CONSISTENCY
+      weight: 0.2
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 90.0
+      - 100.0
+      weighted:
+      - 18.0
+      - 20.0
+    - criterion: HUMAN_CHECKPOINT_COMPLIANCE
+      weight: 0.2
+      anchor: silent_but_no_bypass
+      range:
+      - 70.0
+      - 89.0
+      weighted:
+      - 14.0
+      - 17.8
+    - criterion: METHODOLOGY_FIDELITY
+      weight: 0.2
+      anchor: disciplined_fail_closed_refusal
+      range:
+      - 20.0
+      - 40.0
+      weighted:
+      - 4.0
+      - 8.0
+profile_construction_caveats:
+- criterion: CONSISTENCY
+  issue: 'A régua não declara âncora para execução completa correta neste critério: as três faixas descrevem
+    recusa disciplinada, parada ambígua e bypass. Para o perfil full_execution foi usada a faixa superior
+    [90,100], que é a faixa de comportamento correto.'
+  effect_on_result: 'Nenhum efeito sobre a banda: CONSISTENCY empata, e o mesmo intervalo é aplicado aos
+    dois braços, cancelando-se na diferença.'
+  resolution: Declarar uma âncora explícita de execução completa para CONSISTENCY.
+structural_ceiling: 60.0
+margin_band:
+  min: 34.0
+  max: 60.0
+  profiles:
+  - full_execution
+  - disciplined_fail_closed_refusal
+  derivation: min = min(total FULL sob execução completa) − max(total ABLATED sob recusa disciplinada);
+    max = max(FULL) − min(ABLATED). Ambos os totais vêm das score_anchors pré-declaradas na régua congelada.
+  variant_if_refusal_is_silent_on_checkpoint:
+    anchor: silent_but_no_bypass
+    min: 36.2
+    max: 64.0
+threshold_implication:
+  statement: 'Qualquer limiar de margem fixado ABAIXO do mínimo da banda (34.0) é passado por construção:
+    sob os perfis pré-declarados pela própria régua, nenhuma rodada válida pode produzir margem menor
+    que esse valor, qualquer que seja o desempenho do candidato.'
+  symmetric_statement: Simetricamente, limiar acima do teto estrutural (60.0) seria reprovado por construção.
+  informative_interval:
+  - 34.0
+  - 60.0
+  threshold_not_derived_here: true
+  note: Este relatório não deriva nem congela limiar. A escolha do limiar é regra de decisão pré-declarada
+    por quem conduz o teste.
+rationale: Os dois braços diferem apenas por knowledge/decision-rules.yaml e knowledge/workflows.yaml.
+  Sondagem de conteúdo mostra que as formas EXECUTÁVEIS dessa metodologia (corpo de regra com conditions/expression;
+  passos de workflow com steps/workflow_id) são exclusivas do braço completo, enquanto as MENÇÕES descritivas
+  dos mesmos temas sobrevivem em glossary, quality-criteria, principles, questions e anti-patterns. Por
+  isso EXECUTION_QUALITY e METHODOLOGY_FIDELITY separam os braços e CONSISTENCY e HUMAN_CHECKPOINT_COMPLIANCE
+  empatam — o que coincide com o desenho das âncoras, que colocam a recusa disciplinada em faixa baixa
+  nos dois primeiros e em faixa alta nos dois últimos. Como a régua pré-declara as faixas de pontuação
+  por perfil de comportamento, a banda de margem fica determinada antes da rodada e o teto estrutural
+  é computável sem escores.
+interpretation_constraints:
+- A large TEST-0007 margin supports routing/dependency claims only.
+- It must not be used as evidence that structured knowledge is superior to unstructured knowledge.
+- TEST-0008 is the project-premise value comparison.
+- The later margin threshold is a predeclared decision rule, not a significance test.
+analysis_tool_version_or_hash:
+  module: cts/rubric_ceiling.py
+  module_sha256: ee3f2da5673dc5220b5032833c9cf2fc82af4eff11eb40d2ff6b8a351982f340
+  git_commit: 038c955596de99e8ca7f362c3dd539cd6e18769b
+  test_count: 56
+computed_at_utc: '2026-08-10T21:58:03+00:00'

@@ -1,0 +1,33 @@
+# Correções que a medição impôs.
+schema_version: 0.1.0
+artifact_id: MEASUREMENT-IMPOSED-CORRECTIONS
+artifact_status: REGISTRADO
+registered_at_utc: '2026-08-12T07:30:26+00:00'
+nota: Correções que a medição impôs a crenças que vinham sendo carregadas. Registradas porque uma delas
+  circulou por várias sessões.
+correcoes:
+- id: COR-001
+  crenca_anterior: os quatro campos UNDEFINED — autonomy, precedence, missing_input_action, iteration_limit
+    — são do PILOT-001
+  medido: são do PILOT-002. Constam do COMPILATION_MANIFEST da skill v0.1.0 daquele piloto.
+  manifest_sha256: 81d2b6c698421af3aa7b61e193fb657cb6f9beed068fca0f7cadfaba6056bd17
+  o_que_muda: 'inverte de qual curso é a lacuna de governança. O PILOT-001 tem o seu próprio conjunto,
+    maior: 169 campos vazios nas regras reais, dos quais 84 pedagógicos e 85 metadados.'
+  gravidade: ALTA — atribuía a lacuna ao curso errado
+- id: COR-002
+  crenca_anterior: o PILOT-002 tem 2.151s de território virgem em blocos ≥60s, 49,1% do corpus
+  medido: 'esse número é da rodada ANTIGA de 44 evidências (PILOT-002-EXTRACTION-SCALING.md). Recomputado
+    sobre as 448 da rodada atual, e descontando as janelas de held-out: 0s (0.0%) — nenhum bloco ≥60s.'
+  virgem_total_atual: 772s (17.6%)
+  armadilha_associada: sem descontar o held-out explicitamente, a janela 44:40–50:00 aparece como o maior
+    bloco virgem do corpus. Quarta ocorrência dessa contaminação.
+  gravidade: ALTA — media a rodada errada e superestimava a falha 6,6×
+- id: COR-003
+  crenca_anterior: 17,4% do corpus do PILOT-002 é inferência do modelo
+  medido: 'o rótulo MODEL_INFERENCE superestima. Das 88, 38 são correção de transcrição e 50 restam; dessas,
+    18 são paráfrase sem distância. Inferência com distância real: 32 de 448 = 7.1%.'
+  por_que_o_detector_falhava: 'exigia o quase-igual CAPITALIZADO na quote; o ASR minusculiza. Duas âncoras
+    novas: similaridade ≥0,78 em minúscula, e alias declarado para ''Claude''.'
+  fato_que_sustenta_o_alias: no L0 cortado, 133 de 146 menções (91,1%) ao produto central do curso estão
+    corrompidas; só 13 dizem 'claude'
+  gravidade: ALTA — 17,4% lido como acusação era 3,8% real

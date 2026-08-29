@@ -1,0 +1,1010 @@
+schema_version: 0.2.0
+artifact_id: PILOT-002-COMPILATION-MANIFEST
+pilot_id: PILOT-002
+compiler_version: compiler-v2/0.2.0-frozen
+compiler_architecture: PASS 1 → temporal-map.yaml persistido e hasheado → PASS 2[SEG-001] … PASS 2[SEG-N]
+  → portão de cobertura/saturação → revarredura dirigida se necessário
+input:
+  l0_sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+pass1:
+  segment_count: 41
+  temporal_map_path: temporal-map.yaml
+  temporal_map_sha256: 872ab159606a902d87e373a3326c019065cf660e4e474c7c14032387c2f0212a
+  persisted_before_pass2: true
+  historical_reference_segments: 9
+  comparability_band_inclusive:
+  - 7
+  - 11
+  in_comparability_band: false
+  variance_flag: PASS1_SEGMENTATION_VARIANCE_REVIEW_REQUIRED
+pass2:
+  execution_mode: PER_SEGMENT
+  monolithic_sweep_used: false
+  invocations: 41
+  evidence_from_pass2: 448
+  segments_with_zero_yield: []
+  zero_yield_count: 0
+  min_yield: 1
+  max_yield: 24
+  per_segment_yield:
+  - segment_id: SEG-001
+    start_s: 0
+    end_s: 153
+    duration_s: 153
+    evidence_count: 16
+    evidence_ids:
+    - EV-0001
+    - EV-0002
+    - EV-0003
+    - EV-0004
+    - EV-0005
+    - EV-0006
+    - EV-0007
+    - EV-0008
+    - EV-0009
+    - EV-0010
+    - EV-0011
+    - EV-0012
+    - EV-0013
+    - EV-0014
+    - EV-0015
+    - EV-0016
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-002
+    start_s: 153
+    end_s: 209
+    duration_s: 56
+    evidence_count: 8
+    evidence_ids:
+    - EV-0017
+    - EV-0018
+    - EV-0019
+    - EV-0020
+    - EV-0021
+    - EV-0022
+    - EV-0023
+    - EV-0024
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-003
+    start_s: 209
+    end_s: 411
+    duration_s: 202
+    evidence_count: 22
+    evidence_ids:
+    - EV-0025
+    - EV-0026
+    - EV-0027
+    - EV-0028
+    - EV-0029
+    - EV-0030
+    - EV-0031
+    - EV-0032
+    - EV-0033
+    - EV-0034
+    - EV-0035
+    - EV-0036
+    - EV-0037
+    - EV-0038
+    - EV-0039
+    - EV-0040
+    - EV-0041
+    - EV-0042
+    - EV-0043
+    - EV-0044
+    - EV-0045
+    - EV-0046
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-004
+    start_s: 411
+    end_s: 459
+    duration_s: 48
+    evidence_count: 4
+    evidence_ids:
+    - EV-0047
+    - EV-0048
+    - EV-0049
+    - EV-0050
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-005
+    start_s: 459
+    end_s: 564
+    duration_s: 105
+    evidence_count: 9
+    evidence_ids:
+    - EV-0051
+    - EV-0052
+    - EV-0053
+    - EV-0054
+    - EV-0055
+    - EV-0056
+    - EV-0057
+    - EV-0058
+    - EV-0059
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-006
+    start_s: 564
+    end_s: 624
+    duration_s: 60
+    evidence_count: 5
+    evidence_ids:
+    - EV-0060
+    - EV-0061
+    - EV-0062
+    - EV-0063
+    - EV-0064
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-007
+    start_s: 624
+    end_s: 708
+    duration_s: 84
+    evidence_count: 13
+    evidence_ids:
+    - EV-0065
+    - EV-0066
+    - EV-0067
+    - EV-0068
+    - EV-0069
+    - EV-0070
+    - EV-0071
+    - EV-0072
+    - EV-0073
+    - EV-0074
+    - EV-0075
+    - EV-0076
+    - EV-0077
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-008
+    start_s: 708
+    end_s: 944
+    duration_s: 236
+    evidence_count: 7
+    evidence_ids:
+    - EV-0078
+    - EV-0079
+    - EV-0080
+    - EV-0081
+    - EV-0082
+    - EV-0083
+    - EV-0084
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-009
+    start_s: 944
+    end_s: 1013
+    duration_s: 69
+    evidence_count: 10
+    evidence_ids:
+    - EV-0085
+    - EV-0086
+    - EV-0087
+    - EV-0088
+    - EV-0089
+    - EV-0090
+    - EV-0091
+    - EV-0092
+    - EV-0093
+    - EV-0094
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-010
+    start_s: 1013
+    end_s: 1230
+    duration_s: 217
+    evidence_count: 24
+    evidence_ids:
+    - EV-0095
+    - EV-0096
+    - EV-0097
+    - EV-0098
+    - EV-0099
+    - EV-0100
+    - EV-0101
+    - EV-0102
+    - EV-0103
+    - EV-0104
+    - EV-0105
+    - EV-0106
+    - EV-0107
+    - EV-0108
+    - EV-0109
+    - EV-0110
+    - EV-0111
+    - EV-0112
+    - EV-0113
+    - EV-0114
+    - EV-0115
+    - EV-0116
+    - EV-0117
+    - EV-0118
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-011
+    start_s: 1230
+    end_s: 1378
+    duration_s: 148
+    evidence_count: 16
+    evidence_ids:
+    - EV-0119
+    - EV-0120
+    - EV-0121
+    - EV-0122
+    - EV-0123
+    - EV-0124
+    - EV-0125
+    - EV-0126
+    - EV-0127
+    - EV-0128
+    - EV-0129
+    - EV-0130
+    - EV-0131
+    - EV-0132
+    - EV-0133
+    - EV-0134
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-012
+    start_s: 1378
+    end_s: 1464
+    duration_s: 86
+    evidence_count: 8
+    evidence_ids:
+    - EV-0135
+    - EV-0136
+    - EV-0137
+    - EV-0138
+    - EV-0139
+    - EV-0140
+    - EV-0141
+    - EV-0142
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-013
+    start_s: 1464
+    end_s: 1682
+    duration_s: 218
+    evidence_count: 23
+    evidence_ids:
+    - EV-0143
+    - EV-0144
+    - EV-0145
+    - EV-0146
+    - EV-0147
+    - EV-0148
+    - EV-0149
+    - EV-0150
+    - EV-0151
+    - EV-0152
+    - EV-0153
+    - EV-0154
+    - EV-0155
+    - EV-0156
+    - EV-0157
+    - EV-0158
+    - EV-0159
+    - EV-0160
+    - EV-0161
+    - EV-0162
+    - EV-0163
+    - EV-0164
+    - EV-0165
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-014
+    start_s: 1682
+    end_s: 1871
+    duration_s: 189
+    evidence_count: 15
+    evidence_ids:
+    - EV-0166
+    - EV-0167
+    - EV-0168
+    - EV-0169
+    - EV-0170
+    - EV-0171
+    - EV-0172
+    - EV-0173
+    - EV-0174
+    - EV-0175
+    - EV-0176
+    - EV-0177
+    - EV-0178
+    - EV-0179
+    - EV-0180
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-015
+    start_s: 1871
+    end_s: 1984
+    duration_s: 113
+    evidence_count: 8
+    evidence_ids:
+    - EV-0181
+    - EV-0182
+    - EV-0183
+    - EV-0184
+    - EV-0185
+    - EV-0186
+    - EV-0187
+    - EV-0188
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-016
+    start_s: 1984
+    end_s: 2088
+    duration_s: 104
+    evidence_count: 15
+    evidence_ids:
+    - EV-0189
+    - EV-0190
+    - EV-0191
+    - EV-0192
+    - EV-0193
+    - EV-0194
+    - EV-0195
+    - EV-0196
+    - EV-0197
+    - EV-0198
+    - EV-0199
+    - EV-0200
+    - EV-0201
+    - EV-0202
+    - EV-0203
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-017
+    start_s: 2088
+    end_s: 2278
+    duration_s: 190
+    evidence_count: 19
+    evidence_ids:
+    - EV-0204
+    - EV-0205
+    - EV-0206
+    - EV-0207
+    - EV-0208
+    - EV-0209
+    - EV-0210
+    - EV-0211
+    - EV-0212
+    - EV-0213
+    - EV-0214
+    - EV-0215
+    - EV-0216
+    - EV-0217
+    - EV-0218
+    - EV-0219
+    - EV-0220
+    - EV-0221
+    - EV-0222
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-018
+    start_s: 2278
+    end_s: 2388
+    duration_s: 110
+    evidence_count: 16
+    evidence_ids:
+    - EV-0223
+    - EV-0224
+    - EV-0225
+    - EV-0226
+    - EV-0227
+    - EV-0228
+    - EV-0229
+    - EV-0230
+    - EV-0231
+    - EV-0232
+    - EV-0233
+    - EV-0234
+    - EV-0235
+    - EV-0236
+    - EV-0237
+    - EV-0238
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-019
+    start_s: 2388
+    end_s: 2556
+    duration_s: 168
+    evidence_count: 14
+    evidence_ids:
+    - EV-0239
+    - EV-0240
+    - EV-0241
+    - EV-0242
+    - EV-0243
+    - EV-0244
+    - EV-0245
+    - EV-0246
+    - EV-0247
+    - EV-0248
+    - EV-0249
+    - EV-0250
+    - EV-0251
+    - EV-0252
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-020
+    start_s: 2556
+    end_s: 2674
+    duration_s: 118
+    evidence_count: 11
+    evidence_ids:
+    - EV-0253
+    - EV-0254
+    - EV-0255
+    - EV-0256
+    - EV-0257
+    - EV-0258
+    - EV-0259
+    - EV-0260
+    - EV-0261
+    - EV-0262
+    - EV-0263
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-021
+    start_s: 2674
+    end_s: 3000
+    duration_s: 326
+    evidence_count: 1
+    evidence_ids:
+    - EV-0264
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-022
+    start_s: 3000
+    end_s: 3107
+    duration_s: 107
+    evidence_count: 14
+    evidence_ids:
+    - EV-0265
+    - EV-0266
+    - EV-0267
+    - EV-0268
+    - EV-0269
+    - EV-0270
+    - EV-0271
+    - EV-0272
+    - EV-0273
+    - EV-0274
+    - EV-0275
+    - EV-0276
+    - EV-0277
+    - EV-0278
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-023
+    start_s: 3107
+    end_s: 3202
+    duration_s: 95
+    evidence_count: 11
+    evidence_ids:
+    - EV-0279
+    - EV-0280
+    - EV-0281
+    - EV-0282
+    - EV-0283
+    - EV-0284
+    - EV-0285
+    - EV-0286
+    - EV-0287
+    - EV-0288
+    - EV-0289
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-024
+    start_s: 3202
+    end_s: 3382
+    duration_s: 180
+    evidence_count: 15
+    evidence_ids:
+    - EV-0290
+    - EV-0291
+    - EV-0292
+    - EV-0293
+    - EV-0294
+    - EV-0295
+    - EV-0296
+    - EV-0297
+    - EV-0298
+    - EV-0299
+    - EV-0300
+    - EV-0301
+    - EV-0302
+    - EV-0303
+    - EV-0304
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-025
+    start_s: 3382
+    end_s: 3628
+    duration_s: 246
+    evidence_count: 19
+    evidence_ids:
+    - EV-0305
+    - EV-0306
+    - EV-0307
+    - EV-0308
+    - EV-0309
+    - EV-0310
+    - EV-0311
+    - EV-0312
+    - EV-0313
+    - EV-0314
+    - EV-0315
+    - EV-0316
+    - EV-0317
+    - EV-0318
+    - EV-0319
+    - EV-0320
+    - EV-0321
+    - EV-0322
+    - EV-0323
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-026
+    start_s: 3628
+    end_s: 3767
+    duration_s: 139
+    evidence_count: 10
+    evidence_ids:
+    - EV-0324
+    - EV-0325
+    - EV-0326
+    - EV-0327
+    - EV-0328
+    - EV-0329
+    - EV-0330
+    - EV-0331
+    - EV-0332
+    - EV-0333
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-027
+    start_s: 3767
+    end_s: 3912
+    duration_s: 145
+    evidence_count: 12
+    evidence_ids:
+    - EV-0334
+    - EV-0335
+    - EV-0336
+    - EV-0337
+    - EV-0338
+    - EV-0339
+    - EV-0340
+    - EV-0341
+    - EV-0342
+    - EV-0343
+    - EV-0344
+    - EV-0345
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-028
+    start_s: 3912
+    end_s: 4015
+    duration_s: 103
+    evidence_count: 10
+    evidence_ids:
+    - EV-0346
+    - EV-0347
+    - EV-0348
+    - EV-0349
+    - EV-0350
+    - EV-0351
+    - EV-0352
+    - EV-0353
+    - EV-0354
+    - EV-0355
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-029
+    start_s: 4015
+    end_s: 4176
+    duration_s: 161
+    evidence_count: 17
+    evidence_ids:
+    - EV-0356
+    - EV-0357
+    - EV-0358
+    - EV-0359
+    - EV-0360
+    - EV-0361
+    - EV-0362
+    - EV-0363
+    - EV-0364
+    - EV-0365
+    - EV-0366
+    - EV-0367
+    - EV-0368
+    - EV-0369
+    - EV-0370
+    - EV-0371
+    - EV-0372
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-030
+    start_s: 4176
+    end_s: 4318
+    duration_s: 142
+    evidence_count: 17
+    evidence_ids:
+    - EV-0373
+    - EV-0374
+    - EV-0375
+    - EV-0376
+    - EV-0377
+    - EV-0378
+    - EV-0379
+    - EV-0380
+    - EV-0381
+    - EV-0382
+    - EV-0383
+    - EV-0384
+    - EV-0385
+    - EV-0386
+    - EV-0387
+    - EV-0388
+    - EV-0389
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-031
+    start_s: 4318
+    end_s: 4393
+    duration_s: 75
+    evidence_count: 7
+    evidence_ids:
+    - EV-0390
+    - EV-0391
+    - EV-0392
+    - EV-0393
+    - EV-0394
+    - EV-0395
+    - EV-0396
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-032
+    start_s: 4393
+    end_s: 4428
+    duration_s: 35
+    evidence_count: 3
+    evidence_ids:
+    - EV-0397
+    - EV-0398
+    - EV-0399
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-033
+    start_s: 4428
+    end_s: 4520
+    duration_s: 92
+    evidence_count: 6
+    evidence_ids:
+    - EV-0400
+    - EV-0401
+    - EV-0402
+    - EV-0403
+    - EV-0404
+    - EV-0405
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-034
+    start_s: 4520
+    end_s: 4533
+    duration_s: 13
+    evidence_count: 2
+    evidence_ids:
+    - EV-0406
+    - EV-0407
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-035
+    start_s: 4533
+    end_s: 4569
+    duration_s: 36
+    evidence_count: 6
+    evidence_ids:
+    - EV-0408
+    - EV-0409
+    - EV-0410
+    - EV-0411
+    - EV-0412
+    - EV-0413
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-036
+    start_s: 4569
+    end_s: 4672
+    duration_s: 103
+    evidence_count: 13
+    evidence_ids:
+    - EV-0414
+    - EV-0415
+    - EV-0416
+    - EV-0417
+    - EV-0418
+    - EV-0419
+    - EV-0420
+    - EV-0421
+    - EV-0422
+    - EV-0423
+    - EV-0424
+    - EV-0425
+    - EV-0426
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-037
+    start_s: 4672
+    end_s: 4692
+    duration_s: 20
+    evidence_count: 2
+    evidence_ids:
+    - EV-0427
+    - EV-0428
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-038
+    start_s: 4692
+    end_s: 4711
+    duration_s: 19
+    evidence_count: 4
+    evidence_ids:
+    - EV-0429
+    - EV-0430
+    - EV-0431
+    - EV-0432
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-039
+    start_s: 4711
+    end_s: 4754
+    duration_s: 43
+    evidence_count: 5
+    evidence_ids:
+    - EV-0433
+    - EV-0434
+    - EV-0435
+    - EV-0436
+    - EV-0437
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-040
+    start_s: 4754
+    end_s: 4820
+    duration_s: 66
+    evidence_count: 8
+    evidence_ids:
+    - EV-0438
+    - EV-0439
+    - EV-0440
+    - EV-0441
+    - EV-0442
+    - EV-0443
+    - EV-0444
+    - EV-0445
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-041
+    start_s: 4820
+    end_s: 4895
+    duration_s: 75
+    evidence_count: 3
+    evidence_ids:
+    - EV-0446
+    - EV-0447
+    - EV-0448
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+deduplication:
+  rule: IDENTICAL_NORMALIZED_CLAIM
+  similarity_merging_used: false
+  rationale: Similaridade fundiria vizinhas distintas na fronteira entre segmentos; identidade exata resolve
+    duplicata de revarredura sem esse dano.
+  merged_after_pass2: 0
+  merged_inside_gate: 0
+  merged_after_rescan: 0
+  merges: []
+  adjacent_distinct_pairs_preserved: 40
+coverage_gate:
+  metric:
+    name: L0_UNION_SPAN_COVERAGE
+    numerator: união dos intervalos de tempo citados pelas evidências, mesclada por `cts.coverage.merge`
+    denominator: 'extensão do corpus de treino: duração nominal da fonte menos as janelas de held-out
+      declaradas em lock'
+    excluded_from_both: janelas de held-out
+    module: cts/coverage.py
+    functions: &id001
+    - merge
+    - complement
+    - Citation
+    - Block
+  metric_module_sha256:
+    cts/coverage.py: ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b
+    cts/spans.py: 7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74
+  extent_s: 4384
+  covered_s: 3612
+  l0_coverage: 0.823905
+  l0_coverage_pct: 82.39
+  threshold: 0.735
+  comparison: strictly_greater
+  threshold_frozen_before_run: true
+  result: SATISFIED
+  stop_reason: THRESHOLD_SATISFIED_WITHOUT_RESCAN
+  rescan_iterations: 0
+  max_rescan_iterations: 3
+  iterations: []
+evidence:
+  total: 448
+  aggregate_yield_per_segment: 10.9268
+  historical_reference_total: 44
+  historical_reference_yield: 4.89
+  yield_comparison_valid: false
+  yield_comparison_note: Comparação de yield contra 4,89 só vale com PASS 1 dentro de 7–11 segmentos (§12).
+    Fora da banda, yield é diagnóstico.
+no_quota_declaration:
+  count_target: null
+  min_per_segment: null
+  proportional_to_time: false
+  statement: Nenhum alvo de contagem existe nesta implementação. Os ~200 da ADR são diagnóstico, nunca
+    cota (§10).
+frozen_thresholds:
+  adr_id: ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE
+  adr_sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  coverage_floor: 0.735
+  coverage_comparison: strictly_greater
+  pass1_band_inclusive:
+  - 7
+  - 11
+  max_rescan_iterations: 3
+  stop_on_zero_progress: true
+  coverage_metric:
+    name: L0_UNION_SPAN_COVERAGE
+    numerator: união dos intervalos de tempo citados pelas evidências, mesclada por `cts.coverage.merge`
+    denominator: 'extensão do corpus de treino: duração nominal da fonte menos as janelas de held-out
+      declaradas em lock'
+    excluded_from_both: janelas de held-out
+    module: cts/coverage.py
+    functions: *id001
+  historical_reference:
+    pilot: PILOT-001
+    compiler_state: old_global_pass2
+    segments: 9
+    evidence: 44
+    coverage: 0.735
+    yield_per_segment: 4.89
+  forbidden:
+  - alvo de contagem total de evidências
+  - mínimo de evidências por segmento
+  - cota de densidade
+  - geração proporcional ao tempo

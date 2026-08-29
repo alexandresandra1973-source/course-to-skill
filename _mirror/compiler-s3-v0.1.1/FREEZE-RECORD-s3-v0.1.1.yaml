@@ -1,0 +1,133 @@
+artifact_id: COMPILER-S3-FREEZE-RECORD-v0.1.1
+compiler_version: compiler-s3/0.1.1
+frozen_at_utc: '2026-08-19T05:18:22.393194+00:00'
+frozen_by_machine: bot-04 (MacBook Pro M4 Max)
+python: 3.12.13
+ADITIVO_NAO_MUTACAO:
+  regra: emenda por aditivo, nunca mutacao
+  onde_vive: compiler-s3-v0.1.1/ — diretorio NOVO ao lado de compiler-s3/
+  original_intacto: compiler-s3/ e FREEZE-RECORD-s3-v0.1.0.yaml nao foram alterados
+  sha256_do_freeze_v0_1_0: b2f64851b3ae41deccf4229eeb5a5842172dfa988c30a6d89459c58cfb6fb1e8
+referencia_v0_1_0:
+  inventory_set_sha256: 115a3773dec3f171072b3769e3ca09d6c52cead0c8000f8455efbafeac4d927c
+  arquivos: 14
+  veredito_canario: FREEZE-COM-CANARIO-PARCIAL
+MUDANCAS_DECLARADAS:
+  1_P8_questions_yaml:
+    o_que: o derive/assemble passa a EMITIR knowledge/questions.yaml
+    porque: RG-013-002 e RG-013-003, herdados da politica canonica do P001, mandavam perguntar usando
+      um arquivo que o compilador nunca emitia. Afetava P004 e P003-v2.
+    Q-0001: enunciado LITERAL recuperado do bundle-fonte do P001, nao inventado
+    fonte: 'PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip :: agent-input/runtime-bundle/knowledge/questions.yaml'
+    evidence_ids_do_P001: registrados como ORIGEM do enunciado, nunca como evidencia do piloto
+  2_ADR_0004:
+    existe_no_bundle_fonte: true
+    decisao: NAO importado — anti-contaminacao entre pilotos (confirmada por Alexandre)
+    tratamento: resolve_dangling_refs declara a referencia com origem, em vez de calar
+  3_RT_CITE_001:
+    o_que: regra de resposta que EXIGE citar o id aplicado (S-xxxx/R-xxxx) e o evidence_id de origem
+    porque: 'o canario vermelho de 15/08 mostrou o runtime executando sem citar. Nada exigia isso: era
+      habito de um modelo, nao regra declarada. Nao se relaxou o check — declarou-se o requisito.'
+    origin_class: MODEL_INFERENCE · DECISAO_DE_INSTRUMENTO
+  4_rastro_fora_do_tmp:
+    o_que: compile-trace e distance-lines saem de /tmp para diretorio persistente (CTSS_TRACE_DIR, default
+      CTSS_ROOT/_trace)
+    porque: o compile-trace do PILOT-004 — produto de 13 chamadas — foi PERDIDO na limpeza do /tmp. Terceira
+      perda pelo mesmo motivo.
+    regra: RULE-HASH-DOES-NOT-RECONSTRUCT aplicada ao proprio compilador
+    publicacao_obrigatoria: o compile-trace passa a ser artefato de publicacao em dobro
+  5_suite_failclosed:
+    max_tokens: 2000 -> 8000
+    fixture: D1..D4 corrigidas
+    mutante: guard RG-013-004 removido — poder de deteccao
+    instrumentacao: usage, stop_reason e custo USD por chamada
+    portao_de_validade: execucao real tem de terminar em end_turn
+canary:
+  HERDADO: false
+  executado_em_maquina: bot-04
+  executado_em: '2026-08-15'
+  modelo: claude-sonnet-5
+  suite: run_failclosed_canary_v0.1.1-bot04.py
+  placar:
+    F1_RECURSOS_AUSENTES: true
+    F2_RECURSOS_PRESENTES: true
+    F1_MUTANTE_SEM_GUARD_RG-013-004: true
+  template_byte_identico: true
+  validade_end_turn: true
+  execucao_real_verde: true
+  mutante_vermelho: true
+  aprovado: true
+  custo_total_usd: 0.086088
+  historico: a rodada VERMELHA anterior esta publicada em PILOT-004/00_SOURCE/CANARY-FAILCLOSED-bot04-20260815-VERMELHO.md
+  veredito: FREEZE-COM-CANARIO-COMPLETO
+inventory_set_sha256: 275cd7beb09bccf43d860b631ffa7e3b2e520110f98a59626c71d8cfce825d05
+arquivos_selados: 16
+resumo:
+  IDENTICO_AO_v0.1.0: 9
+  ALTERADO: 5
+  NOVO: 2
+files:
+- path: canary/CANARY-FAILCLOSED-RESULT.json
+  sha256: 21825c41a5feec900bfe6cd52f63fa96eb0a11ea7ef2c4c3be40bfba83f100ca
+  bytes: 3706
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: canary/CANARY-FAILCLOSED-bot04-20260815.json
+  sha256: 1a1b0761a9b886e63edf320c7f6dabbccd6fe489d7f91ea2a494d935312bec8f
+  bytes: 6217
+  status_vs_v0_1_0: NOVO
+- path: canary/CANARY-STATIC-RESULT.json
+  sha256: 1ebeb2f9f4a887bde1eeef4807652861ec343bfb1810a82d4df6fa29104683d6
+  bytes: 3177
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: canary/derived-runtime-policy.yaml
+  sha256: 2f42f8645d14fa1a579dfa926388ff07c559ce70cb2316a4f20ca1f22375a8f0
+  bytes: 3662
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: canary/run_canary.py
+  sha256: 0c49e71125521e4fd287640b0963eb836e41ca7f1a082fd17eea84c8bcc4a095
+  bytes: 9611
+  status_vs_v0_1_0: ALTERADO
+- path: canary/run_failclosed_canary.py
+  sha256: f88ca1113329ebbfeab6fafdf0bc85fb1eb570e44d7e3342ec328d0d73d71e66
+  bytes: 7954
+  status_vs_v0_1_0: ALTERADO
+- path: canary/run_failclosed_canary_v0.1.1-bot04.py
+  sha256: 8332bf1e8a1e57e3b2ed68b54bb1ee378b0b7daf3eb3faf749bd32a1bb7946d3
+  bytes: 14142
+  status_vs_v0_1_0: NOVO
+- path: ctss/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: ctss/assemble.py
+  sha256: 2980f80dd14d0df9128bedecdd149ced3e4d6b18e60ff7df292437dc36ef2b06
+  bytes: 3484
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: ctss/classify.py
+  sha256: 22947f0cbdb1e64836c8e9a5c0a6d08f6e807faf7adc96ffb3d91520fd65d87c
+  bytes: 2355
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: ctss/emit.py
+  sha256: 7f670226ffdaeca3f5899df7d5a86e53fb11b335d74c7dae8c4fe74e342f58b7
+  bytes: 5293
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: ctss/policy.py
+  sha256: 4d178e61d8d8466eced505fd3b464619acf7f9f3d3d18ecfad8f65cdef469321
+  bytes: 9086
+  status_vs_v0_1_0: ALTERADO
+- path: ctss/schema.py
+  sha256: b8fd8c95a65a13969daefa0a8175de71abaabb46599fc0e94dd1a5a3d1788dfc
+  bytes: 3168
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: ctss/validate.py
+  sha256: 3e8b8b0cd5f570ffe0f97570410ea74f741be129d2fffd9ea7eb617443e03dfb
+  bytes: 5297
+  status_vs_v0_1_0: IDENTICO_AO_v0.1.0
+- path: run_assemble.py
+  sha256: 7fc03da5e5f2d250d6a4c4ea48c0aae04270a6b78c504f5ce81b8aa5ac88aa7f
+  bytes: 13375
+  status_vs_v0_1_0: ALTERADO
+- path: run_compile.py
+  sha256: 5239ad8cbcd12cafec5a8c7163c937aa67b16ebb83375af5871768b95fa505b5
+  bytes: 9881
+  status_vs_v0_1_0: ALTERADO

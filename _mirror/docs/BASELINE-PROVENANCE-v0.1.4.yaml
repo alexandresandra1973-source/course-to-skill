@@ -1,0 +1,428 @@
+# BASELINE-PROVENANCE — TEST-0008 v0.1.4
+# Gerado por script. Toda citação verificada contra o transcript L0.
+# READ-ONLY sobre Course-to-Skill/. Nada congelado.
+schema_version: 0.1.0
+artifact_id: PILOT-001-TEST-0008-BASELINE-PROVENANCE-v0.1.4
+artifact_status: DRAFT_NOT_FROZEN
+generated_at_utc: '2026-08-11T03:10:39+00:00'
+generator: test0008_baseline_v014.py
+principle: PARIDADE DE INFORMAÇÃO, DIFERENÇA DE ESTRUTURA
+hard_rule: Todo elemento do resumo tem span de L0 e citação verificada contra o transcript pelo próprio
+  script. Elemento cuja citação não é encontrada no span declarado não entra no resumo.
+what_is_excluded_by_design:
+- workflow executável
+- gates
+- precedência
+- schema
+- routing
+source:
+  video_id: YkdAx2XjWDs
+  transcript_path: Course-to-Skill/pilots/PILOT-001-HubSpot-AI-Agent/sources/transcript/transcript-original-en.txt
+  transcript_sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  transcript_bytes: 20712
+  declared_duration: 00:15:05
+  segments: 180
+baseline_summary:
+  path: BASELINE-SUMMARY-v0.1.4.md
+  sha256: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+  bytes: 6242
+counts:
+  candidates: 23
+  accepted: 23
+  rejected_quote_not_found: 0
+  structural_candidates_tested: 12
+  rejected_sem_ancora: 12
+elements:
+- element_id: E01
+  section: framing
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '1:30'
+    end: '1:55'
+  quote: Stop asking what task can I automate and start asking what system of agents can I build to handle
+    this entire function
+  quote_verified_in_span: true
+  prose: The lesson's central reframe is to stop asking which task can be automated and to start asking
+    what system of agents can handle an entire function. Starting from outcomes rather than from a to-do
+    list is what makes the work compound instead of producing one-off automations.
+- element_id: E02
+  section: framing
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '5:20'
+    end: '5:35'
+  quote: Use humans for judgment and agents for execution
+  quote_verified_in_span: true
+  prose: The operating principle is to use humans for judgment and agents for execution.
+- element_id: E03
+  section: concepts
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '2:20'
+    end: '3:02'
+  quote: A chatbot answers a question. An automation runs a playbook. And an agent does a job
+  quote_verified_in_span: true
+  prose: Three things are distinguished. A chatbot answers a question. An automation runs a fixed playbook
+    and breaks when something unexpected happens. An agent has a goal, reasons through multiple steps,
+    uses tools to act, and adapts when conditions change.
+- element_id: E04
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '4:16'
+    end: '4:22'
+  quote: Every working agent, simple or complex, has the same five building blocks
+  quote_verified_in_span: true
+  prose: Every working agent, simple or complex, is said to have the same five building blocks, and the
+    whole thing falls apart if any one of them is missing or weak.
+- element_id: E05
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '4:22'
+    end: '4:32'
+  quote: the underlying language model doing the reasoning
+  quote_verified_in_span: true
+  prose: 'The first block is the brain: the underlying language model doing the reasoning. The lesson
+    holds that the model matters less than people think.'
+- element_id: E06
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '4:32'
+    end: '4:52'
+  quote: The system prompt is 80% of the quality of what comes out
+  quote_verified_in_span: true
+  prose: 'The second block is the instructions, the system prompt, described as the job description for
+    the agent: who it is, what it does, what it is allowed to do and what it must never do. Weak instructions
+    equal a weak agent, and the system prompt is presented as 80% of the quality of what comes out.'
+- element_id: E07
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '4:52'
+    end: '5:02'
+  quote: Without tools, your agent is just a chatbot with a fancy hat
+  quote_verified_in_span: true
+  prose: The third block is the tools, which is what the agent can actually do — web search, CRM read
+    and write, email send, calendar actions. Without tools the agent is just a chatbot with a fancy hat.
+- element_id: E08
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '5:02'
+    end: '5:08'
+  quote: Long-term, your brand guidelines
+  quote_verified_in_span: true
+  prose: 'The fourth block is memory: short-term within the conversation, and long-term for brand guidelines,
+    product information, customer context and past sessions.'
+- element_id: E09
+  section: anatomy
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '5:08'
+    end: '5:30'
+  quote: Any agent that touches money, messaging, or the customer needs a review step in the first 30
+    days. No exceptions
+  quote_verified_in_span: true
+  prose: 'The fifth block is presented as non-negotiable: a human in the loop. Any agent that touches
+    money, messaging or the customer needs a review step in the first 30 days, with no exceptions.'
+- element_id: E10
+  section: portfolio
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '5:49'
+    end: '7:09'
+  quote: Agent one tells you what to say. Agent two turns it into distribution
+  quote_verified_in_span: true
+  prose: 'Three agents are proposed as the first ones worth building: an intelligence agent at the top
+    of the funnel that monitors competitors and delivers a plain English briefing; a content production
+    agent in the middle that turns one approved long-form input into a multi-channel cascade queued for
+    human review; and a revenue operations agent at the bottom that enriches and qualifies leads, scores
+    them against the ICP and flags hot ones to a human rep. They chain: the first tells you what to say,
+    the second turns it into distribution, the third converts the demand.'
+- element_id: E11
+  section: platform
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '7:13'
+    end: '7:23'
+  quote: Honestly, it matters less than you think
+  quote_verified_in_span: true
+  prose: On platform choice, the lesson says it matters less than people think and that what matters is
+    picking one and shipping something.
+- element_id: E12
+  section: platform
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '7:23'
+    end: '8:59'
+  quote: A security audit found that over a third of OpenClaw skills had at least one flaw
+  quote_verified_in_span: true
+  prose: 'The options are framed by where the team already is. HubSpot Breeze for teams already on HubSpot
+    Professional or Enterprise, with near-zero setup overhead. Claude for no-code research and content
+    work, which is what the live build uses. Gumloop for visual thinkers who want drag-and-drop. Zapier
+    Agents for teams already on Zapier doing light operational work. OpenClaw is treated separately: open
+    source, runs locally, controls the computer directly, and unlocks tools with no API — but a security
+    audit found that over a third of its skills had at least one flaw, so it is presented as a last resort.'
+- element_id: E13
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '9:08'
+    end: '9:46'
+  quote: What information you'll give, what output you want back, and clear boundaries
+  quote_verified_in_span: true
+  prose: 'The build starts with the outcome. Before opening any tool, write down three things: what information
+    you will give, what output you want back, and clear boundaries — what the agent is never allowed to
+    do. The most common mistake is opening the platform before defining what you actually want, which
+    ends in automating a task instead of owning an outcome.'
+- element_id: E14
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '9:18'
+    end: '9:37'
+  quote: never sends external emails, never posts outside the designated channel, and never stores contact
+    data
+  quote_verified_in_span: true
+  prose: The worked example uses three competitor URLs as the input, a structured briefing posted to a
+    Slack channel every Monday morning as the output, and boundaries that the agent never sends external
+    emails, never posts outside the designated channel and never stores contact data.
+- element_id: E15
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '9:46'
+    end: '10:02'
+  quote: Structure your system prompt using this robot framework. role, objective, boundaries, output,
+    tone. Every great agent prompt has all five
+  quote_verified_in_span: true
+  prose: 'The instructions are written with the ROBOT framework: role, objective, boundaries, output,
+    tone. Every great agent prompt is said to have all five, every line in the prompt is doing a job,
+    and the more specific it is the better the result — vague instructions equal vague output every time.'
+- element_id: E16
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '10:02'
+    end: '10:47'
+  quote: For this agent, we need two. Web search
+  quote_verified_in_span: true
+  prose: 'Then the platform is chosen and the tools connected. What a platform can connect to is one of
+    the first things to look at, because integrations are what turn a chat window into something that
+    does work. The example connects exactly two: web search, toggled on so it pulls live competitor data,
+    and Slack, so it posts the briefing to the channel. Running it automatically every Monday is described
+    as an optional Zapier schedule added on top.'
+- element_id: E17
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '10:47'
+    end: '11:23'
+  quote: This is what separates a generic bot from one that actually understands your business
+  quote_verified_in_span: true
+  prose: 'Next the agent is fed memory, which is what separates a generic bot from one that understands
+    the business: context about who you are, who you serve and what good looks like. In the example this
+    is channel context — audience description, competitor list, content pillars and goal — and the lesson
+    notes it would be a product catalogue and personas for e-commerce, an ICP and positioning doc for
+    B2B, or a client brief for an agency.'
+- element_id: E18
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:23'
+    end: '11:42'
+  quote: Run it three to five times
+  quote_verified_in_span: true
+  prose: Then it is tested, broken and fixed. Run it three to five times; every time it produces something
+    off-brand or surface level, go back to the system prompt and tighten it, and write down every failure
+    as a fix list.
+- element_id: E19
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:42'
+    end: '11:53'
+  quote: add a human in the loop for the first 30 days
+  quote_verified_in_span: true
+  prose: Then a human is added in the loop for the first 30 days, reviewing every output before it goes
+    anywhere; after 30 days, if it is consistently solid, the review can be loosened.
+- element_id: E20
+  section: build
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:53'
+    end: '12:09'
+  quote: Is it saving you at least 2 hours a week? Is the output better than what you produce manually?
+  quote_verified_in_span: true
+  prose: 'Finally it is measured with two questions: is it saving at least two hours a week, and is the
+    output better than what you would produce manually. If both are yes, expand it; if either is no, go
+    back and rebuild it.'
+- element_id: E21
+  section: market
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '3:17'
+    end: '4:06'
+  quote: over 40% of agent projects will be cancelled by the end of 2027
+  quote_verified_in_span: true
+  prose: The market context given is that the agents market is on track to hit $50 billion by 2030 and
+    that Gartner expects 60% of brands to use agentic AI by 2028, but also that over 40% of agent projects
+    will be cancelled by the end of 2027 because teams rushed in without a plan, a clear outcome or governance.
+    Building the wrong agent is said to be just as expensive as building nothing.
+- element_id: E22
+  section: closing
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '13:53'
+    end: '14:09'
+  quote: Start with one gap. The workflow that costs your team the most time every week
+  quote_verified_in_span: true
+  prose: The closing advice is not to build everything at once but to start with one gap — the workflow
+    that costs the team the most time every week.
+- element_id: E23
+  section: demo
+  span:
+    source: youtube:YkdAx2XjWDs
+    start: '12:18'
+    end: '13:41'
+  quote: 6 minutes and 19 seconds
+  quote_verified_in_span: true
+  prose: The lesson includes a live build of the intelligence agent in Claude — project, instructions,
+    memory, two tools, then a test — completed in 6 minutes and 19 seconds.
+REJEITADO_SEM_ANCORA:
+- element_id: R01
+  candidate_term: METHOD_NOT_DEFINED
+  what_it_is: código de recusa do runtime compilado
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R02
+  candidate_term: MISSING_REQUIRED_INPUT
+  what_it_is: código de parada do runtime compilado
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R03
+  candidate_term: fail-closed
+  what_it_is: política de falha fechada
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R04
+  candidate_term: precedence
+  what_it_is: ordem de precedência entre guardas
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R05
+  candidate_term: schema
+  what_it_is: contrato de schema
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R06
+  candidate_term: resource routing
+  what_it_is: roteamento entre recursos executáveis
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+  lexical_collision_note: A palavra 'routing' ocorre em L0 uma vez, em 8:10, como 'lead routing' — encaminhamento
+    de leads no Zapier, não roteamento entre recursos executáveis. Sentidos distintos.
+- element_id: R07
+  candidate_term: origin_class
+  what_it_is: classificação epistêmica de origem
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R08
+  candidate_term: decision-rules
+  what_it_is: arquivo de regras de decisão executáveis
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R09
+  candidate_term: workflows.yaml
+  what_it_is: arquivo de workflow executável
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R10
+  candidate_term: guard
+  what_it_is: guarda de runtime
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R11
+  candidate_term: ADR-
+  what_it_is: registro atômico de decisão
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+- element_id: R12
+  candidate_term: gate
+  what_it_is: gate de workflow
+  present_in_L0: false
+  status: REJEITADO_SEM_ANCORA
+  reason: Nenhuma ocorrência em L0; forma estrutural do runtime compilado, não conteúdo da aula.
+REJEITADO_CITACAO_NAO_ENCONTRADA: []
+PRESENTE_EM_L0_REVISAR: []
+robot_coverage_check:
+  required_components:
+  - role
+  - objective
+  - boundaries
+  - output
+  - tone
+  element_id: E15
+  span: 9:46-10:02
+  present_in_summary: true
+  why_it_matters: O baseline anterior não mencionava ROBOT, enquanto a régua exigia 'ROBOT prompt'. A
+    condição-resumo era penalizada por não saber algo que a régua herdou do outro braço. Cobrir ROBOT
+    é o que torna a comparação de PARIDADE DE INFORMAÇÃO honesta.
+structural_contamination_check:
+  rule: O baseline é prosa. Nenhuma forma estrutural do runtime compilado pode aparecer, exceto palavra
+    do vocabulário comum que L0 usa.
+  terms:
+  - term: gate
+    occurrences: 0
+  - term: precedence
+    occurrences: 0
+  - term: schema
+    occurrences: 0
+  - term: resource routing
+    occurrences: 0
+  - term: method_not_defined
+    occurrences: 0
+  - term: step_id
+    occurrences: 0
+  - term: rg-013
+    occurrences: 0
+  - term: yaml
+    occurrences: 0
+  - term: workflow
+    occurrences: 1
+    allowed: true
+    justification: Ocorre em citação literal de L0 (14:00-14:04, 'The workflow that costs your team the
+      most time every week'), no sentido corrente de fluxo de trabalho — não como workflow executável.
+    elements:
+    - E22
+  clean: true
+conditions_b3:
+  conditions:
+    1_FULL_SKILL:
+      kind: frozen runtime bundle (referenciado, não copiado)
+      arm_sha256: b30c1da365af5c06b38efd91715f72c8cc312d0efac8c4dd999ac811b690f028
+      arm_source: 'Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/ARMS_WORDING_FROZEN/PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip
+        :: PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN/PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip'
+    2_SUMMARY_AS_SUMMARY:
+      summary_sha256: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+      framing_sha256: 69d739ffe535c46e755122ededc9fcb09e54640b7766e6cb1e536a66ec64d2d8
+    3_SUMMARY_AS_SKILL:
+      summary_sha256: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+      framing_sha256: 5dc7bb26aeb87613e0eb47e9f03fe7e871336c7f4eea98eaecd90adf639f39f1
+  summary_byte_identical_between_2_and_3: true
+  only_framing_differs: true
+  executed: false
+  note: Condições montadas, nenhuma executada.

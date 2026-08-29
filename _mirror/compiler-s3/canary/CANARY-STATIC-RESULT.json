@@ -1,0 +1,139 @@
+{
+ "approved": true,
+ "cases": [
+  {
+   "case": "A_REGRA_SEM_EVIDENCE_ID",
+   "sub": "regra real",
+   "expect": "aceita",
+   "got": "limpa",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "A_REGRA_SEM_EVIDENCE_ID",
+   "sub": "fixture sem evidence_ids",
+   "expect": "REJEITA",
+   "got": [
+    "RULE_WITHOUT_EVIDENCE"
+   ],
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "B_EVIDENCE_ID_INEXISTENTE",
+   "sub": "fixture citando EV-9999",
+   "expect": "REJEITA",
+   "got": [
+    "EVIDENCE_ID_UNKNOWN"
+   ],
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "C_SKILL_MD_ROTEADOR",
+   "sub": "roteador reconstruivel do template",
+   "expect": "aceito",
+   "got": "limpo",
+   "passed": true,
+   "note": "gerado por script, nunca ve modelo: a propriedade e ESTRUTURAL"
+  },
+  {
+   "case": "C_SKILL_MD_ROTEADOR",
+   "sub": "fixture com regra colada no corpo",
+   "expect": "REJEITA",
+   "got": [
+    "SKILL_MD_CONTAINS_RULE"
+   ],
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "C_SKILL_MD_ROTEADOR",
+   "sub": "varredura do bloco DISPATCH (2a ancora)",
+   "expect": "REJEITA",
+   "got": [
+    "SKILL_MD_CONTAINS_RULE"
+   ],
+   "passed": true,
+   "note": "segunda ancora, caso alguem regenere com template adulterado"
+  },
+  {
+   "case": "C_SKILL_MD_ROTEADOR",
+   "sub": "rota legitima nao e acusada",
+   "expect": "aceita",
+   "got": "limpa",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "D_CAMPO_NAO_UNDEFINED",
+   "sub": "fixture com precedence=None",
+   "expect": "REJEITA",
+   "got": [
+    "FIELD_NOT_UNDEFINED"
+   ],
+   "passed": true,
+   "note": "os quatro preservados por decisão: ['autonomy', 'precedence', 'missing_input_action', 'iteration_limit']"
+  },
+  {
+   "case": "D_CONTABILIDADE_EXAUSTIVA",
+   "sub": "todas as 448 com disposição",
+   "expect": "aceita",
+   "got": "limpa",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "D_CONTABILIDADE_EXAUSTIVA",
+   "sub": "fixture com uma evidência sem disposição",
+   "expect": "REJEITA",
+   "got": [
+    "EVIDENCE_WITHOUT_DISPOSITION"
+   ],
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "E_LACUNA_NO_GAP_REPORT",
+   "sub": "3 lacunas medidas, todas no relatório",
+   "expect": "aceito",
+   "got": "limpo",
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "E_LACUNA_NO_GAP_REPORT",
+   "sub": "fixture com uma lacuna suprimida",
+   "expect": "REJEITA",
+   "got": [
+    "GAP_NOT_REPORTED"
+   ],
+   "passed": true,
+   "note": ""
+  },
+  {
+   "case": "E_REGRA_SO_DE_INFERENCIA",
+   "sub": "só inferência genuína → LACUNA",
+   "expect": "True/False",
+   "got": "só-inferência=True · mista=False",
+   "passed": true,
+   "note": "é a diferença entre avaliar o curso e avaliar o modelo"
+  },
+  {
+   "case": "P_TEMPLATE_BYTE_IDENTICO",
+   "sub": "RG-013-004 na policy derivada",
+   "expect": "50848d02ac32c22a…",
+   "got": "50848d02ac32c22a…",
+   "passed": true,
+   "note": "parametrizar o escopo não pode tocar a redação da recusa"
+  },
+  {
+   "case": "P_ESCOPO_EXIGE_JUSTIFICATIVA",
+   "sub": "fixture sem justificativa",
+   "expect": "REJEITA",
+   "got": "ValueError",
+   "passed": true,
+   "note": "silêncio não serve: é o único texto escrito à mão"
+  }
+ ]
+}

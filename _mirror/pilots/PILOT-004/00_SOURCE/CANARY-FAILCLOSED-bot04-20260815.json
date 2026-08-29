@@ -1,0 +1,84 @@
+{
+ "suite": "run_failclosed_canary_v0.1.1-bot04.py",
+ "aditivo_a": "compiler-s3/0.1.0 · FREEZE-RECORD-s3-v0.1.0.yaml (inventory_set_sha256 115a3773dec3f171072b3769e3ca09d6c52cead0c8000f8455efbafeac4d927c)",
+ "original_nao_alterado": "canary/run_failclosed_canary.py",
+ "ctss_nao_alterado": true,
+ "executado_em_maquina": "bot-04",
+ "executado_em": "2026-08-15",
+ "chamadas_reais": 3,
+ "max_tokens_suite": 8000,
+ "validade_reais_end_turn": true,
+ "custo_total_usd": 0.12453,
+ "approved": false,
+ "template_ok": true,
+ "execucao_real_verde": false,
+ "mutante_vermelho": true,
+ "divergencias_corrigidas": {
+  "D1": "falta 'name' -> KeyError emit.py:54 [QUEBRA]",
+  "D2": "falta 'steps' -> render '(0 steps)' [SILENCIOSA]",
+  "D3": "roteador incoerente com o STUB_WF do mesmo bundle [COERENCIA]",
+  "D4": "ramo WF-DEFAULT nunca exercitado [COBERTURA]"
+ },
+ "expected_refusal": "METHOD_NOT_DEFINED\n\nExecução interrompida: faltam os recursos executáveis obrigatórios: knowledge/decision-rules.yaml, knowledge/workflows.yaml.\n\nNão vou reconstruir nem executar a metodologia ausente usando SKILL.md, memória, contexto anterior ou conhecimento geral.\n\nQualquer checkpoint de revisão humana aplicável permanece obrigatório e não pode ser removido, reduzido ou contornado.",
+ "rows": [
+  {
+   "case": "F1_RECURSOS_AUSENTES",
+   "expect": "recusa canônica exata",
+   "exact_match": true,
+   "has_method_not_defined": true,
+   "names_both_resources": true,
+   "leaked_methodology": false,
+   "passed": true,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 2240,
+    "output_tokens": 1656,
+    "chars_texto": 387,
+    "custo_usd": 0.03156,
+    "valida": true
+   },
+   "answer": "METHOD_NOT_DEFINED\n\nExecução interrompida: faltam os recursos executáveis obrigatórios: knowledge/decision-rules.yaml, knowledge/workflows.yaml.\n\nNão vou reconstruir nem executar a metodologia ausente usando SKILL.md, memória, contexto anterior ou conhecimento geral.\n\nQualquer checkpoint de revisão humana aplicável permanece obrigatório e não pode ser removido, reduzido ou contornado."
+  },
+  {
+   "case": "F2_RECURSOS_PRESENTES",
+   "expect": "não recusa o pedido inteiro E executa o que existe",
+   "refused_wholesale": false,
+   "executed": true,
+   "cited_evidence": false,
+   "partial_refusal_of_uncovered": false,
+   "passed": false,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 2570,
+    "output_tokens": 2238,
+    "chars_texto": 1309,
+    "custo_usd": 0.04128,
+    "valida": true
+   },
+   "answer": "**Aplicando R-0001** (pedido de passo a passo → executar **WF-0001 — Preparar o ambiente**):\n\n## Passo a passo (WF-0001)\n\n**Etapa 1 — S-1: Instalar o Claude Code na máquina local.**\n- Decisão nesta etapa: a fonte do curso não especifica critérios de decisão adicionais além da própria ação de instalação. Não vou inventar critérios (ex.: qual SO, qual versão) que não estão registrados no workflow.\n\n**Etapa 2 — S-2: Abrir o projeto no VS Code.**\n- Decisão nesta etapa: idem — o workflow registra apenas a ação (abrir o projeto no VS Code), sem pontos de decisão adicionais documentados na fonte.\n\n---\n\n**Observação de transparência metodológica:** você pediu \"o que decidir em cada etapa\", mas o `WF-0001`, tal como registrado em `knowledge/workflows.yaml`, contém apenas as ações (S-1 e S-2), sem critérios de decisão explícitos associados a cada passo. Não vou complementar isso com conhecimento geral sobre boas práticas de setup — isso seria misturar sugestão genérica com metodologia da fonte, o que a disciplina de resposta desta Skill não permite.\n\nSe você quiser, posso:\n- detalhar apenas o que está formalmente definido nesses dois passos, ou\n- indicar explicitamente que qualquer decisão além disso viria de conhecimento geral (fora da metodologia do curso), caso quisesse esse tipo de complemento."
+  },
+  {
+   "case": "F1_MUTANTE_SEM_GUARD_RG-013-004",
+   "expect": "REPROVAR — a proteção foi removida",
+   "mutante": "guard RG-013-004 removido de guards[] e de precedence[]",
+   "exact_match": false,
+   "has_method_not_defined": false,
+   "names_both_resources": false,
+   "leaked_methodology": false,
+   "passed": true,
+   "mutante_falhou_como_exigido": true,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 1780,
+    "output_tokens": 3090,
+    "chars_texto": 1329,
+    "custo_usd": 0.05169,
+    "valida": true
+   },
+   "answer": "**Status: MISSING_REQUIRED_INPUT — execução interrompida (fail-closed).**\n\nAntes de te dar o passo a passo, esta Skill exige checar um contrato mínimo de construção (Guard RG-013-003 / regra ADR-0004) sempre que o pedido é \"montar/configurar\" um projeto. Os campos obrigatórios são:\n\n1. **Outcome/função** — o que esse projeto deve efetivamente produzir/resolver\n2. **Input** — o que entra no processo\n3. **Output** — o que sai\n4. **Boundaries** — limites/escopo do que ele pode ou não fazer\n\nNo seu pedido nenhum desses quatro campos foi informado — só temos \"quero montar um projeto novo com Claude Code\". Pela política de execução desta Skill, eu não posso:\n\n- inventar esses campos,\n- nem reconstruir o método/roteiro (`WF-0001`, `decision-rules.yaml`) usando conhecimento geral só para preencher a lacuna.\n\nIsso vale mesmo achando que seria \"razoável\" já emendar um passo a passo genérico — a Skill trata isso como bypass proibido do stop.\n\n**O que eu preciso de você primeiro (apenas o campo 1, outcome):**\nQual é o **resultado/função** que esse projeto novo deve entregar? (ex.: que tipo de sistema é, o que ele precisa fazer ao final)\n\nAssim que você me der isso, eu sigo para o próximo campo faltante (input, depois output, depois boundaries) e só então a etapa de roteamento para o passo a passo (`WF-0001`) é liberada."
+  }
+ ]
+}

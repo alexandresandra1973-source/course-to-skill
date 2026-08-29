@@ -1,0 +1,2805 @@
+schema_version: 0.1.0
+skill_id: PILOT-002-SKILL
+skill_version: 0.1.0
+workflows:
+- workflow_id: WF-0001
+  name: Instalação do Claude Code na máquina local
+  anchor_evidence_id: EV-0009
+  steps:
+  - S-0002
+  evidence_ids:
+  - EV-0009
+- workflow_id: WF-0002
+  name: Deploy da aplicação com Claude Code
+  anchor_evidence_id: EV-0013
+  steps:
+  - S-0003
+  - S-0004
+  evidence_ids:
+  - EV-0013
+- workflow_id: WF-0003
+  name: quick start
+  anchor_evidence_id: EV-0019
+  steps:
+  - S-0005
+  evidence_ids:
+  - EV-0019
+- workflow_id: WF-0004
+  name: native install
+  anchor_evidence_id: EV-0020
+  steps:
+  - S-0006
+  - S-0007
+  evidence_ids:
+  - EV-0020
+- workflow_id: WF-0005
+  name: Instalar o VS Code (Google 'VS Code'/'Visual Studio Code' → link de download)
+  anchor_evidence_id: EV-0033
+  steps:
+  - S-0008
+  - S-0009
+  - S-0010
+  evidence_ids:
+  - EV-0033
+- workflow_id: WF-0006
+  name: open folder (criar e abrir pasta de projeto no VS Code)
+  anchor_evidence_id: EV-0039
+  steps:
+  - S-0011
+  - S-0012
+  evidence_ids:
+  - EV-0039
+- workflow_id: WF-0007
+  name: Color Themes
+  anchor_evidence_id: EV-0047
+  steps:
+  - S-0013
+  - S-0014
+  - S-0015
+  evidence_ids:
+  - EV-0047
+- workflow_id: WF-0008
+  name: Iniciar sessão do Claude Code no terminal do VS Code
+  anchor_evidence_id: EV-0055
+  steps:
+  - S-0016
+  - S-0017
+  - S-0018
+  - S-0019
+  - S-0020
+  - S-0021
+  - S-0022
+  evidence_ids:
+  - EV-0055
+- workflow_id: WF-0010
+  name: clear
+  anchor_evidence_id: EV-0070
+  steps:
+  - S-0023
+  - S-0024
+  evidence_ids:
+  - EV-0070
+- workflow_id: WF-0009
+  name: /resume (resume a previous conversation)
+  anchor_evidence_id: EV-0073
+  steps:
+  - S-0025
+  evidence_ids:
+  - EV-0073
+- workflow_id: WF-0011
+  name: 'Modos de permissão do Claude Code: Plan, Accept Edits, Auto, Bypass'
+  anchor_evidence_id: EV-0079
+  steps:
+  - S-0026
+  - S-0027
+  evidence_ids:
+  - EV-0079
+- workflow_id: WF-0012
+  name: Modo plan
+  anchor_evidence_id: EV-0084
+  steps:
+  - S-0028
+  evidence_ids:
+  - EV-0084
+- workflow_id: WF-0013
+  name: /goal (comando de barra do Claude Code para loop autônomo)
+  anchor_evidence_id: EV-0085
+  steps:
+  - S-0029
+  - S-0030
+  - S-0031
+  - S-0032
+  evidence_ids:
+  - EV-0085
+- workflow_id: WF-0014
+  name: plan mode
+  anchor_evidence_id: EV-0096
+  steps:
+  - S-0033
+  - S-0034
+  - S-0035
+  - S-0036
+  - S-0040
+  evidence_ids:
+  - EV-0096
+- workflow_id: WF-0015
+  name: /go
+  anchor_evidence_id: EV-0101
+  steps:
+  - S-0037
+  - S-0038
+  evidence_ids:
+  - EV-0101
+- workflow_id: WF-0016
+  name: fidelity bar
+  anchor_evidence_id: EV-0114
+  steps:
+  - S-0039
+  - S-0041
+  - S-0042
+  - S-0043
+  - S-0044
+  evidence_ids:
+  - EV-0114
+- workflow_id: WF-0017
+  name: plan mode / plano gerado
+  anchor_evidence_id: EV-0125
+  steps:
+  - S-0045
+  evidence_ids:
+  - EV-0125
+- workflow_id: WF-0018
+  name: build plan
+  anchor_evidence_id: EV-0128
+  steps:
+  - S-0046
+  - S-0047
+  evidence_ids:
+  - EV-0128
+- workflow_id: WF-0019
+  name: dispatch / spin up the loop
+  anchor_evidence_id: EV-0130
+  steps:
+  - S-0048
+  evidence_ids:
+  - EV-0130
+- workflow_id: WF-0020
+  name: bypass permission
+  anchor_evidence_id: EV-0135
+  steps:
+  - S-0049
+  evidence_ids:
+  - EV-0135
+- workflow_id: WF-0021
+  name: refine with ultra plan
+  anchor_evidence_id: EV-0136
+  steps:
+  - S-0050
+  - S-0051
+  - S-0052
+  evidence_ids:
+  - EV-0136
+- workflow_id: WF-0022
+  name: fix ticket skill
+  anchor_evidence_id: EV-0145
+  steps:
+  - S-0053
+  - S-0054
+  - S-0063
+  - S-0055
+  - S-0056
+  - S-0057
+  - S-0058
+  - S-0059
+  - S-0060
+  - S-0061
+  - S-0062
+  evidence_ids:
+  - EV-0145
+- workflow_id: WF-0026
+  name: Front-end SOP (skill de front-end design como SOP para o agente)
+  anchor_evidence_id: EV-0167
+  steps:
+  - S-0064
+  evidence_ids:
+  - EV-0167
+- workflow_id: WF-0024
+  name: /plugins (discovery e instalação de plugins/skills no Claude Code)
+  anchor_evidence_id: EV-0170
+  steps:
+  - S-0065
+  - S-0066
+  - S-0067
+  - S-0068
+  evidence_ids:
+  - EV-0170
+- workflow_id: WF-0025
+  name: /reload-plugins (aplicação das mudanças após instalação)
+  anchor_evidence_id: EV-0179
+  steps:
+  - S-0070
+  - S-0069
+  - S-0071
+  - S-0072
+  - S-0073
+  evidence_ids:
+  - EV-0179
+- workflow_id: WF-0027
+  name: front end design skill (SOP/instruções que ensinam ao Claude Code como alcançar o resultado)
+  anchor_evidence_id: EV-0188
+  steps:
+  - S-0074
+  evidence_ids:
+  - EV-0188
+- workflow_id: WF-0028
+  name: Instalação de skill externa (copiar link e pedir ao agente)
+  anchor_evidence_id: EV-0193
+  steps:
+  - S-0075
+  - S-0076
+  - S-0078
+  evidence_ids:
+  - EV-0193
+- workflow_id: WF-0029
+  name: Reload plugins
+  anchor_evidence_id: EV-0198
+  steps:
+  - S-0077
+  - S-0079
+  - S-0080
+  evidence_ids:
+  - EV-0198
+- workflow_id: WF-0030
+  name: slash goal (cria a pasta eval de avaliação)
+  anchor_evidence_id: EV-0220
+  steps:
+  - S-0081
+  - S-0082
+  - S-0083
+  - S-0084
+  - S-0088
+  - S-0085
+  - S-0086
+  - S-0087
+  - S-0089
+  - S-0090
+  - S-0091
+  - S-0092
+  evidence_ids:
+  - EV-0220
+- workflow_id: WF-0032
+  name: /model
+  anchor_evidence_id: EV-0268
+  steps:
+  - S-0095
+  - S-0094
+  evidence_ids:
+  - EV-0268
+- workflow_id: WF-0034
+  name: resume
+  anchor_evidence_id: EV-0275
+  steps:
+  - S-0093
+  evidence_ids:
+  - EV-0275
+- workflow_id: WF-0031
+  name: rewind
+  anchor_evidence_id: EV-0277
+  steps:
+  - S-0096
+  - S-0097
+  - S-0098
+  - S-0099
+  - S-0100
+  - S-0101
+  - S-0102
+  - S-0103
+  evidence_ids:
+  - EV-0277
+- workflow_id: WF-0035
+  name: set up version controls using GitHub
+  anchor_evidence_id: EV-0293
+  steps:
+  - S-0104
+  - S-0105
+  - S-0106
+  - S-0107
+  - S-0108
+  evidence_ids:
+  - EV-0293
+- workflow_id: WF-0036
+  name: display the rich difference
+  anchor_evidence_id: EV-0301
+  steps:
+  - S-0109
+  evidence_ids:
+  - EV-0301
+- workflow_id: WF-0037
+  name: revert back to that specific version of the git commit
+  anchor_evidence_id: EV-0304
+  steps:
+  - S-0110
+  - S-0111
+  - S-0112
+  - S-0113
+  - S-0114
+  - S-0115
+  evidence_ids:
+  - EV-0304
+- workflow_id: WF-0038
+  name: git init (criação local da branch padrão master)
+  anchor_evidence_id: EV-0319
+  steps:
+  - S-0116
+  - S-0117
+  - S-0118
+  - S-0119
+  evidence_ids:
+  - EV-0319
+- workflow_id: WF-0039
+  name: stage all the changes, commit e sync the changes
+  anchor_evidence_id: EV-0326
+  steps:
+  - S-0120
+  - S-0121
+  evidence_ids:
+  - EV-0326
+- workflow_id: WF-0040
+  name: Collaborators (Settings do repositório)
+  anchor_evidence_id: EV-0329
+  steps:
+  - S-0122
+  evidence_ids:
+  - EV-0329
+- workflow_id: WF-0041
+  name: MCP (Model Context Protocol)
+  anchor_evidence_id: EV-0339
+  steps:
+  - S-0124
+  evidence_ids:
+  - EV-0339
+- workflow_id: WF-0042
+  name: How to use the GoHighLevel MCP (seguir documentação para conectar MCP ao modelo)
+  anchor_evidence_id: EV-0352
+  steps:
+  - S-0123
+  - S-0125
+  - S-0126
+  evidence_ids:
+  - EV-0352
+- workflow_id: WF-0044
+  name: Vercel MCP
+  anchor_evidence_id: EV-0358
+  steps:
+  - S-0127
+  evidence_ids:
+  - EV-0358
+- workflow_id: WF-0045
+  name: MCP server
+  anchor_evidence_id: EV-0367
+  steps:
+  - S-0128
+  - S-0129
+  - S-0130
+  - S-0131
+  - S-0132
+  - S-0133
+  - S-0134
+  - S-0135
+  - S-0136
+  - S-0137
+  - S-0138
+  - S-0139
+  - S-0140
+  - S-0141
+  - S-0142
+  - S-0143
+  - S-0144
+  - S-0145
+  evidence_ids:
+  - EV-0367
+- workflow_id: WF-DEFAULT
+  name: Passos sem âncora de procedimento na fonte
+  anchor_evidence_id: null
+  steps:
+  - S-0001
+  evidence_ids: []
+  DECLARADO: 'workflow padrão: a fonte não nomeia procedimento que os agrupe. Não é invenção do compilador
+    — é ausência declarada, e vai ao COURSE-GAP-REPORT.'
+steps:
+- name: Instalar o Claude Code na máquina local
+  action: Executar a instalação do Claude Code no computador local como primeira etapa da sequência do
+    curso
+  required_inputs:
+  - laptop funcionando
+  - assinatura Claude
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0009
+  - EV-0006
+  step_id: S-0001
+  segment_ids:
+  - SEG-001
+  workflow_id: WF-DEFAULT
+  order_key: 50
+  origin_class: SOURCE_EXPLICIT
+- name: Cobrir os fundamentos do Claude Code
+  action: Após a instalação, percorrer os básicos e fundamentos do Claude Code
+  required_inputs:
+  - Claude Code instalado na máquina local
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0009
+  step_id: S-0002
+  segment_ids:
+  - SEG-001
+  workflow_id: WF-0001
+  order_key: 83
+  origin_class: SOURCE_EXPLICIT
+- name: Fazer deploy da aplicação usando Claude Code
+  action: Usar o Claude Code para fazer o deploy da aplicação construída durante o curso
+  required_inputs:
+  - aplicação construída no curso
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0013
+  step_id: S-0003
+  segment_ids:
+  - SEG-001
+  workflow_id: WF-0002
+  order_key: 116
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar a documentação oficial
+  action: Fazer uma busca no Google pela documentação da ferramenta para obter as instruções de instalação
+  required_inputs:
+  - Acesso ao Google
+  - Nome da ferramenta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0018
+  step_id: S-0004
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-0002
+  order_key: 158
+  origin_class: GENUINE_INFERENCE
+- name: Abrir a seção quick start
+  action: Na documentação, acessar a seção 'quick start', que contém o passo a passo de instalação na
+    máquina local
+  required_inputs:
+  - Documentação oficial aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0019
+  step_id: S-0005
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-0003
+  order_key: 164
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o terminal no Mac
+  action: Pressionar Command + barra de espaço e escolher o primeiro resultado, 'terminal'
+  required_inputs:
+  - Máquina com macOS
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0022
+  step_id: S-0006
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-0004
+  order_key: 185
+  origin_class: SOURCE_EXPLICIT
+- name: Executar o comando de instalação
+  action: Colar no terminal o comando copiado da documentação e pressionar Enter para disparar a instalação
+    na máquina local
+  required_inputs:
+  - Terminal aberto
+  - Comando copiado da documentação
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0023
+  step_id: S-0007
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-0004
+  order_key: 197
+  origin_class: SOURCE_EXPLICIT
+- name: Instalar o VS Code
+  action: Pesquisar no Google por 'VS Code' ou 'Visual Studio Code', navegar até o link de download, clicar
+    no link e baixar a versão do sistema operacional detectado
+  required_inputs:
+  - Acesso ao Google/navegador
+  - Sistema operacional (macOS ou Windows)
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0033
+  - EV-0034
+  step_id: S-0008
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0005
+  order_key: 270
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o painel Explorer
+  action: Clicar em Explorer para ver todos os arquivos; se nenhuma pasta estiver aberta, o painel aparece
+    vazio
+  required_inputs:
+  - VS Code aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0036
+  step_id: S-0009
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0005
+  order_key: 310
+  origin_class: SOURCE_EXPLICIT
+- name: Criar e abrir a pasta do projeto
+  action: 'Clicar em ''open folder'', navegar até o desktop, clicar em create folder, dar o nome do projeto
+    (exemplo: ''Eric Tech folder''; pode ser o nome de qualquer projeto), clicar em create e depois em
+    open'
+  required_inputs:
+  - Nome do projeto
+  - Local de destino (desktop)
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0037
+  - EV-0039
+  - EV-0040
+  step_id: S-0010
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0005
+  order_key: 316
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar arquivos da pasta aberta no Explorer
+  action: Após abrir a pasta, usar o Explorer à esquerda para ver todos os arquivos contidos na pasta
+    atual
+  required_inputs:
+  - Pasta de projeto aberta no VS Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0041
+  step_id: S-0011
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0006
+  order_key: 354
+  origin_class: SOURCE_EXPLICIT
+- name: Criar arquivo de teste e salvar
+  action: 'Criar um arquivo dentro da pasta (exemplo: hi.txt), digitar texto e salvar com command S; reabrir
+    para confirmar persistência; deletar com command delete ou botão direito > delete'
+  required_inputs:
+  - Pasta de projeto aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0042
+  - EV-0043
+  - EV-0044
+  step_id: S-0012
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0006
+  order_key: 366
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o seletor de temas de cor do VS Code
+  action: Clicar no ícone de engrenagem, selecionar 'Themes' e depois 'Color Themes'
+  required_inputs:
+  - VS Code aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0047
+  step_id: S-0013
+  segment_ids:
+  - SEG-004
+  workflow_id: WF-0007
+  order_key: 422
+  origin_class: SOURCE_EXPLICIT
+- name: Aplicar o tema escolhido
+  action: Na lista de temas, clicar no tema desejado (no exemplo do instrutor, 'Solarized Light')
+  required_inputs:
+  - Lista de Color Themes aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0049
+  step_id: S-0014
+  segment_ids:
+  - SEG-004
+  workflow_id: WF-0007
+  order_key: 446
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o terminal integrado do VS Code
+  action: Clicar no ícone de toggle panel no topo da interface do VS Code para abrir o terminal, ou usar
+    o atalho Control + backtick (crase) para abrir/alternar o terminal imediatamente
+  required_inputs:
+  - VS Code aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0051
+  - EV-0052
+  step_id: S-0015
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0007
+  order_key: 465
+  origin_class: SOURCE_EXPLICIT
+- name: Iniciar a sessão do Claude Code
+  action: Digitar o comando 'claude' no terminal para iniciar a sessão do Claude Code
+  required_inputs:
+  - terminal aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0055
+  step_id: S-0016
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0008
+  order_key: 513
+  origin_class: SOURCE_EXPLICIT
+- name: Identificar a interface da sessão
+  action: Localizar na interface iniciada a janela de prompt (onde se digitam os inputs) e a indicação
+    do modelo em uso
+  required_inputs:
+  - sessão Claude Code iniciada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0056
+  step_id: S-0017
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0008
+  order_key: 518
+  origin_class: SOURCE_EXPLICIT
+- name: Enviar um prompt de teste e observar o ciclo de resposta
+  action: 'Digitar um prompt (ex.: ''hi'') na janela de prompt e acompanhar a fase de ''thinking'' até
+    a produção da resposta'
+  required_inputs:
+  - janela de prompt disponível
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0057
+  step_id: S-0018
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0008
+  order_key: 535
+  origin_class: SOURCE_EXPLICIT
+- name: Prompt de criação de arquivo na pasta atual
+  action: Pedir ao Claude Code para usar a pasta atual, criar um arquivo simples chamado 'example' e colocar
+    texto aleatório dentro dele
+  required_inputs:
+  - pasta atual do projeto aberta no Claude Code
+  - nome do arquivo ('example')
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0060
+  step_id: S-0019
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 564
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar arquivo criado na pasta
+  action: Abrir a pasta atual do projeto e confirmar que o arquivo 'example' existe e contém o texto aleatório
+    solicitado
+  required_inputs:
+  - arquivo 'example' criado
+  - acesso à pasta atual do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0062
+  step_id: S-0020
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 588
+  origin_class: SOURCE_EXPLICIT
+- name: Apagar arquivos de teste
+  action: Clicar no arquivo ou selecionar todos com command+A e executar command+delete para apagar os
+    arquivos criados na pasta atual
+  required_inputs:
+  - arquivos de teste na pasta atual
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0064
+  step_id: S-0021
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 606
+  origin_class: SOURCE_EXPLICIT
+- name: Encerrar a sessão atual
+  action: Clicar no ícone de lixeira ou pressionar Control C duas vezes até sair do ambiente do Claude
+    e retornar ao terminal
+  required_inputs:
+  - sessão ativa do Claude Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0065
+  - EV-0066
+  - EV-0067
+  - EV-0068
+  - EV-0069
+  step_id: S-0022
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0008
+  order_key: 624
+  origin_class: SOURCE_EXPLICIT
+- name: Limpar o terminal
+  action: Digitar 'clear' para deixar o terminal totalmente limpo
+  required_inputs:
+  - terminal ativo
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0070
+  step_id: S-0023
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0010
+  order_key: 648
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir nova sessão
+  action: Digitar 'claude' no terminal para abrir uma nova sessão
+  required_inputs:
+  - terminal na pasta desejada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0071
+  - EV-0072
+  step_id: S-0024
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0010
+  order_key: 654
+  origin_class: SOURCE_EXPLICIT
+- name: Retomar sessão anterior
+  action: Digitar '/resume', pressionar enter, escolher a sessão desejada na lista (identificada pelo
+    tempo transcorrido e pela instrução dada) e pressionar return/enter
+  required_inputs:
+  - sessão anterior existente
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0073
+  - EV-0074
+  - EV-0075
+  - EV-0076
+  step_id: S-0025
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0009
+  order_key: 665
+  origin_class: SOURCE_EXPLICIT
+- name: Tirar screenshot da referência visual
+  action: Tirar um screenshot da tela/interface que servirá de referência visual
+  required_inputs:
+  - tela/interface desejada visível
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0082
+  step_id: S-0026
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0011
+  order_key: 925
+  origin_class: SOURCE_EXPLICIT
+- name: Arrastar imagem para o prompt
+  action: Arrastar a imagem diretamente para dentro do prompt; verificar que o caminho do arquivo (file
+    path) da imagem aparece na entrada
+  required_inputs:
+  - screenshot capturado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0083
+  step_id: S-0027
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0011
+  order_key: 931
+  origin_class: SOURCE_EXPLICIT
+- name: Alternar para modo plan
+  action: Alternar para o modo plan antes de emitir o pedido de construção
+  required_inputs:
+  - imagem de referência já anexada ao prompt
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0084
+  step_id: S-0028
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0012
+  order_key: 938
+  origin_class: SOURCE_EXPLICIT
+- name: Submeter prompt com /goal e requisitos
+  action: Invocar /goal no Claude Code e submeter o prompt contendo os requisitos iniciais especificados
+  required_inputs:
+  - comando /goal
+  - prompt com requisitos explícitos
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0085
+  - EV-0089
+  - EV-0091
+  step_id: S-0029
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0013
+  order_key: 944
+  origin_class: SOURCE_EXPLICIT
+- name: Avaliar a saída gerada
+  action: Em vez de entregar a saída logo após a geração, inserir um avaliador que avalia a saída com
+    base nos requisitos iniciais especificados
+  required_inputs:
+  - saída gerada
+  - requisitos iniciais
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: executado nos bastidores pelo sistema
+  evidence_ids:
+  - EV-0089
+  - EV-0090
+  step_id: S-0030
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0013
+  order_key: 964
+  origin_class: SOURCE_EXPLICIT
+- name: Corrigir e regenerar
+  action: Se a saída não corresponder aos requisitos, enviar o feedback ao Claude Code para corrigir e
+    gerar a saída novamente
+  required_inputs:
+  - feedback da avaliação
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED — repete até plena conformidade com os requisitos
+  autonomy: executado nos bastidores pelo sistema
+  evidence_ids:
+  - EV-0092
+  step_id: S-0031
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0013
+  order_key: 984
+  origin_class: SOURCE_EXPLICIT
+- name: Entregar resultado final
+  action: Quando a saída atender plenamente aos requisitos avaliados, enviar o resultado ao usuário
+  required_inputs:
+  - resultado da avaliação de plena conformidade
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: executado nos bastidores pelo sistema
+  evidence_ids:
+  - EV-0093
+  step_id: S-0032
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0013
+  order_key: 990
+  origin_class: SOURCE_EXPLICIT
+- name: Ativar plan mode
+  action: Alternar o Claude Code para o modo plan
+  required_inputs:
+  - Claude Code aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0096
+  step_id: S-0033
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0014
+  order_key: 1019
+  origin_class: SOURCE_EXPLICIT
+- name: Anexar imagem da aplicação atual e link da referência
+  action: Anexar no prompt uma imagem de como a aplicação atual se parece e copiar/colar o link da aplicação
+    de referência no Claude
+  required_inputs:
+  - Imagem da aplicação atual
+  - Link da aplicação de referência
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0098
+  - EV-0103
+  step_id: S-0034
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0014
+  order_key: 1037
+  origin_class: SOURCE_EXPLICIT
+- name: Escrever o pedido de clonagem
+  action: Instruir a IA a construir uma versão clone extraindo todas as features, todos os assets de imagem
+    e todas as funcionalidades da aplicação de referência
+  required_inputs:
+  - Link da aplicação de referência
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0099
+  step_id: S-0035
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0014
+  order_key: 1049
+  origin_class: SOURCE_EXPLICIT
+- name: Pedir exploração e plano antes de executar
+  action: Pedir que a IA interaja com a aplicação de referência ('play around with it'), coloque os achados
+    em um plano e volte com um plano claro de exatamente como o trabalho vai funcionar, antes de usar
+    /go
+  required_inputs:
+  - Prompt de clonagem
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0100
+  - EV-0102
+  step_id: S-0036
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0014
+  order_key: 1054
+  origin_class: SOURCE_EXPLICIT
+- name: Executar com /go
+  action: Usar o comando /go para executar o plano em loop e autonomamente até a aplicação estar completamente
+    clonada
+  required_inputs:
+  - Plano aprovado
+  missing_input_action: UNDEFINED
+  iteration_limit: Loop autônomo até a aplicação estar completamente clonada / condição de fidelity satisfeita
+  autonomy: Autônomo em loop
+  evidence_ids:
+  - EV-0101
+  - EV-0100
+  - EV-0115
+  step_id: S-0040
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0014
+  order_key: 1054
+  origin_class: SOURCE_EXPLICIT
+- name: Submeter o prompt
+  action: Submeter o prompt com imagem e link ao Claude
+  required_inputs:
+  - Prompt completo
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0103
+  step_id: S-0037
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0015
+  order_key: 1073
+  origin_class: SOURCE_EXPLICIT
+- name: Responder às perguntas do usuário disparadas pela IA
+  action: 'Minimizar o file explorer e responder às perguntas (user question) que o Claude faz antes de
+    produzir o plano: tech stack, email gate, conteúdo, fidelity bar'
+  required_inputs:
+  - Perguntas geradas pela IA
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0104
+  - EV-0107
+  - EV-0111
+  - EV-0113
+  - EV-0114
+  step_id: S-0038
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0015
+  order_key: 1090
+  origin_class: SOURCE_EXPLICIT
+- name: Submeter respostas e gerar o plano
+  action: Após submeter as respostas, o Claude Code monta o plano
+  required_inputs:
+  - Respostas às perguntas da IA
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0118
+  step_id: S-0039
+  segment_ids:
+  - SEG-010
+  workflow_id: WF-0016
+  order_key: 1217
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o plano gerado
+  action: Visualizar o plano completo do sistema a ser construído
+  required_inputs:
+  - Plano gerado pelo modo de planejamento
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0119
+  step_id: S-0041
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0016
+  order_key: 1230
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar contexto, expectativa e decisões
+  action: Ler a seção de contexto (o que se está tentando construir), a expectativa e as decisões que
+    foram perguntadas ao usuário, conferindo decisões registradas como pular o email gate
+  required_inputs:
+  - Plano aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0120
+  - EV-0122
+  step_id: S-0042
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0016
+  order_key: 1242
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar bibliotecas e referências de arquitetura
+  action: Conferir no plano quais bibliotecas serão usadas (por exemplo, para drag and drop) e as referências
+    de arquitetura
+  required_inputs:
+  - Plano aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0121
+  - EV-0123
+  step_id: S-0043
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0016
+  order_key: 1249
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar design tokens
+  action: Conferir a seção de design tokens do plano — o sistema de design com tipografia e botões definidos,
+    extraído e apresentado em formato visual
+  required_inputs:
+  - Plano aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0124
+  - EV-0125
+  step_id: S-0044
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0016
+  order_key: 1266
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar modelo de dados
+  action: Revisar o modelo de dados do plano, que define quais estruturas de dados serão armazenadas na
+    aplicação
+  required_inputs:
+  - Plano aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0126
+  step_id: S-0045
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0017
+  order_key: 1278
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar build plan e estrutura de arquivos
+  action: Revisar o build plan que descreve exatamente como será a estrutura de arquivos
+  required_inputs:
+  - Plano aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0128
+  step_id: S-0046
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0018
+  order_key: 1298
+  origin_class: SOURCE_EXPLICIT
+- name: Submeter modificações ao plano
+  action: Selecionar a opção número quatro com a seta para baixo, digitar as modificações desejadas e
+    submeter para gerar um novo plano
+  required_inputs:
+  - Texto das modificações desejadas
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0129
+  - EV-0131
+  step_id: S-0047
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0018
+  order_key: 1298
+  origin_class: SOURCE_EXPLICIT
+- name: Validar novo plano e assets locais
+  action: Conferir que o novo plano é idêntico ao anterior exceto o download prévio das imagens, e verificar
+    os SVGs na pasta public
+  required_inputs:
+  - Novo plano
+  - Pasta public do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0132
+  - EV-0133
+  step_id: S-0048
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0019
+  order_key: 1343
+  origin_class: SOURCE_EXPLICIT
+- name: Conceder bypass permission e iniciar build autônomo
+  action: Responder 'yes and bypass permission' ao prompt de permissões para a IA iniciar a construção
+    e iterar em loop até um resultado melhor
+  required_inputs:
+  - Prompt de permissão da IA
+  - Tarefa/plano de construção já definido
+  missing_input_action: UNDEFINED
+  iteration_limit: Loop até 'better result'; limite numérico UNDEFINED
+  autonomy: IA constrói autonomamente após o bypass
+  evidence_ids:
+  - EV-0135
+  - EV-0137
+  step_id: S-0049
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0020
+  order_key: 1378
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar o dev server ao fim do build
+  action: Após o build terminar, identificar o dev server que o agente subiu e o link exibido onde está
+    rodando
+  required_inputs:
+  - Build concluído pelo agente
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0138
+  step_id: S-0050
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0021
+  order_key: 1406
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir a aplicação no navegador
+  action: Copiar o link do dev server, navegar até o navegador e colar o link para visualizar a aplicação
+    real
+  required_inputs:
+  - Link do dev server local
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0140
+  step_id: S-0051
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0021
+  order_key: 1424
+  origin_class: SOURCE_EXPLICIT
+- name: Validar funcionalidades no app
+  action: 'Exercitar as funcionalidades no app: mover itens para tiers (A, S, B) e clicar em reset para
+    resetar tudo; confirmar que todas as features estão presentes'
+  required_inputs:
+  - Aplicação aberta no navegador
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0141
+  - EV-0142
+  step_id: S-0052
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0021
+  order_key: 1436
+  origin_class: SOURCE_EXPLICIT
+- name: 'Pré-requisito: quadro de acompanhamento de tickets'
+  action: 'Manter um quadro de acompanhamento de projeto (ex.: kanban) ou sistema onde todos os bugs e
+    issues são registrados'
+  required_inputs:
+  - Sistema de tracking (Jira, Linear, GitHub ou kanban)
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0147
+  step_id: S-0053
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1506
+  origin_class: GENUINE_INFERENCE
+- name: 1. Ler o ticket
+  action: O agente de IA lê o ticket no sistema onde ele está armazenado (Jira, Linear, GitHub) para entender
+    exatamente do que se trata
+  required_inputs:
+  - Ticket no sistema de armazenamento
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0149
+  - EV-0148
+  step_id: S-0054
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1519
+  origin_class: SOURCE_EXPLICIT
+- name: Empacotar em skill única de quatro estágios
+  action: Empacotar todo o processo em uma única skill chamada 'fix ticket', organizada nos estágios entender,
+    corrigir, enviar (ship) e repassar à pessoa certa (hand off)
+  required_inputs:
+  - Os nove passos do workflow definidos
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0163
+  - EV-0162
+  - EV-0148
+  step_id: S-0063
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1519
+  origin_class: SOURCE_EXPLICIT
+- name: 2. Replicar o problema (QA)
+  action: O agente de QA usa automação de navegador com Playwright para abrir o navegador, abrir o app
+    e verificar se consegue replicar o problema
+  required_inputs:
+  - Playwright
+  - App em execução
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0150
+  step_id: S-0055
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1546
+  origin_class: SOURCE_EXPLICIT
+- name: 3. Pesquisar a causa
+  action: Acionar múltiplos agentes para pesquisar o ticket inteiro e descobrir exatamente por que o bug
+    existe
+  required_inputs:
+  - Problema replicado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0151
+  - EV-0152
+  step_id: S-0056
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1557
+  origin_class: SOURCE_EXPLICIT
+- name: 4. Implementar a correção
+  action: Executar a implementação da correção do bug
+  required_inputs:
+  - Resultado da pesquisa da causa
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0153
+  step_id: S-0057
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1568
+  origin_class: SOURCE_EXPLICIT
+- name: 5. Revisão por múltiplos agentes
+  action: Acionar múltiplos agentes para fazer a revisão da correção
+  required_inputs:
+  - Correção implementada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0153
+  step_id: S-0058
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1568
+  origin_class: SOURCE_EXPLICIT
+- name: 6. Verificar a correção (QA)
+  action: O QA usa a mesma automação de navegador Playwright para verificar se a correção realmente funcionou
+  required_inputs:
+  - Playwright
+  - Correção revisada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0154
+  step_id: S-0059
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1574
+  origin_class: SOURCE_EXPLICIT
+- name: 7. Commit e push no GitHub
+  action: Fazer commit no GitHub (controle de versão) e push para o repositório remoto
+  required_inputs:
+  - Correção verificada
+  - Repositório GitHub
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0155
+  step_id: S-0060
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1586
+  origin_class: SOURCE_EXPLICIT
+- name: 8. Deploy em produção
+  action: Fazer deploy em uma plataforma de produção (Vercel, Firebase Hosting, Hostinger ou a plataforma
+    de hospedagem escolhida)
+  required_inputs:
+  - Código enviado ao repositório
+  - Plataforma de hospedagem escolhida
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0157
+  step_id: S-0061
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1598
+  origin_class: SOURCE_EXPLICIT
+- name: 9. Mover ticket para coluna de QA e handoff
+  action: Mover o ticket no Jira para a coluna de QA, onde um humano revisa o processo
+  required_inputs:
+  - Deploy concluído
+  - Acesso ao Jira
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: Revisão humana
+  evidence_ids:
+  - EV-0158
+  - EV-0159
+  step_id: S-0062
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0022
+  order_key: 1616
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir nova sessão do Claude Code
+  action: Navegar de volta ao Claude Code, abrir um novo terminal e digitar 'claude' (a flag dangerously-skip-permissions
+    é opcional; apenas 'claude' é suficiente)
+  required_inputs:
+  - Terminal do Claude Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0168
+  step_id: S-0064
+  segment_ids:
+  - SEG-014
+  workflow_id: WF-0026
+  order_key: 1731
+  origin_class: SOURCE_EXPLICIT
+- name: Ativar auto mode
+  action: Após iniciar a sessão, trocar para o modo automático (auto mode) antes de instalar a skill
+  required_inputs:
+  - Sessão do Claude Code iniciada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0169
+  step_id: S-0065
+  segment_ids:
+  - SEG-014
+  workflow_id: WF-0024
+  order_key: 1748
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir tela de discovery de plugins
+  action: Executar o comando /plugins para entrar na tela de discovery, onde os plugins disponíveis (incluindo
+    front end design) podem ser instalados
+  required_inputs:
+  - Sessão do Claude Code ativa
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0170
+  step_id: S-0066
+  segment_ids:
+  - SEG-014
+  workflow_id: WF-0024
+  order_key: 1748
+  origin_class: GENUINE_INFERENCE
+- name: Selecionar e confirmar a skill
+  action: Na tela de discovery, selecionar a skill desejada pressionando a barra de espaço e pressionar
+    enter; ler a descrição exibida sobre o que a skill faz
+  required_inputs:
+  - Tela de discovery de plugins aberta
+  - 'Skill alvo (ex.: front end design)'
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0171
+  - EV-0176
+  step_id: S-0067
+  segment_ids:
+  - SEG-014
+  workflow_id: WF-0024
+  order_key: 1760
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar skills online no skills.sh
+  action: 'Acessar skills.sh para visualizar todas as skills disponíveis para agentes de IA e localizar
+    a skill desejada na listagem (ex.: front end design aparece como segunda mais popular)'
+  required_inputs:
+  - Acesso ao site skills.sh
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0173
+  - EV-0175
+  step_id: S-0068
+  segment_ids:
+  - SEG-014
+  workflow_id: WF-0024
+  order_key: 1771
+  origin_class: SOURCE_EXPLICIT
+- name: Solicitar o redesign usando a skill
+  action: Pedir no Claude Code para renovar a aplicação usando a front end design skill (por linguagem
+    natural ou slash command)
+  required_inputs:
+  - skill de front end design instalada
+  - pedido de redesign
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0185
+  - EV-0181
+  - EV-0182
+  step_id: S-0070
+  segment_ids:
+  - SEG-015
+  workflow_id: WF-0025
+  order_key: 1871
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir a página alvo do redesign
+  action: Abrir a landing page/aplicação atual para observar o estado antes do redesign
+  required_inputs:
+  - 'aplicação existente (ex.: landing page do system design stack)'
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0185
+  step_id: S-0069
+  segment_ids:
+  - SEG-015
+  workflow_id: WF-0025
+  order_key: 1905
+  origin_class: SOURCE_EXPLICIT
+- name: Responder clarificações e executar
+  action: Responder às perguntas de clarificação da skill e continuar a execução do redesign
+  required_inputs:
+  - perguntas de clarificação emitidas pela skill
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0183
+  - EV-0184
+  step_id: S-0071
+  segment_ids:
+  - SEG-015
+  workflow_id: WF-0025
+  order_key: 1920
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar resultado visual
+  action: Verificar as mudanças aplicadas (tipografia, background com grid/canvas) e o novo estilo da
+    aplicação
+  required_inputs:
+  - aplicação redesenhada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0186
+  step_id: S-0072
+  segment_ids:
+  - SEG-015
+  workflow_id: WF-0025
+  order_key: 1937
+  origin_class: SOURCE_EXPLICIT
+- name: Validar funcionalidade
+  action: Executar as interações originais (arrastar para um alvo, mover para outro, reset) e confirmar
+    funcionamento
+  required_inputs:
+  - aplicação redesenhada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0187
+  step_id: S-0073
+  segment_ids:
+  - SEG-015
+  workflow_id: WF-0025
+  order_key: 1943
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar skills adicionais no diretório
+  action: Acessar o diretório de skills (skills.sh) e navegar pela grande quantidade de skills disponíveis
+  required_inputs:
+  - Acesso ao diretório skills.sh
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0189
+  step_id: S-0074
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0027
+  order_key: 1984
+  origin_class: SOURCE_EXPLICIT
+- name: Copiar link da skill e pedir instalação ao agente
+  action: Copiar o link da página web da skill e solicitar ao Claude Code que instale essa skill
+  required_inputs:
+  - Link da página web da skill
+  - Acesso ao Claude Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0193
+  step_id: S-0075
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0028
+  order_key: 2003
+  origin_class: SOURCE_EXPLICIT
+- name: Agente instala a skill localmente
+  action: O agente processa o link e instala a skill na máquina local do usuário
+  required_inputs:
+  - Link da skill fornecido ao agente
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0194
+  step_id: S-0076
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0028
+  order_key: 2016
+  origin_class: GENUINE_INFERENCE
+- name: Verificar instalação da skill
+  action: Confirmar que a skill aparece como já instalada no projeto e, após o reload, digitar o nome
+    da skill (Vercel React best practice) para ver se ela aparece listada como ativa
+  required_inputs:
+  - Nome da skill
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0197
+  - EV-0199
+  step_id: S-0078
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0028
+  order_key: 2028
+  origin_class: SOURCE_EXPLICIT
+- name: Recarregar plugins
+  action: Executar um recarregamento rápido dos plugins (reload plugins) para que a skill recém-instalada
+    apareça disponível
+  required_inputs:
+  - Skill instalada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0198
+  step_id: S-0077
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0029
+  order_key: 2033
+  origin_class: SOURCE_EXPLICIT
+- name: Praticar instalando ao menos uma skill
+  action: Instalar pelo menos uma skill como exercício prático, explorando as muitas skills disponíveis
+    para diferentes finalidades
+  required_inputs:
+  - Acesso ao diretório de skills
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0203
+  step_id: S-0079
+  segment_ids:
+  - SEG-016
+  workflow_id: WF-0029
+  order_key: 2071
+  origin_class: SOURCE_EXPLICIT
+- name: Consultar package.json para dependências e comandos
+  action: Abrir o package.json para ver a lista de dependências e comandos dos quais a aplicação depende
+  required_inputs:
+  - package.json do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0209
+  step_id: S-0080
+  segment_ids:
+  - SEG-017
+  workflow_id: WF-0029
+  order_key: 2141
+  origin_class: SOURCE_EXPLICIT
+- name: Identificar componentes na interface renderizada
+  action: Percorrer a aplicação em execução e identificar os elementos visuais que constituem componentes
+    (card, ícone, sidebar inferior, botão, info panel), inclusive clicando em itens para ver o painel
+    correspondente
+  required_inputs:
+  - Aplicação em execução no navegador
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0224
+  - EV-0226
+  - EV-0230
+  step_id: S-0081
+  segment_ids:
+  - SEG-018
+  workflow_id: WF-0030
+  order_key: 2294
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir page.tsx da pasta application
+  action: Abrir a pasta application e localizar o arquivo page.tsx, que renderiza a homepage inteira,
+    reconhecendo que a página é ela toda um componente React
+  required_inputs:
+  - Pasta application do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0233
+  - EV-0235
+  step_id: S-0082
+  segment_ids:
+  - SEG-018
+  workflow_id: WF-0030
+  order_key: 2347
+  origin_class: SOURCE_EXPLICIT
+- name: Conferir a rota renderizada no navegador
+  action: Verificar que a homepage renderiza a rota /tier-list e conferir a página correspondente exibida
+    no navegador
+  required_inputs:
+  - Rota /tier-list
+  - Navegador com a aplicação aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0234
+  step_id: S-0083
+  segment_ids:
+  - SEG-018
+  workflow_id: WF-0030
+  order_key: 2353
+  origin_class: GENUINE_INFERENCE
+- name: Limpar abas do editor
+  action: Clicar com o botão direito na barra de abas e selecionar 'close all'
+  required_inputs:
+  - Editor com abas abertas
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0238
+  step_id: S-0084
+  segment_ids:
+  - SEG-018
+  workflow_id: WF-0030
+  order_key: 2376
+  origin_class: SOURCE_EXPLICIT
+- name: Identificar as pastas ocultas do Claude Code no projeto
+  action: Ao trabalhar com Claude Code, identificar entre as pastas ocultas do projeto as duas relacionadas
+    ao Claude Code
+  required_inputs:
+  - Listagem das pastas ocultas do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0244
+  step_id: S-0088
+  segment_ids:
+  - SEG-019
+  workflow_id: WF-0030
+  order_key: 2429
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar a skill instalada em .claude/skills
+  action: 'Abrir a pasta .claude, expandir a pasta skills e localizar a skill pelo nome (ex.: ''vercel
+    react best practice'')'
+  required_inputs:
+  - Nome da skill instalada
+  - Acesso ao diretório .claude do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0245
+  step_id: S-0085
+  segment_ids:
+  - SEG-019
+  workflow_id: WF-0030
+  order_key: 2434
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar SKILL.md da skill
+  action: Abrir o arquivo SKILL.md para ler nome, descrição e o conjunto de regras que descrevem a skill
+    inteira
+  required_inputs:
+  - Skill localizada em skills
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0246
+  step_id: S-0086
+  segment_ids:
+  - SEG-019
+  workflow_id: WF-0030
+  order_key: 2451
+  origin_class: SOURCE_EXPLICIT
+- name: Seguir referência do SKILL.md para a pasta rules
+  action: A partir da referência no SKILL.md, abrir a pasta 'rules' externa e revisar as regras de boas
+    práticas contidas (no exemplo, ~70 regras de uso de Vercel com React)
+  required_inputs:
+  - SKILL.md com referência à pasta rules
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0247
+  step_id: S-0087
+  segment_ids:
+  - SEG-019
+  workflow_id: WF-0030
+  order_key: 2465
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar settings.json como arquivo específico do Claude Code
+  action: Abrir settings.json dentro da pasta .claude e confirmar que contém apenas configurações do Claude
+    Code, sem referenciar outra pasta
+  required_inputs:
+  - Acesso à pasta .claude
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0251
+  step_id: S-0089
+  segment_ids:
+  - SEG-019
+  workflow_id: WF-0030
+  order_key: 2531
+  origin_class: SOURCE_EXPLICIT
+- name: Escrever system prompt de teste
+  action: 'Adicionar no arquivo de system prompt uma instrução verificável, ex.: ''responda em emojis
+    a partir de agora'''
+  required_inputs:
+  - arquivo agents.md ou CLAUDE.md aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0257
+  - EV-0255
+  step_id: S-0090
+  segment_ids:
+  - SEG-020
+  workflow_id: WF-0030
+  order_key: 2569
+  origin_class: SOURCE_EXPLICIT
+- name: Validar sincronização do system prompt
+  action: 'Enviar um prompt simples (ex.: ''hi'') ao agente e verificar se a resposta obedece à regra
+    escrita no arquivo, confirmando que as regras foram sincronizadas no agente'
+  required_inputs:
+  - system prompt escrito em agents.md/CLAUDE.md
+  - Claude Code em execução
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0260
+  - EV-0259
+  step_id: S-0091
+  segment_ids:
+  - SEG-020
+  workflow_id: WF-0030
+  order_key: 2598
+  origin_class: SOURCE_EXPLICIT
+- name: Reverter regra e reconfirmar comportamento
+  action: Remover o texto da regra do arquivo e enviar novo prompt para confirmar retorno ao comportamento
+    anterior
+  required_inputs:
+  - arquivo com a regra a remover
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0261
+  step_id: S-0092
+  segment_ids:
+  - SEG-020
+  workflow_id: WF-0030
+  order_key: 2617
+  origin_class: SOURCE_EXPLICIT
+- name: Trocar modelo
+  action: Digitar /model no terminal e selecionar a variante desejada no menu
+  required_inputs:
+  - modelo desejado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0268
+  - EV-0269
+  step_id: S-0095
+  segment_ids:
+  - SEG-022
+  workflow_id: WF-0032
+  order_key: 3017
+  origin_class: SOURCE_EXPLICIT
+- name: Executar rewind
+  action: Digitar rewind, selecionar o checkpoint anterior e confirmar a reversão de código e conversa
+  required_inputs:
+  - checkpoint anterior
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0274
+  - EV-0277
+  - EV-0278
+  step_id: S-0094
+  segment_ids:
+  - SEG-022
+  workflow_id: WF-0032
+  order_key: 3058
+  origin_class: SOURCE_EXPLICIT
+- name: Retomar sessão e verificar contexto
+  action: Executar resume, escolher retomar da sessão completa e observar o percentual de uso da janela
+    de contexto (no exemplo, 26%)
+  required_inputs:
+  - sessão anterior existente
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0275
+  - EV-0276
+  step_id: S-0093
+  segment_ids:
+  - SEG-022
+  workflow_id: WF-0034
+  order_key: 3064
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir discovery de plugins
+  action: Digitar o comando de plugins do Claude Code para abrir a interface de discovery e explorar os
+    plugins disponíveis
+  required_inputs:
+  - Claude Code em execução
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0279
+  step_id: S-0096
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3113
+  origin_class: SOURCE_EXPLICIT
+- name: Pesquisar plugins padrão
+  action: Pesquisar entre os plugins listados, que vêm por padrão da própria Anthropic
+  required_inputs:
+  - Interface de discovery aberta
+  - Termo de busca
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0280
+  step_id: S-0097
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3119
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar detalhes do plugin
+  action: Pressionar enter no plugin para ler mais detalhes e decidir se é o adequado
+  required_inputs:
+  - Plugin selecionado na lista
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0281
+  step_id: S-0098
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3126
+  origin_class: SOURCE_EXPLICIT
+- name: Revisar skills instaladas
+  action: Consultar na interface de plugins a listagem de todas as skills instaladas anteriormente em
+    diferentes projetos
+  required_inputs:
+  - Interface de plugins aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0283
+  step_id: S-0099
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3137
+  origin_class: SOURCE_EXPLICIT
+- name: Desinstalar plugin pela interface
+  action: Selecionar o plugin instalado pressionando enter e escolher a opção 'uninstall'
+  required_inputs:
+  - Nome do plugin a remover
+  - Interface de plugins aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0284
+  step_id: S-0100
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3149
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar pasta da skill
+  action: Abrir a pasta de agents, onde cada skill instalada corresponde a uma pasta, e identificar a
+    pasta da skill a remover
+  required_inputs:
+  - Acesso ao sistema de arquivos do projeto
+  - Nome da skill
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0286
+  - EV-0285
+  step_id: S-0101
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3156
+  origin_class: SOURCE_EXPLICIT
+- name: Deletar pasta da skill
+  action: Clicar com o botão direito na pasta da skill e escolher delete, removendo a skill inteira
+  required_inputs:
+  - Pasta da skill localizada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0287
+  step_id: S-0102
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3168
+  origin_class: SOURCE_EXPLICIT
+- name: Reiniciar Claude Code
+  action: Reiniciar o Claude Code após a deleção da pasta
+  required_inputs:
+  - Pasta da skill deletada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0288
+  step_id: S-0103
+  segment_ids:
+  - SEG-023
+  workflow_id: WF-0031
+  order_key: 3174
+  origin_class: SOURCE_EXPLICIT
+- name: Criar conta no GitHub
+  action: Navegar até github.com e fazer sign up para obter uma conta gratuita que permite acompanhar
+    todos os projetos de forma privada ou pública
+  required_inputs:
+  - acesso a github.com
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0294
+  step_id: S-0104
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0035
+  order_key: 3234
+  origin_class: SOURCE_EXPLICIT
+- name: Criar repositório para o projeto
+  action: 'Para cada projeto criado, criar um repositório correspondente dentro do GitHub (ex.: repositório
+    ''loop maker'')'
+  required_inputs:
+  - conta GitHub
+  - nome do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0295
+  step_id: S-0105
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0035
+  order_key: 3247
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir a árvore de commits
+  action: Clicar na seção de commits do repositório para visualizar a árvore de commits inteira, que representa
+    as diferentes versões do projeto
+  required_inputs:
+  - repositório no GitHub
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0296
+  step_id: S-0106
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0035
+  order_key: 3264
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar a mudança de um commit
+  action: Clicar no commit desejado para ver exatamente qual mudança foi feita naquela versão
+  required_inputs:
+  - commit selecionado na árvore de commits
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0299
+  step_id: S-0107
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0035
+  order_key: 3288
+  origin_class: SOURCE_EXPLICIT
+- name: Ler o diff por cores
+  action: 'Interpretar o diff: a seção verde indica o que está sendo adicionado; a seção vermelha, à esquerda,
+    indica o que está sendo deletado'
+  required_inputs:
+  - diff do commit aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0300
+  step_id: S-0108
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0035
+  order_key: 3294
+  origin_class: SOURCE_EXPLICIT
+- name: Ativar 'display the rich difference'
+  action: Usar a opção 'display the rich difference' do GitHub para renderizar o markdown real e ver a
+    mudança renderizada dentro do diff
+  required_inputs:
+  - diff do commit aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0301
+  step_id: S-0109
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0036
+  order_key: 3322
+  origin_class: SOURCE_EXPLICIT
+- name: Reverter para versão específica via commit ID
+  action: Rolar até o commit da data desejada, copiar o commit ID e passá-lo ao Claude Code pedindo para
+    reverter para aquela versão específica do git commit
+  required_inputs:
+  - data ou versão alvo
+  - commit ID copiado do GitHub
+  - sessão do Claude Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0304
+  step_id: S-0110
+  segment_ids:
+  - SEG-024
+  workflow_id: WF-0037
+  order_key: 3358
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir terminal e invocar o Claude
+  action: Abrir um novo terminal e digitar 'claude'
+  required_inputs:
+  - terminal
+  - CLI claude
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0305
+  step_id: S-0111
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0037
+  order_key: 3393
+  origin_class: SOURCE_EXPLICIT
+- name: Solicitar criação do repositório e commit
+  action: 'Pedir ao Claude: analisar a pasta inteira, criar um repositório privado para o projeto e commitar
+    as mudanças'
+  required_inputs:
+  - pasta do projeto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0306
+  - EV-0305
+  - EV-0308
+  step_id: S-0112
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0037
+  order_key: 3393
+  origin_class: SOURCE_EXPLICIT
+- name: Inspeção da pasta antes do setup
+  action: Deixar o Claude primeiro analisar a pasta atual e só então configurar o projeto
+  required_inputs:
+  - pasta atual
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0309
+  step_id: S-0113
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0037
+  order_key: 3437
+  origin_class: SOURCE_EXPLICIT
+- name: Revisar conteúdo do commit inicial
+  action: Verificar os arquivos incluídos no commit inicial (aplicação, imagens, evals, documentação)
+    e os itens excluídos pelo gitignore
+  required_inputs:
+  - saída do commit inicial
+  - file explorer
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0312
+  - EV-0313
+  - EV-0315
+  step_id: S-0114
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0037
+  order_key: 3482
+  origin_class: GENUINE_INFERENCE
+- name: Verificar ausência de arquivos sensíveis
+  action: Confirmar que nenhum arquivo .env nem queries SQL existem no que foi enviado ao controle de
+    versão
+  required_inputs:
+  - listagem do commit/pasta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0316
+  - EV-0317
+  step_id: S-0115
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0037
+  order_key: 3537
+  origin_class: SOURCE_EXPLICIT
+- name: Confirmar repositório no GitHub
+  action: Ir aos repositórios no GitHub, alternar o filtro para 'private', recarregar a página e confirmar
+    que o repositório aparece
+  required_inputs:
+  - conta GitHub
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0321
+  step_id: S-0116
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0038
+  order_key: 3578
+  origin_class: SOURCE_EXPLICIT
+- name: Validar conteúdo publicado
+  action: Rolar a página do repositório e verificar que o readme com os dados do projeto e todas as skills
+    criadas estão commitados
+  required_inputs:
+  - página do repositório
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0322
+  step_id: S-0117
+  segment_ids:
+  - SEG-025
+  workflow_id: WF-0038
+  order_key: 3602
+  origin_class: SOURCE_EXPLICIT
+- name: Inspecionar mudanças no painel de source control
+  action: Abrir o ícone de source control no VS Code e verificar a contagem de arquivos alterados; expandir
+    a lista para ver os arquivos, inclusive os marcados como deletados quando uma pasta foi removida
+  required_inputs:
+  - Projeto aberto no VS Code com repositório sob controle de versão
+  - Mudanças locais realizadas
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0324
+  step_id: S-0118
+  segment_ids:
+  - SEG-026
+  workflow_id: WF-0038
+  order_key: 3634
+  origin_class: SOURCE_EXPLICIT
+- name: Escrever mensagem de commit
+  action: Digitar manualmente a mensagem de commit descrevendo a mudança que será registrada nessa nova
+    versão do projeto
+  required_inputs:
+  - Descrição da mudança feita
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0325
+  step_id: S-0119
+  segment_ids:
+  - SEG-026
+  workflow_id: WF-0038
+  order_key: 3652
+  origin_class: SOURCE_EXPLICIT
+- name: Stage, commit e sync das mudanças
+  action: 'Executar no VS Code: stage all the changes, commit e sync the changes, empurrando a alteração
+    para o repositório no GitHub (cloud)'
+  required_inputs:
+  - Mudanças locais listadas no source control
+  - Mensagem de commit escrita
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0326
+  step_id: S-0120
+  segment_ids:
+  - SEG-026
+  workflow_id: WF-0039
+  order_key: 3664
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar commit no GitHub
+  action: 'Atualizar (refresh) a página do repositório no GitHub e confirmar que o novo commit aparece
+    com a mensagem escrita; abrir ''Code'' e confirmar que a branch principal (source of truth) já reflete
+    a mudança (ex: pasta deletada não mais presente)'
+  required_inputs:
+  - Sync das mudanças concluído
+  - Acesso à página do repositório no GitHub
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0327
+  step_id: S-0121
+  segment_ids:
+  - SEG-026
+  workflow_id: WF-0039
+  order_key: 3677
+  origin_class: SOURCE_EXPLICIT
+- name: Obter commit ID na árvore de commits
+  action: Abrir o painel de source control do VS Code, localizar a árvore de commits (commit tree) e copiar
+    o commit ID da versão desejada
+  required_inputs:
+  - Painel de source control do VS Code com histórico de commits
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0331
+  - EV-0332
+  step_id: S-0122
+  segment_ids:
+  - SEG-026
+  workflow_id: WF-0040
+  order_key: 3732
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar quais interfaces o app de terceiro oferece
+  action: 'Checar se a aplicação alvo disponibiliza CLI, MCP ou ambos, para decidir por qual interface
+    conectar o modelo de linguagem (ex.: Stripe tem CLI e MCPs; Google lançou seu CLI; Vercel tem MCP
+    e CLI)'
+  required_inputs:
+  - aplicação de terceiro alvo
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0350
+  - EV-0351
+  - EV-0354
+  step_id: S-0124
+  segment_ids:
+  - SEG-028
+  workflow_id: WF-0041
+  order_key: 3955
+  origin_class: SOURCE_EXPLICIT
+- name: Conectar MCP de terceiro seguindo a documentação do provedor
+  action: 'Localizar o MCP disponibilizado pelo provedor (ex.: GoHighLevel) e seguir a documentação oficial
+    de uso para conectar o MCP ao modelo de linguagem'
+  required_inputs:
+  - MCP disponibilizado pelo provedor
+  - documentação de uso do MCP
+  - modelo de linguagem a conectar
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0352
+  step_id: S-0123
+  segment_ids:
+  - SEG-028
+  workflow_id: WF-0042
+  order_key: 3972
+  origin_class: SOURCE_EXPLICIT
+- name: Limpar a sessão atual
+  action: Limpar a sessão atual antes de fazer a pergunta sobre CLI/MCP
+  required_inputs:
+  - sessão ativa do agente
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0357
+  step_id: S-0125
+  segment_ids:
+  - SEG-029
+  workflow_id: WF-0042
+  order_key: 4041
+  origin_class: SOURCE_EXPLICIT
+- name: Descobrir suporte a deploy no ambiente
+  action: Perguntar ao agente se ele tem Vercel CLI ou MCP no sistema atual onde possa fazer deploy da
+    aplicação no Vercel
+  required_inputs:
+  - aplicação atual
+  - sessão limpa
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0356
+  step_id: S-0126
+  segment_ids:
+  - SEG-029
+  workflow_id: WF-0042
+  order_key: 4041
+  origin_class: SOURCE_EXPLICIT
+- name: Fornecer documentação ao Claude Code
+  action: Copiar a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI para
+    o Claude Code
+  required_inputs:
+  - documentação Vercel MCP ou link da documentação Vercel CLI
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0358
+  step_id: S-0127
+  segment_ids:
+  - SEG-029
+  workflow_id: WF-0044
+  order_key: 4054
+  origin_class: SOURCE_EXPLICIT
+- name: Conectar MCP e logar na Vercel
+  action: Garantir a conexão do MCP na máquina local (ou colar o link da documentação no agente de código
+    para que ele conecte) e, depois de conectado, fazer login na conta da Vercel
+  required_inputs:
+  - MCP conectado na máquina local
+  - link da documentação do MCP
+  - conta da Vercel
+  missing_input_action: Copiar o link da documentação, colar no agente de código e deixar que ele faça
+    a conexão
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0373
+  - EV-0374
+  - EV-0375
+  step_id: S-0128
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4176
+  origin_class: SOURCE_EXPLICIT
+- name: Pedir o deploy ao agente
+  action: Enviar ao agente o prompt pedindo para criar um projeto novo na conta da Vercel usando a ferramenta
+    de CLI para fazer o deploy da aplicação; com o MCP conectado o deploy é concluído em poucos segundos
+  required_inputs:
+  - MCP conectado
+  - conta da Vercel logada
+  - aplicação a ser publicada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: Agente executa o deploy via ferramenta de CLI a pedido do usuário
+  evidence_ids:
+  - EV-0376
+  - EV-0377
+  step_id: S-0129
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4189
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar o deploy no navegador
+  action: Copiar o link gerado, abri-lo no navegador para confirmar que a aplicação está publicada e acessível,
+    e interagir com ela (por exemplo, usar e resetar) para confirmar que está utilizável
+  required_inputs:
+  - link gerado pelo deploy
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0378
+  - EV-0379
+  step_id: S-0130
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4207
+  origin_class: SOURCE_EXPLICIT
+- name: Confirmar no painel da plataforma
+  action: Abrir o painel da plataforma de hospedagem como segunda confirmação, verificando que o projeto
+    aparece e o momento do deploy
+  required_inputs:
+  - acesso ao painel da plataforma de hospedagem
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0380
+  step_id: S-0131
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4230
+  origin_class: SOURCE_EXPLICIT
+- name: Remover o projeto
+  action: Remover o projeto pelo painel (configurações do projeto → 'delete project') ou instruir o agente
+    em linguagem natural, por exemplo 'can you delete this project right now', para que ele execute a
+    deleção
+  required_inputs:
+  - projeto alvo identificado
+  - acesso ao painel ou agente de código conectado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: Agente tem a capacidade de executar a deleção quando instruído
+  evidence_ids:
+  - EV-0381
+  - EV-0382
+  - EV-0383
+  step_id: S-0132
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4236
+  origin_class: SOURCE_EXPLICIT
+- name: Confirmar a remoção pelo link antigo
+  action: Navegar até o link antigo do deploy; o retorno esperado é 'deploy not found' / 404
+  required_inputs:
+  - link antigo do deploy
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0388
+  step_id: S-0133
+  segment_ids:
+  - SEG-030
+  workflow_id: WF-0045
+  order_key: 4299
+  origin_class: SOURCE_EXPLICIT
+- name: Instalar o VS Code
+  action: Instalar o VS Code como base do fluxo inicial de uso do Claude Code
+  required_inputs:
+  - ambiente onde instalar o VS Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0397
+  step_id: S-0134
+  segment_ids:
+  - SEG-032
+  workflow_id: WF-0045
+  order_key: 4399
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir o terminal
+  action: Abrir o terminal dentro do ambiente instalado
+  required_inputs:
+  - VS Code instalado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0397
+  step_id: S-0135
+  segment_ids:
+  - SEG-032
+  workflow_id: WF-0045
+  order_key: 4399
+  origin_class: SOURCE_EXPLICIT
+- name: Iniciar o Claude Code
+  action: Digitar 'claude' no terminal e começar a usar as funcionalidades oferecidas
+  required_inputs:
+  - terminal aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0397
+  step_id: S-0136
+  segment_ids:
+  - SEG-032
+  workflow_id: WF-0045
+  order_key: 4399
+  origin_class: SOURCE_EXPLICIT
+- name: Rodar Claude Code de graça trocando o modelo
+  action: Manter Claude Code como framework e trocar o modelo que ele chama por OpenRouter ou modelos
+    locais usados dentro do Claude Code
+  required_inputs:
+  - Claude Code instalado como framework
+  - acesso a OpenRouter ou a modelos locais
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0405
+  step_id: S-0137
+  segment_ids:
+  - SEG-033
+  workflow_id: WF-0045
+  order_key: 4491
+  origin_class: SOURCE_EXPLICIT
+- name: Avaliar perfil de uso e adequação do plano
+  action: Classificar o próprio uso como iniciante/aprendizado ou uso diário para decidir se o plano de
+    $20 basta
+  required_inputs:
+  - frequência de uso pretendida
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0414
+  - EV-0415
+  step_id: S-0138
+  segment_ids:
+  - SEG-036
+  workflow_id: WF-0045
+  order_key: 4569
+  origin_class: SOURCE_EXPLICIT
+- name: Escolher opção de contenção de custo
+  action: 'Escolher entre as duas opções para permanecer no orçamento sem upgrade: (1) rodar modelo local,
+    (2) conectar Claude Code ao OpenRouter'
+  required_inputs:
+  - capacidade do computador
+  - acesso ao OpenRouter
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0418
+  - EV-0419
+  - EV-0420
+  step_id: S-0139
+  segment_ids:
+  - SEG-036
+  workflow_id: WF-0045
+  order_key: 4592
+  origin_class: SOURCE_EXPLICIT
+- name: Conectar Claude Code ao OpenRouter
+  action: Conectar o Claude Code ao OpenRouter para acessar modelos alternativos baratos e potentes
+  required_inputs:
+  - conta/acesso OpenRouter
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0420
+  step_id: S-0140
+  segment_ids:
+  - SEG-036
+  workflow_id: WF-0045
+  order_key: 4604
+  origin_class: SOURCE_EXPLICIT
+- name: Substituir modelos Anthropic por modelos de terceiros
+  action: 'Mapear substituições de modelo: substituir Sonnet por modelo DeepSeek e Opus por outro modelo
+    de terceiros (ex.: GLM ou Grok) encontrado online'
+  required_inputs:
+  - lista de modelos disponíveis no OpenRouter
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0421
+  - EV-0422
+  - EV-0423
+  step_id: S-0141
+  segment_ids:
+  - SEG-036
+  workflow_id: WF-0045
+  order_key: 4611
+  origin_class: SOURCE_EXPLICIT
+- name: Consultar material complementar de economia de uso
+  action: Assistir ao vídeo do autor com dicas de como economizar uso/tokens no Claude Code
+  required_inputs:
+  - link do vídeo indicado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0425
+  step_id: S-0142
+  segment_ids:
+  - SEG-036
+  workflow_id: WF-0045
+  order_key: 4648
+  origin_class: SOURCE_EXPLICIT
+- name: Rever a seção de permissões
+  action: Reassistir a seção de permissões do curso para endereçar a segurança de execução na própria
+    máquina
+  required_inputs:
+  - seção de permissões do curso
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0430
+  step_id: S-0143
+  segment_ids:
+  - SEG-038
+  workflow_id: WF-0045
+  order_key: 4697
+  origin_class: SOURCE_EXPLICIT
+- name: Selecionar entre os modos de permissão disponíveis
+  action: Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução
+  required_inputs:
+  - conjunto de modos de permissão (quatro ou cinco)
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0431
+  - EV-0432
+  step_id: S-0144
+  segment_ids:
+  - SEG-038
+  workflow_id: WF-0045
+  order_key: 4697
+  origin_class: SOURCE_EXPLICIT
+- name: Iniciar Claude Code via terminal do VS Code
+  action: Abrir o VS Code e usar o terminal integrado do VS Code para iniciar o Claude Code
+  required_inputs:
+  - VS Code instalado
+  - Terminal do VS Code
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0435
+  step_id: S-0145
+  segment_ids:
+  - SEG-039
+  workflow_id: WF-0045
+  order_key: 4735
+  origin_class: SOURCE_EXPLICIT

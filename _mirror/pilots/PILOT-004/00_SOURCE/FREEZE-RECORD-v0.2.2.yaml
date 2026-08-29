@@ -1,0 +1,120 @@
+artifact_id: COMPILER-V2-FREEZE-RECORD-v0.2.2
+compiler_version: compiler-v2/0.2.2-frozen
+frozen_at_utc: '2026-08-19T05:18:48.273513+00:00'
+frozen_by_machine: bot-04 (MacBook Pro M4 Max)
+ADITIVO_NAO_MUTACAO:
+  onde_vive: compiler-v2-v0.2.2/ — diretorio NOVO ao lado de compiler-v2/
+  originais_intactos: compiler-v2/, FREEZE-RECORD.yaml (0.2.0) e FREEZE-RECORD-v0.2.1.yaml nao alterados
+  sha256_do_freeze_v0_2_1: 4918fa503867239ea26b5ab1b59f2b3900b089e062c1f0eca26e292c66a3631d
+referencia_v0_2_1:
+  inventory_set_sha256: cc988a6896dff35c644fb3ef1f1eb95339d842a2ac9cacb148647c124acc2835
+  arquivos: 17
+MUDANCA_UNICA:
+  o_que: 'MODEL: claude-opus-5 -> claude-sonnet-5'
+  onde: ctsc2/extractors/claude_extractor.py:33 (constante MODEL, cobre todo o PASS 2)
+  intocados: MAX_TOKENS=16000 e EFFORT='high' — nada alem do model string mudou
+  garantia: 'verificado por assercao no script de troca: revertendo a substituicao, o arquivo volta byte
+    a byte ao original'
+  tambem_trocados_fora_deste_pacote:
+  - runners/p004_pass1.py
+  - run_t8_mtx.py
+  - compiler-s3-snapshot/run_compile.py
+  - compiler-s3-snapshot/canary/run_failclosed_canary_v0.1.1-bot04.py
+NOTA_DE_COMPARABILIDADE:
+  regra: 'extracoes a partir daqui usam claude-sonnet-5. Densidades, yield e contagens de evidencia comparadas
+    com PILOT-001, PILOT-002, PILOT-003 e PILOT-004 carregam esta nota: aqueles pilotos foram extraidos
+    em claude-opus-5.'
+  afetados:
+  - M1 densidade ev/s
+  - M2 yield por segmento
+  - classe C do validador de citacao
+  - contagem de evidencia por segmento
+  nao_afetado: o L0 e a transcricao bruta — deterministicos, independentes de modelo
+  pilotos_em_opus_5:
+  - PILOT-001
+  - PILOT-001-v2
+  - PILOT-002
+  - PILOT-003
+  - PILOT-004
+  primeiro_piloto_em_sonnet_5: nenhum ainda — a troca vale para extracoes futuras
+max_tokens_da_suite_failclosed:
+  de: 2000
+  para: 8000
+  porque: Sonnet 5 opera com adaptive thinking sempre ativo; o orcamento de saida precisa acomodar raciocinio
+    + texto. Com 2000, o F1 devolveu texto VAZIO.
+  regra: vale para todo runner MTX em Sonnet 5
+inventory_set_sha256: c9c781c3b88e2dabc186c452e31a3cc9194903f68be215f68d23a80c1a75c006
+arquivos_selados: 17
+resumo:
+  IDENTICO_AO_v0.2.1: 16
+  ALTERADO: 1
+  NOVO: 0
+files:
+- path: README.md
+  sha256: c448246ff67f59e643469835dbc7ee987672793e205c35f60100a2d68bfefee9
+  bytes: 2231
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: canary/canary-results.json
+  sha256: 68917b69b7014dc0d83f63e5d8195c7ebe004d731f1939482647aa2e2f8ef6fd
+  bytes: 2303
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: canary/fixtures.py
+  sha256: 786f4230fa22f4c0ae29cdc862f4cb2c062c89f58f34317c06f5eb57b71214d8
+  bytes: 6716
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: canary/mutants.py
+  sha256: 4d070c7545e16a6d6c47f5d737ede7928420c21cc6d37c6b593a0e6e3bf4fac4
+  bytes: 7948
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: canary/run_canary.py
+  sha256: f97e6f64c4e2e057ee6bd75d8293101b0a6056dddaa9b4c022086cbff96fa397
+  bytes: 9492
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/coverage_gate.py
+  sha256: fd16ee3f6782f3b10eb8e2087169999bc6c9f528a10040e962f931274905ef1c
+  bytes: 7029
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/dedup.py
+  sha256: 527d04013bb470bf7cecc655598bcafbe7f7f70e474761d8f95facbdad1aa0df
+  bytes: 3866
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/extraction.py
+  sha256: c472f5f918d03e39b9d673218c48978dbd5f8f31a53ad5072855c27c664e3ee1
+  bytes: 5812
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/extractors/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/extractors/claude_extractor.py
+  sha256: edb8f936a05ec21afe57dc1446295ef7d84d928c9b8bb0f5b35a6c59f7550d91
+  bytes: 18141
+  status_vs_v0_2_1: ALTERADO
+- path: ctsc2/manifest.py
+  sha256: 6d206cb556d7af978d68ca264b00093dcc37f6c4f278c3bef087bb624f48ed91
+  bytes: 5537
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/model.py
+  sha256: 9d9edcce4159a7ceb42dccec50d41ac2c631cd048d23ff3b1e607595898e55e5
+  bytes: 3811
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/pipeline.py
+  sha256: f22dcae86197e7b0ef2eaf758eef333b236374cdaa521086e167b96dc5afddb3
+  bytes: 3425
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/temporal_map.py
+  sha256: aa76c52ac8117a0ec6372f532a381bfaa950d1fd9ed01b45fcb4ca18a7f8273a
+  bytes: 3168
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: ctsc2/thresholds.py
+  sha256: 344a40edcf6a441b012b29a5d375c17caef430f4b0df978e7e451fb6f97f0942
+  bytes: 4656
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1
+- path: prompts/lesson-analyzer-v2.md
+  sha256: b6cb365cafee8ce4248e0f8c8a79d587af44a1b6fa79f7381635e4d10a5cfed1
+  bytes: 5496
+  status_vs_v0_2_1: IDENTICO_AO_v0.2.1

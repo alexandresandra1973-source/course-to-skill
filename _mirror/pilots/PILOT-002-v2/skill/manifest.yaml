@@ -1,0 +1,25 @@
+schema_version: 0.3.0
+skill:
+  id: PILOT-002-SKILL
+  name: Claude Code — PILOT-002
+  version: 0.1.0
+  status: CANDIDATE_PENDING_USE
+source:
+  type: single_course_pilot
+  course_id: PILOT-002
+  l0_sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+runtime:
+  entrypoint: SKILL.md
+  load_order:
+  - knowledge/runtime-policy.yaml
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  required_executable_resources:
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  fail_closed_on_missing_executable_resource: true
+  general_knowledge_fallback_for_missing_methodology: false
+maturity:
+  level: S3_EXECUTABLE
+  pilot_scope: true
+production_ready: false

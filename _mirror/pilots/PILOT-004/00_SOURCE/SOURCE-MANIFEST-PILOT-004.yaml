@@ -1,0 +1,112 @@
+schema_version: 0.1.0
+pilot_id: PILOT-004
+artifact_status: SOURCE_SEALED
+sealed_at_utc: '2026-08-14T00:36:10+00:00'
+sealed_by_machine: bot-04
+DIVERGENCIA_DECLARADA_MAQUINA: 'PILOT-001, PILOT-002 e PILOT-003 foram rodados na Lenovo.
+  O PILOT-004 e selado no bot-04 (MacBook Pro M4 Max, macOS 26.5.2, arm64). Toolchain
+  local difere: python 3.12.13 em ~/venv-mtx, youtube-transcript-api e yt-dlp 2026.07.04
+  instalados nesta maquina para este piloto. Nenhum artefato do P001-P003 foi reexecutado
+  aqui; a comparacao entre pilotos assume que a mudanca de maquina nao altera o L0, o
+  que e verificavel porque o L0 e determinstico a partir da transcricao bruta guardada.'
+
+source:
+  platform: youtube
+  video_id: GNOHB166vWY
+  title: Como Usar o Meta Business Suite 2026 [PASSO A PASSO]
+  url: https://www.youtube.com/watch?v=GNOHB166vWY
+  channel: Filipe Detrey
+  upload_date: '2026-01-06'
+  duration_s: 903
+  duration: '15:03'
+
+transcript:
+  kind: AUTO_GENERATED_ASR
+  language: pt
+  language_label: Portuguese (auto-generated)
+  variante_observada: pt-BR
+  variante_evidencia: 'marcadores de fala brasileira no texto ASR (ne?, a gente, o que que,
+    forte abraco). O YouTube expoe a faixa apenas como "pt"; nao ha faixa pt-BR separada
+    nem legenda manual disponivel neste video.'
+  faixas_disponiveis: 1
+  faixas_inventario: 'pt (auto-generated, traduzivel) — UNICA faixa oferecida pelo YouTube'
+  legenda_manual_disponivel: false
+  snippets: 440
+  chars_raw: 16383
+  transcript_last_end_s: 904.64
+  cobertura_da_duracao_pct: 100.18
+  cobertura_nota: 'a transcricao vai ate 904.64s contra 903s de duracao declarada — o ultimo
+    trecho ASR transborda 1.64s do fim do video. Cobertura integral, sem lacuna.'
+
+l0:
+  path: L0-transcript.txt
+  sha256: 607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5
+  bytes: 19624
+  marks: 186
+  mark_every_s: 6
+  duration_s: 903
+  duration: '15:03'
+  formato: identico ao PILOT-003 (cabecalho ## titulo, marcas **M:SS**, mark_every_s=6)
+  hash_conferido_por: 'script build_l0.py (hashlib) e, de forma independente, shasum -a 256
+    — os dois batem'
+
+RULE_HASH_DOES_NOT_RECONSTRUCT:
+  em_vigor: true
+  copia_bruta_local: ~/p004-work/00_SOURCE/raw/raw-transcript.json
+  copia_bruta_bytes: 51215
+  copia_bruta_conteudo: 440 trechos com text/start/duration, sem perda
+  inventario_de_faixas: ~/p004-work/00_SOURCE/raw/available-transcripts.json
+  metadados_do_video: ~/p004-work/00_SOURCE/raw/video-meta.info.json
+  nota: 'o hash sela, nao reconstroi. A bruta fica em disco local alem do hash, para que
+    o L0 possa ser reconstruido e reconferido sem depender do YouTube.'
+
+CRITERIOS_DECLARADOS_ANTES:
+  declarados_em: BLOCO 1 (selagem da fonte), antes de qualquer PASS
+  C1:
+    nome: cobertura evidencia -> regra
+    limiar: '>80%'
+  C2:
+    nome: GAP-REPORT especifico e verdadeiro
+    limiar: 'o GAP-REPORT precisa dizer algo especifico E verdadeiro sobre ESTE tutorial —
+      nao uma lacuna generica que valeria para qualquer video de Business Suite'
+  C3:
+    nome: utilidade no Business Suite REAL da MTX
+    limiar: 'aplicada a conta real da MTX, produz ao menos uma configuracao/correcao
+      conferivel OU pede o dado/acesso certo para produzi-la'
+  C4:
+    nome: modo de falha declarado
+    limiar: 'se a saida for so conselho generico ("conecte suas contas", "poste com
+      frequencia"), o piloto FALHOU — independentemente de C1, C2 e C3 passarem'
+
+HELD_OUT:
+  aplicado: false
+  razao: 'mesma razao do PILOT-003: o ground truth e EXTERNO (o Business Suite vivo da MTX),
+    nao um pedaco escondido da fonte. A pergunta deste piloto nao e "a Skill inventa?",
+    e "a recomendacao bate com a conta real?". Esconder uma janela da fonte nao testaria isso.'
+  consequencia: 'os casos cegos do PILOT-002 NAO tem equivalente aqui, e nenhum numero
+    deste piloto e comparavel aos de resistencia a invencao do P001/P002'
+  corpus_de_treino_s: 903
+  corpus_igual_a_fonte_inteira: true
+
+OBJETIVO_SECUNDARIO:
+  nome: PRIMEIRA FONTE EM PORTUGUES
+  hipotese: 'medir o pipeline sem a falha sistematica de traducao PT x EN observada no
+    PILOT-003 (6 ocorrencias). Fonte pt-BR e alvo pt-BR: se as 6 ocorrencias sumirem, a
+    falha era de traducao; se persistirem em outra forma, a causa era outra.'
+  ocorrencias_de_referencia_P003: 6
+  medicao: contar no PASS 2 as ocorrencias equivalentes e comparar com 6
+
+RESSALVA_DE_ESCALA:
+  observado: 'a fonte tem 15:03 (903s) contra 3:50:57 (13857s) do PILOT-003 — cerca de 1/15
+    do corpus, 440 trechos contra 8990, 16.383 chars brutos contra 334.303.'
+  consequencia: 'C1 (cobertura evidencia->regra) fica mais facil de satisfazer num corpus
+    pequeno, e C4 (so conselho generico) fica mais provavel de acionar: um tutorial de
+    15 minutos de visao geral tende a produzir menos regra operavel que um curso de 4h.
+    Registrado ANTES do PASS 1 para que o resultado nao seja reinterpretado depois.'
+  nao_e_bloqueio: 'a selagem esta valida; esta ressalva e material para leitura dos criterios,
+    nao motivo para trocar a fonte sem decisao do Alexandre.'
+
+PROXIMO_BLOCO:
+  pass1: NAO INICIADO
+  bloqueio_1: 'compiler-v2 precisa de copia conferida por hash nesta maquina'
+  bloqueio_2: aprovacao do Alexandre

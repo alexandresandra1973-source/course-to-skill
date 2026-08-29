@@ -1,0 +1,28 @@
+pilot_id: PILOT-001-v2-REMAC
+compiler_version: compiler-v2/0.2.1-frozen
+runner: p004_pass2_ckpt.py — copia de p003_pass2_ckpt.py (sha256 7364ff32…) com diff minimo declarado;
+  checkpoint por segmento, APFS
+input:
+  l0_sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  temporal_map_sha256: 845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60
+  extent_s: 905
+  held_out_applied: false
+pass2:
+  execution_mode: PER_SEGMENT
+  invocations: 9
+  segments: 9
+  errors: 0
+  zero_yield_count: 0
+  segments_with_zero_yield: []
+evidence:
+  total: 175
+  aggregate_yield_per_segment: 19.4444
+deduplication:
+  rule: IDENTICAL_NORMALIZED_CLAIM
+  merged: 0
+coverage_gate:
+  covered_s: 770
+  extent_s: 905
+  l0_coverage_pct: 85.08
+  threshold: 0.735
+  result: SATISFIED

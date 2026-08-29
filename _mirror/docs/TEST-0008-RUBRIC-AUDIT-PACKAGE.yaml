@@ -1,0 +1,93 @@
+# ÍNDICE do pacote de auditoria do TEST-0008. Regenerado para o ZIP.
+schema_version: 0.2.0
+artifact_id: TEST-0008-RUBRIC-AUDIT-PACKAGE
+artifact_status: DRAFT_NOT_FROZEN_PENDING_EXTERNAL_AUDIT
+built_at_utc: '2026-08-12T06:40:21+00:00'
+nada_congelado: true
+metricas: 7
+primaria: TOTAL_SCORE
+decisao_do_alexandre: aplicada, congelada, não reaberta
+decisao_do_auditor: se há circularidade — do baseline OU da Skill — e se a fronteira dos três regimes
+  se sustenta
+judge_package:
+  path: TEST-0008-JUDGE-PACKAGE/
+  files: 4
+  leak_scan: LIMPO
+blinding_seal:
+  path: TEST-0008-BLINDING-SEAL.yaml
+  sha256: cf1620e53ed9d6da048a5eeef6555c532ead39ab8382cd977dcf7099126f04c1
+  NAO_PARA_O_JUIZ: true
+binds_to:
+  metric_lock:
+    path: TEST-0008-METRIC-LOCK.yaml
+    sha256: 2b199082a3ed3d8a459d29aca1b51c513da8bc8fb320485dff34e54047971d34
+  scorer_v2_report:
+    path: SCORER-V2-TWO-COMPARISONS.yaml
+    sha256: c69b76183e82229b96f00ea907ecf09c9d031a601bfbd3654a78e12b9245326a
+  previous_draft_superseded:
+    path: TEST-0008-RUBRIC-DRAFT-v0.1.4.yaml
+    sha256: a6c27d8268db06eed72afa84fa39f33c51c9ada31ffb12164d4326f5fa76e00b
+  full_skill_arm_sha256: b30c1da365af5c06b38efd91715f72c8cc312d0efac8c4dd999ac811b690f028
+  l0_sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+files:
+  BASELINE/PROVENANCE.yaml: 4cf74c31e53d7d875d897214d682335e5472664eb08a9d6bff4125036736437e
+  BASELINE/SUMMARY.md: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+  BLINDING-PROTOCOL.yaml: a0461e54e46619357a459a9c422adce7b3c1d47514a6c44e09d194dc3337ea7a
+  CANARY-RESULT.yaml: 9a7d8792a4fca87485223297df1bb8fa3b11a2d6d8b26881097e5bb5b4f94c23
+  CONDITIONS/1_FULL_SKILL/POINTER.md: ea1f845063d72c55d284a2dce4503d4a3beb7b404a4dfff5cbdd0677c56ea350
+  CONDITIONS/2_SUMMARY_AS_SUMMARY/FRAMING.md: 69d739ffe535c46e755122ededc9fcb09e54640b7766e6cb1e536a66ec64d2d8
+  CONDITIONS/2_SUMMARY_AS_SUMMARY/SUMMARY.md: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+  CONDITIONS/3_SUMMARY_AS_SKILL/FRAMING.md: 5dc7bb26aeb87613e0eb47e9f03fe7e871336c7f4eea98eaecd90adf639f39f1
+  CONDITIONS/3_SUMMARY_AS_SKILL/SUMMARY.md: dac83c3d70e0e38d4cfc798b3d245ebe257736812c78c796fa7a10b110135886
+  L0/TRANSPORT-RECORD.yaml: 36999ebfbb1a633e4a68e0d643b601658973ffb71d2c60bcb399c3f14fa8816c
+  L0/transcript-original-en.txt: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  LEAK-TEST-JUDGE-RUBRIC.yaml: 982570a015a7c3df16ac635dff3af7defa77966bb4199a0c78165a7909ef47f6
+  METRIC-LOCK.yaml: 2b199082a3ed3d8a459d29aca1b51c513da8bc8fb320485dff34e54047971d34
+  README-AUDITOR.md: 934f5a75b9cee6c40ac485703ac24f4e7e5fdda49db7c1dd13ba1e592e872428
+  RUBRIC-BINDING.yaml: dd236fb3e50d47eb1573907c2ce5202093e1fb16e6a82ee30449fcd270c45bd3
+  RUBRIC-JUDGE.yaml: 2843882b1c2a25cff5555b976fc53c7c075e3c439544285fb5bbd07c9b5fceae
+  RUBRIC-OPERATOR-vs-JUDGE.diff: 5cbc25bf7b069db4cfff2c488a8e8720bf63d3298f25e16661dd434a8306a48e
+  RUBRIC-OPERATOR.yaml: 980de01f59542216146fbebb1de441225aa8873fcd9e2ac6b2f11e9f5c8e7f20
+  SHA256SUMS.txt: 41437613c75f3ca92c5718df38843f18b81cb5c35b572194219c9001279cb79c
+  verify_blinding_commitment.py: 8a946977b5999eb7aa158e58c7992a9f09fa3911e7313cc3f34dc7a5039fac6e
+file_count: 20
+index_conventions:
+  index_lists: todos os arquivos do pacote, inclusive SHA256SUMS.txt
+  sha256sums_lists: todos menos ele próprio
+  por_que_a_diferenca: um arquivo não pode conter o próprio hash
+superseded_indexes:
+- index_sha256: f8350fb83e7a3e013aeed52d427caa22d6d676149097fa56f388cb6594f6da05
+  estado: SUPERSEDIDO
+  o_que_mudou_depois:
+  - BLINDING-PROTOCOL.yaml reescrito para v0.2.0 (nonce secreto, separação de domínio, derivação sem ambiguidade)
+  - verify_blinding_commitment.py acrescentado
+  - LEAK-TEST-JUDGE-RUBRIC.yaml acrescentado
+- index_sha256: 9ee650d5f71e7e58e9cdee4abdfbceef112e7053ef79a8da372f46c63a06f090
+  estado: SUPERSEDIDO
+  o_que_mudou_depois:
+  - LEAK-TEST-JUDGE-RUBRIC.yaml acrescentado ao pacote sem que o índice fosse regenerado — o índice listava
+    18 arquivos e o disco tinha 20
+zip:
+  file: TEST-0008-RUBRIC-AUDIT-PACKAGE.zip
+  deterministic: true
+  mtime_fixed_at: '2026-01-01T00:00:00Z'
+  sha256: 3e4087b96f0592e0248af1beb1037cbd1caa0cd0b04bd5b1e43664ddab07f017
+  as_duas_copias_do_indice:
+    dentro_do_ZIP: 'TEST-0008-RUBRIC-AUDIT-PACKAGE.zip :: .../INDEX.yaml'
+    fora_do_ZIP: docs/TEST-0008-RUBRIC-AUDIT-PACKAGE.yaml
+    diferenca: só o campo zip.sha256
+    todo_o_resto_e_identico: true
+  index_copy_inside_zip_sha256: 2ee7c5799c8e4b41d88014e7292faa34f2764d5bf2bd1dc90536ddec2f1f1084
+excluded_by_design:
+  judge_package:
+    path: TEST-0008-JUDGE-PACKAGE/
+    por_que: é o material de quem pontua, não de quem audita
+  blinding_seal:
+    path: TEST-0008-BLINDING-SEAL.yaml
+    por_que: revela o mapa slot→condição; o auditor confere o compromisso pelo protocolo e pelo verificador,
+      sem precisar do segredo
+  verificado_por_varredura: true
+  varredura_procurou:
+  - nonce em hexadecimal
+  - mapa slot→condição
+  resultado: LIMPO

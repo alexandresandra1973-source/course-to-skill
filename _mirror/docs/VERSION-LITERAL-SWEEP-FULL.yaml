@@ -1,0 +1,2942 @@
+# VERSION-LITERAL-SWEEP-FULL — todos os pacotes
+# Gerado por script. READ-ONLY. Nada corrigido.
+schema_version: 0.1.0
+artifact_id: PILOT-001-VERSION-LITERAL-SWEEP-FULL-v0.1.4
+calibration_against_f5:
+  why: O classificador é conferido contra os vereditos já publicados pelo F5 nos dois pacotes que ele
+    varreu. Sem isso, não há como saber se os achados nos pacotes novos são reais.
+  f5_blocking_expected:
+  - PRELOCK-PATCH-F3-TRISTATE:freeze_pre_run_registry.py:53
+  - PRELOCK-PATCH-F3-TRISTATE:freeze_pre_run_registry.py:69
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID:freeze_margin_lock.py:381
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID:score_judge_results.py:880
+  this_sweep_found:
+  - PRELOCK-PATCH-F3-TRISTATE:freeze_pre_run_registry.py:53
+  - PRELOCK-PATCH-F3-TRISTATE:freeze_pre_run_registry.py:69
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID:freeze_margin_lock.py:381
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID:score_judge_results.py:880
+  missed: []
+  extra: []
+  agrees_with_f5: true
+artifact_status: STATIC_SWEEP_NO_FIX_APPLIED
+generated_at_utc: '2026-08-11T04:23:26+00:00'
+generator: version_literal_sweep_full.py
+extends: PILOT-001-F5-VERSION-LITERAL-SWEEP-v0.1.4
+why: A varredura do F5 cobriu só F3-TRISTATE e F4. Um literal cravado em script não varrido queima a rodada
+  cega, e conversa cega não se repete.
+scope:
+  packages_scanned:
+  - JUDGE-RETEST-KIT
+  - JUDGE-RETEST-OPERATOR-ONLY
+  - LOOSE:Course-to-Skill-Compiler
+  - PRELOCK-PATCH-D1-D2
+  - PRELOCK-PATCH-F3-TRISTATE
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID
+  - PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  - REPO
+  - REPO_CTS
+  - REVISION-PACK
+  - REVISION-PACK-REV2
+  - REVISION-PACK-REV3
+  - REVISION-PACK-REV4
+  - REVISION-PACK-REV5
+  - course-to-skill-compiler-v0.1.1-pilot-ready
+  - final-blind-test-kit
+  - judge-private-v0.1.1
+  python_files_scanned: 59
+  distinct_scripts: 29
+rule: Literal de validação/identidade/carimbo em código executável é candidato a defeito de classe. Docstring,
+  exemplo de uso e caminho de fixture de canário não são.
+classification_counts:
+  DOCUMENTATION_OR_EXAMPLE: 121
+  EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL: 16
+  VERSION_SPECIFIC_CANARY_FIXTURE_PATH: 130
+totals:
+  occurrences: 267
+  blocking_occurrences: 16
+  blocking_distinct_defects: 5
+  blocking_distinct_defects_outside_f5_scope: 5
+blocking_defects:
+- &id002
+  file: freeze_margin_lock.py
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  breaks_step: congelar
+  step_does: emite o comparison/margin lock
+  literal_version: &id007
+  - 0.1.3
+  breaks_when: quebra a etapa `congelar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+  seen_in:
+  - source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+    line: 381
+  - source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+    line: 381
+- &id001
+  file: freeze_pre_run_registry.py
+  text: '''candidate_version'':''0.1.3'','
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version: &id006
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+  seen_in:
+  - source_tree: REVISION-PACK-REV3
+    line: 43
+  - source_tree: REVISION-PACK-REV3
+    line: 58
+  - source_tree: REVISION-PACK-REV4
+    line: 43
+  - source_tree: REVISION-PACK-REV4
+    line: 58
+  - source_tree: REVISION-PACK-REV5
+    line: 43
+  - source_tree: REVISION-PACK-REV5
+    line: 58
+  - source_tree: PRELOCK-PATCH-D1-D2
+    line: 53
+  - source_tree: PRELOCK-PATCH-D1-D2
+    line: 69
+  - source_tree: PRELOCK-PATCH-F3-TRISTATE
+    line: 53
+  - source_tree: PRELOCK-PATCH-F3-TRISTATE
+    line: 69
+- &id005
+  file: prerun_chain_v014.py
+  text: '"candidate_version": "0.1.4",'
+  breaks_step: congelar
+  step_does: monta as entradas e dirige os dois freezers
+  literal_version: &id010
+  - 0.1.4
+  breaks_when: quebra a etapa `congelar` em qualquer rodada cuja versão de candidato não seja 0.1.4
+  seen_in:
+  - source_tree: REPO
+    line: 128
+- &id003
+  file: score_judge_results.py
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  breaks_step: pontuar
+  step_does: recomputa notas e emite o veredito
+  literal_version: &id008
+  - 0.1.3
+  breaks_when: quebra a etapa `pontuar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+  seen_in:
+  - source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+    line: 880
+  - source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+    line: 880
+- &id004
+  file: structural_ceiling_v014.py
+  text: '"candidate_version": "0.1.4",'
+  breaks_step: relatar
+  step_does: emite o STRUCTURAL-CEILING-REPORT que o freezer consome
+  literal_version: &id009
+  - 0.1.4
+  breaks_when: quebra a etapa `relatar` em qualquer rodada cuja versão de candidato não seja 0.1.4
+  seen_in:
+  - source_tree: REPO
+    line: 491
+blocking_defects_outside_f5_scope:
+- *id001
+- *id002
+- *id003
+- *id004
+- *id005
+inventory:
+- source_tree: JUDGE-RETEST-KIT
+  file: aggregate_judge_retest.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/JUDGE_RETEST/KIT/PILOT-001-v0.1.3-JUDGE-RETEST-KIT.zip
+  sha256: 5bcb562ec5de1b99b0a5a04e91842f4129c224f1282f2a19f5b0958867c68421
+  bytes: 2403
+- source_tree: JUDGE-RETEST-OPERATOR-ONLY
+  file: aggregate_judge_retest.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/JUDGE_RETEST/OPERATOR_ONLY/PILOT-001-v0.1.3-JUDGE-RETEST-OPERATOR-ONLY.zip
+  sha256: 97e640933f0ac252f9e45aa8f73d55f7cc96ee2d512234db072b9cffd208f542
+  bytes: 6129
+- source_tree: LOOSE:Course-to-Skill-Compiler
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready/course-to-skill-compiler-v0.1.1-pilot-ready/pilot/PILOT-001/final-test/VERIFY_KIT.py
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+- source_tree: LOOSE:Course-to-Skill-Compiler
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/02_PILOTS/PILOT-001/02_VALIDATION/PILOT-001-final-blind-test-kit/PILOT-001-final-blind-test-kit/VERIFY_KIT.py
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+- source_tree: LOOSE:Course-to-Skill-Compiler
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/02_PILOTS/PILOT-001/03_FINAL-BLIND-TEST/JUDGE/PILOT-001-judge-private-v0.1.1/PILOT-001-judge-private-v0.1.1/VERIFY_KIT.py
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+- source_tree: LOOSE:Course-to-Skill-Compiler
+  file: validate_generated_skill.py
+  container: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready/course-to-skill-compiler-v0.1.1-pilot-ready/scripts/validate_generated_skill.py
+  sha256: 3a53f138b8235099c34edc05a37ccc9b0d16884168baa70285c8e6853c049d20
+  bytes: 6533
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PRELOCK_D1_D2/PILOT-001-v0.1.3-PRELOCK-PATCH-D1-D2.zip
+  sha256: 8ada60439dba49ae2689d70ce8c383e12a2b5daf28caa29a6c03ce5d5550b0cc
+  bytes: 24011
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_pre_run_registry.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PRELOCK_D1_D2/PILOT-001-v0.1.3-PRELOCK-PATCH-D1-D2.zip
+  sha256: 80ff9c070e0692ed59f656c1711030d225716eb36753961d1be80d874038e8da
+  bytes: 3979
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: run_d1d2_canary.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PRELOCK_D1_D2/PILOT-001-v0.1.3-PRELOCK-PATCH-D1-D2.zip
+  sha256: 35db112bc5c8b6e75b6893009600c095748838e0dd2fe3ff7d1f1070da799370
+  bytes: 7375
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PRELOCK_D1_D2/PILOT-001-v0.1.3-PRELOCK-PATCH-D1-D2.zip
+  sha256: a52099b7b40901a1b9cfeb91fb7f85184ef352e4c70249797fe7a9f4ae74b54a
+  bytes: 64034
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F3_TRISTATE/PILOT-001-v0.1.3-PRELOCK-PATCH-F3-TRISTATE.zip
+  sha256: b392bc19c41f137f4e253a0eafb5fa7a542d6abf6f3086832873a1427550a2e9
+  bytes: 26932
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_pre_run_registry.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F3_TRISTATE/PILOT-001-v0.1.3-PRELOCK-PATCH-F3-TRISTATE.zip
+  sha256: 80ff9c070e0692ed59f656c1711030d225716eb36753961d1be80d874038e8da
+  bytes: 3979
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F3_TRISTATE/PILOT-001-v0.1.3-PRELOCK-PATCH-F3-TRISTATE.zip
+  sha256: 6edc403d1641841c6fcd0cdadf5bc4407dd4d8f082aa1177e36031d9c3cc30f5
+  bytes: 78432
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/FINAL_PRE_RUN_LOCK/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID.zip
+  sha256: 09a742c237a7a7aa3d053ba5ea8e0a01551d7391a4853adbe1001a44074519e7
+  bytes: 27303
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/FINAL_PRE_RUN_LOCK/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID.zip
+  sha256: c70bac1e1198d0739e304cb58773647a2d9a773c00d802863f472473254331a8
+  bytes: 5732
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/FINAL_PRE_RUN_LOCK/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID.zip
+  sha256: 3c2ab29fd21271033a412dcaee143d2a65d986d7f2d9c7f1aab9a171963ff7c1
+  bytes: 78795
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F4_STRUCTURAL_ID/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID
+    (1).zip
+  sha256: 09a742c237a7a7aa3d053ba5ea8e0a01551d7391a4853adbe1001a44074519e7
+  bytes: 27303
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F4_STRUCTURAL_ID/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID
+    (1).zip
+  sha256: c70bac1e1198d0739e304cb58773647a2d9a773c00d802863f472473254331a8
+  bytes: 5732
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/PRELOCK_F4_STRUCTURAL_ID/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID
+    (1).zip
+  sha256: 3c2ab29fd21271033a412dcaee143d2a65d986d7f2d9c7f1aab9a171963ff7c1
+  bytes: 78795
+- source_tree: REPO
+  file: coverage_map.py
+  container: course-to-skill-claude (ext4)
+  sha256: 1d6cd9f6eaac53400a4247614dd21e398474ba0c8432c82164c65ce7ab5301f0
+  bytes: 14303
+- source_tree: REPO
+  file: density_calibration.py
+  container: course-to-skill-claude (ext4)
+  sha256: f007d4dcb7d93023f6b47f0955049fa27f26dd54166280eeb8f2060ae088128a
+  bytes: 15958
+- source_tree: REPO
+  file: judge_package_verify.py
+  container: course-to-skill-claude (ext4)
+  sha256: 369045844ba1b6f053121fd067b4bf5bbc91412fddc59a5d2fb9430c5dcf596d
+  bytes: 22431
+- source_tree: REPO
+  file: pilot002_holdout.py
+  container: course-to-skill-claude (ext4)
+  sha256: 98566b8d6c51738921a9ed0bf9e19668153e7e0fc12381f6fa04dc0cee2c9392
+  bytes: 18492
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  container: course-to-skill-claude (ext4)
+  sha256: 662e25eee064aad73689cdabf62030fca6a8a8940a4b33efca4cb116c29dec29
+  bytes: 23103
+- source_tree: REPO
+  file: publish.py
+  container: course-to-skill-claude (ext4)
+  sha256: daef8c8fd5d434c620094945c246842f3af25c9fc8ed4b0672b256a0dec462ee
+  bytes: 11159
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  container: course-to-skill-claude (ext4)
+  sha256: 768d95d378440a85529fb997a9e2fbf493cf14507d31cf9de757a1b9543ae317
+  bytes: 17221
+- source_tree: REPO
+  file: source_density.py
+  container: course-to-skill-claude (ext4)
+  sha256: 0a26474fe2bcda7686387642e46278f5d0414ca1df9c89b7007dabe0aada43b4
+  bytes: 14126
+- source_tree: REPO
+  file: spine.py
+  container: course-to-skill-claude (ext4)
+  sha256: dd682a3d0f156b8fc7e75a3ae2dc6087471a61cdb47d13a553c4f72ae5434778
+  bytes: 9472
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  container: course-to-skill-claude (ext4)
+  sha256: 0df7d40aa9d9c00e1fac299894d21b4488fe530aef57c16078abd10f57f45010
+  bytes: 15191
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  container: course-to-skill-claude (ext4)
+  sha256: 3713fe7e928b2318d3b120d7d52b72738670fba3acc432f390ed5a3fc57ec18d
+  bytes: 32775
+- source_tree: REPO_CTS
+  file: cts/__init__.py
+  container: course-to-skill-claude (ext4)
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+- source_tree: REPO_CTS
+  file: cts/coverage.py
+  container: course-to-skill-claude (ext4)
+  sha256: ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b
+  bytes: 5389
+- source_tree: REPO_CTS
+  file: cts/cutter.py
+  container: course-to-skill-claude (ext4)
+  sha256: 199e6217fdcd77bd09811fc1aba91ed88d376ca4242a912befa52d9b4ca6310b
+  bytes: 4930
+- source_tree: REPO_CTS
+  file: cts/dispersion.py
+  container: course-to-skill-claude (ext4)
+  sha256: 3897eeb818c7ebc0693c219d271276344115e6b4663624ea3536d15794675dfc
+  bytes: 2166
+- source_tree: REPO_CTS
+  file: cts/result.py
+  container: course-to-skill-claude (ext4)
+  sha256: c5f5346fea71e836042092977b24a74e73f21a072e57cb97046f635f2623e5bb
+  bytes: 1906
+- source_tree: REPO_CTS
+  file: cts/rubric_ceiling.py
+  container: course-to-skill-claude (ext4)
+  sha256: ee3f2da5673dc5220b5032833c9cf2fc82af4eff11eb40d2ff6b8a351982f340
+  bytes: 6965
+- source_tree: REPO_CTS
+  file: cts/spans.py
+  container: course-to-skill-claude (ext4)
+  sha256: 7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74
+  bytes: 1908
+- source_tree: REPO_CTS
+  file: cts/vault.py
+  container: course-to-skill-claude (ext4)
+  sha256: 6caa0126a6d55cf8cb60fab22fc760a21abf8455f6a1e2705ccfe45968c5e158
+  bytes: 5410
+- source_tree: REVISION-PACK
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK.zip
+  sha256: 0b954d97d359cf6be893727dfdbe8124cd0586dab15f5a6231cf556bf9dd264b
+  bytes: 6496
+- source_tree: REVISION-PACK-REV2
+  file: run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV2.zip
+  sha256: 0fee764807dad65806eb51df78e2cf597d2665cdd6932ccf9b7a0aa988bdbd8e
+  bytes: 4284
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV2.zip
+  sha256: 0d3b5d82db3578d6ccd254e0d909e30234124be03c0e605098a6d5c551a3fbdb
+  bytes: 26253
+- source_tree: REVISION-PACK-REV3
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV3.zip
+  sha256: b710412e4e426f9870924991b317bc3e2285cdfa1545b416f73e35d221873b44
+  bytes: 8009
+- source_tree: REVISION-PACK-REV3
+  file: freeze_pre_run_registry.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV3.zip
+  sha256: 5ab9477c033302a47970a9a5d25058274fca481305c3fa2e11716cd1bd57bd24
+  bytes: 2777
+- source_tree: REVISION-PACK-REV3
+  file: run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV3.zip
+  sha256: a0e9ae466077676f3cef7ec85644abd8e50acfd363663c09ea2926365f9d4e68
+  bytes: 6923
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV3.zip
+  sha256: f1ad9f8ae56de3dd90c6baa796c5946e17ba2b3c64fb6af56f955a4ba750335b
+  bytes: 37852
+- source_tree: REVISION-PACK-REV4
+  file: capture_raw_output.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV4.zip
+  sha256: b491bf3ac1ca464ce92efe3b40263c8468427eac465be0ff5ff9f338a057e7a4
+  bytes: 1753
+- source_tree: REVISION-PACK-REV4
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV4.zip
+  sha256: 11b5792f551d36374e7c7f4c67c17131372e72770ec62b7578e25ff4d725d269
+  bytes: 12619
+- source_tree: REVISION-PACK-REV4
+  file: freeze_pre_run_registry.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV4.zip
+  sha256: ad26fe1e0a53f96860fb74d4af4c9adfb2e227baef9899cd117357db28c41315
+  bytes: 3151
+- source_tree: REVISION-PACK-REV4
+  file: run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV4.zip
+  sha256: ff75fda26fd2bf74c09d68325dccf605d472a2d0796097a1fca5fc5e62687be8
+  bytes: 9567
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV4.zip
+  sha256: bd197f26c122f8a1dfcd2ae4dad2f3ae100e33e10559dfb7931de12cab1b8c5c
+  bytes: 51201
+- source_tree: REVISION-PACK-REV5
+  file: capture_raw_output.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV5.zip
+  sha256: b491bf3ac1ca464ce92efe3b40263c8468427eac465be0ff5ff9f338a057e7a4
+  bytes: 1753
+- source_tree: REVISION-PACK-REV5
+  file: freeze_margin_lock.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV5.zip
+  sha256: db145d5905543261ed3558abab9be7262f6e0882230a4f72b7376cc8a5d97c62
+  bytes: 15832
+- source_tree: REVISION-PACK-REV5
+  file: freeze_pre_run_registry.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV5.zip
+  sha256: ad26fe1e0a53f96860fb74d4af4c9adfb2e227baef9899cd117357db28c41315
+  bytes: 3151
+- source_tree: REVISION-PACK-REV5
+  file: run_canary_suite.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV5.zip
+  sha256: e4cf749591cddf1fca57711392e0fa657342804197fd297641ecfaf0de7ec6a0
+  bytes: 11944
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  container: Course-to-Skill/PILOT-001/v0.1.3/00_REVISION_INPUT/PILOT-001-v0.1.3-REVISION-PACK-REV5.zip
+  sha256: 06eddc7a9efdb7e4ee62de330f2e4f6d0e0fcef57e1ddb96fe9737a6a99cf426
+  bytes: 54298
+- source_tree: course-to-skill-compiler-v0.1.1-pilot-ready
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready.zip
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+- source_tree: course-to-skill-compiler-v0.1.1-pilot-ready
+  file: validate_generated_skill.py
+  container: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready.zip
+  sha256: 3a53f138b8235099c34edc05a37ccc9b0d16884168baa70285c8e6853c049d20
+  bytes: 6533
+- source_tree: final-blind-test-kit
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/02_PILOTS/PILOT-001/02_VALIDATION/PILOT-001-final-blind-test-kit.zip
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+- source_tree: judge-private-v0.1.1
+  file: VERIFY_KIT.py
+  container: Course-to-Skill-Compiler/02_PILOTS/PILOT-001/03_FINAL-BLIND-TEST/JUDGE/PILOT-001-judge-private-v0.1.1.zip
+  sha256: e1b4d5c9f0f60bb7c385f54ea4b8830a2ed6219bced095c1e65ebd087d36b2f1
+  bytes: 1844
+findings:
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 12
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV2.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 13
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 15
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 16
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV2
+  file: score_judge_results.py
+  line: 17
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 12
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 13
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 15
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 16
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 17
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: score_judge_results.py
+  line: 19
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV3
+  file: freeze_pre_run_registry.py
+  line: 41
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV3
+  file: freeze_pre_run_registry.py
+  line: 43
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version: *id006
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV3
+  file: freeze_pre_run_registry.py
+  line: 56
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV3
+  file: freeze_pre_run_registry.py
+  line: 58
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV3
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable comparison-margin lock for PILOT-001 v0.1.3.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 12
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV4.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 13
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 15
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 16
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 17
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: score_judge_results.py
+  line: 19
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV4
+  file: freeze_pre_run_registry.py
+  line: 41
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV4
+  file: freeze_pre_run_registry.py
+  line: 43
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV4
+  file: freeze_pre_run_registry.py
+  line: 56
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV4
+  file: freeze_pre_run_registry.py
+  line: 58
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV4
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV4.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs (REV5).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 12
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV5.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 13
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 15
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 16
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 17
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: score_judge_results.py
+  line: 19
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK-REV5
+  file: freeze_pre_run_registry.py
+  line: 41
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV5
+  file: freeze_pre_run_registry.py
+  line: 43
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV5
+  file: freeze_pre_run_registry.py
+  line: 56
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REVISION-PACK-REV5
+  file: freeze_pre_run_registry.py
+  line: 58
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: REVISION-PACK-REV5
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV5.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK
+  file: score_judge_results.py
+  line: 6
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK
+  file: score_judge_results.py
+  line: 7
+  text: --raw-root . --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REVISION-PACK
+  file: score_judge_results.py
+  line: 68
+  text: 'output = {"schema_version": "0.1.0", "status": "VALID", "runs": [], "errors": []}'
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs (REV5).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 12
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV5.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 13
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 15
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 16
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 17
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: score_judge_results.py
+  line: 19
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV5.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: run_d1d2_canary.py
+  line: 15
+  text: BASE=ROOT/'TEST-0007-RUBRIC-v0.1.3.yaml'; ADD=ROOT/'TEST-0007-RUBRIC-ANCHOR-ADDENDUM-v0.1.3.yaml';
+    ADD_FREEZE=ROOT/'TEST-0007-RUBRIC-ANCHOR-ADDENDUM-FREEZE-RECORD-v0.1.3.yaml'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_pre_run_registry.py
+  line: 51
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_pre_run_registry.py
+  line: 53
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_pre_run_registry.py
+  line: 67
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-D1-D2
+  file: freeze_pre_run_registry.py
+  line: 69
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV5.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: freeze_margin_lock.py
+  line: 381
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  versions_seen:
+  - V0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: compara identidade de artefato contra literal de versão
+  breaks_step: congelar
+  step_does: emite o comparison/margin lock
+  literal_version: *id007
+  breaks_when: quebra a etapa `congelar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 22
+  text: decision=croot/"TEST-0007-DECISION-RULE-v0.1.3.yaml"; comp=croot/"comparison-lock.yaml"; reg=croot/"pre-run-registry.yaml";
+    opening=croot/"opening-record.yaml"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 26
+  text: cmd=[sys.executable,str(root/"score_judge_results.py"),"--suite",str(croot/"suite.yaml"),"--contract",str(croot/"contract.yaml"),"--scores",str(croot/"cases"/name/"scores.yaml"),"--raw-root",str(croot),"--comparison-lock
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 29
+  text: lock=load(root/"ABLATION-MARGIN-LOCK-v0.1.3.yaml"); ev=lock["comparisons"]["TEST-0007"]["structural_ceiling_evidence"]
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 30
+  text: ok=ev["report_sha256"]==sha(root/"STRUCTURAL-CEILING-REPORT-v0.1.3.yaml") and float(lock["comparisons"]["TEST-0007"]["structural_ceiling"])==60.0
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 33
+  text: cmd=[sys.executable,str(root/"score_judge_results.py"),"--suite",str(croot/"suite.yaml"),"--contract",str(croot/"contract.yaml"),"--scores",str(croot/"cases/01_correct_refusal_margin39_inconclusive/scores.yaml"),"--raw-r
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 36
+  text: bad=load(root/"STRUCTURAL-CEILING-REPORT-v0.1.3.yaml"); bad["arms"]["full_after_dedup"]["arm_id"]="UNKNOWN-FULL-ARTIFACT"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: run_pre_run_canary_suite.py
+  line: 39
+  text: cmd=[sys.executable,str(root/"freeze_margin_lock.py"),"--suite",str(root/"TEST-0007-LOCK-SUITE-v0.1.3.yaml"),"--contract",str(root/"JUDGE-SCORING-CONTRACT-TEST-0007-v0.1.3.yaml"),"--draft",str(root/"ABLATION-MARGIN-LOCK-
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs (REV5).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 13
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV5.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 14
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 16
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 17
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 19
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 20
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID
+  file: score_judge_results.py
+  line: 880
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  versions_seen:
+  - V0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: compara identidade de artefato contra literal de versão
+  breaks_step: pontuar
+  step_does: recomputa notas e emite o veredito
+  literal_version: *id008
+  breaks_when: quebra a etapa `pontuar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: JUDGE-RETEST-KIT
+  file: aggregate_judge_retest.py
+  line: 35
+  text: '"schema_version":"0.1.0",'
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: JUDGE-RETEST-KIT
+  file: aggregate_judge_retest.py
+  line: 36
+  text: '"artifact_id":"JUDGE-RETEST-RESULTS-v0.1.3",'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: JUDGE-RETEST-OPERATOR-ONLY
+  file: aggregate_judge_retest.py
+  line: 69
+  text: print(yaml.safe_dump({"schema_version":"0.1.1","artifact_id":"JUDGE-RETEST-RESULTS-v0.1.3",
+  versions_seen:
+  - 0.1.1
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: JUDGE-RETEST-OPERATOR-ONLY
+  file: aggregate_judge_retest.py
+  line: 76
+  text: print(yaml.safe_dump({"schema_version":"0.1.1","artifact_id":"JUDGE-RETEST-RESULTS-v0.1.3",
+  versions_seen:
+  - 0.1.1
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: JUDGE-RETEST-OPERATOR-ONLY
+  file: aggregate_judge_retest.py
+  line: 83
+  text: print(yaml.safe_dump({"schema_version":"0.1.1","artifact_id":"JUDGE-RETEST-RESULTS-v0.1.3",
+  versions_seen:
+  - 0.1.1
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: JUDGE-RETEST-OPERATOR-ONLY
+  file: aggregate_judge_retest.py
+  line: 91
+  text: out={"schema_version":"0.1.1","artifact_id":"JUDGE-RETEST-RESULTS-v0.1.3","artifact_status":"COMPUTED",
+  versions_seen:
+  - 0.1.1
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV5.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_pre_run_registry.py
+  line: 51
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_pre_run_registry.py
+  line: 53
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_pre_run_registry.py
+  line: 67
+  text: '''schema_version'':''0.1.0'','
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: freeze_pre_run_registry.py
+  line: 69
+  text: '''candidate_version'':''0.1.3'','
+  versions_seen:
+  - 0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: registrar
+  step_does: emite o pre-run registry e o opening record
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `registrar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs (REV5).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 13
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV5.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 14
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 16
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 17
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 19
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F3-TRISTATE
+  file: score_judge_results.py
+  line: 20
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: freeze_margin_lock.py
+  line: 2
+  text: '"""Freeze a reachable, auditable comparison-margin lock for PILOT-001 v0.1.3 REV5.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: freeze_margin_lock.py
+  line: 381
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  versions_seen:
+  - V0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: compara identidade de artefato contra literal de versão
+  breaks_step: congelar
+  step_does: emite o comparison/margin lock
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `congelar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 22
+  text: decision=croot/"TEST-0007-DECISION-RULE-v0.1.3.yaml"; comp=croot/"comparison-lock.yaml"; reg=croot/"pre-run-registry.yaml";
+    opening=croot/"opening-record.yaml"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 26
+  text: cmd=[sys.executable,str(root/"score_judge_results.py"),"--suite",str(croot/"suite.yaml"),"--contract",str(croot/"contract.yaml"),"--scores",str(croot/"cases"/name/"scores.yaml"),"--raw-root",str(croot),"--comparison-lock
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 29
+  text: lock=load(root/"ABLATION-MARGIN-LOCK-v0.1.3.yaml"); ev=lock["comparisons"]["TEST-0007"]["structural_ceiling_evidence"]
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 30
+  text: ok=ev["report_sha256"]==sha(root/"STRUCTURAL-CEILING-REPORT-v0.1.3.yaml") and float(lock["comparisons"]["TEST-0007"]["structural_ceiling"])==60.0
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 33
+  text: cmd=[sys.executable,str(root/"score_judge_results.py"),"--suite",str(croot/"suite.yaml"),"--contract",str(croot/"contract.yaml"),"--scores",str(croot/"cases/01_correct_refusal_margin39_inconclusive/scores.yaml"),"--raw-r
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 36
+  text: bad=load(root/"STRUCTURAL-CEILING-REPORT-v0.1.3.yaml"); bad["arms"]["full_after_dedup"]["arm_id"]="UNKNOWN-FULL-ARTIFACT"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: run_pre_run_canary_suite.py
+  line: 39
+  text: cmd=[sys.executable,str(root/"freeze_margin_lock.py"),"--suite",str(root/"TEST-0007-LOCK-SUITE-v0.1.3.yaml"),"--contract",str(root/"JUDGE-SCORING-CONTRACT-TEST-0007-v0.1.3.yaml"),"--draft",str(root/"ABLATION-MARGIN-LOCK-
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: caminho de fixture dentro de runner de canário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 2
+  text: '"""Auditable scorer for PILOT-001 v0.1.3 judge runs (REV5).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 13
+  text: --contract JUDGE-SCORING-CONTRACT-v0.1.3-REV5.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 14
+  text: --scores criterion-scores-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 16
+  text: --comparison-lock ABLATION-MARGIN-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 17
+  text: --metric-lock METRIC-DERIVATION-LOCK-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 18
+  text: --pre-run-lock-registry PRE-RUN-LOCK-REGISTRY-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 19
+  text: --pre-run-opening-record PRE-RUN-OPENING-RECORD-v0.1.3.yaml \
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 20
+  text: --out recomputed-results-v0.1.3.yaml
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: PRELOCK-PATCH-F4-STRUCTURAL-ID (1)
+  file: score_judge_results.py
+  line: 880
+  text: expected_artifact = f"PILOT-001-TEST-0007-{expected_role}-AFTER_DEDUP-V0.1.3"
+  versions_seen:
+  - V0.1.3
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: compara identidade de artefato contra literal de versão
+  breaks_step: pontuar
+  step_does: recomputa notas e emite o veredito
+  literal_version:
+  - 0.1.3
+  breaks_when: quebra a etapa `pontuar` em qualquer rodada cuja versão de candidato não seja 0.1.3
+- source_tree: course-to-skill-compiler-v0.1.1-pilot-ready
+  file: validate_generated_skill.py
+  line: 2
+  text: '"""Static preflight for Course-to-Skill generated-skill packages (v0.1.1)."""'
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: LOOSE:Course-to-Skill-Compiler
+  file: validate_generated_skill.py
+  line: 2
+  text: '"""Static preflight for Course-to-Skill generated-skill packages (v0.1.1)."""'
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 2
+  text: '"""STRUCTURAL-CEILING-REPORT FINAL — TEST-0007 v0.1.4 (recomputação independente).'
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 32
+  text: V013 = DRIVE / "Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 33
+  text: DEST = DRIVE / "Course-to-Skill-Claude/docs/STRUCTURAL-CEILING-REPORT-v0.1.4.yaml"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 38
+  text: DECLARED_DIR = (DRIVE / "Course-to-Skill/PILOT-001/v0.1.4/06_COMPARISON_ARMS"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 40
+  text: FALLBACK_ZIP = V013 / "PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 41
+  text: FALLBACK_INNER = "PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 44
+  text: '"full_before_dedup": ("PILOT-001-TEST-0007-FULL-BEFORE_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 46
+  text: '"full_after_dedup": ("PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 48
+  text: '"ablated_after_dedup": ("PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 54
+  text: '# Hashes v0.1.3, para provar que os braços novos não são os velhos.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 72
+  text: '# Recusa conforme sob a política v0.1.4 (Opção B): o checkpoint é reafirmado.'
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 79
+  text: '# Contraste histórico: o que a v0.1.3 realmente produziu (silêncio no checkpoint).'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 154
+  text: '"note": ("O diretório v0.1.4 declarado na tarefa não existe. Os três "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 176
+  text: '"note": ("O diretório v0.1.4 declarado na tarefa não existe. Os "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 178
+  text: '"está sob a árvore v0.1.3. Os cinco hashes declarados "'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 185
+  text: 'raise Abort("ENTRADA AUSENTE: os três braços v0.1.4 não foram encontrados "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 190
+  text: '"""Localiza um artefato pelo sha256, solto ou dentro de zip, sob v0.1.3."""'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 272
+  text: '# (a) três distintos entre si e diferentes dos v0.1.3'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 276
+  text: reuse = sorted({f"{nk} == v0.1.3:{ok}" for nk, nh in new.items()
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 375
+  text: '"usar STATIC-ARM-VALIDATION-v0.1.4.json nem o ARM-FREEZE-RECORD "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 487
+  text: '"schema_version": "0.1.0",'
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 488
+  text: '"artifact_id": "PILOT-001-TEST-0007-STRUCTURAL-CEILING-v0.1.4",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 491
+  text: '"candidate_version": "0.1.4",'
+  versions_seen:
+  - 0.1.4
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: relatar
+  step_does: emite o STRUCTURAL-CEILING-REPORT que o freezer consome
+  literal_version: *id009
+  breaks_when: quebra a etapa `relatar` em qualquer rodada cuja versão de candidato não seja 0.1.4
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 492
+  text: '"supersedes": "PILOT-001-TEST-0007-STRUCTURAL-CEILING-v0.1.3",'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 560
+  text: '"recusa conforme v0.1.4); max = max(FULL) − min(ABLATED). Todos os "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 566
+  text: '"note": ("Contraste histórico apenas. Sob a v0.1.4 (Opção B) a recusa "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 576
+  text: '"inalterados. O que a v0.1.4 muda é qual âncora uma recusa conforme "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 587
+  text: '"question": ("w = 5.168664093 foi medido antes da v0.1.4. A régua não "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 594
+  text: '"recusa conforme v0.1.4."),'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 599
+  text: '{"fact": ("A v0.1.4 alinha o artefato REAL à fixture: o que a v0.1.3 "'
+  versions_seen:
+  - v0.1.3
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 626
+  text: '"artifact": "TEST-0007-DECISION-RULE-v0.1.3.yaml",'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v014.py
+  line: 662
+  text: '"# STRUCTURAL-CEILING-REPORT — TEST-0007 v0.1.4\n"'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 2
+  text: '"""FRENTE 1 — cadeia pré-run da v0.1.4: árvore, freezers auditados, BLIND_RUN_READY.'
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 27
+  text: V013 = CS / "PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 29
+  text: TREE = DOCS / "v0.1.4/06_COMPARISON_ARMS/TEST-0007"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 32
+  text: OLD_BRR = DOCS / "BLIND_RUN_READY-v0.1.4"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 33
+  text: REPORT = DOCS / "PRE-RUN-CHAIN-v0.1.4.md"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 40
+  text: V013 / "FINAL_PRE_RUN_LOCK/PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID.zip",
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 41
+  text: '"PILOT-001-v0.1.3-PRELOCK-PATCH-F4-STRUCTURAL-ID/", "F4-SHA256SUMS.txt"),'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 43
+  text: V013 / "PRELOCK_F3_TRISTATE/PILOT-001-v0.1.3-PRELOCK-PATCH-F3-TRISTATE.zip",
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 44
+  text: '"PILOT-001-v0.1.3-PRELOCK-PATCH-F3-TRISTATE/", "SHA256SUMS.txt"),'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 50
+  text: '"FULL@BEFORE_DEDUP": ("PILOT-001-TEST-0007-FULL-BEFORE_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 52
+  text: '"FULL@AFTER_DEDUP": ("PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 54
+  text: '"ABLATED@AFTER_DEDUP": ("PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.4.zip",'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 58
+  text: '"TEST-0007-RUBRIC-v0.1.3.yaml":'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 60
+  text: '"TEST-0007-RUBRIC-ANCHOR-ADDENDUM-v0.1.3.yaml":'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 62
+  text: '"TEST-0007-DECISION-RULE-v0.1.3.yaml":'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 65
+  text: SCREPORT = DOCS / "STRUCTURAL-CEILING-REPORT-v0.1.4.yaml"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 119
+  text: ("TEST-0007-RUBRIC-v0.1.3.yaml", "rubric.yaml"),
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 120
+  text: ("TEST-0007-RUBRIC-ANCHOR-ADDENDUM-v0.1.3.yaml", "addendum.yaml"),
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 121
+  text: ("TEST-0007-RUBRIC-ANCHOR-ADDENDUM-FREEZE-RECORD-v0.1.3.yaml",
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 123
+  text: '("TEST-0007-DECISION-RULE-v0.1.3.yaml", "decision-rule.yaml")]:'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 128
+  text: '"candidate_version": "0.1.4",'
+  versions_seen:
+  - 0.1.4
+  classification: EXECUTABLE_VALIDATION_OR_STAMPING_LITERAL
+  blocking_class_candidate: true
+  why: carimba candidate_version literal em artefato de integridade
+  breaks_step: congelar
+  step_does: monta as entradas e dirige os dois freezers
+  literal_version: *id010
+  breaks_when: quebra a etapa `congelar` em qualquer rodada cuja versão de candidato não seja 0.1.4
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 215
+  text: '# ------------------------------------------------ 4. instruções do juiz v0.1.4'
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 217
+  text: z = V013 / "PILOT-001-v0.1.3-TEST-0007-JUDGE-BLIND-RUN.zip"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 218
+  text: inner = "PILOT-001-v0.1.3-TEST-0007-JUDGE-BLIND-RUN/JUDGE-BLIND-RUN-INSTRUCTIONS.md"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 222
+  text: 'if "TEST-0007 v0.1.3" in body:'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 223
+  text: body = body.replace("TEST-0007 v0.1.3", "TEST-0007 v0.1.4")
+  versions_seen:
+  - v0.1.3
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 224
+  text: 'changes.append("título: ''TEST-0007 v0.1.3'' → ''TEST-0007 v0.1.4''")'
+  versions_seen:
+  - v0.1.3
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 228
+  text: '"     Derivado por script a partir da versão v0.1.3. Alterações:\n"'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 230
+  text: + "       - acrescentada a tabela de hashes dos artefatos da rodada v0.1.4\n"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 231
+  text: '"     Os nomes de arquivo da régua e dos addenda SEGUEM v0.1.3 de propósito:\n"'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 232
+  text: '"     esses artefatos não foram reemitidos e continuam sendo os da v0.1.3.\n"'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 234
+  text: table = ("\n## Artefatos desta rodada (v0.1.4)\n\n"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 249
+  text: (BRR / "JUDGE-BLIND-RUN-INSTRUCTIONS-v0.1.4.md").write_text(judge_md,
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 270
+  text: + f"| `JUDGE-BLIND-RUN-INSTRUCTIONS-v0.1.4.md` | "
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 272
+  text: + "\nO arquivo de instruções é **derivado** da v0.1.3 e **não está "
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 284
+  text: '"```\nPILOT-001 v0.1.4 runtime loaded — ready for blind cases.\n```\n\n"'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 291
+  text: '"`PRE-RUN-CHAIN-v0.1.4.md`. Sem ele não há hash para colar.\n"'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 296
+  text: '"# Abertura da rodada cega — TEST-0007 v0.1.4\n"'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 299
+  text: '"`PRE-RUN-CHAIN-v0.1.4.md`. Sem opening record não há âncora do juiz.\n"'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 318
+  text: f"# BLIND_RUN_READY v0.1.4 — {datetime.now(timezone.utc).isoformat(timespec='seconds')}\n"
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 357
+  text: w("# Cadeia pré-run da v0.1.4 — o que fechou e o que recusou")
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 373
+  text: w("## 2. Árvore v0.1.4")
+  versions_seen:
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 377
+  text: w("**Os artefatos v0.1.4 hoje moram indevidamente sob `v0.1.3/`.** O pacote "
+  versions_seen:
+  - v0.1.3
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 378
+  text: '"`PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip` está em "'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 379
+  text: '"`Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/"'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 408
+  text: '"`ABLATED`) ou o nome de artefato **da v0.1.3** "'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 409
+  text: '"(`PILOT-001-TEST-0007-…-AFTER_DEDUP-V0.1.3`), cravado no código. O nome "'
+  versions_seen:
+  - V0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 410
+  text: '"da v0.1.4 não está na lista.")'
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 414
+  text: '"para a 0.1.4.")'
+  versions_seen:
+  - 0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 432
+  text: '"`candidate_version` **fixo em `''0.1.3''`** no código. Congelar a "'
+  versions_seen:
+  - 0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 435
+  text: '"afirmação falsa de que a rodada é 0.1.3.")'
+  versions_seen:
+  - 0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 441
+  text: w("1. **Editar os freezers** para aceitar 0.1.4 — quebra a premissa de usar "
+  versions_seen:
+  - 0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 444
+  text: w("2. **Ajustar a entrada** para o formato que o validador da v0.1.3 aceita — "
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 445
+  text: '"resolveria o 3.1, mas não o 3.2, e o registry continuaria carimbando 0.1.3. "'
+  versions_seen:
+  - 0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 456
+  text: w("As instruções do juiz da v0.1.4 foram **derivadas** da v0.1.3 "
+  versions_seen:
+  - v0.1.3
+  - v0.1.4
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 460
+  text: + "; mais a tabela de hashes da rodada v0.1.4.")
+  versions_seen:
+  - v0.1.4
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: prerun_chain_v014.py
+  line: 462
+  text: 'w("Os nomes de arquivo da régua e dos addenda continuam `v0.1.3` de propósito: "'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 2
+  text: '"""STRUCTURAL-CEILING-REPORT FINAL — TEST-0007 v0.1.3.'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 29
+  text: BASE = DRIVE / "Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 31
+  text: RUBRIC = BASE / "JUDGE_RUBRIC_FROZEN/TEST-0007-RUBRIC-v0.1.3.yaml"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 32
+  text: DEST = DRIVE / "Course-to-Skill-Claude/docs/STRUCTURAL-CEILING-REPORT-v0.1.3.yaml"
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 36
+  text: '"PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.3.zip":'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 38
+  text: '"PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.3.zip":'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 132
+  text: ("PILOT-001-TEST-0007-FULL-AFTER_DEDUP-v0.1.3.zip", "full_after_dedup",
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 134
+  text: ("PILOT-001-TEST-0007-ABLATED-AFTER_DEDUP-v0.1.3.zip", "ablated_after_dedup",
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 190
+  text: '"schema_version": "0.1.0",'
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 191
+  text: '"artifact_id": "PILOT-001-TEST-0007-STRUCTURAL-CEILING-v0.1.3",'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: structural_ceiling_v013.py
+  line: 309
+  text: '"# STRUCTURAL-CEILING-REPORT — TEST-0007 v0.1.3\n"'
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: pilot002_holdout.py
+  line: 211
+  text: '"schema_version": "0.1.0",'
+  versions_seen:
+  - 0.1.0
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: é schema_version, não versão de candidato
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 2
+  text: '"""Conferência do pacote final-judge v0.1.2.'
+  versions_seen:
+  - v0.1.2
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 28
+  text: DEST = DOCS / "JUDGE_PACKAGE_VERIFICATION-v0.1.2.md"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 29
+  text: ADDENDUM = DOCS / "BASELINE_MANIFEST_ADDENDUM-v0.1.2-judge.txt"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 33
+  text: FILES = ["JUDGE_REPORT-v0.1.2.md", "validation-decision-v0.1.2.yaml",
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 34
+  text: '"blind-test-results-v0.1.2.yaml", "REVISION-PLAN-v0.1.3.yaml",'
+  versions_seen:
+  - v0.1.2
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 35
+  text: '"PILOT-001-v0.1.2-JUDGE-RESULTS.zip"]'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 56
+  text: base = DRIVE / "Course-to-Skill/PILOT-001/v0.1.2"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 85
+  text: zp = D / "PILOT-001-v0.1.2-JUDGE-RESULTS.zip"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 102
+  text: res = yaml.safe_load((D / "blind-test-results-v0.1.2.yaml").read_text(encoding="utf-8"))
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 103
+  text: dec = yaml.safe_load((D / "validation-decision-v0.1.2.yaml").read_text(encoding="utf-8"))
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 104
+  text: plan = yaml.safe_load((D / "REVISION-PLAN-v0.1.3.yaml").read_text(encoding="utf-8"))
+  versions_seen:
+  - v0.1.3
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 105
+  text: report_md = (D / "JUDGE_REPORT-v0.1.2.md").read_text(encoding="utf-8")
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 194
+  text: '# v0.1.1: existe alguma margem registrada?'
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 198
+  text: / "PILOT-001-judge-private-v0.1.1/PILOT-001-judge-private-v0.1.1"
+  versions_seen:
+  - v0.1.1
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 204
+  text: zj = (DRIVE / "Course-to-SkillPILOT-001v0.1.2"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 205
+  text: / "04_JUDGE-PRIVATE/PILOT-001-judge-private-v0.1.2.zip")
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 238
+  text: L = ["# ADENDO ao BASELINE_MANIFEST_20260810.txt — pacote final-judge v0.1.2",
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 246
+  text: L += ["#", "# Conteudo de PILOT-001-v0.1.2-JUDGE-RESULTS.zip:"]
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 259
+  text: 'A(f"# JUDGE_PACKAGE_VERIFICATION — v0.1.2 · pasta real: "'
+  versions_seen:
+  - v0.1.2
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 339
+  text: A(f"\n**Sobre o `+11` atribuído à v0.1.1:** o pacote contém "
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 340
+  text: f"**{d['v011']['mentions_in_package']} menções** à v0.1.1, e o "
+  versions_seen:
+  - v0.1.1
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 341
+  text: '"`validation-decision-template.yaml` da v0.1.1 segue em "'
+  versions_seen:
+  - v0.1.1
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 344
+  text: '"v0.1.1** — aquela rodada nunca foi executada. Se um `+11` foi atribuído a "'
+  versions_seen:
+  - v0.1.1
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 350
+  text: A("\n## 4. REVISION-PLAN-v0.1.3 — a correção está lá, textualmente\n")
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 358
+  text: A("E no `JUDGE_REPORT-v0.1.2.md`, §6, item 3, verbatim:\n")
+  versions_seen:
+  - v0.1.2
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 382
+  text: '"`07_REPORTS/final-judge/validation-decision-v0.1.2.yaml`",'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 384
+  text: '"`PILOT-001-judge-private-v0.1.2.zip`)"],'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: judge_package_verify.py
+  line: 395
+  text: '"material da v0.1.2 descrevendo estados incompatíveis do mesmo candidato: um "'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 2
+  text: '"""Diagnóstico de teto da régua — TEST-0007 e TEST-0008, v0.1.2 × v0.1.1.'
+  versions_seen:
+  - v0.1.1
+  - v0.1.2
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 26
+  text: V012 = DRIVE / "Course-to-SkillPILOT-001v0.1.2"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 35
+  text: EXPECTED_INPUTS = ["blind-test-results-v0.1.2.yaml", "JUDGE_REPORT-v0.1.2.md"]
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 156
+  text: '# ---- v0.1.2'
+  versions_seen:
+  - v0.1.2
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 159
+  text: z = (V012 / f"PILOT-001-TEST-{tid}-ARM-v0.1.2"
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 160
+  text: / f"PILOT-001-TEST-{tid}-ARM-{arm}-v0.1.2.zip")
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 162
+  text: j12 = unzip(V012 / "04_JUDGE-PRIVATE/PILOT-001-judge-private-v0.1.2.zip",
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 171
+  text: v012 = analyse("0.1.2", suite12, a12, m12)
+  versions_seen:
+  - 0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 176
+  text: '# ---- v0.1.1'
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 182
+  text: '# v0.1.1 não tem ARM_MAPPING; pelo tamanho, o braço completo é o maior'
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 189
+  text: v011 = analyse("0.1.1", suite11, a11, m11)
+  versions_seen:
+  - 0.1.1
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 223
+  text: 'for ver, key in (("v0.1.2", "v012"), ("v0.1.1", "v011")):'
+  versions_seen:
+  - v0.1.1
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 290
+  text: 'for ver, key in (("0.1.1", "v011"), ("0.1.2", "v012")):'
+  versions_seen:
+  - 0.1.1
+  - 0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 303
+  text: 'for ver, key in (("0.1.1", "v011"), ("0.1.2", "v012")):'
+  versions_seen:
+  - 0.1.1
+  - 0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 311
+  text: A("\n**A folga não encolheu entre as versões — ela já era insuficiente na v0.1.1 "
+  versions_seen:
+  - v0.1.1
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 312
+  text: '"e continua idêntica na v0.1.2.** O que mudou foi a substância: o `SKILL.md` "'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal é caminho ou nome de arquivo versionado
+- source_tree: REPO
+  file: rubric_ceiling_report.py
+  line: 322
+  text: A("**Escopo:** medição apenas. A v0.1.2 não foi tocada, nenhuma v0.1.3 foi "
+  versions_seen:
+  - v0.1.2
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: texto de relatório emitido, não lógica de validação
+- source_tree: REPO
+  file: coverage_map.py
+  line: 181
+  text: '"nenhum caso de teste foi escrito, a v0.1.2 não foi tocada.\n")'
+  versions_seen:
+  - v0.1.2
+  classification: VERSION_SPECIFIC_CANARY_FIXTURE_PATH
+  blocking_class_candidate: false
+  why: literal de versão sem papel de validação identificado
+- source_tree: REPO_CTS
+  file: cts/rubric_ceiling.py
+  line: 130
+  text: '# Teto ESTRUTURAL a partir de score_anchors pré-declaradas (v0.1.3+)'
+  versions_seen:
+  - v0.1.3
+  classification: DOCUMENTATION_OR_EXAMPLE
+  blocking_class_candidate: false
+  why: literal dentro de docstring ou comentário
+no_fix_applied: true
+note: 'Nada foi corrigido. Nenhum script auditado foi editado. Esta varredura é estática: não prova que
+  um literal bloqueante dispara numa rodada concreta, só que ele está em posição de disparar. A confirmação
+  empírica é o ensaio seco.'

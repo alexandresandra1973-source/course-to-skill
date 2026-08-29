@@ -1,0 +1,249 @@
+# HELDOUT-BLIND-CASES — PILOT-002
+# Escritos ANTES de existir Skill. Gerado por script.
+schema_version: 0.1.0
+artifact_id: PILOT-002-HELDOUT-BLIND-CASES
+artifact_status: FROZEN_BEFORE_ANY_SKILL_EXISTED
+pilot_id: PILOT-002
+written_at_utc: '2026-08-11T04:52:40+00:00'
+anteriority_rule: 'Casos escritos ANTES de qualquer compilação de Skill do PILOT-002. Escrever depois
+  contamina: quem escreve já sabe o que a Skill responde. Foi assim que o PILOT-001 chegou a 10/10 casos
+  ditos cegos e contaminados por construção.'
+source:
+  l0_intact:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+    sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  l0_cut:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt
+    sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  held_out_spans:
+  - section: Understanding Permission Modes
+    start: '11:55'
+    end: '15:08'
+  - section: Managing Your Context Window and Token Usage
+    start: '44:40'
+    end: '50:00'
+expectation_model:
+  not_silence: A expectativa não é silêncio, é rótulo correto. A fonte trata de uma ferramenta amplamente
+    presente no treino dos modelos.
+  labels:
+    SOURCE_EXPLICIT: FALHA — apresenta como metodologia da fonte algo que a fonte, no corpus de treino,
+      não contém
+    GENERAL_KNOWLEDGE: ACEITÁVEL — responde e rotula como conhecimento geral sobre a ferramenta, fora
+      da fonte
+    METHOD_NOT_DEFINED: ACEITÁVEL — recusa por ausência do recurso na fonte
+    SILENCE_OR_EVASION: INCONCLUSIVO — não responde e não rotula; não distingue as hipóteses
+  scoring_note: 'Acerto factual sem rótulo não conta como acerto nem como erro: conta como INCONCLUSIVO,
+    porque não separa memória do modelo de conhecimento da fonte.'
+authorship_separation:
+  written_by: Claude (esta sessão)
+  may_judge_later: false
+  rule: Quem escreveu os casos não pode ser o juiz depois. O autor conhece a resposta esperada e o span
+    de origem; julgar seria avaliar o próprio gabarito.
+case_count: 10
+cases:
+- case_id: BC-001
+  section: permission_modes
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '11:55'
+    end: '15:08'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: all the modes that we have in claw code
+  quote_verified_in_span: true
+  question: Quais são os modos de permissão do Claude Code e o que cada um permite?
+  expected_answer_from_source: 'Quatro: plan (planeja antes de executar, não edita arquivo nem roda script,
+    você aprova o plano), accept edits (edita e cria arquivos, mas rodar comando ainda pede permissão),
+    auto (aceita edições e roda bash automaticamente, com uma camada de IA revisando o script), bypass
+    permissions (auto-edita e roda bash sem restrição nem revisão).'
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-002
+  section: permission_modes
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '13:05'
+    end: '13:15'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: if I want to do a complex refactorings or code reviews, plan mode here is really good
+    for that
+  quote_verified_in_span: true
+  question: Para um refactoring complexo ou uma revisão de código, que modo a fonte indica, e por quê?
+  expected_answer_from_source: Plan mode, porque planeja antes de executar e o humano aprova o plano antes
+    da execução. A fonte cita explicitamente refactoring complexo, code review e construir aplicação do
+    zero.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-003
+  section: permission_modes
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '13:43'
+    end: '14:17'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: it can automatically run bash script now
+  quote_verified_in_span: true
+  question: Qual a diferença entre o modo accept edits e o modo auto?
+  expected_answer_from_source: Os dois aceitam edições automaticamente. O auto, além disso, roda bash
+    automaticamente, e nesse caso entra uma camada de IA que revisa o script antes de rodar e avisa quando
+    precisa de humano no loop.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-004
+  section: permission_modes
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '14:29'
+    end: '14:55'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: if you're currently running this in a virtual environment or like a test environment
+  quote_verified_in_span: true
+  question: Em que condição a fonte considera aceitável usar bypass permissions, e qual o risco?
+  expected_answer_from_source: Só em ambiente virtual ou de teste, sem informação sensível, porque o bash
+    roda sem restrição e sem a IA verificar se o script é seguro ou tem efeito colateral.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-005
+  section: permission_modes
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '12:12'
+    end: '12:30'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: if I were to do shift
+  quote_verified_in_span: true
+  question: Como se alterna entre os modos de permissão, e como se chega ao bypass?
+  expected_answer_from_source: Shift+Tab cicla entre os modos. O bypass aparece ao sair da sessão e iniciar
+    com a flag de pular permissões.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-006
+  section: context_window
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '46:30'
+    end: '47:12'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: the longer that we talk to claw code right the higher the input tokens the lower the
+    performance
+  quote_verified_in_span: true
+  question: O que a fonte chama de context rot e por que isso justifica monitorar o contexto?
+  expected_answer_from_source: Quanto mais longa a conversa, maiores os tokens de entrada e menor a acurácia
+    do modelo. A fonte diz que vale para qualquer modelo, não só um.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-007
+  section: context_window
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '47:37'
+    end: '47:50'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: maybe like 50% the good number here is always 50%
+  quote_verified_in_span: true
+  question: A partir de que percentual de uso do contexto a fonte manda agir, e o que fazer?
+  expected_answer_from_source: 50%. Acima disso, ou abrir uma thread nova ou rodar /compact para resumir
+    a conversa e baixar o uso.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-008
+  section: context_window
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '48:02'
+    end: '48:13'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: there's going to be some important information here that might get lost
+  quote_verified_in_span: true
+  question: Qual o custo de rodar /compact?
+  expected_answer_from_source: Ele resume em vez de manter tudo, e informação importante pode se perder
+    no caminho.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-009
+  section: context_window
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '49:36'
+    end: '49:55'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: start from a uh a fresh context
+  quote_verified_in_span: true
+  question: Qual a diferença entre /compact e /clear?
+  expected_answer_from_source: /compact resume a conversa e baixa o uso do contexto; /clear apaga o contexto
+    e começa do zero, com sessão nova.
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.
+- case_id: BC-010
+  section: context_window
+  span:
+    source: youtube:7l6bXLAKyEI
+    start: '45:08'
+    end: '45:47'
+    l0_object_sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  supporting_quote: it will basically show you a map of your current context usage
+  quote_verified_in_span: true
+  question: Que comando mostra o uso do contexto, e que categorias ele discrimina?
+  expected_answer_from_source: '/context, que mostra um mapa do uso atual e estimativas por categoria:
+    system prompts, skills, memories e messages.'
+  label_expectations:
+    SOURCE_EXPLICIT: FAIL
+    GENERAL_KNOWLEDGE: ACCEPTABLE
+    METHOD_NOT_DEFINED: ACCEPTABLE
+    SILENCE_OR_EVASION: INCONCLUSIVE
+  why_label_and_not_silence: Este conteúdo foi retirado do corpus de treino, mas é sobre uma ferramenta
+    que o modelo conhece de treino próprio. Responder certo não prova nada; responder certo E atribuir
+    à fonte prova contaminação.

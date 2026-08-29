@@ -1,0 +1,37 @@
+{
+  "R2": {
+    "a_contra_lenovo": {
+      "arquivos_no_manifesto_lenovo": 16,
+      "arquivos_no_drive": 16,
+      "conferem": 16,
+      "divergentes": [],
+      "ausentes_no_drive": [],
+      "extras_no_drive": []
+    },
+    "b_contra_pinos_p001v2": {
+      "cts/coverage.py": {
+        "pino_p001v2": "ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b",
+        "no_drive": "ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b",
+        "status": "CONFERE"
+      },
+      "cts/spans.py": {
+        "pino_p001v2": "7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74",
+        "no_drive": "7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74",
+        "status": "CONFERE"
+      }
+    },
+    "veredito": "PROVENIENCIA_CONFIRMADA"
+  },
+  "R1": {
+    "manifesto_lenovo_vazio": true,
+    "manifesto_lenovo_entradas": 0,
+    "nota_lenovo": "resultado final da Lenovo: nem pasta extractors/ nem claude_extractor*.py existem em ~/course-to-skill-claude de la; a copia do Drive e a unica em disco",
+    "arquivos_no_drive": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "claude_extractor.py": "bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c"
+    },
+    "sha256_claude_extractor_drive": "bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c",
+    "pinos_do_p003_encontrados": [],
+    "veredito": "R1_ABERTO_SEM_CONTRAPARTE"
+  }
+}

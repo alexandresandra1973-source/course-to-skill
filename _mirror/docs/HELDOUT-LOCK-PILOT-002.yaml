@@ -1,0 +1,157 @@
+# HELDOUT-LOCK — PILOT-002
+# Selado ANTES de qualquer extração. Gerado por script.
+schema_version: 0.1.0
+artifact_id: PILOT-002-HELDOUT-LOCK
+artifact_status: SEALED_BEFORE_EXTRACTION
+pilot_id: PILOT-002
+gate: G1
+selection_method: DECLARED_SPAN
+selection_method_note: 'Corte por span declarado, não por sorteio. `cts/cutter.cut()` faz amostragem semeada
+  e NÃO foi usado: aqui as duas seções foram nomeadas de antemão. Usados `segment_by_marks`, `overlaps`
+  e `train_corpus` do mesmo módulo.'
+cut_preceded_extraction: true
+cut_preceded_extraction_declaration: Este lock foi selado antes de qualquer extração de L1, compilação
+  ou escrita de rubrica sobre o PILOT-002. A seleção é por posição de marca de tempo; nenhum conteúdo
+  foi lido para decidir o corte.
+held_out_spans:
+- section: Understanding Permission Modes
+  declared_start: '11:55'
+  declared_end: '15:08'
+  start_seconds: 715
+  end_seconds: 908
+  span: L0:43b58271feb0:t=00:11:55-00:15:08
+- section: Managing Your Context Window and Token Usage
+  declared_start: '44:40'
+  declared_end: '50:00'
+  start_seconds: 2680
+  end_seconds: 3000
+  span: L0:43b58271feb0:t=00:44:40-00:50:00
+segments:
+  total: 818
+  held_out: 86
+  training: 732
+  held_out_fraction: 0.1051
+held_out_segment_spans:
+- L0:43b58271feb0:t=00:11:55-00:12:00
+- L0:43b58271feb0:t=00:12:00-00:12:06
+- L0:43b58271feb0:t=00:12:06-00:12:12
+- L0:43b58271feb0:t=00:12:12-00:12:18
+- L0:43b58271feb0:t=00:12:18-00:12:24
+- L0:43b58271feb0:t=00:12:24-00:12:30
+- L0:43b58271feb0:t=00:12:30-00:12:35
+- L0:43b58271feb0:t=00:12:35-00:12:42
+- L0:43b58271feb0:t=00:12:42-00:12:47
+- L0:43b58271feb0:t=00:12:47-00:12:53
+- L0:43b58271feb0:t=00:12:53-00:12:59
+- L0:43b58271feb0:t=00:12:59-00:13:05
+- L0:43b58271feb0:t=00:13:05-00:13:10
+- L0:43b58271feb0:t=00:13:10-00:13:15
+- L0:43b58271feb0:t=00:13:15-00:13:20
+- L0:43b58271feb0:t=00:13:20-00:13:26
+- L0:43b58271feb0:t=00:13:26-00:13:32
+- L0:43b58271feb0:t=00:13:32-00:13:37
+- L0:43b58271feb0:t=00:13:37-00:13:43
+- L0:43b58271feb0:t=00:13:43-00:13:49
+- L0:43b58271feb0:t=00:13:49-00:13:55
+- L0:43b58271feb0:t=00:13:55-00:14:00
+- L0:43b58271feb0:t=00:14:00-00:14:06
+- L0:43b58271feb0:t=00:14:06-00:14:12
+- L0:43b58271feb0:t=00:14:12-00:14:17
+- L0:43b58271feb0:t=00:14:17-00:14:23
+- L0:43b58271feb0:t=00:14:23-00:14:29
+- L0:43b58271feb0:t=00:14:29-00:14:35
+- L0:43b58271feb0:t=00:14:35-00:14:42
+- L0:43b58271feb0:t=00:14:42-00:14:49
+- L0:43b58271feb0:t=00:14:49-00:14:55
+- L0:43b58271feb0:t=00:14:55-00:15:01
+- L0:43b58271feb0:t=00:15:01-00:15:08
+- L0:43b58271feb0:t=00:44:40-00:44:45
+- L0:43b58271feb0:t=00:44:45-00:44:50
+- L0:43b58271feb0:t=00:44:50-00:44:57
+- L0:43b58271feb0:t=00:44:57-00:45:02
+- L0:43b58271feb0:t=00:45:02-00:45:08
+- L0:43b58271feb0:t=00:45:08-00:45:14
+- L0:43b58271feb0:t=00:45:14-00:45:20
+- L0:43b58271feb0:t=00:45:20-00:45:27
+- L0:43b58271feb0:t=00:45:27-00:45:34
+- L0:43b58271feb0:t=00:45:34-00:45:41
+- L0:43b58271feb0:t=00:45:41-00:45:47
+- L0:43b58271feb0:t=00:45:47-00:45:53
+- L0:43b58271feb0:t=00:45:53-00:45:59
+- L0:43b58271feb0:t=00:45:59-00:46:05
+- L0:43b58271feb0:t=00:46:05-00:46:12
+- L0:43b58271feb0:t=00:46:12-00:46:18
+- L0:43b58271feb0:t=00:46:18-00:46:23
+- L0:43b58271feb0:t=00:46:23-00:46:30
+- L0:43b58271feb0:t=00:46:30-00:46:36
+- L0:43b58271feb0:t=00:46:36-00:46:42
+- L0:43b58271feb0:t=00:46:42-00:46:47
+- L0:43b58271feb0:t=00:46:47-00:46:53
+- L0:43b58271feb0:t=00:46:53-00:46:59
+- L0:43b58271feb0:t=00:46:59-00:47:06
+- L0:43b58271feb0:t=00:47:06-00:47:12
+- L0:43b58271feb0:t=00:47:12-00:47:18
+- L0:43b58271feb0:t=00:47:18-00:47:25
+- L0:43b58271feb0:t=00:47:25-00:47:32
+- L0:43b58271feb0:t=00:47:32-00:47:37
+- L0:43b58271feb0:t=00:47:37-00:47:43
+- L0:43b58271feb0:t=00:47:43-00:47:50
+- L0:43b58271feb0:t=00:47:50-00:47:55
+- L0:43b58271feb0:t=00:47:55-00:48:02
+- L0:43b58271feb0:t=00:48:02-00:48:08
+- L0:43b58271feb0:t=00:48:08-00:48:13
+- L0:43b58271feb0:t=00:48:13-00:48:20
+- L0:43b58271feb0:t=00:48:20-00:48:25
+- L0:43b58271feb0:t=00:48:25-00:48:32
+- L0:43b58271feb0:t=00:48:32-00:48:37
+- L0:43b58271feb0:t=00:48:37-00:48:43
+- L0:43b58271feb0:t=00:48:43-00:48:49
+- L0:43b58271feb0:t=00:48:49-00:48:55
+- L0:43b58271feb0:t=00:48:55-00:49:02
+- L0:43b58271feb0:t=00:49:02-00:49:08
+- L0:43b58271feb0:t=00:49:08-00:49:14
+- L0:43b58271feb0:t=00:49:14-00:49:19
+- L0:43b58271feb0:t=00:49:19-00:49:25
+- L0:43b58271feb0:t=00:49:25-00:49:31
+- L0:43b58271feb0:t=00:49:31-00:49:36
+- L0:43b58271feb0:t=00:49:36-00:49:43
+- L0:43b58271feb0:t=00:49:43-00:49:49
+- L0:43b58271feb0:t=00:49:49-00:49:55
+- L0:43b58271feb0:t=00:49:55-00:50:00
+l0_intact:
+  path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+  sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  bytes: 107653
+  marks: 819
+l0_cut:
+  path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt
+  sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  bytes: 96246
+  marks: 733
+training_corpus_hash: c1ea9101558fd0045942b36ce521cfa085dfb41a87ef82629ff5fd8b46710cd6
+residue_disclosed:
+  what: Títulos de seção das faixas retiradas. Não têm marca de tempo, portanto não são endereçáveis pela
+    gramática `t=` e um corte por span não os alcança.
+  decision: MANTIDOS. Removê-los seria cortar além dos spans declarados, e a tarefa pede corte exato.
+    Ficam declarados aqui para quem for extrair.
+  risk: O título nomeia o assunto retirado. O conteúdo saiu inteiro, mas o rótulo permanece visível no
+    treino.
+  items:
+  - line: '## Understanding Permission Modes (Plan, Accept Edits, Auto, Bypass)'
+    opens_section_at: '11:55'
+    still_in_training_corpus: true
+  - line: '## Managing Your Context Window and Token Usage'
+    opens_section_at: '44:40'
+    still_in_training_corpus: true
+content_excision_complete:
+  marks_of_named_sections_outside_declared_spans: 0
+  verified: 'Conferido: as duas seções nomeadas ficam inteiramente dentro dos spans declarados, então
+    nenhuma fala delas sobrou no corpus de treino.'
+sealed_at_utc: '2026-08-11T04:07:26+00:00'
+determinism_check:
+  runs: 2
+  fingerprint_run_1: 7a3fa9975d19cba784d097f88ad7514ef613fbe590c360876d8b421d1475bfc0
+  fingerprint_run_2: 7a3fa9975d19cba784d097f88ad7514ef613fbe590c360876d8b421d1475bfc0
+  cut_text_identical: true
+  lock_identical: true
+  note: 'Corte por span não tem semente: o determinismo vem de não haver sorteio nenhum.'

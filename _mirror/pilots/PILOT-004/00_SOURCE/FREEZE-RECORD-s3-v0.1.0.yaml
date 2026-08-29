@@ -1,0 +1,112 @@
+artifact_id: COMPILER-S3-FREEZE-RECORD
+compiler_version: compiler-s3/0.1.0
+frozen_at_utc: '2026-08-14T04:58:47.130822+00:00'
+frozen_by_machine: bot-04 (MacBook Pro M4 Max, macOS 26.5.2, arm64)
+python: 3.12.13 (~/venv-mtx)
+PRIMEIRO_FREEZE: o compiler-s3 nunca teve FREEZE-RECORD. Existiam apenas dois resultados de canario soltos
+  (CANARY-STATIC-RESULT.json e CANARY-FAILCLOSED-RESULT.json), sem registro que os ancorasse a um conjunto
+  de arquivos. Este e o primeiro.
+ADITIVO_NAO_MUTACAO: 'nenhum arquivo de compiler-s3 foi alterado, sobrescrito ou movido. As suites rodaram
+  sobre copia local conferida byte-a-byte (14/14), com um unico diff de caminho aplicado SO NA COPIA (constante
+  DRIVE: /mnt/g -> ponto de montagem do Drive neste Mac).'
+papel: 'estagio evidencia->Skill (PASS 3). NAO e o compiler-v2: aquele faz PASS 1 e PASS 2 e esta selado
+  em v0.2.0/v0.2.1. Correcao registrada como P-3.'
+inventory_set_sha256: 115a3773dec3f171072b3769e3ca09d6c52cead0c8000f8455efbafeac4d927c
+arquivos_selados: 14
+files:
+- path: canary/CANARY-FAILCLOSED-RESULT.json
+  sha256: 21825c41a5feec900bfe6cd52f63fa96eb0a11ea7ef2c4c3be40bfba83f100ca
+  bytes: 3706
+- path: canary/CANARY-STATIC-RESULT.json
+  sha256: 1ebeb2f9f4a887bde1eeef4807652861ec343bfb1810a82d4df6fa29104683d6
+  bytes: 3177
+- path: canary/derived-runtime-policy.yaml
+  sha256: 2f42f8645d14fa1a579dfa926388ff07c559ce70cb2316a4f20ca1f22375a8f0
+  bytes: 3662
+- path: canary/run_canary.py
+  sha256: 56536deecf6c604eb7b382059320e7193d44110ec6fee8036cb409cb4d5b08d4
+  bytes: 9532
+- path: canary/run_failclosed_canary.py
+  sha256: a7db7a5da20b46a767233808f5184b2d21274279c543310392b6090e0b1542ed
+  bytes: 7875
+- path: ctss/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+- path: ctss/assemble.py
+  sha256: 2980f80dd14d0df9128bedecdd149ced3e4d6b18e60ff7df292437dc36ef2b06
+  bytes: 3484
+- path: ctss/classify.py
+  sha256: 22947f0cbdb1e64836c8e9a5c0a6d08f6e807faf7adc96ffb3d91520fd65d87c
+  bytes: 2355
+- path: ctss/emit.py
+  sha256: 7f670226ffdaeca3f5899df7d5a86e53fb11b335d74c7dae8c4fe74e342f58b7
+  bytes: 5293
+- path: ctss/policy.py
+  sha256: 3235188857faa98182297f37e5e7cf2436597afc4aa1aff31dd275438c6feb7b
+  bytes: 3547
+- path: ctss/schema.py
+  sha256: b8fd8c95a65a13969daefa0a8175de71abaabb46599fc0e94dd1a5a3d1788dfc
+  bytes: 3168
+- path: ctss/validate.py
+  sha256: 3e8b8b0cd5f570ffe0f97570410ea74f741be129d2fffd9ea7eb617443e03dfb
+  bytes: 5297
+- path: run_assemble.py
+  sha256: f0a92eef845b50d9ed4a1c108019a711e3846156089f4bcd4fc79fab02d93b6b
+  bytes: 11987
+- path: run_compile.py
+  sha256: 2c76ce108a478c0a9e70dfb02e6dea51de482c7780ae3eef97b62e9dd48347e0
+  bytes: 9295
+dependencias_externas:
+  cts:
+    instalado_em: /Users/alexandresandra/course-to-skill-claude/cts/
+    conferido: 16/16 contra CTS-HASHES-EXT4-LENOVO-20260813.txt
+  detectores_de_corrupcao:
+    instalados_em: /Users/alexandresandra/course-to-skill-claude/
+    origem: Course-to-Skill-Claude/lenovo-s3-deps/ (publicado pela Lenovo)
+    conferidos: 3/3 contra DEPS-HASHES-EXT4-LENOVO-20260814.txt
+    sha256:
+      DEPS-HASHES-EXT4-LENOVO-20260814.txt: 0e30baf4e1166592de2d32dff7c41f1b6ef4f6de11441819016ca62b977e13e3
+      detector_recall_fix.py: 25106c83c6cdc0a263f45981f157eff43abe69e17a15d057a54517bc73e2af71
+      distance-lines-PILOT-003-v2.json: f51b3727aeb13a48c96109285d1b81c80bfa61e390f5f3aa9a02f6cb0d7a7870
+      scan_source_corruption.py: 491369942e7772e05cb1090ebd0d5f563bf56b20ce4579b07e13ac677050f580
+    nota_de_caminho: ctss/classify.py insere '/home/mtx/course-to-skill-claude' no sys.path, caminho da
+      Lenovo. Resolvido por PYTHONPATH no ambiente — o arquivo NAO foi editado.
+canary:
+  HERDADO: false
+  nota: placares produzidos no bot-04; os resultados guardados NAO foram herdados
+  executado_em_utc: '2026-08-14T04:58:47.131025+00:00'
+  estatico:
+    suite: canary/run_canary.py
+    resultado_bot04: APROVADO
+    placar_bot04: 15/15
+    resultado_guardado_no_drive: true
+    reproduziu: true
+  failclosed:
+    suite: canary/run_failclosed_canary.py
+    resultado_bot04: NAO_EXECUTAVEL
+    erro: 'KeyError: ''name'' em ctss/emit.py:54 (render_router)'
+    causa: 'a fixture chama emit.render_router(workflows=[{''workflow_id'': ''WF-0001''}]), sem a chave
+      ''name''. O render_router atual EXIGE w[''name''] — o proprio docstring dele registra a mudanca
+      (''as rotas passam a usar o NOME do workflow''). A fixture nao acompanhou a mudanca do emit.py.'
+    nao_e_defeito_do_compilador: o erro esta na fixture do canario, nao no caminho de producao. Mas significa
+      que a protecao fail-closed NAO esta sendo exercitada.
+    resultado_guardado_no_drive: true
+    reproduziu: false
+    consequencia: 'o CANARY-FAILCLOSED-RESULT.json guardado (approved: true) NAO e reproduzivel neste
+      estado de codigo. Ele atesta uma combinacao fixture+emit.py que nao existe mais — mesmo padrao encontrado
+      no compiler-v2 no BLOCO 1.'
+    nao_consertado_por_decisao: 'consertar a fixture seria alterar o compilador que este registro sela.
+      R4: PENDENTE-ALEXANDRE.'
+    chamadas_de_api_gastas: 0
+  veredito: FREEZE-COM-CANARIO-PARCIAL
+  veredito_explicado: 'nao e FREEZE-SEM-CANARIO: a suite estatica rodou inteira e passou 15/15 nesta maquina,
+    com data. Mas nao e freeze com canario completo: o unico caso que exercita a recusa fail-closed com
+    chamada real nao executa.'
+pre_classificacao_caminhos:
+  P1_lost_negation_corrupted_name: DISPONIVEL (scan_source_corruption.py)
+  P2_corrupted_name_lower: DISPONIVEL (detector_recall_fix.py)
+  P3_ALIAS: DISPONIVEL (dicionario dentro do proprio classify.py)
+  P4_PARAPHRASE: INDISPONIVEL PARA O PILOT-004. O distance-lines publicado e o do PILOT-003-v2 (247 entradas,
+    59 'sem distancia'), e os evidence_id colidem entre pilotos — reusa-lo classificaria evidencia do
+    P004 pela distancia medida de outra evidencia do P003. Nao veio gerador. O P004 roda com paraphrase_ids
+    VAZIO e a limitacao fica declarada.

@@ -1,0 +1,129 @@
+--- F7/freeze_margin_lock.py
++++ scorer-v2/freeze_margin_lock.py
+@@ -27,6 +27,84 @@
+ TOL = 0.01
+ HEX64 = re.compile(r"^[0-9a-fA-F]{64}$")
+ CANDIDATE_VERSION = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
++
++
++# ---------------------------------------------------------------------------
++# EXTENSÃO: duas comparações dentro de um mesmo teste (ver scorer-v2).
++# A ligação comparison_id -> (esquerda, direita) é a MESMA constante do scorer,
++# repetida aqui de propósito: o freezer e o scorer têm de recusar a mesma troca
++# de seletores, e um import entre os dois criaria acoplamento onde hoje há dois
++# guardas independentes.
++CANONICAL_COMPARISON_SETS: dict[str, dict[str, tuple[str, str]]] = {
++    "TEST-0008": {
++        "P": ("FULL_SKILL", "SUMMARY_AS_SUMMARY"),
++        "F": ("SUMMARY_AS_SKILL", "SUMMARY_AS_SUMMARY"),
++    },
++}
++
++
++def expand_for_freeze(comparisons_policy: dict, defs: dict, errors: list):
++    """Percorre (tid, policy, comparison_id, definicao).
++
++    Lock legado -> uma entrada com comparison_id None: o TEST-0007, intocado.
++    comparison_set -> uma entrada por comparison_id, MATERIALIZADA no rascunho,
++    para que cada comparacao carregue os seus proprios hashes e tetos depois de
++    congelada e nenhuma dependa de heranca implicita na hora da leitura.
++    """
++    for tid, policy in comparisons_policy.items():
++        ldef = defs.get(tid)
++        canon = CANONICAL_COMPARISON_SETS.get(canonical(tid))
++        cset = ldef.get("comparison_set") if isinstance(ldef, dict) else None
++        if not isinstance(cset, dict):
++            if canon is not None:
++                errors.append({"code": "COMPARISON_ID_MISSING", "test_id": tid,
++                               "expected_comparison_ids": sorted(canon),
++                               "detail": "test declares a canonical comparison set; a single flat comparison is not accepted"})
++                continue
++            yield tid, policy, None, ldef
++            continue
++        if canon is None:
++            errors.append({"code": "UNKNOWN_COMPARISON_ID", "test_id": tid,
++                           "detail": "comparison_set given for a test with no canonical comparison set"})
++            continue
++        missing = sorted(set(canon) - set(cset))
++        if missing:
++            errors.append({"code": "COMPARISON_SET_INCOMPLETE", "test_id": tid,
++                           "missing_comparison_ids": missing,
++                           "detail": "every comparison of the canonical set must be frozen in the same lock"})
++            continue
++        shared = {k: v for k, v in ldef.items() if k != "comparison_set"}
++        for cid in sorted(cset):
++            entry = cset[cid]
++            if not isinstance(entry, dict):
++                errors.append({"code": "UNKNOWN_COMPARISON_ID", "test_id": tid,
++                               "comparison_id": cid, "detail": "comparison entry is not a mapping"})
++                continue
++            if cid not in canon:
++                errors.append({"code": "UNKNOWN_COMPARISON_ID", "test_id": tid,
++                               "comparison_id": cid, "known_comparison_ids": sorted(canon),
++                               "detail": "comparison_id is not part of the canonical comparison set"})
++                continue
++            for k, v in shared.items():
++                entry.setdefault(k, v)
++            want_left, want_right = canon[cid]
++            got_left = canonical((entry.get("left") or {}).get("arm_id"))
++            got_right = canonical((entry.get("right") or {}).get("arm_id"))
++            if (got_left, got_right) != (want_left, want_right):
++                errors.append({"code": "COMPARISON_SELECTOR_BINDING_MISMATCH",
++                               "test_id": tid, "comparison_id": cid,
++                               "expected": {"left": want_left, "right": want_right},
++                               "observed": {"left": got_left, "right": got_right},
++                               "detail": "selectors do not match the canonical binding frozen in the freezer"})
++                continue
++            yield tid, policy, cid, entry
++
++
++def _tag_errors(errors: list, mark: int, cid) -> None:
++    if cid is None:
++        return
++    for e in errors[mark:]:
++        e.setdefault("comparison_id", cid)
+ 
+ 
+ def load_yaml(path: Path) -> Any:
+@@ -283,9 +361,14 @@
+     defs = draft.get("comparisons") or {}
+     errors: list[dict[str, Any]] = []
+ 
+-    for tid, policy in comparisons_policy.items():
++    _expanded = list(expand_for_freeze(comparisons_policy, defs, errors))
++    _mark, _cid_prev = len(errors), None
++    for tid, policy, _cid, ldef in _expanded:
++        # Marca os erros da iteracao ANTERIOR com o seu comparison_id. Feito na
++        # entrada, e nao na saida, porque o corpo tem varios `continue`.
++        _tag_errors(errors, _mark, _cid_prev)
++        _mark, _cid_prev = len(errors), _cid
+         tid_key = canonical(tid)
+-        ldef = defs.get(tid)
+         test = suite.get(tid_key)
+         if not isinstance(ldef, dict) or not test:
+             errors.append({"code": "POST_HOC_MARGIN_THRESHOLD", "test_id": tid, "detail": "comparison definition or test missing"})
+@@ -468,6 +551,7 @@
+             if not math.isfinite(max_reg) or max_reg < 0:
+                 errors.append({"code": "INVALID_ABLATION_FULL_REGRESSION", "test_id": tid, "detail": "max_total_regression must be finite and non-negative"})
+ 
++    _tag_errors(errors, _mark, _cid_prev)
+     if errors:
+         print(yaml.safe_dump({"status": "INVALID", "errors": errors}, sort_keys=False, allow_unicode=True))
+         return 2
+@@ -480,6 +564,16 @@
+         "arithmetic_ceiling_formula": "sum(weight_i * (100 - right_floor_i)); right_floor_i = 0 for frozen predeclared right-arm fail-closed exceptions, else minimum_score if mandatory, else 0",
+         "structural_ceiling_required_for": [tid for tid, p in comparisons_policy.items() if p.get("structural_ceiling_required")],
+         "threshold_rule": "frozen_anchor_boundary_with_predeclared_inconclusive_zone_and_absolute_discriminability_floor",
++        "comparison_sets": {
++            tid: {"comparison_ids": sorted(CANONICAL_COMPARISON_SETS[canonical(tid)]),
++                  "independent": False,
++                  "shared_component": "SUMMARY_AS_SUMMARY",
++                  "note": ("P e F subtraem o mesmo braco de baseline; nao sao duas "
++                           "observacoes independentes e o instrumento nao pode "
++                           "combina-las como se fossem")}
++            for tid in comparisons_policy
++            if canonical(tid) in CANONICAL_COMPARISON_SETS
++        },
+         "note": "Thresholds, phase-specific arm hashes, preservation distinctness, and reachability were validated before lock emission.",
+     })
+     out = Path(args.out)

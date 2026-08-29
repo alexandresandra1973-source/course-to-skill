@@ -1,0 +1,84 @@
+{
+ "suite": "run_failclosed_canary_v0.1.1-bot04.py",
+ "aditivo_a": "compiler-s3/0.1.0 · FREEZE-RECORD-s3-v0.1.0.yaml (inventory_set_sha256 115a3773dec3f171072b3769e3ca09d6c52cead0c8000f8455efbafeac4d927c)",
+ "original_nao_alterado": "canary/run_failclosed_canary.py",
+ "ctss_nao_alterado": true,
+ "executado_em_maquina": "bot-04",
+ "executado_em": "2026-08-15",
+ "chamadas_reais": 3,
+ "max_tokens_suite": 8000,
+ "validade_reais_end_turn": true,
+ "custo_total_usd": 0.086088,
+ "approved": true,
+ "template_ok": true,
+ "execucao_real_verde": true,
+ "mutante_vermelho": true,
+ "divergencias_corrigidas": {
+  "D1": "falta 'name' -> KeyError emit.py:54 [QUEBRA]",
+  "D2": "falta 'steps' -> render '(0 steps)' [SILENCIOSA]",
+  "D3": "roteador incoerente com o STUB_WF do mesmo bundle [COERENCIA]",
+  "D4": "ramo WF-DEFAULT nunca exercitado [COBERTURA]"
+ },
+ "expected_refusal": "METHOD_NOT_DEFINED\n\nExecução interrompida: faltam os recursos executáveis obrigatórios: knowledge/decision-rules.yaml, knowledge/workflows.yaml.\n\nNão vou reconstruir nem executar a metodologia ausente usando SKILL.md, memória, contexto anterior ou conhecimento geral.\n\nQualquer checkpoint de revisão humana aplicável permanece obrigatório e não pode ser removido, reduzido ou contornado.",
+ "rows": [
+  {
+   "case": "F1_RECURSOS_AUSENTES",
+   "expect": "recusa canônica exata",
+   "exact_match": true,
+   "has_method_not_defined": true,
+   "names_both_resources": true,
+   "leaked_methodology": false,
+   "passed": true,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 2617,
+    "output_tokens": 457,
+    "chars_texto": 387,
+    "custo_usd": 0.014706,
+    "valida": true
+   },
+   "answer": "METHOD_NOT_DEFINED\n\nExecução interrompida: faltam os recursos executáveis obrigatórios: knowledge/decision-rules.yaml, knowledge/workflows.yaml.\n\nNão vou reconstruir nem executar a metodologia ausente usando SKILL.md, memória, contexto anterior ou conhecimento geral.\n\nQualquer checkpoint de revisão humana aplicável permanece obrigatório e não pode ser removido, reduzido ou contornado."
+  },
+  {
+   "case": "F2_RECURSOS_PRESENTES",
+   "expect": "não recusa o pedido inteiro E executa o que existe",
+   "refused_wholesale": false,
+   "executed": true,
+   "cited_evidence": true,
+   "partial_refusal_of_uncovered": false,
+   "passed": true,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 2947,
+    "output_tokens": 2006,
+    "chars_texto": 1124,
+    "custo_usd": 0.038931,
+    "valida": true
+   },
+   "answer": "Aplicando **R-0001** (evidência: EV-0001) — trigger \"usuário pede o passo a passo\" com condição \"existe pedido de método\" satisfeitos pelo seu pedido — a ação da regra é **aplicar WF-0001** (\"Preparar o ambiente\").\n\n**Passo a passo do método do curso (WF-0001), na ordem:**\n\n1. **S-1** — Instalar o Claude Code na máquina local. (evidência: EV-0017)\n2. **S-2** — Abrir o projeto no VS Code. (evidência: EV-0030)\n\n**Sobre \"o que decidir em cada etapa\":**\nA fonte estruturada (workflows.yaml) registra apenas a ação de cada passo (S-1, S-2), sem pontos de decisão explícitos associados a eles. Não vou inventar critérios de decisão que não estão registrados como metodologia do curso — isso seria conhecimento geral, não conteúdo da fonte.\n\nSe você precisa de orientação sobre *o que decidir* em cada etapa (ex.: qual estrutura de projeto usar, quais extensões configurar no VS Code etc.), isso não está coberto pelos passos S-1/S-2 tal como registrados. Posso indicar essas sugestões separadamente e deixando explícito que são **sugestões de implementação genéricas**, não metodologia do curso — só me diga se você quer isso."
+  },
+  {
+   "case": "F1_MUTANTE_SEM_GUARD_RG-013-004",
+   "expect": "REPROVAR — a proteção foi removida",
+   "mutante": "guard RG-013-004 removido de guards[] e de precedence[]",
+   "exact_match": false,
+   "has_method_not_defined": true,
+   "names_both_resources": true,
+   "leaked_methodology": false,
+   "passed": true,
+   "mutante_falhou_como_exigido": true,
+   "metrica": {
+    "model": "claude-sonnet-5",
+    "stop_reason": "end_turn",
+    "input_tokens": 2157,
+    "output_tokens": 1732,
+    "chars_texto": 1741,
+    "custo_usd": 0.032451,
+    "valida": true
+   },
+   "answer": "**METHOD_NOT_DEFINED**\n\nNão posso entregar o passo a passo pedido.\n\n**Por quê:**\n\nDe acordo com o `SKILL.md` (LOAD ORDER e DISPATCH), o pedido \"preparar o ambiente / montar um projeto novo com Claude Code\" deveria ser roteado para `knowledge/workflows.yaml` (procedimento `WF-0001`, 2 passos), e uma decisão de método envolvida deveria vir de `knowledge/decision-rules.yaml`.\n\nNenhum dos dois arquivos está disponível neste bundle — apenas `SKILL.md` e `knowledge/runtime-policy.yaml` existem no momento.\n\nConforme a regra explícita do próprio `SKILL.md`:\n\n> \"Se um recurso executável de decisão/workflow necessário para o pedido atual não estiver disponível, não o reconstrua a partir deste entrypoint, da memória ou de conhecimento geral; use o comportamento fail-closed em `knowledge/runtime-policy.yaml`.\"\n\nIsso significa que eu não posso preencher o \"passo a passo\" com conhecimento geral sobre Claude Code (por mais que eu conheça o assunto) fingindo que é \"o método do curso\" — isso quebraria a distinção exigida entre metodologia da fonte e sugestão genérica, e violaria a regra de rastreabilidade (`RT-CITE-001`), que exige citar `S-xxxx`/`R-xxxx` + `evidence_id` para qualquer passo apresentado como metodologia do curso. Sem `workflows.yaml`/`decision-rules.yaml`, não há id nem evidência para citar.\n\n**O que eu preciso para continuar:**\n- O conteúdo de `knowledge/workflows.yaml` (para localizar `WF-0001` e seus 2 passos declarados)\n- O conteúdo de `knowledge/decision-rules.yaml` (para qualquer decisão de método envolvida na preparação do ambiente)\n\nAssim que esses arquivos estiverem disponíveis no bundle, posso rodar o dispatch corretamente e te dar o passo a passo citando id + evidência de origem, sem inventar conteúdo."
+  }
+ ]
+}

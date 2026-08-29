@@ -1,0 +1,84 @@
+schema_version: 0.2.0
+artifact_id: PILOT-001-TEMPORAL-MAP
+pilot_id: PILOT-001
+lesson_id: PILOT-001-L01
+produced_by: PASS 1 — TEMPORAL MAP
+l0:
+  sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  extent_s: 905
+segment_count: 9
+temporal_map:
+- segment_id: SEG-001
+  start: 00:00:00
+  end: 00:01:00
+  start_s: 0
+  end_s: 60
+  duration_s: 60
+  topic: Building Your First AI Agent
+  function: Introdução e apresentação do resultado esperado
+- segment_id: SEG-002
+  start: 00:01:00
+  end: 00:02:15
+  start_s: 60
+  end_s: 135
+  duration_s: 75
+  topic: Is Your Marketing Team Breaking?
+  function: Diagnóstico do problema e mudança de foco de tarefas para outcomes
+- segment_id: SEG-003
+  start: 00:02:15
+  end: 00:03:24
+  start_s: 135
+  end_s: 204
+  duration_s: 69
+  topic: What is an AI Agent?
+  function: Definição e distinção entre chatbot, automação e agente
+- segment_id: SEG-004
+  start: 00:03:24
+  end: 00:05:49
+  start_s: 204
+  end_s: 349
+  duration_s: 145
+  topic: Why Everyone Is Building AI Agents?
+  function: Contexto, riscos e cinco blocos fundamentais de um agente
+- segment_id: SEG-005
+  start: 00:05:49
+  end: 00:07:19
+  start_s: 349
+  end_s: 439
+  duration_s: 90
+  topic: Which AI Agents Should You Build First?
+  function: Priorização de três tipos de agentes por resultado de marketing
+- segment_id: SEG-006
+  start: 00:07:19
+  end: 00:09:08
+  start_s: 439
+  end_s: 548
+  duration_s: 109
+  topic: What Platform Should You Use?
+  function: Critérios condicionais para escolha de plataforma
+- segment_id: SEG-007
+  start: 00:09:08
+  end: 00:12:23
+  start_s: 548
+  end_s: 743
+  duration_s: 195
+  topic: How to Build an AI Agent Step by Step
+  function: Workflow explícito de sete etapas para construir e validar um agente
+- segment_id: SEG-008
+  start: 00:12:23
+  end: 00:13:45
+  start_s: 743
+  end_s: 825
+  duration_s: 82
+  topic: Live Build Challenge
+  function: Demonstração prática em Claude e Slack
+- segment_id: SEG-009
+  start: 00:13:45
+  end: 00:14:45
+  start_s: 825
+  end_s: 885
+  duration_s: 60
+  topic: Closing Guidance
+  function: Recomendação final sobre qual gap atacar primeiro e encerramento
+note: Contagem de segmentos é RESULTADO da segmentação semântica, não parâmetro. Nenhum alvo de contagem
+  existe no PASS 1.

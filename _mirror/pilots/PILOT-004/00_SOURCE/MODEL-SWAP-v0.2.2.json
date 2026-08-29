@@ -1,0 +1,36 @@
+{
+  "de": "claude-opus-5",
+  "para": "claude-sonnet-5",
+  "arquivos": [
+    {
+      "path": "compiler-v2-snapshot/ctsc2/extractors/claude_extractor.py",
+      "ocorrencias": 1,
+      "sha256_antes": "bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c",
+      "sha256_depois": "edb8f936a05ec21afe57dc1446295ef7d84d928c9b8bb0f5b35a6c59f7550d91"
+    },
+    {
+      "path": "runners/p004_pass1.py",
+      "ocorrencias": 1,
+      "sha256_antes": "59512739011d0210da03357aeacb92d61268dbc860c82cc6f24f02f28f51fc7e",
+      "sha256_depois": "ec0cc5aa69ee6330cfdb6a38b1c82d1c4eddbcda3605e1b9d5d65a1689f6ec0f"
+    },
+    {
+      "path": "run_t8_mtx.py",
+      "ocorrencias": 1,
+      "sha256_antes": "0f30ce98714cb1fe8e0c65f47f431785a64d2f8833119f4247450a2ec5254b27",
+      "sha256_depois": "094d69193332b158f0890f294e9c0dd9f1f2fb78338912d9b9a844a7d5ac9b17"
+    },
+    {
+      "path": "compiler-s3-snapshot/run_compile.py",
+      "ocorrencias": 1,
+      "sha256_antes": "2c76ce108a478c0a9e70dfb02e6dea51de482c7780ae3eef97b62e9dd48347e0",
+      "sha256_depois": "48c86fe20da554c35cc704a5329a7ca128660166c26492f1cee9eb5a61ebf7e3"
+    },
+    {
+      "path": "compiler-s3-snapshot/canary/run_failclosed_canary_v0.1.1-bot04.py",
+      "ocorrencias": 1,
+      "sha256_antes": "657b314041365c3c6ace66294dbd6415a4887ed6c2f0021b1ed6b0828865aa59",
+      "sha256_depois": "7890ba602fb45810929e29cde1129fa47092205dce29aab5a29a77baae277b26"
+    }
+  ]
+}

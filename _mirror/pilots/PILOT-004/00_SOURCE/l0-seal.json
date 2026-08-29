@@ -1,0 +1,18 @@
+{
+  "sha256": "607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5",
+  "bytes": 19624,
+  "marks": 186,
+  "mark_every_s": 6,
+  "snippets": 440,
+  "chars_raw": 16383,
+  "duration_s_video": 903,
+  "duration_video": "15:03",
+  "transcript_last_end_s": 904.64,
+  "cobertura_pct": 100.18,
+  "language_code": "pt",
+  "language": "Portuguese (auto-generated)",
+  "is_generated": true,
+  "upload_date": "20260106",
+  "channel": "Filipe Detrey",
+  "sealed_at_utc": "2026-08-14T00:36:10.110368+00:00"
+}

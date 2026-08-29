@@ -1,0 +1,50 @@
+{
+  "proposito": "fechar a pendencia aberta no BLOCO 2b: os 54 avisos do P004 nao tinham baseline porque os registros de chamada do P001-v2 nunca foram publicados. Aqui o P001-v2 foi REPROCESSADO no bot-04 com o mesmo runner e o mesmo extractor, gerando os registros que faltavam.",
+  "condicoes_iguais": {
+    "runner": "p00X_pass2_ckpt.py (mesmo codigo, so pinos e caminhos diferem)",
+    "extractor_sha256": "bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c",
+    "compiler_version": "compiler-v2/0.2.1-frozen",
+    "modelo": "claude-opus-5",
+    "effort": "high",
+    "maquina": "bot-04",
+    "detector_da_classe_C": "identico nos dois lados"
+  },
+  "PT_PILOT_004": {
+    "segmentos": 13,
+    "drafts_retornados": 134,
+    "drafts_aceitos": 134,
+    "aceitos_so_apos_normalizacao": 0,
+    "rejeicoes": 0,
+    "avisos": 54,
+    "total_C": 54,
+    "motivos": {
+      "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT": 54
+    },
+    "C_por_evidencia_pct": 40.3,
+    "extent_s": 903,
+    "evidencias": 134,
+    "cobertura_pct": 85.16
+  },
+  "EN_PILOT_001_v2_REMAC": {
+    "segmentos": 9,
+    "drafts_retornados": 175,
+    "drafts_aceitos": 175,
+    "aceitos_so_apos_normalizacao": 108,
+    "rejeicoes": 0,
+    "avisos": 79,
+    "total_C": 79,
+    "motivos": {
+      "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT": 79
+    },
+    "C_por_evidencia_pct": 45.14,
+    "extent_s": 905,
+    "evidencias": 175,
+    "cobertura_pct": 85.08
+  },
+  "P001v2_HISTORICO_para_referencia": {
+    "evidencias": 149,
+    "yield_por_segmento": 16.5556,
+    "cobertura_pct": 90.61,
+    "nota": "rodado na Lenovo, sem registros de chamada publicados; NAO foi tocado"
+  }
+}

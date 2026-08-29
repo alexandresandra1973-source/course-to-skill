@@ -1,0 +1,593 @@
+schema_version: 0.1.0
+skill_id: PILOT-002-SKILL
+skill_version: 0.1.0
+decision_rules:
+- name: Login prévio no Facebook antes do passo a passo
+  trigger: Antes de iniciar o passo a passo de acesso ao Meta Business Suite
+  condition: Usuário não está logado no perfil do Facebook
+  action: Entrar/estar logado no perfil do Facebook para facilitar o acesso ao Meta Business Suite
+  autonomy: UNDEFINED
+  precedence: Precede o passo a passo de acesso ao Meta Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0006
+  - EV-0007
+  rule_id: R-0001
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 68
+- name: Uso de navegador antidetect para reduzir bloqueios
+  trigger: Ao operar contas no Facebook/Meta sujeitas a bloqueio
+  condition: Bloqueios no Facebook são normais e recorrentes, inclusive para quem está começando
+  action: Utilizar a ferramenta de navegação segura Dolphin Anty (transcrita como 'Dofiante'), que possui
+    navegação antidetect e outras tecnologias que ajudam a não ser bloqueado
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0008
+  - EV-0009
+  - EV-0010
+  rule_id: R-0003
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 83
+- name: Separar acessos por cliente para não cruzar dados
+  trigger: Ao gerenciar contas/anúncios de múltiplos clientes
+  condition: Gestor de tráfego com mais de um cliente
+  action: Usar a ferramenta antidetect criando um ambiente (linha) por cliente e acessar cada ambiente
+    separadamente para fazer os anúncios, evitando cruzamento de dados e restrição na própria estrutura
+    e na do cliente
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não cruzar dados no Meta, pois aumenta muito a chance de ser restrito
+  evidence_ids:
+  - EV-0012
+  - EV-0013
+  - EV-0014
+  - EV-0015
+  rule_id: R-0002
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 110
+- name: Exigir página do Facebook para acesso aos recursos
+  trigger: Intenção de utilizar os recursos disponibilizados pelo Meta Business Suite
+  condition: Usuário não possui página do Facebook
+  action: Criar/ter uma página do Facebook antes de prosseguir, pois ela é requisito para utilizar todos
+    os recursos que o Meta Business Suite disponibiliza
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0017
+  - EV-0018
+  rule_id: R-0004
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 148
+- name: Critério de conformidade das contas vinculadas
+  trigger: Verificação da tela 'contas vinculadas' da página
+  condition: Em 'contas vinculadas' não há um Instagram conectado à página do Facebook
+  action: Conectar o Instagram à página do Facebook para que o portfólio empresarial nasça
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0020
+  - EV-0022
+  - EV-0029
+  rule_id: R-0005
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 164
+- name: Guardar ativos no portfólio empresarial
+  trigger: Existência de contas de anúncio, pixel ou estrutura de anúncio a serem alocadas
+  condition: Portfólio empresarial existe (criado pela conexão Instagram + página do Facebook)
+  action: Guardar dentro do portfólio empresarial as contas de anúncio, o pixel e toda a estrutura de
+    anúncio
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não deixar a estrutura fora do portfólio, isolada
+  - Não usar a conta pessoal que nasce com o próprio Facebook para manter a estrutura
+  evidence_ids:
+  - EV-0023
+  - EV-0024
+  - EV-0025
+  - EV-0026
+  rule_id: R-0006
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 174
+- name: Confirmar conexão pelos ícones no topo do painel
+  trigger: Ao abrir o Meta Business Suite para verificar as contas
+  condition: No topo do painel aparecem tanto a página do Facebook quanto o Instagram acesos
+  action: Considerar as contas como conectadas
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0031
+  - EV-0032
+  rule_id: R-0007
+  segment_ids:
+  - SEG-004
+  origin_class: SOURCE_EXPLICIT
+  order_key: 216
+- name: Detectar Instagram não conectado
+  trigger: Ao inspecionar o topo do painel do Meta Business Suite
+  condition: Aparece apenas a página do Facebook no topo
+  action: Concluir que a conta do Instagram não está conectada e tratar o caso como perfil abandonado
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0033
+  - EV-0035
+  rule_id: R-0008
+  segment_ids:
+  - SEG-004
+  origin_class: SOURCE_EXPLICIT
+  order_key: 230
+- name: Evitar anunciar pelo aplicativo do iPhone
+  trigger: Quando a intenção é anunciar pelo próprio iPhone
+  condition: Anúncio feito pelo aplicativo no iPhone (custo pode ser aumentado em 30% pela Apple)
+  action: Redobrar o cuidado e usar como alternativa o gerenciador de anúncios ou o navegador
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não anunciar pelo próprio iPhone sem considerar o aumento de 30% no custo
+  evidence_ids:
+  - EV-0040
+  - EV-0041
+  - EV-0043
+  rule_id: R-0009
+  segment_ids:
+  - SEG-004
+  origin_class: SOURCE_EXPLICIT
+  order_key: 263
+- name: Focar em poucos lugares do painel no nível básico
+  trigger: Usuário está no nível básico e quer obter resultado usando o Meta Business Suite com tranquilidade
+  condition: Objetivo é uso básico da ferramenta
+  action: Conhecer apenas poucos lugares do painel, não todas as funcionalidades
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não tentar cobrir todas as funcionalidades do painel
+  evidence_ids:
+  - EV-0049
+  - EV-0044
+  rule_id: R-0010
+  segment_ids:
+  - SEG-005
+  origin_class: SOURCE_EXPLICIT
+  order_key: 289
+- name: Investir tempo explorando o painel
+  trigger: Após ter acesso ao painel do Meta Business Suite
+  condition: UNDEFINED
+  action: Dedicar tempo navegando/passeando livremente pelo painel, com estudo repetido e aperfeiçoamento
+    progressivo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não esperar aprender a plataforma de uma só vez
+  evidence_ids:
+  - EV-0045
+  - EV-0046
+  rule_id: R-0011
+  segment_ids:
+  - SEG-005
+  origin_class: SOURCE_EXPLICIT
+  order_key: 295
+- name: Dispensar ferramenta paga de agendamento
+  trigger: Quando houver necessidade de agendamento de postagens
+  condition: O Planner do Meta Business Suite oferece agendamento de forma gratuita
+  action: Usar o Planner em vez de contratar ferramenta paga para essa função
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não contratar ferramenta cara apenas para agendamento de postagem
+  evidence_ids:
+  - EV-0051
+  rule_id: R-0015
+  segment_ids:
+  - SEG-006
+  origin_class: GENUINE_INFERENCE
+  order_key: 338
+- name: Escolher destino da postagem no momento da criação
+  trigger: Ao criar post no Planner e aparecer o campo 'postar em' no topo
+  condition: Publicação destinada a Facebook e/ou Instagram
+  action: Decidir postar simultaneamente nos dois lugares (Facebook e Instagram) ou escolher apenas um
+    deles, configurando na hora de fazer a postagem
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0056
+  - EV-0057
+  rule_id: R-0012
+  segment_ids:
+  - SEG-006
+  origin_class: SOURCE_EXPLICIT
+  order_key: 376
+- name: Usar versões de texto distintas por rede
+  trigger: Ao programar uma postagem pelo Planner para Facebook e Instagram
+  condition: 'O usuário do Facebook é diferente do usuário do Instagram (ex.: no Facebook cabe link clicável,
+    no Instagram não)'
+  action: Escrever uma versão de texto para o Facebook e outra versão de texto para o Instagram
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não usar link clicável no texto do Instagram
+  evidence_ids:
+  - EV-0059
+  - EV-0060
+  - EV-0061
+  rule_id: R-0013
+  segment_ids:
+  - SEG-006
+  origin_class: SOURCE_EXPLICIT
+  order_key: 398
+- name: Definir horários separados por rede conforme audiência
+  trigger: Na opção de programação da postagem
+  condition: Quando a audiência do Instagram se concentra no final da tarde e o Facebook alcança ao longo
+    de todo o dia de forma mais lenta
+  action: Definir horários diferentes de entrada por rede, por exemplo Facebook de manhã e Instagram à
+    tarde
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0062
+  - EV-0063
+  - EV-0064
+  rule_id: R-0014
+  segment_ids:
+  - SEG-006
+  origin_class: SOURCE_EXPLICIT
+  order_key: 422
+- name: Explorar planner além do básico ensinado
+  trigger: Após receber a instrução básica de uso do planner
+  condition: O conteúdo ensinado cobre apenas o básico para conseguir utilizar o planner
+  action: Gastar energia/tempo explorando o planner, incluindo seus filtros e a grande quantidade de informação
+    disponível
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0068
+  - EV-0067
+  rule_id: R-0016
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 459
+- name: Responder dúvidas pela caixa de entrada para gerar resultado
+  trigger: Quando pessoas mandam mensagens ou comentam nos canais conectados
+  condition: UNDEFINED
+  action: Responder e tirar as dúvidas das pessoas pela caixa de entrada, usando-a como central de atendimento
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0072
+  - EV-0073
+  rule_id: R-0018
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 490
+- name: Explorar a área da caixa de entrada
+  trigger: Ao conhecer a área da caixa de entrada
+  condition: UNDEFINED
+  action: Dedicar tempo explorando a área da caixa de entrada
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0075
+  rule_id: R-0017
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 506
+- name: Responder automaticamente a comentários
+  trigger: A pessoa comenta alguma coisa na publicação
+  condition: UNDEFINED
+  action: Enviar um comentário automático em resposta, configurado como automação
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0078
+  rule_id: R-0019
+  segment_ids:
+  - SEG-008
+  origin_class: SOURCE_EXPLICIT
+  order_key: 532
+- name: Gatilho de resposta instantânea a mensagens
+  trigger: A pessoa manda uma mensagem
+  condition: UNDEFINED
+  action: Criar/acionar gatilho que responde a pessoa instantaneamente
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0079
+  rule_id: R-0020
+  segment_ids:
+  - SEG-008
+  origin_class: SOURCE_EXPLICIT
+  order_key: 541
+- name: Mensagem de ausência fora do atendimento
+  trigger: Períodos em que você não estiver presente fazendo atendimento das pessoas
+  condition: UNDEFINED
+  action: Configurar uma mensagem de ausência na área de automações
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0080
+  rule_id: R-0021
+  segment_ids:
+  - SEG-008
+  origin_class: SOURCE_EXPLICIT
+  order_key: 547
+- name: Disponibilidade condicionada de CRM/formulários por conta
+  trigger: Tentativa de usar formulários como CRM gratuito
+  condition: O recurso está disponível apenas em algumas contas; na conta do apresentador há possibilidade
+    de configurar inicialmente
+  action: Verificar na própria conta se a opção de formulários/CRM aparece antes de contar com o recurso
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0082
+  - EV-0083
+  rule_id: R-0022
+  segment_ids:
+  - SEG-008
+  origin_class: SOURCE_EXPLICIT
+  order_key: 561
+- name: Limite de recursos do Business Suite
+  trigger: Anunciante avalia quais possibilidades de anúncio usar no Business Suite
+  condition: Na área de anúncios do Business Suite
+  action: Considerar disponíveis apenas as possibilidades de anúncio iniciais; para mais recursos e mais
+    resultado no dia a dia, criar campanhas dentro do Gerenciador de Anúncios
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0085
+  - EV-0088
+  rule_id: R-0024
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 590
+- name: Escolha da ferramenta conforme nível do anunciante
+  trigger: Anunciante vai criar um anúncio/campanha
+  condition: Se está começando e são os primeiros anúncios, usar o Meta Business Suite; depois dos primeiros
+    anúncios, usar o Gerenciador de Anúncios
+  action: Criar os primeiros anúncios pela área de anúncios do Business Suite e, em seguida, migrar para
+    o Gerenciador de Anúncios criando as campanhas em 'Campanhas', por dentro do gerenciador
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não permanecer no Business Suite para buscar resultado real, pois as campanhas de lá são muito básicas
+    e dão apenas um 'gostinho' de resultado
+  evidence_ids:
+  - EV-0086
+  - EV-0087
+  - EV-0092
+  - EV-0093
+  rule_id: R-0023
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 594
+- name: Primeira campanha no formato mais básico
+  trigger: Iniciante vai executar sua primeira campanha
+  condition: Anunciante iniciante
+  action: Clicar em 'criar' e fazer a primeira campanha do jeito mais básico possível para sentir os resultados
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0089
+  rule_id: R-0025
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 615
+- name: Selecionar trilha de campanha conforme modelo de negócio
+  trigger: Ao iniciar a estruturação de campanhas de anúncios no Facebook/Instagram
+  condition: O modelo de negócio do anunciante é identificado como negócio local, venda no X1 por mensagem,
+    ou venda direta para infoprodutor/afiliado
+  action: Seguir a trilha de campanha correspondente ao modelo de negócio identificado (negócio local,
+    venda no X1 via mensagem, ou venda direta para infoprodutor/afiliado)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0094
+  rule_id: R-0026
+  segment_ids:
+  - SEG-010
+  origin_class: GENUINE_INFERENCE
+  order_key: 669
+- name: Analisar Insights com calma, não superficialmente
+  trigger: Ao acessar a área de Insights
+  condition: UNDEFINED
+  action: Investir tempo olhando a área de Insights com calma, em vez de olhá-la superficialmente
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não olhar a área de Insights de forma superficial
+  evidence_ids:
+  - EV-0106
+  rule_id: R-0028
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 756
+- name: Potencializar conteúdo que traz resultado
+  trigger: Análise dos Insights identifica o que está trazendo resultado e o que não está
+  condition: Item identificado como estando trazendo resultado
+  action: Potencializar aquilo que está trazendo resultado
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0107
+  - EV-0108
+  rule_id: R-0027
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 760
+- name: Cadastrar administrador adicional como contingência preventiva
+  trigger: Estruturação inicial da conta de anúncios / acesso a Configurações > Usuários > Pessoas
+  condition: O anunciante possui estrutura de anúncios própria (página, perfil do Instagram, contas de
+    anúncio)
+  action: Adicionar em Configurações > Usuários > Pessoas ao menos um administrador da própria estrutura,
+    para funcionar como contingência e aumentar a segurança
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não postergar a adição de administrador por julgar desnecessário no início, pois em caso de restrição
+    a nível de perfil o anunciante fica exposto a perder página, perfil do Instagram e contas de anúncio
+  evidence_ids:
+  - EV-0111
+  - EV-0112
+  - EV-0114
+  - EV-0115
+  - EV-0113
+  rule_id: R-0029
+  segment_ids:
+  - SEG-012
+  origin_class: SOURCE_EXPLICIT
+  order_key: 788
+- name: Pixel fora de escopo neste conteúdo
+  trigger: Ao chegar na seção de pixel / fonte de dados durante a apresentação da ferramenta
+  condition: O tema pixel não é o assunto deste vídeo
+  action: Apenas localizar/mencionar os pixels em 'fonte de dados' e não desenvolver o assunto no escopo
+    desta apresentação
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não tratar o assunto pixel neste vídeo
+  evidence_ids:
+  - EV-0123
+  - EV-0125
+  rule_id: R-0030
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 846
+- name: Estudo proporcional à dimensão da ferramenta
+  trigger: Após tomar noção da grandiosidade da ferramenta
+  condition: O objetivo é ter resultado
+  action: Aprofundar-se no estudo da ferramenta (Meta Ads), pois é o aprofundamento que leva ao resultado
+    e a outro nível
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0126
+  - EV-0127
+  - EV-0128
+  - EV-0133
+  - EV-0134
+  rule_id: R-0031
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 857
+- name: Critério de montagem da estrutura
+  trigger: Ao montar a estrutura de anúncios
+  condition: UNDEFINED
+  action: Montar a estrutura de forma que leve a um nível capaz de gerar resultado, usando 'ter resultado'
+    como critério de avaliação
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0131
+  - EV-0132
+  rule_id: R-0032
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 881

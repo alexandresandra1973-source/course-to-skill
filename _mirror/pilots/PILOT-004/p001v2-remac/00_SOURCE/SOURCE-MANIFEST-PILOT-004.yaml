@@ -1,0 +1,10 @@
+# Manifesto MINIMO para o re-processamento do PILOT-001-v2 no bot-04 (T2).
+# O nome do arquivo repete o do P004 porque o runner o le por nome fixo; o
+# CONTEUDO e do PILOT-001-v2. Nada do P001-v2 historico e sobrescrito.
+schema_version: 0.1.0
+pilot_id: PILOT-001-v2-REMAC
+proposito: baseline da classe C (avisos do validador de citacao) em fonte EN
+l0:
+  path: L0-transcript.txt
+  sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  duration_s: 905

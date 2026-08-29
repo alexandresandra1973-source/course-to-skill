@@ -1,0 +1,141 @@
+# ADITIVO de ratificação da banda — três regimes.
+# NÃO altera PREDICTION-COMPILER-V2.yaml; amarra-se a ele por SHA-256.
+# Ratificado ANTES da execução. Editar quebra o hash.
+schema_version: 0.1.0
+artifact_id: PREDICTION-COMPILER-V2-BAND-RATIFICATION
+artifact_status: RATIFICADA_ANTES_DA_EXECUCAO
+nature:
+  additive_only: true
+  base_artifact_mutated: false
+  statement: Aditivo. O artefato de previsão não foi lido para escrita, editado nem reemitido. Este arquivo
+    acrescenta a banda ratificada e se amarra à previsão por hash.
+ratified_at_utc: '2026-08-12T02:06:46+00:00'
+generator: prediction_band_ratification.py
+ratified_by: revisor
+binds_to:
+  prediction:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2.yaml
+    sha256: 4963fd27d4640c4831306e74b0dc9f624ef5fe409f6c46f48c7f46fbeda1b44d
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+supersedes:
+  field: banda_de_aceitacao
+  in: PREDICTION-COMPILER-V2.yaml
+  previous_status: NAO_RATIFICADA
+  previous_proposal: banda única 0,75 a 1,33
+  why_superseded: A banda única só distinguia acerto de erro. O revisor ratificou TRÊS regimes, que separam
+    o caso intermediário — conserto que avança sem fechar — do fracasso. A proposta anterior vira o regime
+    de topo do novo esquema.
+grandeza:
+  definicao: razao_yield_por_segmento = yield_P001 / yield_P002
+  yield_P001: 4.89
+  yield_P002: 1.07
+  valor_hoje: 4.6
+  valor_exato_hoje: 41/9
+  regime_hoje: CONSERTO_NAO_FUNCIONOU
+  nota: É a RELAÇÃO entre os pilotos, não o valor absoluto de nenhum dos dois. Nada aqui estabelece qual
+    yield por segmento é o correto.
+regimes:
+- nome: CONSERTO_LIMPO
+  intervalo: '[0.75 ; 1.33]'
+  limite_inferior: 0.75
+  limite_inferior_aberto: false
+  limite_superior: 1.33
+  limite_superior_aberto: false
+  veredito: O conserto funcionou. Os dois pilotos rendem por segmento de forma equivalente.
+  avanca: true
+  fecha: true
+- nome: CONSERTO_PARCIAL
+  intervalo: (1.33 ; 2.00]
+  limite_inferior: 1.33
+  limite_inferior_aberto: true
+  limite_superior: 2.0
+  limite_superior_aberto: false
+  veredito: O conserto AVANÇA mas NÃO FECHA. A causa residual tem de ser MEDIDA antes de seguir para o
+    PILOT-002.
+  avanca: true
+  fecha: false
+- nome: CONSERTO_NAO_FUNCIONOU
+  intervalo: '> 2.00'
+  limite_inferior: 2.0
+  limite_inferior_aberto: true
+  limite_superior: null
+  limite_superior_aberto: null
+  veredito: A Decisão A não explica o colapso. Reabrir o diagnóstico.
+  avanca: false
+  fecha: false
+- nome: INVESTIGAR
+  intervalo: < 0.75
+  limite_inferior: null
+  limite_inferior_aberto: null
+  limite_superior: 0.75
+  limite_superior_aberto: true
+  veredito: PILOT-002 rendendo MAIS por segmento que o PILOT-001 é suspeito e pede explicação, não comemoração.
+  avanca: false
+  fecha: false
+cobertura_dos_regimes:
+  particao_completa: true
+  verificacao: 'Os quatro regimes cobrem a reta positiva sem sobreposição: <0,75 · [0,75;1,33] · (1,33;2,00]
+    · >2,00. Qualquer razão cai em exatamente um.'
+justificativa_do_regime_do_meio:
+  declarada_pelo_revisor:
+  - segmentos do PILOT-002 são 6,3% mais longos (106,93s contra 100,56s)
+  - o PILOT-002 exigiu a categoria DEMONSTRACAO_DE_TELA, que o PILOT-001 não precisou
+  - narração de clique rende menos evidência por motivo legítimo
+  conclusao_do_revisor: As duas primeiras empurram o yield do PILOT-002 para baixo legitimamente, mas
+    nenhuma justifica um fator de 4.6.
+  aritmetica_do_primeiro_limbo:
+    segmento_medio_pilot001_s: 100.56
+    segmento_medio_pilot002_s: 106.93
+    diferenca_percentual: 6.3
+    confere: true
+verificacao_da_justificativa:
+  por_que_esta_aqui: A ratificação é do revisor; a conferência é do gerador. As duas ficam lado a lado
+    para que ninguém leia como MEDIDO o que é JULGAMENTO declarado.
+  categoria_declarada_em:
+  - Course-to-Skill-Claude/docs/DECISION-STRUCTURE-LIST-PILOT-002.md:14
+  - Course-to-Skill-Claude/docs/HANDOFF-MADRUGADA-2.md:66
+  categoria_existe_como_analise: true
+  evidencias_do_pilot002: 44
+  evidencias_com_campo_category: 0
+  categoria_no_compilado: false
+  categoria_no_spec_do_compilador: false
+  pilot001_declara_screen_demonstration: true
+  pilot001_metadata_path: Course-to-Skill/pilots/PILOT-001-HubSpot-AI-Agent/sources/metadata/source-metadata.yaml
+  leitura: 'A categoria DEMONSTRACAO_DE_TELA existe como artefato de ANÁLISE (declarada em DECISION-STRUCTURE-LIST-PILOT-002
+    como chamada de julgamento explícita, com 57 de 194 candidatos classificados). Ela NÃO está no spec
+    do compilador e NÃO aparece no EVIDENCE.jsonl compilado, que não tem campo `category` nenhum. E o
+    `source-metadata.yaml` do PILOT-001 declara `screen_demonstration: true` — a fonte do PILOT-001 também
+    tinha demonstração de tela. A distinção entre os dois corpora é de GRAU e de julgamento, não uma propriedade
+    medida que os separe. Isso não invalida o regime do meio: ele existe justamente para absorver causas
+    legítimas de queda que não estão medidas. Registra-se para que a justificativa não seja citada depois
+    como fato apurado.'
+guarda_contra_afrouxamento:
+  regra: CONSERTO_PARCIAL não é aprovação. Se o resultado cair nesse regime, o conserto avança mas não
+    fecha, e a causa residual tem de ser MEDIDA antes de seguir para o PILOT-002.
+  proibido:
+  - reinterpretar as fronteiras depois de ver o resultado
+  - tratar CONSERTO_PARCIAL como aprovação
+  - seguir para o PILOT-002 sem medir a causa residual
+  - converter a razão em cota de contagem
+  quem_pode_mudar: Mudar qualquer fronteira exige novo aditivo, ratificado ANTES da execução seguinte,
+    e quebra o hash deste artefato.
+relacao_com_o_portao_de_aceitacao:
+  esta_banda_e: critério de MECANISMO
+  portao_de_aceitacao_e: cobertura de L0 > 73,5%, estritamente maior
+  independentes: true
+  consequencia: Os dois são reportados separadamente e nenhum substitui o outro. A previsão pode acertar
+    e o portão reprovar, e vice-versa. Nenhum resultado de mecanismo autoriza declarar aceitação, e nenhuma
+    cobertura acima do piso autoriza declarar o mecanismo consertado.
+nao_estabelece:
+- qual é o valor absoluto correto de yield por segmento
+- que 200 evidências seja o número certo para o PILOT-002
+- que a cobertura de L0 vá superar o piso
+- que a causa residual do regime do meio seja a demonstração de tela
+status: RATIFICADA_ANTES_DA_EXECUCAO
+execucao_realizada: false
+extractor_ligado_a_modelo: false

@@ -1,0 +1,2654 @@
+schema_version: 0.1.0
+skill_id: PILOT-002-SKILL
+skill_version: 0.1.0
+decision_rules:
+- name: Não exigir experiência técnica prévia
+  trigger: Ao avaliar elegibilidade do aluno para o material
+  condition: Aluno sem experiência técnica ou de desenvolvedor anterior
+  action: Prosseguir com o material sem requerer experiência técnica ou de desenvolvedor prévia
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não bloquear iniciantes absolutos por falta de experiência técnica prévia
+  evidence_ids:
+  - EV-0002
+  rule_id: R-0002
+  segment_ids:
+  - SEG-001
+  origin_class: SOURCE_EXPLICIT
+  order_key: 7
+- name: Verificar pré-requisitos materiais antes de iniciar o curso
+  trigger: Antes de começar a acompanhar o curso de Claude Code
+  condition: O aluno precisa dispor de um laptop funcionando e de uma assinatura Claude
+  action: Confirmar posse de laptop operacional e de assinatura Claude ativa como condição para acompanhar
+    o curso
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0006
+  rule_id: R-0001
+  segment_ids:
+  - SEG-001
+  origin_class: SOURCE_EXPLICIT
+  order_key: 50
+- name: 'Ordem: instalar antes de decidir onde usar'
+  trigger: Início do trabalho com a ferramenta
+  condition: Instalação local ainda não concluída
+  action: Tratar primeiro a instalação na máquina local; só depois tratar de onde usá-la
+  autonomy: UNDEFINED
+  precedence: Precede a decisão sobre onde usar a ferramenta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não tratar de onde usar a ferramenta antes de concluir a instalação
+  evidence_ids:
+  - EV-0017
+  - EV-0024
+  rule_id: R-0005
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 153
+- name: Escolher variante de instalação recomendada
+  trigger: A documentação apresenta múltiplas opções de instalação
+  condition: Existe uma opção marcada como recomendada ('native install')
+  action: Selecionar a opção 'native install' por ser a recomendação
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0020
+  rule_id: R-0003
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 169
+- name: Selecionar comando por sistema operacional
+  trigger: Após abrir a página de native install
+  condition: A documentação oferece comandos distintos por sistema operacional
+  action: Copiar o comando correspondente ao sistema operacional em uso (no caso demonstrado, macOS)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0021
+  rule_id: R-0004
+  segment_ids:
+  - SEG-002
+  origin_class: SOURCE_EXPLICIT
+  order_key: 175
+- name: Escolha de interface do Claude Code por perfil do usuário
+  trigger: Ao decidir como rodar o Claude Code
+  condition: Usuário é não-técnico e quer apenas funcionalidades básicas para resolver tarefas
+  action: Usar Claude Code pelo app de desktop (alternando/toggle para Claude Code dentro do app), aceitando
+    menos flexibilidade, poucas customizações e impossibilidade de explorar todos os recursos
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não esperar customizações amplas nem acesso a todos os recursos do Claude Code pelo app de desktop
+  evidence_ids:
+  - EV-0025
+  - EV-0026
+  - EV-0027
+  rule_id: R-0006
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 209
+- name: Alternativa terminal para usuário técnico
+  trigger: Usuário técnico quer mais controle e explorar toda a funcionalidade do Claude Code
+  condition: Usuário aceita interface de usuário inferior e navegação difícil
+  action: Usar Claude Code pelo terminal
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0028
+  - EV-0029
+  rule_id: R-0007
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 228
+- name: 'Recomendação: rodar Claude Code em IDE'
+  trigger: Ao definir o ambiente de execução do Claude Code
+  condition: Sempre, como recomendação do instrutor (por limitações do desktop e do terminal)
+  action: Usar uma IDE (integrated development environment), especificamente VS Code, para rodar o Claude
+    Code; mantém-se o uso do terminal dentro da IDE somado à visualização de todos os arquivos alterados
+  autonomy: UNDEFINED
+  precedence: Recomendação do instrutor prevalece sobre app de desktop e terminal isolado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0030
+  - EV-0031
+  - EV-0032
+  rule_id: R-0008
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 248
+- name: Seleção do instalador por sistema operacional
+  trigger: Ao acessar a página de download do VS Code
+  condition: A página detecta o sistema operacional em uso
+  action: Baixar a versão oferecida correspondente ao SO (download for Mac OS em macOS; download for Windows
+    em Windows)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0034
+  rule_id: R-0009
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 281
+- name: Ajuste de zoom do editor
+  trigger: Código exibido muito grande ou muito pequeno
+  condition: UNDEFINED
+  action: Usar command menos para reduzir/minimizar o tamanho do código e command mais para zoom in
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0035
+  rule_id: R-0013
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 299
+- name: Abrir pasta antes de iniciar o projeto
+  trigger: Após abrir o VS Code, com Explorer vazio (nenhuma pasta aberta)
+  condition: Deseja-se criar o próprio projeto com arquivos organizados
+  action: Abrir uma pasta de projeto como primeiro passo, para manter todos os arquivos e itens do projeto
+    numa pasta organizada
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0036
+  - EV-0037
+  - EV-0038
+  rule_id: R-0010
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 310
+- name: Salvar alterações de arquivo
+  trigger: Após digitar conteúdo em um arquivo
+  condition: UNDEFINED
+  action: Pressionar command S para salvar; conteúdo persiste ao fechar e reabrir o arquivo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0043
+  rule_id: R-0014
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 379
+- name: Deletar arquivo no VS Code
+  trigger: Necessidade de remover um arquivo do projeto
+  condition: Arquivo visível no Explorer
+  action: Selecionar o arquivo e usar command delete, ou clicar com botão direito e escolher delete
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0044
+  rule_id: R-0012
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 385
+- name: Ciência do espelhamento no sistema local
+  trigger: Ao modificar o diretório de arquivos dentro do VS Code
+  condition: Qualquer criação, edição ou deleção feita no file directory
+  action: Tratar a alteração como refletida também na máquina local
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0045
+  rule_id: R-0011
+  segment_ids:
+  - SEG-003
+  origin_class: SOURCE_EXPLICIT
+  order_key: 395
+- name: Escolha de tema por preferência pessoal
+  trigger: O usuário está decidindo qual tema de cor usar no VS Code
+  condition: Não há tema obrigatório definido; a escolha é preferência pessoal
+  action: Clicar e experimentar os temas disponíveis até identificar qual se prefere; não é necessário
+    manter o fundo preto padrão do editor
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não assumir que o tema do instrutor (Solarized Light) deve ser adotado
+  - Não presumir obrigação de manter o fundo preto padrão
+  evidence_ids:
+  - EV-0048
+  - EV-0050
+  - EV-0049
+  rule_id: R-0015
+  segment_ids:
+  - SEG-004
+  origin_class: SOURCE_EXPLICIT
+  order_key: 433
+- name: Ajustar espaço do painel do terminal
+  trigger: Quando o painel do terminal ocupa espaço demais na tela
+  condition: UNDEFINED
+  action: Minimizar/redimensionar o painel do terminal para ajustar o espaço de trabalho
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0053
+  rule_id: R-0017
+  segment_ids:
+  - SEG-005
+  origin_class: SOURCE_EXPLICIT
+  order_key: 485
+- name: 'Layout de trabalho: arquivos acima, terminal abaixo'
+  trigger: Ao configurar o ambiente de trabalho no VS Code para uma sessão Claude Code
+  condition: UNDEFINED
+  action: Manter os arquivos/docs na parte de cima da interface e o terminal com o Claude Code na parte
+    de baixo, para ver simultaneamente os arquivos e a sessão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0054
+  - EV-0059
+  rule_id: R-0016
+  segment_ids:
+  - SEG-005
+  origin_class: SOURCE_EXPLICIT
+  order_key: 502
+- name: Monitorar consumo de contexto e tokens por resposta
+  trigger: A cada resposta do Claude Code
+  condition: UNDEFINED
+  action: Ler no output o tempo gasto, os tokens consumidos e a porcentagem da janela de contexto já consumida
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0058
+  rule_id: R-0018
+  segment_ids:
+  - SEG-005
+  origin_class: SOURCE_EXPLICIT
+  order_key: 546
+- name: Limpeza de arquivos de teste
+  trigger: Quando o usuário quer apagar os arquivos criados no teste
+  condition: Arquivos de teste presentes na pasta atual
+  action: Selecionar todos os arquivos com command+A (ou clicar no arquivo) e apagar com command+delete
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0064
+  rule_id: R-0019
+  segment_ids:
+  - SEG-006
+  origin_class: SOURCE_EXPLICIT
+  order_key: 606
+- name: Encerrar sessão do Claude Code
+  trigger: Usuário quer encerrar a sessão atual do Claude Code
+  condition: UNDEFINED
+  action: Clicar no ícone de lixeira na interface, ou pressionar Control C duas vezes (no Mac, Control
+    C duas vezes); a sessão é encerrada e o usuário retorna à sessão normal do terminal na pasta atual
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0065
+  - EV-0066
+  - EV-0067
+  - EV-0068
+  - EV-0069
+  rule_id: R-0020
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 624
+- name: Limpar o terminal
+  trigger: Usuário quer limpar o terminal
+  condition: UNDEFINED
+  action: Digitar o comando 'clear'; o terminal fica totalmente limpo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0070
+  rule_id: R-0021
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 648
+- name: Reiniciar o Claude Code em nova sessão
+  trigger: Usuário quer iniciar o Claude Code novamente após tê-lo encerrado
+  condition: UNDEFINED
+  action: Digitar 'claude' no terminal; abre-se uma nova sessão (não continua a anterior)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não esperar que o reinício continue a sessão anterior
+  evidence_ids:
+  - EV-0071
+  - EV-0072
+  rule_id: R-0022
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 654
+- name: Retomar sessão anterior com /resume
+  trigger: Usuário quer retomar a sessão anterior, inclusive após o computador desligar aleatoriamente
+  condition: UNDEFINED
+  action: Digitar '/resume' (com barra antes da palavra resume) e pressionar enter; na lista de sessões,
+    que mostra quando cada sessão ocorreu e a instrução dada nela, selecionar a sessão e pressionar return/enter
+    para voltar à conversa anterior
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não omitir a barra antes de 'resume'
+  evidence_ids:
+  - EV-0073
+  - EV-0074
+  - EV-0075
+  - EV-0076
+  - EV-0077
+  rule_id: R-0023
+  segment_ids:
+  - SEG-007
+  origin_class: SOURCE_EXPLICIT
+  order_key: 665
+- name: Alternar para modo plan antes de pedido de construção com imagem de referência
+  trigger: Emissão de um pedido de construção acompanhado de imagem de referência
+  condition: O pedido ainda não foi enviado
+  action: Alternar o Claude Code para o modo plan antes de emitir o pedido
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0084
+  rule_id: R-0024
+  segment_ids:
+  - SEG-008
+  origin_class: SOURCE_EXPLICIT
+  order_key: 938
+- name: Invocar /goal quando se deseja execução autônoma em loop
+  trigger: Necessidade de que a IA trabalhe de forma autônoma em vez de retornar uma saída única
+  condition: Ambiente é o Claude Code
+  action: Digitar o comando de barra seguido de 'goal' (/goal) para que a IA trabalhe autonomamente em
+    loop até o requisito ser atendido
+  autonomy: 'autônomo após invocação: Claude executa em loop até o requisito ser atendido'
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED — loop segue até a saída atender plenamente aos requisitos
+  do_not:
+  - Não esperar loop autônomo ao enviar prompt sem /goal — nesse caso o Claude Code devolve apenas a saída
+    regular, uma única vez
+  evidence_ids:
+  - EV-0085
+  - EV-0086
+  - EV-0087
+  - EV-0088
+  rule_id: R-0025
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 944
+- name: Especificar requisitos explícitos no prompt inicial
+  trigger: Antes de submeter o prompt com /goal
+  condition: O loop depende de critérios de avaliação
+  action: Declarar no prompt inicial os requisitos explícitos que servirão de critério para o avaliador
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0090
+  - EV-0091
+  rule_id: R-0026
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 971
+- name: Reenviar feedback quando a saída não atende aos requisitos
+  trigger: Avaliador conclui que a saída não corresponde aos requisitos
+  condition: Loop /goal ativo
+  action: Enviar o feedback de volta ao Claude Code para corrigir e gerar a saída novamente
+  autonomy: executado pelo sistema nos bastidores
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0092
+  rule_id: R-0027
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 984
+- name: Encerrar o loop e devolver resultado
+  trigger: Avaliação indica que a saída atende plenamente aos requisitos
+  condition: Loop /goal ativo
+  action: Terminar o loop e enviar o resultado de volta ao usuário
+  autonomy: executado pelo sistema nos bastidores
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não devolver o resultado ao usuário antes de a saída atender plenamente aos requisitos
+  evidence_ids:
+  - EV-0093
+  rule_id: R-0028
+  segment_ids:
+  - SEG-009
+  origin_class: SOURCE_EXPLICIT
+  order_key: 990
+- name: Reunir requisitos antes de executar
+  trigger: Início de uma tarefa de construção/clonagem de aplicação
+  condition: Requisitos e expectativa da condição de conclusão ainda não definidos
+  action: Reunir todos os requisitos da condição de conclusão e definir a expectativa dentro de um plano
+    antes de executar
+  autonomy: UNDEFINED
+  precedence: Precede a execução (/go)
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não executar antes de reunir os requisitos
+  evidence_ids:
+  - EV-0095
+  - EV-0097
+  rule_id: R-0029
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1013
+- name: Ativar plan mode antes de pedir planejamento
+  trigger: Antes de solicitar o planejamento à IA
+  condition: UNDEFINED
+  action: Alternar o Claude Code para o modo plan e pedir que a IA planeje
+  autonomy: UNDEFINED
+  precedence: Antes do prompt de planejamento
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0096
+  rule_id: R-0030
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1019
+- name: Ignorar termos técnicos desconhecidos
+  trigger: Saída da IA contém termos técnicos desconhecidos
+  condition: UNDEFINED
+  action: Prosseguir normalmente; termos desconhecidos não são um problema
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0106
+  rule_id: R-0037
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1107
+- name: Escolha de tech stack por popularidade
+  trigger: IA pergunta qual tech stack usar
+  condition: Múltiplas opções de stack oferecidas
+  action: Escolher a opção mais popular (a primeira, Next.js + React); a escolha específica não importa
+    muito
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0107
+  - EV-0108
+  - EV-0110
+  rule_id: R-0031
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1114
+- name: Inspecionar estrutura de arquivos antes de decidir stack
+  trigger: Opções de stack apresentadas pela IA
+  condition: Dúvida sobre consequências da opção
+  action: Rolar a resposta da IA para ver a estrutura de arquivos resultante de cada opção antes de decidir
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0109
+  rule_id: R-0032
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1144
+- name: Pular email gate para escopo mínimo
+  trigger: IA detecta feature de subscrição de email no back end e pergunta se deve incluir o email gate
+  condition: Objetivo é manter o escopo mínimo
+  action: Escolher a opção de ferramenta puramente client-side, pulando o email gate
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não incluir o email gate quando o escopo deve ser mínimo
+  evidence_ids:
+  - EV-0111
+  - EV-0112
+  rule_id: R-0033
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1156
+- name: Reutilizar conteúdo do app original
+  trigger: IA pergunta qual conteúdo o tier list deve usar
+  condition: UNDEFINED
+  action: Reutilizar o mesmo conjunto de system designs já existente no app original
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0113
+  rule_id: R-0034
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1176
+- name: Definir a fidelity bar como condição de parada
+  trigger: IA pergunta a fidelity bar (funcional vs pixel perfect)
+  condition: UNDEFINED
+  action: Escolher a fidelity bar; ela é a condição de parada sobre a qual a IA vai iterar em loop até
+    satisfazê-la. Neste caso escolher pixel perfect
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: Loop até satisfazer a condição escolhida
+  do_not:
+  - Não escolher 'functional' se o objetivo for pixel perfect, pois 'functional' tem como meta explícita
+    não ser pixel perfect
+  evidence_ids:
+  - EV-0114
+  - EV-0115
+  - EV-0116
+  - EV-0118
+  rule_id: R-0035
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1188
+- name: Critério de aceite pixel perfect
+  trigger: Fidelity bar definida como pixel perfect
+  condition: UNDEFINED
+  action: Exigir correspondência exata com os screenshots, mesmas fontes e mesmo estilo, com diferença
+    não superior a 2%
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0117
+  rule_id: R-0036
+  segment_ids:
+  - SEG-010
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1205
+- name: Revisar o plano gerado antes de construir
+  trigger: Um plano foi gerado pelo modo de planejamento
+  condition: Antes de iniciar a construção
+  action: Abrir e visualizar o plano completo, que contém todo o contexto do que está sendo construído
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0119
+  rule_id: R-0038
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1230
+- name: Nível de profundidade na revisão do modelo de dados
+  trigger: Revisão da seção de modelo de dados do plano
+  condition: Revisor não técnico
+  action: Não se aprofundar no detalhe; apenas notar que o modelo constrói uma lista de objetos com campos
+    como ID e cor
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não se preocupar com o detalhe técnico do modelo de dados
+  evidence_ids:
+  - EV-0127
+  rule_id: R-0043
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1284
+- name: Solicitar modificações quando o plano não satisfaz
+  trigger: O revisor não está satisfeito com o plano apresentado
+  condition: Plano exibido com opções de resposta
+  action: Usar a seta para baixo, descer até a opção número quatro e digitar as modificações desejadas;
+    submeter o feedback para que o Claude Code gere um novo plano baseado nele
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0129
+  - EV-0131
+  rule_id: R-0039
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1298
+- name: Baixar assets localmente antes de despachar a construção
+  trigger: O plano prevê uso de imagens/ícones da plataforma de referência
+  condition: Antes de despachar a construção da aplicação e iniciar o loop
+  action: Pedir no plano que todas as imagens/ícones sejam baixadas localmente primeiro, e só depois construir
+  autonomy: UNDEFINED
+  precedence: Extração de imagens precede a construção
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não deixar a IA adivinhar de onde obter os elementos
+  evidence_ids:
+  - EV-0130
+  - EV-0134
+  rule_id: R-0040
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1311
+- name: Confirmar que o novo plano reflete apenas a mudança pedida
+  trigger: Novo plano gerado após feedback
+  condition: UNDEFINED
+  action: Comparar com o plano anterior e verificar que tudo permanece igual exceto a inclusão do download
+    prévio das imagens mais recentes
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0132
+  rule_id: R-0041
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1343
+- name: Verificar assets extraídos na pasta public
+  trigger: Etapa de extração de imagens concluída
+  condition: UNDEFINED
+  action: Abrir a sidebar e a pasta public do projeto para confirmar a presença dos SVGs extraídos da
+    plataforma de referência
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0133
+  rule_id: R-0042
+  segment_ids:
+  - SEG-011
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1354
+- name: Escolher bypass permission para construção autônoma
+  trigger: A IA questiona sobre permissões antes de começar a construir
+  condition: Objetivo é que a IA construa autonomamente
+  action: Responder 'yes and bypass permission' para que a IA comece a construir e itere em loop até obter
+    um resultado melhor
+  autonomy: autônomo após bypass permission concedido (IA constrói e itera sem novas aprovações)
+  precedence: Preferido sobre 'refine with ultra plan' neste caso ('for now we're just going to go with
+    bypass permission')
+  missing_input_action: UNDEFINED
+  iteration_limit: Loop até 'um resultado melhor'; número de iterações UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0135
+  - EV-0137
+  rule_id: R-0044
+  segment_ids:
+  - SEG-012
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1378
+- name: 'Alternativa: refinar com ultra plan antes de construir'
+  trigger: No mesmo ponto de decisão de permissões/plano
+  condition: Deseja-se um wireframe antes da construção
+  action: Clicar em 'refine with ultra plan' para abrir um web app e gerar um wireframe antes de construir
+  autonomy: UNDEFINED
+  precedence: Alternativa não escolhida no fluxo demonstrado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0136
+  rule_id: R-0045
+  segment_ids:
+  - SEG-012
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1383
+- name: Tratar link do dev server como local-only
+  trigger: Agente termina a construção e sobe um dev server com link exibido
+  condition: Link gerado pertence ao servidor local
+  action: Usar o link apenas localmente para verificar a aplicação
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não enviar o link do dev server para outra pessoa ou amigo — não conseguirão acessar, pois é local
+    only
+  evidence_ids:
+  - EV-0138
+  - EV-0139
+  rule_id: R-0046
+  segment_ids:
+  - SEG-012
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1406
+- name: Critério de sucesso do app gerado
+  trigger: Aplicação gerada aberta no navegador
+  condition: Comparação com o aplicativo original
+  action: Aceitar como bem-sucedido quando o app for um clone exato do original com todas as funcionalidades
+    presentes na web application
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0142
+  rule_id: R-0047
+  segment_ids:
+  - SEG-012
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1453
+- name: Escopo de aplicação do mecanismo de skills
+  trigger: Escolha do modelo/agente que executará a skill
+  condition: Independe de ser Claude Code ou outro modelo de linguagem grande
+  action: Usar a skill como workflow/guia/SOP que instrui o modelo sobre exatamente o que fazer e como
+    fazer
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0143
+  - EV-0144
+  rule_id: R-0052
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1474
+- name: Gate de replicação antes de pesquisa
+  trigger: QA com automação de navegador Playwright tenta replicar o problema descrito no ticket
+  condition: O problema é reproduzido com sucesso
+  action: Acionar múltiplos agentes para fazer pesquisa sobre o ticket inteiro
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0150
+  - EV-0151
+  rule_id: R-0048
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1546
+- name: Revisão humana no encerramento
+  trigger: Ticket movido para a coluna de QA no Jira ao final do workflow
+  condition: Sempre no passo final, em vez de automatizar até o fim sem supervisão
+  action: Um humano revisa o processo
+  autonomy: Humano revisa o processo ao final (human-in-the-loop)
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não automatizar até o fim sem supervisão humana
+  evidence_ids:
+  - EV-0158
+  - EV-0159
+  rule_id: R-0049
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1616
+- name: Arquitetura hierárquica de skills
+  trigger: Empacotamento de um workflow multi-passo em skills
+  condition: O workflow tem múltiplos passos, cada um com processo próprio
+  action: Fazer cada passo chamar sua própria sub-skill e criar uma skill mestre que empacota tudo junto;
+    construir cada etapa como skill (ler tickets, usar a ferramenta correta como Playwright para controlar
+    o navegador, pesquisa, implementações)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0161
+  - EV-0160
+  rule_id: R-0051
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1622
+- name: Critério de delegação a uma skill
+  trigger: Avaliação de um processo para transformá-lo em skill
+  condition: O processo é repetível
+  action: Delegar o processo a uma skill, escrita como SOP que o agente de IA segue para executá-lo, tornando-a
+    reutilizável para que qualquer pessoa a execute e repita o mesmo processo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0165
+  - EV-0164
+  rule_id: R-0050
+  segment_ids:
+  - SEG-013
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1654
+- name: Busca de skills para outros agentes de IA
+  trigger: 'O agente em uso não é o Claude (ex.: Codex, OpenClaude ou outro agente de IA)'
+  condition: Necessidade de encontrar skills disponíveis
+  action: Usar o site skills.sh para visualizar todas as skills disponíveis para agentes de IA
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0173
+  - EV-0174
+  rule_id: R-0056
+  segment_ids:
+  - SEG-014
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1771
+- name: Escolha de escopo de instalação de skill para colaboradores
+  trigger: Claude Code exibe as opções de escopo de instalação da skill após pressionar enter na skill
+    selecionada
+  condition: Deseja-se que todos os colaboradores que clonaram/forkaram o repositório possam usar a skill
+  action: Escolher a segunda opção de escopo (instalar dentro do projeto atual, disponível para qualquer
+    um que forke ou clone o projeto) e pressionar enter para instalar
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não usar user scope (global na máquina local) nem o escopo restrito somente a você no projeto atual
+    quando o objetivo é compartilhar com colaboradores
+  evidence_ids:
+  - EV-0177
+  - EV-0178
+  rule_id: R-0053
+  segment_ids:
+  - SEG-014
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1812
+- name: Recarregar plugins após instalar skill
+  trigger: 'Skill (ex.: front end design) acabou de ser instalada'
+  condition: UNDEFINED
+  action: Digitar /reload-plugins na sessão do Claude Code para aplicar as mudanças
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0179
+  rule_id: R-0054
+  segment_ids:
+  - SEG-014
+  origin_class: GENUINE_INFERENCE
+  order_key: 1841
+- name: Verificação de disponibilidade da skill instalada
+  trigger: Após o reload dos plugins
+  condition: UNDEFINED
+  action: Digitar 'front end design' na sessão do Claude Code e confirmar que a skill aparece disponível
+    na sessão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0180
+  rule_id: R-0055
+  segment_ids:
+  - SEG-014
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1860
+- name: Acionar skill por linguagem natural
+  trigger: Deseja-se usar uma skill instalada durante um prompt
+  condition: O nome da skill é mencionado no prompt em linguagem natural
+  action: 'Escrever o prompt em linguagem natural mencionando o nome da skill (ex.: ''usando a front end
+    design skill''); a skill é acionada'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0181
+  rule_id: R-0057
+  segment_ids:
+  - SEG-015
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1871
+- name: Acionar skill por slash command
+  trigger: Deseja-se especificar explicitamente a skill a ser usada
+  condition: 'A skill possui um slash command correspondente (ex.: /frontend-design)'
+  action: Invocar a skill diretamente via slash command
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0182
+  rule_id: R-0058
+  segment_ids:
+  - SEG-015
+  origin_class: GENUINE_INFERENCE
+  order_key: 1887
+- name: Responder perguntas de clarificação da skill
+  trigger: A skill dispara perguntas de clarificação após um pedido amplo
+  condition: 'O pedido inicial é amplo (ex.: ''renovate this entire application'')'
+  action: Responder às perguntas de clarificação sobre o que será redesenhado e então prosseguir com a
+    execução
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0183
+  - EV-0184
+  rule_id: R-0059
+  segment_ids:
+  - SEG-015
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1920
+- name: Verificar preservação da funcionalidade após redesign
+  trigger: Redesign visual da aplicação concluído
+  condition: A aplicação possui funcionalidades interativas (drag-and-drop, mover entre alvos, reset)
+  action: Testar as funcionalidades originais e confirmar que continuam funcionando após a mudança visual
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Aceitar o redesign se a funcionalidade original deixou de funcionar
+  evidence_ids:
+  - EV-0187
+  rule_id: R-0060
+  segment_ids:
+  - SEG-015
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1943
+- name: Aplicar skill de boas práticas React em front-end React/Next.js
+  trigger: Construção de aplicação front-end em React ou Next.js
+  condition: Projeto usa React ou Next.js como framework de front-end
+  action: Seguir a skill Vercel React best practice, cujas ~70 regras são priorizadas por impacto, para
+    construir a aplicação com as melhores práticas e otimizações de performance
+  autonomy: UNDEFINED
+  precedence: Regras internas da skill são priorizadas por impacto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0190
+  - EV-0191
+  - EV-0192
+  - EV-0200
+  rule_id: R-0061
+  segment_ids:
+  - SEG-016
+  origin_class: SOURCE_EXPLICIT
+  order_key: 1991
+- name: Invocação da skill instalada por comando de barra
+  trigger: Próxima execução após a skill estar instalada
+  condition: Skill já instalada no projeto
+  action: 'Digitar o comando de barra da skill (ex.: /vercel ...) para que ela seja usada imediatamente'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0195
+  - EV-0196
+  rule_id: R-0063
+  segment_ids:
+  - SEG-016
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2016
+- name: Instalar apenas skills necessárias
+  trigger: Decisão sobre instalar uma skill
+  condition: 'A skill corresponde ao que você realmente quer ou precisa fazer (ex.: finanças, marketing,
+    construção de aplicações)'
+  action: Instalar somente as skills realmente desejadas/necessárias para o propósito pretendido
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não instalar skills que não são realmente desejadas ou necessárias
+  evidence_ids:
+  - EV-0201
+  - EV-0202
+  rule_id: R-0062
+  segment_ids:
+  - SEG-016
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2054
+- name: Identificar item do projeto pelo tipo/extensão
+  trigger: Aluno se depara com projeto gerado contendo muitas pastas e arquivos e não sabe o que cada
+    um faz
+  condition: UNDEFINED
+  action: Percorrer os itens e identificar 'o que é o quê' pelo tipo/extensão do arquivo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0204
+  - EV-0205
+  rule_id: R-0064
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2093
+- name: Documentação vai em .md
+  trigger: Necessidade de armazenar documentação escrita do projeto
+  condition: O conteúdo é documentação escrita
+  action: Armazenar em arquivo .md em formato markdown; no código-fonte, escrever títulos/descrições/bullet
+    points usando hash na frente
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0206
+  - EV-0207
+  - EV-0208
+  rule_id: R-0065
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2106
+- name: Ignorar package-lock.json
+  trigger: Desenvolvedor avalia arquivos do projeto para dar atenção
+  condition: Arquivo é package-lock.json, gerado automaticamente a cada instalação das dependências declaradas
+  action: Não se preocupar com ele; não exige atenção do desenvolvedor
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não gastar atenção em package-lock.json
+  evidence_ids:
+  - EV-0210
+  rule_id: R-0066
+  segment_ids:
+  - SEG-017
+  origin_class: GENUINE_INFERENCE
+  order_key: 2146
+- name: Assets públicos na pasta public
+  trigger: Necessidade de adicionar logos ou imagens ao projeto
+  condition: O arquivo é um asset público (logo, imagem)
+  action: Colocar o arquivo na pasta public
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0211
+  rule_id: R-0067
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2159
+- name: Não tocar em node_modules
+  trigger: Desenvolvedor considera editar conteúdo de node_modules
+  condition: Conteúdo é temporário, gerado ao instalar as dependências do package.json
+  action: Não mexer no conteúdo de node_modules (necessidade muito rara)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não editar arquivos dentro de node_modules
+  evidence_ids:
+  - EV-0212
+  - EV-0213
+  - EV-0216
+  rule_id: R-0068
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2178
+- name: node_modules listado no .gitignore
+  trigger: Commit / adição de arquivos ao controle de versão
+  condition: 'Item consta no .gitignore (ex.: node_modules)'
+  action: Ignorar o item a cada commit/adição ao controle de versão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0214
+  - EV-0215
+  rule_id: R-0069
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2191
+- name: Conteúdo próprio vai na pasta library (lib)
+  trigger: Necessidade de guardar código escrito pela própria equipe
+  condition: 'O conteúdo é arquivo de configuração, biblioteca ou utilitário (ex.: desenhar um retângulo,
+    função de que a aplicação precisa) e não é componente'
+  action: Colocar na pasta library (lib)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não colocar componentes na pasta library
+  evidence_ids:
+  - EV-0217
+  - EV-0218
+  - EV-0219
+  rule_id: R-0070
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2242
+- name: Deletar pasta eval ao concluir
+  trigger: Trabalho totalmente concluído
+  condition: Pasta eval é temporária, criada pelo agente de IA via comando slash goal para avaliar se
+    a aplicação atende ao padrão dos requisitos
+  action: Deletar a pasta eval
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0220
+  - EV-0221
+  - EV-0222
+  rule_id: R-0071
+  segment_ids:
+  - SEG-017
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2260
+- name: Alocar componentes customizados reutilizáveis na pasta components
+  trigger: Quando existe um elemento visual pequeno da interface (card, ícone, sidebar inferior, botão,
+    info panel)
+  condition: O elemento é uma peça menor / componente customizado que pode ser reutilizável
+  action: Guardar esse componente na pasta components
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0223
+  - EV-0224
+  - EV-0226
+  - EV-0229
+  rule_id: R-0073
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2283
+- name: Criar componentes pequenos e compor em aplicações maiores
+  trigger: Ao construir a interface da aplicação
+  condition: UNDEFINED
+  action: Decompor a aplicação inteira em componentes pequenos, criar cada peça separadamente e depois
+    juntá-las (modelo de peças de Lego) para formar a aplicação maior
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0225
+  - EV-0227
+  - EV-0228
+  rule_id: R-0072
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2300
+- name: Reutilizar o mesmo componente para renderizar elementos diferentes
+  trigger: Quando itens distintos precisam ser exibidos no mesmo tipo de painel/elemento
+  condition: UNDEFINED
+  action: Usar o mesmo componente para renderizar o elemento diferente, em vez de criar um novo
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0230
+  rule_id: R-0074
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2330
+- name: Reunir componentes e biblioteca na pasta application
+  trigger: Quando é necessário juntar todos os componentes e o material de biblioteca (funções)
+  condition: UNDEFINED
+  action: Usar a pasta application como local de reunião de componentes e funções de biblioteca; dentro
+    dela, page.tsx renderiza a homepage inteira
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0231
+  - EV-0232
+  - EV-0233
+  rule_id: R-0075
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2335
+- name: Entender a estrutura de pastas após build do agente
+  trigger: Depois que o agente de IA cria as skills e você dispara algo como /go para construir
+  condition: UNDEFINED
+  action: Inspecionar e entender exatamente o que está acontecendo na sua estrutura de pastas
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não aprofundar no código durante essa inspeção de estrutura
+  evidence_ids:
+  - EV-0237
+  - EV-0236
+  rule_id: R-0076
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2364
+- name: Fechar todas as abas do editor
+  trigger: Quando há muitas abas abertas no editor
+  condition: UNDEFINED
+  action: Clicar com o botão direito e escolher 'close all'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0238
+  rule_id: R-0077
+  segment_ids:
+  - SEG-018
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2376
+- name: Atribuir pasta oculta à ferramenta proprietária
+  trigger: Ao encontrar pastas cujo nome começa com ponto no diretório do projeto
+  condition: Cada pasta oculta pertence privativamente a uma ferramenta específica
+  action: 'Associar a pasta oculta à ferramenta correspondente (ex.: .next → Next.js; .playwright-mcp
+    → servidor MCP do Playwright) e não tratá-la como código da aplicação atual'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não assumir que pastas com ponto fazem parte do código da aplicação atual
+  evidence_ids:
+  - EV-0240
+  - EV-0242
+  - EV-0243
+  rule_id: R-0081
+  segment_ids:
+  - SEG-019
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2400
+- name: Identificar pasta de referência pela seta no ícone
+  trigger: Ao visualizar uma pasta no explorador de arquivos do projeto
+  condition: Se há uma seta apontando sobre o ícone da pasta
+  action: 'Interpretar a pasta como pasta de referência (link): não pertence de fato a .claude, apenas
+    aponta para conteúdo que vive em outro lugar'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0248
+  rule_id: R-0080
+  segment_ids:
+  - SEG-019
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2483
+- name: Fonte da verdade da skill é a cópia em agents
+  trigger: Ao editar ou inspecionar uma skill que aparece em .claude/skills
+  condition: Quando existe cópia correspondente da skill na pasta agents
+  action: Tratar a versão na pasta agents como fonte da verdade; entender a entrada em .claude/skills
+    como referência a essa versão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0249
+  rule_id: R-0079
+  segment_ids:
+  - SEG-019
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2508
+- name: 'Colocação de arquivo por escopo: universal vs específico do Claude Code'
+  trigger: Ao decidir em qual pasta colocar um arquivo de configuração/skill
+  condition: Se o conteúdo deve valer para todos os frameworks de agentes de IA vs. apenas para o Claude
+    Code
+  action: Colocar na pasta 'agents' o que é universal para todos os frameworks de agentes de IA; colocar
+    na pasta '.claude' o que é específico apenas do Claude Code
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0250
+  - EV-0252
+  rule_id: R-0078
+  segment_ids:
+  - SEG-019
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2520
+- name: Referência de CLAUDE.md para agents.md
+  trigger: Existência de um arquivo CLAUDE.md no projeto
+  condition: Quando se deseja que o CLAUDE.md aproveite as instruções universais
+  action: Referenciar o agents.md dentro do CLAUDE.md usando @agents.md
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0254
+  - EV-0253
+  rule_id: R-0083
+  segment_ids:
+  - SEG-020
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2556
+- name: Roteamento de system prompt por escopo de framework
+  trigger: Necessidade de adicionar um system prompt ao projeto
+  condition: Se o system prompt deve valer para todos os frameworks de agentes de IA (inclusive futuros)
+    → agents.md; se é regra/ferramenta exclusiva do Claude Code → CLAUDE.md
+  action: Escrever o system prompt dentro do arquivo correspondente (agents.md para universal, CLAUDE.md
+    para específico do Claude Code)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não colocar regras universais somente no CLAUDE.md
+  - Não colocar regras exclusivas do Claude Code no agents.md
+  evidence_ids:
+  - EV-0255
+  - EV-0256
+  - EV-0262
+  rule_id: R-0082
+  segment_ids:
+  - SEG-020
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2569
+- name: Desativação de regra de system prompt
+  trigger: Decisão de não mais aplicar uma regra de system prompt
+  condition: Regra escrita como texto em agents.md ou CLAUDE.md
+  action: Remover o texto da regra do arquivo; o agente retorna ao comportamento anterior
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0261
+  rule_id: R-0084
+  segment_ids:
+  - SEG-020
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2617
+- name: Ignorar arquivos de configuração no início
+  trigger: Inspeção da estrutura de arquivos do projeto por iniciante
+  condition: Arquivos de configuração não relacionados ao system prompt
+  action: Não se preocupar com esses arquivos neste momento
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não gastar tempo com arquivos de configuração nesta etapa
+  evidence_ids:
+  - EV-0263
+  rule_id: R-0085
+  segment_ids:
+  - SEG-020
+  origin_class: SOURCE_EXPLICIT
+  order_key: 2651
+- name: Sumarizar conversas antigas com /compact
+  trigger: Conversas antigas acumuladas na sessão
+  condition: UNDEFINED
+  action: Usar o comando embutido /compact para sumarizar as conversas antigas
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0265
+  rule_id: R-0087
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3000
+- name: Usar menu de barra para embutidos ou skills
+  trigger: Abertura do menu de comandos de barra
+  condition: UNDEFINED
+  action: Selecionar comando embutido do Claude Code ou, rolando a lista, acionar skills e comandos customizados
+    criados pelo usuário
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0266
+  - EV-0270
+  - EV-0272
+  rule_id: R-0090
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3006
+- name: Trocar para modelo mais potente quando necessário
+  trigger: Necessidade de usar um modelo diferente ou mais poderoso durante a sessão
+  condition: Sessão do Claude Code ativa no terminal
+  action: 'Digitar /model no terminal e escolher a variante desejada no menu (ex.: Sonnet, Haiku ou outro
+    modelo disponível)'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0267
+  - EV-0268
+  - EV-0269
+  rule_id: R-0086
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3012
+- name: Localizar definição de skills e comandos customizados
+  trigger: Necessidade de inspecionar ou criar skill/comando customizado
+  condition: Projeto com pasta .claude ou pasta de agents
+  action: Procurar/definir o arquivo dentro da pasta .claude ou da pasta de agents do projeto, como workflow
+    reutilizável em markdown ou scripts
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0271
+  - EV-0273
+  rule_id: R-0091
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3035
+- name: Reverter alterações via rewind até checkpoint
+  trigger: Desejo de voltar a um ponto anterior da conversa/código
+  condition: Existir um checkpoint anterior na sessão
+  action: Digitar rewind e confirmar; isso restaura o código e a conversa ao ponto anterior, revertendo
+    as alterações feitas pelo Claude Code até o checkpoint escolhido
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0274
+  - EV-0277
+  - EV-0278
+  rule_id: R-0088
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3058
+- name: Escolher modo de retomada ao usar resume
+  trigger: Execução do comando resume para retomar uma conversa
+  condition: Existir conversa/sessão anterior disponível
+  action: Escolher entre 'resume from summary' ou 'resume from full session'; no exemplo foi escolhida
+    a segunda opção (sessão completa)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0275
+  rule_id: R-0089
+  segment_ids:
+  - SEG-022
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3064
+- name: Avaliar plugin antes de instalar
+  trigger: Um plugin candidato é encontrado na interface de discovery de plugins
+  condition: Ainda não há decisão sobre se o plugin é o adequado
+  action: Pressionar enter sobre o plugin para abrir seus detalhes e ler mais sobre ele para avaliar se
+    é o adequado antes de instalar
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0281
+  rule_id: R-0092
+  segment_ids:
+  - SEG-023
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3126
+- name: Escolha do caminho de remoção
+  trigger: Deseja-se remover um plugin ou skill já instalada
+  condition: 'Existem dois caminhos possíveis: interface de plugins ou sistema de arquivos'
+  action: Remover pela interface de plugins selecionando o item com enter e escolhendo 'uninstall'; alternativamente,
+    deletar a pasta da skill dentro da pasta de agents
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0284
+  - EV-0285
+  - EV-0286
+  rule_id: R-0094
+  segment_ids:
+  - SEG-023
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3149
+- name: Reiniciar após deletar pasta de skill
+  trigger: A pasta de uma skill instalada foi deletada
+  condition: A skill ainda aparece na sessão em execução
+  action: Reiniciar o Claude Code para que a skill deixe de existir na sessão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0288
+  rule_id: R-0093
+  segment_ids:
+  - SEG-023
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3174
+- name: Não confiar em rewind de sessão como mecanismo de reversão
+  trigger: Precisa desfazer mudanças feitas em um projeto com Claude Code
+  condition: O único mecanismo disponível é o rewind da conversa/sessão; a sessão pode desaparecer ao
+    reiniciar o computador
+  action: Tratar o rewind de sessão como insuficiente e adotar controle de versão externo à sessão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não depender da sessão do Claude Code para reverter mudanças de longo prazo
+  evidence_ids:
+  - EV-0290
+  - EV-0291
+  rule_id: R-0095
+  segment_ids:
+  - SEG-024
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3202
+- name: Adotar controle de versão quando há time ou reversão histórica
+  trigger: Múltiplos membros de time trabalham no mesmo projeto OU se deseja reverter para uma mudança
+    específica feita em semanas anteriores
+  condition: UNDEFINED
+  action: Configurar controle de versão para o projeto
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0292
+  rule_id: R-0096
+  segment_ids:
+  - SEG-024
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3221
+- name: Escolher GitHub como ferramenta de controle de versão
+  trigger: Decisão sobre como configurar controle de versão
+  condition: Busca-se a forma mais simples e mais barata
+  action: Usar GitHub (gratuito) como plataforma de controle de versão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0293
+  - EV-0294
+  rule_id: R-0097
+  segment_ids:
+  - SEG-024
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3227
+- name: Nomear cada commit pela mudança exata
+  trigger: Criação de uma nova versão (commit) no repositório
+  condition: UNDEFINED
+  action: Dar ao commit um nome específico descrevendo exatamente o que foi alterado naquela versão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não usar nomes de versão que não descrevam a mudança feita
+  evidence_ids:
+  - EV-0297
+  rule_id: R-0098
+  segment_ids:
+  - SEG-024
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3270
+- name: Usar branch separada para variações do projeto
+  trigger: Deseja-se criar uma mudança diferente, como uma versão beta ou uma versão dois
+  condition: O trabalho atual está na branch main
+  action: Criar uma branch diferente e fazer commits sobre ela
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0302
+  - EV-0303
+  rule_id: R-0099
+  segment_ids:
+  - SEG-024
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3335
+- name: Escolher visibilidade do repositório na criação
+  trigger: Ao criar um repositório para um projeto
+  condition: Se o conteúdo deve ser visto apenas pelo dono, escolher privado; se pode ser visto por qualquer
+    pessoa, escolher público
+  action: Especificar explicitamente no prompt/criação a visibilidade desejada (private ou public)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0310
+  - EV-0311
+  rule_id: R-0100
+  segment_ids:
+  - SEG-025
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3442
+- name: Não commitar node_modules nem pastas dot
+  trigger: Ao commitar um projeto de código
+  condition: 'Sempre que existirem node_modules ou pastas dot geradas (ex.: .next do Next.js)'
+  action: Manter esses itens excluídos via gitignore, pois não são relevantes para o projeto
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Commitar node_modules
+  - Commitar as pastas dot geradas pelo framework
+  evidence_ids:
+  - EV-0313
+  - EV-0314
+  rule_id: R-0101
+  segment_ids:
+  - SEG-025
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3501
+- name: Ler estado de ignore pelo file explorer
+  trigger: Ao inspecionar quais arquivos entrarão no commit
+  condition: Arquivos/pastas exibidos acinzentados no file explorer do editor
+  action: Interpretar acinzentado como ignorado pelo git (não será commitado) e não acinzentado como parte
+    do commit
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0315
+  rule_id: R-0103
+  segment_ids:
+  - SEG-025
+  origin_class: GENUINE_INFERENCE
+  order_key: 3519
+- name: Não commitar informação sensível
+  trigger: Antes/durante o envio de conteúdo ao controle de versão
+  condition: 'Se houver arquivos com informação sensível (ex.: .env, queries SQL)'
+  action: Não adicionar esses arquivos ao controle de versão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Commitar informação sensível na nuvem
+  evidence_ids:
+  - EV-0317
+  - EV-0316
+  rule_id: R-0102
+  segment_ids:
+  - SEG-025
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3537
+- name: Renomear branch padrão (opcional)
+  trigger: Após git init, quando a branch padrão criada localmente é master
+  condition: Se desejado usar 'main' como nome da branch
+  action: Renomear a branch master para main
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0319
+  rule_id: R-0104
+  segment_ids:
+  - SEG-025
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3554
+- name: Escrever mensagem de commit descritiva manualmente
+  trigger: Há mudanças a serem registradas em uma nova versão do projeto
+  condition: UNDEFINED
+  action: 'Escrever manualmente a mensagem de commit descrevendo a mudança feita (ex: ''deleted the eval''),
+    pois essa mensagem é o que será commitado nessa nova versão do projeto'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0325
+  rule_id: R-0105
+  segment_ids:
+  - SEG-026
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3652
+- name: Adicionar colaboradores para edição simultânea
+  trigger: É necessário permitir que mais usuários commitem no mesmo repositório
+  condition: UNDEFINED
+  action: Abrir o repositório no GitHub, ir em Settings e usar a seção 'Collaborators' para adicionar
+    as pessoas que poderão commitar no mesmo repositório
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0329
+  - EV-0328
+  rule_id: R-0106
+  segment_ids:
+  - SEG-026
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3701
+- name: Reverter mudança via commit ID no Claude Code
+  trigger: Deseja-se reverter uma mudança já registrada no controle de versão
+  condition: Especialmente aplicável quando há muitas mudanças no controle de versão git, pois o commit
+    ID identifica exatamente o ponto a reverter
+  action: Copiar o commit ID da árvore de commits do painel de source control do VS Code e passá-lo ao
+    Claude Code pedindo para reverter aquela mudança; o Claude Code reverte com base no commit ID especificado
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0332
+  - EV-0333
+  - EV-0331
+  - EV-0330
+  rule_id: R-0107
+  segment_ids:
+  - SEG-026
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3727
+- name: Priorizar ferramentas com processos tediosos de múltiplos cliques
+  trigger: Seleção de qual ferramenta do dia a dia conectar ao agente
+  condition: O processo na ferramenta exige clicar por diversos passos para chegar ao resultado desejado
+  action: Conectar essa ferramenta ao Claude Code para automatizar o processo tedioso
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0335
+  - EV-0334
+  rule_id: R-0110
+  segment_ids:
+  - SEG-027
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3767
+- name: Verificar se a ferramenta já vem por padrão antes de instalar
+  trigger: Necessidade de que o Claude Code opere uma ferramenta externa
+  condition: A ferramenta não vem por padrão com o Claude Code (GitHub vem por padrão para commits, criação
+    de repositórios e gestão de branches)
+  action: Instalar e adicionar a ferramenta ao Claude Code via protocolo MCP; se for GitHub, usar a capacidade
+    já disponível por padrão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0336
+  - EV-0337
+  - EV-0338
+  rule_id: R-0108
+  segment_ids:
+  - SEG-027
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3803
+- name: Usar MCP em vez de código customizado para integração
+  trigger: A IA precisa acessar serviços externos ou dados (Google Drive, GitHub, banco de dados local,
+    web)
+  condition: A integração seria feita por script/código customizado escrito pelo desenvolvedor
+  action: Usar MCP como padrão de integração, com cliente MCP (aplicação de IA com que você conversa,
+    como o app desktop do Claude ou agentes do Claude Code) e servidor MCP (programa leve que lê arquivos
+    locais, acessa banco de dados ou busca dados na web)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Escrever código/script customizado para cada serviço quando MCP pode padronizar a integração
+  evidence_ids:
+  - EV-0342
+  - EV-0343
+  - EV-0344
+  rule_id: R-0109
+  segment_ids:
+  - SEG-027
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3867
+- name: Conectar serviços externos via servidor MCP
+  trigger: Desejo de que a IA opere um software/app usado no dia a dia (Stripe, PayPal, Slack, Jira)
+  condition: Existe servidor MCP capaz de conectar ao serviço
+  action: Conectar o serviço através de servidor MCP para que a IA o utilize
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0345
+  rule_id: R-0111
+  segment_ids:
+  - SEG-027
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3900
+- name: Escolher MCP ou CLI indiferentemente para dar controle de ferramentas ao agente
+  trigger: Necessidade de permitir que um agente de IA chame uma aplicação de terceiros em nosso nome
+  condition: A aplicação oferece MCP ou ferramenta CLI (ambos são tratados como equivalentes para esse
+    fim)
+  action: Conectar o agente via MCP ou via ferramenta CLI, pois não importa qual dos dois seja usado —
+    ambos são ferramentas que permitem ao agente chamar aplicações de terceiros
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não assumir que MCP é a única forma de dar controle de ferramentas ao agente
+  evidence_ids:
+  - EV-0346
+  - EV-0349
+  - EV-0355
+  rule_id: R-0112
+  segment_ids:
+  - SEG-028
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3912
+- name: Usar CLI como interface de operação do agente sobre apps e serviços
+  trigger: O app ou serviço de terceiros expõe uma ferramenta CLI
+  condition: UNDEFINED
+  action: 'Fazer o agente de IA interagir com o app/serviço pelo CLI, do mesmo modo que um humano faria
+    no terminal: abrir o terminal, digitar o texto, rodar o programa ou script'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0347
+  - EV-0348
+  rule_id: R-0113
+  segment_ids:
+  - SEG-028
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3930
+- name: Preferir MCP quando há medo de rodar comandos no terminal (caso Vercel)
+  trigger: Usuário faz deploy da aplicação na Vercel e tem medo de rodar comandos no terminal
+  condition: O provedor oferece MCP (Vercel oferece MCP e também CLI)
+  action: Usar o MCP da Vercel para que o modelo de linguagem faça o deploy da aplicação; alternativamente
+    conectar o modelo à Vercel pelo terminal via ferramenta CLI
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0353
+  - EV-0354
+  rule_id: R-0114
+  segment_ids:
+  - SEG-028
+  origin_class: SOURCE_EXPLICIT
+  order_key: 3986
+- name: Ambiente sem CLI/MCP disponível
+  trigger: Agente responde que não possui Vercel CLI nem MCP no sistema atual
+  condition: Ausência de CLI ou MCP no ambiente
+  action: Copiar para o Claude Code a documentação de conexão do Vercel ao MCP ou o link da documentação
+    do Vercel CLI
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0358
+  rule_id: R-0115
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4054
+- name: Priorizar economia de tokens
+  trigger: Objetivo declarado é economizar tokens
+  condition: Prioridade em eficiência de tokens
+  action: Usar ferramenta CLI
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0362
+  - EV-0361
+  rule_id: R-0116
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4086
+- name: Controlar número de ferramentas expostas ao agente
+  trigger: Necessidade de controlar quantas ferramentas o agente de IA recebe acesso
+  condition: UNDEFINED
+  action: Usar MCP, que expõe via protocolo padronizado um conjunto limitado de ferramentas ao agente
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0364
+  - EV-0363
+  - EV-0365
+  rule_id: R-0118
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4097
+- name: Priorizar segurança
+  trigger: Prioridade declarada é segurança
+  condition: UNDEFINED
+  action: Escolher MCP
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0369
+  - EV-0365
+  rule_id: R-0119
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4110
+- name: Ambiente de equipe
+  trigger: Vários membros de equipe trabalhando no projeto
+  condition: UNDEFINED
+  action: Escolher a ferramenta MCP
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0366
+  - EV-0367
+  rule_id: R-0120
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4116
+- name: Multi-tenant, controle de acesso e autenticação
+  trigger: Foco em ambiente de equipe com múltiplos tenants para agentes de IA, ou gestão de controle
+    de acesso e autenticação
+  condition: UNDEFINED
+  action: Usar MCP, definindo fronteiras de autenticação e trilhas de auditoria no servidor MCP
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0371
+  - EV-0367
+  rule_id: R-0121
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4123
+- name: Custo de tokens do MCP
+  trigger: Avaliação de consumo de tokens ao considerar MCP
+  condition: Schemas das ferramentas são constantemente carregados na janela de contexto da IA
+  action: Considerar que MCP consome mais tokens que CLI nessa decisão
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0368
+  rule_id: R-0122
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4133
+- name: Priorizar velocidade ou eficiência de tokens
+  trigger: Critério de escolha é velocidade ou eficiência de tokens
+  condition: UNDEFINED
+  action: Escolher CLI como melhor opção
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0370
+  - EV-0369
+  rule_id: R-0117
+  segment_ids:
+  - SEG-029
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4147
+- name: MCP conectado como pré-requisito de deploy
+  trigger: Antes de pedir ao agente que faça o deploy da aplicação
+  condition: A conexão do MCP na máquina local está estabelecida
+  action: Prosseguir com o pedido de deploy ao agente; se o MCP não estiver conectado, copiar o link da
+    documentação, colar no agente de código e deixar que ele mesmo faça a conexão
+  autonomy: UNDEFINED
+  precedence: Precede o login na Vercel e o pedido de deploy
+  missing_input_action: Copiar o link da documentação e colar no agente de código para que ele faça a
+    conexão
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0373
+  - EV-0374
+  rule_id: R-0123
+  segment_ids:
+  - SEG-030
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4176
+- name: Escolha do caminho de remoção
+  trigger: Necessidade de remover o projeto publicado
+  condition: UNDEFINED
+  action: Remover manualmente pelo painel (abrir as configurações do projeto e clicar em 'delete project')
+    ou, alternativamente, instruir o próprio agente de código a deletar o projeto
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0381
+  - EV-0382
+  rule_id: R-0126
+  segment_ids:
+  - SEG-030
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4236
+- name: Confirmar contexto da conta antes de ação destrutiva
+  trigger: Pedido de deleção de projeto ao agente
+  condition: Existe mais de um projeto na conta
+  action: O agente primeiro sinaliza o contexto antes de agir, listando os projetos da conta e identificando
+    quais são propriedades ativas que ele não criou, para deletar a coisa certa e nada mais
+  autonomy: UNDEFINED
+  precedence: Precede a execução da deleção
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não executar a deleção sem antes confirmar exatamente o que existe na conta
+  - Não tocar nos outros projetos da conta
+  evidence_ids:
+  - EV-0385
+  - EV-0386
+  rule_id: R-0124
+  segment_ids:
+  - SEG-030
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4265
+- name: Critério de sucesso da deleção
+  trigger: Após o agente executar a deleção do projeto
+  condition: UNDEFINED
+  action: Verificar que o projeto alvo foi removido e que os outros projetos permanecem intocados
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0387
+  rule_id: R-0125
+  segment_ids:
+  - SEG-030
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4289
+- name: Escolher skill para workflow repetível
+  trigger: Existe um workflow que se quer repetir da mesma forma todas as vezes ao usar Claude Code
+  condition: O workflow é um SOP (procedimento operacional padrão) do usuário
+  action: Codificar esse workflow como uma skill
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0390
+  rule_id: R-0127
+  segment_ids:
+  - SEG-031
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4324
+- name: Escolher MCP para conexão com sistema externo
+  trigger: É necessário dar a Claude Code acesso a uma ferramenta externa (Slack, Jira, Salesforce ou
+    outra)
+  condition: O objetivo é conectar Claude Code à ferramenta para poder usá-la
+  action: Usar um MCP como mecanismo de conexão à ferramenta
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0391
+  rule_id: R-0128
+  segment_ids:
+  - SEG-031
+  origin_class: GENUINE_INFERENCE
+  order_key: 4336
+- name: Escolher agent para especialidade ou personalidade
+  trigger: É necessário um comportamento especialista, com personalidade ou especialidade específica
+  condition: A necessidade é definir como o agente de IA vai se comportar (regras específicas, especialidades
+    ou personalidades)
+  action: Criar um agent/sub-agente próprio contendo as regras específicas de comportamento
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0392
+  - EV-0393
+  rule_id: R-0129
+  segment_ids:
+  - SEG-031
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4342
+- name: Composição hierárquica agent → skill → MCP
+  trigger: Ao montar a arquitetura de execução em Claude Code
+  condition: Há agent, skill e MCP disponíveis
+  action: Fazer o agent executar seguindo uma skill específica, e a skill usar/chamar diferentes MCPs;
+    cada agent pode ter quantas skills se quiser acionar, e dentro da skill incluir a instrução de chamar
+    a ferramenta
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0394
+  - EV-0395
+  rule_id: R-0130
+  segment_ids:
+  - SEG-031
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4367
+- name: Adequação para iniciantes
+  trigger: Dúvida se o Claude Code serve para iniciantes
+  condition: UNDEFINED
+  action: Tratar o Claude Code como adequado para iniciantes e encaminhar para o fluxo básico de instalação
+    e uso (VS Code → terminal → comando 'claude')
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0397
+  rule_id: R-0132
+  segment_ids:
+  - SEG-032
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4399
+- name: Preferir terminal quando o objetivo é usar todas as funcionalidades
+  trigger: Usuário quer experimentar todas as funcionalidades/customizações do Claude Code
+  condition: Existe escolha entre versão desktop e versão de terminal
+  action: Usar o Claude Code no terminal em vez da versão desktop, porque o terminal oferece customizações
+    que a versão desktop não possui
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não assumir que a versão desktop oferece as mesmas customizações do terminal
+  evidence_ids:
+  - EV-0398
+  - EV-0399
+  rule_id: R-0131
+  segment_ids:
+  - SEG-032
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4416
+- name: Avaliar framework e modelo como camadas separadas
+  trigger: Ao comparar agentes de CLI de codificação (Claude Code, Codex, Gemini CLI, Antigravity)
+  condition: A ferramenta em questão é um framework e o modelo é o motor que a alimenta
+  action: 'Separar a análise em duas camadas: (1) o framework, (2) o modelo que o alimenta; avaliar cada
+    camada independentemente'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não tratar a diferença entre as ferramentas como sendo apenas o modelo padrão que cada uma usa
+  evidence_ids:
+  - EV-0400
+  - EV-0401
+  rule_id: R-0133
+  segment_ids:
+  - SEG-033
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4433
+- name: Modelo é intercambiável dentro do framework
+  trigger: Ao definir qual modelo usar dentro de um framework como Claude Code ou Codex
+  condition: A ferramenta é um framework
+  action: Assumir que praticamente qualquer modelo pode ser usado dentro do framework para alimentá-lo;
+    não considerar o modelo padrão como obrigatório
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não presumir que Claude Code exige Claude, Codex exige GPT ou Gemini CLI exige Gemini
+  evidence_ids:
+  - EV-0402
+  - EV-0400
+  rule_id: R-0135
+  segment_ids:
+  - SEG-033
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4433
+- name: Escolher Claude Code na dimensão framework
+  trigger: Ao decidir qual framework de agente adotar
+  condition: A decisão é sobre a camada de framework (não sobre o modelo)
+  action: 'Escolher Claude Code, por oferecer mais features que Codex ou Antigravity: raciocínio estilo
+    ultrathink, workflows dinâmicos, construção de orquestrações inteiras e plugins ausentes nos outros
+    frameworks'
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0403
+  - EV-0404
+  rule_id: R-0134
+  segment_ids:
+  - SEG-033
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4472
+- name: Adotar controle de versão quando houver necessidade de rollback
+  trigger: Avaliação de necessidade de usar git/GitHub no projeto
+  condition: O projeto exige controle de versão, por exemplo quando se deseja voltar (roll back) para
+    versões anteriores
+  action: Adotar git/GitHub no projeto
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0409
+  rule_id: R-0136
+  segment_ids:
+  - SEG-035
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4539
+- name: Adicionar versionamento em projeto de longo prazo
+  trigger: Definição do escopo temporal do projeto
+  condition: O projeto é algo que se pretende manter e trabalhar a longo prazo
+  action: Adicionar controle de versão ao projeto (benefício definitivo)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0410
+  rule_id: R-0137
+  segment_ids:
+  - SEG-035
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4546
+- name: Versionamento como proteção contra exclusão indevida pelo agente
+  trigger: Risco de o agente (Claude) apagar algo que não deveria ser apagado
+  condition: Não existe versão disponível para reverter a exclusão
+  action: Ter git e GitHub configurados, pois nesse cenário o versionamento é crítico
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não operar com o agente apagando arquivos sem ter uma versão para roll back
+  evidence_ids:
+  - EV-0411
+  - EV-0412
+  rule_id: R-0138
+  segment_ids:
+  - SEG-035
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4551
+- name: Plano $20 suficiente para iniciante
+  trigger: Usuário está começando a aprender Claude Code
+  condition: Perfil iniciante
+  action: Permanecer no plano de $20 (mais que suficiente)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0414
+  rule_id: R-0139
+  segment_ids:
+  - SEG-036
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4569
+- name: Plano $20 insuficiente para uso diário
+  trigger: Usuário pretende usar Claude Code todos os dias
+  condition: Uso diário intenso
+  action: Tratar o plano de $20 como insuficiente e adotar estratégia de complemento (modelo local ou
+    OpenRouter) ou upgrade
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0415
+  - EV-0416
+  - EV-0417
+  rule_id: R-0140
+  segment_ids:
+  - SEG-036
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4574
+- name: Viabilidade de modelo local
+  trigger: Consideração da opção de rodar modelo local para ficar no orçamento
+  condition: Somente se o computador do usuário for realmente potente
+  action: Adotar modelo local; caso contrário, descartar essa opção
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não usar modelo local se o computador não for realmente potente
+  evidence_ids:
+  - EV-0419
+  - EV-0418
+  rule_id: R-0141
+  segment_ids:
+  - SEG-036
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4592
+- name: Critério de escolha de modelo substituto
+  trigger: Seleção de modelo de terceiros para substituir modelo Anthropic
+  condition: Modelo precisa ser realmente potente e ter preço razoável que o usuário consiga pagar
+  action: Aceitar apenas modelos que atendam aos dois critérios (potência + preço razoável)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0423
+  - EV-0420
+  rule_id: R-0142
+  segment_ids:
+  - SEG-036
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4604
+- name: Combo de substitutos com plano pro de $20
+  trigger: Objetivo de manter Claude Code dentro do orçamento
+  condition: Modelos substitutos disponíveis via OpenRouter/local
+  action: Combinar modelos substitutos com o plano pro de $20 em vez de fazer upgrade
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0424
+  rule_id: R-0143
+  segment_ids:
+  - SEG-036
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4631
+- name: Segurança de execução local depende do modo de permissão correto
+  trigger: Usuário questiona se é seguro rodar Claude na própria máquina
+  condition: Execução ocorre na máquina do usuário
+  action: Responder que é seguro e vincular a segurança à definição do modo de permissão correto, que
+    é o mecanismo que garante execução segura
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0429
+  - EV-0432
+  rule_id: R-0144
+  segment_ids:
+  - SEG-038
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4692
+- name: Escolha de IDE para rodar Claude Code
+  trigger: Usuário pergunta se precisa do Cursor para usar Claude Code
+  condition: Ferramenta candidata é um IDE que possui terminal e permite editar arquivos (Cursor, Antigravity,
+    VS Code)
+  action: Tratar as opções como equivalentes e informar que Cursor não é necessário para rodar Claude
+    Code
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Não exigir Cursor como pré-requisito para rodar Claude Code
+  evidence_ids:
+  - EV-0433
+  - EV-0436
+  rule_id: R-0145
+  segment_ids:
+  - SEG-039
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4717
+- name: Preferência para iniciantes que querem começar pequeno
+  trigger: Perfil é iniciante e deseja começar pequeno
+  condition: UNDEFINED
+  action: Aplicar a preferência recomendada pelo instrutor para iniciantes (conteúdo da recomendação não
+    especificado no segmento)
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0437
+  rule_id: R-0146
+  segment_ids:
+  - SEG-039
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4748
+- name: Escolher VS Code para início simples e mínimo
+  trigger: O aprendiz quer começar de forma simples e mínima
+  condition: Objetivo é um começo simples/mínimo
+  action: Adotar o VS Code como opção de ferramenta
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not: []
+  evidence_ids:
+  - EV-0438
+  rule_id: R-0147
+  segment_ids:
+  - SEG-040
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4754
+- name: Tratar material de fundamentos como válido após novas features
+  trigger: Surgimento de novas features ou novos modelos no mês ou ano seguinte
+  condition: O conteúdo em questão trata de fundamentos
+  action: Continuar aplicando o material aprendido, considerando-o não desatualizado
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Descartar o material por causa de atualizações da ferramenta
+  evidence_ids:
+  - EV-0444
+  - EV-0441
+  - EV-0443
+  rule_id: R-0149
+  segment_ids:
+  - SEG-040
+  origin_class: SOURCE_EXPLICIT
+  order_key: 4773
+- name: Dominar fundamentos antes de recursos avançados
+  trigger: Intenção de aprender Agent SDK, construção de workflows dinâmicos ou loops
+  condition: Fundamentos ainda não dominados
+  action: Aprender/consolidar os fundamentos antes de avançar para os recursos avançados
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  do_not:
+  - Tentar aprender recursos avançados sem conhecer os fundamentos
+  evidence_ids:
+  - EV-0445
+  rule_id: R-0148
+  segment_ids:
+  - SEG-040
+  origin_class: GENUINE_INFERENCE
+  order_key: 4804

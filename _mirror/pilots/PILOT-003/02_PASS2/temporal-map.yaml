@@ -1,0 +1,1362 @@
+schema_version: 0.2.0
+artifact_id: PILOT-003-TEMPORAL-MAP
+pilot_id: PILOT-003
+lesson_id: PILOT-003-L01
+produced_by: PASS 1 — TEMPORAL MAP
+l0:
+  sha256: 04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192
+  extent_s: 13857
+segment_count: 148
+temporal_map:
+- segment_id: SEG-001
+  start: 00:00:00
+  end: 00:01:45
+  start_s: 0
+  end_s: 105
+  duration_s: 105
+  topic: 'Apresentação do curso completo de Google Ads para e-commerce: o que será coberto (KPIs, oferta,
+    IA para copy, tracking, search, shopping, PMax, YouTube) e como usar os time stamps'
+  function: abertura e mapa do curso
+- segment_id: SEG-002
+  start: 00:01:45
+  end: 00:04:31
+  start_s: 105
+  end_s: 271
+  duration_s: 166
+  topic: 'Fundamentos e mentalidade: Google Ads não é bala de prata, exige product-market fit e oferta
+    que converte; Google como parte do ecossistema de marketing e foco no marketing efficiency ratio'
+  function: enquadramento conceitual e pré-requisitos
+- segment_id: SEG-003
+  start: 00:04:31
+  end: 00:06:34
+  start_s: 271
+  end_s: 394
+  duration_s: 123
+  topic: 'Google como quatro plataformas em uma: search (níveis de consciência), shopping (60-80% da receita
+    ecom), YouTube (instream e shorts) e display (remarketing e expansão)'
+  function: exposição da estrutura do canal
+- segment_id: SEG-004
+  start: 00:06:34
+  end: 00:07:38
+  start_s: 394
+  end_s: 458
+  duration_s: 64
+  topic: 'Fórmula de escala: mensagem de marketing × volume = crescimento; para quem este curso serve
+    e o objetivo de tornar Google um canal dominante de aquisição'
+  function: princípio-chave e delimitação do público
+- segment_id: SEG-005
+  start: 00:07:38
+  end: 00:09:33
+  start_s: 458
+  end_s: 573
+  duration_s: 115
+  topic: 'Google como plataforma de compra comparativa: preço, promoções, imagens de qualidade, copy alinhada
+    à intenção e landing pages rápidas; erro de tratar Google como Meta'
+  function: explicação de diferencial competitivo e alerta contra erro comum
+- segment_id: SEG-006
+  start: 00:09:33
+  end: 00:11:42
+  start_s: 573
+  end_s: 702
+  duration_s: 129
+  topic: 'Capturar a demanda que você já gera: o cano furado entre Meta e Google, jornada de compra que
+    começa no Google, meta de 20-30% da receita e preferência do consumidor por comprar direto da marca'
+  function: argumentação com cenário problema-solução
+- segment_id: SEG-007
+  start: 00:11:42
+  end: 00:13:46
+  start_s: 702
+  end_s: 826
+  duration_s: 124
+  topic: 'Onde o Google se encaixa no sistema de aquisição paga em 2025 e o Cold Customer Magnet: topo
+    (YouTube, non-brand search, display), meio (PMax, shopping, DSA) e fundo (branded search/shopping,
+    remarketing dinâmico)'
+  function: apresentação do modelo/framework central
+- segment_id: SEG-008
+  start: 00:13:46
+  end: 00:15:47
+  start_s: 826
+  end_s: 947
+  duration_s: 121
+  topic: 'Visualização do funil completo (demand gen, landing pages, cold search, product page, retargeting)
+    e função de cada campanha: PMax, standard shopping, non-brand e branded search, YouTube e remarketing
+    dinâmico'
+  function: detalhamento visual e papel de cada campanha
+- segment_id: SEG-009
+  start: 00:15:47
+  end: 00:17:13
+  start_s: 947
+  end_s: 1033
+  duration_s: 86
+  topic: 'As três fases de crescimento de uma conta Google Ads: fundação e teste (30-60 dias, lances manuais),
+    otimização (2-6 meses, smart bidding, YouTube/PMax) e escala/expansão (após 6 meses)'
+  function: roteiro cronológico de implementação
+- segment_id: SEG-010
+  start: 00:17:13
+  end: 00:18:23
+  start_s: 1033
+  end_s: 1103
+  duration_s: 70
+  topic: 'Nova seção sobre filosofia de escala em 2025: Google Ads como motor e não varinha mágica, citação
+    de Eugene Schwartz sobre canalizar demanda existente'
+  function: transição e fundamentação filosófica
+- segment_id: SEG-011
+  start: 00:18:23
+  end: 00:20:00
+  start_s: 1103
+  end_s: 1200
+  duration_s: 97
+  topic: 'Primeiro princípio: escalar no break even, Google como 20-30% da receita e plataforma de captura
+    de demanda; break even ROAS, custo de aquisição e relação LTV/CAC'
+  function: desenvolvimento do primeiro princípio com métricas
+- segment_id: SEG-012
+  start: 00:20:00
+  end: 00:22:54
+  start_s: 1200
+  end_s: 1374
+  duration_s: 174
+  topic: 'Filosofia LTV/CAC: aumentar o valor do cliente em vez de reduzir o CAC'
+  function: Argumenta que, em vez de tentar baixar o CAC, a marca deve elevar AOV e LTV; explica que 'quem
+    pode gastar mais para adquirir um cliente ganha', defende escalar o front-end no break-even com um
+    back-end forte e olhar métricas blended em vez de ROAS por campanha
+- segment_id: SEG-013
+  start: 00:22:54
+  end: 00:24:46
+  start_s: 1374
+  end_s: 1486
+  duration_s: 112
+  topic: 'Estruturar antes de escalar: campanhas fundamentais e segmentação'
+  function: Lista os elementos obrigatórios antes de aumentar verba (branded search para proteção de marca,
+    shopping, Performance Max, depois YouTube e cold search) e explica por que separar tráfego branded/non-branded
+    e prospecção/retargeting evita desperdício e ROAS inflado
+- segment_id: SEG-014
+  start: 00:24:46
+  end: 00:27:04
+  start_s: 1486
+  end_s: 1624
+  duration_s: 138
+  topic: 'Automação do Google: onde confiar e onde manter controle'
+  function: Distingue as áreas em que se deve dar liberdade ao algoritmo (keywords amplas, sem sinais
+    de audiência, lances automáticos, criativo como segmentação) das áreas de controle manual (scripts
+    de negativas, revisão de termos de busca, otimização de landing page, decisões de orçamento e desligar
+    recomendações automáticas)
+- segment_id: SEG-015
+  start: 00:27:04
+  end: 00:29:00
+  start_s: 1624
+  end_s: 1740
+  duration_s: 116
+  topic: 'Escala como processo: rotinas diárias, semanais e mensais e eficiência'
+  function: 'Detalha o checklist operacional por frequência (negativas e impression share diários; escalar
+    vencedores, testes A/B e GMC semanais; aumentos de verba e auditoria mensais) e reforça que escalar
+    é gastar melhor: smart bidding, cortar SKUs ruins e limitar gasto em marca a 3–10%'
+- segment_id: SEG-016
+  start: 00:29:00
+  end: 00:30:17
+  start_s: 1740
+  end_s: 1817
+  duration_s: 77
+  topic: Expandir além de search e shopping para gerar demanda
+  function: Explica que o volume de busca é um teto e que YouTube, display e demand gen criam demanda
+    que depois é capturada, alimentando PMax e shopping com novos sinais de intenção a CPMs baratos
+- segment_id: SEG-017
+  start: 00:30:17
+  end: 00:31:56
+  start_s: 1817
+  end_s: 1916
+  duration_s: 99
+  topic: Testar, iterar e automatizar; encerramento da filosofia
+  function: Defende testes semanais de anúncios, feeds e landing pages, uso de CRO e scripts/IA, critica
+    a falta de testes e conclui que escalar no Google exige abordagem holística e atenção diária, não
+    uma fórmula mágica
+- segment_id: SEG-018
+  start: 00:31:56
+  end: 00:34:12
+  start_s: 1916
+  end_s: 2052
+  duration_s: 136
+  topic: Oferta como primeiro dos nove pontos essenciais
+  function: 'Apresenta o curso e a lista dos nove focos, então usa o quadro para argumentar que a oferta
+    é rei especialmente no Google (plataforma comparativa) e dá exemplos práticos: frete ''on us'', BOGO,
+    desconto percentual ou em valor e bundles que elevam o AOV'
+- segment_id: SEG-019
+  start: 00:34:12
+  end: 00:36:17
+  start_s: 2052
+  end_s: 2177
+  duration_s: 125
+  topic: Landing page congruente e unit economics
+  function: Mostra o fluxo anúncio → landing page e usa duração de sessão/bounce para diagnosticar incongruência;
+    em seguida argumenta que margem é pré-requisito para escalar e que aumentar AOV tem mais alavancagem
+    que reduzir COGS, incorporando LTV e análise de cohort
+- segment_id: SEG-020
+  start: 00:36:17
+  end: 00:38:09
+  start_s: 2177
+  end_s: 2289
+  duration_s: 112
+  topic: Metas, KPIs e métricas prioritárias
+  function: Define break-even de ROAS e CPA de novo cliente, contrasta a escolha entre lucro no primeiro
+    pedido e jogada de LTV, e ordena as seis métricas a monitorar priorizando impression share, CPC, CTR,
+    taxa de conversão, conversões e duração de sessão
+- segment_id: SEG-021
+  start: 00:38:09
+  end: 00:40:00
+  start_s: 2289
+  end_s: 2400
+  duration_s: 111
+  topic: Rastreamento de conversão e estrutura de campanhas por funil
+  function: Alerta que agências erram o conversion tracking e que ele deve ser enhanced e correto antes
+    de tudo; depois desenha a estrutura por funil (demand gen com shorts e estáticos no topo; cold search,
+    PMax e cold shopping no meio; branded e remarketing no fundo) com ordem de implementação e exclusões
+    de listas e marca
+- segment_id: SEG-022
+  start: 00:40:00
+  end: 00:41:41
+  start_s: 2400
+  end_s: 2501
+  duration_s: 101
+  topic: 'Cheap branded conversions and factor #7: deep audience targeting'
+  function: 'Fecha o ponto sobre estrutura de campanha (conversões de marca baratas, winners do Meta em
+    broad a $50/dia) e introduz o sétimo fator: entender o público em profundidade — linguagem, psicográficos,
+    dores, desejos — para se destacar dos concorrentes na busca por meio de ressonância e oferta'
+- segment_id: SEG-023
+  start: 00:41:41
+  end: 00:43:26
+  start_s: 2501
+  end_s: 2606
+  duration_s: 105
+  topic: 'Factor #8: creative for search, shopping and YouTube campaigns'
+  function: 'Detalha no quadro os três focos criativos: em search (headlines, imagens, descrições para
+    ocupar mais espaço na SERP), em shopping (imagem, título orientado ao targeting, prova social e promoção)
+    e em YouTube shorts (clips de podcast, séries, direct response forte e CTA muito explícito)'
+- segment_id: SEG-024
+  start: 00:43:26
+  end: 00:45:21
+  start_s: 2606
+  end_s: 2721
+  duration_s: 115
+  topic: 'Factor #9: bids, budget and bidding strategies'
+  function: 'Explica que lances e orçamento vêm por último e são guiados pela unit economics, e percorre
+    as estratégias de lance: CPC manual para campanhas de marca, target impression share absoluto para
+    branded search, e smart bidding (max conversion value, max conversions, tROAS, tCPA) para e-commerce'
+- segment_id: SEG-025
+  start: 00:45:21
+  end: 00:47:11
+  start_s: 2721
+  end_s: 2831
+  duration_s: 110
+  topic: 'Keyword research: from manual guessing to letting Google find converters'
+  function: Contrasta o método antigo (adivinhar palavras-chave e refinar) com a abordagem moderna de
+    rodar broad match em Performance Max e shopping, ler os relatórios de termos de pesquisa e identificar
+    quais buscas realmente convertem
+- segment_id: SEG-026
+  start: 00:47:11
+  end: 00:49:19
+  start_s: 2831
+  end_s: 2959
+  duration_s: 128
+  topic: The keyword flywheel and two methods to get your first keywords
+  function: 'Descreve o loop de feedback (shopping/PMax capturam termos → extrair para search em exato/frase,
+    títulos de produto e assets) e compara os dois métodos iniciais: começar broad e deixar o Google otimizar
+    versus pesquisa tradicional com Keyword Planner, Ahrefs, Semrush e Spyfu'
+- segment_id: SEG-027
+  start: 00:49:19
+  end: 00:50:46
+  start_s: 2959
+  end_s: 3046
+  duration_s: 87
+  topic: 'Step 2: using shopping and PMax as keyword research tools'
+  function: Ensina o passo prático de rodar shopping/PMax, checar relatórios de termos, separar queries
+    que converteram das que desperdiçaram verba e transformá-las em exato/frase, ilustrando com o exemplo
+    de 'best marathon shoes for flat feet' e a otimização de copy e landing page
+- segment_id: SEG-028
+  start: 00:50:46
+  end: 00:51:54
+  start_s: 3046
+  end_s: 3114
+  duration_s: 68
+  topic: 'Step 3: structuring keywords in product titles and search campaigns'
+  function: 'Mostra como aplicar as palavras-chave vencedoras: reescrever títulos e atributos no feed
+    de produto com exemplos comparativos, usar exato para queries de alta conversão, frase para variações,
+    e evitar broad em search fora de testes'
+- segment_id: SEG-029
+  start: 00:51:54
+  end: 00:53:33
+  start_s: 3114
+  end_s: 3213
+  duration_s: 99
+  topic: 'Step 4: the profitable feedback loop and keyword research summary'
+  function: Fecha o módulo argumentando que volume de busca importa menos que intenção de compra, alerta
+    contra copiar concorrentes cegamente e resume que a melhor estratégia é validar conversões com dados
+    próprios e alimentar títulos, assets, ângulos de YouTube, ofertas e landing pages
+- segment_id: SEG-030
+  start: 00:53:33
+  end: 00:54:53
+  start_s: 3213
+  end_s: 3293
+  duration_s: 80
+  topic: Conversion tracking overview and Google Analytics/enhanced conversions prep
+  function: 'Abre o tutorial de rastreamento de conversões para Shopify, lista o que será entregue (purchase,
+    add to cart, product view, begin checkout, remarketing dinâmico, GA4) e executa os pré-requisitos:
+    conectar o app Google & YouTube, confirmar GA4 e ativar enhanced conversions via Google tag'
+- segment_id: SEG-031
+  start: 00:54:53
+  end: 00:56:38
+  start_s: 3293
+  end_s: 3398
+  duration_s: 105
+  topic: Creating the four conversion actions in Google Ads
+  function: Demonstra na tela a criação manual das ações de conversão — purchase como meta primária e
+    add to cart, begin checkout e page view como adicionais — configurando categoria, valor, contagem,
+    janelas máximas de conversão, atribuição data driven e copiando o conversion ID e os labels
+- segment_id: SEG-032
+  start: 00:56:38
+  end: 00:58:16
+  start_s: 3398
+  end_s: 3496
+  duration_s: 98
+  topic: Importing the Tag Manager container and mapping variables
+  function: Guia a importação e merge do container pré-construído no Google Tag Manager, a edição das
+    constantes (conversion ID e os quatro labels) com os valores copiados, a publicação do workspace e
+    a cópia do código GTM
+- segment_id: SEG-033
+  start: 00:58:16
+  end: 01:00:00
+  start_s: 3496
+  end_s: 3600
+  duration_s: 104
+  topic: Shopify custom pixel, secondary conversions, and intro to Merchant Center
+  function: Conclui a instalação criando o custom pixel no Shopify com o código do guia, ajustando country
+    code e tag GTM, salvando e conectando; converte add to cart, begin checkout e page view em secundárias
+    e abre o próximo módulo sobre otimização do Google Merchant Center
+- segment_id: SEG-034
+  start: 01:00:00
+  end: 01:02:56
+  start_s: 3600
+  end_s: 3776
+  duration_s: 176
+  topic: 'Fase 1 do Google Merchant Center: configuração da conta e identidade do negócio'
+  function: 'Apresenta a fase fundacional: inscrição nos programas do GMC (remarketing dinâmico, avaliações
+    de clientes, classificações de produtos, promoções), preenchimento das informações do negócio, verificação
+    da loja, branding (logo e cores) e atributos de identidade/perfis sociais, explicando por que isso
+    cria confiança com o Google e evita suspensões.'
+- segment_id: SEG-035
+  start: 01:02:56
+  end: 01:05:12
+  start_s: 3776
+  end_s: 3912
+  duration_s: 136
+  topic: 'Fase 2 e 3: envio, devoluções, impostos e saúde do feed de produtos'
+  function: Demonstra a configuração manual das políticas de envio e devolução no GMC (em vez de sincronizar
+    pelo Shopify), o local de expedição, e depois ensina a auditar as fontes de dados/feeds e a corrigir
+    erros em 'Produtos > Precisa de atenção'.
+- segment_id: SEG-036
+  start: 01:05:12
+  end: 01:06:54
+  start_s: 3912
+  end_s: 4014
+  duration_s: 102
+  topic: 'Fase 4: confiança, visibilidade e manutenção contínua'
+  function: Mostra como adicionar promoções, ativar classificações de produtos via feed de avaliações
+    e usar o Shopping Experience Scorecard para obter o selo de confiança; encerra com a rotina semanal/mensal
+    de manutenção da conta.
+- segment_id: SEG-037
+  start: 01:06:54
+  end: 01:08:43
+  start_s: 4014
+  end_s: 4123
+  duration_s: 109
+  topic: 'Otimização do feed de produtos: títulos'
+  function: Inicia a nova lição argumentando que o feed, não o Google Ads, é o problema; define o título
+    ideal (130–150 caracteres com palavras-chave de alto volume, variantes, USPs e marca) e demonstra
+    na prática como editá-lo no Merchant Center.
+- segment_id: SEG-038
+  start: 01:08:43
+  end: 01:10:25
+  start_s: 4123
+  end_s: 4225
+  duration_s: 102
+  topic: Fórmula de estrutura do título e descrição do produto
+  function: Detalha a ordem dos elementos do título conforme o tamanho da marca (marca no fim para marcas
+    pequenas, no início para grandes) e ensina a reescrever a descrição com ~1000 caracteres de benefícios,
+    USPs e palavras-chave à frente, evitando texto promocional.
+- segment_id: SEG-039
+  start: 01:10:25
+  end: 01:12:31
+  start_s: 4225
+  end_s: 4351
+  duration_s: 126
+  topic: Imagem do produto, verificação de marca e identificadores
+  function: 'Explica com exemplos (sofá, taco de golfe, pulseira de Apple Watch) como escolher a melhor
+    imagem, verificar a marca e depois preencher identificadores críticos: tipo e categoria do produto,
+    condição, preço, disponibilidade, ID/SKU e GTIN/UPC/EAN.'
+- segment_id: SEG-040
+  start: 01:12:31
+  end: 01:14:40
+  start_s: 4351
+  end_s: 4480
+  duration_s: 129
+  topic: Atributos detalhados, rótulos personalizados e erros a evitar
+  function: Ensina a preencher atributos de filtragem (cor, tamanho, gênero, material, faixa de idade),
+    detalhes adicionais e envio, a usar custom labels para segmentar SKUs nas campanhas, e alerta para
+    nunca editar preço, disponibilidade ou preço promocional dentro do GMC.
+- segment_id: SEG-041
+  start: 01:14:40
+  end: 01:16:22
+  start_s: 4480
+  end_s: 4582
+  duration_s: 102
+  topic: 'Como evitar a suspensão do Merchant Center: visão geral do checklist'
+  function: Abre a nova lição explicando o impacto de um GMC banido, apresenta o checklist de 34 itens
+    dividido em categorias e frequências, e orienta o aluno a pausar e verificar cada item na própria
+    conta.
+- segment_id: SEG-042
+  start: 01:16:22
+  end: 01:17:43
+  start_s: 4582
+  end_s: 4663
+  duration_s: 81
+  topic: 'Checklist: pagamento e checkout'
+  function: 'Percorre os itens de checkout: SSL/HTTPS, teste de todos os métodos de pagamento, transparência
+    do preço final com impostos e frete, pedidos de teste e funcionamento dos códigos de desconto para
+    aprovar promoções.'
+- segment_id: SEG-043
+  start: 01:17:43
+  end: 01:20:00
+  start_s: 4663
+  end_s: 4800
+  duration_s: 137
+  topic: 'Checklist: listagens de produtos e branding'
+  function: Revisa as alegações de produto (evitar exageros e alegações não verificáveis), autenticidade
+    das avaliações, disponibilidade de estoque correta, links da página, precisão de preços entre página
+    e checkout, e itens de branding como logo, URL e atualização da homepage.
+- segment_id: SEG-044
+  start: 01:20:00
+  end: 01:21:28
+  start_s: 4800
+  end_s: 4888
+  duration_s: 88
+  topic: Navegação do site, links quebrados e sincronização das informações de envio com o Google Merchant
+    Center
+  function: 'Continuação do checklist anti-suspensão: verificação de menu/links e alinhamento entre políticas
+    de frete do site e do GMC, com exemplo real de cliente suspenso'
+- segment_id: SEG-045
+  start: 01:21:28
+  end: 01:23:40
+  start_s: 4888
+  end_s: 5020
+  duration_s: 132
+  topic: Políticas de devolução/reembolso, conformidade legal e informações de contato no GMC
+  function: 'Detalhamento dos itens do checklist: instruções de devolução, prazos, termos e privacidade,
+    links do rodapé, endereço físico, telefone e e-mail com domínio próprio'
+- segment_id: SEG-046
+  start: 01:23:40
+  end: 01:25:29
+  start_s: 5020
+  end_s: 5129
+  duration_s: 109
+  topic: Experiência do usuário, velocidade do site, design e apps; encerramento da aula sobre GMC
+  function: Fechamento dos fatores de CRO que afetam o GMC e resumo final com chamadas para ação (checklist,
+    curso, consultoria)
+- segment_id: SEG-047
+  start: 01:25:29
+  end: 01:26:43
+  start_s: 5129
+  end_s: 5203
+  duration_s: 74
+  topic: Introdução ao workflow de IA para criar copy de Google Ads
+  function: 'Abertura de novo módulo: promessa do fluxo com ChatGPT, Claude e Gemini para reduzir a criação
+    de campanhas de 8 horas para 30 minutos'
+- segment_id: SEG-048
+  start: 01:26:43
+  end: 01:28:48
+  start_s: 5203
+  end_s: 5328
+  duration_s: 125
+  topic: 'Primeiro prompt: pesquisa de marca e auditoria da página de produto (exemplo Ridge)'
+  function: Demonstração prática de engenharia de prompt (papel, contexto, tarefa, exemplos, restrições,
+    output) e upload do PDF da página de produto para auditoria de copy
+- segment_id: SEG-049
+  start: 01:28:48
+  end: 01:30:30
+  start_s: 5328
+  end_s: 5430
+  duration_s: 102
+  topic: 'Segundo e terceiro prompts: framework de pesquisa e geração do prompt de deep research'
+  function: Treinar o modelo como pesquisador especialista e usar IA para escrever o prompt de deep research,
+    depois colar no Gemini com o site e o PDF
+- segment_id: SEG-050
+  start: 01:30:30
+  end: 01:31:44
+  start_s: 5430
+  end_s: 5504
+  duration_s: 74
+  topic: Execução do deep research no Gemini
+  function: Justificativa da escolha do Gemini, aprovação do plano de pesquisa e observação das fontes
+    consultadas durante os 15-20 minutos de processamento
+- segment_id: SEG-051
+  start: 01:31:44
+  end: 01:33:53
+  start_s: 5504
+  end_s: 5633
+  duration_s: 129
+  topic: Resultado do deep research e criação dos arquivos JSON de contexto no Claude
+  function: Arquivamento do relatório no Drive, explicação do que é JSON e prompt no Claude para gerar
+    avatar, mercado, marca e perfil completo de contexto
+- segment_id: SEG-052
+  start: 01:33:53
+  end: 01:35:43
+  start_s: 5633
+  end_s: 5743
+  duration_s: 110
+  topic: Perfis de contexto de mercado/marca e geração dos ativos de Google Ads
+  function: Acompanhamento da geração dos JSONs, uso do JSON de Google Ads e comando único que produz
+    headlines, descrições, sitelinks, callouts e variações por nível de consciência
+- segment_id: SEG-053
+  start: 01:35:43
+  end: 01:37:11
+  start_s: 5743
+  end_s: 5831
+  duration_s: 88
+  topic: Geração de títulos de shopping e limites da IA
+  function: Demonstração de títulos otimizados para o feed, crítica de headlines fracas geradas e conclusão
+    de que a IA leva a 80-90% do caminho antes do toque humano
+- segment_id: SEG-054
+  start: 01:37:11
+  end: 01:39:00
+  start_s: 5831
+  end_s: 5940
+  duration_s: 109
+  topic: 'Campanha de busca de marca: resultados e definição'
+  function: Abertura de novo módulo com ROAS de exemplo (24x), apresentação do autor e explicação do que
+    é branded search usando o anúncio da Nike
+- segment_id: SEG-055
+  start: 01:39:00
+  end: 01:40:00
+  start_s: 5940
+  end_s: 6000
+  duration_s: 60
+  topic: Anúncio pago vs. resultado orgânico na busca de marca
+  function: Comparação ponto a ponto (copy de resposta direta, 'official site', sitelinks, imagens, espaço
+    acima da dobra) e introdução às cinco razões para rodar branded search
+- segment_id: SEG-056
+  start: 01:40:00
+  end: 01:41:56
+  start_s: 6000
+  end_s: 6116
+  duration_s: 116
+  topic: 'Cinco razões para campanhas de busca de marca: ocupar a SERP, proteger o termo de marca e induzir
+    compra'
+  function: Apresentação de argumentos com analogias de games para justificar o uso de campanhas de marca
+- segment_id: SEG-057
+  start: 01:41:56
+  end: 01:43:21
+  start_s: 6116
+  end_s: 6201
+  duration_s: 85
+  topic: Dados de conversão baratos alimentando a ação de conversão e segurança na jornada de compra
+  function: Explicação de mecanismo com diagramas comparando campanhas com e sem busca de marca
+- segment_id: SEG-058
+  start: 01:43:21
+  end: 01:45:04
+  start_s: 6201
+  end_s: 6304
+  duration_s: 103
+  topic: O que acontece quando você NÃO roda uma campanha de busca de marca
+  function: 'Contraste por negação: enumeração das perdas ao não rodar a campanha'
+- segment_id: SEG-059
+  start: 01:45:04
+  end: 01:46:39
+  start_s: 6304
+  end_s: 6399
+  duration_s: 95
+  topic: 'Configuração prática: meta de vendas, nomeação da campanha e estratégia de lance por parcela
+    de impressão'
+  function: Demonstração passo a passo na plataforma com justificativa dos parâmetros de lance
+- segment_id: SEG-060
+  start: 01:46:39
+  end: 01:48:33
+  start_s: 6399
+  end_s: 6513
+  duration_s: 114
+  topic: Configuração de rede, localização, públicos, palavras-chave exatas, anúncios e orçamento diário
+  function: Continuação da demonstração de setup com exemplos de headlines e descrições
+- segment_id: SEG-061
+  start: 01:48:33
+  end: 01:50:36
+  start_s: 6513
+  end_s: 6636
+  duration_s: 123
+  topic: Perguntas frequentes, otimizações da campanha de marca e swipe file de exemplos
+  function: Resposta a objeções, dicas de otimização e apresentação de material de referência
+- segment_id: SEG-062
+  start: 01:50:36
+  end: 01:52:18
+  start_s: 6636
+  end_s: 6738
+  duration_s: 102
+  topic: 'Introdução às campanhas de shopping de marca: definição e exclusão automática de termos não-marca'
+  function: Abertura de novo tópico com definição do conceito e exemplo da Nike
+- segment_id: SEG-063
+  start: 01:52:18
+  end: 01:53:53
+  start_s: 6738
+  end_s: 6833
+  duration_s: 95
+  topic: 'Por que rodar shopping de marca: real estate na SERP, proteção contra concorrentes e conversão
+    de curiosos em compradores'
+  function: Enumeração de benefícios com explicação de cada mecanismo
+- segment_id: SEG-064
+  start: 01:53:53
+  end: 01:55:35
+  start_s: 6833
+  end_s: 6935
+  duration_s: 102
+  topic: Dados de conversão baratos e alocação eficiente de orçamento entre marca e prospecção
+  function: Argumentação sobre economia da conta e controle de CPC máximo
+- segment_id: SEG-065
+  start: 01:55:35
+  end: 01:57:14
+  start_s: 6935
+  end_s: 7034
+  duration_s: 99
+  topic: 'Setup técnico da campanha de shopping de marca: GMC, CPC manual, prioridade, localização, subdivisões
+    e scripts'
+  function: Demonstração prática de configuração na interface do Google Ads
+- segment_id: SEG-066
+  start: 01:57:14
+  end: 01:58:52
+  start_s: 7034
+  end_s: 7132
+  duration_s: 98
+  topic: 'Otimização: manter CPC manual, usar scripts de exclusão e excluir clientes existentes'
+  function: Instruções de otimização contínua com procedimento de upload de lista de clientes
+- segment_id: SEG-067
+  start: 01:58:52
+  end: 02:00:00
+  start_s: 7132
+  end_s: 7200
+  duration_s: 68
+  topic: Otimização do Merchant Center e perguntas finais sobre conversões que já aconteceriam
+  function: Encerramento com recomendação de feed e resposta honesta a objeção comum
+- segment_id: SEG-068
+  start: 02:00:00
+  end: 02:01:19
+  start_s: 7200
+  end_s: 7279
+  duration_s: 79
+  topic: 'Fechamento das campanhas de marca (benefícios) e abertura do tema: sair da consciência de produto
+    para a consciência de problema'
+  function: 'Consolidação do módulo anterior com CTA de swipe file e enquadramento do novo problema de
+    ensino: atingir público que busca a solução, não a marca'
+- segment_id: SEG-069
+  start: 02:01:19
+  end: 02:03:33
+  start_s: 7279
+  end_s: 7413
+  duration_s: 134
+  topic: 'Estudo de caso de conta (suplemento para pressão alta) e configuração da campanha de search:
+    rastreamento de conversão, estratégia de lance, AI Max, localização e orçamento'
+  function: Demonstração com dados reais (gasto, CTR, taxa de conversão) seguida de passo a passo das
+    configurações recomendadas
+- segment_id: SEG-070
+  start: 02:03:33
+  end: 02:05:12
+  start_s: 7413
+  end_s: 7512
+  duration_s: 99
+  topic: Grupos de anúncios, tipos de correspondência (broad, exata) e leitura do relatório de termos
+    de busca
+  function: Análise prática de métricas por termo para ensinar como interpretar quais buscas convertem
+- segment_id: SEG-071
+  start: 02:05:12
+  end: 02:07:25
+  start_s: 7512
+  end_s: 7645
+  duration_s: 133
+  topic: Usar correspondência ampla para descobrir termos vencedores, promovê-los a exata e alterar a
+    URL final para landing pages dedicadas
+  function: Explicação de método de otimização em duas alavancas (targeting e mecanismo de conversão)
+    com exemplos de taxas de conversão
+- segment_id: SEG-072
+  start: 02:07:25
+  end: 02:08:32
+  start_s: 7645
+  end_s: 7712
+  duration_s: 67
+  topic: Construção de mini-funis e 'moats' em torno de termos problema-consciente; erro comum das marcas
+    de suplemento
+  function: Generalização estratégica do exemplo para o mercado, justificando vantagem competitiva de
+    longo prazo
+- segment_id: SEG-073
+  start: 02:08:32
+  end: 02:10:10
+  start_s: 7712
+  end_s: 7810
+  duration_s: 98
+  topic: 'Escrita do anúncio: inserção dinâmica de palavra-chave, extensões, e por que enviar tráfego
+    frio para advertorial em vez de página de produto'
+  function: Demonstração técnica da criação do anúncio ligada ao princípio de congruência e nível de consciência
+    do público
+- segment_id: SEG-074
+  start: 02:10:10
+  end: 02:11:45
+  start_s: 7810
+  end_s: 7905
+  duration_s: 95
+  topic: 'Cada termo como funil próprio: volume de busca, diferenças de CPC, exclusão de ângulos ruins
+    e longevidade do funil'
+  function: Modelagem de KPIs e projeção de resultados ao longo do tempo para orientar decisões de otimização
+- segment_id: SEG-075
+  start: 02:11:45
+  end: 02:13:16
+  start_s: 7905
+  end_s: 7996
+  duration_s: 91
+  topic: Recapitulação da estratégia de cold search, expansão para páginas dinâmicas/SEO e convite para
+    consultoria
+  function: Síntese dos aprendizados do bloco e chamada para ação de serviço
+- segment_id: SEG-076
+  start: 02:13:16
+  end: 02:14:49
+  start_s: 7996
+  end_s: 8089
+  duration_s: 93
+  topic: 'Início do curso de Performance Max: o que é, contexto comercial do Google e por que a PMax força
+    todos os posicionamentos'
+  function: Introdução conceitual de novo módulo com explicação do 'porquê' por trás do tipo de campanha
+- segment_id: SEG-077
+  start: 02:14:49
+  end: 02:16:15
+  start_s: 8089
+  end_s: 8175
+  duration_s: 86
+  topic: PMax como motor de escala; para quem serve e para quem não serve (feed, rastreamento, orçamento
+    mínimo, volume de conversões)
+  function: Definição de pré-requisitos e critérios de adequação antes da implementação
+- segment_id: SEG-078
+  start: 02:16:15
+  end: 02:17:46
+  start_s: 8175
+  end_s: 8266
+  duration_s: 91
+  topic: 'Papel da PMax no meio do funil: campanha ''catch-all'', retargeting de tráfego de outros canais
+    e encaixe na estrutura full-funnel'
+  function: Posicionamento da PMax dentro da arquitetura completa de campanhas, com percentuais de orçamento
+    sugeridos
+- segment_id: SEG-079
+  start: 02:17:46
+  end: 02:20:05
+  start_s: 8266
+  end_s: 8405
+  duration_s: 139
+  topic: 'Limitações da PMax: transparência de dados e atribuição, script do Mike Rhodes, controle de
+    posicionamentos, exclusão de marca e lances automáticos/CPC'
+  function: Advertências e soluções práticas para os principais riscos do tipo de campanha
+- segment_id: SEG-080
+  start: 02:20:05
+  end: 02:21:41
+  start_s: 8405
+  end_s: 8501
+  duration_s: 96
+  topic: 'Limites do Performance Max: economia unitária e o mito do ''set and forget'''
+  function: Alerta sobre pré-condições e erros comuns antes de adotar PMAX, apresentando-o como 'automação
+    guiada' que depende dos sinais fornecidos
+- segment_id: SEG-081
+  start: 02:21:41
+  end: 02:23:16
+  start_s: 8501
+  end_s: 8596
+  duration_s: 95
+  topic: Boas práticas de estruturação de campanhas PMAX
+  function: Ensina a segmentar produtos em asset groups, preservar densidade de sinais e separar campanhas
+    por país/categoria, com exemplos (carteiras vs. malas)
+- segment_id: SEG-082
+  start: 02:23:16
+  end: 02:25:02
+  start_s: 8596
+  end_s: 8702
+  duration_s: 106
+  topic: Seleção de produtos (princípio de Pareto), zombie asset groups e sinais de audiência
+  function: Orienta priorizar os SKUs que geram receita, isolar produtos fracos e reforçar sinais de audiência
+    e rastreamento de conversão antes do lançamento
+- segment_id: SEG-083
+  start: 02:25:02
+  end: 02:26:35
+  start_s: 8702
+  end_s: 8795
+  duration_s: 93
+  topic: Criação da campanha na conta e escolha da estratégia de lance
+  function: 'Demonstração prática passo a passo: novo campaign > sales > purchases > PMAX, comparando
+    maximize conversions (tCPA) e conversion value (tROAS) atrelado ao ROAS de break-even'
+- segment_id: SEG-084
+  start: 02:26:35
+  end: 02:27:44
+  start_s: 8795
+  end_s: 8864
+  duration_s: 69
+  topic: Customer acquisition, localização, idioma, agendamento e dispositivos
+  function: Explica por que não ativar o bid de novos clientes e mostra as configurações de campanha,
+    incluindo desativar tablets e TVs e monitorar mobile vs. desktop
+- segment_id: SEG-085
+  start: 02:27:44
+  end: 02:29:04
+  start_s: 8864
+  end_s: 8944
+  duration_s: 80
+  topic: Exclusões de marca/idade e montagem do asset group
+  function: 'Continua a demonstração: exclusões, nomeação, listing group por item ID, brand guidelines
+    e escolha da landing page por coleção'
+- segment_id: SEG-086
+  start: 02:29:04
+  end: 02:30:31
+  start_s: 8944
+  end_s: 9031
+  duration_s: 87
+  topic: 'Assets criativos: headlines, descrições, imagens e vídeos'
+  function: Instrui a maximizar 15 headlines, 5 long headlines, 5 descrições e 20 imagens em vários formatos,
+    e argumenta contra usar vídeo em PMAX
+- segment_id: SEG-087
+  start: 02:30:31
+  end: 02:32:19
+  start_s: 9031
+  end_s: 9139
+  duration_s: 108
+  topic: Sitelinks, otimização automática de assets, search themes, sinais de audiência e orçamento
+  function: Finaliza a configuração explicando quais otimizações automáticas desligar e como alimentar
+    até 50 search themes e listas de clientes antes de publicar
+- segment_id: SEG-088
+  start: 02:32:19
+  end: 02:33:50
+  start_s: 9139
+  end_s: 9230
+  duration_s: 91
+  topic: 'Rotina diária: search term insights e exclusão de termos'
+  function: Mostra o relatório de insights e reports, auction insights e como excluir termos irrelevantes
+    ou de marca da PMAX
+- segment_id: SEG-089
+  start: 02:33:50
+  end: 02:35:17
+  start_s: 9230
+  end_s: 9317
+  duration_s: 87
+  topic: 'Rotina semanal: gasto por produto, exclusão de SKUs e assets fracos'
+  function: Demonstra a aba products e listing groups para cortar desperdício e o view asset details para
+    substituir criativos de baixo desempenho
+- segment_id: SEG-090
+  start: 02:35:17
+  end: 02:36:57
+  start_s: 9317
+  end_s: 9417
+  duration_s: 100
+  topic: Otimização do Google Merchant Center e exclusão de URLs irrelevantes
+  function: Explica manter o feed atualizado, oferece checklist do curso e detalha como identificar e
+    excluir páginas que não convertem (blog, contato, esgotados)
+- segment_id: SEG-091
+  start: 02:36:57
+  end: 02:38:23
+  start_s: 9417
+  end_s: 9503
+  duration_s: 86
+  topic: Relatório de landing pages, atualização mensal de search themes e lista de clientes
+  function: Fecha a rotina de otimização mostrando o report editor, a edição de sinais no asset group
+    e o upload de first-party data no audience manager
+- segment_id: SEG-092
+  start: 02:38:23
+  end: 02:40:03
+  start_s: 9503
+  end_s: 9603
+  duration_s: 100
+  topic: 'KPIs para escalar campanhas: ROAS, CPA, taxa de conversão e MER'
+  function: Estabelece o framework de decisão baseado em economia unitária própria, defendendo que só
+    se escala com break-even conhecido e destacando o CPA de novo cliente
+- segment_id: SEG-093
+  start: 02:40:03
+  end: 02:41:06
+  start_s: 9603
+  end_s: 9666
+  duration_s: 63
+  topic: 'Cálculo dos KPIs de break-even: ROAS e CPA máximos'
+  function: Apresenta as fórmulas centrais (100/margem bruta para o ROAS de equilíbrio; AOV × margem menos
+    custos fixos para o CPA de equilíbrio) com exemplos numéricos
+- segment_id: SEG-094
+  start: 02:41:06
+  end: 02:42:07
+  start_s: 9666
+  end_s: 9727
+  duration_s: 61
+  topic: Usar o break-even como baseline não negociável e vigiar o MER
+  function: Explica como transformar os KPIs em metas por campanha, decidir escalar/pausar e verificar
+    o impacto no mix global de marketing
+- segment_id: SEG-095
+  start: 02:42:07
+  end: 02:43:53
+  start_s: 9727
+  end_s: 9833
+  duration_s: 106
+  topic: Rotina semanal de ajuste de orçamento e lances no PMax
+  function: 'Dá o procedimento prático: avaliar KPIs semanalmente, escalar vencedores 10–20%, cortar rápido,
+    distinguir limitação de orçamento vs. de lance e escolher a estratégia de licitação'
+- segment_id: SEG-096
+  start: 02:43:53
+  end: 02:45:19
+  start_s: 9833
+  end_s: 9919
+  duration_s: 86
+  topic: 'Táticas avançadas de PMax: script, shopping padrão, search e multi-localização'
+  function: Enumera recursos e estratégias adicionais (Mike Rhodes script, PMax + standard shopping, extrair
+    termos para search, duplicar por localização, configurar 'presence only')
+- segment_id: SEG-097
+  start: 02:45:19
+  end: 02:46:23
+  start_s: 9919
+  end_s: 9983
+  duration_s: 64
+  topic: Encerramento do módulo de PMax e ofertas de curso/auditoria
+  function: Fecha o conteúdo, resume o que o curso completo inclui e faz as chamadas à ação
+- segment_id: SEG-098
+  start: 02:46:23
+  end: 02:47:28
+  start_s: 9983
+  end_s: 10048
+  duration_s: 65
+  topic: 'Estudo de caso: $45k em 7 dias com YouTube Ads'
+  function: Mostra números reais de conta (ROAS, CPA, novos clientes, LTV) como prova de que YouTube escala
+    sem dados prévios
+- segment_id: SEG-099
+  start: 02:47:28
+  end: 02:48:29
+  start_s: 10048
+  end_s: 10109
+  duration_s: 61
+  topic: Por que marcas evitam YouTube e agenda do módulo
+  function: Refuta objeções comuns (produção caro, 'não funciona para ecom') e anuncia o roteiro do que
+    será ensinado
+- segment_id: SEG-100
+  start: 02:48:29
+  end: 02:49:36
+  start_s: 10109
+  end_s: 10176
+  duration_s: 67
+  topic: 'Vantagem 1: escalar além do volume de busca'
+  function: Argumenta o limite estrutural do search/shopping e como o topo de funil em YouTube cria demanda
+    em públicos não conscientes
+- segment_id: SEG-101
+  start: 02:49:36
+  end: 02:50:44
+  start_s: 10176
+  end_s: 10244
+  duration_s: 68
+  topic: 'Vantagem 2: reutilizar criativos vencedores do Meta'
+  function: Explica como replicar criativos e funis para YouTube Shorts/instream para achar novos clientes
+    sem saturar o Meta
+- segment_id: SEG-102
+  start: 02:50:44
+  end: 02:51:58
+  start_s: 10244
+  end_s: 10318
+  duration_s: 74
+  topic: 'Vantagem 3: arbitragem de CPM e maior pool de clientes'
+  function: Justifica CPMs baixos pela baixa concorrência de anunciantes e dimensiona a audiência (2 bilhões
+    de usuários, faixas etárias amplas)
+- segment_id: SEG-103
+  start: 02:51:58
+  end: 02:53:07
+  start_s: 10318
+  end_s: 10387
+  duration_s: 69
+  topic: 'Vantagem 4: diversificação, valuation e vida útil do criativo'
+  function: Relaciona múltiplos canais à estabilidade e valor de venda da marca e mostra que criativos
+    duram meses/anos no YouTube
+- segment_id: SEG-104
+  start: 02:53:07
+  end: 02:54:16
+  start_s: 10387
+  end_s: 10456
+  duration_s: 69
+  topic: 'Vantagem 5: incrementalidade e percepção de legitimidade'
+  function: Descreve o efeito de arrasto em search, shopping, Amazon e retail e explica a barreira de
+    entrada percebida como sinal de marca séria
+- segment_id: SEG-105
+  start: 02:54:16
+  end: 02:56:28
+  start_s: 10456
+  end_s: 10588
+  duration_s: 132
+  topic: Alcance em TV, ausência de concorrentes e oportunidade criativa
+  function: Aponta que 50–60% das views são em TV, evidencia o moat de first mover via ad library e convida
+    à produção de criativos de alta qualidade
+- segment_id: SEG-106
+  start: 02:56:28
+  end: 02:57:55
+  start_s: 10588
+  end_s: 10675
+  duration_s: 87
+  topic: O funil de Google Ads e onde o YouTube se encaixa
+  function: Mapeia visualmente topo (demand gen), meio (search/PMax/shopping) e fundo (remarketing, branded)
+    e discute as páginas de destino a testar
+- segment_id: SEG-107
+  start: 02:57:55
+  end: 03:00:00
+  start_s: 10675
+  end_s: 10800
+  duration_s: 125
+  topic: 'Os três tipos de anúncio no YouTube: instream, Shorts e infeed'
+  function: Compara cada placement quanto a escala, custo, velocidade de teste e requisitos criativos,
+    indicando por qual começar
+- segment_id: SEG-108
+  start: 03:00:00
+  end: 03:00:34
+  start_s: 10800
+  end_s: 10834
+  duration_s: 34
+  topic: 'Escolha de placements no YouTube: shorts e instream antes de infeed'
+  function: Recomendação prática sobre ordem de teste de placements e exclusão de Discover, Gmail e Display
+- segment_id: SEG-109
+  start: 03:00:34
+  end: 03:01:37
+  start_s: 10834
+  end_s: 10897
+  duration_s: 63
+  topic: 'Lógica do anúncio instream: 5 segundos forçados e hook estilo trailer'
+  function: Explicação do mecanismo de atenção e da resposta direta exigida no instream
+- segment_id: SEG-110
+  start: 03:01:37
+  end: 03:02:19
+  start_s: 10897
+  end_s: 10939
+  duration_s: 42
+  topic: Os cinco tipos de criativos que funcionam no YouTube
+  function: Enumeração e caracterização de formatos criativos (talking head, podcast, founder, story,
+    demo)
+- segment_id: SEG-111
+  start: 03:02:19
+  end: 03:02:54
+  start_s: 10939
+  end_s: 10974
+  duration_s: 35
+  topic: 'Fórmula de estrutura do anúncio: hook, intro, demo, prova social, CTA'
+  function: Apresentação do template de roteiro segundo por segundo
+- segment_id: SEG-112
+  start: 03:02:54
+  end: 03:04:01
+  start_s: 10974
+  end_s: 11041
+  duration_s: 67
+  topic: Oferta do swipe file de anúncios de YouTube de 8 figuras e curso gratuito
+  function: Chamada para ação e apresentação dos bônus do curso gratuito
+- segment_id: SEG-113
+  start: 03:04:01
+  end: 03:04:41
+  start_s: 11041
+  end_s: 11081
+  duration_s: 40
+  topic: 'Criação da campanha Demand Gen: objetivo, conversão e orçamento'
+  function: Demonstração passo a passo dentro da conta do Google Ads
+- segment_id: SEG-114
+  start: 03:04:41
+  end: 03:05:28
+  start_s: 11081
+  end_s: 11128
+  duration_s: 47
+  topic: Configurações de localização, idioma e dispositivos
+  function: Instruções de configuração com justificativa para desligar tablets e testar TV/desktop ao
+    escalar
+- segment_id: SEG-115
+  start: 03:05:28
+  end: 03:06:13
+  start_s: 11128
+  end_s: 11173
+  duration_s: 45
+  topic: 'Ad group: seleção de placements, ausência de audiências e targeting otimizado'
+  function: Justificativa da abordagem broad e recomendação sobre optimized targeting
+- segment_id: SEG-116
+  start: 03:06:13
+  end: 03:07:21
+  start_s: 11173
+  end_s: 11241
+  duration_s: 68
+  topic: 'Criação do anúncio de vídeo: URL final, upload de vídeos e escolha de shorts vs instream'
+  function: Instruções operacionais com regra dos 60 segundos e formato 9x16
+- segment_id: SEG-117
+  start: 03:07:21
+  end: 03:08:13
+  start_s: 11241
+  end_s: 11293
+  duration_s: 52
+  topic: Logos, otimização de ativos, textos, CTA e publicação da campanha
+  function: Fechamento da demonstração de setup e resumo da estrutura tipo CBO
+- segment_id: SEG-118
+  start: 03:08:13
+  end: 03:09:02
+  start_s: 11293
+  end_s: 11342
+  duration_s: 49
+  topic: 'KPI 1: view rate em instream e shorts'
+  function: Definição do indicador e apresentação de benchmarks com exemplos do painel
+- segment_id: SEG-119
+  start: 03:09:02
+  end: 03:09:42
+  start_s: 11342
+  end_s: 11382
+  duration_s: 40
+  topic: 'KPI 2: CTR por placement'
+  function: Apresentação de faixas de referência e interpretação da força do CTA
+- segment_id: SEG-120
+  start: 03:09:42
+  end: 03:10:16
+  start_s: 11382
+  end_s: 11416
+  duration_s: 34
+  topic: 'KPI 3: taxa de conversão no painel do Google'
+  function: Benchmark de 0,05% e diagnóstico da experiência pós-clique
+- segment_id: SEG-121
+  start: 03:10:16
+  end: 03:11:12
+  start_s: 11416
+  end_s: 11472
+  duration_s: 56
+  topic: 'KPI 4 e 5: new customer CPA e new customers via Triple Whale'
+  function: Argumentação sobre a métrica central de e-commerce e dependência da economia unitária
+- segment_id: SEG-122
+  start: 03:11:12
+  end: 03:11:52
+  start_s: 11472
+  end_s: 11512
+  duration_s: 40
+  topic: Ajustando CAC e LTV quando o CPA não é tolerável
+  function: Raciocínio sobre alavancas de rentabilidade (retenção, unit economics, força do anúncio)
+- segment_id: SEG-123
+  start: 03:11:52
+  end: 03:13:05
+  start_s: 11512
+  end_s: 11585
+  duration_s: 73
+  topic: 'KPI 6: view-through conversions e incrementalidade'
+  function: Explicação do mecanismo de atribuição por visualização e como interpretá-lo
+- segment_id: SEG-124
+  start: 03:13:05
+  end: 03:13:52
+  start_s: 11585
+  end_s: 11632
+  duration_s: 47
+  topic: 'Escalar: mais orçamento, mais criativos, teste de hooks e formato 16x9'
+  function: Framework 'more, better, new' aplicado a YouTube ads
+- segment_id: SEG-125
+  start: 03:13:52
+  end: 03:14:39
+  start_s: 11632
+  end_s: 11679
+  duration_s: 47
+  topic: Novas ofertas, mecanismos de conversão e expansão para infeed
+  function: Continuação do plano de escala e introdução ao critério de decisão por métricas
+- segment_id: SEG-126
+  start: 03:14:39
+  end: 03:15:14
+  start_s: 11679
+  end_s: 11714
+  duration_s: 35
+  topic: 'Regras de decisão: métricas ruins, médias e ''moralmente obrigado a escalar'''
+  function: Heurística de gestão para pausar, manter ou aumentar orçamento
+- segment_id: SEG-127
+  start: 03:15:14
+  end: 03:16:02
+  start_s: 11714
+  end_s: 11762
+  duration_s: 48
+  topic: 'Estudo de caso: estrutura de campanha com 8 anúncios e ad groups de teste e vencedores'
+  function: Apresentação da arquitetura real da conta que gasta 8K/dia
+- segment_id: SEG-128
+  start: 03:16:02
+  end: 03:16:52
+  start_s: 11762
+  end_s: 11812
+  duration_s: 50
+  topic: 'Resultados do caso: 45K gastos, ROAS 1,29x e lógica de lucratividade no primeiro pedido'
+  function: Interpretação dos números reais e justificativa de rentabilidade
+- segment_id: SEG-129
+  start: 03:16:52
+  end: 03:17:24
+  start_s: 11812
+  end_s: 11844
+  duration_s: 32
+  topic: Criativos em execução, testes de hooks e ganho de CPM com versão horizontal
+  function: Análise do desempenho dos criativos e próximos passos de escala
+- segment_id: SEG-130
+  start: 03:17:24
+  end: 03:18:04
+  start_s: 11844
+  end_s: 11884
+  duration_s: 40
+  topic: Anatomia da landing page com 2% de conversão em tráfego frio
+  function: Descrição dos elementos da página e por que ela converte
+- segment_id: SEG-131
+  start: 03:18:04
+  end: 03:18:44
+  start_s: 11884
+  end_s: 11924
+  duration_s: 40
+  topic: 'Retenção: pop-up de e-mail com 14,7% de conversão e crescimento da lista'
+  function: Apresentação de dados de captura de e-mail do tráfego de YouTube
+- segment_id: SEG-132
+  start: 03:18:44
+  end: 03:19:11
+  start_s: 11924
+  end_s: 11951
+  duration_s: 27
+  topic: 'Fluxos de e-mail: welcome flow de 5 e-mails e post-purchase com reposição'
+  function: Fechamento do estudo de caso ligando oferta de desconto à conversão
+- segment_id: SEG-133
+  start: 03:19:11
+  end: 03:20:00
+  start_s: 11951
+  end_s: 12000
+  duration_s: 49
+  topic: Oferta de consultoria e transição para o tema de marcas meta-heavy no Google Ads
+  function: Chamada para ação comercial e ponte para o próximo módulo da aula
+- segment_id: SEG-134
+  start: 03:20:00
+  end: 03:22:00
+  start_s: 12000
+  end_s: 12120
+  duration_s: 120
+  topic: Diagnóstico dos erros em contas Google de marcas heavy-meta
+  function: 'Apresentação dos dois problemas centrais: estruturas de conta excessivamente complexas feitas
+    por agências/freelancers e gasto concentrado em conversões de marca, gerando falsa sensação de escala
+    com ROAS de 1,1x em prospecção'
+- segment_id: SEG-135
+  start: 03:22:00
+  end: 03:23:56
+  start_s: 12120
+  end_s: 12236
+  duration_s: 116
+  topic: O potencial do cold traffic no YouTube e o que não fazer com Merchant Center/Search
+  function: Explicação do ganho de 20-40% de receita de novos clientes ao destravar tráfego frio, chamada
+    para ação do serviço, e orientação de ignorar GMC, Shopping e Search quando a marca é non-compliant
+    ou tem baixo volume de busca
+- segment_id: SEG-136
+  start: 03:23:56
+  end: 03:25:17
+  start_s: 12236
+  end_s: 12317
+  duration_s: 81
+  topic: Páginas de educação em vez de página de produto e o erro de gastar em marca
+  function: Instrução sobre usar advertorials, listicles e pré-sale pages conforme o nível de consciência,
+    e demonstração de por que desligar/limitar campanhas de marca usando o argumento do search impression
+    share
+- segment_id: SEG-137
+  start: 03:25:17
+  end: 03:26:44
+  start_s: 12317
+  end_s: 12404
+  duration_s: 87
+  topic: Criativos fracos, estratégias genéricas de agência e as fontes de tráfego do Google
+  function: Alerta contra criativos de IA fracos e estruturas copiadas (exemplo do DSA em marca de skincare),
+    seguido do enquadramento das quatro fontes de tráfego e da escolha de YouTube/Display
+- segment_id: SEG-138
+  start: 03:26:44
+  end: 03:28:13
+  start_s: 12404
+  end_s: 12493
+  duration_s: 89
+  topic: Estrutura de conta e alocação de orçamento (80% em Demand Gen)
+  function: Desenho passo a passo da arquitetura recomendada — branded search/shopping mínimos, PMax limitado,
+    e concentração de 80% do budget em Demand Gen com YouTube in-stream e Shorts ligados a landing pages
+- segment_id: SEG-139
+  start: 03:28:13
+  end: 03:30:29
+  start_s: 12493
+  end_s: 12629
+  duration_s: 136
+  topic: 'Produção de criativos para YouTube: formato, hooks problem-aware e CTAs'
+  function: Orientações práticas de mobile primeiro até 1K/dia depois 16:9, hooks que falam da situação
+    em vez do demográfico (exemplo artrite), CTAs alinhados ao mecanismo de conversão e exigência de alta
+    produção
+- segment_id: SEG-140
+  start: 03:30:29
+  end: 03:32:39
+  start_s: 12629
+  end_s: 12759
+  duration_s: 130
+  topic: Ordem dos mecanismos de conversão e setup técnico
+  function: 'Ranqueamento dos mecanismos (sales page decked out, advertorials, quiz funnels, listicles,
+    VSL só em escala) e detalhamento do setup: tag de new customer como conversão primária, CRO mobile
+    e público problem-aware'
+- segment_id: SEG-141
+  start: 03:32:39
+  end: 03:34:43
+  start_s: 12759
+  end_s: 12883
+  duration_s: 124
+  topic: Playbook final, regras de escala e ideias-chave
+  function: Consolidação da sequência de execução, critérios para usar Search/Shopping, limite da campanha
+    de marca e síntese dos princípios (criativo+mecanismo = 80% do resultado, YouTube primeiro, CRO não-negociável)
+    com encerramento comercial
+- segment_id: SEG-142
+  start: 03:34:43
+  end: 03:37:31
+  start_s: 12883
+  end_s: 13051
+  duration_s: 168
+  topic: 'Estudo de caso: marca de suplemento banida escalando a $486k/mês'
+  function: Narrativa do case Mackenzie/Methylene Blue — situação inicial de banimentos e ausência de
+    canal pago, problemas de compliance e teste de cold traffic, seguida da apresentação dos números de
+    abril (spend, ROAS non-brand, CPA)
+- segment_id: SEG-143
+  start: 03:37:31
+  end: 03:40:00
+  start_s: 13051
+  end_s: 13200
+  duration_s: 149
+  topic: 'Game plan do case: segmentação branded vs unbranded e alimentação de sinais'
+  function: Explicação da estratégia executada — PMax único com produto herói, exclusão de termos de marca,
+    exemplo do overlap de 50% em outra conta e uso de listas de clientes e audiências customizadas para
+    nutrir os sinais do Google
+- segment_id: SEG-144
+  start: 03:40:00
+  end: 03:42:07
+  start_s: 13200
+  end_s: 13327
+  duration_s: 127
+  topic: 'Estrutura mínima de campanhas: um PMAX, shopping e search de marca'
+  function: Explicação de como escalar com estrutura simples, evitando fragmentar campanhas e diluir sinais
+    para o Google
+- segment_id: SEG-145
+  start: 03:42:07
+  end: 03:44:20
+  start_s: 13327
+  end_s: 13460
+  duration_s: 133
+  topic: Reconstrução da página de produto como sales page de resposta direta
+  function: 'Demonstração do diferencial da agência: mecanismo de conversão para tráfego frio com objeções,
+    provas e diferenciação'
+- segment_id: SEG-146
+  start: 03:44:20
+  end: 03:46:38
+  start_s: 13460
+  end_s: 13598
+  duration_s: 138
+  topic: 'Caso Joe Rogan: aproveitar o pico de busca por methylene blue'
+  function: Narrativa de caso mostrando como o monitoramento diário da conta permitiu subir o orçamento
+    para 20K/dia e dominar o share de impressões
+- segment_id: SEG-147
+  start: 03:46:38
+  end: 03:48:40
+  start_s: 13598
+  end_s: 13720
+  duration_s: 122
+  topic: 'Mentalidade de aquisição: gastar até o break even para roubar market share'
+  function: Argumentação sobre LTV, contribution margin e por que priorizar aquisição em vez de ROAS de
+    front-end
+- segment_id: SEG-148
+  start: 03:48:40
+  end: 03:50:57
+  start_s: 13720
+  end_s: 13857
+  duration_s: 137
+  topic: Escala com YouTube e o gargalo de criativos compliance-first
+  function: 'Projeção da próxima fase de escala: motor criativo, limites de search/shopping e oferta final
+    de serviço com chamada para ação'
+note: Contagem de segmentos é RESULTADO da segmentação semântica, não parâmetro. Nenhum alvo de contagem
+  existe no PASS 1.

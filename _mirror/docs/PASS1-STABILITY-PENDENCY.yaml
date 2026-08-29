@@ -1,0 +1,100 @@
+# PENDÊNCIA: estabilidade do PASS 1 não foi medida nesta rodada.
+# + aposentadoria do aviso claim×literal.
+# Amarrado por SHA-256 ao manifesto. NÃO altera compilador nem portão.
+schema_version: 0.1.0
+artifact_id: PASS1-STABILITY-PENDENCY
+artifact_status: PENDENCIA_REGISTRADA
+registered_at_utc: '2026-08-12T03:36:14+00:00'
+generator: publish_pass1_pendency.py
+nature:
+  additive_only: true
+  changes_the_gate: false
+  changes_the_compiler: false
+  statement: Registro de pendência e de decisão. Não altera o compilador congelado, o portão, a métrica
+    nem o resultado da rodada.
+binds_to:
+  compilation_manifest:
+    path: Course-to-Skill-Claude/pilots/PILOT-001-v2/COMPILATION_MANIFEST.yaml
+    sha256: fc7641a687aff4a0813bb13e1f174f6afb8d752e5da62ee3953a2317babcbc42
+  temporal_map_da_rodada:
+    path: Course-to-Skill-Claude/pilots/PILOT-001-v2/temporal-map.yaml
+    sha256: 845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60
+  temporal_map_historico:
+    path: Course-to-Skill/pilots/PILOT-001-HubSpot-AI-Agent/analysis/temporal-map.yaml
+    sha256: c08c32e73731a50bbf91e7ebb2cdac417bd35bec302d6d68263bc6b4b686e3df
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+pendencia_estabilidade_do_pass1:
+  exigida_por: §12 da ADR — PASS 1 stability question
+  estado: NAO_FEITA_NESTA_RODADA
+  por_que: O PASS 1 não foi re-executado por modelo. Os 9 segmentos vieram do `temporal-map.yaml` histórico,
+    herdados. O compilador v2 persistiu e hasheou esse mapa, como a §6.1 exige, mas persistir um mapa
+    herdado não é medir a segmentação.
+  consequencia_para_a_leitura: '`segment_count: 9` e `in_comparability_band: true` são VERDADEIROS POR
+    CONSTRUÇÃO. Não testam nada. Ler a banda 7–11 como confirmação de estabilidade do PASS 1 seria ler
+    como medição o que é tautologia.'
+  o_que_a_rodada_de_fato_isolou: Segurar o PASS 1 fixo é o que permite atribuir a diferença de resultado
+    ao PASS 2, que é a variável sob teste. A tautologia é efeito colateral de um desenho correto, não
+    descuido — mas precisa ficar escrita para ninguém contá-la como evidência.
+  manifesto_declara:
+    segment_count: 9
+    in_comparability_band: true
+    temporal_map_sha256: 845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60
+    persisted_before_pass2: true
+decisao_para_o_pilot002:
+  mapa: FIXO, 41 segmentos, o mesmo já apurado
+  pass1_reexecutado: false
+  razao: 'Mesma razão do PILOT-001: isolar o PASS 2. Se o PASS 1 rodasse de novo, uma diferença de resultado
+    entre os dois pilotos poderia vir de segmentação diferente OU de extração diferente, e a comparação
+    perderia o poder de separar as duas.'
+  consequencia: A contagem de 41 do PILOT-002 também será herdada, e também não testará a estabilidade
+    do PASS 1. As duas rodadas ficam comparáveis entre si justamente por isso.
+  o_que_isso_NAO_autoriza: Tratar 9 e 41 como medições deterministas. A §12 da ADR já registra que são
+    observações de execução única, e esta pendência confirma que continuam sendo.
+medicao_separada_que_fecha_a_pendencia:
+  o_que: Re-executar o PASS 1 por modelo sobre o MESMO L0, duas ou mais vezes, e comparar a contagem e
+    as fronteiras de segmento entre as execuções.
+  por_que_e_separada: Ela mede o PASS 1, não o PASS 2. Misturá-la à rodada de aceitação do PASS 2 confundiria
+    as duas variáveis — que é exatamente o que o mapa fixo evita.
+  pre_requisito_que_ainda_nao_existe: O compilador v2 não tem extractor de PASS 1. Ele consome um temporal-map;
+    não o produz. Implementá-lo é trabalho novo, não configuração.
+  estado: NAO_AGENDADA
+  bloqueia_o_pilot002: false
+aposentadoria_do_aviso_claim_x_literal:
+  estado: APOSENTADO
+  o_que_era: Aviso mecânico que sinalizava claim cuja entidade nomeada não aparece na quote, com rótulo
+    SOURCE_EXPLICIT.
+  por_que_aposentado:
+    disparo_na_rodada: 9 chamadas, 60 avisos em 149 evidências (40%)
+    viés_conhecido: 'claims em português, quotes em inglês: a checagem acusa toda tradução — IA↔AI, ''agente
+      1''↔''Agent one'', 4.000↔4,000, US$↔$'
+    tentativa_de_conserto: 'Testadas duas versões mais estreitas. A invariante a idioma (só CamelCase
+      de nome de produto, tolerante a espaço) cai para 7 de 149 — mas 2 dessas 7 o próprio modelo JÁ rotulou
+      MODEL_INFERENCE, e as outras 5 não são correção da fonte: são a claim resolvendo o antecedente de
+      um pronome dentro do segmento (OpenClaw, HubSpot), que é a propriedade desejada de claim autocontida.'
+    conclusao: Na sua melhor versão o aviso acrescenta ZERO verdadeiro positivo além do que o rótulo do
+      modelo já dá, e o que ele acusa a mais é comportamento que queremos. Um verificador assim não é
+      ruidoso apenas — é redundante.
+  sinal_que_permanece:
+    qual: o rótulo MODEL_INFERENCE emitido pelo próprio modelo
+    na_rodada: 9 de 149
+    funciona: true
+    evidencia: 'Inspeção das 9: a maioria é correção de erro de transcrição corretamente rotulada — ''Chad
+      GBT''→ChatGPT, ''a length post''→LinkedIn, ''Gum Loop''→Gumloop, ''sits in one dock''→documento,
+      e o caso mais forte: a fonte diz ''Agents are here to replace your team'' (o ''not'' caiu na transcrição)
+      e a claim afirma o oposto, rotulada MODEL_INFERENCE. A regra de fidelidade acrescentada ao prompt
+      está mordendo.'
+  remocao_do_codigo:
+    estado: NAO_EXECUTADA
+    por_que: 'Remover o código mudaria o hash do freeze do compiler-v2, e a §12 da ADR trava a comparabilidade:
+      os dois pilotos têm de rodar sob a MESMA versão congelada. O aviso é puramente observacional — não
+      toca aceitação, validação nem saída —, então mantê-lo no código não contamina o PILOT-002.'
+    decisao: 'Aposentado no RELATÓRIO: o campo continua no rastro e não deve ser lido. A remoção do código
+      fica para depois de os dois pilotos rodarem sob o mesmo congelamento.'
+status: PENDENCIA_REGISTRADA
+portao_alterado: false
+compilador_alterado: false

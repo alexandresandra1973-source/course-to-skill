@@ -1,0 +1,80 @@
+# RESSALVA — a cobertura de L0 conta SPAN DECLARADO, não evidenciado.
+# NÃO altera o portão, a métrica nem a previsão. Amarrada por SHA-256.
+schema_version: 0.1.0
+artifact_id: L0-COVERAGE-DECLARED-VS-EVIDENCED-CAVEAT
+artifact_status: RESSALVA_PUBLICADA_ANTES_DA_RECOMPILACAO
+published_at_utc: '2026-08-12T03:07:50+00:00'
+generator: coverage_inflation_caveat.py
+nature:
+  additive_only: true
+  changes_the_gate: false
+  statement: Ressalva. NÃO altera o piso de 73,5%, não altera a métrica e não altera a previsão. Registra
+    o que o número mede, para quem for lê-lo.
+binds_to:
+  prediction:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2.yaml
+    sha256: 4963fd27d4640c4831306e74b0dc9f624ef5fe409f6c46f48c7f46fbeda1b44d
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  band_ratification:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2-BAND-RATIFICATION.yaml
+    sha256: c4c7420b201ad4311a29092e18568036b98c75bfaf277f8c5eaae65afa331b68
+  band_correction:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2-BAND-CORRECTION.yaml
+    sha256: f4f637334e366060c86b54eb88ee987ab70ce60e7e0c4e9f348c6a344025a222
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+  coverage_metric_module:
+    path: cts/coverage.py
+    sha256: ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b
+achado:
+  o_que_a_metrica_conta: O numerador da cobertura de L0 é a UNIÃO DOS SPANS DECLARADOS pelas evidências
+    — `start`/`end` de cada registro. Nada no pipeline verifica que a `quote` da evidência cubra o intervalo
+    que ela declara.
+  o_que_foi_medido: No canário do SEG-005 do PILOT-001, a citação exibida sustenta 51.2% da união dos
+    intervalos declarados. Por evidência, a mediana é 0.50 (min 0.08, max 1.00).
+  consequencia: 73,5% e 37,2% medem território que as evidências DECLARAM cobrir, não território que elas
+    EXIBEM. O portão `> 73,5%` herda a mesma inflação, porque compara dois números computados da mesma
+    forma.
+medicao:
+  fonte_do_rastro: /tmp/claude-1000/-home-mtx-course-to-skill-claude/canary-trace-run0-promptantigo.json
+  piloto: PILOT-001
+  segmento: SEG-005
+  evidencias: 10
+  com_quote_localizavel: 10
+  uniao_declarada_s: 80
+  uniao_sustentada_s: 41
+  razao_uniao: 0.512
+  razao_por_evidencia:
+    mediana: 0.5
+    min: 0.08
+    max: 1.0
+o_que_esta_ressalva_NAO_estabelece:
+- que o fator de inflação seja 0,51 no corpus inteiro — foi medido em UM segmento, 10 evidências, UMA
+  rodada, sob o prompt ANTIGO
+- que a cobertura evidenciada do PILOT-001 histórico seja 73,5% × 0,51
+- que o portão deva mudar
+- que a métrica esteja errada — ela mede o que mede, de forma consistente; o que faltava era dizer o que
+  é
+por_que_nao_extrapolo: 'A união de spans declarados não escala linearmente com a união de spans sustentados:
+  spans declarados que se sobrepõem colapsam na união, e spans sustentados podem colapsar em proporção
+  diferente. Multiplicar 73,5% por 0,51 seria inventar um número.'
+risco_para_a_comparacao_do_portao:
+  por_que_a_comparacao_ainda_vale: O piso de 73,5% e a cobertura da rodada corrigida usam a MESMA definição
+    de métrica, congelada em `cts/coverage.py` e pinada por hash. Comparar dois números igualmente inflados
+    continua sendo comparação válida.
+  onde_ela_quebra: 'Se o compilador corrigido declarar spans mais APERTADOS que o antigo — plausível,
+    porque a extração por segmento produz unidades mais estreitas — a inflação cai, e a cobertura corrigida
+    fica SUBESTIMADA em relação ao piso histórico. O portão ficaria mais difícil de passar sem que nada
+    tenha piorado. O erro, nesse caso, é conservador: reprova quem merecia passar, não o contrário.'
+  o_que_mediria_isso: Aplicar a mesma medição declarado×sustentado às 44 evidências do PILOT-001 histórico
+    e às da rodada corrigida, e comparar os dois fatores de inflação. Só então se sabe se a comparação
+    do portão é entre iguais.
+  estado: NAO_MEDIDO
+recomendacao: Manter o portão como está para a primeira rodada corrigida — mudar limiar depois de ver
+  resultado continua proibido. Reportar, junto com a cobertura, o fator declarado×sustentado das duas
+  pontas, para que a comparação seja lida com o que ela tem de ressalva.
+status: RESSALVA_PUBLICADA_ANTES_DA_RECOMPILACAO
+portao_alterado: false

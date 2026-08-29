@@ -1,0 +1,423 @@
+{
+  "M1_densidade": {
+    "P001v2_ev_por_s": 0.16464,
+    "P004_ev_por_s": 0.14839,
+    "razao_P004_sobre_P001v2": 0.9013,
+    "evidencias": {
+      "P001v2": 149,
+      "P004": 134
+    },
+    "extent_s": {
+      "P001v2": 905,
+      "P004": 903
+    }
+  },
+  "M2_yield": {
+    "P001v2_yield_por_segmento": 16.5556,
+    "P004_yield_por_segmento": 10.3077,
+    "segmentos": {
+      "P001v2": 9,
+      "P004": 13
+    },
+    "banda_congelada": [
+      7,
+      11
+    ],
+    "P001v2_na_banda": true,
+    "P004_na_banda": false,
+    "variance_flag_P004": "SEGMENT_COUNT_13_FORA_DA_BANDA_7_11",
+    "status_da_comparacao": "DIAGNOSTICO — fora da banda, yield NAO e comparavel (regra do proprio P001-v2)"
+  },
+  "M3_cobertura": {
+    "P001v2_cobertura_pct": 90.61,
+    "P004_cobertura_pct": 85.16,
+    "piso": 0.735,
+    "P001v2_resultado": "SATISFIED",
+    "P004_resultado": "SATISFIED",
+    "P001v2_rescan_iterations": 0,
+    "P001v2_stop_reason": "THRESHOLD_SATISFIED_WITHOUT_RESCAN",
+    "P004_rescan_iterations": 0,
+    "P004_nota_rescan": "o runner p00X_pass2_ckpt.py mede a cobertura uma vez e nao implementa o ramo de revarredura; como o piso foi satisfeito na primeira medicao, o ramo nao seria acionado de todo modo",
+    "mesma_metrica": true,
+    "pino_cts_coverage": {
+      "cts/coverage.py": "ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b",
+      "cts/spans.py": "7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74"
+    }
+  },
+  "M4_falhas_de_medicao": {
+    "referencia_P003": 6,
+    "classe_A_travessia_PT_EN": {
+      "total": 1,
+      "ocorrencias": [
+        {
+          "evidence_id": "EV-0054",
+          "segment_id": "SEG-006",
+          "marcadores_claim": [
+            "post",
+            "reels"
+          ],
+          "marcadores_quote": [
+            "post"
+          ],
+          "claim": "Clicando no botão de mais (+) dentro do Planner é possível programar um post, um story, um reels ou uma live, deixando tudo agendado"
+        }
+      ]
+    },
+    "classe_B_ruido_ASR_pt": {
+      "total": 2,
+      "ocorrencias": [
+        {
+          "evidence_id": "EV-0001",
+          "segment_id": "SEG-001",
+          "token": "Suitech",
+          "claim": "O tema central é o estado do Meta Business Suite em 2026: quais mudanças ocorreram em 2025 e o que esperar da ferramenta em 2026, incluindo funcionalidades e té"
+        },
+        {
+          "evidence_id": "EV-0134",
+          "segment_id": "SEG-013",
+          "token": "Metaed",
+          "claim": "Aprofundar-se no Meta Ads leva os resultados a outro nível."
+        }
+      ]
+    },
+    "classe_C_validador_de_citacao": {
+      "total": 54,
+      "rejeicoes": 0,
+      "avisos": 54,
+      "motivos": {
+        "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT": 54
+      },
+      "drafts_retornados": 134,
+      "drafts_aceitos": 134,
+      "aceitos_so_apos_normalizacao": 0,
+      "taxa_de_aceitacao_pct": 100.0,
+      "ocorrencias": [
+        {
+          "segment_id": "SEG-001",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Meta', 'Suite'], 'claim': 'A justificativa para estudar o Meta Business Suite é dupla: al"
+        },
+        {
+          "segment_id": "SEG-001",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Suite'], 'claim': \"O Meta Business Suite é uma ferramenta pouco discutida no mercado ('quase ninguém "
+        },
+        {
+          "segment_id": "SEG-002",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Antes'], 'claim': 'Antes de começar o passo a passo, é preciso estar logado no perfil do Facebook', '"
+        },
+        {
+          "segment_id": "SEG-002",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Quem'], 'claim': 'Quem está começando deve entender que bloqueios no Facebook são uma coisa normal e "
+        },
+        {
+          "segment_id": "SEG-002",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Gestores'], 'claim': 'Gestores de tráfego podem usar a ferramenta para organizar todos os seus client"
+        },
+        {
+          "segment_id": "SEG-002",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Separar'], 'claim': 'Separar os acessos por cliente evita restrição tanto na estrutura própria quanto"
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Para'], 'claim': \"Para verificar as vinculações da página, acesse 'alternar', depois novamente 'alter"
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook', 'Instagram'], 'claim': 'O ativo criado pela conexão entre Instagram e página do Facebook c"
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Dentro'], 'claim': 'Dentro do portfólio empresarial devem ser guardadas as contas de anúncio, o pixel"
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Anti', 'Facebook'], 'claim': 'Anti-padrão: deixar a estrutura fora do portfólio, isolada, usando a co"
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Manter'], 'claim': 'Manter a estrutura isolada na conta pessoal aumenta muito a chance de sofrer uma "
+        },
+        {
+          "segment_id": "SEG-003",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook'], 'claim': 'Ação recomendada imediata: conectar o Instagram à página do Facebook para que o"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook', 'Instagram', 'Quando'], 'claim': 'Quando aparece apenas a página do Facebook no topo, isso"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Contas'], 'claim': 'Contas não conectadas fazem a pessoa perder recurso', 'quote': 'recurso, né? Entã"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Instagram', 'Sem'], 'claim': 'Sem a conexão, os anúncios feitos pelo gerenciador profissional não apa"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Sem'], 'claim': 'Sem a conexão, mesmo que os anúncios apareçam, eles não ficam vinculados ao perfil d"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Instagram'], 'claim': 'Anúncios não vinculados ao perfil do Instagram geram menos resultado', 'quote'"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Sem'], 'claim': 'Sem o vínculo, o perfil do Instagram não cresce', 'quote': 'perfil do Instagram não "
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Anunciar'], 'claim': 'Anunciar pelo próprio iPhone exige muito cuidado', 'quote': 'outra, se você anu"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Anunciando'], 'claim': 'Anunciando pelo iPhone, os anúncios podem ter custo aumentado em 30% pela pró"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Apple'], 'claim': 'O aumento de custo pela Apple faz com que se tenha menos resultado', 'quote': 'faz"
+        },
+        {
+          "segment_id": "SEG-004",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Alternativas'], 'claim': 'Alternativas ao anúncio pelo aplicativo são anunciar pelo gerenciador de an"
+        },
+        {
+          "segment_id": "SEG-005",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Meta', 'Suite'], 'claim': 'O painel do Meta Business Suite contém muitas funcionalidades;"
+        },
+        {
+          "segment_id": "SEG-005",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Recomenda', 'Suite'], 'claim': 'Recomenda-se dedicar tempo explorando livremente o painel"
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Dentro', 'Planner'], 'claim': 'Dentro do Planner é possível programar postagens e visualizar um calen"
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook', 'Instagram'], 'claim': \"Ao criar post, aparece no topo o campo 'postar em', onde se decide"
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook', 'Instagram', 'Planner'], 'claim': 'A principal vantagem de programar pelo Planner, em rela"
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook', 'Instagram'], 'claim': 'Na opção de programação é possível definir horários diferentes de "
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Facebook'], 'claim': 'O horário separado por rede é útil porque a audiência pode se concentrar no fin"
+        },
+        {
+          "segment_id": "SEG-006",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Exemplo', 'Instagram'], 'claim': 'Exemplo de aplicação: programar a publicação do Facebook para a man"
+        },
+        {
+          "segment_id": "SEG-007",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Recomenda'], 'claim': 'Recomenda-se investir tempo/energia explorando o planner, pois o que foi ensin"
+        },
+        {
+          "segment_id": "SEG-007",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Instagram', 'Messenger', 'WhatsApp'], 'claim': 'Na caixa de entrada é possível responder simultaneame"
+        },
+        {
+          "segment_id": "SEG-007",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Responder'], 'claim': 'Responder e tirar dúvidas das pessoas pela caixa de entrada leva a mais result"
+        },
+        {
+          "segment_id": "SEG-007",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Recomenda'], 'claim': 'Recomenda-se dedicar tempo explorando também a área da caixa de entrada', 'quo"
+        },
+        {
+          "segment_id": "SEG-008",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Configure'], 'claim': 'Configure uma mensagem de ausência para os períodos em que você não estiver pr"
+        },
+        {
+          "segment_id": "SEG-008",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Entre'], 'claim': 'Entre as configurações disponíveis está identificar mensagens respondidas', 'quote"
+        },
+        {
+          "segment_id": "SEG-008",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['CRM'], 'claim': 'A disponibilidade do recurso de CRM/formulários varia por conta — o apresentador só "
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Suite'], 'claim': 'Na área de anúncios do Business Suite estão disponíveis apenas as poss"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Suite'], 'claim': 'Para quem está começando a fazer anúncios, criar pelo Meta Business Su"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Campanhas'], 'claim': \"Depois dos primeiros anúncios, deve-se migrar para o Gerenciador de Anúncios e"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Gerenciador'], 'claim': 'Criar campanhas dentro do Gerenciador de Anúncios é melhor porque oferece mu"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Pelo', 'Suite'], 'claim': 'Pelo Business Suite é possível criar campanhas para turbinar n"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Facebook', 'Suite'], 'claim': 'Também há campanhas no Business Suite para levar pessoas a"
+        },
+        {
+          "segment_id": "SEG-009",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Business', 'Suite'], 'claim': \"As campanhas criadas pelo Business Suite são muito básicas e iniciais;"
+        },
+        {
+          "segment_id": "SEG-011",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Insights'], 'claim': 'A seção de Insights concentra grande volume de informação; ao navegar por ela o"
+        },
+        {
+          "segment_id": "SEG-011",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Insights'], 'claim': \"Na aba 'Públicos' dos Insights é possível ver as pessoas que engajaram com o pe"
+        },
+        {
+          "segment_id": "SEG-011",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Insights'], 'claim': 'Os Insights permitem ver o resultado por conteúdo.', 'quote': 'Você tem muita i"
+        },
+        {
+          "segment_id": "SEG-011",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Insights'], 'claim': 'Vale investir tempo analisando com calma a área de Insights, em vez de olhá-la "
+        },
+        {
+          "segment_id": "SEG-011",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Insights'], 'claim': 'O propósito da análise dos Insights é entender de fato o que está trazendo resu"
+        },
+        {
+          "segment_id": "SEG-012",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Adicionar'], 'claim': 'Adicionar administradores funciona como uma forma de contingência, aumentando "
+        },
+        {
+          "segment_id": "SEG-013",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Contas', 'Gerenciador'], 'claim': \"Na seção 'Contas' do Gerenciador é possível ver as páginas que voc"
+        },
+        {
+          "segment_id": "SEG-013",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Nessa'], 'claim': 'Nessa mesma área é possível ver as contas de anúncio que você tem.', 'quote': 'Voc"
+        },
+        {
+          "segment_id": "SEG-013",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['WhatsApp'], 'claim': 'Os perfis de WhatsApp conectados servem para poder falar com as pessoas.', 'quo"
+        },
+        {
+          "segment_id": "SEG-013",
+          "tipo": "AVISO",
+          "motivo": "CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT",
+          "detalhe": "{'reason': 'CLAIM_DIVERGE_DO_LITERAL_COM_ROTULO_SOURCE_EXPLICIT', 'entidades_ausentes_da_quote': ['Estudar'], 'claim': 'Estudar os conteúdos trazidos pelo autor torna o resultado muito melhor.', 'quot"
+        }
+      ]
+    },
+    "total_A_B_C": 57
+  }
+}

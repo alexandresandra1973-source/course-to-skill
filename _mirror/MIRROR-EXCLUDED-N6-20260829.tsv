@@ -1,0 +1,5 @@
+# MIRROR-EXCLUDED-N6-20260829 - arquivos cujo destino _mirror/<caminho> o .gitignore atual bloquearia
+# regra no formato <arquivo-gitignore>:<linha>:<padrao>, produzida por git check-ignore --no-index -v
+caminho_relativo	bytes	sha256	regra_gitignore	classificacao_final
+# NENHUM. Zero arquivos do escopo casam com o .gitignore atual.
+# instrumento validado por controle positivo: 5 caminhos ficticios (.csv .pyc __pycache__/ .env .key) foram capturados.

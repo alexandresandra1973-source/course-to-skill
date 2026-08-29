@@ -1,0 +1,25 @@
+schema_version: 0.3.0
+skill:
+  id: PILOT-004-SKILL
+  name: Meta Business Suite — PILOT-004
+  version: 0.1.0
+  status: CANDIDATE_PENDING_USE
+source:
+  type: single_course_pilot
+  course_id: PILOT-004
+  l0_sha256: 607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5
+runtime:
+  entrypoint: SKILL.md
+  load_order:
+  - knowledge/runtime-policy.yaml
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  required_executable_resources:
+  - knowledge/decision-rules.yaml
+  - knowledge/workflows.yaml
+  fail_closed_on_missing_executable_resource: true
+  general_knowledge_fallback_for_missing_methodology: false
+maturity:
+  level: S3_EXECUTABLE
+  pilot_scope: true
+production_ready: false

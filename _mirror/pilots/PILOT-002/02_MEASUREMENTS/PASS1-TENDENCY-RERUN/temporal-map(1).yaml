@@ -1,0 +1,219 @@
+pilot_id: PILOT-002
+lesson_id: null
+title: null
+measurement_label: TENDÊNCIA DO MECANISMO — NÃO RECONSTRUÇÃO DA RODADA QUE PRODUZIU AS 44 EVIDÊNCIAS
+pass: PASS 1 — Temporal Mapping
+source:
+  file: L0-transcript-CUT(1).txt
+  variant: CUT
+  sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  bytes: 96246
+  timestamp_markers: 733
+temporal_map:
+- segment_id: SEG-001
+  start: 00:00:00
+  end: 00:02:33
+  topic: Introduction & Course Overview
+  function: Introdução, credenciais do instrutor e visão geral do conteúdo do curso
+- segment_id: SEG-002
+  start: 00:02:33
+  end: 00:03:29
+  topic: Installing Claude Code on Your Local Machine
+  function: Demonstração da instalação nativa do Claude Code na máquina local
+- segment_id: SEG-003
+  start: 00:03:29
+  end: 00:06:51
+  topic: Choosing an IDE & Installing VS Code
+  function: Comparação entre desktop, terminal e IDE, seguida da instalação e organização básica do projeto no VS Code
+- segment_id: SEG-004
+  start: 00:06:51
+  end: 00:07:39
+  topic: Customizing VS Code Themes
+  function: Demonstração de personalização visual do VS Code por temas
+- segment_id: SEG-005
+  start: 00:07:39
+  end: 00:09:24
+  topic: Starting a Claude Code Session in VS Code
+  function: Abertura do terminal, início da sessão Claude Code e apresentação da interface de prompt e contexto
+- segment_id: SEG-006
+  start: 00:09:24
+  end: 00:10:24
+  topic: Creating Files with Claude Code
+  function: Demonstração do acesso do Claude Code à pasta do projeto e criação de arquivo por prompt
+- segment_id: SEG-007
+  start: 00:10:24
+  end: 00:11:48
+  topic: Terminating, Clearing, and Resuming Sessions
+  function: Demonstração de encerramento, limpeza e retomada de sessões anteriores
+- segment_id: SEG-008
+  start: 00:11:48
+  end: 00:15:44
+  topic: Understanding Permission Modes (Plan, Accept Edits, Auto, Bypass)
+  function: Explicação e aplicação dos modos de permissão no trabalho com Claude Code
+- segment_id: SEG-009
+  start: 00:15:44
+  end: 00:16:53
+  topic: Using /goal for an Autonomous Loop
+  function: Definição do /goal como loop autônomo com avaliação e correção até atender aos requisitos
+- segment_id: SEG-010
+  start: 00:16:53
+  end: 00:20:30
+  topic: Planning the Clone and Gathering Requirements
+  function: Demonstração de planejamento, levantamento de requisitos e decisões de implementação para clonar uma aplicação
+- segment_id: SEG-011
+  start: 00:20:30
+  end: 00:22:58
+  topic: Reviewing and Refining the Plan
+  function: Inspeção do plano gerado e refinamento antes da execução, incluindo preparação local de assets
+- segment_id: SEG-012
+  start: 00:22:58
+  end: 00:24:24
+  topic: Bypass Permission and Autonomous Build Result
+  function: Início da execução autônoma e demonstração do resultado funcional em servidor local
+- segment_id: SEG-013
+  start: 00:24:24
+  end: 00:28:02
+  topic: Claude Skills and the Fix Ticket Workflow
+  function: Definição de skills como workflow/SOP reutilizável e exemplo do pipeline de correção de tickets
+- segment_id: SEG-014
+  start: 00:28:02
+  end: 00:31:11
+  topic: Installing and Discovering Claude Skills
+  function: Demonstração de descoberta, instalação e recarga de uma skill no projeto
+- segment_id: SEG-015
+  start: 00:31:11
+  end: 00:33:04
+  topic: Triggering a Skill and Redesigning the App
+  function: Demonstração de acionamento de skill por linguagem natural ou slash command e redesign da aplicação
+- segment_id: SEG-016
+  start: 00:33:04
+  end: 00:34:48
+  topic: Finding and Installing Additional Skills
+  function: Uso de skills.sh e instalação de uma skill adicional de boas práticas de React
+- segment_id: SEG-017
+  start: 00:34:48
+  end: 00:37:58
+  topic: File Formats, Dependencies, and Project Folders
+  function: Explicação de Markdown, package.json, assets públicos, node_modules, lib e eval
+- segment_id: SEG-018
+  start: 00:37:58
+  end: 00:39:48
+  topic: Components and Application Structure
+  function: Explicação da organização da aplicação em componentes reutilizáveis e arquivos de página
+- segment_id: SEG-019
+  start: 00:39:48
+  end: 00:42:36
+  topic: Hidden Folders and Skill Storage
+  function: Explicação de pastas ocultas, armazenamento de skills e relação entre diretórios de agente e Claude
+- segment_id: SEG-020
+  start: 00:42:36
+  end: 00:44:34
+  topic: AGENTS.md, CLAUDE.md, and System Prompts
+  function: Distinção entre instruções universais e específicas do Claude Code por meio de arquivos de sistema
+- segment_id: SEG-021
+  start: 00:44:34
+  end: 00:50:00
+  topic: Managing Your Context Window and Token Usage
+  function: Gerenciamento de contexto e uso de tokens na sessão Claude Code
+- segment_id: SEG-022
+  start: 00:50:00
+  end: 00:51:47
+  topic: Built-in Slash Commands, Models, and Rewind
+  function: Apresentação de comandos integrados, troca de modelo e reversão para checkpoints anteriores
+- segment_id: SEG-023
+  start: 00:51:47
+  end: 00:53:22
+  topic: Managing Plugins and Installed Skills
+  function: Descoberta, gerenciamento, desinstalação de plugins e remoção de skills instaladas
+- segment_id: SEG-024
+  start: 00:53:22
+  end: 00:56:22
+  topic: Version Control Concepts with GitHub
+  function: Motivação para versionamento e explicação de repositórios, commits, diferenças, branches e reversão
+- segment_id: SEG-025
+  start: 00:56:22
+  end: 01:00:28
+  topic: Creating a GitHub Repository and Initial Commit
+  function: Demonstração de criação de repositório privado, commit inicial, exclusões e proteção de conteúdo sensível
+- segment_id: SEG-026
+  start: 01:00:28
+  end: 01:02:47
+  topic: Committing Changes, Collaboration, and Restore
+  function: Demonstração de novo commit, sincronização, colaboração e restauração por commit ID
+- segment_id: SEG-027
+  start: 01:02:47
+  end: 01:05:12
+  topic: Connecting External Tools with MCP
+  function: Definição de MCP como protocolo para conectar o agente a ferramentas e serviços externos
+- segment_id: SEG-028
+  start: 01:05:12
+  end: 01:06:55
+  topic: Using CLI Tools as an Alternative Interface
+  function: Definição de CLI como outra forma de permitir que o agente opere aplicações e serviços
+- segment_id: SEG-029
+  start: 01:06:55
+  end: 01:09:36
+  topic: Choosing Between MCP and CLI
+  function: Comparação de MCP e CLI por eficiência de tokens, segurança, controle de acesso e ambiente de equipe
+- segment_id: SEG-030
+  start: 01:09:36
+  end: 01:11:58
+  topic: Deploying and Removing an App on Vercel
+  function: Demonstração de deploy via ferramenta conectada e remoção do projeto com verificação do alvo correto
+- segment_id: SEG-031
+  start: 01:11:58
+  end: 01:13:13
+  topic: FAQ — Skills vs MCPs vs Agents
+  function: Distinção entre skills, ferramentas MCP/CLI e agentes especializados, incluindo a relação entre os três
+- segment_id: SEG-032
+  start: 01:13:13
+  end: 01:13:48
+  topic: FAQ — Is Claude Code for Beginners?
+  function: Resposta sobre adequação do Claude Code para iniciantes e diferença entre desktop e terminal
+- segment_id: SEG-033
+  start: 01:13:48
+  end: 01:15:20
+  topic: FAQ — Claude Code vs Codex and Gemini
+  function: Comparação entre frameworks de agentes e os modelos que os alimentam
+- segment_id: SEG-034
+  start: 01:15:20
+  end: 01:15:33
+  topic: FAQ — CLI, Desktop App, or VS Code?
+  function: Resposta breve sobre escolha de interface, remetendo à comparação apresentada anteriormente
+- segment_id: SEG-035
+  start: 01:15:33
+  end: 01:16:09
+  topic: FAQ — Do You Need Git or GitHub?
+  function: Resposta sobre a utilidade de versionamento para projetos mantidos no tempo e recuperação de mudanças
+- segment_id: SEG-036
+  start: 01:16:09
+  end: 01:17:52
+  topic: FAQ — Is the $20 Plan Enough?
+  function: Discussão de limites de uso, orçamento e alternativas de modelos para complementar o plano
+- segment_id: SEG-037
+  start: 01:17:52
+  end: 01:18:12
+  topic: FAQ — How Do You Stop Losing Context?
+  function: Resposta sobre controle de uso e perda de contexto
+- segment_id: SEG-038
+  start: 01:18:12
+  end: 01:18:31
+  topic: FAQ — Is It Safe to Run on My Machine?
+  function: Resposta sobre segurança vinculada à escolha do modo de permissão
+- segment_id: SEG-039
+  start: 01:18:31
+  end: 01:19:14
+  topic: FAQ — Do You Need Cursor?
+  function: Comparação entre IDEs e recomendação de VS Code como opção inicial simples
+- segment_id: SEG-040
+  start: 01:19:14
+  end: 01:20:20
+  topic: FAQ — Will This Be Outdated in a Month?
+  function: Argumento de que os fundamentos apresentados permanecem válidos apesar de mudanças de modelos e recursos
+- segment_id: SEG-041
+  start: 01:20:20
+  end: 01:21:35
+  topic: Closing and Next-Level Topics
+  function: Encerramento, convite à comunidade e indicação de tópicos avançados para conteúdo futuro
+status:
+  pass_1_temporal_mapping: COMPLETE

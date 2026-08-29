@@ -1,0 +1,76 @@
+# PREDICTION-COMPILER-V2 — registrada ANTES da execução.
+# Nenhum número foi digitado: todos calculados dos fatos medidos.
+# Editar este arquivo muda o seu SHA-256 e quebra a amarração.
+schema_version: 0.1.0
+artifact_id: PREDICTION-COMPILER-V2
+artifact_status: REGISTRADA_ANTES_DA_EXECUCAO
+registered_at_utc: '2026-08-12T01:58:44+00:00'
+generator: prediction_compiler_v2.py
+purpose: Registrar a relação prevista ANTES de ligar o extractor, para que ela não possa ser ajustada
+  depois de ver o resultado. Previsão escrita depois do resultado não é previsão, é descrição.
+binds_to:
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+fato_medido:
+  segmento_medio_pilot001_s:
+    expressao: 905 / 9
+    valor: 100.56
+    fonte: temporal-map.yaml + analysis/evidence.jsonl do PILOT-001
+  segmento_medio_pilot002_s:
+    expressao: 4384 / 41
+    valor: 106.93
+    fonte: extensão do corpus de treino apurada no PILOT-002-COVERAGE-REPORT; contagem de segmentos do
+      PASS 1 declarada na §1 da ADR; 44 evidências do EVIDENCE.jsonv
+  razao_entre_duracoes_medias: 1.063
+  diferenca_percentual: 6.3
+  observacao: 'Os segmentos têm praticamente a mesma duração média nos dois pilotos. Logo a queda de yield
+    NÃO se explica por segmento maior: o PASS 1 entregou ao PASS 2 unidades de trabalho de tamanho equivalente
+    nos dois casos, e mesmo assim o yield por unidade caiu.'
+yield_atual:
+  pilot001_por_segmento: 4.89
+  pilot002_por_segmento: 1.07
+  razao: 4.6
+  razao_exata: 41/9
+  leitura: Com unidades de trabalho de tamanho equivalente, o PILOT-002 rendeu por segmento cerca de um
+    quarto do PILOT-001. É o sintoma do orçamento de saída global.
+previsao:
+  se_decisao_A_funcionar: O yield por segmento dos dois pilotos converge para aproximadamente o mesmo
+    valor, porque cada segmento passa a ser exaurido por conta própria em vez de competir por um total
+    global.
+  criterio_de_relacao: Razão entre os yields por segmento próxima de 1,0 — a grandeza prevista é a RELAÇÃO
+    entre os pilotos, não o valor absoluto de nenhum dos dois.
+  razao_atual_para_comparar: 4.6
+  total_pilot002_esperado:
+    expressao: 41 / 9 × total do PILOT-001 corrigido
+    fator: 4.6
+    nota: 'Segue da convergência de yield: se o yield por segmento igualar, os totais ficam na razão das
+      contagens de segmento. NÃO é alvo de contagem — é a consequência aritmética da previsão.'
+  direcao_do_teste: A previsão FALHA se o yield do PILOT-002 corrigido continuar muito abaixo do PILOT-001
+    corrigido, ou seja, se a razão permanecer longe de 1,0. Nesse caso a Decisão A não explica o colapso
+    e a §12 da ADR manda reabrir o diagnóstico.
+banda_de_aceitacao:
+  status: NAO_RATIFICADA
+  problema: '''Próxima de 1,0'' não é falsificável sem um número. Sem banda ratificada antes da execução,
+    qualquer resultado pode ser narrado como próximo o bastante — que é exatamente o vício que este artefato
+    existe para impedir.'
+  proposta_para_ratificacao:
+    razao_entre_yields: 0,75 a 1,33
+    justificativa: Banda simétrica em escala logarítmica (fator 4/3 para cada lado). A razão de hoje é
+      4.6, muito fora dela, então a banda distingue convergência real de melhora parcial.
+  regra: Se esta banda não for ratificada ANTES da execução, o critério permanece qualitativo e o resultado
+    NÃO pode ser declarado aprovado por proximidade. Ratificar depois de ver o resultado é proibido.
+nao_estabelece:
+- qual é o valor absoluto correto de yield por segmento
+- que 200 evidências seja o número certo para o PILOT-002
+- que a contagem de segmentos do PASS 1 se repita entre execuções
+- que a cobertura de L0 vá superar o piso de 73,5%
+relacao_com_o_portao: 'Esta previsão é sobre MECANISMO (yield por segmento). O critério que DECIDE a aceitação
+  continua sendo a cobertura de L0 > 73,5%, congelada em thresholds.py. Os dois são independentes: a previsão
+  pode acertar e o portão reprovar, e vice-versa. Cada um é reportado por si.'
+status: REGISTRADA_ANTES_DA_EXECUCAO
+execucao_realizada: false
+extractor_ligado_a_modelo: false

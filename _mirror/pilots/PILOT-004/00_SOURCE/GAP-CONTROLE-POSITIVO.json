@@ -1,0 +1,283 @@
+{
+  "regra_de_separacao": {
+    "COBERTO": "token no L0 e na Skill",
+    "LACUNA_NOSSA": "token no L0 mas FORA da Skill — o curso ensinou, o pipeline perdeu",
+    "CORRECAO_DE_ASR": "token fora do L0 e na Skill, MAS existe variante corrompida no L0",
+    "INVENCAO": "token fora do L0, na Skill, e sem variante corrompida que o explique",
+    "LACUNA_DO_CURSO": "token fora do L0 e fora da Skill — o curso nunca ensinou"
+  },
+  "controle_positivo": {
+    "tokens": 17,
+    "reconhecidos": 16,
+    "taxa_pct": 94.1,
+    "tem_poder": true,
+    "porque": "se o grupo positivo nao aparecesse na Skill, o relatorio de lacunas estaria medindo perda do pipeline e chamando de lacuna do curso"
+  },
+  "controle_negativo": {
+    "tokens": 12,
+    "ausentes_do_curso_e_da_skill": 12,
+    "invencoes": []
+  },
+  "INVENCOES": [],
+  "LACUNA_NOSSA": [
+    "stories"
+  ],
+  "LACUNA_DO_CURSO": [
+    "conversoes offline",
+    "catalogo de produtos",
+    "publico semelhante",
+    "lookalike",
+    "teste a/b",
+    "orcamento de campanha",
+    "cbo",
+    "gerenciador de eventos",
+    "api de conversoes",
+    "atribuicao",
+    "regras automatizadas",
+    "verificacao de dominio"
+  ],
+  "CORRECAO_DE_ASR": [
+    [
+      "insights",
+      "insightes"
+    ],
+    [
+      "reels",
+      "reals"
+    ]
+  ],
+  "detalhe": [
+    {
+      "token": "planner",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "agendamento",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "automacoes",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "caixa de entrada",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "etiquetas",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "pixel",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "administrador",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "insights",
+      "grupo": "positivo",
+      "no_L0": false,
+      "na_Skill": true,
+      "variante_asr_no_L0": "insightes",
+      "veredito": "CORRECAO_DE_ASR"
+    },
+    {
+      "token": "publicos",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "reels",
+      "grupo": "positivo",
+      "no_L0": false,
+      "na_Skill": true,
+      "variante_asr_no_L0": "reals",
+      "veredito": "CORRECAO_DE_ASR"
+    },
+    {
+      "token": "stories",
+      "grupo": "positivo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": "story",
+      "veredito": "LACUNA_NOSSA"
+    },
+    {
+      "token": "instagram",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "whatsapp",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "gerenciador de anuncios",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "formulario",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "contas de anuncio",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "configuracoes",
+      "grupo": "positivo",
+      "no_L0": true,
+      "na_Skill": true,
+      "variante_asr_no_L0": null,
+      "veredito": "COBERTO"
+    },
+    {
+      "token": "conversoes offline",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "catalogo de produtos",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "publico semelhante",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "lookalike",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "teste a/b",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "orcamento de campanha",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "cbo",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "gerenciador de eventos",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "api de conversoes",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "atribuicao",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "regras automatizadas",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    },
+    {
+      "token": "verificacao de dominio",
+      "grupo": "negativo",
+      "no_L0": false,
+      "na_Skill": false,
+      "variante_asr_no_L0": null,
+      "veredito": "LACUNA_DO_CURSO"
+    }
+  ]
+}

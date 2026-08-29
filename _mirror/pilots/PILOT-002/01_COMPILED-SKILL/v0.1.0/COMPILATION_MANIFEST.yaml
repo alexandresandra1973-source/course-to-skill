@@ -1,0 +1,29 @@
+artifact: PILOT-002-COMPILED-SKILL-v0.1.0
+status: COMPILED_STOP_BEFORE_TEST_0008
+input:
+  file: L0-transcript-CUT.txt
+  sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  bytes: 96246
+  timestamp_marks: 733
+authorized_inputs:
+- L0-transcript-CUT.txt
+prohibited_inputs:
+- L0-integral / full L0
+governance_declared:
+  ADR: 3cb3ccb4…
+  scope_lock: b001fd4d…
+evidence:
+  total: 44
+  quote_resolves: 44
+  epistemic_distribution:
+    SOURCE_EXPLICIT: 39
+    MODEL_INFERENCE: 5
+    GENERAL_KNOWLEDGE: 0
+  confidence_score_fields_emitted: 0
+undefined_fields:
+- autonomy
+- precedence
+- missing_input_action
+- iteration_limit
+undefined_field_count: 4
+test_0008_artifacts: 0

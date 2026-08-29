@@ -1,0 +1,59 @@
+{
+  "suite_passed": true,
+  "cases": [
+    {
+      "case": "C1_boundary_distinct",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "as duas vizinhas distintas sobreviveram, com proveniência",
+      "mutant": "dedup por semelhança lexical (limiar 0,80)",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "vizinha fundida: esquerda=ok, direita=PERDIDA"
+    },
+    {
+      "case": "C2_true_duplicate",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "duplicata real fundida (1 fusão(ões))",
+      "mutant": "dedup só por evidence_id — nunca funde",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "duplicata sobreviveu 2× (esperado 1), fusões=0"
+    },
+    {
+      "case": "C3_zero_yield_visible",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "segmento de yield zero visível no rastro (['SEG-001', 'SEG-002', 'SEG-003'])",
+      "mutant": "rastro omite segmento de yield zero",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "rastro tem 2 segmentos, esperado 3"
+    },
+    {
+      "case": "C4_below_threshold_rescans",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "revarredura disparada: 0.50 → 0.95 em 1 iteração(ões)",
+      "mutant": "portão sempre satisfeito — nunca revarre",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "cobertura abaixo do piso não disparou revarredura"
+    },
+    {
+      "case": "C5_above_threshold_stops",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "encerrou sem revarredura com cobertura 0.80 > 0.735",
+      "mutant": "portão sempre revarre — ignora o piso",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "revarreu 1× acima do piso"
+    },
+    {
+      "case": "C6_quote_normalization",
+      "passed": true,
+      "real_ok": true,
+      "real_detail": "legítima através de marca: aceita · legítima com marca preservada: aceita · fabricada-longe: rejeitada · fabricada-perto (1 palavra trocada): rejeitada (CITACAO_NAO_RESOLVE)",
+      "mutant": "casamento difuso por semelhança (limiar 0,80)",
+      "mutant_failed_as_required": true,
+      "mutant_detail": "CITAÇÃO FABRICADA (perto, uma palavra trocada) ACEITA — o conserto virou afrouxamento"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "fonte": "L0-transcript.txt (PILOT-004)",
+  "produto_central": {
+    "nome": "Meta Business Suite",
+    "corretas": 1,
+    "corrompidas": 13,
+    "total": 14,
+    "pct_corrompido": 92.9,
+    "formas": {
+      "Meta Business Suitech": 1,
+      "Metabusiness": 4,
+      "Metabus": 3,
+      "Suitch": 2,
+      "Metabusness": 1,
+      "suitch": 1,
+      "MetaS": 1
+    }
+  },
+  "termo_secundario": {
+    "nome": "Meta Ads",
+    "corretas": 0,
+    "corrompidas": 1,
+    "pct_corrompido": 100.0,
+    "formas": [
+      "Metaed"
+    ]
+  },
+  "comparacao": {
+    "PILOT-002 Claude": "133/146 = 91,1%",
+    "PILOT-003 ROAS": "11/12 = 91,7%"
+  },
+  "ALIAS_DECLARADOS_P3": {
+    "Meta Business Suite": "\\b(metabus\\w*|metas|suitch|suitech)\\b",
+    "Meta Ads": "\\b(metaed|metaeds)\\b"
+  }
+}

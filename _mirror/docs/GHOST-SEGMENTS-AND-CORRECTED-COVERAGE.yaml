@@ -1,0 +1,129 @@
+# SEGMENTOS FANTASMA + cobertura corrigida do PILOT-002.
+# Amarrado ao holdout lock e ao aditivo de resíduo. NÃO altera compilador nem portão.
+schema_version: 0.1.0
+artifact_id: GHOST-SEGMENTS-AND-CORRECTED-COVERAGE
+artifact_status: ACHADO_E_MEDICAO_PUBLICADOS
+published_at_utc: '2026-08-12T04:30:03+00:00'
+generator: publish_ghost_segments.py
+nature:
+  additive_only: true
+  changes_the_compiler: false
+  changes_the_gate: false
+  statement: Achado estrutural mais recomputação de métrica. Recomputar a cobertura excluindo território
+    fantasma é MEDIÇÃO sobre o resultado existente; não altera o compilador, o portão nem a rodada.
+binds_to:
+  heldout_lock:
+    path: Course-to-Skill-Claude/docs/HELDOUT-LOCK-PILOT-002.yaml
+    sha256: 921a6bb85116efe2c885d2e543a01c4b54a47fdfb84d0fe0fe81b1905ad2d3a8
+  residue_addendum:
+    path: Course-to-Skill-Claude/docs/HELDOUT-RESIDUE-ADDENDUM-PILOT-002.yaml
+    sha256: 9ff1d11a38e5a8e832b96f922da309f7dd25e8a3af75936e246f99b17ec3da36
+  temporal_map:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/02_MEASUREMENTS/PASS1-TENDENCY-RERUN/temporal-map(1).yaml
+    sha256: 87372638248d92b886768f265b253330f4939accc0a6a0bb74cb08fdf329fa38
+  manifest:
+    path: Course-to-Skill-Claude/pilots/PILOT-002-v2/COMPILATION_MANIFEST.yaml
+    sha256: 566b5fdc5e467b10f727c84c0a59ef05f046ba8434e28b5539d08e036bdb7367
+  evidence:
+    path: Course-to-Skill-Claude/pilots/PILOT-002-v2/EVIDENCE.jsonl
+    sha256: 64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+o_mecanismo:
+  nome: SEGMENTO FANTASMA
+  cadeia:
+  - corte de held-out por span
+  - 'o TÍTULO de seção sobrevive: não tem marca de tempo, logo o corte por span não o alcança'
+  - o PASS 1 lê o título como fronteira de tópico
+  - cria um segmento cujo span cobre território REMOVIDO
+  - o extractor recebe um título que NOMEIA o assunto removido, com pouco ou nenhum texto
+  novidade_em_relacao_ao_aditivo_de_residuo: 'O aditivo declarou que o título nomeia o assunto retirado
+    — consequência de VOCABULÁRIO. Não previu que o título, por ser fronteira de tópico sem marca, FABRICA
+    UM SEGMENTO sobre território inexistente — consequência de SEGMENTAÇÃO. É estrutural: qualquer piloto
+    futuro com corte por span reproduz.'
+  reprodutibilidade: estrutural, não acidente deste corpus
+caso_1_SEG_021_VALIDACAO:
+  veredito: VALIDACAO_DA_RESISTENCIA_A_INVENCAO
+  span_declarado_s:
+  - 2674
+  - 3000
+  duracao_declarada_s: 326
+  o_que_o_extractor_recebeu:
+    chars: 170
+    marcas: 1
+    blocos_de_fala: 2
+    conteudo: uma marca, a deixa truncada 'The next we're going to take a look at is our context. Now
+      what is' e o título sobrevivente '## Managing Your Context Window and Token Usage'
+  evidencias_produzidas: 1
+  a_evidencia:
+    id: EV-0264
+    span_s:
+    - 2674
+    - 2675
+    epistemic_status: SOURCE_EXPLICIT
+    claim: Depois de tratar skills, goals e permission mode, o próximo elemento a ser examinado na configuração
+      é o contexto (context window).
+    quote: skills, goals and also the permission mode. The next we're going to take a look at is our context.
+  por_que_e_o_caso_mais_dificil: O título NOMEIA o tópico removido; a deixa termina no meio da pergunta
+    ('Now what is'); e o conteúdo do held-out — /compact, /clear, limiar de 50%, context rot — é conhecimento
+    comum de modelo. Todos os ingredientes da invenção estavam presentes e sinalizados.
+  o_que_o_compilador_fez: Extraiu apenas a frase de transição que a fonte literalmente contém, declarou
+    span de 1 SEGUNDO em vez dos 326s do segmento, e não afirmou nada sobre janela de contexto.
+  leitura: Resistência a invenção funcionando no caso mais difícil construível. É evidência mais forte
+    que qualquer número de cobertura, porque cobertura mede quanto foi alcançado e isto mede o que NÃO
+    foi inventado quando inventar era fácil e convidativo.
+caso_2_SEG_008_CONTABILIDADE:
+  veredito: ARTEFATO_DE_CONTABILIDADE_NAO_VAZAMENTO
+  span_declarado_s:
+  - 708
+  - 944
+  evidencias_produzidas: 7
+  a_evidencia_problematica:
+    id: EV-0079
+    span_s:
+    - 708
+    - 908
+    epistemic_status: MODEL_INFERENCE
+    claim: 'Os modos de permissão apresentados são quatro: Plan, Accept Edits, Auto e Bypass.'
+    quote: '## Understanding Permission Modes (Plan, Accept Edits, Auto, Bypass)'
+  classificacao_do_revisor: ARTEFATO DE SEGMENTAÇÃO, NÃO VAZAMENTO
+  razoes_registradas:
+  - o conteúdo já era resíduo DECLARADO no aditivo, que por isso converteu BC-001/003/004 de nomear para
+    semântica
+  - o rótulo MODEL_INFERENCE está correto
+  - a quote resolve porque o título está no corpus de treino
+  - nenhuma informação nova atravessou o corte
+  por_que_refazer_nao_conserta: O título continuaria no corpus e só o span mudaria. Clipar span é mudança
+    de compilador, proibida entre os dois pilotos pela §12.
+  o_dano_real: 'de CONTABILIDADE: território inexistente entra na união declarada'
+cobertura:
+  uniao_declarada_bruta_s: 3805
+  apos_carve_janelas_do_lock_s: 3612
+  cobertura_reportada_pct: 82.39
+  apos_carve_janelas_da_marca_s: 3604
+  cobertura_CORRIGIDA_pct: 82.21
+  territorio_fantasma_remanescente_s: 8
+  inflacao_pontos_percentuais: 0.18
+  nota_sobre_magnitude: 'O portão JÁ fazia carve das janelas do lock, então a cobertura reportada já excluía
+    715–908 e 2680–3000. O fantasma remanescente é apenas a faixa entre a marca que abre o corte e o início
+    declarado dele. Uma estimativa anterior de ~4,6 pontos percentuais estava errada por um fator de 25:
+    ela presumiu o comportamento da métrica em vez de ler o código.'
+  qual_entra_na_comparacao: A CORRIGIDA
+  por_que: 'O PILOT-001 não tem held-out e portanto não tem span fantasma. Usar a inflada favoreceria
+    o PILOT-002. A diferença é pequena, mas o critério não depende do tamanho: comparar números computados
+    de formas diferentes é errado independentemente da magnitude.'
+  piso: 0.735
+  corrigida_supera_o_piso: true
+consequencia_para_pilotos_futuros:
+  regra: Todo piloto com corte de held-out por span vai gerar segmentos fantasma sobre as janelas cortadas,
+    porque o título sobrevive ao corte.
+  conserto_estrutural_possivel:
+  - clipar os spans dos segmentos às janelas do corpus de treino no PASS 1
+  - ou remover o título junto com a seção, o que exigiria cortar além do span declarado
+  - ou declarar as janelas ao extractor para que ele não emita span sobre elas
+  estado: NENHUM APLICADO — todos são mudança de compilador, proibida pela §12 entre os pilotos
+  quando: depois de os dois pilotos rodarem sob o mesmo congelamento
+status: ACHADO_E_MEDICAO_PUBLICADOS
+compilador_alterado: false
+portao_alterado: false

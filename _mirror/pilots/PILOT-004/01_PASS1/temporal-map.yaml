@@ -1,0 +1,115 @@
+schema_version: 0.1.0
+pilot_id: PILOT-004
+l0_sha256: 607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5
+extent_s: 903
+pass1:
+  executed_by_model: true
+  windows: 1
+  target_segment_s: 135
+  stitching: 'MECÂNICA: ordena, corta sobreposição, estende o anterior para fechar buraco. Nenhuma fronteira
+    inventada por modelo fora da sua janela.'
+temporal_map:
+- segment_id: SEG-001
+  start: 0:00:00
+  end: 0:00:53
+  start_s: 0
+  end_s: 53
+  duration_s: 53
+  topic: 'Abertura: mudanças no Meta Business Suite para 2026'
+  function: Introdução e promessa do conteúdo do vídeo
+- segment_id: SEG-002
+  start: 0:00:53
+  end: 0:02:24
+  start_s: 53
+  end_s: 144
+  duration_s: 91
+  topic: 'Preparação: login no Facebook e uso do navegador antidetect Dolphin Anty'
+  function: Orientação de pré-requisitos e ferramenta de segurança/organização de contas
+- segment_id: SEG-003
+  start: 0:02:24
+  end: 0:03:31
+  start_s: 144
+  end_s: 211
+  duration_s: 67
+  topic: 'Criação de página e vinculação do Instagram: nascimento do portfólio empresarial'
+  function: Demonstração passo a passo de configuração estrutural
+- segment_id: SEG-004
+  start: 0:03:31
+  end: 0:04:44
+  start_s: 211
+  end_s: 284
+  duration_s: 73
+  topic: Como verificar se as contas estão conectadas e prejuízos de não estarem
+  function: Diagnóstico prático e alerta sobre perda de recursos e custos
+- segment_id: SEG-005
+  start: 0:04:44
+  end: 0:05:38
+  start_s: 284
+  end_s: 338
+  duration_s: 54
+  topic: Visão geral do painel e do menu 'todas as ferramentas'
+  function: Panorama da interface antes do aprofundamento
+- segment_id: SEG-006
+  start: 0:05:38
+  end: 0:07:33
+  start_s: 338
+  end_s: 453
+  duration_s: 115
+  topic: 'Planner: agendamento de posts, stories, reels e textos diferenciados'
+  function: Demonstração detalhada de funcionalidade gratuita
+- segment_id: SEG-007
+  start: 0:07:33
+  end: 0:08:29
+  start_s: 453
+  end_s: 509
+  duration_s: 56
+  topic: Caixa de entrada unificada e etiquetas de leads
+  function: Explicação de funcionalidade de atendimento centralizado
+- segment_id: SEG-008
+  start: 0:08:29
+  end: 0:09:41
+  start_s: 509
+  end_s: 581
+  duration_s: 72
+  topic: Automações de mensagens e formulários/CRM gratuito
+  function: Demonstração de recursos de automação e captação
+- segment_id: SEG-009
+  start: 0:09:41
+  end: 0:10:54
+  start_s: 581
+  end_s: 654
+  duration_s: 73
+  topic: Anúncios pelo Business Suite versus gerenciador de anúncios
+  function: Comparação e recomendação de uso conforme nível do anunciante
+- segment_id: SEG-010
+  start: 0:10:54
+  end: 0:11:44
+  start_s: 654
+  end_s: 704
+  duration_s: 50
+  topic: Apresentação do treinamento Expert Ads e comunidade
+  function: Chamada comercial para o curso do instrutor
+- segment_id: SEG-011
+  start: 0:11:44
+  end: 0:12:49
+  start_s: 704
+  end_s: 769
+  duration_s: 65
+  topic: 'Insights: públicos, tendências e desempenho de conteúdo'
+  function: Explicação de análise de dados para otimizar resultados
+- segment_id: SEG-012
+  start: 0:12:49
+  end: 0:13:46
+  start_s: 769
+  end_s: 826
+  duration_s: 57
+  topic: 'Configurações e usuários: administradores como contingência contra restrições'
+  function: Ensino de prática de segurança da estrutura
+- segment_id: SEG-013
+  start: 0:13:46
+  end: 0:15:03
+  start_s: 826
+  end_s: 903
+  duration_s: 77
+  topic: Contas de anúncio, WhatsApp, Instagram, pixel e encerramento
+  function: Fechamento com revisão de configurações e incentivo ao estudo continuado

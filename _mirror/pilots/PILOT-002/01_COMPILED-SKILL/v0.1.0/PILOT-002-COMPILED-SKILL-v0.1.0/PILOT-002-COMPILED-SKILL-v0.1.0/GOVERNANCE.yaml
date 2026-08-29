@@ -1,0 +1,34 @@
+pilot: PILOT-002
+source_scope:
+  authorized_input: L0-transcript-CUT.txt
+  authorized_input_sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  full_L0_input: PROHIBITED
+  scope_lock: declared_prefix:b001fd4d…
+  adr: declared_prefix:3cb3ccb4…
+epistemic_control:
+  allowed_labels:
+  - SOURCE_EXPLICIT
+  - MODEL_INFERENCE
+  - GENERAL_KNOWLEDGE
+  general_knowledge_policy: NOT_USED_AS_COMPILATION_INPUT
+  confidence_score: OMITTED
+source_derived_operational_governance:
+  autonomy: UNDEFINED
+  precedence: UNDEFINED
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+source_explicit_capabilities_not_promoted_to_defaults:
+  goal_loop: /goal is described as capable of autonomous looping until stated requirements
+    are met; this does not define the Skill default autonomy policy.
+  goal_termination_condition: requirements met
+  clarification_example: Claude asks clarification questions in demonstrated planning/redesign
+    flows; this does not define a universal missing-input rule.
+  permission_safety_statement: The source says choosing the right permission mode
+    affects safety, but the cut does not contain the full permission-mode definitions.
+cut_gaps_detected:
+- from_timestamp: '11:48'
+  to_timestamp: '15:08'
+  handling: DO_NOT_RECONSTRUCT
+- from_timestamp: '44:34'
+  to_timestamp: '50:00'
+  handling: DO_NOT_RECONSTRUCT

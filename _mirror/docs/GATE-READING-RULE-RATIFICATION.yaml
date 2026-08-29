@@ -1,0 +1,78 @@
+# ADITIVO: ratificação condicional da faixa + assimetria de restrição.
+# Amarrado por SHA-256 à regra pré-registrada. NÃO altera o portão.
+# Publicado ANTES da rodada completa do PILOT-001.
+schema_version: 0.1.0
+artifact_id: GATE-READING-RULE-RATIFICATION
+artifact_status: RATIFICADA_CONDICIONALMENTE_ANTES_DA_EXECUCAO
+registered_at_utc: '2026-08-12T03:22:49+00:00'
+generator: gate_rule_ratification.py
+registered_by: revisor
+nature:
+  additive_only: true
+  changes_the_gate: false
+  statement: Aditivo à regra pré-registrada. Não altera o piso de 73,5%, a métrica nem a previsão. Publicado
+    ANTES da rodada completa do PILOT-001.
+binds_to:
+  gate_reading_rule:
+    path: Course-to-Skill-Claude/docs/GATE-READING-RULE-PREREGISTERED.yaml
+    sha256: 392e0167be5560397d7a368b293d3d0e0f74ab5c300b0492f15f54b63ad55a11
+  coverage_caveat:
+    path: Course-to-Skill-Claude/docs/L0-COVERAGE-DECLARED-VS-EVIDENCED-CAVEAT.yaml
+    sha256: b105f6c6d3b871ddcd04f02322487fc4132f14e1c5a21f560cce79fa061eec54
+  prediction:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2.yaml
+    sha256: 4963fd27d4640c4831306e74b0dc9f624ef5fe409f6c46f48c7f46fbeda1b44d
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+ratificacao_da_faixa:
+  faixa:
+  - 0.685
+  - 0.785
+  status: RATIFICADA_CONDICIONALMENTE
+  condicao: 'A suspensão só se aplica se a preocupação que a motivou estiver presente na rodada. Medir
+    a união DECLARADA por segmento na rodada completa: se ela NÃO for menor que a do regime histórico,
+    o temor está refutado por medição e o portão é lido normalmente, mesmo dentro da faixa.'
+  razao: suspensão incondicional protegeria um conserto que falhou
+  evidencia_atual:
+    uniao_declarada_regime_antigo_s: 80
+    uniao_declarada_r1_s: 84
+    uniao_declarada_r2_s: 84
+    segmentos_medidos: 1
+    segmento: SEG-005
+    leitura: União declarada 80s no regime antigo contra 84s e 84s nas duas rodadas do v2. NÃO é menor
+      — é maior. Sob a condição ratificada, a evidência disponível hoje já aponta para refutação do temor,
+      mas n=1 segmento.
+  como_a_condicao_se_aplica_na_rodada_completa: 'A medição vale sobre a rodada COMPLETA, não sobre o canário.
+    A comparação honesta é união declarada por segmento: o histórico tem 44 evidências sobre 9 segmentos
+    e o v2 terá as suas sobre os mesmos 9, então a razão é comparável segmento a segmento.'
+  o_que_ainda_pode_disparar_suspensao: Se, na rodada completa, a união declarada por segmento vier MENOR
+    que a histórica E a cobertura cair dentro de [0,685; 0,785], a suspensão se aplica e o veredito sobe
+    para o revisor.
+assimetria_de_restricao:
+  fato: o PILOT-001 histórico tem source_excerpt NULO em 0/44
+  consequencia: O baseline NUNCA teria passado no portão de resolução de quote do v2. O v2 produz citação
+    resolvível para 100% das evidências. A comparação é entre uma rodada SEM restrição de citação e uma
+    TOTALMENTE restrita — o v2 é cobrado num padrão que o baseline nunca cumpriu.
+  regra_de_leitura: 'Se o v2 empatar ou superar o piso sob restrição estritamente mais dura, a evidência
+    é MAIS forte que o número bruto sugere. Isso NÃO afrouxa o portão: ele continua sendo > 73,5%. Muda
+    como o resultado é interpretado, e está escrito antes de o resultado existir.'
+  status: PRE_REGISTRADA_ANTES_DA_EXECUCAO
+  verificacao:
+    historico_evidencias: 44
+    historico_com_citacao: 0
+    historico_path: Course-to-Skill/pilots/PILOT-001-HubSpot-AI-Agent/analysis/evidence.jsonl
+    historico_sha256: 2eb266b1fa1c965b15077cc73cbaa7e78aa69160a7da07e0c7f2317998d5156f
+    v2_rejeita_citacao_que_nao_resolve: true
+    v2_regra: quote tem de casar por substring exata sobre texto normalizado; fabricada é rejeitada, e
+      o canário C6 prova isso a cada execução
+  o_que_esta_regra_NAO_faz:
+  - não altera o piso de 73,5%
+  - não autoriza aprovar abaixo do piso
+  - não converte a assimetria em fator numérico de ajuste
+status: RATIFICADA_CONDICIONALMENTE_ANTES_DA_EXECUCAO
+execucao_realizada: false
+portao_alterado: false

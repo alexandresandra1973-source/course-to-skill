@@ -1,0 +1,843 @@
+schema_version: 0.1.0
+skill_id: PILOT-002-SKILL
+skill_version: 0.1.0
+workflows:
+- workflow_id: WF-0002
+  name: contas vinculadas
+  anchor_evidence_id: EV-0019
+  steps:
+  - S-0004
+  - S-0005
+  evidence_ids:
+  - EV-0019
+- workflow_id: WF-0001
+  name: portfólio empresarial
+  anchor_evidence_id: EV-0023
+  steps:
+  - S-0006
+  - S-0007
+  evidence_ids:
+  - EV-0023
+- workflow_id: WF-0003
+  name: Meta Business Suite
+  anchor_evidence_id: EV-0031
+  steps:
+  - S-0008
+  evidence_ids:
+  - EV-0031
+- workflow_id: WF-0005
+  name: todas as ferramentas
+  anchor_evidence_id: EV-0047
+  steps:
+  - S-0009
+  - S-0010
+  evidence_ids:
+  - EV-0047
+- workflow_id: WF-0006
+  name: planner
+  anchor_evidence_id: EV-0050
+  steps:
+  - S-0011
+  evidence_ids:
+  - EV-0050
+- workflow_id: WF-0007
+  name: Planner (Meta Business Suite) — agendamento de postagens
+  anchor_evidence_id: EV-0051
+  steps:
+  - S-0019
+  evidence_ids:
+  - EV-0051
+- workflow_id: WF-0008
+  name: Criar post / programar post, story, reels ou live
+  anchor_evidence_id: EV-0054
+  steps:
+  - S-0012
+  - S-0013
+  - S-0014
+  - S-0015
+  - S-0016
+  - S-0017
+  - S-0018
+  - S-0020
+  - S-0021
+  - S-0022
+  evidence_ids:
+  - EV-0054
+- workflow_id: WF-0009
+  name: Caixa de entrada como central de atendimento
+  anchor_evidence_id: EV-0073
+  steps:
+  - S-0023
+  evidence_ids:
+  - EV-0073
+- workflow_id: WF-0010
+  name: Automações
+  anchor_evidence_id: EV-0077
+  steps:
+  - S-0024
+  - S-0025
+  - S-0026
+  - S-0027
+  evidence_ids:
+  - EV-0077
+- workflow_id: WF-0011
+  name: Criar campanha por dentro do Gerenciador de Anúncios (Gerenciador de Anúncios > Campanhas > criar)
+  anchor_evidence_id: EV-0087
+  steps:
+  - S-0030
+  - S-0029
+  - S-0028
+  - S-0031
+  - S-0032
+  - S-0033
+  - S-0034
+  - S-0035
+  - S-0036
+  evidence_ids:
+  - EV-0087
+- workflow_id: WF-0012
+  name: Configurações > Usuários > Pessoas
+  anchor_evidence_id: EV-0111
+  steps:
+  - S-0037
+  - S-0038
+  - S-0039
+  - S-0040
+  - S-0041
+  - S-0042
+  - S-0043
+  - S-0044
+  evidence_ids:
+  - EV-0111
+- workflow_id: WF-DEFAULT
+  name: Passos sem âncora de procedimento na fonte
+  anchor_evidence_id: null
+  steps:
+  - S-0001
+  - S-0002
+  - S-0003
+  evidence_ids: []
+  DECLARADO: 'workflow padrão: a fonte não nomeia procedimento que os agrupe. Não é invenção do compilador
+    — é ausência declarada, e vai ao COURSE-GAP-REPORT.'
+steps:
+- name: Instalar a ferramenta pelo link da descrição
+  action: Acessar o link disponibilizado abaixo/na descrição, fazer a instalação da ferramenta e utilizá-la
+    com algumas contas gratuitas
+  required_inputs:
+  - Link de instalação disponibilizado na descrição
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0011
+  step_id: S-0001
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-DEFAULT
+  order_key: 104
+  origin_class: SOURCE_EXPLICIT
+- name: Criar um ambiente por cliente na ferramenta
+  action: Organizar os clientes na ferramenta de modo que cada linha corresponda a um cliente, e acessar
+    o ambiente do cliente para fazer os anúncios
+  required_inputs:
+  - Ferramenta instalada
+  - Lista de clientes
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0012
+  - EV-0013
+  step_id: S-0002
+  segment_ids:
+  - SEG-002
+  workflow_id: WF-DEFAULT
+  order_key: 110
+  origin_class: SOURCE_EXPLICIT
+- name: Acessar páginas no painel
+  action: No painel, acessar 'ver mais' e localizar a opção 'páginas'
+  required_inputs:
+  - Acesso ao painel
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0016
+  step_id: S-0003
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-DEFAULT
+  order_key: 144
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar vinculações da página
+  action: Acessar 'alternar', depois novamente 'alternar', e então 'contas vinculadas' para verificar
+    as vinculações da página
+  required_inputs:
+  - Página do Facebook acessível
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0019
+  step_id: S-0004
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0002
+  order_key: 159
+  origin_class: SOURCE_EXPLICIT
+- name: Conectar Instagram à página do Facebook
+  action: Conectar o Instagram com a página do Facebook, o que faz nascer o portfólio empresarial
+  required_inputs:
+  - Conta de Instagram
+  - Página do Facebook
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0029
+  - EV-0022
+  step_id: S-0005
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0002
+  order_key: 168
+  origin_class: SOURCE_EXPLICIT
+- name: Alocar ativos no portfólio empresarial
+  action: Guardar no portfólio empresarial as contas de anúncio, o pixel e toda a estrutura de anúncio
+  required_inputs:
+  - Portfólio empresarial criado
+  - Contas de anúncio
+  - Pixel
+  - Estrutura de anúncio
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0024
+  - EV-0023
+  step_id: S-0006
+  segment_ids:
+  - SEG-003
+  workflow_id: WF-0001
+  order_key: 174
+  origin_class: SOURCE_EXPLICIT
+- name: Retornar ao painel após criar o portfólio
+  action: Depois de criar o portfólio, voltar ao painel para verificar o resultado da criação
+  required_inputs:
+  - Portfólio criado
+  - Acesso ao painel
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0030
+  step_id: S-0007
+  segment_ids:
+  - SEG-004
+  workflow_id: WF-0001
+  order_key: 211
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar contas conectadas no Meta Business Suite
+  action: Abrir o Meta Business Suite e observar o topo do painel para verificar se a página do Facebook
+    e o Instagram estão acesos/conectados
+  required_inputs:
+  - Acesso ao Meta Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0031
+  - EV-0032
+  step_id: S-0008
+  segment_ids:
+  - SEG-004
+  workflow_id: WF-0003
+  order_key: 216
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir menu 'todas as ferramentas'
+  action: Acessar o menu 'todas as ferramentas' no painel para visualizar a quantidade de possibilidades
+    disponíveis
+  required_inputs:
+  - Acesso ao painel do Meta Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0047
+  step_id: S-0009
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0005
+  order_key: 309
+  origin_class: SOURCE_EXPLICIT
+- name: Reconhecer estrutura de abas e subdivisões
+  action: Identificar que cada item de 'todas as ferramentas' é uma aba que pode conter outras subdivisões
+    internas, e entendê-las em certo nível
+  required_inputs:
+  - Menu 'todas as ferramentas' aberto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0048
+  step_id: S-0010
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0005
+  order_key: 315
+  origin_class: SOURCE_EXPLICIT
+- name: Conhecer o planner como primeiro lugar
+  action: Iniciar o aprofundamento pelo planner, primeiro lugar do painel a ser conhecido
+  required_inputs:
+  - Acesso ao painel do Meta Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0050
+  step_id: S-0011
+  segment_ids:
+  - SEG-005
+  workflow_id: WF-0006
+  order_key: 329
+  origin_class: SOURCE_EXPLICIT
+- name: Conferir calendário de programação
+  action: Visualizar no Planner o calendário com dia e hora das postagens programadas para manter controle
+    sobre a programação
+  required_inputs:
+  - Postagens programadas
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0052
+  - EV-0053
+  step_id: S-0019
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0007
+  order_key: 349
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir criação de conteúdo no Planner
+  action: Clicar no botão de mais (+) dentro do Planner ou usar a opção 'criar post' na parte superior
+    (mesmas opções) para programar post, story, reels ou live
+  required_inputs:
+  - Acesso ao Planner
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0054
+  - EV-0055
+  step_id: S-0012
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 358
+  origin_class: SOURCE_EXPLICIT
+- name: Definir onde postar
+  action: No campo 'postar em' escolher publicar nos dois lugares ou apenas um (Facebook ou Instagram)
+  required_inputs:
+  - Definição de rede de destino
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0056
+  - EV-0057
+  step_id: S-0013
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 376
+  origin_class: SOURCE_EXPLICIT
+- name: Selecionar mídia
+  action: Escolher uma foto ou vídeo, ou montar um carrossel com várias imagens ou vários vídeos
+  required_inputs:
+  - Foto, vídeo ou conjunto de mídias
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0058
+  step_id: S-0014
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 389
+  origin_class: SOURCE_EXPLICIT
+- name: Escrever textos por rede
+  action: Preencher uma versão de texto para o Facebook e outra para o Instagram
+  required_inputs:
+  - Texto para Facebook
+  - Texto para Instagram
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0059
+  - EV-0060
+  - EV-0061
+  step_id: S-0015
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 398
+  origin_class: SOURCE_EXPLICIT
+- name: Programar horários
+  action: Na opção de programação, definir horário de entrada da postagem para o Facebook e para o Instagram
+    separadamente
+  required_inputs:
+  - Horário desejado por rede
+  - Conhecimento do comportamento da audiência por rede
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0062
+  - EV-0063
+  - EV-0064
+  step_id: S-0016
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 422
+  origin_class: SOURCE_EXPLICIT
+- name: Confirmar programação
+  action: Clicar em 'programar' para que a postagem fique programada
+  required_inputs:
+  - Conteúdo, textos e horários configurados
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0065
+  step_id: S-0017
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 441
+  origin_class: SOURCE_EXPLICIT
+- name: Turbinar no momento da programação
+  action: Impulsionar (turbinar) a postagem já no próprio momento da programação
+  required_inputs:
+  - Postagem em programação
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0066
+  step_id: S-0018
+  segment_ids:
+  - SEG-006
+  workflow_id: WF-0008
+  order_key: 447
+  origin_class: SOURCE_EXPLICIT
+- name: Acessar a caixa de entrada
+  action: Abrir a caixa de entrada, localizada na parte inferior da interface
+  required_inputs:
+  - Acesso à interface onde fica a caixa de entrada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0069
+  step_id: S-0020
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0008
+  order_key: 469
+  origin_class: SOURCE_EXPLICIT
+- name: Responder simultaneamente às mensagens dos canais
+  action: Responder na caixa de entrada, de forma simultânea, as mensagens recebidas por Messenger, Instagram
+    e WhatsApp
+  required_inputs:
+  - Mensagens recebidas em Messenger, Instagram e WhatsApp
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0070
+  step_id: S-0021
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0008
+  order_key: 479
+  origin_class: SOURCE_EXPLICIT
+- name: Visualizar comentários unificados
+  action: Ver, no mesmo lugar da caixa de entrada, os comentários do Instagram e do Facebook
+  required_inputs:
+  - Comentários no Instagram e no Facebook
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0071
+  step_id: S-0022
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0008
+  order_key: 484
+  origin_class: SOURCE_EXPLICIT
+- name: Etiquetar e categorizar o lead
+  action: Usar as etiquetas na lateral da caixa de entrada para marcar e categorizar o lead, de forma
+    semelhante ao uso de etiquetas no WhatsApp
+  required_inputs:
+  - Conversa/lead na caixa de entrada
+  - Etiquetas disponíveis na lateral
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0074
+  step_id: S-0023
+  segment_ids:
+  - SEG-007
+  workflow_id: WF-0009
+  order_key: 495
+  origin_class: SOURCE_EXPLICIT
+- name: Acessar a área de automações
+  action: Abrir a área de automações localizada na parte de cima da ferramenta para configurar mensagens
+    automáticas e gatilhos
+  required_inputs:
+  - acesso à ferramenta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0077
+  step_id: S-0024
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0010
+  order_key: 525
+  origin_class: GENUINE_INFERENCE
+- name: Configurar mensagens automáticas e gatilhos
+  action: Dentro de automações, configurar mensagens automáticas e gatilhos, usando o recurso como um
+    chatbot gratuito para algumas situações
+  required_inputs:
+  - área de automações aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0077
+  step_id: S-0025
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0010
+  order_key: 525
+  origin_class: GENUINE_INFERENCE
+- name: Acessar formulários para uso como CRM
+  action: Ir à área de formulários para ver os formulários e, quando disponível na conta, usá-la como
+    CRM gratuito
+  required_inputs:
+  - conta com a opção de formulários/CRM habilitada
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0082
+  step_id: S-0026
+  segment_ids:
+  - SEG-008
+  workflow_id: WF-0010
+  order_key: 561
+  origin_class: SOURCE_EXPLICIT
+- name: Acessar área de anúncios do Business Suite
+  action: Abrir a área de anúncios do Business Suite, onde estão disponíveis as possibilidades de anúncio
+    iniciais
+  required_inputs:
+  - Conta no Meta Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0085
+  step_id: S-0027
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0010
+  order_key: 590
+  origin_class: SOURCE_EXPLICIT
+- name: Migrar para o Gerenciador de Anúncios
+  action: Após os primeiros anúncios, ir em 'Gerenciador de Anúncios' > 'Campanhas' e criar as campanhas
+    por dentro do gerenciador
+  required_inputs:
+  - Primeiros anúncios já realizados no Business Suite
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0087
+  - EV-0088
+  - EV-0093
+  step_id: S-0030
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0011
+  order_key: 604
+  origin_class: SOURCE_EXPLICIT
+- name: Criar a primeira campanha básica
+  action: Clicar em 'criar' e montar a primeira campanha do jeito mais básico possível, observando os
+    resultados
+  required_inputs:
+  - Objetivo selecionado
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0089
+  step_id: S-0029
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0011
+  order_key: 615
+  origin_class: SOURCE_EXPLICIT
+- name: Selecionar objetivo entre as campanhas disponíveis no Business Suite
+  action: Escolher entre campanhas para turbinar no Instagram, crescer o Instagram, crescer a página do
+    Facebook, distribuir mais um conteúdo, ou levar pessoas a conversar no WhatsApp, na página do Facebook
+    ou no Instagram
+  required_inputs:
+  - Objetivo do anúncio
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0090
+  - EV-0091
+  step_id: S-0028
+  segment_ids:
+  - SEG-009
+  workflow_id: WF-0011
+  order_key: 625
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir a seção de Insights
+  action: Navegar pela seção de Insights, onde há grande volume de informação/dados disponíveis
+  required_inputs:
+  - Acesso à seção de Insights
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0097
+  step_id: S-0031
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0011
+  order_key: 705
+  origin_class: SOURCE_EXPLICIT
+- name: Consultar a aba 'Públicos'
+  action: Na aba 'Públicos' dos Insights, ver as pessoas que engajaram com o perfil de alguma forma e
+    a tendência dessas pessoas
+  required_inputs:
+  - Aba 'Públicos' dos Insights
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0098
+  - EV-0101
+  step_id: S-0032
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0011
+  order_key: 711
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar localização do público
+  action: Consultar nos dados de público os lugares e os países onde estão as pessoas que engajam
+  required_inputs:
+  - Dados de público em Insights
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0102
+  step_id: S-0033
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0011
+  order_key: 737
+  origin_class: SOURCE_EXPLICIT
+- name: Ver resultado por conteúdo
+  action: Usar os Insights para ver o resultado por conteúdo
+  required_inputs:
+  - Insights
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0103
+  step_id: S-0034
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0011
+  order_key: 742
+  origin_class: SOURCE_EXPLICIT
+- name: Obter visão geral dos conteúdos publicados
+  action: Acessar a visão geral de todos os conteúdos publicados e identificar quais posts estão dando
+    engajamento, quais não estão e quando o engajamento ocorreu
+  required_inputs:
+  - Visão geral de conteúdos em Insights
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0104
+  - EV-0105
+  step_id: S-0035
+  segment_ids:
+  - SEG-011
+  workflow_id: WF-0011
+  order_key: 746
+  origin_class: SOURCE_EXPLICIT
+- name: Acessar a área de Configurações
+  action: Abrir a área de Configurações da plataforma de anúncios, onde ficam as configurações essenciais
+    do dia a dia do anunciante
+  required_inputs:
+  - Acesso à plataforma de anúncios
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0109
+  step_id: S-0036
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0011
+  order_key: 775
+  origin_class: SOURCE_EXPLICIT
+- name: Abrir Usuários > Pessoas
+  action: Dentro de Configurações, acessar Usuários e depois Pessoas
+  required_inputs:
+  - Área de Configurações aberta
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0111
+  step_id: S-0037
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0012
+  order_key: 788
+  origin_class: SOURCE_EXPLICIT
+- name: Inserir administradores da estrutura
+  action: Cadastrar em Pessoas os administradores da própria estrutura de anúncios
+  required_inputs:
+  - Tela Usuários > Pessoas
+  - Identificação da(s) pessoa(s) a administrar junto
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0111
+  - EV-0112
+  step_id: S-0038
+  segment_ids:
+  - SEG-012
+  workflow_id: WF-0012
+  order_key: 788
+  origin_class: SOURCE_EXPLICIT
+- name: Revisar páginas na seção Contas
+  action: Abrir a seção 'Contas' do Gerenciador para visualizar as páginas que você tem e fazer alterações
+    nelas
+  required_inputs:
+  - Acesso ao Gerenciador
+  - Páginas existentes
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0116
+  - EV-0117
+  step_id: S-0039
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 826
+  origin_class: SOURCE_EXPLICIT
+- name: Revisar e criar contas de anúncio
+  action: Na área de contas, visualizar as contas de anúncio existentes e, se necessário, criar uma nova
+    conta de anúncio por ali
+  required_inputs:
+  - Acesso à área de contas
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0118
+  - EV-0119
+  step_id: S-0040
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 831
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar perfis de WhatsApp conectados
+  action: Na área de contas, verificar os perfis do WhatsApp conectados, que servem para falar com as
+    pessoas
+  required_inputs:
+  - Perfis de WhatsApp conectados
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0120
+  - EV-0121
+  step_id: S-0041
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 842
+  origin_class: SOURCE_EXPLICIT
+- name: Verificar contas do Instagram
+  action: Na área de contas, acessar as contas do Instagram disponíveis
+  required_inputs:
+  - Contas do Instagram
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0122
+  step_id: S-0042
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 846
+  origin_class: SOURCE_EXPLICIT
+- name: Localizar pixels em fonte de dados
+  action: Acessar a seção de pixel / fonte de dados para ver os pixels, item importante para quem quer
+    vender online
+  required_inputs:
+  - Acesso à seção fonte de dados
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0123
+  - EV-0124
+  step_id: S-0043
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 846
+  origin_class: SOURCE_EXPLICIT
+- name: Explorar a ferramenta e continuar estudando
+  action: Entrar na ferramenta, olhar com calma e continuar estudando os conteúdos do canal para aprender
+    a criar página e criar conta de anúncio
+  required_inputs:
+  - Acesso à ferramenta
+  - Conteúdos do canal
+  missing_input_action: UNDEFINED
+  iteration_limit: UNDEFINED
+  autonomy: UNDEFINED
+  evidence_ids:
+  - EV-0129
+  - EV-0130
+  step_id: S-0044
+  segment_ids:
+  - SEG-013
+  workflow_id: WF-0012
+  order_key: 871
+  origin_class: SOURCE_EXPLICIT

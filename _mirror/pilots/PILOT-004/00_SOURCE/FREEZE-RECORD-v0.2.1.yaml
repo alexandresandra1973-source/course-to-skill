@@ -1,0 +1,164 @@
+artifact_id: COMPILER-V2-FREEZE-RECORD-v0.2.1
+compiler_version: compiler-v2/0.2.1-frozen
+frozen_at_utc: '2026-08-14T03:31:08.615848+00:00'
+frozen_by_machine: bot-04 (MacBook Pro M4 Max, macOS 26.5.2, arm64)
+python: 3.12.13 (~/venv-mtx)
+ADITIVO_NAO_MUTACAO:
+  regra: emenda por aditivo, nunca mutacao
+  original_intacto: FREEZE-RECORD.yaml (0.2.0-frozen) nao foi alterado, sobrescrito nem movido; este arquivo
+    fica AO LADO
+  sha256_do_original: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+referencia_0_2_0:
+  compiler_version: compiler-v2/0.2.0-frozen
+  frozen_at_utc: '2026-08-12T01:40:24+00:00'
+  frozen_set_sha256: 595b81c8f93bdf1c500122f13058fd11f1347f979205fce94ce845f681ec3c6d
+  arquivos: 15
+  adr:
+    found: true
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  base_prompt_release_sha256: d6205a8870044453d1c0354a927234f33937c0a4ada0e76868ac50754c87edbf
+divergencia_que_motivou_o_re_freeze:
+  documento: pilots/PILOT-004/00_SOURCE/COMPILER-V2-FREEZE-DIVERGENCE.md
+  resumo: o 0.2.0 selou 15 arquivos e deixou de fora ctsc2/extractors/ — justamente o componente que chama
+    o modelo no PASS 2. Alem disso 4 arquivos de canary/ foram ampliados ~1h15 apos o freeze, trazendo
+    o caso C6, que e exatamente a cobertura do extractor.
+  o_que_o_v0_2_1_corrige:
+  - sela ctsc2/extractors/__init__.py e claude_extractor.py
+  - sela o estado ATUAL de canary/ (6 casos, com C6)
+  - registra placar de canario produzido NESTA maquina, sem herdar o antigo
+canary:
+  HERDADO: false
+  nota: placar produzido no bot-04; o suite_passed do 0.2.0 NAO foi herdado
+  executado_em_utc: '2026-08-14T03:31:08.616073+00:00'
+  executado_em_maquina: bot-04
+  executado_sobre: copia local conferida byte-a-byte (18/18) — nunca no Drive
+  regra_de_poder: 'cada caso roda 2x: real TEM de passar, mutante TEM de falhar'
+  suite_passed: true
+  casos_totais: 6
+  casos_aprovados: 6
+  todos_com_poder_real: true
+  placar:
+  - case: C1_boundary_distinct
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  - case: C2_true_duplicate
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  - case: C3_zero_yield_visible
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  - case: C4_below_threshold_rescans
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  - case: C5_above_threshold_stops
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  - case: C6_quote_normalization
+    passed: true
+    real_ok: true
+    mutante_falhou_como_exigido: true
+  resultado_bruto: pilots/PILOT-004/00_SOURCE/canary-bot04-PASSED-20260814.json
+dependencia_externa_cts:
+  instalada_em: /Users/alexandresandra/course-to-skill-claude/cts/
+  origem: publicada pela Lenovo no Drive em Course-to-Skill-Claude/cts/
+  manifesto_lenovo: CTS-HASHES-EXT4-LENOVO-20260813.txt
+  conferencia_a_contra_lenovo: 16/16 arquivos conferem, 0 divergentes, 0 ausentes
+  conferencia_b_contra_pinos_p001v2:
+    cts/coverage.py:
+      pino: ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b
+      status: CONFERE
+    cts/spans.py:
+      pino: 7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74
+      status: CONFERE
+  proveniencia: CONFIRMADA — fecha o resguardo do caminho de Mac levantado no R3
+  reconferido_apos_instalacao: true
+R1_extractors:
+  veredito: R1_ABERTO_SEM_CONTRAPARTE
+  motivo: 'EXTRACTORS-HASHES-EXT4-LENOVO-20260813.txt veio VAZIO — resultado final da Lenovo: nem pasta
+    extractors/ nem claude_extractor*.py existem la. Varredura em pilots/PILOT-003, PILOT-003-v2 e docs/
+    nao achou nenhum artefato do P003 que pine o hash do extractor.'
+  sha256_do_extractor_selado_aqui: bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c
+  consequencia: a copia do Drive e a unica em disco e passa a ser a referencia a partir do v0.2.1; nao
+    ha contraparte para conferir retroativamente contra o que rodou o P003
+  nao_bloqueia: canario, v0.2.1 e PASS 1+2 seguem, por decisao do Alexandre
+inventory_set_sha256: cc988a6896dff35c644fb3ef1f1eb95339d842a2ac9cacb148647c124acc2835
+arquivos_selados: 17
+resumo:
+  identicos_ao_0_2_0: 11
+  alterados_apos_0_2_0: 4
+  ausentes_do_0_2_0: 2
+files:
+- path: README.md
+  sha256: c448246ff67f59e643469835dbc7ee987672793e205c35f60100a2d68bfefee9
+  bytes: 2231
+  status_vs_0_2_0: IDENTICO
+- path: canary/canary-results.json
+  sha256: 68917b69b7014dc0d83f63e5d8195c7ebe004d731f1939482647aa2e2f8ef6fd
+  bytes: 2303
+  status_vs_0_2_0: ALTERADO_APOS_0.2.0
+- path: canary/fixtures.py
+  sha256: 786f4230fa22f4c0ae29cdc862f4cb2c062c89f58f34317c06f5eb57b71214d8
+  bytes: 6716
+  status_vs_0_2_0: ALTERADO_APOS_0.2.0
+- path: canary/mutants.py
+  sha256: 4d070c7545e16a6d6c47f5d737ede7928420c21cc6d37c6b593a0e6e3bf4fac4
+  bytes: 7948
+  status_vs_0_2_0: ALTERADO_APOS_0.2.0
+- path: canary/run_canary.py
+  sha256: f97e6f64c4e2e057ee6bd75d8293101b0a6056dddaa9b4c022086cbff96fa397
+  bytes: 9492
+  status_vs_0_2_0: ALTERADO_APOS_0.2.0
+- path: ctsc2/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/coverage_gate.py
+  sha256: fd16ee3f6782f3b10eb8e2087169999bc6c9f528a10040e962f931274905ef1c
+  bytes: 7029
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/dedup.py
+  sha256: 527d04013bb470bf7cecc655598bcafbe7f7f70e474761d8f95facbdad1aa0df
+  bytes: 3866
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/extraction.py
+  sha256: c472f5f918d03e39b9d673218c48978dbd5f8f31a53ad5072855c27c664e3ee1
+  bytes: 5812
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/extractors/__init__.py
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  bytes: 0
+  status_vs_0_2_0: AUSENTE_DO_0.2.0
+- path: ctsc2/extractors/claude_extractor.py
+  sha256: bd17ca4147d8ee7dc68cc2969e0132b7d4d5ca11403083c6537b019d2b09db5c
+  bytes: 18139
+  status_vs_0_2_0: AUSENTE_DO_0.2.0
+- path: ctsc2/manifest.py
+  sha256: 6d206cb556d7af978d68ca264b00093dcc37f6c4f278c3bef087bb624f48ed91
+  bytes: 5537
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/model.py
+  sha256: 9d9edcce4159a7ceb42dccec50d41ac2c631cd048d23ff3b1e607595898e55e5
+  bytes: 3811
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/pipeline.py
+  sha256: f22dcae86197e7b0ef2eaf758eef333b236374cdaa521086e167b96dc5afddb3
+  bytes: 3425
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/temporal_map.py
+  sha256: aa76c52ac8117a0ec6372f532a381bfaa950d1fd9ed01b45fcb4ca18a7f8273a
+  bytes: 3168
+  status_vs_0_2_0: IDENTICO
+- path: ctsc2/thresholds.py
+  sha256: 344a40edcf6a441b012b29a5d375c17caef430f4b0df978e7e451fb6f97f0942
+  bytes: 4656
+  status_vs_0_2_0: IDENTICO
+- path: prompts/lesson-analyzer-v2.md
+  sha256: b6cb365cafee8ce4248e0f8c8a79d587af44a1b6fa79f7381635e4d10a5cfed1
+  bytes: 5496
+  status_vs_0_2_0: IDENTICO

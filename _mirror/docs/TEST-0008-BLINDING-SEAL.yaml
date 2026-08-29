@@ -1,0 +1,13 @@
+schema_version: 0.2.0
+artifact_id: TEST-0008-BLINDING-SEAL
+artifact_status: SEALED_DRAFT
+NAO_PARA_O_JUIZ: true
+aviso: Este arquivo revela a ordem. Nunca entra no pacote do juiz.
+nonce_hex: ad11cdad9292eb30627378acbe7ccf558c3bf570b9bc431e483a8ce38c25e3f3
+commitment: 270136e19e452930e64f1e3ae0ad4e298cc8ddcbe5e13499dcb99ba5df74435b
+permutation_index: 3
+slot_to_condition:
+  A: SUMMARY_AS_SKILL
+  B: SUMMARY_AS_SUMMARY
+  C: FULL_SKILL
+reveal_when: na abertura, depois de as notas do juiz estarem seladas

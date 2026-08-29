@@ -1,0 +1,359 @@
+schema_version: 0.2.0
+artifact_id: PILOT-001-COMPILATION-MANIFEST
+pilot_id: PILOT-001
+compiler_version: compiler-v2/0.2.0-frozen
+compiler_architecture: PASS 1 → temporal-map.yaml persistido e hasheado → PASS 2[SEG-001] … PASS 2[SEG-N]
+  → portão de cobertura/saturação → revarredura dirigida se necessário
+input:
+  l0_sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+pass1:
+  segment_count: 9
+  temporal_map_path: temporal-map.yaml
+  temporal_map_sha256: 845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60
+  persisted_before_pass2: true
+  historical_reference_segments: 9
+  comparability_band_inclusive:
+  - 7
+  - 11
+  in_comparability_band: true
+  variance_flag: null
+pass2:
+  execution_mode: PER_SEGMENT
+  monolithic_sweep_used: false
+  invocations: 9
+  evidence_from_pass2: 149
+  segments_with_zero_yield: []
+  zero_yield_count: 0
+  min_yield: 8
+  max_yield: 30
+  per_segment_yield:
+  - segment_id: SEG-001
+    start_s: 0
+    end_s: 60
+    duration_s: 60
+    evidence_count: 10
+    evidence_ids:
+    - EV-0001
+    - EV-0002
+    - EV-0003
+    - EV-0004
+    - EV-0005
+    - EV-0006
+    - EV-0007
+    - EV-0008
+    - EV-0009
+    - EV-0010
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-002
+    start_s: 60
+    end_s: 135
+    duration_s: 75
+    evidence_count: 18
+    evidence_ids:
+    - EV-0011
+    - EV-0012
+    - EV-0013
+    - EV-0014
+    - EV-0015
+    - EV-0016
+    - EV-0017
+    - EV-0018
+    - EV-0019
+    - EV-0020
+    - EV-0021
+    - EV-0022
+    - EV-0023
+    - EV-0024
+    - EV-0025
+    - EV-0026
+    - EV-0027
+    - EV-0028
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-003
+    start_s: 135
+    end_s: 204
+    duration_s: 69
+    evidence_count: 13
+    evidence_ids:
+    - EV-0029
+    - EV-0030
+    - EV-0031
+    - EV-0032
+    - EV-0033
+    - EV-0034
+    - EV-0035
+    - EV-0036
+    - EV-0037
+    - EV-0038
+    - EV-0039
+    - EV-0040
+    - EV-0041
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-004
+    start_s: 204
+    end_s: 349
+    duration_s: 145
+    evidence_count: 19
+    evidence_ids:
+    - EV-0042
+    - EV-0043
+    - EV-0044
+    - EV-0045
+    - EV-0046
+    - EV-0047
+    - EV-0048
+    - EV-0049
+    - EV-0050
+    - EV-0051
+    - EV-0052
+    - EV-0053
+    - EV-0054
+    - EV-0055
+    - EV-0056
+    - EV-0057
+    - EV-0058
+    - EV-0059
+    - EV-0060
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-005
+    start_s: 349
+    end_s: 439
+    duration_s: 90
+    evidence_count: 18
+    evidence_ids:
+    - EV-0061
+    - EV-0062
+    - EV-0063
+    - EV-0064
+    - EV-0065
+    - EV-0066
+    - EV-0067
+    - EV-0068
+    - EV-0069
+    - EV-0070
+    - EV-0071
+    - EV-0072
+    - EV-0073
+    - EV-0074
+    - EV-0075
+    - EV-0076
+    - EV-0077
+    - EV-0078
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-006
+    start_s: 439
+    end_s: 548
+    duration_s: 109
+    evidence_count: 18
+    evidence_ids:
+    - EV-0079
+    - EV-0080
+    - EV-0081
+    - EV-0082
+    - EV-0083
+    - EV-0084
+    - EV-0085
+    - EV-0086
+    - EV-0087
+    - EV-0088
+    - EV-0089
+    - EV-0090
+    - EV-0091
+    - EV-0092
+    - EV-0093
+    - EV-0094
+    - EV-0095
+    - EV-0096
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-007
+    start_s: 548
+    end_s: 743
+    duration_s: 195
+    evidence_count: 30
+    evidence_ids:
+    - EV-0097
+    - EV-0098
+    - EV-0099
+    - EV-0100
+    - EV-0101
+    - EV-0102
+    - EV-0103
+    - EV-0104
+    - EV-0105
+    - EV-0106
+    - EV-0107
+    - EV-0108
+    - EV-0109
+    - EV-0110
+    - EV-0111
+    - EV-0112
+    - EV-0113
+    - EV-0114
+    - EV-0115
+    - EV-0116
+    - EV-0117
+    - EV-0118
+    - EV-0119
+    - EV-0120
+    - EV-0121
+    - EV-0122
+    - EV-0123
+    - EV-0124
+    - EV-0125
+    - EV-0126
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-008
+    start_s: 743
+    end_s: 825
+    duration_s: 82
+    evidence_count: 15
+    evidence_ids:
+    - EV-0127
+    - EV-0128
+    - EV-0129
+    - EV-0130
+    - EV-0131
+    - EV-0132
+    - EV-0133
+    - EV-0134
+    - EV-0135
+    - EV-0136
+    - EV-0137
+    - EV-0138
+    - EV-0139
+    - EV-0140
+    - EV-0141
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+  - segment_id: SEG-009
+    start_s: 825
+    end_s: 885
+    duration_s: 60
+    evidence_count: 8
+    evidence_ids:
+    - EV-0142
+    - EV-0143
+    - EV-0144
+    - EV-0145
+    - EV-0146
+    - EV-0147
+    - EV-0148
+    - EV-0149
+    extraction_status: OK
+    rescanned: false
+    rescan_added: 0
+    iteration: 0
+    error: ''
+deduplication:
+  rule: IDENTICAL_NORMALIZED_CLAIM
+  similarity_merging_used: false
+  rationale: Similaridade fundiria vizinhas distintas na fronteira entre segmentos; identidade exata resolve
+    duplicata de revarredura sem esse dano.
+  merged_after_pass2: 0
+  merged_inside_gate: 0
+  merged_after_rescan: 0
+  merges: []
+  adjacent_distinct_pairs_preserved: 8
+coverage_gate:
+  metric:
+    name: L0_UNION_SPAN_COVERAGE
+    numerator: união dos intervalos de tempo citados pelas evidências, mesclada por `cts.coverage.merge`
+    denominator: 'extensão do corpus de treino: duração nominal da fonte menos as janelas de held-out
+      declaradas em lock'
+    excluded_from_both: janelas de held-out
+    module: cts/coverage.py
+    functions: &id001
+    - merge
+    - complement
+    - Citation
+    - Block
+  metric_module_sha256:
+    cts/coverage.py: ea58c05efd778cb906ac4fee7669d00b7029a72e993f8077fc36231a8f97723b
+    cts/spans.py: 7bcdcde2c85e2f814ec9d80b2c5aba38c1905ce17c7001ca35a3b3a42d18bb74
+  extent_s: 905
+  covered_s: 820
+  l0_coverage: 0.906077
+  l0_coverage_pct: 90.61
+  threshold: 0.735
+  comparison: strictly_greater
+  threshold_frozen_before_run: true
+  result: SATISFIED
+  stop_reason: THRESHOLD_SATISFIED_WITHOUT_RESCAN
+  rescan_iterations: 0
+  max_rescan_iterations: 3
+  iterations: []
+evidence:
+  total: 149
+  aggregate_yield_per_segment: 16.5556
+  historical_reference_total: 44
+  historical_reference_yield: 4.89
+  yield_comparison_valid: true
+  yield_comparison_note: Comparação de yield contra 4,89 só vale com PASS 1 dentro de 7–11 segmentos (§12).
+    Fora da banda, yield é diagnóstico.
+no_quota_declaration:
+  count_target: null
+  min_per_segment: null
+  proportional_to_time: false
+  statement: Nenhum alvo de contagem existe nesta implementação. Os ~200 da ADR são diagnóstico, nunca
+    cota (§10).
+frozen_thresholds:
+  adr_id: ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE
+  adr_sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  coverage_floor: 0.735
+  coverage_comparison: strictly_greater
+  pass1_band_inclusive:
+  - 7
+  - 11
+  max_rescan_iterations: 3
+  stop_on_zero_progress: true
+  coverage_metric:
+    name: L0_UNION_SPAN_COVERAGE
+    numerator: união dos intervalos de tempo citados pelas evidências, mesclada por `cts.coverage.merge`
+    denominator: 'extensão do corpus de treino: duração nominal da fonte menos as janelas de held-out
+      declaradas em lock'
+    excluded_from_both: janelas de held-out
+    module: cts/coverage.py
+    functions: *id001
+  historical_reference:
+    pilot: PILOT-001
+    compiler_state: old_global_pass2
+    segments: 9
+    evidence: 44
+    coverage: 0.735
+    yield_per_segment: 4.89
+  forbidden:
+  - alvo de contagem total de evidências
+  - mínimo de evidências por segmento
+  - cota de densidade
+  - geração proporcional ao tempo

@@ -1,0 +1,487 @@
+{
+  "destino_local": "/Users/alexandresandra/p004-work",
+  "destino_drive": "/Users/alexandresandra/Library/CloudStorage/GoogleDrive-alexandresandra1973@gmail.com/Meu Drive/Chat GPT/Course-to-Skill-Claude/pilots/PILOT-004",
+  "arquivos": [
+    {
+      "path": "00_SOURCE/L0-transcript.txt",
+      "sha256_local": "607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5",
+      "sha256_drive": "607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5",
+      "bytes_local": 19624,
+      "bytes_drive": 19624,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/SOURCE-MANIFEST-PILOT-004.yaml",
+      "sha256_local": "7abff66d509ab080f6f6001e46d54ea3b07af8b2fdd81c40b4687ae3089ef250",
+      "sha256_drive": "7abff66d509ab080f6f6001e46d54ea3b07af8b2fdd81c40b4687ae3089ef250",
+      "bytes_local": 5232,
+      "bytes_drive": 5232,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/l0-seal.json",
+      "sha256_local": "1ef38d94edb0eaa45b88691f6e4548bbf602029be9e3181bc3311af85e8343ad",
+      "sha256_drive": "1ef38d94edb0eaa45b88691f6e4548bbf602029be9e3181bc3311af85e8343ad",
+      "bytes_local": 504,
+      "bytes_drive": 504,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/compiler-v2-hash-check.json",
+      "sha256_local": "26b1b6f5c7e1cbd4c42aa22bd213d1ee4ddb70f2cde804fc7d74239cc4c3876f",
+      "sha256_drive": "26b1b6f5c7e1cbd4c42aa22bd213d1ee4ddb70f2cde804fc7d74239cc4c3876f",
+      "bytes_local": 986,
+      "bytes_drive": 986,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/COMPILER-V2-FREEZE-DIVERGENCE.md",
+      "sha256_local": "6595eeff442938c5ec6239713a7e3837253a1b3c1d7078fffaf1aae5292365ed",
+      "sha256_drive": "6595eeff442938c5ec6239713a7e3837253a1b3c1d7078fffaf1aae5292365ed",
+      "bytes_local": 2864,
+      "bytes_drive": 2864,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/PASS-ESTIMATE.md",
+      "sha256_local": "60815e7ad521c681761f29706bcafd3b8b96edfea65487a6ee3e5a02711c32a4",
+      "sha256_drive": "60815e7ad521c681761f29706bcafd3b8b96edfea65487a6ee3e5a02711c32a4",
+      "bytes_local": 2030,
+      "bytes_drive": 2030,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/COMPILER-V2-INVENTORY-bot04.yaml",
+      "sha256_local": "6d62d55c8fb6c8484dcd285b90e5641f5244e25e42ae53cd24dd6e2c2e7bf16b",
+      "sha256_drive": "6d62d55c8fb6c8484dcd285b90e5641f5244e25e42ae53cd24dd6e2c2e7bf16b",
+      "bytes_local": 5878,
+      "bytes_drive": 5878,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/CANARY-BOT04-BLOCKED.md",
+      "sha256_local": "aa99f3d52aeae13e0718e5c0114fadb1219cd2115cd7a178b84a8facf62900d8",
+      "sha256_drive": "aa99f3d52aeae13e0718e5c0114fadb1219cd2115cd7a178b84a8facf62900d8",
+      "bytes_local": 4534,
+      "bytes_drive": 4534,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/canary-bot04-PASSED-20260814.json",
+      "sha256_local": "68917b69b7014dc0d83f63e5d8195c7ebe004d731f1939482647aa2e2f8ef6fd",
+      "sha256_drive": "68917b69b7014dc0d83f63e5d8195c7ebe004d731f1939482647aa2e2f8ef6fd",
+      "bytes_local": 2303,
+      "bytes_drive": 2303,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/FREEZE-RECORD-v0.2.1.yaml",
+      "sha256_local": "4918fa503867239ea26b5ab1b59f2b3900b089e062c1f0eca26e292c66a3631d",
+      "sha256_drive": "4918fa503867239ea26b5ab1b59f2b3900b089e062c1f0eca26e292c66a3631d",
+      "bytes_local": 6896,
+      "bytes_drive": 6896,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/R1-R2-VERIFICATION.json",
+      "sha256_local": "9d9c6faf9135929fa63e6968cbfa40dc93402f1195a09f6816a9b31e632d0807",
+      "sha256_drive": "9d9c6faf9135929fa63e6968cbfa40dc93402f1195a09f6816a9b31e632d0807",
+      "bytes_local": 1457,
+      "bytes_drive": 1457,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/RUNNER-DIFF-DECLARADO.json",
+      "sha256_local": "fdfe06137db3528ed11e7ecdc155d815e7c3374c77e25a6fdcfb3e6638305bb8",
+      "sha256_drive": "fdfe06137db3528ed11e7ecdc155d815e7c3374c77e25a6fdcfb3e6638305bb8",
+      "bytes_local": 5889,
+      "bytes_drive": 5889,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/FREEZE-RECORD-s3-v0.1.0.yaml",
+      "sha256_local": "b2f64851b3ae41deccf4229eeb5a5842172dfa988c30a6d89459c58cfb6fb1e8",
+      "sha256_drive": "b2f64851b3ae41deccf4229eeb5a5842172dfa988c30a6d89459c58cfb6fb1e8",
+      "bytes_local": 5986,
+      "bytes_drive": 5986,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/VOCABULARIO-CENTRAL-ASR.json",
+      "sha256_local": "7d92944d8c5a849631532bb6c20abc4afd26d46e558c0e6d5c356e1772aed1b8",
+      "sha256_drive": "7d92944d8c5a849631532bb6c20abc4afd26d46e558c0e6d5c356e1772aed1b8",
+      "bytes_local": 784,
+      "bytes_drive": 784,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/GAP-CONTROLE-POSITIVO.json",
+      "sha256_local": "c3a5680001c4580326242a82131517337c3778c77460ae2d47e384bcae5a68bd",
+      "sha256_drive": "c3a5680001c4580326242a82131517337c3778c77460ae2d47e384bcae5a68bd",
+      "bytes_local": 6650,
+      "bytes_drive": 6650,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/T7-BLOCO3-RESULTADO.md",
+      "sha256_local": "d97697f2804209db3d4352e79ceaa804050a69a8257a48e0e310cd538228660a",
+      "sha256_drive": "d97697f2804209db3d4352e79ceaa804050a69a8257a48e0e310cd538228660a",
+      "bytes_local": 6522,
+      "bytes_drive": 6522,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/T8-BLOCO4-PRELIMINAR.md",
+      "sha256_local": "80f16d0024a4ce7bb749e87411ea13498f7b0d1209b68e5cc8036829bea03957",
+      "sha256_drive": "80f16d0024a4ce7bb749e87411ea13498f7b0d1209b68e5cc8036829bea03957",
+      "bytes_local": 4760,
+      "bytes_drive": 4760,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/T8-MTX-APLICACAO-VERBATIM.md",
+      "sha256_local": "da4affe5c410fe64def84c858a2ea4b182134a4ed4e636e11558507d19407a91",
+      "sha256_drive": "da4affe5c410fe64def84c858a2ea4b182134a4ed4e636e11558507d19407a91",
+      "bytes_local": 16038,
+      "bytes_drive": 16038,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/T8-MTX-RAW.json",
+      "sha256_local": "a300de794501a4fb43734cdb813c9caf90b6e20fb89302d104814e4a63d60862",
+      "sha256_drive": "a300de794501a4fb43734cdb813c9caf90b6e20fb89302d104814e4a63d60862",
+      "bytes_local": 15979,
+      "bytes_drive": 15979,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/SKILL.md",
+      "sha256_local": "b7ea529735ca60defe7c5c66279ef794d12cc859c411e4b4cfb01f838903fc4d",
+      "sha256_drive": "b7ea529735ca60defe7c5c66279ef794d12cc859c411e4b4cfb01f838903fc4d",
+      "bytes_local": 2306,
+      "bytes_drive": 2306,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/manifest.yaml",
+      "sha256_local": "3f8c57080f8ca854bb137d5afc59005378ec8d453e7a8582ad2b881fbeae9fc2",
+      "sha256_drive": "3f8c57080f8ca854bb137d5afc59005378ec8d453e7a8582ad2b881fbeae9fc2",
+      "bytes_local": 706,
+      "bytes_drive": 706,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/COMPILATION_MANIFEST.yaml",
+      "sha256_local": "88f6cdcc75ef32b43ff7f937a0d847cd58d36d7deae306aca961a9925e817517",
+      "sha256_drive": "88f6cdcc75ef32b43ff7f937a0d847cd58d36d7deae306aca961a9925e817517",
+      "bytes_local": 1530,
+      "bytes_drive": 1530,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/COURSE-GAP-REPORT.md",
+      "sha256_local": "c2649f91bfdf543cad3ccdac5ea6779fd5c9cf0f259c8047e0d048a615d9aaf2",
+      "sha256_drive": "c2649f91bfdf543cad3ccdac5ea6779fd5c9cf0f259c8047e0d048a615d9aaf2",
+      "bytes_local": 4818,
+      "bytes_drive": 4818,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/knowledge/runtime-policy.yaml",
+      "sha256_local": "8b061f4567b0881e780f658cc55e001d3d4b5ce6dc8fcd25ead33b3edfe8598b",
+      "sha256_drive": "8b061f4567b0881e780f658cc55e001d3d4b5ce6dc8fcd25ead33b3edfe8598b",
+      "bytes_local": 3767,
+      "bytes_drive": 3767,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/knowledge/decision-rules.yaml",
+      "sha256_local": "594bdd82691601f547da598d04b42870f7eda9bd8cd358e82d9419648600dec6",
+      "sha256_drive": "594bdd82691601f547da598d04b42870f7eda9bd8cd358e82d9419648600dec6",
+      "bytes_local": 19561,
+      "bytes_drive": 19561,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "03_SKILL/knowledge/workflows.yaml",
+      "sha256_local": "9cbc4c16c1a584d906fcb0d5cff3ac21a75a3e71f4045ab91c8d64ea09be5ad6",
+      "sha256_drive": "9cbc4c16c1a584d906fcb0d5cff3ac21a75a3e71f4045ab91c8d64ea09be5ad6",
+      "bytes_local": 22676,
+      "bytes_drive": 22676,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/CANARY-FAILCLOSED-bot04-20260815-VERMELHO.md",
+      "sha256_local": "245c917278f434f58ae8c6aac3ae345666b57112ebe8168deb9b689f29fbd656",
+      "sha256_drive": "245c917278f434f58ae8c6aac3ae345666b57112ebe8168deb9b689f29fbd656",
+      "bytes_local": 3596,
+      "bytes_drive": 3596,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/CANARY-FAILCLOSED-bot04-20260815.json",
+      "sha256_local": "100f6422926ff2e04b188b856378fcd74977e34092ec2a290d36bb5bbaf6213c",
+      "sha256_drive": "100f6422926ff2e04b188b856378fcd74977e34092ec2a290d36bb5bbaf6213c",
+      "bytes_local": 5997,
+      "bytes_drive": 5997,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/FREEZE-RECORD-s3-v0.1.1.yaml",
+      "sha256_local": "c43422b606a55f7bd33dc8da1f8ac684fce2d4c478943012e957a8c78cbe965c",
+      "sha256_drive": "c43422b606a55f7bd33dc8da1f8ac684fce2d4c478943012e957a8c78cbe965c",
+      "bytes_local": 5846,
+      "bytes_drive": 5846,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/FREEZE-RECORD-v0.2.2.yaml",
+      "sha256_local": "bc6d6dac86ab3cc69bb5f8882ddeacc89dabe7f0459a0a5750216bc0f2fe2ab1",
+      "sha256_drive": "bc6d6dac86ab3cc69bb5f8882ddeacc89dabe7f0459a0a5750216bc0f2fe2ab1",
+      "bytes_local": 4914,
+      "bytes_drive": 4914,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/CANARY-FAILCLOSED-bot04-20260815-VERDE.json",
+      "sha256_local": "1a1b0761a9b886e63edf320c7f6dabbccd6fe489d7f91ea2a494d935312bec8f",
+      "sha256_drive": "1a1b0761a9b886e63edf320c7f6dabbccd6fe489d7f91ea2a494d935312bec8f",
+      "bytes_local": 6217,
+      "bytes_drive": 6217,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/run_failclosed_canary_v0.1.1-bot04.py",
+      "sha256_local": "8332bf1e8a1e57e3b2ed68b54bb1ee378b0b7daf3eb3faf749bd32a1bb7946d3",
+      "sha256_drive": "8332bf1e8a1e57e3b2ed68b54bb1ee378b0b7daf3eb3faf749bd32a1bb7946d3",
+      "bytes_local": 14142,
+      "bytes_drive": 14142,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/runners-p003-LEIA-ME.md",
+      "sha256_local": "d57335bf99adaf77aff104c54611338ca97b1aea70024dd64e246829ec62276a",
+      "sha256_drive": "d57335bf99adaf77aff104c54611338ca97b1aea70024dd64e246829ec62276a",
+      "bytes_local": 2106,
+      "bytes_drive": 2106,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/MODEL-SWAP-v0.2.2.json",
+      "sha256_local": "cbbfdcd6c4ae73f5ab82001ec48f088fffb23da3c551a6979d675bb1853f8573",
+      "sha256_drive": "cbbfdcd6c4ae73f5ab82001ec48f088fffb23da3c551a6979d675bb1853f8573",
+      "bytes_local": 1442,
+      "bytes_drive": 1442,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/KIT-FECHAMENTO-20260814.md",
+      "sha256_local": "74c686c474ef6bc7ac8d0e241c6cf15a5ad881795b34d8e4357269a029855a90",
+      "sha256_drive": "74c686c474ef6bc7ac8d0e241c6cf15a5ad881795b34d8e4357269a029855a90",
+      "bytes_local": 18693,
+      "bytes_drive": 18693,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/PILOT-004-VEREDITO-FINAL.md",
+      "sha256_local": "ad3beaf848a4b43e3a72838bd5436fd9a9b2568237b1eb88155ec1c6bb33dcda",
+      "sha256_drive": "ad3beaf848a4b43e3a72838bd5436fd9a9b2568237b1eb88155ec1c6bb33dcda",
+      "bytes_local": 11148,
+      "bytes_drive": 11148,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/T1-BLOCO3-FALHOU.md",
+      "sha256_local": "2e99d307b0c64c36ef132897d0e6eb5aa94777eacd426f13d1af447285f91bfb",
+      "sha256_drive": "2e99d307b0c64c36ef132897d0e6eb5aa94777eacd426f13d1af447285f91bfb",
+      "bytes_local": 3877,
+      "bytes_drive": 3877,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/M4C-BASELINE-EN-vs-PT.md",
+      "sha256_local": "f70f994780309cc8abe92a7ec353c80f314ec651879057d196b1dfc48aec2840",
+      "sha256_drive": "f70f994780309cc8abe92a7ec353c80f314ec651879057d196b1dfc48aec2840",
+      "bytes_local": 4243,
+      "bytes_drive": 4243,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/M4C-BASELINE-EN-vs-PT.json",
+      "sha256_local": "94b69004010162a966b4ddaf7ce186432a7e8e98d0235236cc10ee4ec07eeb32",
+      "sha256_drive": "94b69004010162a966b4ddaf7ce186432a7e8e98d0235236cc10ee4ec07eeb32",
+      "bytes_local": 1676,
+      "bytes_drive": 1676,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/RELATORIO-NOTURNO-20260814.md",
+      "sha256_local": "c75ddf73f19d10da357c8bfed1b7f72abf5cd28dbf9216539722faa78d4b0854",
+      "sha256_drive": "c75ddf73f19d10da357c8bfed1b7f72abf5cd28dbf9216539722faa78d4b0854",
+      "bytes_local": 13527,
+      "bytes_drive": 13527,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "p001v2-remac/00_SOURCE/SOURCE-MANIFEST-PILOT-004.yaml",
+      "sha256_local": "870e648c2060698a98793a4086b5055803e8705f69d00e1aff4cf8ab02586854",
+      "sha256_drive": "870e648c2060698a98793a4086b5055803e8705f69d00e1aff4cf8ab02586854",
+      "bytes_local": 472,
+      "bytes_drive": 472,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "p001v2-remac/01_PASS1/temporal-map.yaml",
+      "sha256_local": "845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60",
+      "sha256_drive": "845cea7df28d1d697cea904f747d0642f937295ab1a67bd5c83e84e88327bf60",
+      "bytes_local": 2297,
+      "bytes_drive": 2297,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "p001v2-remac/02_PASS2/EVIDENCE.jsonl",
+      "sha256_local": "680c74e6d182807931bc4cc5bb3ee91144a2c24cc2cf33f18f6f508fd737e1f8",
+      "sha256_drive": "680c74e6d182807931bc4cc5bb3ee91144a2c24cc2cf33f18f6f508fd737e1f8",
+      "bytes_local": 99433,
+      "bytes_drive": 99433,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "p001v2-remac/02_PASS2/COMPILATION_MANIFEST.yaml",
+      "sha256_local": "6483c9e4bca5fb905b7f1d14251f86adfa817d593b8cbb77ff665d50823f3a89",
+      "sha256_drive": "6483c9e4bca5fb905b7f1d14251f86adfa817d593b8cbb77ff665d50823f3a89",
+      "bytes_local": 795,
+      "bytes_drive": 795,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "p001v2-remac/02_PASS2/pass2-checkpoint.jsonl",
+      "sha256_local": "a453cdfcfb2405296f53d97fceb177f2fdf25dbceb16b23e0e82553e2944b452",
+      "sha256_drive": "a453cdfcfb2405296f53d97fceb177f2fdf25dbceb16b23e0e82553e2944b452",
+      "bytes_local": 100486,
+      "bytes_drive": 100486,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "runners/p001v2remac_pass2_ckpt.py",
+      "sha256_local": "25e179129927ffd3b69fa5b1730030cde62f9184fe4bfeeaf6a36657d0ed29e9",
+      "sha256_drive": "25e179129927ffd3b69fa5b1730030cde62f9184fe4bfeeaf6a36657d0ed29e9",
+      "bytes_local": 8675,
+      "bytes_drive": 8675,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/REGUA-M1-M4-RESULTADO.md",
+      "sha256_local": "d20e8f53094dada88c84280670c95e48b34fa7271723c86217d83df96bf4cfca",
+      "sha256_drive": "d20e8f53094dada88c84280670c95e48b34fa7271723c86217d83df96bf4cfca",
+      "bytes_local": 6311,
+      "bytes_drive": 6311,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/REGUA-M1-M4-RESULTADO.json",
+      "sha256_local": "58bdec8d7f8a9baa32bc4e3e21b2f75547d67986e143d003d241ee0391b0e77d",
+      "sha256_drive": "58bdec8d7f8a9baa32bc4e3e21b2f75547d67986e143d003d241ee0391b0e77d",
+      "bytes_local": 23766,
+      "bytes_drive": 23766,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "01_PASS1/temporal-map.yaml",
+      "sha256_local": "02562ca80bc367042fccfc1bd3c98c29770e19900cee912a13ca02bc33187e49",
+      "sha256_drive": "02562ca80bc367042fccfc1bd3c98c29770e19900cee912a13ca02bc33187e49",
+      "bytes_local": 3537,
+      "bytes_drive": 3537,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "01_PASS1/p004-pass1-calls.json",
+      "sha256_local": "833ebe8669392168975a5ca9659791d7a4f6cd707a2f54fd8e362f521df0cd5d",
+      "sha256_drive": "833ebe8669392168975a5ca9659791d7a4f6cd707a2f54fd8e362f521df0cd5d",
+      "bytes_local": 212,
+      "bytes_drive": 212,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "02_PASS2/EVIDENCE.jsonl",
+      "sha256_local": "f5951b32192c50bfede98fa911ba7829a2c5025bdfd4f7e96d4624167e10fd62",
+      "sha256_drive": "f5951b32192c50bfede98fa911ba7829a2c5025bdfd4f7e96d4624167e10fd62",
+      "bytes_local": 79376,
+      "bytes_drive": 79376,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "02_PASS2/COMPILATION_MANIFEST.yaml",
+      "sha256_local": "ff103bc009ca4996d6a31b9a83cb8b9d2866d1d3b41d8a46ed17f440370199e0",
+      "sha256_drive": "ff103bc009ca4996d6a31b9a83cb8b9d2866d1d3b41d8a46ed17f440370199e0",
+      "bytes_local": 788,
+      "bytes_drive": 788,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "02_PASS2/pass2-checkpoint.jsonl",
+      "sha256_local": "7ffbf168279b9f4e76e79e350e5f200f837e9d0c18ab041718c7d341f47533d1",
+      "sha256_drive": "7ffbf168279b9f4e76e79e350e5f200f837e9d0c18ab041718c7d341f47533d1",
+      "bytes_local": 71377,
+      "bytes_drive": 71377,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "runners/p004_pass1.py",
+      "sha256_local": "ec0cc5aa69ee6330cfdb6a38b1c82d1c4eddbcda3605e1b9d5d65a1689f6ec0f",
+      "sha256_drive": "ec0cc5aa69ee6330cfdb6a38b1c82d1c4eddbcda3605e1b9d5d65a1689f6ec0f",
+      "bytes_local": 5897,
+      "bytes_drive": 5897,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "runners/p004_pass2_ckpt.py",
+      "sha256_local": "cde3aeb0f84779558f2c43f13a02a6217a016119712b3709033ca77fc403e197",
+      "sha256_drive": "cde3aeb0f84779558f2c43f13a02a6217a016119712b3709033ca77fc403e197",
+      "bytes_local": 8653,
+      "bytes_drive": 8653,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/REGUA-DO-PAR-DE-IDIOMA.md",
+      "sha256_local": "ca946b4117878e45c745b413c2e20bf3949a9a35f4539148ceb2d7034c7fbca2",
+      "sha256_drive": "ca946b4117878e45c745b413c2e20bf3949a9a35f4539148ceb2d7034c7fbca2",
+      "bytes_local": 4657,
+      "bytes_drive": 4657,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/PENDENCIA-RECONCILIACAO.md",
+      "sha256_local": "06062fde54b9fa08ac582705f01cfc2b508a130d84b0cd2feaed0e1ae16b7294",
+      "sha256_drive": "06062fde54b9fa08ac582705f01cfc2b508a130d84b0cd2feaed0e1ae16b7294",
+      "bytes_local": 5840,
+      "bytes_drive": 5840,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/raw/raw-transcript.json",
+      "sha256_local": "4495a61e0d33652f78737113659c8e4239c9909aa0bb930802a683ccc2988163",
+      "sha256_drive": "4495a61e0d33652f78737113659c8e4239c9909aa0bb930802a683ccc2988163",
+      "bytes_local": 51215,
+      "bytes_drive": 51215,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/raw/available-transcripts.json",
+      "sha256_local": "eec75727b2ca425a0554811f0b5bc521e0703d8dbd5732bfb944f42c21285403",
+      "sha256_drive": "eec75727b2ca425a0554811f0b5bc521e0703d8dbd5732bfb944f42c21285403",
+      "bytes_local": 139,
+      "bytes_drive": 139,
+      "status": "IDENTICO"
+    },
+    {
+      "path": "00_SOURCE/raw/video-meta.info.json",
+      "sha256_local": "4c97071cbdbcea59a7300802cfaf46290f75f2ef8a554049250e051116bcda8a",
+      "sha256_drive": "4c97071cbdbcea59a7300802cfaf46290f75f2ef8a554049250e051116bcda8a",
+      "bytes_local": 548930,
+      "bytes_drive": 548930,
+      "status": "IDENTICO"
+    }
+  ],
+  "veredito": "PUBLICACAO_EM_DOBRO_CONFERIDA"
+}

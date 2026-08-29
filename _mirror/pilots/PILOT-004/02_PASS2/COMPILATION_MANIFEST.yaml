@@ -1,0 +1,28 @@
+pilot_id: PILOT-004
+compiler_version: compiler-v2/0.2.1-frozen
+runner: p004_pass2_ckpt.py — copia de p003_pass2_ckpt.py (sha256 7364ff32…) com diff minimo declarado;
+  checkpoint por segmento, APFS
+input:
+  l0_sha256: 607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5
+  temporal_map_sha256: 02562ca80bc367042fccfc1bd3c98c29770e19900cee912a13ca02bc33187e49
+  extent_s: 903
+  held_out_applied: false
+pass2:
+  execution_mode: PER_SEGMENT
+  invocations: 13
+  segments: 13
+  errors: 0
+  zero_yield_count: 0
+  segments_with_zero_yield: []
+evidence:
+  total: 134
+  aggregate_yield_per_segment: 10.3077
+deduplication:
+  rule: IDENTICAL_NORMALIZED_CLAIM
+  merged: 0
+coverage_gate:
+  covered_s: 769
+  extent_s: 903
+  l0_coverage_pct: 85.16
+  threshold: 0.735
+  result: SATISFIED

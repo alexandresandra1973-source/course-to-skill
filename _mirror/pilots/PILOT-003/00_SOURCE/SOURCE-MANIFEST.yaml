@@ -1,0 +1,32 @@
+schema_version: 0.1.0
+pilot_id: PILOT-003
+artifact_status: SOURCE_SEALED
+sealed_at_utc: '2026-08-12T16:00:45+00:00'
+source:
+  platform: youtube
+  video_id: c6qEURhNsYw
+  title: (2026) Ecommerce Google Ads Free Course (4+ Hours)
+  url: https://www.youtube.com/watch?v=c6qEURhNsYw
+transcript:
+  kind: AUTO_GENERATED_ASR
+  language: en
+  snippets: 8990
+  chars_raw: 334303
+l0:
+  path: L0-transcript.txt
+  sha256: 04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192
+  bytes: 369035
+  marks: 2052
+  mark_every_s: 6
+  duration_s: 13857
+  duration: '3:50:57'
+HELD_OUT:
+  applied: false
+  DIFERENCA_DECLARADA: 'Os PILOT-001 e PILOT-002 tiveram janelas de held-out removidas ANTES da extração,
+    para testar resistência à invenção: se a Skill respondesse sobre território removido, estaria inventando.
+    O PILOT-003 é piloto de USO — a pergunta não é ''a Skill inventa?'', é ''a recomendação bate com a
+    conta real?''. O ground truth é EXTERNO (conta Google Ads viva), não um pedaço escondido da fonte.'
+  consequencia: os casos cegos do PILOT-002 NÃO têm equivalente aqui, e nenhum número deste piloto é comparável
+    aos de resistência à invenção dos outros dois
+  corpus_de_treino_s: 13857
+  corpus_igual_a_fonte_inteira: true

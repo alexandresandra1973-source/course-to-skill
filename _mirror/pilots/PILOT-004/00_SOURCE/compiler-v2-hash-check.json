@@ -1,0 +1,29 @@
+{
+  "checked_at_machine": "bot-04",
+  "root": "/Users/alexandresandra/Library/CloudStorage/GoogleDrive-alexandresandra1973@gmail.com/Meu Drive/Chat GPT/Course-to-Skill-Claude/compiler-v2",
+  "files_in_record": 15,
+  "ok": 11,
+  "divergentes": 4,
+  "ausentes": 0,
+  "detalhes": [
+    {
+      "path": "canary/canary-results.json",
+      "status": "DIVERGENTE local=68917b69b7014dc0 esperado=21114e40832d9680"
+    },
+    {
+      "path": "canary/fixtures.py",
+      "status": "DIVERGENTE local=786f4230fa22f4c0 esperado=240c296a5e02c347"
+    },
+    {
+      "path": "canary/mutants.py",
+      "status": "DIVERGENTE local=4d070c7545e16a6d esperado=0765a0ae0330e532"
+    },
+    {
+      "path": "canary/run_canary.py",
+      "status": "DIVERGENTE local=f97e6f64c4e2e057 esperado=95cc95bf2afa2b67"
+    }
+  ],
+  "compiler_version": "compiler-v2/0.2.0-frozen",
+  "frozen_set_sha256_declarado": "595b81c8f93bdf1c500122f13058fd11f1347f979205fce94ce845f681ec3c6d",
+  "veredito": "COPIA_NAO_CONFERE"
+}

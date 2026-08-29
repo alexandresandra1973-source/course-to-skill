@@ -1,0 +1,206 @@
+# TEST-0008 RUBRIC — RASCUNHO, NÃO CONGELADO
+# Precisa de auditoria externa antes de congelar: quem escreveu o baseline
+# não deveria escrever a régua sozinho.
+schema_version: 0.1.0
+artifact_id: PILOT-001-TEST-0008-RUBRIC-DRAFT-v0.1.4
+artifact_status: DRAFT_NOT_FROZEN
+test_id: TEST-0008
+candidate_version: 0.1.4
+external_audit_required_before_freeze: true
+why_audit_required: Quem escreveu o baseline não deveria escrever a régua sozinho. Este rascunho foi produzido
+  na mesma passada que BASELINE-SUMMARY-v0.1.4.md, a partir da mesma fonte L0 e pelo mesmo autor. Congelar
+  sem auditoria externa reintroduz a circularidade que o TEST-0008 existe para medir.
+derivation_constraint: Todo critério e toda âncora saem de um span de L0. Nenhum critério foi importado
+  da régua do TEST-0007 nem do artefato sob teste.
+source:
+  video_id: YkdAx2XjWDs
+  transcript_sha256: 068b4998c160d143ee6bc2942e444157fdaebb4311b2ca9eced625c22626df67
+  duration: 00:15:05
+criteria_without_l0_span_dropped: []
+rubric:
+- criterion: OUTCOME_CONTRACT
+  description: Declara outcome, input, output e boundaries antes de construir.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '9:08'
+    end: '9:37'
+  l0_excerpt: easiest first build. And then I'm going to show you just how fast it can be done. Step one,
+    start with the outcome. Before you open anything, write down three things. What information you'll
+    give, what output you want back, and clear boundaries. Basically, what the agent is never allowed
+    to do. For the HubSpot YouTube intelligence agent, this looked like three competitor URLs as the input,
+    a struc
+  score_anchors:
+    complete:
+      range:
+      - 90
+      - 100
+      condition: Os quatro estão presentes e específicos.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Faltam um ou mais, ou ficam genéricos.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Parte para plataforma/ferramenta sem contrato de resultado.
+- criterion: ROBOT_PROMPT_STRUCTURE
+  description: Escreve as instruções com role, objective, boundaries, output e tone.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '9:46'
+    end: '9:57'
+  l0_excerpt: Step two, write the instructions. Structure your system prompt using this robot framework.
+    role, objective, boundaries, output, tone. Every great agent prompt has all five. Every line in that
+    prompt is doing a job. The more specific you are here, the better the result. Vague instructions
+  score_anchors:
+    all_five:
+      range:
+      - 90
+      - 100
+      condition: Os cinco componentes aparecem e fazem trabalho.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Alguns dos cinco, ou presentes só de nome.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Prompt sem estrutura declarada.
+- criterion: TOOL_SELECTION
+  description: Escolhe ferramentas pelo que a tarefa exige e diz o que cada uma faz.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '10:02'
+    end: '10:47'
+  l0_excerpt: equal vague output every time. Step three, choose your platform and connect the tools. This
+    is where you choose what you're building in and what it's going to connect to. We're using Claude.
+    It's what the HubSpot marketing team uses day-to-day. It's built exactly for this kind of research
+    and content work. And the connector setup is straightforward. Whatever platform you choose, one of
+    the first t
+  score_anchors:
+    justified:
+      range:
+      - 90
+      - 100
+      condition: Ferramentas nomeadas e amarradas ao outcome.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Ferramentas nomeadas sem ligação com o outcome.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Nenhuma ferramenta ou lista sem propósito.
+- criterion: MEMORY_CONTEXT
+  description: Especifica que contexto persistente o agente recebe.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '10:47'
+    end: '11:23'
+  l0_excerpt: 'on top, but that''s optional. and a separate five minutes setup on their website. Step
+    four, feed it memory. This is what separates a generic bot from one that actually understands your
+    business. Instead of starting from scratch every time, you give it context about who you are, who
+    you serve, and what good looks like for you. And Claude, you add knowledge documents directly to the
+    project. I just '
+  score_anchors:
+    specified:
+      range:
+      - 90
+      - 100
+      condition: Diz qual contexto e por quê.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Menciona memória sem dizer o conteúdo.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Não trata de memória.
+- criterion: TESTING_ITERATION
+  description: Prevê rodar de três a cinco vezes e corrigir pelo que falhou.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:23'
+    end: '11:42'
+  l0_excerpt: 'upload it. The more context [music] it has, the more it sounds like your team. Step five,
+    test it, break it, fix it. Run it three to five times. Every time it produces something off brand
+    or surface level, don''t make the mistake of giving up. Go back to the system prompt and tighten it.
+    That''s how you fine-tune it. Every time you get something wrong, write it down. That''s your fix
+    list. Step six, '
+  score_anchors:
+    specified:
+      range:
+      - 90
+      - 100
+      condition: Número de rodadas e laço de correção.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Fala em testar sem quantidade nem laço.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Não prevê teste.
+- criterion: HUMAN_REVIEW_30_DAYS
+  description: Mantém revisão humana nos primeiros 30 dias antes de afrouxar.
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:42'
+    end: '11:53'
+  l0_excerpt: list. Step six, add a human in the loop for the first 30 days. Review every output before
+    it goes anywhere. After 30 days, if it's consistently solid, loosen the review and let it run. Skip
+    this and you risk a weird auto reply going to 4,000 leads. It happens. In step seven,
+  score_anchors:
+    explicit:
+      range:
+      - 90
+      - 100
+      condition: Revisão declarada com a janela de 30 dias.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Revisão humana sem janela.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Sem revisão humana.
+- criterion: MEASUREMENT
+  description: 'Define como medir: 2h/semana economizadas e qualidade acima do manual.'
+  l0_span:
+    source: youtube:YkdAx2XjWDs
+    start: '11:53'
+    end: '12:09'
+  l0_excerpt: this and you risk a weird auto reply going to 4,000 leads. It happens. In step seven, measure
+    it with these two questions. Is it saving you at least 2 hours a week? Is the output better than what
+    you produce manually? If both are yes, expand it. If either's a no, go back and rebuild it. Don't
+    let dead agents live in your stack. So, that's the full build. the logic,
+  score_anchors:
+    both_questions:
+      range:
+      - 90
+      - 100
+      condition: As duas perguntas, com critério de expandir.
+    partial:
+      range:
+      - 40
+      - 89
+      condition: Uma das duas, ou métrica vaga.
+    absent:
+      range:
+      - 0
+      - 39
+      condition: Sem critério de medição.
+not_frozen_note: Sem pesos, sem pisos obrigatórios e sem regra de decisão. Fixar peso e piso é decisão
+  de quem conduz o teste, depois da auditoria.

@@ -1,0 +1,110 @@
+# REGRA PRÉ-REGISTRADA de leitura do portão.
+# Aditivo à ressalva de cobertura; amarrada por SHA-256.
+# Publicada ANTES da execução. NÃO altera o portão.
+schema_version: 0.1.0
+artifact_id: GATE-READING-RULE-PREREGISTERED
+artifact_status: PRE_REGISTRADA_ANTES_DA_EXECUCAO
+registered_at_utc: '2026-08-12T03:15:58+00:00'
+generator: gate_reading_rule.py
+registered_by: revisor
+nature:
+  additive_only: true
+  changes_the_gate: false
+  statement: Aditivo à ressalva de cobertura. Não altera o piso de 73,5%, a métrica nem a previsão. Publicado
+    ANTES da execução — é isso que o torna pré-registro.
+binds_to:
+  coverage_caveat:
+    path: Course-to-Skill-Claude/docs/L0-COVERAGE-DECLARED-VS-EVIDENCED-CAVEAT.yaml
+    sha256: b105f6c6d3b871ddcd04f02322487fc4132f14e1c5a21f560cce79fa061eec54
+  prediction:
+    path: Course-to-Skill-Claude/docs/PREDICTION-COMPILER-V2.yaml
+    sha256: 4963fd27d4640c4831306e74b0dc9f624ef5fe409f6c46f48c7f46fbeda1b44d
+  adr:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/adr/ADR-PILOT002-PASS2-PER-SEGMENT-SATURATION-GATE.md
+    sha256: b8cddc93b74a65d6cbc2ad6859e4e3b8a4a81404137d4f95260f1b92668cf3f8
+  compiler_v2_freeze:
+    path: Course-to-Skill-Claude/compiler-v2/FREEZE-RECORD.yaml
+    sha256: bb3ac6058051990d038260b8fc8dfb92823266d834e2ed002b32fbf17061840c
+regra_de_leitura_do_portao:
+  condicao: cobertura da rodada corrigida cai PERTO do piso de 73,5%
+  proibicao: o veredito do portão NÃO pode ser lido antes de comparar a razão declarado÷sustentado entre
+    a rodada histórica e a corrigida
+  razao: o piso 73,5% foi medido com spans inflados; se a rodada corrigida declarar spans mais apertados,
+    a mesma qualidade real produz número menor, e o portão reprova quem merecia passar
+  acao_se_a_razao_nova_for_menor: recalibrar o piso antes de reprovar, com o método declarado antes de
+    ver o resultado
+  status: PRE_REGISTRADA_ANTES_DA_EXECUCAO
+bloqueio_material_da_regra:
+  achado: 'A razão declarado÷sustentado da rodada HISTÓRICA é INOBTENÍVEL: as 44 evidências do PILOT-001
+    antigo não têm citação nenhuma. `source_excerpt` é nulo em 44/44.'
+  consequencia: Sem citação histórica não há como medir quanto daquele span declarado era sustentado.
+    A comparação que a regra exige tem um dos dois lados ausente, e nenhuma medição futura o recupera
+    — o dado nunca foi gravado.
+  evidencia:
+    path: Course-to-Skill/pilots/PILOT-001-HubSpot-AI-Agent/analysis/evidence.jsonl
+    sha256: 2eb266b1fa1c965b15077cc73cbaa7e78aa69160a7da07e0c7f2317998d5156f
+    evidencias: 44
+    com_source_excerpt: 0
+    spans_declarados: 47
+    mediana_span_s: 15
+    media_span_s: 18.1
+    min_span_s: 5
+    max_span_s: 74
+  por_que_isto_importa_mais_que_a_regra: O piso de 73,5% é, portanto, um número cuja inflação não pode
+    ser quantificada nem hoje nem nunca. Ele continua servindo como piso histórico — foi para isso que
+    a ADR o congelou — mas a correção que a regra pede não é computável.
+metodo_pre_declarado:
+  recalibracao_automatica: IMPOSSIVEL
+  por_que: Qualquer fórmula que ajuste o piso precisa da razão histórica, que não existe. Declarar aqui
+    uma fórmula que use um substituto seria inventar precisão — exatamente o vício que a ressalva de cobertura
+    recusou ao NÃO multiplicar 73,5% por 0,51.
+  acao_pre_declarada: 'Se a cobertura corrigida cair na FAIXA DE INDECISÃO abaixo, o veredito do portão
+    fica SUSPENSO — nem aprovado nem reprovado — e a decisão sobe para o revisor com os dois números na
+    mesa: a cobertura declarada e a razão declarado÷sustentado da rodada corrigida. Suspender é o único
+    movimento honesto quando falta metade da comparação.'
+  fora_da_faixa: Acima do topo da faixa, o portão é lido normalmente e APROVA. Abaixo da base, REPROVA
+    — a distância é grande demais para ser explicada por diferença de aperto de span.
+faixa_de_indecisao:
+  proposta:
+    de: 0.685
+    ate: 0.785
+  expressa_como: piso 0,735 ± 0,05 absoluto
+  status: NAO_RATIFICADA
+  por_que_precisa_de_numero: '''PERTO do piso'' não é falsificável sem fronteira — mesmo problema de ''próxima
+    de 1,0'' na banda de yield. Sem ratificação ANTES da execução, ''perto'' vira julgamento pós-resultado,
+    que é o que o pré-registro existe para impedir.'
+  regra: Se esta faixa não for ratificada antes da execução, a condição 'perto do piso' permanece qualitativa
+    e nenhum resultado pode ser declarado suspenso por proximidade.
+proxy_mensuravel_do_aperto_de_span:
+  o_que_e: Largura do span DECLARADO não depende de citação, então é comparável entre as duas gerações.
+    Não mede declarado÷sustentado; mede a DIREÇÃO do risco que a regra antecipa.
+  historico:
+    mediana_span_s: 15
+    media_span_s: 18.1
+    min_span_s: 5
+    max_span_s: 74
+    spans_declarados: 47
+  compilador_v2:
+    origem: canário SEG-005, compilador v2, prompt antigo
+    evidencias: 10
+    mediana_span_s: 10.5
+    media_span_s: 14.8
+    min_span_s: 9
+    max_span_s: 51
+  razao_das_medianas_v2_sobre_historico: 0.7
+  leitura: 'O v2 declara spans com mediana 10.5s contra 15s do histórico — razão 0.7. A direção do risco
+    que a regra antecipa está CONFIRMADA: o compilador corrigido declara spans mais apertados.'
+  limite: Isto NÃO autoriza escalar o piso por 0,70. Cobertura é união, e união depende de contagem ×
+    largura × sobreposição; o v2 produz MAIS evidências, o que empurra a união para cima enquanto a largura
+    a empurra para baixo. Os dois efeitos não se cancelam de forma calculável a priori. O proxy indica
+    direção, não magnitude.
+  base_amostral: 10 evidências de UM segmento contra 47 spans de 44 evidências do corpus inteiro. Amostra
+    pequena de um lado.
+o_que_esta_regra_NAO_faz:
+- não altera o piso de 73,5%
+- não autoriza recalibrar o piso por fórmula
+- não converte o proxy de largura em fator de correção
+- não decide nada sobre a rodada corrigida antes de ela existir
+status: PRE_REGISTRADA_ANTES_DA_EXECUCAO
+execucao_realizada: false
+portao_alterado: false

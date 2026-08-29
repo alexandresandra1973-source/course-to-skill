@@ -1,0 +1,49 @@
+# PILOT-002 — G0 vault-seal
+# Gerado por script. Nada extraído.
+source_docx:
+  path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt.docx
+  sha256: 46288371ff6f18a35af51f15b6b8145ca83c0f89c0e5344ee47734f1b4a97085
+  bytes: 78084
+normalization:
+  why: O vault e o módulo de cobertura só reconhecem `**MMM:SS**` (formato do PILOT-001). O docx traz
+    `M:SS` e `H:MM:SS` em linha nua. A conversão é para minutos totais e é sem perda.
+  example: 1:21:35 → 81:35
+  headings_marked: 14
+vaulted_object:
+  path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+  sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+  bytes: 107653
+  vault_root: work/vault-p002
+marks:
+  in_docx: 819
+  indexed_by_vault: 819
+  lost_in_copy: []
+  timestamps_survived_copy: true
+  first_mark_docx: 0:00
+  last_mark_docx: '1:21:35'
+  last_mark_expected: '1:21:35'
+  last_mark_matches_expected: true
+  last_mark_normalized: '81:35'
+chapters:
+  found: 14
+  expected: 14
+  matches_expected: true
+  titles: &id001
+  - Introduction & Course Overview
+  - Installing Claude Code on Your Local Machine
+  - Choosing an IDE & Installing VS Code
+  - Customizing VS Code Themes
+  - Starting and Managing a Claude Code Session
+  - Understanding Permission Modes (Plan, Accept Edits, Auto, Bypass)
+  - Using Plan Mode & Autonomous Goals (/goal)
+  - Installing and Triggering Claude Skills
+  - Exploring File Structures and Directories
+  - Managing Your Context Window and Token Usage
+  - Essential Built-In Slash Commands
+  - Managing Version Control with GitHub
+  - Connecting Tools & Deploying Apps via MCP and CLI
+  - Frequently Asked Questions (FAQ)
+sections: *id001
+gate: G0
+artifact_status: SEALED
+sealed_at_utc: '2026-08-11T04:07:26+00:00'

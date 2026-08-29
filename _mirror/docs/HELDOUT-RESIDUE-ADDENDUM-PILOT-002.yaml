@@ -1,0 +1,110 @@
+# HELDOUT-RESIDUE-ADDENDUM — PILOT-002
+# ADITIVO. O lock congelado não foi tocado.
+schema_version: 0.1.0
+artifact_id: PILOT-002-HELDOUT-RESIDUE-ADDENDUM
+artifact_status: ADDENDUM_ONLY_BASE_LOCK_UNMODIFIED
+pilot_id: PILOT-002
+published_at_utc: '2026-08-11T23:13:09+00:00'
+generator: heldout_residue_addendum.py
+nature:
+  additive_only: true
+  base_artifact_mutated: false
+  statement: Aditivo. O lock congelado não foi lido para escrita, editado nem reemitido. Este artefato
+    acrescenta divulgação de resíduo e se amarra ao lock por hash.
+binds_to:
+  heldout_lock:
+    path: Course-to-Skill-Claude/docs/HELDOUT-LOCK-PILOT-002.yaml
+    sha256: 921a6bb85116efe2c885d2e543a01c4b54a47fdfb84d0fe0fe81b1905ad2d3a8
+  blind_cases:
+    path: Course-to-Skill-Claude/docs/HELDOUT-BLIND-CASES-PILOT-002.yaml
+    sha256: 50c6abe99431fecf6cff9085bea4ed31de5f5a8d981595377a5df28f7cc7a390
+  blind_cases_freeze_record:
+    path: Course-to-Skill-Claude/docs/HELDOUT-BLIND-CASES-FREEZE-RECORD-PILOT-002.yaml
+    sha256: f1d3b3a5b4148b155001a7921e4754ac0eddd18d501b5b8915e2b9d81a3e6c03
+  l0_cut:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt
+    sha256: 85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29
+  l0_intact:
+    path: Course-to-Skill-Claude/pilots/PILOT-002/00_SOURCE/L0-transcript.txt
+    sha256: 43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed
+why_this_addendum_exists: 'O lock declarou como resíduo apenas as duas linhas de TÍTULO das seções retiradas.
+  Uma varredura posterior do corpo falado do L0 cortado encontrou mais: os NOMES de três dos quatro modos
+  de permissão aparecem como narração de uso em outras seções. O conteúdo continua fora; os nomes não.'
+residue_already_declared_in_lock:
+  kind: linhas de título de seção
+  items:
+  - line: '## Understanding Permission Modes (Plan, Accept Edits, Auto, Bypass)'
+  - line: '## Managing Your Context Window and Token Usage'
+residue_newly_disclosed:
+  kind: nomes de modo na fala, fora dos spans retirados
+  count: 5
+  note: São narração de uso durante demonstração em outras seções, não definição. Nenhuma condição de
+    escolha e nenhuma linha da tabela de quatro modos aparece.
+  items:
+  - term: auto mode
+    occurrences:
+    - mark: '29:08'
+      quote: switch over to using auto mode here. And I'm going to zoom in a bit more. Here you can see
+  - term: bypass permission
+    occurrences:
+    - mark: '22:58'
+      quote: ble to pull that. So in this case, I'm going to say yes and bypass permission, which means
+        that now we're
+    - mark: '23:20'
+      quote: o over that option. But for now we're just going to go with bypass permission which we're
+        going to have AI here to start building it and
+  - term: plan mode
+    occurrences:
+    - mark: '15:38'
+      quote: r thing you can see here that we're just switch over to the plan mode. And what we're going
+        to do now is we're going to using a
+    - mark: '16:59'
+      quote: switch over to plan mode, right? We all did. And the next thing we're going to do he
+verified_clean:
+  statement: Estes termos NÃO aparecem no corpo falado do L0 cortado.
+  terms:
+  - /clear
+  - /compact
+  - /context
+  - 1 milhão de tokens
+  - accept edits
+  - context rot
+  - limiar de 50%
+  - shift tab
+  context_window_section:
+    verdict: LIMPA
+    detail: 'Nenhum ensinamento da seção de janela de contexto vaza: nem /compact, nem /clear, nem /context,
+      nem o limiar de 50%, nem context rot, nem o total de 1 milhão de tokens.'
+  permission_modes_section:
+    verdict: NOMES VAZAM, DEFINIÇÕES NÃO
+    detail: '`accept edits` e `shift tab` não aparecem. `plan mode`, `auto mode` e `bypass permission`
+      aparecem como uso.'
+effect_on_blind_cases:
+  rule_change: BC-001, BC-003 e BC-004 passam a testar SEMÂNTICA, não NOMEAÇÃO. Nomear um modo deixa de
+    contar como acerto, porque o nome está disponível no corpus de treino. O que conta é dizer o que o
+    modo permite, em que condição escolhê-lo e qual o risco.
+  unchanged: 'BC-002 e BC-005 seguem como estavam. BC-006 a BC-010 seguem cegos: a seção de janela de
+    contexto está limpa.'
+  cases:
+  - case_id: BC-001
+    about: Quais são os modos de permissão e o que cada um permite
+    why: o corpus de treino nomeia três dos quatro modos; nomear não é saber o que cada um permite
+  - case_id: BC-003
+    about: Diferença entre accept edits e auto
+    why: '`auto mode` aparece como uso; `accept edits` não aparece em lugar nenhum — a distinção entre
+      os dois continua fora'
+  - case_id: BC-004
+    about: Condição e risco do bypass permissions
+    why: '`bypass permission` aparece duas vezes como uso em demo; a condição de ambiente e o risco não
+      aparecem'
+  scoring_consequence: Numa resposta que apenas liste nomes de modo, o rótulo correto é GENERAL_KNOWLEDGE
+    ou inconclusivo — nunca SOURCE_EXPLICIT com crédito, porque a fonte de treino contém os nomes.
+method:
+  scan_scope: corpo falado do L0 cortado; linhas de título e marcas de tempo excluídas da busca
+  evidence_regenerated_at_publish_time: true
+  expectations_asserted: A apuração anterior entrou como expectativa; divergência abortaria a publicação.
+does_not:
+- não altera o lock congelado
+- não altera os casos cegos nem o freeze record
+- não recorta nada a mais do L0
+- não congela lista canônica de nada

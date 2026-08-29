@@ -1,0 +1,8 @@
+# N6 - PRESERVACAO DE BYTES. NAO EDITAR.
+# Todo artefato sob _mirror/ e historico e congelado. O Git nao pode transformar
+# nenhum byte dele, nem na gravacao nem no checkout, em nenhuma maquina.
+# -text   : desliga conversao de fim de linha independentemente de core.autocrlf,
+#           core.eol e de .gitattributes global ou de sistema (o em-arvore tem
+#           precedencia sobre os dois).
+# -filter : impede que um filtro global (ex.: LFS) reescreva conteudo no clone.
+* -text -filter

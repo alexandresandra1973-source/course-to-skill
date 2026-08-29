@@ -1,0 +1,241 @@
+# TEST-0008 — LOCK DA LISTA CANÔNICA DE MÉTRICAS.
+# Cinco métricas, lidas do RELEASE por hash. O '6' é UNIÃO 0007 ∪ 0008.
+# Fecha o bloqueador 1 da ADR. Bloqueadores 2 e 3 seguem abertos.
+schema_version: 0.1.0
+artifact_id: PILOT-001-TEST-0008-METRIC-LOCK
+artifact_status: LOCKED
+locked_at_utc: '2026-08-12T05:23:14+00:00'
+generator: publish_test0008_metric_lock.py
+test_id: TEST-0008
+candidate_version: 0.1.4
+nature:
+  additive_only: true
+  changes_the_compiler: false
+  changes_test_0007: false
+  statement: Congela QUAL lista de métricas vale. NÃO congela a rubrica, nem as âncoras, nem as bandas
+    — esses são os bloqueadores 2 e 3 da ADR e seguem abertos.
+canonical_metrics:
+  count: 5
+  metrics: &id001
+  - TOTAL_SCORE
+  - DECISION_ACCURACY
+  - METHODOLOGY_FIDELITY
+  - EXECUTION_QUALITY
+  - HALLUCINATION_RATE
+  read_from: RELEASE, não digitado — extraído por yaml.safe_load_all
+  source:
+    path: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready/course-to-skill-compiler-v0.1.1-pilot-ready/pilot/PILOT-001/final-test/judge-private/test-suite.yaml
+    sha256: 9dc5313c0171984d24162bce39a57dd1a9703f8ad21939db66615f3829eb1927
+    document_index: 7
+    yaml_path: baseline.comparison_metrics
+    line_range_in_release: 1037-1042
+  corroborating_positions:
+    count: 4
+    note: As 4 posições RELEASE apuradas em TEST-0008-METRICS-DISCREPANCY.md declaram a MESMA lista; o
+      WORKSPACE também. Um único conjunto em todas as posições.
+origin_of_the_six:
+  resolved: true
+  previous_label: UNRESOLVED_PROVENANCE
+  current_label: UNION_TEST0007_UNION_TEST0008
+  supersedes: 'O rótulo UNRESOLVED_PROVENANCE fica RETIRADO: a procedência está apurada, não pendente.'
+  explanation: O '6' da auditoria é a UNIÃO dos dois testes comparativos, não a contagem do TEST-0008
+    isolado. Nenhum teste declara 6.
+  test_0007_metrics:
+  - TOTAL_SCORE
+  - DECISION_ACCURACY
+  - METHODOLOGY_FIDELITY
+  - EXECUTION_QUALITY
+  - MISSING_INPUT_ACCURACY
+  test_0008_metrics: *id001
+  intersection:
+  - DECISION_ACCURACY
+  - EXECUTION_QUALITY
+  - METHODOLOGY_FIDELITY
+  - TOTAL_SCORE
+  only_in_test_0007:
+  - MISSING_INPUT_ACCURACY
+  only_in_test_0008:
+  - HALLUCINATION_RATE
+  union:
+  - DECISION_ACCURACY
+  - EXECUTION_QUALITY
+  - HALLUCINATION_RATE
+  - METHODOLOGY_FIDELITY
+  - MISSING_INPUT_ACCURACY
+  - TOTAL_SCORE
+  union_count: 6
+  arithmetic_check:
+    expression: '|A ∪ B| = |A| + |B| − |A ∩ B|'
+    computed: 5 + 5 − 4 = 6
+    holds: true
+  metric_lock_do_chatgpt:
+    referencia: caffc7ba…
+    estado: NUNCA_SALVO_EM_DISCO
+    consequencia: Não é fonte verificável. Esta apuração contra o RELEASE é que estabelece a resposta
+      canônica.
+legacy_five_status: PENDING_REDERIVATION
+legacy_five_status_reason:
+  por_que_pendente: As cinco foram definidas para um desenho de DUAS condições (Skill × baseline único).
+    O TEST-0008 agora tem TRÊS condições e DUAS comparações (P e F). A lista está congelada como AUTORIDADE
+    DE PROCEDÊNCIA; sua aplicabilidade ao desenho de três condições não está estabelecida.
+  o_que_este_lock_faz: congela QUAIS são as cinco e de onde vêm
+  o_que_este_lock_NAO_faz: não declara que as cinco são as métricas corretas para o desenho de três condições,
+    nem as torna computáveis
+  regra_dura: Mesmo vetor de métricas para P e F. Métrica exclusiva de uma das comparações destrói a comparabilidade.
+hallucination_rate_definition:
+  provenance: DECLARED_IN_THIS_LOCK
+  NOT_derivable_from_release: true
+  por_que: O RELEASE declara HALLUCINATION_RATE como comparison_metric mas NÃO tem critério de rubrica
+    com esse nome. O que existe é o critério HALLUCINATION_CONTROL e a falha crítica HALLUCINATED_METHODOLOGY.
+    Numerador e denominador são declarados AQUI; não foram lidos do RELEASE, e isso fica escrito para
+    ninguém tratar a definição como herdada.
+  numerator:
+    what: número de afirmações distintas, na saída crua do braço, que atribuem à metodologia da fonte
+      uma regra, etapa ou cobertura que a fonte não sustenta
+    adjudicated_by: juiz, sob a rubrica congelada do TEST-0008
+    anchored_to:
+    - evaluation.rubric[].HALLUCINATION_CONTROL
+    - critical_failures[].HALLUCINATED_METHODOLOGY
+  denominator:
+    what: número de afirmações distintas portadoras de metodologia na MESMA saída crua — o conjunto do
+      qual o numerador é subconjunto
+    must_be_counted_per_arm: true
+    never_shared_across_arms: true
+  zero_denominator_rule:
+    value: UNDEFINED
+    emit: null
+    must_not_be: 0.0
+    por_que: Denominador zero significa que o braço não fez afirmação metodológica alguma. Emitir 0.0
+      leria isso como 'nenhuma alucinação', premiando a resposta vazia — o incentivo exatamente invertido.
+      A métrica sai UNDEFINED, a execução é sinalizada, e o braço NÃO entra na margem por esta métrica.
+    flag_code: HALLUCINATION_RATE_DENOMINATOR_ZERO
+  polarity: LOWER_IS_BETTER
+  polarity_consequence:
+    mechanical: Todo o instrumento calcula margem como LEFT − RIGHT e trata MAIOR como melhor. Uma métrica
+      LOWER_IS_BETTER entra com sinal invertido, ou a margem passa a premiar o braço que alucina mais.
+    required_transform: contribution = −(left_value − right_value)
+    must_be_enforced_in_code: true
+    not_enforced_yet: true
+    note: O scorer estendido registra a polaridade e recusa agregação de métrica LOWER_IS_BETTER sem transformação
+      declarada. A agregação em si é passo 3.
+open_pendency_for_alexandre:
+  decision_owner: Alexandre
+  status: UNRESOLVED_BY_DESIGN
+  resolvida_neste_lock: false
+  question: 'CONSISTENCY e HUMAN_CHECKPOINT_COMPLIANCE têm de receber destinação explícita: viram MÉTRICAS
+    DIRETAS do vetor de comparação, ou permanecem GATE/AGGREGATE-ONLY?'
+  por_que_e_decisao_e_nao_apuracao: Não há fato no RELEASE que responda. As duas são critérios de rubrica
+    com peso, mas nenhuma aparece na lista de comparison_metrics. Os dois desenhos são internamente coerentes;
+    escolher entre eles é decisão de escopo.
+  measured_facts:
+    rubric_criteria_legacy:
+    - EXECUTION_QUALITY
+    - CONSISTENCY
+    - HUMAN_CHECKPOINT_COMPLIANCE
+    - METHODOLOGY_FIDELITY
+    weights:
+      EXECUTION_QUALITY: 0.3
+      CONSISTENCY: 0.2
+      HUMAN_CHECKPOINT_COMPLIANCE: 0.2
+      METHODOLOGY_FIDELITY: 0.2
+    weight_sum: 0.9
+    criteria_sem_metrica_correspondente:
+    - CONSISTENCY
+    - HUMAN_CHECKPOINT_COMPLIANCE
+    peso_dos_orfaos: 0.4
+    fracao_do_peso_total_nos_orfaos: 0.444444
+    metricas_sem_criterio_correspondente:
+    - TOTAL_SCORE
+    - DECISION_ACCURACY
+    - HALLUCINATION_RATE
+  achado_colateral_do_peso:
+    weight_sum: 0.9
+    soma_e_um: false
+    consequencia_se_nao_for_um: WEIGHTED_SUM com pesos somando 0.9 limita o TOTAL_SCORE máximo a 90.0,
+      não a 100. O pass_criteria legado exige minimum_total_score 85, que continua alcançável, mas o teto
+      de margem fica comprimido. Isto é OBSERVAÇÃO sobre a rubrica LEGADA, que não é a rubrica final —
+      o passo 3 é que a define.
+    nao_corrigido_aqui: true
+  opcao_A_metricas_diretas:
+    efeito: entram no vetor de P e F; viram 7 métricas
+    custo: muda a lista congelada acima; exige rederivação e invalida a contagem 5 como canônica para
+      o desenho novo
+  opcao_B_gate_ou_aggregate_only:
+    efeito: continuam pesando no TOTAL_SCORE e podendo reprovar por piso obrigatório, mas não aparecem
+      como métrica comparada
+    custo: o relatório de P e F não mostra separadamente o comportamento de checkpoint humano, que é justamente
+      a hipótese do TEST-0008
+  o_que_este_lock_faz: registra a pendência e mede os fatos; não escolhe
+executable_guard:
+  implemented_in: publish_test0008_metric_lock.py
+  function: guard()
+  anchors:
+    A_hash: RELEASE tem de bater byte a byte com o SHA-256 congelado
+    B_content: a lista extraída tem de bater com a congelada, mesmo que o hash tenha sido recomputado
+    por_que_duas: (A) sozinha cai se o adversário recongela o hash de uma cópia adulterada; (B) sozinha
+      cai se a alteração está fora da lista.
+  canary:
+  - case: C1_RELEASE_EXATO
+    expect: ACEITA
+    accepted: true
+    code: ACCEPTED
+    passed: true
+  - case: C2_UM_BYTE_ALTERADO
+    expect: REJEITA
+    accepted: false
+    code: RELEASE_HASH_MISMATCH
+    passed: true
+    bytes_changed: 1
+    caught_by: ANCORA_A_HASH
+    metric_list_still_intact: true
+  - case: C3_METRICA_RENOMEADA
+    expect: REJEITA
+    accepted: false
+    code: RELEASE_HASH_MISMATCH
+    passed: true
+    caught_by: ANCORA_A_HASH_E_B_CONTEUDO
+  - case: C4_MUTANTE_GUARD_SO_HASH
+    expect: MUTANTE_ACEITA_O_ADULTERADO
+    accepted: true
+    code: MUTANT_HASH_ONLY_NO_CONTENT_ANCHOR
+    passed: true
+    reading: o guard sem a âncora de conteúdo aceita a lista renomeada; logo a âncora B tem poder de detecção
+  - case: C5_ARQUIVO_AUSENTE
+    expect: REJEITA
+    accepted: false
+    code: RELEASE_ABSENT
+    passed: true
+  canary_approved: true
+  canary_note: 'C4 é o mutante do próprio guard: prova que a âncora de conteúdo tem poder de detecção,
+    aceitando o que o guard completo rejeita.'
+binds_to:
+  legacy_contracts_errata:
+    path: Course-to-Skill-Claude/docs/LEGACY-TEST-0008-CONTRACTS-ERRATA.md
+    sha256: 11a164eb5425d8bf061512d816821a47b9ed8e4694de9cb5fe1f1eff226cd6b0
+  metrics_discrepancy_report:
+    path: Course-to-Skill-Claude/docs/TEST-0008-METRICS-DISCREPANCY.md
+    sha256: f7780d6891f398d12a5fa68918afd80f14219896f55708910fd79a9fd1197e05
+  adr_test_0008:
+    artifact: ADR-V014-TEST0008-INFORMATION-PARITY
+    member: PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN/ADR-TEST-0008-INFORMATION-PARITY-v0.1.4.md
+    container: Course-to-Skill/PILOT-001/v0.1.3/06_COMPARISON_ARMS/TEST-0007/ARMS_WORDING_FROZEN/PILOT-001-v0.1.4-TEST-0007-ARMS-WORDING-FROZEN.zip
+    sha256: 4aac0f43276c4d3061e04634afcfcd88072db9ff248c98a08eabda98c703c96a
+  release_test_suite:
+    path: Course-to-Skill-Compiler/01_TOOL/releases/v0.1.1/course-to-skill-compiler-v0.1.1-pilot-ready/course-to-skill-compiler-v0.1.1-pilot-ready/pilot/PILOT-001/final-test/judge-private/test-suite.yaml
+    sha256: 9dc5313c0171984d24162bce39a57dd1a9703f8ad21939db66615f3829eb1927
+closes_adr_blocker:
+  blocker: 1
+  text: The canonical comparison_metrics list is not frozen. The observed 5×6 discrepancy must first be
+    resolved against the authoritative RELEASE.
+  status: CLOSED
+  how: 'Resolvido contra o RELEASE por hash: cinco métricas, e o ''6'' identificado como união dos dois
+    testes.'
+adr_blockers_still_open:
+- blocker: 2
+  text: âncoras de critério e derivações de métrica da rubrica final do TEST-0008 não congeladas
+  status: OPEN
+  is_step: 3
+- blocker: 3
+  text: variância do avaliador do TEST-0008 não medida; bandas de enquadramento indefinidas
+  status: OPEN
+  is_step: 3
