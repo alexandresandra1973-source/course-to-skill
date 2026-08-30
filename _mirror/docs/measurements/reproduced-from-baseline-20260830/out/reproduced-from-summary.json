@@ -1,0 +1,163 @@
+{
+  "opening_record_sha256": "35cd4abf5df72758c1d0e9019c757e8503c1a1aba02fea8ffef0b22babba8634",
+  "tolerancia_s": 30,
+  "iniciado": "2026-08-30T01:05:11.173087-03:00",
+  "controles": [
+    {
+      "fixture_id": "FX-POS-001",
+      "expect": "PASS",
+      "got": "PASS",
+      "comportou_como_desenhado": true,
+      "motivo": "1 ocorrencia(s) | span ausente ou nao-objeto",
+      "porque": "quote copiada verbatim de trecho real do L0 do P002"
+    },
+    {
+      "fixture_id": "FX-NEG-001",
+      "expect": "FAIL",
+      "got": "FAIL",
+      "comportou_como_desenhado": true,
+      "motivo": "quote normalizada nao ocorre no L0 normalizado | span ausente ou nao-objeto",
+      "porque": "mesma quote com 'designed' -> 'ENGINEERED_XQZ'; nao existe no L0"
+    }
+  ],
+  "integridade": [
+    {
+      "bundle": "P002",
+      "artefato": "_mirror/pilots/PILOT-002-v2/EVIDENCE.jsonl",
+      "esperado": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd",
+      "real": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd",
+      "ok": true
+    },
+    {
+      "bundle": "P003",
+      "artefato": "_mirror/pilots/PILOT-003-v2/EVIDENCE.jsonl",
+      "esperado": "64830129e3e806635110f8f7313e82f119fd89a4604eb2729419740478e6f4b0",
+      "real": "64830129e3e806635110f8f7313e82f119fd89a4604eb2729419740478e6f4b0",
+      "ok": true
+    },
+    {
+      "bundle": "P004",
+      "artefato": "_mirror/pilots/PILOT-004/02_PASS2/EVIDENCE.jsonl",
+      "esperado": "f5951b32192c50bfede98fa911ba7829a2c5025bdfd4f7e96d4624167e10fd62",
+      "real": "f5951b32192c50bfede98fa911ba7829a2c5025bdfd4f7e96d4624167e10fd62",
+      "ok": true
+    }
+  ],
+  "por_bundle": {
+    "P002": {
+      "counts": {
+        "examinado": 448,
+        "PASS": 421,
+        "FAIL": 27,
+        "NOT_APPLICABLE": 0,
+        "INVALID": 0,
+        "IN_REGION": 421,
+        "OUT_OF_REGION": 0,
+        "LOCATOR_UNRESOLVED": 0
+      },
+      "l0": {
+        "declarado": [
+          [
+            "L0-transcript-CUT.txt",
+            "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29"
+          ]
+        ],
+        "resolvido": "_mirror/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt",
+        "sha": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+        "erro": null,
+        "marcadores": 733,
+        "l0_bytes": 96246,
+        "l0_chars_normalizados": 94767
+      }
+    },
+    "P003": {
+      "counts": {
+        "examinado": 2463,
+        "PASS": 2366,
+        "FAIL": 97,
+        "NOT_APPLICABLE": 0,
+        "INVALID": 0,
+        "IN_REGION": 2366,
+        "OUT_OF_REGION": 0,
+        "LOCATOR_UNRESOLVED": 0
+      },
+      "l0": {
+        "declarado": [
+          [
+            "L0-transcript.txt",
+            "04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192"
+          ]
+        ],
+        "resolvido": "_mirror/pilots/PILOT-003/00_SOURCE/L0-transcript.txt",
+        "sha": "04fda222febbaeece075f0096274ae8be00a7eedd5582006dd99d6ccc465e192",
+        "erro": null,
+        "marcadores": 2052,
+        "l0_bytes": 369035,
+        "l0_chars_normalizados": 364928
+      }
+    },
+    "P004": {
+      "counts": {
+        "examinado": 134,
+        "PASS": 134,
+        "FAIL": 0,
+        "NOT_APPLICABLE": 0,
+        "INVALID": 0,
+        "IN_REGION": 134,
+        "OUT_OF_REGION": 0,
+        "LOCATOR_UNRESOLVED": 0
+      },
+      "l0": {
+        "declarado": [
+          [
+            "L0-transcript.txt",
+            "607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5"
+          ]
+        ],
+        "resolvido": "_mirror/pilots/PILOT-004/00_SOURCE/L0-transcript.txt",
+        "sha": "607f5a986bada49e81e8fcf3f1bce3ed2cdb63798ad6bcd4a8ab32018f2cb3f5",
+        "erro": null,
+        "marcadores": 186,
+        "l0_bytes": 19624,
+        "l0_chars_normalizados": 18614
+      }
+    }
+  },
+  "agregado": {
+    "examinado": 3045,
+    "PASS": 2921,
+    "FAIL": 124,
+    "NOT_APPLICABLE": 0,
+    "INVALID": 0,
+    "IN_REGION": 2921,
+    "OUT_OF_REGION": 0,
+    "LOCATOR_UNRESOLVED": 0
+  },
+  "asserçoes": [
+    {
+      "bundle": "P002",
+      "numerador_subset_denominador": true,
+      "contagens_batem": true,
+      "pass_e_fail_disjuntos": true,
+      "|PASS|": 421,
+      "|PASS u FAIL|": 448
+    },
+    {
+      "bundle": "P003",
+      "numerador_subset_denominador": true,
+      "contagens_batem": true,
+      "pass_e_fail_disjuntos": true,
+      "|PASS|": 2366,
+      "|PASS u FAIL|": 2463
+    },
+    {
+      "bundle": "P004",
+      "numerador_subset_denominador": true,
+      "contagens_batem": true,
+      "pass_e_fail_disjuntos": true,
+      "|PASS|": 134,
+      "|PASS u FAIL|": 134
+    }
+  ],
+  "asserçoes_ok": true
+}

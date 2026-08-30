@@ -1,0 +1,16 @@
+[
+  {
+    "fixture_id": "FX-POS-001",
+    "l0": "/home/mtx/course-to-skill-claude/_mirror/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt",
+    "quote": "This course is designed to take absolute beginners and transform them into masters of clawed cod",
+    "expect": "PASS",
+    "porque": "quote copiada verbatim de trecho real do L0 do P002"
+  },
+  {
+    "fixture_id": "FX-NEG-001",
+    "l0": "/home/mtx/course-to-skill-claude/_mirror/pilots/PILOT-002/00_SOURCE/L0-transcript-CUT.txt",
+    "quote": "This course is ENGINEERED_XQZ to take absolute beginners and transform them into masters of clawed cod",
+    "expect": "FAIL",
+    "porque": "mesma quote com 'designed' -> 'ENGINEERED_XQZ'; nao existe no L0"
+  }
+]
