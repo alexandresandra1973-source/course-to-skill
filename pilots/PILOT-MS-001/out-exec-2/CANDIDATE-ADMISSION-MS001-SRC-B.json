@@ -1,0 +1,475 @@
+[
+ {
+  "claim_dependencies": [
+   "CL-0017",
+   "CL-0030"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0014",
+   "EV-0015"
+  ],
+  "local_id": "R-0001",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-001"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0017",
+   "CL-0030"
+  ],
+  "structural_key": "1dfa69f3b8f2909c4577a42f9a2458820f8de802dc6aef8d7a50aacd9efe7c9e",
+  "structure": {
+   "action": "Pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão",
+   "condition": "Se você vai usar muito, muito, muito",
+   "do_not": [],
+   "name": "Escolher peça melhor (NVMe quatro) quando o uso for muito intenso",
+   "precedence": null,
+   "trigger": "Escolha do plano de servidor"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0012"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0019",
+   "EV-0020"
+  ],
+  "local_id": "R-0002",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-002"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0012"
+  ],
+  "structural_key": "25d37545f2ba66c91b43e78132446d7198cb630365baf5a7f4a95863501ef62e",
+  "structure": {
+   "action": "Manter o servidor em São Paulo; estando fora do Brasil, verificar o do México",
+   "condition": "Se estiver no Brasil, São Paulo é o mais próximo; se estiver fora do Brasil, verificar se o do México chega a ser mais próximo",
+   "do_not": [],
+   "exceptions": [
+    "Estar fora do Brasil: verificar se o do México é mais próximo"
+   ],
+   "name": "Manter o servidor em São Paulo, ou verificar México se estiver fora do Brasil",
+   "precedence": null,
+   "trigger": "Conferência do pedido no carrinho"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0025"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0018",
+   "EV-0019"
+  ],
+  "local_id": "R-0003",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-003"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0025"
+  ],
+  "structural_key": "435345160030cfb3c62c4561455eb05acf45ab2abfa306cafd2048567f7ae4c5",
+  "structure": {
+   "action": "Conferir se está tudo certo: se o plano está correto e se está Evolution API",
+   "condition": "Antes de continuar para verificação",
+   "do_not": [],
+   "name": "Conferir o pedido antes de prosseguir",
+   "precedence": null,
+   "trigger": "Ao vir em continuar para carrinho"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0026",
+   "CL-0029"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0025",
+   "EV-0026"
+  ],
+  "local_id": "R-0004",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-001"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0026",
+   "CL-0029"
+  ],
+  "structural_key": "814237184bae37a083cb86471a5ecac475a95cae839334d59e3d63bec1a75867",
+  "structure": {
+   "action": "Digitar barra manager no final para de fato acessar",
+   "condition": "Aparece algo que parece um erro, mas não é erro",
+   "do_not": [
+    "Tratar a página que aparenta erro como um erro"
+   ],
+   "name": "Adicionar barra manager no final quando a página do Evolution API parece erro",
+   "precedence": null,
+   "trigger": "Ao clicar em Evolution API e abrir a página"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0014"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0028",
+   "EV-0029"
+  ],
+  "local_id": "R-0005",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-002"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0014"
+  ],
+  "structural_key": "9eecda7b69aa07a9e633b85b7ee52b32342dcc53fa7ccf7148fedeed847ea0e3",
+  "structure": {
+   "action": "Colar a chave de API global que está no Gmail e clicar em conectar",
+   "condition": "No primeiro acesso",
+   "do_not": [],
+   "name": "Usar a chave de API global do Gmail no primeiro acesso",
+   "precedence": null,
+   "trigger": "Tela de primeiro acesso do Evolution API"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0008",
+   "CL-0011"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "entity_kind": "rule_candidate",
+  "evidence_refs": [
+   "EV-0009",
+   "EV-0010"
+  ],
+  "local_id": "R-0006",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-001"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0008",
+   "CL-0011"
+  ],
+  "structural_key": "c5d5d290625dbfa7c0bb3835c6ec9d726ad44c25212d975aa3f3b9329315a937",
+  "structure": {
+   "action": "Hospedar o Evolution API em uma VPS",
+   "condition": "Para que o Evolution API fique funcionando 24 horas por dia",
+   "do_not": [],
+   "name": "Hospedar o Evolution API em uma VPS",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Ao montar a stack que usa o Evolution API"
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0001",
+   "CL-0009",
+   "CL-0012",
+   "CL-0019",
+   "CL-0022",
+   "CL-0023",
+   "CL-0025"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [],
+  "entity_kind": "workflow_candidate",
+  "evidence_refs": [
+   "EV-0016",
+   "EV-0017",
+   "EV-0018",
+   "EV-0019",
+   "EV-0020",
+   "EV-0021",
+   "EV-0022"
+  ],
+  "local_id": "WF-0001",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-004"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0001",
+   "CL-0009",
+   "CL-0012",
+   "CL-0019",
+   "CL-0022",
+   "CL-0023",
+   "CL-0025"
+  ],
+  "structural_key": "5bbb5adcbe549415d447d594de34d35198bfa908e74bb56baaf52416ebe455f9",
+  "structure": {
+   "name": "Contratação do plano até a tela de pagamento",
+   "steps": [
+    {
+     "action": "Escolher aqui o plano; no exemplo, pega o nível NVMe dois, para usar só uma instância mesmo",
+     "evidence_refs": [
+      "EV-0015",
+      "EV-0016"
+     ],
+     "local_id": "S-0001",
+     "name": "Escolher o plano",
+     "order_key": 1
+    },
+    {
+     "action": "Ver o plano de um mês por 54,98 por mês ou, a partir de um ano, a promoção de 27,89 o mês; ir no ano, que depois pode dividir",
+     "evidence_refs": [
+      "EV-0016",
+      "EV-0017"
+     ],
+     "local_id": "S-0002",
+     "name": "Escolher o período do plano",
+     "order_key": 2
+    },
+    {
+     "action": "Vir em continuar para carrinho e conferir se está tudo certo, se o plano está correto e se está Evolution API",
+     "evidence_refs": [
+      "EV-0018",
+      "EV-0019"
+     ],
+     "local_id": "S-0003",
+     "name": "Continuar para carrinho e conferir",
+     "order_key": 3
+    },
+    {
+     "action": "Manter o servidor em São Paulo, que é o mais próximo no Brasil; se estiver fora do Brasil, ver se o do México chega a ser mais próximo",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "local_id": "S-0004",
+     "name": "Definir o servidor",
+     "order_key": 4
+    },
+    {
+     "action": "Depois de conferir, vir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google",
+     "evidence_refs": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "local_id": "S-0005",
+     "name": "Continuar para verificação e entrar na conta",
+     "order_key": 5
+    },
+    {
+     "action": "Fazer o login, preencher os dados pedidos e cair na tela de pagamento, podendo selecionar cartão de crédito",
+     "evidence_refs": [
+      "EV-0021",
+      "EV-0022"
+     ],
+     "local_id": "S-0006",
+     "name": "Preencher dados e chegar ao pagamento",
+     "order_key": 6
+    }
+   ]
+  },
+  "unsealed_claim_dependencies": []
+ },
+ {
+  "claim_dependencies": [
+   "CL-0004",
+   "CL-0005",
+   "CL-0010",
+   "CL-0013",
+   "CL-0014",
+   "CL-0026",
+   "CL-0029"
+  ],
+  "claim_dependency_status": "SATISFIED",
+  "claim_refs_applicability": "APPLICABLE",
+  "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "defects": [],
+  "entity_kind": "workflow_candidate",
+  "evidence_refs": [
+   "EV-0023",
+   "EV-0024",
+   "EV-0025",
+   "EV-0026",
+   "EV-0028",
+   "EV-0029",
+   "EV-0030",
+   "EV-0031",
+   "EV-0032",
+   "EV-0033"
+  ],
+  "local_id": "WF-0002",
+  "markers": [],
+  "merged_from": [
+   {
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-003"
+   }
+  ],
+  "provenance_detail": {
+   "direct_evidence_ok": true
+  },
+  "sealed_claim_refs": [
+   "CL-0004",
+   "CL-0005",
+   "CL-0010",
+   "CL-0013",
+   "CL-0014",
+   "CL-0026",
+   "CL-0029"
+  ],
+  "structural_key": "c387dfa2b2da697e210f625a4d2007ef0bf0cf314490ab37518181a220d95512",
+  "structure": {
+   "name": "Acessar o Evolution API pelo portal, criar instância e conectar o número do WhatsApp",
+   "steps": [
+    {
+     "action": "No portal, no acesso rápido do servidor, clicar em Evolution API",
+     "evidence_refs": [
+      "EV-0023",
+      "EV-0024",
+      "EV-0025"
+     ],
+     "local_id": "S-0001",
+     "name": "Abrir o Evolution API pelo acesso rápido",
+     "order_key": 1
+    },
+    {
+     "action": "Na página que abre e aparenta um erro, digitar barra manager no final para de fato acessar",
+     "evidence_refs": [
+      "EV-0026"
+     ],
+     "local_id": "S-0002",
+     "name": "Digitar barra manager no final",
+     "order_key": 2
+    },
+    {
+     "action": "Na tela de primeiro acesso, colar a chave de API global que está no Gmail e clicar em conectar",
+     "evidence_refs": [
+      "EV-0028",
+      "EV-0029"
+     ],
+     "local_id": "S-0003",
+     "missing_input_action": null,
+     "name": "Conectar com a chave de API global",
+     "order_key": 3,
+     "required_inputs": [
+      "chave de API global que está no Gmail"
+     ]
+    },
+    {
+     "action": "Clicar em instância, colocar algum nome (por exemplo YouTube teste) e clicar em salvar; aparece como desconectado",
+     "evidence_refs": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "local_id": "S-0004",
+     "name": "Criar a instância",
+     "order_key": 4
+    },
+    {
+     "action": "Ir em configurações, gerar QR Code e escanear pelo celular como se fosse um WhatsApp Web",
+     "evidence_refs": [
+      "EV-0032",
+      "EV-0033"
+     ],
+     "local_id": "S-0005",
+     "name": "Gerar e escanear o QR Code",
+     "order_key": 5
+    }
+   ]
+  },
+  "unsealed_claim_dependencies": []
+ }
+]

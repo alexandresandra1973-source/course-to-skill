@@ -1,0 +1,389 @@
+{
+  "source_id": "MS001-SRC-C",
+  "slice_id": "SL-C-01",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0001"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Redis",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "No Redis é possível configurar dados que vão ter um tempo de vida.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0001", "EV-0002"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Redis",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "O Redis é ideal para as operações que serão feitas (as apresentadas pelo autor).",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0002"],
+      "qualifiers": {
+        "scope": "as operações que o autor vai fazer no material",
+        "condition": null,
+        "platform": "Redis",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0002", "EV-0003"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "EasyPanel",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "O Redis fica na opção 'redis' na parte de cima da lista de serviços; clica nela e coloca um nome para o serviço.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0003"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "EasyPanel",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "O autor deixa a senha em branco para que o sistema gere uma senha aleatória, e não mexe na versão.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0003", "EV-0004"],
+      "qualifiers": {
+        "scope": "escolha do autor na demonstração",
+        "condition": null,
+        "platform": "EasyPanel",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Depois de preencher os campos, pode clicar em criar e o Redis fica instalado no EasyPanel.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0004", "EV-0005"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "EasyPanel",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0005"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "EasyPanel / Redis Commander",
+        "stage": "desenvolvimento",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "O Redis Commander é um painel de gerenciamento do Redis no qual você pode visualizar os dados que estão lá dentro e editar ou apagar através do navegador.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0005", "EV-0006"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Redis Commander",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "O próximo passo é pegar uma chave de API do Groq ('grock'), da OpenAI ou de qualquer outro que você tiver.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0006", "EV-0007"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Groq / OpenAI / outro provedor",
+        "stage": "após instalar o Redis",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "O autor apresenta o Groq ('grock') como uma opção porque o Groq é gratuito.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0007", "EV-0008"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Groq",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "No site do Groq, você vai em 'Dev console' no canto e faz login com o Google.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0008"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Groq",
+        "stage": "obtenção de chave de API",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0008", "EV-0009"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Groq",
+        "stage": "obtenção de chave de API",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "Depois de submeter, o sistema dá a chave e você precisa copiá-la naquele momento.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0009"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Groq",
+        "stage": "obtenção de chave de API",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "Na OpenAI é preciso colocar 5 (créditos/dólares, conforme dito na fonte) para poder gerar uma chave.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0010", "EV-0011"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "para poder gerar uma chave na OpenAI",
+        "platform": "OpenAI",
+        "stage": "obtenção de chave de API",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "Na OpenAI você vai nas configurações, em 'API Keys', clica para criar uma nova, dá um nome para ela e seleciona de qual projeto ela é.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0010"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "OpenAI",
+        "stage": "obtenção de chave de API",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0002", "EV-0003", "EV-0004", "EV-0005"],
+      "claim_temp_refs": ["TC-004", "TC-005", "TC-006", "TC-007", "TC-008"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Instalar o Redis no EasyPanel e ativar o Redis Commander",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Adicionar novo serviço",
+            "action": "No EasyPanel ('eas panel'), clicar no '+' para adicionar um novo serviço no seu projeto.",
+            "evidence_refs": ["EV-0002", "EV-0003"]
+          },
+          {
+            "order_key": 2,
+            "name": "Selecionar a opção redis",
+            "action": "Clicar na opção 'redis', que fica na parte de cima da lista.",
+            "evidence_refs": ["EV-0003"]
+          },
+          {
+            "order_key": 3,
+            "name": "Nomear o serviço",
+            "action": "Colocar um nome para o serviço (o autor coloca 'n8n redis').",
+            "evidence_refs": ["EV-0003"]
+          },
+          {
+            "order_key": 4,
+            "name": "Definir senha e versão",
+            "action": "Deixar a senha em branco para que seja gerada uma senha aleatória e não mexer na versão.",
+            "evidence_refs": ["EV-0003", "EV-0004"]
+          },
+          {
+            "order_key": 5,
+            "name": "Criar o serviço",
+            "action": "Clicar em criar; o Redis fica instalado no EasyPanel.",
+            "evidence_refs": ["EV-0004", "EV-0005"]
+          },
+          {
+            "order_key": 6,
+            "name": "Ativar Redis Commander",
+            "action": "Ativar a opção do Redis Commander, painel de gerenciamento que permite visualizar, editar ou apagar os dados pelo navegador.",
+            "evidence_refs": ["EV-0005", "EV-0006"]
+          }
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0006", "EV-0007", "EV-0008", "EV-0009"],
+      "claim_temp_refs": ["TC-010", "TC-012", "TC-013", "TC-014"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Obter uma chave de API no Groq ('grock')",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Acessar o Dev console",
+            "action": "No site do Groq, ir em 'Dev console' no canto da tela.",
+            "evidence_refs": ["EV-0008"]
+          },
+          {
+            "order_key": 2,
+            "name": "Fazer login",
+            "action": "Fazer login com o Google.",
+            "evidence_refs": ["EV-0008", "EV-0009"]
+          },
+          {
+            "order_key": 3,
+            "name": "Ir em API Keys",
+            "action": "No lado esquerdo, ir em 'API Keys' ('API Case').",
+            "evidence_refs": ["EV-0009"]
+          },
+          {
+            "order_key": 4,
+            "name": "Criar a chave",
+            "action": "Clicar para criar uma nova, dar um nome para ela, marcar a caixinha e clicar em submit.",
+            "evidence_refs": ["EV-0009"]
+          },
+          {
+            "order_key": 5,
+            "name": "Copiar a chave",
+            "action": "Copiar a chave no momento em que ela é exibida.",
+            "evidence_refs": ["EV-0009"]
+          }
+        ],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0010", "EV-0011"],
+      "claim_temp_refs": ["TC-015", "TC-016"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Obter uma chave de API na OpenAI",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Ir nas configurações / API Keys",
+            "action": "Ir nas configurações, em 'api Keys'.",
+            "evidence_refs": ["EV-0010", "EV-0011"]
+          },
+          {
+            "order_key": 2,
+            "name": "Criar nova chave",
+            "action": "Clicar para criar uma nova e dar um nome para ela.",
+            "evidence_refs": ["EV-0010", "EV-0011"]
+          },
+          {
+            "order_key": 3,
+            "name": "Selecionar o projeto",
+            "action": "Selecionar de qual projeto ela é.",
+            "evidence_refs": ["EV-0010"]
+          }
+        ],
+        "prerequisites": ["Na OpenAI precisa colocar 5 para poder gerar uma chave"]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0009"],
+      "claim_temp_refs": ["TC-014"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Copiar a chave de API do Groq no momento em que ela é exibida",
+        "trigger": "Após clicar em submit e o sistema exibir a chave de API no Groq",
+        "condition": "A chave só é visível nessa tela",
+        "action": "Copiar a chave imediatamente e colar em um bloco de notas para não esquecer",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0005"],
+      "claim_temp_refs": ["TC-008", "TC-009"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED", "PASSO_UNICO"],
+      "structure": {
+        "name": "Ativar o Redis Commander",
+        "trigger": "Após instalar o Redis no EasyPanel",
+        "condition": "Contexto de desenvolvimento ('é muito útil pro desenvolvimento')",
+        "action": "Ativar a opção do Redis Commander para visualizar, editar ou apagar os dados pelo navegador",
+        "do_not": [],
+        "precedence": null
+      }
+    }
+  ]
+}

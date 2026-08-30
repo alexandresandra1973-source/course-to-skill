@@ -1,0 +1,68 @@
+{
+ "artifacts": [
+  {
+   "entity_kind": "artifact",
+   "kind": "RAW_CAPTION",
+   "local_id": "ART-RAW-CAPTION",
+   "sha256": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+   "video_id": "dtAoZYMEzcM"
+  },
+  {
+   "end_s": 90.0,
+   "entity_kind": "artifact",
+   "kind": "CONTROLLED_SLICE",
+   "local_id": "ART-SL-B-01",
+   "resolves_to": {
+    "artifact_ref": {
+     "local_id": "ART-RAW-CAPTION",
+     "ref_scope": "SELF"
+    }
+   },
+   "slice_id": "SL-B-01",
+   "slice_text_sha256": "60d5da35e07209a053dbbb8cd91b7a6c6d64d6fb7f0c81be097d71fa50039113",
+   "start_s": 0.0,
+   "transcript_segment_ids": [
+    0,
+    41
+   ]
+  },
+  {
+   "end_s": 240.0,
+   "entity_kind": "artifact",
+   "kind": "CONTROLLED_SLICE",
+   "local_id": "ART-SL-B-02",
+   "resolves_to": {
+    "artifact_ref": {
+     "local_id": "ART-RAW-CAPTION",
+     "ref_scope": "SELF"
+    }
+   },
+   "slice_id": "SL-B-02",
+   "slice_text_sha256": "ac37fa83349fd1c4509b9fc478be5a223047a90f76a339ff3157dfea5089c1a7",
+   "start_s": 150.0,
+   "transcript_segment_ids": [
+    71,
+    112
+   ]
+  },
+  {
+   "end_s": 360.0,
+   "entity_kind": "artifact",
+   "kind": "CONTROLLED_SLICE",
+   "local_id": "ART-SL-B-03",
+   "resolves_to": {
+    "artifact_ref": {
+     "local_id": "ART-RAW-CAPTION",
+     "ref_scope": "SELF"
+    }
+   },
+   "slice_id": "SL-B-03",
+   "slice_text_sha256": "d03eaa3a6806cf7024d95b7de1edfc1a46698596f7dac767aabdacfb57df7731",
+   "start_s": 270.0,
+   "transcript_segment_ids": [
+    128,
+    169
+   ]
+  }
+ ]
+}

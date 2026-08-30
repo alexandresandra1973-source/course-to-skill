@@ -1,0 +1,268 @@
+{
+ "calls": [
+  {
+   "call_seq": 1,
+   "input_sha256": "a9c2a62b0117ae08f2be381154cac80d06659c7978c66ce00a07f6e3c5bef346",
+   "instrument_role": "EXTRACTOR_CONTROL",
+   "label": "EC",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "087e0f0f5b4eccc50c3471de78b83147da73b616f9e21f61d87ee079885c79df",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 3110,
+    "output": 1869
+   }
+  },
+  {
+   "call_seq": 2,
+   "input_sha256": "7ca697a20ff029ae794dbbf43d23224409293a5dba7a28e4d4c2fe1a1d3ae4bf",
+   "instrument_role": "ENTAILMENT_CONTROL",
+   "label": "JE",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "c413efe1aeff4237d88ad5f735a45acb2da4a87bcbb82a56def569578c0f5a3a",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 1993,
+    "output": 576
+   }
+  },
+  {
+   "call_seq": 3,
+   "input_sha256": "1ce9b73100699a52f76c39655594f16b25b0a8117ce1e92211e04437e428a0d1",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-01",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "68e635c5fe5958c7727a15eded76d3d96bd1eb38e058e5fe2d3c1810e1c730b7",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4306,
+    "output": 2468
+   }
+  },
+  {
+   "call_seq": 4,
+   "input_sha256": "ddce5e22981b27f28eb9d54b5c9df7518c6bf7dd5a360da1036eb319d86601be",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-02",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "1ba66c88470f72ac862fa31987e912a64dad7c98bb1c7c15cf62ec2b53a2b8ed",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4426,
+    "output": 4268
+   }
+  },
+  {
+   "call_seq": 5,
+   "input_sha256": "f4ab2c69df9ee7cf1430bc32ddfd66a65328a17d54da963b76c3f7cd254269e5",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-03",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "7e8f6be06a34140a1dbf58709f46da91c698ac5dc55d51e7c642c2a0a912332e",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4343,
+    "output": 3382
+   }
+  },
+  {
+   "call_seq": 6,
+   "input_sha256": "85d74c5e72afc8e6c3d8ab78edb4bbd0d707442c5b0a3076ae461fdf0bef0299",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-01",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "0cfe10802f8a1507188fa4f3e5a72679144d8c513c4a846db951e4c7e39668d3",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4299,
+    "output": 5579
+   }
+  },
+  {
+   "call_seq": 7,
+   "input_sha256": "6e82555df72a422ad3d90dfa55a73daa9c0ae7129159fa6d7872a002a68e8378",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-02",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "1eaec7ed51c7433c9537b16fc46d5fe733ef1b9b6dad6f938a47c181020dccd6",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4006,
+    "output": 3153
+   }
+  },
+  {
+   "call_seq": 8,
+   "input_sha256": "73213dd5c559d3d184f9232bdd2cba80904e5fd38e01b5c3ef0382077f2d1ba0",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-03",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "ac33a9dc557f1062960ce9f2adebf44cd165a5cdf1dcd81df0679896fb46013a",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4072,
+    "output": 4114
+   }
+  },
+  {
+   "call_seq": 9,
+   "input_sha256": "80ffeb0960027fb82f1a0dbe5fcd82ccc4be71253bc3fb6e34feda410975b88d",
+   "instrument_role": "ENTAILMENT_JUDGE",
+   "label": "MS001-SRC-B",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "bcf90cd0de4b50fa1b0b30f0b4cd832ccbae2d5e578c031c85a4683e09f9aaa8",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 11874,
+    "output": 3566
+   }
+  },
+  {
+   "call_seq": 10,
+   "input_sha256": "62301463e93481fabbb0b7cf809f10f8d24189f0f26af90ad7c325485111aa40",
+   "instrument_role": "ENTAILMENT_JUDGE",
+   "label": "MS001-SRC-C",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "a24450fef7b7afc663376752f286ba0566a9104dfac719518e47a7561eb6bef9",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 12394,
+    "output": 4153
+   }
+  }
+ ],
+ "classificacao": "PILOT_MS_001A_PASS",
+ "cross_source_eligible_candidate_population": {
+  "MS001-SRC-B": 8,
+  "MS001-SRC-C": 8
+ },
+ "cross_source_eligible_claim_population": {
+  "MS001-SRC-B": 30,
+  "MS001-SRC-C": 36
+ },
+ "executed_calls": 10,
+ "execution": "EXEC_2",
+ "gates": {
+  "both_complete": true,
+  "both_sealed": true,
+  "calls_within_cap": true,
+  "corpus_intact": true,
+  "invalid_provenance_zero": true,
+  "local_coherence": true,
+  "no_cross_source": true,
+  "sealed_claims_B": true,
+  "sealed_claims_C": true
+ },
+ "hard_cap": 10,
+ "packages": {
+  "MS001-SRC-B": {
+   "audit_claims": 0,
+   "completeness": "PASS",
+   "completeness_before_seal": "FAIL",
+   "eligibility": {
+    "ELIGIBLE_FOR_CROSS_SOURCE_DECISION": 8
+   },
+   "entailment": {
+    "ENTAILED": 30
+   },
+   "final_candidates": 8,
+   "final_claims": 30,
+   "invalid_provenance": 0,
+   "local_coherence": "PASS",
+   "members": 11,
+   "raw_candidates": 8,
+   "raw_claim_count": 30,
+   "raw_claims": 30,
+   "seal": "PASS",
+   "seal_record_hash": "fe68130c51cd161ac98f5bcd1a43ddcc1e92291fd567f5323f65fb197247caae",
+   "sealed_claims": 30,
+   "slices": [
+    "SL-B-01",
+    "SL-B-02",
+    "SL-B-03"
+   ],
+   "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f"
+  },
+  "MS001-SRC-C": {
+   "audit_claims": 3,
+   "completeness": "PASS",
+   "completeness_before_seal": "FAIL",
+   "eligibility": {
+    "ELIGIBLE_FOR_CROSS_SOURCE_DECISION": 8,
+    "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION": 4
+   },
+   "entailment": {
+    "ENTAILED": 36,
+    "NOT_ENTAILED": 3
+   },
+   "final_candidates": 12,
+   "final_claims": 39,
+   "invalid_provenance": 0,
+   "local_coherence": "PASS",
+   "members": 11,
+   "raw_candidates": 12,
+   "raw_claim_count": 39,
+   "raw_claims": 39,
+   "seal": "PASS",
+   "seal_record_hash": "672d2105a74a502bb87403b54c2e0719a99e3a33153c56e0ebb5dab864cb7563",
+   "sealed_claims": 36,
+   "slices": [
+    "SL-C-01",
+    "SL-C-02",
+    "SL-C-03"
+   ],
+   "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2"
+  }
+ },
+ "portoes_falhos": []
+}

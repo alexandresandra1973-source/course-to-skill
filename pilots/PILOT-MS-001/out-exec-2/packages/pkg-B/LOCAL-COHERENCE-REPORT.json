@@ -1,0 +1,15 @@
+{
+ "NO_CROSS_SOURCE_REF_ALLOWED": true,
+ "SEMANTIC_CROSS_SOURCE_COHERENCE_NOT_EVALUATED_IN_MS_001A": true,
+ "artifact_id": "MS001A-LOCAL-COHERENCE-MS001-SRC-B",
+ "counts": {
+  "anchors": 33,
+  "audit_claims": 0,
+  "candidates": 8,
+  "evidence": 33,
+  "sealed_claims": 30
+ },
+ "findings": [],
+ "kind": "MECHANICAL_ONLY",
+ "mechanically_coherent": true
+}

@@ -1,0 +1,15 @@
+{
+ "bounded_to": "MS001-SRC-B",
+ "nota": "enumera SO o proprio pacote. filesystem scan != corpus audit.",
+ "referenced": [
+  "ARCHITECTURE-FREEZE 6d0eb7dd",
+  "IDENTITY-ERRATA 2f8232f6",
+  "DR-MS-001-INDEP-001",
+  "OPENING-RECORD-MS-001A-EXEC-2"
+ ],
+ "slices": [
+  "SL-B-01",
+  "SL-B-02",
+  "SL-B-03"
+ ]
+}

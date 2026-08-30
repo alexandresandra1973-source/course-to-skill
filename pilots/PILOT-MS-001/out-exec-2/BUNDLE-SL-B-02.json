@@ -1,0 +1,364 @@
+{
+ "raw_candidates": [
+  {
+   "_slice_id": "SL-B-02",
+   "claim_refs_applicability": "APPLICABLE",
+   "claim_temp_refs": [
+    "TC-003",
+    "TC-004"
+   ],
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0014",
+    "EV-0015"
+   ],
+   "structure": {
+    "action": "Pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão",
+    "condition": "Se você vai usar muito, muito, muito",
+    "do_not": [],
+    "name": "Escolher peça melhor (NVMe quatro) quando o uso for muito intenso",
+    "precedence": null,
+    "trigger": "Escolha do plano de servidor"
+   },
+   "temporary_candidate_id": "TX-001"
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "claim_refs_applicability": "APPLICABLE",
+   "claim_temp_refs": [
+    "TC-009"
+   ],
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "structure": {
+    "action": "Manter o servidor em São Paulo; estando fora do Brasil, verificar o do México",
+    "condition": "Se estiver no Brasil, São Paulo é o mais próximo; se estiver fora do Brasil, verificar se o do México chega a ser mais próximo",
+    "do_not": [],
+    "exceptions": [
+     "Estar fora do Brasil: verificar se o do México é mais próximo"
+    ],
+    "name": "Manter o servidor em São Paulo, ou verificar México se estiver fora do Brasil",
+    "precedence": null,
+    "trigger": "Conferência do pedido no carrinho"
+   },
+   "temporary_candidate_id": "TX-002"
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "claim_refs_applicability": "APPLICABLE",
+   "claim_temp_refs": [
+    "TC-008"
+   ],
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0018",
+    "EV-0019"
+   ],
+   "structure": {
+    "action": "Conferir se está tudo certo: se o plano está correto e se está Evolution API",
+    "condition": "Antes de continuar para verificação",
+    "do_not": [],
+    "name": "Conferir o pedido antes de prosseguir",
+    "precedence": null,
+    "trigger": "Ao vir em continuar para carrinho"
+   },
+   "temporary_candidate_id": "TX-003"
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "claim_refs_applicability": "APPLICABLE",
+   "claim_temp_refs": [
+    "TC-005",
+    "TC-006",
+    "TC-007",
+    "TC-008",
+    "TC-009",
+    "TC-010",
+    "TC-011"
+   ],
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0016",
+    "EV-0017",
+    "EV-0018",
+    "EV-0019",
+    "EV-0020",
+    "EV-0021",
+    "EV-0022"
+   ],
+   "structure": {
+    "name": "Contratação do plano até a tela de pagamento",
+    "steps": [
+     {
+      "action": "Escolher aqui o plano; no exemplo, pega o nível NVMe dois, para usar só uma instância mesmo",
+      "evidence_refs": [
+       "EV-0015",
+       "EV-0016"
+      ],
+      "name": "Escolher o plano",
+      "order_key": 1
+     },
+     {
+      "action": "Ver o plano de um mês por 54,98 por mês ou, a partir de um ano, a promoção de 27,89 o mês; ir no ano, que depois pode dividir",
+      "evidence_refs": [
+       "EV-0016",
+       "EV-0017"
+      ],
+      "name": "Escolher o período do plano",
+      "order_key": 2
+     },
+     {
+      "action": "Vir em continuar para carrinho e conferir se está tudo certo, se o plano está correto e se está Evolution API",
+      "evidence_refs": [
+       "EV-0018",
+       "EV-0019"
+      ],
+      "name": "Continuar para carrinho e conferir",
+      "order_key": 3
+     },
+     {
+      "action": "Manter o servidor em São Paulo, que é o mais próximo no Brasil; se estiver fora do Brasil, ver se o do México chega a ser mais próximo",
+      "evidence_refs": [
+       "EV-0019",
+       "EV-0020"
+      ],
+      "name": "Definir o servidor",
+      "order_key": 4
+     },
+     {
+      "action": "Depois de conferir, vir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google",
+      "evidence_refs": [
+       "EV-0020",
+       "EV-0021"
+      ],
+      "name": "Continuar para verificação e entrar na conta",
+      "order_key": 5
+     },
+     {
+      "action": "Fazer o login, preencher os dados pedidos e cair na tela de pagamento, podendo selecionar cartão de crédito",
+      "evidence_refs": [
+       "EV-0021",
+       "EV-0022"
+      ],
+      "name": "Preencher dados e chegar ao pagamento",
+      "order_key": 6
+     }
+    ]
+   },
+   "temporary_candidate_id": "TX-004"
+  }
+ ],
+ "raw_claims": [
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "opção de alto desempenho caso queira algo mais parrudo",
+    "platform": null,
+    "scope": "tipos de servidores exibidos na tela de escolha",
+    "stage": "escolha do servidor"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-001",
+   "text": "Os tipos de servidores mostrados incluem os padrões de dois, quatro e oito, e também existe opção de alto desempenho caso a pessoa queira algo mais parrudo."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0013",
+    "EV-0014"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution",
+    "scope": "capacidade anunciada do plano com Evolution pré-instalada",
+    "stage": "escolha do plano"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-002",
+   "text": "A oferta indica \"Evolution pré-instalada e cabe até 20 números de WhatsApp\", ou seja, é possível conectar até 20 números de WhatsApp sem problema."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0014"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "depende da forma de utilização",
+    "platform": null,
+    "scope": "uso dos números de WhatsApp conectados",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-003",
+   "text": "A capacidade de conexão depende também da forma que a pessoa vai utilizar."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0014",
+    "EV-0015"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "se for usar muito, muito, muito",
+    "platform": null,
+    "scope": "escolha do plano de servidor",
+    "stage": "escolha do plano"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-004",
+   "text": "Se for usar muito, muito, muito, é legal pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0016"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "vai usar só uma instância",
+    "platform": null,
+    "scope": "exemplo de escolha feito na demonstração",
+    "stage": "escolha do plano"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-005",
+   "text": "No exemplo demonstrado o autor pega o nível NVMe dois, porque vai usar só uma instância mesmo."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "promoção a partir de um ano de contratação",
+    "platform": null,
+    "scope": "preços exibidos para o plano escolhido no exemplo",
+    "stage": "escolha do período do plano"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-006",
+   "text": "O plano de um mês custa 54,98 por mês, e a partir de um ano há uma promoção de 27,89 o mês."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": null,
+    "scope": "escolha do período do plano",
+    "stage": "escolha do período do plano"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-007",
+   "text": "O autor recomenda ir no plano anual, dizendo que depois é possível dividir e que fica legal."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0018",
+    "EV-0019"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "tela do carrinho",
+    "stage": "carrinho"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-008",
+   "text": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "se estiver fora do Brasil, verificar se o do México é mais próximo",
+    "platform": null,
+    "scope": "escolha da localidade do servidor no carrinho",
+    "stage": "carrinho"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-009",
+   "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0020",
+    "EV-0021"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "HostGator",
+    "scope": "etapa de verificação/login",
+    "stage": "verificação"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-010",
+   "text": "Depois de conferir, deve-se ir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google."
+  },
+  {
+   "_slice_id": "SL-B-02",
+   "evidence_refs": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "HostGator",
+    "scope": "tela de pagamento",
+    "stage": "pagamento"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-011",
+   "text": "Após fazer o login e preencher os dados pedidos, chega-se à tela de pagamento, onde é possível selecionar cartão de crédito."
+  }
+ ],
+ "slice_id": "SL-B-02",
+ "source_id": "MS001-SRC-B"
+}

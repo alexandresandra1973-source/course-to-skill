@@ -1,0 +1,212 @@
+{
+ "raw_candidates": [
+  {
+   "_slice_id": "SL-B-01",
+   "claim_refs_applicability": "APPLICABLE",
+   "claim_temp_refs": [
+    "TC-008",
+    "TC-009"
+   ],
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "structure": {
+    "action": "Hospedar o Evolution API em uma VPS",
+    "condition": "Para que o Evolution API fique funcionando 24 horas por dia",
+    "do_not": [],
+    "name": "Hospedar o Evolution API em uma VPS",
+    "precedence": null,
+    "prerequisites": [],
+    "trigger": "Ao montar a stack que usa o Evolution API"
+   },
+   "temporary_candidate_id": "TX-001"
+  }
+ ],
+ "raw_claims": [
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0001"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "WhatsApp / Cloud Code",
+    "scope": "gerenciamento de vários grupos de WhatsApp",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-001",
+   "text": "O vídeo mostra como gerenciar vários grupos de WhatsApp utilizando o Cloud Code."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0001",
+    "EV-0002",
+    "EV-0003"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "WhatsApp",
+    "scope": "ações de gerenciamento de grupos de WhatsApp",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-002",
+   "text": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0004",
+    "EV-0005",
+    "EV-0006"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "stack do gerenciador de grupos",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-003",
+   "text": "Na stack do gerenciador de grupos, o Cloud Code é o orquestrador, é com ele que o autor conversa e pede para fazer determinadas ações."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0006"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API / WhatsApp",
+    "scope": "conexão entre Cloud Code e Evolution API",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-004",
+   "text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0007"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API / WhatsApp Web",
+    "scope": "conexão do número de WhatsApp",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-005",
+   "text": "Através do Evolution API é possível conectar o número do WhatsApp como se fosse um WhatsApp Web."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "por ser API não oficial",
+    "platform": "WhatsApp",
+    "scope": "custo de API",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-006",
+   "text": "Por ser API não oficial, não se paga por API oficial."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "após escanear e conforme permissão dada e pedidos feitos",
+    "platform": "Cloud Code / WhatsApp",
+    "scope": "acesso do Cloud Code ao WhatsApp",
+    "stage": "após escanear"
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-007",
+   "text": "Após escanear, o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e que se pedir que ele faça."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "hospedagem e custo do Evolution API",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-008",
+   "text": "O Evolution API precisa ser hospedado em algum lugar; ele é gratuito e open source, não se paga por nada."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0010"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": "para ficar funcionando 24 horas por dia",
+    "platform": "Evolution API / VPS",
+    "scope": "hospedagem do Evolution API",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-009",
+   "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia."
+  },
+  {
+   "_slice_id": "SL-B-01",
+   "evidence_refs": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "HostGator VPS",
+    "scope": "escolha de VPS usada pelo autor",
+    "stage": null
+   },
+   "source_language": "pt",
+   "status": "SOURCE_EXPLICIT",
+   "temporary_claim_id": "TC-010",
+   "text": "A VPS que o autor utiliza é a da HostGator, que já tem a função de pré-instalar."
+  }
+ ],
+ "slice_id": "SL-B-01",
+ "source_id": "MS001-SRC-B"
+}

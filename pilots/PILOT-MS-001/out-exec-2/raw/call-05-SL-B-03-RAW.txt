@@ -1,0 +1,211 @@
+{
+  "source_id": "MS001-SRC-B",
+  "slice_id": "SL-B-03",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "No portal aparece o servidor do usuário e, em acesso rápido, é possível abrir o console ou clicar no Evolution API direto.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0023", "EV-0024"],
+      "qualifiers": {
+        "scope": "portal do provedor de VPS",
+        "condition": null,
+        "platform": "portal",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Clicando em gerenciar, o usuário consegue ver mais detalhes da sua VPS.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0024", "EV-0025"],
+      "qualifiers": {
+        "scope": "portal do provedor de VPS",
+        "condition": null,
+        "platform": "portal",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Ao clicar em Evolution API, abre uma página que aparenta ser um erro, mas não é erro: é porque se deve digitar barra manager no final.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0025", "EV-0026"],
+      "qualifiers": {
+        "scope": "acesso ao Evolution API pelo portal",
+        "condition": "quando a página aberta aparenta erro",
+        "platform": "Evolution API",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Após digitar barra manager no final, o usuário de fato acessa a página.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0026", "EV-0027"],
+      "qualifiers": {
+        "scope": "acesso ao Evolution API",
+        "condition": null,
+        "platform": "Evolution API",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0027", "EV-0028"],
+      "qualifiers": {
+        "scope": "diferença entre a tela do apresentador e a do espectador",
+        "condition": "primeiro acesso",
+        "platform": "Evolution API",
+        "stage": "primeiro acesso",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "No primeiro acesso o usuário deve colocar a chave de API global que está no seu Gmail, colar e conectar.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0028", "EV-0029"],
+      "qualifiers": {
+        "scope": "tela de primeiro acesso do Evolution API",
+        "condition": "no primeiro acesso",
+        "platform": "Evolution API",
+        "stage": "primeiro acesso",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0029", "EV-0030"],
+      "qualifiers": {
+        "scope": "após conectar com a chave de API global",
+        "condition": null,
+        "platform": "Evolution API",
+        "stage": "próxima etapa",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0030", "EV-0031"],
+      "qualifiers": {
+        "scope": "criação de instância no Evolution API",
+        "condition": null,
+        "platform": "Evolution API",
+        "stage": "criar instância",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "Com a instância aparecendo como desconectado, o usuário vai em configurações e gera QR Code, que deve ser escaneado pelo celular como se fosse um WhatsApp Web.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0031", "EV-0032", "EV-0033"],
+      "qualifiers": {
+        "scope": "conexão do número do WhatsApp à instância",
+        "condition": "quando a instância aparece como desconectado",
+        "platform": "Evolution API",
+        "stage": "conectar número do WhatsApp",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0025", "EV-0026"],
+      "claim_temp_refs": ["TC-003", "TC-004"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Adicionar barra manager no final quando a página do Evolution API parece erro",
+        "trigger": "Ao clicar em Evolution API e abrir a página",
+        "condition": "Aparece algo que parece um erro, mas não é erro",
+        "action": "Digitar barra manager no final para de fato acessar",
+        "do_not": ["Tratar a página que aparenta erro como um erro"],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0028", "EV-0029"],
+      "claim_temp_refs": ["TC-006"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Usar a chave de API global do Gmail no primeiro acesso",
+        "trigger": "Tela de primeiro acesso do Evolution API",
+        "condition": "No primeiro acesso",
+        "action": "Colar a chave de API global que está no Gmail e clicar em conectar",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0023", "EV-0024", "EV-0025", "EV-0026", "EV-0028", "EV-0029", "EV-0030", "EV-0031", "EV-0032", "EV-0033"],
+      "claim_temp_refs": ["TC-001", "TC-003", "TC-004", "TC-006", "TC-007", "TC-008", "TC-009"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Acessar o Evolution API pelo portal, criar instância e conectar o número do WhatsApp",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Abrir o Evolution API pelo acesso rápido",
+            "action": "No portal, no acesso rápido do servidor, clicar em Evolution API",
+            "evidence_refs": ["EV-0023", "EV-0024", "EV-0025"]
+          },
+          {
+            "order_key": 2,
+            "name": "Digitar barra manager no final",
+            "action": "Na página que abre e aparenta um erro, digitar barra manager no final para de fato acessar",
+            "evidence_refs": ["EV-0026"]
+          },
+          {
+            "order_key": 3,
+            "name": "Conectar com a chave de API global",
+            "action": "Na tela de primeiro acesso, colar a chave de API global que está no Gmail e clicar em conectar",
+            "required_inputs": ["chave de API global que está no Gmail"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0028", "EV-0029"]
+          },
+          {
+            "order_key": 4,
+            "name": "Criar a instância",
+            "action": "Clicar em instância, colocar algum nome (por exemplo YouTube teste) e clicar em salvar; aparece como desconectado",
+            "evidence_refs": ["EV-0030", "EV-0031"]
+          },
+          {
+            "order_key": 5,
+            "name": "Gerar e escanear o QR Code",
+            "action": "Ir em configurações, gerar QR Code e escanear pelo celular como se fosse um WhatsApp Web",
+            "evidence_refs": ["EV-0032", "EV-0033"]
+          }
+        ]
+      }
+    }
+  ]
+}

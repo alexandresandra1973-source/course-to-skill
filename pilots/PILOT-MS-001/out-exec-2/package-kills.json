@@ -1,0 +1,58 @@
+[
+ {
+  "completeness": "PASS",
+  "desc": "mutacao de CLAIM",
+  "hash_changed": true,
+  "kill": "PK1",
+  "ok": true,
+  "seal": "FAIL"
+ },
+ {
+  "completeness": "PASS",
+  "desc": "mutacao de CANDIDATE",
+  "hash_changed": true,
+  "kill": "PK2",
+  "ok": true,
+  "seal": "FAIL"
+ },
+ {
+  "completeness": "PASS",
+  "desc": "mutacao identity-relevant do COMPILE-TRACE",
+  "hash_changed": true,
+  "kill": "PK3",
+  "ok": true,
+  "seal": "FAIL"
+ },
+ {
+  "completeness": "PASS",
+  "desc": "mutacao de EVIDENCE",
+  "hash_changed": true,
+  "kill": "PK4",
+  "ok": true,
+  "seal": "FAIL"
+ },
+ {
+  "completeness": "FAIL",
+  "desc": "membro obrigatorio ausente",
+  "hash_changed": true,
+  "kill": "PK5",
+  "ok": true,
+  "seal": "FAIL"
+ },
+ {
+  "completeness": "FAIL",
+  "desc": "sem SEAL-RECORD",
+  "hash_changed": false,
+  "kill": "PK6",
+  "ok": true,
+  "seal": "INVALID"
+ },
+ {
+  "completeness": "-",
+  "desc": "package REAL nao modificado",
+  "hash_changed": false,
+  "kill": "PK7",
+  "ok": true,
+  "seal": "-"
+ }
+]

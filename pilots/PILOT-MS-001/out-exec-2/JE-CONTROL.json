@@ -1,0 +1,74 @@
+{
+ "checks": {
+  "CL-9201": {
+   "expected": "ENTAILED",
+   "got": "ENTAILED",
+   "ok": true
+  },
+  "CL-9202": {
+   "expected": "NOT_ENTAILED",
+   "got": "NOT_ENTAILED",
+   "ok": true
+  },
+  "CL-9203": {
+   "expected": "NOT_ENTAILED",
+   "got": "NOT_ENTAILED",
+   "ok": true
+  },
+  "CL-9204": {
+   "expected": "INDETERMINATE",
+   "got": "INDETERMINATE",
+   "ok": true
+  },
+  "CL-9205": {
+   "expected": "NOT_ENTAILED",
+   "got": "NOT_ENTAILED",
+   "ok": true
+  }
+ },
+ "parsed": {
+  "source_id": "FIXTURE",
+  "verdicts": [
+   {
+    "claim_id": "CL-9201",
+    "entail_why": "A Evidence afirma diretamente que o sistema exige autenticacao por token antes de aceitar a requisicao, cobrindo integralmente a Claim.",
+    "evidence_refs_checked": [
+     "EV-9201"
+    ],
+    "judgment": "ENTAILED"
+   },
+   {
+    "claim_id": "CL-9202",
+    "entail_why": "A Evidence restringe a suficiencia a quem esta comecando e usa 'costuma ser', enquanto a Claim generaliza para todos os usuarios de forma absoluta.",
+    "evidence_refs_checked": [
+     "EV-9202"
+    ],
+    "judgment": "NOT_ENTAILED"
+   },
+   {
+    "claim_id": "CL-9203",
+    "entail_why": "A Evidence trata da configuracao de servico Redis (nome e senha), assunto diferente da exigencia de autenticacao por chave global na Evolution API.",
+    "evidence_refs_checked": [
+     "EV-9203"
+    ],
+    "judgment": "NOT_ENTAILED"
+   },
+   {
+    "claim_id": "CL-9204",
+    "entail_why": "A Evidence declara explicitamente que nao esta definido se o recurso X e obrigatorio ou opcional neste cenario, deixando a questao em aberto.",
+    "evidence_refs_checked": [
+     "EV-9204"
+    ],
+    "judgment": "INDETERMINATE"
+   },
+   {
+    "claim_id": "CL-9205",
+    "entail_why": "A Evidence apenas diz que a Evolution API pode ser executada em uma VPS e e silenciosa sobre qualquer requisito de 4 GB de RAM.",
+    "evidence_refs_checked": [
+     "EV-9205"
+    ],
+    "judgment": "NOT_ENTAILED"
+   }
+  ]
+ }
+}

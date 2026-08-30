@@ -1,0 +1,339 @@
+{
+ "source_id": "MS001-SRC-C",
+ "verdicts": [
+  {
+   "claim_id": "CL-0001",
+   "entail_why": "EV-0029 e EV-0030 juntas afirmam que a terceira peça são as ferramentas que o agente pode utilizar, com os exemplos pesquisar na internet, alterar planilhas e buscar em um banco de dados.",
+   "evidence_refs_checked": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0002",
+   "entail_why": "EV-0006 e EV-0007 dizem que o próximo passo é pegar uma chave de api do grock, da Open ai ou de qualquer outro que você tiver.",
+   "evidence_refs_checked": [
+    "EV-0006",
+    "EV-0007"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0003",
+   "entail_why": "EV-0009 termina em 'clica em submit e agora ele vai', não afirmando que o sistema dá a chave nem que é preciso copiá-la naquele momento.",
+   "evidence_refs_checked": [
+    "EV-0009"
+   ],
+   "judgment": "NOT_ENTAILED"
+  },
+  {
+   "claim_id": "CL-0004",
+   "entail_why": "EV-0005 descreve o Reds Commander como painel de gerenciamento do Reds e EV-0006 completa que nele se pode visualizar, editar ou apagar dados pelo navegador.",
+   "evidence_refs_checked": [
+    "EV-0005",
+    "EV-0006"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0005",
+   "entail_why": "EV-0018 sustenta voltar ao n8n e clicar para ouvir um evento de teste, mas é cortada antes de dizer que se envia uma mensagem para si mesmo no WhatsApp.",
+   "evidence_refs_checked": [
+    "EV-0018"
+   ],
+   "judgment": "NOT_ENTAILED"
+  },
+  {
+   "claim_id": "CL-0006",
+   "entail_why": "EV-0012 diz que é preciso copiar agora e salvar num bloco de notas porque ao sair dessa tela não tem mais como, e EV-0013 completa com 'ver'.",
+   "evidence_refs_checked": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0007",
+   "entail_why": "EV-0030 afirma literalmente que a quarta peça é o agente em si, onde se colocam as instruções do que ele deve fazer.",
+   "evidence_refs_checked": [
+    "EV-0030"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0008",
+   "entail_why": "EV-0002 e EV-0003 dizem que para instalar você vai no eas panel e clica no maizinho para adicionar um novo serviço no seu projeto.",
+   "evidence_refs_checked": [
+    "EV-0002",
+    "EV-0003"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0009",
+   "entail_why": "EV-0023 e EV-0024 juntas dizem que o ID da mensagem fica em B data Key id.",
+   "evidence_refs_checked": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0010",
+   "entail_why": "EV-0023 afirma que a mensagem fica em Body data message conversation.",
+   "evidence_refs_checked": [
+    "EV-0023"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0011",
+   "entail_why": "EV-0017 afirma clicar na sessão na Evolution, vir em events web Hook e colar o URL ali.",
+   "evidence_refs_checked": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0012",
+   "entail_why": "EV-0027 e EV-0028 dizem que a primeira peça é o modelo de Inteligência Artificial que ele usa e que o modelo é como se fosse o cérebro do agente.",
+   "evidence_refs_checked": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0013",
+   "entail_why": "EV-0022 define o campo quem mandou como onde se salva o número da pessoa que mandou a mensagem e EV-0023 completa que fica dentro de body data Key remote JD.",
+   "evidence_refs_checked": [
+    "EV-0022",
+    "EV-0023"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0014",
+   "entail_why": "EV-0028 e EV-0029 dizem que a segunda peça é a memória de chat, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+   "evidence_refs_checked": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0015",
+   "entail_why": "EV-0013 diz que antes de criar o workflow no n8n deve-se vir em settings community nodes e ver se os nodes da Evolution api estão instalados.",
+   "evidence_refs_checked": [
+    "EV-0013"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0016",
+   "entail_why": "EV-0027 afirma que o agente de a é composto por quatro peças.",
+   "evidence_refs_checked": [
+    "EV-0027"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0017",
+   "entail_why": "EV-0014 diz que se você não tiver é só clicar em Install, digitar n8n nodes Evolution api e depois clicar em instalar.",
+   "evidence_refs_checked": [
+    "EV-0014"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0018",
+   "entail_why": "EV-0025 instrui a renomear esse node para dados.",
+   "evidence_refs_checked": [
+    "EV-0025"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0019",
+   "entail_why": "EV-0019 e EV-0020 afirmam que dos dados que vêm no web Hook sempre se adiciona um node set depois do Web Hook para organizá-los de forma melhor.",
+   "evidence_refs_checked": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0020",
+   "entail_why": "EV-0007 e EV-0008 dizem que ele apresenta o grock como uma opção porque o grock é gratuito.",
+   "evidence_refs_checked": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0021",
+   "entail_why": "EV-0002 afirma que ele é ideal para essas operações que nós vamos fazer.",
+   "evidence_refs_checked": [
+    "EV-0002"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0022",
+   "entail_why": "EV-0001 e EV-0002 dizem que nele se pode configurar dados que vão ter um tempo de vida.",
+   "evidence_refs_checked": [
+    "EV-0001",
+    "EV-0002"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0023",
+   "entail_why": "EV-0004 e EV-0005 sustentam clicar em criar e o Reds ficar instalado no eas panel, mas nenhuma evidência menciona 'depois de preencher os campos'.",
+   "evidence_refs_checked": [
+    "EV-0004",
+    "EV-0005"
+   ],
+   "judgment": "NOT_ENTAILED"
+  },
+  {
+   "claim_id": "CL-0024",
+   "entail_why": "EV-0024 e EV-0025 dizem que ao clicar em teste aquele monte de coisa virou só esses cinco.",
+   "evidence_refs_checked": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0025",
+   "entail_why": "EV-0024 afirma que o nome da pessoa fica em Body data push name.",
+   "evidence_refs_checked": [
+    "EV-0024"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0026",
+   "entail_why": "EV-0009 descreve vir em API Case do lado esquerdo, criar uma nova, dar nome, marcar a caixinha e clicar em submit.",
+   "evidence_refs_checked": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0027",
+   "entail_why": "EV-0008 diz que no site do grock você vem em Dev console no cantinho e faz login com o Google (completado pelo trecho).",
+   "evidence_refs_checked": [
+    "EV-0008"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0028",
+   "entail_why": "EV-0003 diz que o ris fica aqui em cima nessa opção redis, clica aqui e coloca um nome pro serviço.",
+   "evidence_refs_checked": [
+    "EV-0003"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0029",
+   "entail_why": "EV-0010 e EV-0011 afirmam que na Open ai precisa colocar 5 para poder gerar uma chave.",
+   "evidence_refs_checked": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0030",
+   "entail_why": "EV-0001 afirma que o Reds é um banco de dados não relacional que utiliza chaves e valores para guardar os dados.",
+   "evidence_refs_checked": [
+    "EV-0001"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0031",
+   "entail_why": "EV-0023 afirma que a Instância fica em Body instance.",
+   "evidence_refs_checked": [
+    "EV-0023"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0032",
+   "entail_why": "EV-0005 instrui ativar a opção do Reds Commander porque ele é muito útil pro desenvolvimento.",
+   "evidence_refs_checked": [
+    "EV-0005"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0033",
+   "entail_why": "EV-0003 e EV-0004 dizem que ele vai deixar a senha em branco para gerar uma aleatória e não vai mexer na versão.",
+   "evidence_refs_checked": [
+    "EV-0003",
+    "EV-0004"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0034",
+   "entail_why": "EV-0025 e EV-0026 dizem que antes de criar o agente de a coloca-se um set vazio porque isso vai ser melhor pra gente no futuro.",
+   "evidence_refs_checked": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0035",
+   "entail_why": "EV-0017 e EV-0018 mencionam enabled, base 64 e o evento messages up search, que as três opções têm que estar ativas e clicar em salvar.",
+   "evidence_refs_checked": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0036",
+   "entail_why": "EV-0021 e EV-0022 listam os cinco campos: quem mandou (número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+   "evidence_refs_checked": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0037",
+   "entail_why": "EV-0026 e EV-0027 dizem que depois desse set vazio pode colocar o ai Agent e fazer as configurações dele.",
+   "evidence_refs_checked": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0038",
+   "entail_why": "EV-0016 diz que para começar adiciona um node de web Hook, configura o método dele como post e copia o URL de teste.",
+   "evidence_refs_checked": [
+    "EV-0016"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0039",
+   "entail_why": "EV-0010 descreve vir nas configurações api Keys, clicar para criar uma nova, dar um nome e selecionar de qual projeto ela é.",
+   "evidence_refs_checked": [
+    "EV-0010"
+   ],
+   "judgment": "ENTAILED"
+  }
+ ]
+}

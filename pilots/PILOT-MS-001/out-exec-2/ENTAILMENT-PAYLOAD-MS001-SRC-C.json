@@ -1,0 +1,753 @@
+[
+ {
+  "claim": "A terceira peça são as ferramentas que o agente pode utilizar, por exemplo pesquisar na internet, alterar planilhas e buscar em um banco de dados.",
+  "claim_id": "CL-0001",
+  "evidence": [
+   {
+    "evidence_id": "EV-0029",
+    "excerpt": "alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo pesquisar na internet alterar planilhas"
+   },
+   {
+    "evidence_id": "EV-0030",
+    "excerpt": "buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve fazer e com base nessas instruções ele"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "O próximo passo é pegar uma chave de API do Groq ('grock'), da OpenAI ou de qualquer outro que você tiver.",
+  "claim_id": "CL-0002",
+  "evidence": [
+   {
+    "evidence_id": "EV-0006",
+    "excerpt": "pode visualizar os dados que tem lá dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock"
+   },
+   {
+    "evidence_id": "EV-0007",
+    "excerpt": "ou da Open a ou de qualquer outro que você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq / OpenAI / outro provedor",
+   "scope": null,
+   "stage": "após instalar o Redis"
+  }
+ },
+ {
+  "claim": "Depois de submeter, o sistema dá a chave e você precisa copiá-la naquele momento.",
+  "claim_id": "CL-0003",
+  "evidence": [
+   {
+    "evidence_id": "EV-0009",
+    "excerpt": "Google e aqui do lado esquerdo Você vai vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  }
+ },
+ {
+  "claim": "O Redis Commander é um painel de gerenciamento do Redis no qual você pode visualizar os dados que estão lá dentro e editar ou apagar através do navegador.",
+  "claim_id": "CL-0004",
+  "evidence": [
+   {
+    "evidence_id": "EV-0005",
+    "excerpt": "instalado no eas panel ativa essa opção do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você"
+   },
+   {
+    "evidence_id": "EV-0006",
+    "excerpt": "pode visualizar os dados que tem lá dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Redis Commander",
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "De volta ao n8n, clica-se para ouvir um evento de teste e envia-se uma mensagem para si mesmo no WhatsApp.",
+  "claim_id": "CL-0005",
+  "evidence": [
+   {
+    "evidence_id": "EV-0018",
+    "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "n8n",
+   "scope": null,
+   "stage": "teste do webhook"
+  }
+ },
+ {
+  "claim": "É preciso copiar a chave/credencial e salvar num bloco de notas assim que ela é exibida, porque ao sair dessa tela não há mais como vê-la.",
+  "claim_id": "CL-0006",
+  "evidence": [
+   {
+    "evidence_id": "EV-0012",
+    "excerpt": "faz parte e clica em criar aqui é a mesma coisa você precisa copiar ela agora e salvar num bloco de notas porque quando sair dessa tela não tem mais como"
+   },
+   {
+    "evidence_id": "EV-0013",
+    "excerpt": "ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "antes de sair da tela",
+   "platform": "Evolution api",
+   "scope": "tela de criação da credencial",
+   "stage": "criação da credencial"
+  }
+ },
+ {
+  "claim": "A quarta peça é o agente em si, onde você coloca as instruções do que ele deve fazer.",
+  "claim_id": "CL-0007",
+  "evidence": [
+   {
+    "evidence_id": "EV-0030",
+    "excerpt": "buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve fazer e com base nessas instruções ele"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto.",
+  "claim_id": "CL-0008",
+  "evidence": [
+   {
+    "evidence_id": "EV-0002",
+    "excerpt": "vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo"
+   },
+   {
+    "evidence_id": "EV-0003",
+    "excerpt": "serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel",
+   "scope": null,
+   "stage": "instalação"
+  }
+ },
+ {
+  "claim": "O ID da mensagem fica em B data Key id.",
+  "claim_id": "CL-0009",
+  "evidence": [
+   {
+    "evidence_id": "EV-0023",
+    "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B"
+   },
+   {
+    "evidence_id": "EV-0024",
+    "excerpt": "data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e agora veja que aquele monte de coisa"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "A mensagem fica em Body data message conversation.",
+  "claim_id": "CL-0010",
+  "evidence": [
+   {
+    "evidence_id": "EV-0023",
+    "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Na Evolution, clica-se na sessão, vai-se em events webhook e cola-se o URL ali.",
+  "claim_id": "CL-0011",
+  "evidence": [
+   {
+    "evidence_id": "EV-0016",
+    "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na"
+   },
+   {
+    "evidence_id": "EV-0017",
+    "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution api",
+   "scope": null,
+   "stage": "configuração do webhook"
+  }
+ },
+ {
+  "claim": "A primeira peça do agente é o modelo de Inteligência Artificial que ele usa; o modelo é como se fosse o cérebro do agente.",
+  "claim_id": "CL-0012",
+  "evidence": [
+   {
+    "evidence_id": "EV-0027",
+    "excerpt": "configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência Artificial que ele usa o modelo é como"
+   },
+   {
+    "evidence_id": "EV-0028",
+    "excerpt": "se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um histórico de mensagens que ele teve com"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "O campo quem mandou, onde se salva o número da pessoa que mandou a mensagem, fica dentro de body data Key remote JD.",
+  "claim_id": "CL-0013",
+  "evidence": [
+   {
+    "evidence_id": "EV-0022",
+    "excerpt": "mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o número da pessoa que mandou a mensagem"
+   },
+   {
+    "evidence_id": "EV-0023",
+    "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+  "claim_id": "CL-0014",
+  "evidence": [
+   {
+    "evidence_id": "EV-0028",
+    "excerpt": "se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um histórico de mensagens que ele teve com"
+   },
+   {
+    "evidence_id": "EV-0029",
+    "excerpt": "alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo pesquisar na internet alterar planilhas"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Antes de criar o workflow no n8n, deve-se ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados.",
+  "claim_id": "CL-0015",
+  "evidence": [
+   {
+    "evidence_id": "EV-0013",
+    "excerpt": "ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "n8n",
+   "scope": "antes de criar o workflow",
+   "stage": "preparação"
+  }
+ },
+ {
+  "claim": "O agente de IA é composto por quatro peças.",
+  "claim_id": "CL-0016",
+  "evidence": [
+   {
+    "evidence_id": "EV-0027",
+    "excerpt": "configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência Artificial que ele usa o modelo é como"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Se os nodes da Evolution api não estiverem instalados, deve-se clicar em Install, digitar 'n8n nodes Evolution api' e depois clicar em instalar.",
+  "claim_id": "CL-0017",
+  "evidence": [
+   {
+    "evidence_id": "EV-0014",
+    "excerpt": "se você não tiver é só clicar em Install e digitar n8n nodes Evolution api e depois clicar em instalar Beleza então vamos aqui no menu principal criar um"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "se você não tiver os nodes instalados",
+   "platform": "n8n",
+   "scope": null,
+   "stage": "preparação"
+  }
+ },
+ {
+  "claim": "Deve-se renomear esse node para dados.",
+  "claim_id": "CL-0018",
+  "evidence": [
+   {
+    "evidence_id": "EV-0025",
+    "excerpt": "virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já vai criar o nosso agente de a mas antes"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Nunca se usa diretamente os dados que vêm no webhook; sempre se adiciona um node set depois do webhook para organizá-los de uma forma melhor.",
+  "claim_id": "CL-0019",
+  "evidence": [
+   {
+    "evidence_id": "EV-0019",
+    "excerpt": "que vem no web Hook a gente sempre adiciona um node set depois do Web Hook para organizar eles de uma forma melhor então de todos esses dados que vieram aqui no web Hook nós vamos pegar apenas"
+   },
+   {
+    "evidence_id": "EV-0020",
+    "excerpt": "que vem no web Hook a gente sempre adiciona um node set depois do Web Hook para organizar eles de uma forma melhor então de todos esses dados que vieram"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "n8n",
+   "scope": "dados recebidos no webhook",
+   "stage": "tratamento dos dados do webhook"
+  }
+ },
+ {
+  "claim": "O autor apresenta o Groq ('grock') como uma opção porque o Groq é gratuito.",
+  "claim_id": "CL-0020",
+  "evidence": [
+   {
+    "evidence_id": "EV-0007",
+    "excerpt": "ou da Open a ou de qualquer outro que você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock"
+   },
+   {
+    "evidence_id": "EV-0008",
+    "excerpt": "aqui como uma opção porque o grock é gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq",
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "O Redis é ideal para as operações que serão feitas (as apresentadas pelo autor).",
+  "claim_id": "CL-0021",
+  "evidence": [
+   {
+    "evidence_id": "EV-0002",
+    "excerpt": "vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Redis",
+   "scope": "as operações que o autor vai fazer no material",
+   "stage": null
+  }
+ },
+ {
+  "claim": "No Redis é possível configurar dados que vão ter um tempo de vida.",
+  "claim_id": "CL-0022",
+  "evidence": [
+   {
+    "evidence_id": "EV-0001",
+    "excerpt": "VPS o Reds é um banco de dados não relacional que utiliza Chaves e valores para guardar os dados nele a gente pode configurar dados que vão ter um tempo de"
+   },
+   {
+    "evidence_id": "EV-0002",
+    "excerpt": "vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Redis",
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Depois de preencher os campos, pode clicar em criar e o Redis fica instalado no EasyPanel.",
+  "claim_id": "CL-0023",
+  "evidence": [
+   {
+    "evidence_id": "EV-0004",
+    "excerpt": "branco para ele gerar uma aleatória para mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds"
+   },
+   {
+    "evidence_id": "EV-0005",
+    "excerpt": "instalado no eas panel ativa essa opção do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel",
+   "scope": null,
+   "stage": "instalação"
+  }
+ },
+ {
+  "claim": "Após clicar em teste, aquele monte de coisa vira só esses cinco campos.",
+  "claim_id": "CL-0024",
+  "evidence": [
+   {
+    "evidence_id": "EV-0024",
+    "excerpt": "data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e agora veja que aquele monte de coisa"
+   },
+   {
+    "evidence_id": "EV-0025",
+    "excerpt": "virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já vai criar o nosso agente de a mas antes"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "O nome da pessoa fica em Body data push name.",
+  "claim_id": "CL-0025",
+  "evidence": [
+   {
+    "evidence_id": "EV-0024",
+    "excerpt": "data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e agora veja que aquele monte de coisa"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit.",
+  "claim_id": "CL-0026",
+  "evidence": [
+   {
+    "evidence_id": "EV-0008",
+    "excerpt": "aqui como uma opção porque o grock é gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o"
+   },
+   {
+    "evidence_id": "EV-0009",
+    "excerpt": "Google e aqui do lado esquerdo Você vai vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  }
+ },
+ {
+  "claim": "No site do Groq, você vai em 'Dev console' no canto e faz login com o Google.",
+  "claim_id": "CL-0027",
+  "evidence": [
+   {
+    "evidence_id": "EV-0008",
+    "excerpt": "aqui como uma opção porque o grock é gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  }
+ },
+ {
+  "claim": "O Redis fica na opção 'redis' na parte de cima da lista de serviços; clica nela e coloca um nome para o serviço.",
+  "claim_id": "CL-0028",
+  "evidence": [
+   {
+    "evidence_id": "EV-0003",
+    "excerpt": "serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel",
+   "scope": null,
+   "stage": "instalação"
+  }
+ },
+ {
+  "claim": "Na OpenAI é preciso colocar 5 (créditos/dólares, conforme dito na fonte) para poder gerar uma chave.",
+  "claim_id": "CL-0029",
+  "evidence": [
+   {
+    "evidence_id": "EV-0010",
+    "excerpt": "esquecer na Open ai precisa colocar 5 para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome para ela seleciona de qual projeto ela"
+   },
+   {
+    "evidence_id": "EV-0011",
+    "excerpt": "esquecer na Open ai precisa colocar 5 para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "para poder gerar uma chave na OpenAI",
+   "platform": "OpenAI",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  }
+ },
+ {
+  "claim": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados.",
+  "claim_id": "CL-0030",
+  "evidence": [
+   {
+    "evidence_id": "EV-0001",
+    "excerpt": "VPS o Reds é um banco de dados não relacional que utiliza Chaves e valores para guardar os dados nele a gente pode configurar dados que vão ter um tempo de"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Redis",
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "A Instância fica em Body instance.",
+  "claim_id": "CL-0031",
+  "evidence": [
+   {
+    "evidence_id": "EV-0023",
+    "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento.",
+  "claim_id": "CL-0032",
+  "evidence": [
+   {
+    "evidence_id": "EV-0005",
+    "excerpt": "instalado no eas panel ativa essa opção do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel / Redis Commander",
+   "scope": null,
+   "stage": "desenvolvimento"
+  }
+ },
+ {
+  "claim": "O autor deixa a senha em branco para que o sistema gere uma senha aleatória, e não mexe na versão.",
+  "claim_id": "CL-0033",
+  "evidence": [
+   {
+    "evidence_id": "EV-0003",
+    "excerpt": "serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em"
+   },
+   {
+    "evidence_id": "EV-0004",
+    "excerpt": "branco para ele gerar uma aleatória para mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel",
+   "scope": "escolha do autor na demonstração",
+   "stage": "instalação"
+  }
+ },
+ {
+  "claim": "Antes de criar o agente de IA, deve-se colocar um set vazio, porque isso vai ser melhor para nós no futuro.",
+  "claim_id": "CL-0034",
+  "evidence": [
+   {
+    "evidence_id": "EV-0025",
+    "excerpt": "virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já vai criar o nosso agente de a mas antes"
+   },
+   {
+    "evidence_id": "EV-0026",
+    "excerpt": "coloca aqui um set vazio mesmo que isso vai ser melhor pra gente no futuro pode depois desse set vazio colocar o ai Agent e aqui vamos fazer as as"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": "antes de criar o agente de IA"
+  }
+ },
+ {
+  "claim": "As três opções — enabled, base 64 e o evento 'messages up search' — têm que estar ativas, e depois deve-se clicar em salvar.",
+  "claim_id": "CL-0035",
+  "evidence": [
+   {
+    "evidence_id": "EV-0017",
+    "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento"
+   },
+   {
+    "evidence_id": "EV-0018",
+    "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution api",
+   "scope": "tela de events webhook da sessão",
+   "stage": "configuração do webhook"
+  }
+ },
+ {
+  "claim": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+  "claim_id": "CL-0036",
+  "evidence": [
+   {
+    "evidence_id": "EV-0021",
+    "excerpt": "cinco que são os campos quem mandou que vai ser o número da pessoa o outro Campo vai ser a Instância que recebeu a mensagem o outro Campo vai ser a"
+   },
+   {
+    "evidence_id": "EV-0022",
+    "excerpt": "mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o número da pessoa que mandou a mensagem"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": null
+  }
+ },
+ {
+  "claim": "Depois desse set vazio pode-se colocar o ai Agent e fazer as configurações dele.",
+  "claim_id": "CL-0037",
+  "evidence": [
+   {
+    "evidence_id": "EV-0026",
+    "excerpt": "coloca aqui um set vazio mesmo que isso vai ser melhor pra gente no futuro pode depois desse set vazio colocar o ai Agent e aqui vamos fazer as as"
+   },
+   {
+    "evidence_id": "EV-0027",
+    "excerpt": "configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência Artificial que ele usa o modelo é como"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": null,
+   "stage": "depois do set vazio"
+  }
+ },
+ {
+  "claim": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste.",
+  "claim_id": "CL-0038",
+  "evidence": [
+   {
+    "evidence_id": "EV-0016",
+    "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "n8n",
+   "scope": "início do workflow",
+   "stage": "construção do workflow"
+  }
+ },
+ {
+  "claim": "Na OpenAI você vai nas configurações, em 'API Keys', clica para criar uma nova, dá um nome para ela e seleciona de qual projeto ela é.",
+  "claim_id": "CL-0039",
+  "evidence": [
+   {
+    "evidence_id": "EV-0010",
+    "excerpt": "esquecer na Open ai precisa colocar 5 para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome para ela seleciona de qual projeto ela"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "OpenAI",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  }
+ }
+]

@@ -1,0 +1,620 @@
+[
+ {
+  "claim": "O autor recomenda ir no plano anual, dizendo que depois é possível dividir e que fica legal.",
+  "claim_id": "CL-0001",
+  "evidence": [
+   {
+    "evidence_id": "EV-0017",
+    "excerpt": "mês, vou pagar mensal, mas tu pegar a partir de um ano já tem uma promoção aí bem bacana, ó, de 27,89 o mês. Então, vai aqui no ano que aí você pode dividir"
+   },
+   {
+    "evidence_id": "EV-0018",
+    "excerpt": "lá depois, enfim, fica legal. Vindo aqui em continuar para carrinho, aqui primeiro você vai só conferir se tá tudo certo, né? Se realmente tá o plano"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": null,
+   "scope": "escolha do período do plano",
+   "stage": "escolha do período do plano"
+  }
+ },
+ {
+  "claim": "O vídeo mostra como gerenciar vários grupos de WhatsApp utilizando o Cloud Code.",
+  "claim_id": "CL-0002",
+  "evidence": [
+   {
+    "evidence_id": "EV-0001",
+    "excerpt": "Nesse vídeo, eu vou mostrar para vocês como vocês podem estar gerenciando seus vários grupos de WhatsApp utilizando o Cloud Code. Seja criar vários grupos em"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "WhatsApp / Cloud Code",
+   "scope": "gerenciamento de vários grupos de WhatsApp",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Através do Evolution API é possível conectar o número do WhatsApp como se fosse um WhatsApp Web.",
+  "claim_id": "CL-0003",
+  "evidence": [
+   {
+    "evidence_id": "EV-0007",
+    "excerpt": "seja, através dele, a gente vai conseguir estar conectando o nosso número do WhatsApp como se fosse um WhatsApp Web, tá? Então, é API não"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API / WhatsApp Web",
+   "scope": "conexão do número de WhatsApp",
+   "stage": null
+  }
+ },
+ {
+  "claim": "No portal aparece o servidor do usuário e, em acesso rápido, é possível abrir o console ou clicar no Evolution API direto.",
+  "claim_id": "CL-0004",
+  "evidence": [
+   {
+    "evidence_id": "EV-0023",
+    "excerpt": "aqui no portal. E aqui você vai ver o seu servidor. No caso, eu tenho esse daqui, né? Ele tá online. E aqui em acesso rápido, ó, observe que aqui você"
+   },
+   {
+    "evidence_id": "EV-0024",
+    "excerpt": "consegue abrir o console ou clicar aqui no Evolution API direto. Se você vem aqui em gerenciar,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "portal",
+   "scope": "portal do provedor de VPS",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado.",
+  "claim_id": "CL-0005",
+  "evidence": [
+   {
+    "evidence_id": "EV-0030",
+    "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância."
+   },
+   {
+    "evidence_id": "EV-0031",
+    "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API",
+   "scope": "criação de instância no Evolution API",
+   "stage": "criar instância"
+  }
+ },
+ {
+  "claim": "Clicando em gerenciar, o usuário consegue ver mais detalhes da sua VPS.",
+  "claim_id": "CL-0006",
+  "evidence": [
+   {
+    "evidence_id": "EV-0024",
+    "excerpt": "consegue abrir o console ou clicar aqui no Evolution API direto. Se você vem aqui em gerenciar,"
+   },
+   {
+    "evidence_id": "EV-0025",
+    "excerpt": "você consegue ver mais detalhes da sua VPS aqui, tá? Mas aqui nesse caso, você vai clicar aqui em Evolution API. Daí ele vai abrir essa página aqui, tá? Vai"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "portal",
+   "scope": "portal do provedor de VPS",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Após escanear, o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e que se pedir que ele faça.",
+  "claim_id": "CL-0007",
+  "evidence": [
+   {
+    "evidence_id": "EV-0008",
+    "excerpt": "oficial, ou seja, tu não vai pagar por API oficial. E após escanear lá, o Cloud Code vai ter acesso ao nosso WhatsApp de acordo com as coisas que a gente for"
+   },
+   {
+    "evidence_id": "EV-0009",
+    "excerpt": "dando permissão e pedindo para que ele faça. O Evolution API, ele precisa ser hospedado em algum lugar. Ele é gratuito, tá? Tu não paga por nada,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "após escanear e conforme permissão dada e pedidos feitos",
+   "platform": "Cloud Code / WhatsApp",
+   "scope": "acesso do Cloud Code ao WhatsApp",
+   "stage": "após escanear"
+  }
+ },
+ {
+  "claim": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia.",
+  "claim_id": "CL-0008",
+  "evidence": [
+   {
+    "evidence_id": "EV-0010",
+    "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "para ficar funcionando 24 horas por dia",
+   "platform": "Evolution API / VPS",
+   "scope": "hospedagem do Evolution API",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Depois de conferir, deve-se ir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google.",
+  "claim_id": "CL-0009",
+  "evidence": [
+   {
+    "evidence_id": "EV-0020",
+    "excerpt": "tu vê aqui se o do México aqui ele chega a ser mais mais próximo. Então, conferiu, vem aqui para continuar para verificação, aí aqui tu vai colocar aqui"
+   },
+   {
+    "evidence_id": "EV-0021",
+    "excerpt": "sua conta aqui da HostGator, né? Pode estar criando a conta aqui, contando com o Google. Fiz ali o meu meu login, né? Preenchi os dados que ele pediu e aí eu"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "HostGator",
+   "scope": "etapa de verificação/login",
+   "stage": "verificação"
+  }
+ },
+ {
+  "claim": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+  "claim_id": "CL-0010",
+  "evidence": [
+   {
+    "evidence_id": "EV-0029",
+    "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu"
+   },
+   {
+    "evidence_id": "EV-0030",
+    "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância."
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API",
+   "scope": "após conectar com a chave de API global",
+   "stage": "próxima etapa"
+  }
+ },
+ {
+  "claim": "O Evolution API precisa ser hospedado em algum lugar; ele é gratuito e open source, não se paga por nada.",
+  "claim_id": "CL-0011",
+  "evidence": [
+   {
+    "evidence_id": "EV-0009",
+    "excerpt": "dando permissão e pedindo para que ele faça. O Evolution API, ele precisa ser hospedado em algum lugar. Ele é gratuito, tá? Tu não paga por nada,"
+   },
+   {
+    "evidence_id": "EV-0010",
+    "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API",
+   "scope": "hospedagem e custo do Evolution API",
+   "stage": null
+  }
+ },
+ {
+  "claim": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo.",
+  "claim_id": "CL-0012",
+  "evidence": [
+   {
+    "evidence_id": "EV-0019",
+    "excerpt": "correto, se tá aqui, ó, Evolution API, tá? O servidor tu você mantém aqui São Paulo, que é o mais próximo, tem no Brasil, né? Se tu tiver fora do Brasil,"
+   },
+   {
+    "evidence_id": "EV-0020",
+    "excerpt": "tu vê aqui se o do México aqui ele chega a ser mais mais próximo. Então, conferiu, vem aqui para continuar para verificação, aí aqui tu vai colocar aqui"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "se estiver fora do Brasil, verificar se o do México é mais próximo",
+   "platform": null,
+   "scope": "escolha da localidade do servidor no carrinho",
+   "stage": "carrinho"
+  }
+ },
+ {
+  "claim": "Com a instância aparecendo como desconectado, o usuário vai em configurações e gera QR Code, que deve ser escaneado pelo celular como se fosse um WhatsApp Web.",
+  "claim_id": "CL-0013",
+  "evidence": [
+   {
+    "evidence_id": "EV-0031",
+    "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,"
+   },
+   {
+    "evidence_id": "EV-0032",
+    "excerpt": "vocês vão vir aqui em configurações e gerar QR Code. Vai aparecer o QR Code aqui para que vocês possam tá escaneando pelo seu celular como se fosse um"
+   },
+   {
+    "evidence_id": "EV-0033",
+    "excerpt": "WhatsApp Web. Ó, se for iPhone, você vem aqui em"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "quando a instância aparece como desconectado",
+   "platform": "Evolution API",
+   "scope": "conexão do número do WhatsApp à instância",
+   "stage": "conectar número do WhatsApp"
+  }
+ },
+ {
+  "claim": "No primeiro acesso o usuário deve colocar a chave de API global que está no seu Gmail, colar e conectar.",
+  "claim_id": "CL-0014",
+  "evidence": [
+   {
+    "evidence_id": "EV-0028",
+    "excerpt": "áudio, tive que regravar. Então, no caso de vocês vai aparecer assim, ó, dessa forma. Seu primeiro acesso. E aqui tu vai colocar aquela chave de API global"
+   },
+   {
+    "evidence_id": "EV-0029",
+    "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "no primeiro acesso",
+   "platform": "Evolution API",
+   "scope": "tela de primeiro acesso do Evolution API",
+   "stage": "primeiro acesso"
+  }
+ },
+ {
+  "claim": "Os tipos de servidores mostrados incluem os padrões de dois, quatro e oito, e também existe opção de alto desempenho caso a pessoa queira algo mais parrudo.",
+  "claim_id": "CL-0015",
+  "evidence": [
+   {
+    "evidence_id": "EV-0012",
+    "excerpt": "conseguir ver aqui os o os tipos de servidores, tá? Dois, quatro, oito. Esses aqui são os padrões, tem de alto desempenho também, caso você queira um"
+   },
+   {
+    "evidence_id": "EV-0013",
+    "excerpt": "negócio assim mais parrudo. Mas se você observar aqui, ó, aqui ele já fala, ó: \"Evolution pré-instalada e cabe até 20 números de WhatsApp\". Então, você"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "opção de alto desempenho caso queira algo mais parrudo",
+   "platform": null,
+   "scope": "tipos de servidores exibidos na tela de escolha",
+   "stage": "escolha do servidor"
+  }
+ },
+ {
+  "claim": "A oferta indica \"Evolution pré-instalada e cabe até 20 números de WhatsApp\", ou seja, é possível conectar até 20 números de WhatsApp sem problema.",
+  "claim_id": "CL-0016",
+  "evidence": [
+   {
+    "evidence_id": "EV-0013",
+    "excerpt": "negócio assim mais parrudo. Mas se você observar aqui, ó, aqui ele já fala, ó: \"Evolution pré-instalada e cabe até 20 números de WhatsApp\". Então, você"
+   },
+   {
+    "evidence_id": "EV-0014",
+    "excerpt": "consegue estar conectando até 20 números de WhatsApp sem problema, tá? Claro, depende também da forma que tu vai estar utilizando. Se você usa vai usar muito,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution",
+   "scope": "capacidade anunciada do plano com Evolution pré-instalada",
+   "stage": "escolha do plano"
+  }
+ },
+ {
+  "claim": "Se for usar muito, muito, muito, é legal pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão.",
+  "claim_id": "CL-0017",
+  "evidence": [
+   {
+    "evidence_id": "EV-0014",
+    "excerpt": "consegue estar conectando até 20 números de WhatsApp sem problema, tá? Claro, depende também da forma que tu vai estar utilizando. Se você usa vai usar muito,"
+   },
+   {
+    "evidence_id": "EV-0015",
+    "excerpt": "muito, muito, já é legal tu pegar um um peça melhor, por exemplo, a NVMe quatro para esse tipo de caso é o ali o o padrão, certo? Enfim, tu vai escolher"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "se for usar muito, muito, muito",
+   "platform": null,
+   "scope": "escolha do plano de servidor",
+   "stage": "escolha do plano"
+  }
+ },
+ {
+  "claim": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp.",
+  "claim_id": "CL-0018",
+  "evidence": [
+   {
+    "evidence_id": "EV-0006",
+    "excerpt": "pedir para ele fazer determinadas ações. A partir disso, o Cloud Code ele vai se conectar via API com o Evolution API, que é o API não oficial do WhatsApp, ou"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Cloud Code / Evolution API / WhatsApp",
+   "scope": "conexão entre Cloud Code e Evolution API",
+   "stage": null
+  }
+ },
+ {
+  "claim": "No exemplo demonstrado o autor pega o nível NVMe dois, porque vai usar só uma instância mesmo.",
+  "claim_id": "CL-0019",
+  "evidence": [
+   {
+    "evidence_id": "EV-0016",
+    "excerpt": "aqui o plano, por exemplo, pega aqui o nível NVMe dois, vou usar só uma uma instância mesmo. Aqui tu tem o plano de um mês, então paga aqui, ó, 54,98 por"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "vai usar só uma instância",
+   "platform": null,
+   "scope": "exemplo de escolha feito na demonstração",
+   "stage": "escolha do plano"
+  }
+ },
+ {
+  "claim": "Na stack do gerenciador de grupos, o Cloud Code é o orquestrador, é com ele que o autor conversa e pede para fazer determinadas ações.",
+  "claim_id": "CL-0020",
+  "evidence": [
+   {
+    "evidence_id": "EV-0004",
+    "excerpt": "o final e você vai sair desse vídeo já montando aí a sua automação. E bora lá. Primeiro, vou mostrar para vocês aqui a stack do nosso gerenciador"
+   },
+   {
+    "evidence_id": "EV-0005",
+    "excerpt": "de grupos, né? Como que vai funcionar. Então, primeiro de tudo, Cloud Code, né? Ele que vai ser o orquestrador, é com ele que eu vou estar conversando, eu vou"
+   },
+   {
+    "evidence_id": "EV-0006",
+    "excerpt": "pedir para ele fazer determinadas ações. A partir disso, o Cloud Code ele vai se conectar via API com o Evolution API, que é o API não oficial do WhatsApp, ou"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Cloud Code",
+   "scope": "stack do gerenciador de grupos",
+   "stage": null
+  }
+ },
+ {
+  "claim": "A VPS que o autor utiliza é a da HostGator, que já tem a função de pré-instalar.",
+  "claim_id": "CL-0021",
+  "evidence": [
+   {
+    "evidence_id": "EV-0010",
+    "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da"
+   },
+   {
+    "evidence_id": "EV-0011",
+    "excerpt": "HostGator. Já tem lá a função de pré-instalar, tá? Então, quando você for"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "HostGator VPS",
+   "scope": "escolha de VPS usada pelo autor",
+   "stage": null
+  }
+ },
+ {
+  "claim": "O plano de um mês custa 54,98 por mês, e a partir de um ano há uma promoção de 27,89 o mês.",
+  "claim_id": "CL-0022",
+  "evidence": [
+   {
+    "evidence_id": "EV-0016",
+    "excerpt": "aqui o plano, por exemplo, pega aqui o nível NVMe dois, vou usar só uma uma instância mesmo. Aqui tu tem o plano de um mês, então paga aqui, ó, 54,98 por"
+   },
+   {
+    "evidence_id": "EV-0017",
+    "excerpt": "mês, vou pagar mensal, mas tu pegar a partir de um ano já tem uma promoção aí bem bacana, ó, de 27,89 o mês. Então, vai aqui no ano que aí você pode dividir"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "promoção a partir de um ano de contratação",
+   "platform": null,
+   "scope": "preços exibidos para o plano escolhido no exemplo",
+   "stage": "escolha do período do plano"
+  }
+ },
+ {
+  "claim": "Após fazer o login e preencher os dados pedidos, chega-se à tela de pagamento, onde é possível selecionar cartão de crédito.",
+  "claim_id": "CL-0023",
+  "evidence": [
+   {
+    "evidence_id": "EV-0021",
+    "excerpt": "sua conta aqui da HostGator, né? Pode estar criando a conta aqui, contando com o Google. Fiz ali o meu meu login, né? Preenchi os dados que ele pediu e aí eu"
+   },
+   {
+    "evidence_id": "EV-0022",
+    "excerpt": "caio nessa tela aqui de pagamento. Pode tá selecionando cartão de crédito,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "HostGator",
+   "scope": "tela de pagamento",
+   "stage": "pagamento"
+  }
+ },
+ {
+  "claim": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo.",
+  "claim_id": "CL-0024",
+  "evidence": [
+   {
+    "evidence_id": "EV-0001",
+    "excerpt": "Nesse vídeo, eu vou mostrar para vocês como vocês podem estar gerenciando seus vários grupos de WhatsApp utilizando o Cloud Code. Seja criar vários grupos em"
+   },
+   {
+    "evidence_id": "EV-0002",
+    "excerpt": "massa, é mudar foto de perfil, botar mudando a descrição desse grupo, adicionando pessoas, enviando uma mensagem para os grupos, dando"
+   },
+   {
+    "evidence_id": "EV-0003",
+    "excerpt": "relatórios de membros desse grupo também. Então, tudo isso você consegue estar fazendo com esse método que eu vou te ensinar nesse vídeo. Então, fica até"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "WhatsApp",
+   "scope": "ações de gerenciamento de grupos de WhatsApp",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API.",
+  "claim_id": "CL-0025",
+  "evidence": [
+   {
+    "evidence_id": "EV-0018",
+    "excerpt": "lá depois, enfim, fica legal. Vindo aqui em continuar para carrinho, aqui primeiro você vai só conferir se tá tudo certo, né? Se realmente tá o plano"
+   },
+   {
+    "evidence_id": "EV-0019",
+    "excerpt": "correto, se tá aqui, ó, Evolution API, tá? O servidor tu você mantém aqui São Paulo, que é o mais próximo, tem no Brasil, né? Se tu tiver fora do Brasil,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API",
+   "scope": "tela do carrinho",
+   "stage": "carrinho"
+  }
+ },
+ {
+  "claim": "Ao clicar em Evolution API, abre uma página que aparenta ser um erro, mas não é erro: é porque se deve digitar barra manager no final.",
+  "claim_id": "CL-0026",
+  "evidence": [
+   {
+    "evidence_id": "EV-0025",
+    "excerpt": "você consegue ver mais detalhes da sua VPS aqui, tá? Mas aqui nesse caso, você vai clicar aqui em Evolution API. Daí ele vai abrir essa página aqui, tá? Vai"
+   },
+   {
+    "evidence_id": "EV-0026",
+    "excerpt": "aparecer esse, como se fosse um erro, mas isso aqui não é erro, tá? Isso aqui é porque você deve, ó, digitar barra manager no final. Aí você vai, de fato,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "quando a página aberta aparenta erro",
+   "platform": "Evolution API",
+   "scope": "acesso ao Evolution API pelo portal",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Por ser API não oficial, não se paga por API oficial.",
+  "claim_id": "CL-0027",
+  "evidence": [
+   {
+    "evidence_id": "EV-0007",
+    "excerpt": "seja, através dele, a gente vai conseguir estar conectando o nosso número do WhatsApp como se fosse um WhatsApp Web, tá? Então, é API não"
+   },
+   {
+    "evidence_id": "EV-0008",
+    "excerpt": "oficial, ou seja, tu não vai pagar por API oficial. E após escanear lá, o Cloud Code vai ter acesso ao nosso WhatsApp de acordo com as coisas que a gente for"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "por ser API não oficial",
+   "platform": "WhatsApp",
+   "scope": "custo de API",
+   "stage": null
+  }
+ },
+ {
+  "claim": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso.",
+  "claim_id": "CL-0028",
+  "evidence": [
+   {
+    "evidence_id": "EV-0027",
+    "excerpt": "acessar aqui, tá? No meu caso aqui, tá conectado as instâncias aqui porque eu tava gravando um vídeo pro YouTube, acabou dando um problema aqui com o"
+   },
+   {
+    "evidence_id": "EV-0028",
+    "excerpt": "áudio, tive que regravar. Então, no caso de vocês vai aparecer assim, ó, dessa forma. Seu primeiro acesso. E aqui tu vai colocar aquela chave de API global"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "primeiro acesso",
+   "platform": "Evolution API",
+   "scope": "diferença entre a tela do apresentador e a do espectador",
+   "stage": "primeiro acesso"
+  }
+ },
+ {
+  "claim": "Após digitar barra manager no final, o usuário de fato acessa a página.",
+  "claim_id": "CL-0029",
+  "evidence": [
+   {
+    "evidence_id": "EV-0026",
+    "excerpt": "aparecer esse, como se fosse um erro, mas isso aqui não é erro, tá? Isso aqui é porque você deve, ó, digitar barra manager no final. Aí você vai, de fato,"
+   },
+   {
+    "evidence_id": "EV-0027",
+    "excerpt": "acessar aqui, tá? No meu caso aqui, tá conectado as instâncias aqui porque eu tava gravando um vídeo pro YouTube, acabou dando um problema aqui com o"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Evolution API",
+   "scope": "acesso ao Evolution API",
+   "stage": null
+  }
+ },
+ {
+  "claim": "A capacidade de conexão depende também da forma que a pessoa vai utilizar.",
+  "claim_id": "CL-0030",
+  "evidence": [
+   {
+    "evidence_id": "EV-0014",
+    "excerpt": "consegue estar conectando até 20 números de WhatsApp sem problema, tá? Claro, depende também da forma que tu vai estar utilizando. Se você usa vai usar muito,"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": "depende da forma de utilização",
+   "platform": null,
+   "scope": "uso dos números de WhatsApp conectados",
+   "stage": null
+  }
+ }
+]

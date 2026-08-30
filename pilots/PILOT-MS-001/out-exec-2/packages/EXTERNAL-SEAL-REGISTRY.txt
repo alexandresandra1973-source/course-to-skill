@@ -1,0 +1,3 @@
+# MS-001A EXEC-2 EXTERNAL SEAL REGISTRY — fora de todo diretorio selado
+fe68130c51cd161ac98f5bcd1a43ddcc1e92291fd567f5323f65fb197247caae  pkg-B/SEAL-RECORD.yaml  source_package_hash=a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f
+672d2105a74a502bb87403b54c2e0719a99e3a33153c56e0ebb5dab864cb7563  pkg-C/SEAL-RECORD.yaml  source_package_hash=5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2

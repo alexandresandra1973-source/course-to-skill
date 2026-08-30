@@ -1,0 +1,307 @@
+{
+  "source_id": "MS001-SRC-C",
+  "slice_id": "SL-C-03",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0021", "EV-0022"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "O campo quem mandou, onde se salva o número da pessoa que mandou a mensagem, fica dentro de body data Key remote JD.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0022", "EV-0023"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "A Instância fica em Body instance.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0023"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "A mensagem fica em Body data message conversation.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0023"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "O ID da mensagem fica em B data Key id.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0023", "EV-0024"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "O nome da pessoa fica em Body data push name.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0024"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Após clicar em teste, aquele monte de coisa vira só esses cinco campos.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0024", "EV-0025"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Deve-se renomear esse node para dados.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0025"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "Antes de criar o agente de IA, deve-se colocar um set vazio, porque isso vai ser melhor para nós no futuro.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0025", "EV-0026"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "antes de criar o agente de IA",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "Depois desse set vazio pode-se colocar o ai Agent e fazer as configurações dele.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0026", "EV-0027"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "depois do set vazio",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "O agente de IA é composto por quatro peças.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0027"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "A primeira peça do agente é o modelo de Inteligência Artificial que ele usa; o modelo é como se fosse o cérebro do agente.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0027", "EV-0028"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0028", "EV-0029"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "A terceira peça são as ferramentas que o agente pode utilizar, por exemplo pesquisar na internet, alterar planilhas e buscar em um banco de dados.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0029", "EV-0030"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "A quarta peça é o agente em si, onde você coloca as instruções do que ele deve fazer.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0030"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0021", "EV-0022", "EV-0023", "EV-0024", "EV-0025", "EV-0026", "EV-0027"],
+      "claim_temp_refs": ["TC-001", "TC-002", "TC-003", "TC-004", "TC-005", "TC-006", "TC-007", "TC-008", "TC-009", "TC-010"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Mapear os cinco campos, testar, renomear o node e adicionar set vazio antes do ai Agent",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Definir os cinco campos",
+            "action": "Definir os cinco campos: quem mandou (número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+            "evidence_refs": ["EV-0021", "EV-0022"]
+          },
+          {
+            "order_key": 2,
+            "name": "Apontar o campo quem mandou",
+            "action": "Salvar o número da pessoa que mandou a mensagem a partir de body data Key remote JD.",
+            "evidence_refs": ["EV-0022", "EV-0023"]
+          },
+          {
+            "order_key": 3,
+            "name": "Apontar a Instância",
+            "action": "Pegar a Instância em Body instance.",
+            "evidence_refs": ["EV-0023"]
+          },
+          {
+            "order_key": 4,
+            "name": "Apontar a mensagem",
+            "action": "Pegar a mensagem em Body data message conversation.",
+            "evidence_refs": ["EV-0023"]
+          },
+          {
+            "order_key": 5,
+            "name": "Apontar o ID da mensagem",
+            "action": "Pegar o ID da mensagem em B data Key id.",
+            "evidence_refs": ["EV-0023", "EV-0024"]
+          },
+          {
+            "order_key": 6,
+            "name": "Apontar o nome da pessoa",
+            "action": "Pegar o nome da pessoa em Body data push name.",
+            "evidence_refs": ["EV-0024"]
+          },
+          {
+            "order_key": 7,
+            "name": "Clicar em teste",
+            "action": "Clicar em teste e verificar que aquele monte de coisa virou só esses cinco campos.",
+            "evidence_refs": ["EV-0024", "EV-0025"]
+          },
+          {
+            "order_key": 8,
+            "name": "Renomear o node",
+            "action": "Renomear esse node para dados.",
+            "evidence_refs": ["EV-0025"]
+          },
+          {
+            "order_key": 9,
+            "name": "Colocar um set vazio",
+            "action": "Antes de criar o agente de IA, colocar um set vazio.",
+            "evidence_refs": ["EV-0025", "EV-0026"]
+          },
+          {
+            "order_key": 10,
+            "name": "Colocar o ai Agent",
+            "action": "Depois do set vazio, colocar o ai Agent e fazer as configurações dele.",
+            "evidence_refs": ["EV-0026", "EV-0027"]
+          }
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0025", "EV-0026"],
+      "claim_temp_refs": ["TC-009", "TC-010"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Colocar um set vazio antes do ai Agent",
+        "trigger": "Ao ir criar o agente de IA",
+        "condition": "Antes de colocar o ai Agent",
+        "action": "Colocar um set vazio mesmo, porque isso vai ser melhor no futuro; depois desse set vazio colocar o ai Agent",
+        "do_not": [],
+        "precedence": null
+      }
+    }
+  ]
+}

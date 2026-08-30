@@ -1,0 +1,272 @@
+{
+ "source_id": "MS001-SRC-B",
+ "verdicts": [
+  {
+   "claim_id": "CL-0001",
+   "entail_why": "EV-0017 recomenda 'vai aqui no ano que aí você pode dividir' e EV-0018 continua 'lá depois, enfim, fica legal', sustentando a recomendação do plano anual, a divisão e o 'fica legal'.",
+   "evidence_refs_checked": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0002",
+   "entail_why": "EV-0001 declara literalmente que o vídeo mostrará como gerenciar vários grupos de WhatsApp utilizando o Cloud Code.",
+   "evidence_refs_checked": [
+    "EV-0001"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0003",
+   "entail_why": "EV-0007 afirma que através dele se conecta o número do WhatsApp como se fosse um WhatsApp Web, no contexto do Evolution API.",
+   "evidence_refs_checked": [
+    "EV-0007"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0004",
+   "entail_why": "EV-0023 mostra o servidor no portal e o 'acesso rápido', e EV-0024 confirma que ali se abre o console ou se clica no Evolution API direto.",
+   "evidence_refs_checked": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0005",
+   "entail_why": "EV-0030 indica clicar em instância e EV-0031 confirma colocar nome 'YouTube teste', salvar e aparecer como desconectado.",
+   "evidence_refs_checked": [
+    "EV-0030",
+    "EV-0031"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0006",
+   "entail_why": "EV-0024 menciona 'se você vem aqui em gerenciar' e EV-0025 completa que 'você consegue ver mais detalhes da sua VPS'.",
+   "evidence_refs_checked": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0007",
+   "entail_why": "EV-0008 e EV-0009 afirmam que após escanear o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e se pedir que ele faça.",
+   "evidence_refs_checked": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0008",
+   "entail_why": "EV-0010 diz explicitamente que é preciso hospedar em uma VPS para ele ficar 24 horas por dia funcionando.",
+   "evidence_refs_checked": [
+    "EV-0010"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0009",
+   "entail_why": "EV-0020 indica ir em 'continuar para verificação' e EV-0021 confirma colocar a conta da HostGator, podendo criar a conta com o Google.",
+   "evidence_refs_checked": [
+    "EV-0020",
+    "EV-0021"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0010",
+   "entail_why": "EV-0029 fala do acesso à página e da conexão do número, e EV-0030 confirma que a próxima etapa é criar uma instância e conectar o número do WhatsApp.",
+   "evidence_refs_checked": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0011",
+   "entail_why": "EV-0009 afirma que precisa ser hospedado em algum lugar, é gratuito e não se paga nada, e EV-0010 confirma que é open source.",
+   "evidence_refs_checked": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0012",
+   "entail_why": "EV-0019 diz manter São Paulo por ser o mais próximo e no Brasil, e EV-0020 completa a condição de verificar o do México se estiver fora do Brasil.",
+   "evidence_refs_checked": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0013",
+   "entail_why": "EV-0031 mostra a instância como desconectada, EV-0032 indica ir em configurações e gerar QR Code para escanear pelo celular, e EV-0033 completa 'WhatsApp Web'.",
+   "evidence_refs_checked": [
+    "EV-0031",
+    "EV-0032",
+    "EV-0033"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0014",
+   "entail_why": "EV-0028 fala do primeiro acesso e da chave de API global e EV-0029 confirma que ela está no Gmail e que se deve colar e conectar.",
+   "evidence_refs_checked": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0015",
+   "entail_why": "EV-0012 lista dois, quatro e oito como padrões e menciona alto desempenho, e EV-0013 completa 'mais parrudo'.",
+   "evidence_refs_checked": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0016",
+   "entail_why": "EV-0013 cita a frase 'Evolution pré-instalada e cabe até 20 números de WhatsApp' e EV-0014 confirma que se consegue conectar até 20 números sem problema.",
+   "evidence_refs_checked": [
+    "EV-0013",
+    "EV-0014"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0017",
+   "entail_why": "EV-0014 inicia 'se você usa vai usar muito' e EV-0015 completa 'muito, muito, já é legal tu pegar uma peça melhor, por exemplo, a NVMe quatro para esse tipo de caso é o padrão'.",
+   "evidence_refs_checked": [
+    "EV-0014",
+    "EV-0015"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0018",
+   "entail_why": "EV-0006 afirma que o Cloud Code vai se conectar via API com o Evolution API, que é a API não oficial do WhatsApp.",
+   "evidence_refs_checked": [
+    "EV-0006"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0019",
+   "entail_why": "EV-0016 mostra o autor pegando o nível NVMe dois porque vai usar só uma instância.",
+   "evidence_refs_checked": [
+    "EV-0016"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0020",
+   "entail_why": "EV-0004 apresenta a stack do gerenciador de grupos, EV-0005 diz que o Cloud Code é o orquestrador com quem o autor conversa e EV-0006 completa 'pedir para ele fazer determinadas ações'.",
+   "evidence_refs_checked": [
+    "EV-0004",
+    "EV-0005",
+    "EV-0006"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0021",
+   "entail_why": "EV-0010 diz que a VPS utilizada é a da e EV-0011 completa 'HostGator. Já tem lá a função de pré-instalar'.",
+   "evidence_refs_checked": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0022",
+   "entail_why": "EV-0016 informa o plano de um mês a 54,98 por e EV-0017 completa 'mês' e a promoção de 27,89 o mês a partir de um ano.",
+   "evidence_refs_checked": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0023",
+   "entail_why": "EV-0021 relata o login e o preenchimento dos dados pedidos e EV-0022 confirma a tela de pagamento com seleção de cartão de crédito.",
+   "evidence_refs_checked": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0024",
+   "entail_why": "EV-0001, EV-0002 e EV-0003 listam criar grupos em massa, mudar foto de perfil, mudar descrição, adicionar pessoas, enviar mensagem e dar relatórios de membros.",
+   "evidence_refs_checked": [
+    "EV-0001",
+    "EV-0002",
+    "EV-0003"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0025",
+   "entail_why": "EV-0018 indica continuar para carrinho e conferir se está tudo certo com o plano, e EV-0019 completa 'correto, se tá aqui Evolution API'.",
+   "evidence_refs_checked": [
+    "EV-0018",
+    "EV-0019"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0026",
+   "entail_why": "EV-0025 mostra o clique em Evolution API abrindo a página e EV-0026 explica que o que aparece não é erro e que se deve digitar barra manager no final.",
+   "evidence_refs_checked": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0027",
+   "entail_why": "EV-0007 termina com 'é API não' e EV-0008 completa 'oficial, ou seja, tu não vai pagar por API oficial'.",
+   "evidence_refs_checked": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0028",
+   "entail_why": "EV-0027 explica que no caso dele as instâncias estão conectadas porque gravava um vídeo e EV-0028 diz que teve que regravar e que no caso do espectador aparecerá a tela de primeiro acesso.",
+   "evidence_refs_checked": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0029",
+   "entail_why": "EV-0026 diz que ao digitar barra manager no final 'você vai, de fato,' e EV-0027 completa 'acessar aqui'.",
+   "evidence_refs_checked": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "judgment": "ENTAILED"
+  },
+  {
+   "claim_id": "CL-0030",
+   "entail_why": "EV-0014 afirma que depende também da forma que a pessoa vai estar utilizando, no contexto da conexão de até 20 números.",
+   "evidence_refs_checked": [
+    "EV-0014"
+   ],
+   "judgment": "ENTAILED"
+  }
+ ]
+}

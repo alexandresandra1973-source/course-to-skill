@@ -1,0 +1,8 @@
+{
+ "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+ "user_sha256": "f8f6c807edae4154468393da89299a728eaa7ab334f52a13359b5096f1eeeb7d",
+ "user": "source_id: FIXTURE\nITENS:\n[\n {\n  \"claim_id\": \"CL-9201\",\n  \"claim\": \"A requisicao exige autenticacao por token.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9201\",\n    \"excerpt\": \"O sistema exige autenticacao por token antes de aceitar a requisicao.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9202\",\n  \"claim\": \"A configuracao simples e suficiente para todos os usuarios.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9202\",\n    \"excerpt\": \"Para quem esta comecando, a configuracao simples costuma ser suficiente.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9203\",\n  \"claim\": \"A Evolution API exige autenticacao por chave global.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9203\",\n    \"excerpt\": \"O Redis e configurado adicionando um novo servico no painel e definindo um nome e uma senha para a instancia.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9204\",\n  \"claim\": \"O recurso X e obrigatorio neste cenario.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9204\",\n    \"excerpt\": \"A fonte informa que nao esta definido se o recurso X e obrigatorio ou opcional neste cenario.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9205\",\n  \"claim\": \"A Evolution API exige exatamente 4 GB de RAM.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9205\",\n    \"excerpt\": \"A Evolution API pode ser executada em uma VPS.\"\n   }\n  ]\n }\n]",
+ "meta": {
+  "fixture": "JE1-JE5-v2"
+ }
+}

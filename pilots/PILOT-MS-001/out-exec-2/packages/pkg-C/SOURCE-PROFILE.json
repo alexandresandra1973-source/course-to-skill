@@ -1,0 +1,18 @@
+{
+ "authority": "Guilherme Lazarotto - Tecnologia \\u0026 Automação",
+ "canonical_url": "https://www.youtube.com/watch?v=NvrBpnbNfv4",
+ "caption_type": "PLATFORM_AUTO_CAPTION",
+ "channel_id": "UCO0x-39c7EttOhmFAsngfgg",
+ "independence_decision_record": "DR-MS-001-INDEP-001",
+ "language": "pt",
+ "media_type": "video/youtube",
+ "provenance_chain": [
+  "video -> raw caption artifact -> controlled slices -> anchors"
+ ],
+ "source_boundary": "video inteiro; tres controlled slices congeladas",
+ "source_content_hash": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+ "source_id": "MS001-SRC-C",
+ "source_independence_state": "DECLARED_INDEPENDENT",
+ "text_status": "SOURCE_TEXT_READY_WITH_LIMITATION",
+ "video_id": "NvrBpnbNfv4"
+}

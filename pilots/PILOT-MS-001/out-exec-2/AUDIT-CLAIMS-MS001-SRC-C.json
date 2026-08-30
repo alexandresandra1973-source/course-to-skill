@@ -1,0 +1,102 @@
+[
+ {
+  "claim_id": "MS001-SRC-C|CL-0003",
+  "entail_why": "EV-0009 termina em 'clica em submit e agora ele vai', não afirmando que o sistema dá a chave nem que é preciso copiá-la naquele momento.",
+  "entailed_by": "NOT_ENTAILED",
+  "entity_kind": "claim",
+  "evidence_refs": [
+   {
+    "local_id": "EV-0009",
+    "ref_scope": "SELF"
+   }
+  ],
+  "local_id": "CL-0003",
+  "merged_from": [
+   {
+    "slice_id": "SL-C-01",
+    "temporary_claim_id": "TC-014"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "Groq",
+   "scope": null,
+   "stage": "obtenção de chave de API"
+  },
+  "semantic_key": "04b5fb6eebeba187dea8403cc871efed8483c819d1c2ad8e62cbea6a554dde74",
+  "source_language": "pt",
+  "status_raw": [
+   "SOURCE_EXPLICIT"
+  ],
+  "text": "Depois de submeter, o sistema dá a chave e você precisa copiá-la naquele momento."
+ },
+ {
+  "claim_id": "MS001-SRC-C|CL-0005",
+  "entail_why": "EV-0018 sustenta voltar ao n8n e clicar para ouvir um evento de teste, mas é cortada antes de dizer que se envia uma mensagem para si mesmo no WhatsApp.",
+  "entailed_by": "NOT_ENTAILED",
+  "entity_kind": "claim",
+  "evidence_refs": [
+   {
+    "local_id": "EV-0018",
+    "ref_scope": "SELF"
+   }
+  ],
+  "local_id": "CL-0005",
+  "merged_from": [
+   {
+    "slice_id": "SL-C-02",
+    "temporary_claim_id": "TC-007"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "n8n",
+   "scope": null,
+   "stage": "teste do webhook"
+  },
+  "semantic_key": "0cdb22ea00825e06c5d07f4eeab69915ed71baa08fc45d959d8b54793455d604",
+  "source_language": "pt",
+  "status_raw": [
+   "SOURCE_EXPLICIT"
+  ],
+  "text": "De volta ao n8n, clica-se para ouvir um evento de teste e envia-se uma mensagem para si mesmo no WhatsApp."
+ },
+ {
+  "claim_id": "MS001-SRC-C|CL-0023",
+  "entail_why": "EV-0004 e EV-0005 sustentam clicar em criar e o Reds ficar instalado no eas panel, mas nenhuma evidência menciona 'depois de preencher os campos'.",
+  "entailed_by": "NOT_ENTAILED",
+  "entity_kind": "claim",
+  "evidence_refs": [
+   {
+    "local_id": "EV-0004",
+    "ref_scope": "SELF"
+   },
+   {
+    "local_id": "EV-0005",
+    "ref_scope": "SELF"
+   }
+  ],
+  "local_id": "CL-0023",
+  "merged_from": [
+   {
+    "slice_id": "SL-C-01",
+    "temporary_claim_id": "TC-007"
+   }
+  ],
+  "qualifiers": {
+   "audience": null,
+   "condition": null,
+   "platform": "EasyPanel",
+   "scope": null,
+   "stage": "instalação"
+  },
+  "semantic_key": "85365d35bdab3745042ea16d55b01ba6faa4cd178aadf4bd31a36bce4d1385fc",
+  "source_language": "pt",
+  "status_raw": [
+   "SOURCE_EXPLICIT"
+  ],
+  "text": "Depois de preencher os campos, pode clicar em criar e o Redis fica instalado no EasyPanel."
+ }
+]

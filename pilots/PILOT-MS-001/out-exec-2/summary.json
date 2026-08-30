@@ -1,0 +1,347 @@
+{
+ "EC": {
+  "EC1_supported": true,
+  "EC2_trap_refused": true,
+  "EC3_candidate_provenance": true,
+  "EC4_claim_link": true,
+  "EC5_no_candidate_from_factual": true,
+  "EC6_scope_preserved": true,
+  "ok": true,
+  "schema_errors": []
+ },
+ "JE": {
+  "detail": {
+   "CL-9201": {
+    "expected": "ENTAILED",
+    "got": "ENTAILED",
+    "ok": true
+   },
+   "CL-9202": {
+    "expected": "NOT_ENTAILED",
+    "got": "NOT_ENTAILED",
+    "ok": true
+   },
+   "CL-9203": {
+    "expected": "NOT_ENTAILED",
+    "got": "NOT_ENTAILED",
+    "ok": true
+   },
+   "CL-9204": {
+    "expected": "INDETERMINATE",
+    "got": "INDETERMINATE",
+    "ok": true
+   },
+   "CL-9205": {
+    "expected": "NOT_ENTAILED",
+    "got": "NOT_ENTAILED",
+    "ok": true
+   }
+  },
+  "ok": true,
+  "schema_errors": []
+ },
+ "cross_source_leak_check": {
+  "B_payload_has_C_evidence": false,
+  "C_payload_has_B_evidence": false,
+  "nota": "ids EV- reiniciam por source; a prova real e que cada payload so cita refs do proprio catalogo daquela source, verificado por E26_FOREIGN_EVIDENCE"
+ },
+ "entailment_payload_sent": {
+  "MS001-SRC-B": {
+   "CL-0001": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "CL-0002": [
+    "EV-0001"
+   ],
+   "CL-0003": [
+    "EV-0007"
+   ],
+   "CL-0004": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "CL-0005": [
+    "EV-0030",
+    "EV-0031"
+   ],
+   "CL-0006": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "CL-0007": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "CL-0008": [
+    "EV-0010"
+   ],
+   "CL-0009": [
+    "EV-0020",
+    "EV-0021"
+   ],
+   "CL-0010": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "CL-0011": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "CL-0012": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "CL-0013": [
+    "EV-0031",
+    "EV-0032",
+    "EV-0033"
+   ],
+   "CL-0014": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "CL-0015": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "CL-0016": [
+    "EV-0013",
+    "EV-0014"
+   ],
+   "CL-0017": [
+    "EV-0014",
+    "EV-0015"
+   ],
+   "CL-0018": [
+    "EV-0006"
+   ],
+   "CL-0019": [
+    "EV-0016"
+   ],
+   "CL-0020": [
+    "EV-0004",
+    "EV-0005",
+    "EV-0006"
+   ],
+   "CL-0021": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "CL-0022": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "CL-0023": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "CL-0024": [
+    "EV-0001",
+    "EV-0002",
+    "EV-0003"
+   ],
+   "CL-0025": [
+    "EV-0018",
+    "EV-0019"
+   ],
+   "CL-0026": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "CL-0027": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "CL-0028": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "CL-0029": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "CL-0030": [
+    "EV-0014"
+   ]
+  },
+  "MS001-SRC-C": {
+   "CL-0001": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "CL-0002": [
+    "EV-0006",
+    "EV-0007"
+   ],
+   "CL-0003": [
+    "EV-0009"
+   ],
+   "CL-0004": [
+    "EV-0005",
+    "EV-0006"
+   ],
+   "CL-0005": [
+    "EV-0018"
+   ],
+   "CL-0006": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "CL-0007": [
+    "EV-0030"
+   ],
+   "CL-0008": [
+    "EV-0002",
+    "EV-0003"
+   ],
+   "CL-0009": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "CL-0010": [
+    "EV-0023"
+   ],
+   "CL-0011": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "CL-0012": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "CL-0013": [
+    "EV-0022",
+    "EV-0023"
+   ],
+   "CL-0014": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "CL-0015": [
+    "EV-0013"
+   ],
+   "CL-0016": [
+    "EV-0027"
+   ],
+   "CL-0017": [
+    "EV-0014"
+   ],
+   "CL-0018": [
+    "EV-0025"
+   ],
+   "CL-0019": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "CL-0020": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "CL-0021": [
+    "EV-0002"
+   ],
+   "CL-0022": [
+    "EV-0001",
+    "EV-0002"
+   ],
+   "CL-0023": [
+    "EV-0004",
+    "EV-0005"
+   ],
+   "CL-0024": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "CL-0025": [
+    "EV-0024"
+   ],
+   "CL-0026": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "CL-0027": [
+    "EV-0008"
+   ],
+   "CL-0028": [
+    "EV-0003"
+   ],
+   "CL-0029": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "CL-0030": [
+    "EV-0001"
+   ],
+   "CL-0031": [
+    "EV-0023"
+   ],
+   "CL-0032": [
+    "EV-0005"
+   ],
+   "CL-0033": [
+    "EV-0003",
+    "EV-0004"
+   ],
+   "CL-0034": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "CL-0035": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "CL-0036": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "CL-0037": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "CL-0038": [
+    "EV-0016"
+   ],
+   "CL-0039": [
+    "EV-0010"
+   ]
+  }
+ },
+ "hard_cap": 10,
+ "instrument_hashes": {
+  "CALL-PLAN-v2.txt": "03b195f57209c8ec8eb375b68027d7cc5335a5e96de936b44319fc749226b8c5",
+  "CLAIM-LIFECYCLE-v2.txt": "422f3cc4f9bb8449e48d188d6433dd8d3e6120e2b43528cf903b156c64c72de5",
+  "COMPILE-TRACE-EVENTS-v2.txt": "1d94236e563017bd5f1fc3bc33f9aee7fbfb29a54b7e65ca1490ed107b7e7dfb",
+  "CP-CANARIES-v2.txt": "f4e95d70b50eecfb3db7e17a6785210d16bbf0b2620fdfa082c4a288c4599c35",
+  "ENTAILMENT-PROMPT-v1.txt": "70bd6dacb792e872feb8846e1699efc047c8b91ab16b2682a78f781dd6ee989a",
+  "ENTAILMENT-PROMPT-v2.txt": "762fdd82c09e5fa02e80d8278774fbe31b4e42a72acf752901a7fba6ba6e0ff5",
+  "ENTAILMENT-RULES-v2.txt": "d0e8f594f1fc607429de84a240037d6b47016e9f6f8140aa6d9add021868b62e",
+  "ENTAILMENT-SCHEMA-v2.json": "b31d70083f300b1e8e05b13849720eb42d7f993bd539ab029db305f5fdaf4c07",
+  "ERROR-CODES-v1.txt": "7e19a9ebb42491637975b895831962280b827b817bc19050d4fb146ed812da73",
+  "EXTRACTION-PROMPT-v1.txt": "2e4e316859fee250936a6c5dfdc12821396dc80e0f46eafe7392f8817acb83c5",
+  "EXTRACTION-SCHEMA-v1.json": "d100354c7ecc300e87f5a059970eea10903789137569eecb49e8da3bbddd2f24",
+  "EXTRACTOR-CONTROLS-EC.txt": "a37e16a531ce3700ba6a25add59d06eb8184be83e2e29a9e091c14da84efe591",
+  "ID-DERIVATION-v1.txt": "ec0a608bfd5c2cc8fbacc9f0aab6d71b0b9e591b46af83413e03cc34b1701299",
+  "ID-DERIVATION-v3.txt": "9687f75e85acd23f153ac5b37cb0f70bdfbbd0a8678c6b91b073dbe04e5e915d",
+  "INSTRUMENT-ROLES-v2.txt": "7256d079f12e63051820acf6e5f262e33a1b0520c89b78d322623702e26f93dd",
+  "JUDGE-CONTROLS-JE-v2.txt": "9d5e368981ad87100036e721eda5cee8ce30b0f1aba094c7f3921337ea991b84",
+  "JUDGE-CONTROLS-JE.txt": "5593dd0c0b0762d1491f38830aa3882f5871d433c1593f05d77242dd2b2348b3",
+  "PASS-CRITERIA-v2.txt": "c218844db600bf0e3679d0feab9a651203d152e4c6580cc035956b1be62fd214",
+  "PIPELINE-v2.txt": "ede29e0def526d04d86a792dfd35f290f5fa893a05b06e0efc3ad88cfc26cb7e",
+  "PROVENANCE-STATES-v2.txt": "fec68ddd5baef097e8044106596174616516b10a271373216b1701f3b82345b6"
+ },
+ "lib_hashes": {
+  "builders.py": "38763c6e6cef5afc7bc2e3aa380463ca121283ab2a24648fc5fe3bff41d7ce3c",
+  "entail_validate.py": "74e317e94deedc2cc3e338e8a8877afae94b6775f0891cc3afe97aac1457f7ea",
+  "gate.py": "8d6e037e6735a73fad74a4ecd1f274c1e6b5090c0da65f3e94994e24b4baea17",
+  "identity.py": "ede48d1f1458f82e2f697af9a221a78c054623028eb441f673d382cc1a323d2b",
+  "package.py": "59f0096b8fe5423a934e4a7c7b10c29382ecb57acfff4fd75365375917b7d3ca",
+  "validate.py": "0faed47838971cc70d23ac307e39559abef3d0cc97d08ae4964c2a0f87fe4a32"
+ },
+ "pilot": "PILOT-MS-001A",
+ "raw_claim_counts": {
+  "MS001-SRC-B": 30,
+  "MS001-SRC-C": 39
+ },
+ "retry": 0
+}

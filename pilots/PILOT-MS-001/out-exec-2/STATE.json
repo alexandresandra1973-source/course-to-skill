@@ -1,0 +1,4887 @@
+{
+ "bundles": {
+  "SL-B-01": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-B-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-008",
+      "TC-009"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0009",
+      "EV-0010"
+     ],
+     "structure": {
+      "action": "Hospedar o Evolution API em uma VPS",
+      "condition": "Para que o Evolution API fique funcionando 24 horas por dia",
+      "do_not": [],
+      "name": "Hospedar o Evolution API em uma VPS",
+      "precedence": null,
+      "prerequisites": [],
+      "trigger": "Ao montar a stack que usa o Evolution API"
+     },
+     "temporary_candidate_id": "TX-001"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0001"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "WhatsApp / Cloud Code",
+      "scope": "gerenciamento de vários grupos de WhatsApp",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "O vídeo mostra como gerenciar vários grupos de WhatsApp utilizando o Cloud Code."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "WhatsApp",
+      "scope": "ações de gerenciamento de grupos de WhatsApp",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0004",
+      "EV-0005",
+      "EV-0006"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Cloud Code",
+      "scope": "stack do gerenciador de grupos",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "Na stack do gerenciador de grupos, o Cloud Code é o orquestrador, é com ele que o autor conversa e pede para fazer determinadas ações."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0006"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Cloud Code / Evolution API / WhatsApp",
+      "scope": "conexão entre Cloud Code e Evolution API",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0007"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API / WhatsApp Web",
+      "scope": "conexão do número de WhatsApp",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "Através do Evolution API é possível conectar o número do WhatsApp como se fosse um WhatsApp Web."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "por ser API não oficial",
+      "platform": "WhatsApp",
+      "scope": "custo de API",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "Por ser API não oficial, não se paga por API oficial."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0008",
+      "EV-0009"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "após escanear e conforme permissão dada e pedidos feitos",
+      "platform": "Cloud Code / WhatsApp",
+      "scope": "acesso do Cloud Code ao WhatsApp",
+      "stage": "após escanear"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "Após escanear, o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e que se pedir que ele faça."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0009",
+      "EV-0010"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API",
+      "scope": "hospedagem e custo do Evolution API",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "O Evolution API precisa ser hospedado em algum lugar; ele é gratuito e open source, não se paga por nada."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0010"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "para ficar funcionando 24 horas por dia",
+      "platform": "Evolution API / VPS",
+      "scope": "hospedagem do Evolution API",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-009",
+     "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia."
+    },
+    {
+     "_slice_id": "SL-B-01",
+     "evidence_refs": [
+      "EV-0010",
+      "EV-0011"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "HostGator VPS",
+      "scope": "escolha de VPS usada pelo autor",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-010",
+     "text": "A VPS que o autor utiliza é a da HostGator, que já tem a função de pré-instalar."
+    }
+   ],
+   "slice_id": "SL-B-01",
+   "source_id": "MS001-SRC-B"
+  },
+  "SL-B-02": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-B-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-003",
+      "TC-004"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0014",
+      "EV-0015"
+     ],
+     "structure": {
+      "action": "Pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão",
+      "condition": "Se você vai usar muito, muito, muito",
+      "do_not": [],
+      "name": "Escolher peça melhor (NVMe quatro) quando o uso for muito intenso",
+      "precedence": null,
+      "trigger": "Escolha do plano de servidor"
+     },
+     "temporary_candidate_id": "TX-001"
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-009"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "structure": {
+      "action": "Manter o servidor em São Paulo; estando fora do Brasil, verificar o do México",
+      "condition": "Se estiver no Brasil, São Paulo é o mais próximo; se estiver fora do Brasil, verificar se o do México chega a ser mais próximo",
+      "do_not": [],
+      "exceptions": [
+       "Estar fora do Brasil: verificar se o do México é mais próximo"
+      ],
+      "name": "Manter o servidor em São Paulo, ou verificar México se estiver fora do Brasil",
+      "precedence": null,
+      "trigger": "Conferência do pedido no carrinho"
+     },
+     "temporary_candidate_id": "TX-002"
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-008"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0018",
+      "EV-0019"
+     ],
+     "structure": {
+      "action": "Conferir se está tudo certo: se o plano está correto e se está Evolution API",
+      "condition": "Antes de continuar para verificação",
+      "do_not": [],
+      "name": "Conferir o pedido antes de prosseguir",
+      "precedence": null,
+      "trigger": "Ao vir em continuar para carrinho"
+     },
+     "temporary_candidate_id": "TX-003"
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008",
+      "TC-009",
+      "TC-010",
+      "TC-011"
+     ],
+     "defects": [],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0016",
+      "EV-0017",
+      "EV-0018",
+      "EV-0019",
+      "EV-0020",
+      "EV-0021",
+      "EV-0022"
+     ],
+     "structure": {
+      "name": "Contratação do plano até a tela de pagamento",
+      "steps": [
+       {
+        "action": "Escolher aqui o plano; no exemplo, pega o nível NVMe dois, para usar só uma instância mesmo",
+        "evidence_refs": [
+         "EV-0015",
+         "EV-0016"
+        ],
+        "name": "Escolher o plano",
+        "order_key": 1
+       },
+       {
+        "action": "Ver o plano de um mês por 54,98 por mês ou, a partir de um ano, a promoção de 27,89 o mês; ir no ano, que depois pode dividir",
+        "evidence_refs": [
+         "EV-0016",
+         "EV-0017"
+        ],
+        "name": "Escolher o período do plano",
+        "order_key": 2
+       },
+       {
+        "action": "Vir em continuar para carrinho e conferir se está tudo certo, se o plano está correto e se está Evolution API",
+        "evidence_refs": [
+         "EV-0018",
+         "EV-0019"
+        ],
+        "name": "Continuar para carrinho e conferir",
+        "order_key": 3
+       },
+       {
+        "action": "Manter o servidor em São Paulo, que é o mais próximo no Brasil; se estiver fora do Brasil, ver se o do México chega a ser mais próximo",
+        "evidence_refs": [
+         "EV-0019",
+         "EV-0020"
+        ],
+        "name": "Definir o servidor",
+        "order_key": 4
+       },
+       {
+        "action": "Depois de conferir, vir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google",
+        "evidence_refs": [
+         "EV-0020",
+         "EV-0021"
+        ],
+        "name": "Continuar para verificação e entrar na conta",
+        "order_key": 5
+       },
+       {
+        "action": "Fazer o login, preencher os dados pedidos e cair na tela de pagamento, podendo selecionar cartão de crédito",
+        "evidence_refs": [
+         "EV-0021",
+         "EV-0022"
+        ],
+        "name": "Preencher dados e chegar ao pagamento",
+        "order_key": 6
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0012",
+      "EV-0013"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "opção de alto desempenho caso queira algo mais parrudo",
+      "platform": null,
+      "scope": "tipos de servidores exibidos na tela de escolha",
+      "stage": "escolha do servidor"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "Os tipos de servidores mostrados incluem os padrões de dois, quatro e oito, e também existe opção de alto desempenho caso a pessoa queira algo mais parrudo."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution",
+      "scope": "capacidade anunciada do plano com Evolution pré-instalada",
+      "stage": "escolha do plano"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "A oferta indica \"Evolution pré-instalada e cabe até 20 números de WhatsApp\", ou seja, é possível conectar até 20 números de WhatsApp sem problema."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0014"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "depende da forma de utilização",
+      "platform": null,
+      "scope": "uso dos números de WhatsApp conectados",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "A capacidade de conexão depende também da forma que a pessoa vai utilizar."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0014",
+      "EV-0015"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "se for usar muito, muito, muito",
+      "platform": null,
+      "scope": "escolha do plano de servidor",
+      "stage": "escolha do plano"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "Se for usar muito, muito, muito, é legal pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0016"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "vai usar só uma instância",
+      "platform": null,
+      "scope": "exemplo de escolha feito na demonstração",
+      "stage": "escolha do plano"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "No exemplo demonstrado o autor pega o nível NVMe dois, porque vai usar só uma instância mesmo."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0016",
+      "EV-0017"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "promoção a partir de um ano de contratação",
+      "platform": null,
+      "scope": "preços exibidos para o plano escolhido no exemplo",
+      "stage": "escolha do período do plano"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "O plano de um mês custa 54,98 por mês, e a partir de um ano há uma promoção de 27,89 o mês."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0017",
+      "EV-0018"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": "escolha do período do plano",
+      "stage": "escolha do período do plano"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "O autor recomenda ir no plano anual, dizendo que depois é possível dividir e que fica legal."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0018",
+      "EV-0019"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API",
+      "scope": "tela do carrinho",
+      "stage": "carrinho"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "se estiver fora do Brasil, verificar se o do México é mais próximo",
+      "platform": null,
+      "scope": "escolha da localidade do servidor no carrinho",
+      "stage": "carrinho"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-009",
+     "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "HostGator",
+      "scope": "etapa de verificação/login",
+      "stage": "verificação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-010",
+     "text": "Depois de conferir, deve-se ir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google."
+    },
+    {
+     "_slice_id": "SL-B-02",
+     "evidence_refs": [
+      "EV-0021",
+      "EV-0022"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "HostGator",
+      "scope": "tela de pagamento",
+      "stage": "pagamento"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-011",
+     "text": "Após fazer o login e preencher os dados pedidos, chega-se à tela de pagamento, onde é possível selecionar cartão de crédito."
+    }
+   ],
+   "slice_id": "SL-B-02",
+   "source_id": "MS001-SRC-B"
+  },
+  "SL-B-03": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-B-03",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-003",
+      "TC-004"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0025",
+      "EV-0026"
+     ],
+     "structure": {
+      "action": "Digitar barra manager no final para de fato acessar",
+      "condition": "Aparece algo que parece um erro, mas não é erro",
+      "do_not": [
+       "Tratar a página que aparenta erro como um erro"
+      ],
+      "name": "Adicionar barra manager no final quando a página do Evolution API parece erro",
+      "precedence": null,
+      "trigger": "Ao clicar em Evolution API e abrir a página"
+     },
+     "temporary_candidate_id": "TX-001"
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-006"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0028",
+      "EV-0029"
+     ],
+     "structure": {
+      "action": "Colar a chave de API global que está no Gmail e clicar em conectar",
+      "condition": "No primeiro acesso",
+      "do_not": [],
+      "name": "Usar a chave de API global do Gmail no primeiro acesso",
+      "precedence": null,
+      "trigger": "Tela de primeiro acesso do Evolution API"
+     },
+     "temporary_candidate_id": "TX-002"
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-001",
+      "TC-003",
+      "TC-004",
+      "TC-006",
+      "TC-007",
+      "TC-008",
+      "TC-009"
+     ],
+     "defects": [],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0023",
+      "EV-0024",
+      "EV-0025",
+      "EV-0026",
+      "EV-0028",
+      "EV-0029",
+      "EV-0030",
+      "EV-0031",
+      "EV-0032",
+      "EV-0033"
+     ],
+     "structure": {
+      "name": "Acessar o Evolution API pelo portal, criar instância e conectar o número do WhatsApp",
+      "steps": [
+       {
+        "action": "No portal, no acesso rápido do servidor, clicar em Evolution API",
+        "evidence_refs": [
+         "EV-0023",
+         "EV-0024",
+         "EV-0025"
+        ],
+        "name": "Abrir o Evolution API pelo acesso rápido",
+        "order_key": 1
+       },
+       {
+        "action": "Na página que abre e aparenta um erro, digitar barra manager no final para de fato acessar",
+        "evidence_refs": [
+         "EV-0026"
+        ],
+        "name": "Digitar barra manager no final",
+        "order_key": 2
+       },
+       {
+        "action": "Na tela de primeiro acesso, colar a chave de API global que está no Gmail e clicar em conectar",
+        "evidence_refs": [
+         "EV-0028",
+         "EV-0029"
+        ],
+        "missing_input_action": null,
+        "name": "Conectar com a chave de API global",
+        "order_key": 3,
+        "required_inputs": [
+         "chave de API global que está no Gmail"
+        ]
+       },
+       {
+        "action": "Clicar em instância, colocar algum nome (por exemplo YouTube teste) e clicar em salvar; aparece como desconectado",
+        "evidence_refs": [
+         "EV-0030",
+         "EV-0031"
+        ],
+        "name": "Criar a instância",
+        "order_key": 4
+       },
+       {
+        "action": "Ir em configurações, gerar QR Code e escanear pelo celular como se fosse um WhatsApp Web",
+        "evidence_refs": [
+         "EV-0032",
+         "EV-0033"
+        ],
+        "name": "Gerar e escanear o QR Code",
+        "order_key": 5
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-003"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0023",
+      "EV-0024"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "portal",
+      "scope": "portal do provedor de VPS",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "No portal aparece o servidor do usuário e, em acesso rápido, é possível abrir o console ou clicar no Evolution API direto."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0024",
+      "EV-0025"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "portal",
+      "scope": "portal do provedor de VPS",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "Clicando em gerenciar, o usuário consegue ver mais detalhes da sua VPS."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0025",
+      "EV-0026"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "quando a página aberta aparenta erro",
+      "platform": "Evolution API",
+      "scope": "acesso ao Evolution API pelo portal",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "Ao clicar em Evolution API, abre uma página que aparenta ser um erro, mas não é erro: é porque se deve digitar barra manager no final."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0026",
+      "EV-0027"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API",
+      "scope": "acesso ao Evolution API",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "Após digitar barra manager no final, o usuário de fato acessa a página."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0027",
+      "EV-0028"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "primeiro acesso",
+      "platform": "Evolution API",
+      "scope": "diferença entre a tela do apresentador e a do espectador",
+      "stage": "primeiro acesso"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0028",
+      "EV-0029"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "no primeiro acesso",
+      "platform": "Evolution API",
+      "scope": "tela de primeiro acesso do Evolution API",
+      "stage": "primeiro acesso"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "No primeiro acesso o usuário deve colocar a chave de API global que está no seu Gmail, colar e conectar."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0029",
+      "EV-0030"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API",
+      "scope": "após conectar com a chave de API global",
+      "stage": "próxima etapa"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution API",
+      "scope": "criação de instância no Evolution API",
+      "stage": "criar instância"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado."
+    },
+    {
+     "_slice_id": "SL-B-03",
+     "evidence_refs": [
+      "EV-0031",
+      "EV-0032",
+      "EV-0033"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "quando a instância aparece como desconectado",
+      "platform": "Evolution API",
+      "scope": "conexão do número do WhatsApp à instância",
+      "stage": "conectar número do WhatsApp"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-009",
+     "text": "Com a instância aparecendo como desconectado, o usuário vai em configurações e gera QR Code, que deve ser escaneado pelo celular como se fosse um WhatsApp Web."
+    }
+   ],
+   "slice_id": "SL-B-03",
+   "source_id": "MS001-SRC-B"
+  },
+  "SL-C-01": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-C-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-004",
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008"
+     ],
+     "defects": [
+      "SCOPE_UNSTATED"
+     ],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0002",
+      "EV-0003",
+      "EV-0004",
+      "EV-0005"
+     ],
+     "structure": {
+      "name": "Instalar o Redis no EasyPanel e ativar o Redis Commander",
+      "steps": [
+       {
+        "action": "No EasyPanel ('eas panel'), clicar no '+' para adicionar um novo serviço no seu projeto.",
+        "evidence_refs": [
+         "EV-0002",
+         "EV-0003"
+        ],
+        "name": "Adicionar novo serviço",
+        "order_key": 1
+       },
+       {
+        "action": "Clicar na opção 'redis', que fica na parte de cima da lista.",
+        "evidence_refs": [
+         "EV-0003"
+        ],
+        "name": "Selecionar a opção redis",
+        "order_key": 2
+       },
+       {
+        "action": "Colocar um nome para o serviço (o autor coloca 'n8n redis').",
+        "evidence_refs": [
+         "EV-0003"
+        ],
+        "name": "Nomear o serviço",
+        "order_key": 3
+       },
+       {
+        "action": "Deixar a senha em branco para que seja gerada uma senha aleatória e não mexer na versão.",
+        "evidence_refs": [
+         "EV-0003",
+         "EV-0004"
+        ],
+        "name": "Definir senha e versão",
+        "order_key": 4
+       },
+       {
+        "action": "Clicar em criar; o Redis fica instalado no EasyPanel.",
+        "evidence_refs": [
+         "EV-0004",
+         "EV-0005"
+        ],
+        "name": "Criar o serviço",
+        "order_key": 5
+       },
+       {
+        "action": "Ativar a opção do Redis Commander, painel de gerenciamento que permite visualizar, editar ou apagar os dados pelo navegador.",
+        "evidence_refs": [
+         "EV-0005",
+         "EV-0006"
+        ],
+        "name": "Ativar Redis Commander",
+        "order_key": 6
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-001"
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-010",
+      "TC-012",
+      "TC-013",
+      "TC-014"
+     ],
+     "defects": [
+      "SCOPE_UNSTATED"
+     ],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0006",
+      "EV-0007",
+      "EV-0008",
+      "EV-0009"
+     ],
+     "structure": {
+      "name": "Obter uma chave de API no Groq ('grock')",
+      "prerequisites": [],
+      "steps": [
+       {
+        "action": "No site do Groq, ir em 'Dev console' no canto da tela.",
+        "evidence_refs": [
+         "EV-0008"
+        ],
+        "name": "Acessar o Dev console",
+        "order_key": 1
+       },
+       {
+        "action": "Fazer login com o Google.",
+        "evidence_refs": [
+         "EV-0008",
+         "EV-0009"
+        ],
+        "name": "Fazer login",
+        "order_key": 2
+       },
+       {
+        "action": "No lado esquerdo, ir em 'API Keys' ('API Case').",
+        "evidence_refs": [
+         "EV-0009"
+        ],
+        "name": "Ir em API Keys",
+        "order_key": 3
+       },
+       {
+        "action": "Clicar para criar uma nova, dar um nome para ela, marcar a caixinha e clicar em submit.",
+        "evidence_refs": [
+         "EV-0009"
+        ],
+        "name": "Criar a chave",
+        "order_key": 4
+       },
+       {
+        "action": "Copiar a chave no momento em que ela é exibida.",
+        "evidence_refs": [
+         "EV-0009"
+        ],
+        "name": "Copiar a chave",
+        "order_key": 5
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-002"
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-015",
+      "TC-016"
+     ],
+     "defects": [
+      "SCOPE_UNSTATED"
+     ],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0010",
+      "EV-0011"
+     ],
+     "structure": {
+      "name": "Obter uma chave de API na OpenAI",
+      "prerequisites": [
+       "Na OpenAI precisa colocar 5 para poder gerar uma chave"
+      ],
+      "steps": [
+       {
+        "action": "Ir nas configurações, em 'api Keys'.",
+        "evidence_refs": [
+         "EV-0010",
+         "EV-0011"
+        ],
+        "name": "Ir nas configurações / API Keys",
+        "order_key": 1
+       },
+       {
+        "action": "Clicar para criar uma nova e dar um nome para ela.",
+        "evidence_refs": [
+         "EV-0010",
+         "EV-0011"
+        ],
+        "name": "Criar nova chave",
+        "order_key": 2
+       },
+       {
+        "action": "Selecionar de qual projeto ela é.",
+        "evidence_refs": [
+         "EV-0010"
+        ],
+        "name": "Selecionar o projeto",
+        "order_key": 3
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-003"
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-014"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0009"
+     ],
+     "structure": {
+      "action": "Copiar a chave imediatamente e colar em um bloco de notas para não esquecer",
+      "condition": "A chave só é visível nessa tela",
+      "do_not": [],
+      "name": "Copiar a chave de API do Groq no momento em que ela é exibida",
+      "precedence": null,
+      "trigger": "Após clicar em submit e o sistema exibir a chave de API no Groq"
+     },
+     "temporary_candidate_id": "TX-004"
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-008",
+      "TC-009"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED",
+      "PASSO_UNICO"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0005"
+     ],
+     "structure": {
+      "action": "Ativar a opção do Redis Commander para visualizar, editar ou apagar os dados pelo navegador",
+      "condition": "Contexto de desenvolvimento ('é muito útil pro desenvolvimento')",
+      "do_not": [],
+      "name": "Ativar o Redis Commander",
+      "precedence": null,
+      "trigger": "Após instalar o Redis no EasyPanel"
+     },
+     "temporary_candidate_id": "TX-005"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0001"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Redis",
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0001",
+      "EV-0002"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Redis",
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "No Redis é possível configurar dados que vão ter um tempo de vida."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0002"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Redis",
+      "scope": "as operações que o autor vai fazer no material",
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "O Redis é ideal para as operações que serão feitas (as apresentadas pelo autor)."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0002",
+      "EV-0003"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "EasyPanel",
+      "scope": null,
+      "stage": "instalação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0003"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "EasyPanel",
+      "scope": null,
+      "stage": "instalação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "O Redis fica na opção 'redis' na parte de cima da lista de serviços; clica nela e coloca um nome para o serviço."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0003",
+      "EV-0004"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "EasyPanel",
+      "scope": "escolha do autor na demonstração",
+      "stage": "instalação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "O autor deixa a senha em branco para que o sistema gere uma senha aleatória, e não mexe na versão."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0004",
+      "EV-0005"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "EasyPanel",
+      "scope": null,
+      "stage": "instalação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "Depois de preencher os campos, pode clicar em criar e o Redis fica instalado no EasyPanel."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0005"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "EasyPanel / Redis Commander",
+      "scope": null,
+      "stage": "desenvolvimento"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0005",
+      "EV-0006"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Redis Commander",
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-009",
+     "text": "O Redis Commander é um painel de gerenciamento do Redis no qual você pode visualizar os dados que estão lá dentro e editar ou apagar através do navegador."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0006",
+      "EV-0007"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Groq / OpenAI / outro provedor",
+      "scope": null,
+      "stage": "após instalar o Redis"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-010",
+     "text": "O próximo passo é pegar uma chave de API do Groq ('grock'), da OpenAI ou de qualquer outro que você tiver."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Groq",
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-011",
+     "text": "O autor apresenta o Groq ('grock') como uma opção porque o Groq é gratuito."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0008"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Groq",
+      "scope": null,
+      "stage": "obtenção de chave de API"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-012",
+     "text": "No site do Groq, você vai em 'Dev console' no canto e faz login com o Google."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0008",
+      "EV-0009"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Groq",
+      "scope": null,
+      "stage": "obtenção de chave de API"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-013",
+     "text": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0009"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Groq",
+      "scope": null,
+      "stage": "obtenção de chave de API"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-014",
+     "text": "Depois de submeter, o sistema dá a chave e você precisa copiá-la naquele momento."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0010",
+      "EV-0011"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "para poder gerar uma chave na OpenAI",
+      "platform": "OpenAI",
+      "scope": null,
+      "stage": "obtenção de chave de API"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-015",
+     "text": "Na OpenAI é preciso colocar 5 (créditos/dólares, conforme dito na fonte) para poder gerar uma chave."
+    },
+    {
+     "_slice_id": "SL-C-01",
+     "evidence_refs": [
+      "EV-0010"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "OpenAI",
+      "scope": null,
+      "stage": "obtenção de chave de API"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-016",
+     "text": "Na OpenAI você vai nas configurações, em 'API Keys', clica para criar uma nova, dá um nome para ela e seleciona de qual projeto ela é."
+    }
+   ],
+   "slice_id": "SL-C-01",
+   "source_id": "MS001-SRC-C"
+  },
+  "SL-C-02": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-C-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-001"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0012",
+      "EV-0013"
+     ],
+     "structure": {
+      "action": "copiar a chave e salvar num bloco de notas",
+      "condition": "antes de sair dessa tela",
+      "do_not": [
+       "sair da tela sem copiar e salvar a chave"
+      ],
+      "name": "Salvar a chave antes de sair da tela",
+      "precedence": null,
+      "trigger": "quando a chave é exibida após clicar em criar"
+     },
+     "temporary_candidate_id": "TX-001"
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-002",
+      "TC-003"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "structure": {
+      "action": "ir em settings > community nodes, verificar os nodes da Evolution api e, se não tiver, clicar em Install, digitar 'n8n nodes Evolution api' e clicar em instalar",
+      "condition": "se os nodes da Evolution api não estiverem instalados",
+      "do_not": [],
+      "name": "Verificar nodes da Evolution api antes de criar o workflow",
+      "precedence": null,
+      "prerequisites": [],
+      "trigger": "antes de criar o workflow no n8n"
+     },
+     "temporary_candidate_id": "TX-002"
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-008"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "structure": {
+      "action": "adicionar um node set depois do webhook para organizar os dados de uma forma melhor",
+      "condition": "sempre",
+      "do_not": [
+       "usar diretamente os dados que vêm no webhook"
+      ],
+      "name": "Sempre adicionar node set depois do webhook",
+      "precedence": null,
+      "trigger": "depois do node de webhook, ao receber os dados"
+     },
+     "temporary_candidate_id": "TX-003"
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-008"
+     ],
+     "defects": [],
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "structure": {
+      "conditions": [],
+      "do_not": [
+       "usar diretamente os dados que vêm no webhook"
+      ],
+      "why": "a fonte afirma que sempre se adiciona um node set depois do webhook para organizar os dados de uma forma melhor"
+     },
+     "temporary_candidate_id": "TX-004"
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-002",
+      "TC-003",
+      "TC-004",
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008"
+     ],
+     "defects": [],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0013",
+      "EV-0014",
+      "EV-0015",
+      "EV-0016",
+      "EV-0017",
+      "EV-0018",
+      "EV-0019",
+      "EV-0020"
+     ],
+     "structure": {
+      "name": "Criar workflow no n8n com webhook da Evolution api",
+      "prerequisites": [],
+      "steps": [
+       {
+        "action": "ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados; se não tiver, clicar em Install, digitar 'n8n nodes Evolution api' e clicar em instalar",
+        "evidence_refs": [
+         "EV-0013",
+         "EV-0014"
+        ],
+        "name": "Verificar community nodes",
+        "order_key": 1
+       },
+       {
+        "action": "ir no menu principal, criar um novo workflow e dar um nome a ele",
+        "evidence_refs": [
+         "EV-0014",
+         "EV-0015"
+        ],
+        "name": "Criar novo workflow",
+        "order_key": 2
+       },
+       {
+        "action": "adicionar um node de webhook, configurar o método como post e copiar o URL de teste",
+        "evidence_refs": [
+         "EV-0016"
+        ],
+        "name": "Adicionar node de webhook",
+        "order_key": 3
+       },
+       {
+        "action": "na Evolution, clicar na sessão, ir em events webhook e colar o URL",
+        "evidence_refs": [
+         "EV-0016",
+         "EV-0017"
+        ],
+        "name": "Colar URL na Evolution",
+        "order_key": 4
+       },
+       {
+        "action": "verificar se enabled está ligada, a opção de base 64 também, e o evento 'messages up search'; as três opções têm que estar ativas; clicar em salvar",
+        "evidence_refs": [
+         "EV-0017",
+         "EV-0018"
+        ],
+        "name": "Ativar opções e salvar",
+        "order_key": 5
+       },
+       {
+        "action": "voltar pro n8n, clicar para ouvir um evento de teste e mandar uma mensagem para você no seu WhatsApp",
+        "evidence_refs": [
+         "EV-0018"
+        ],
+        "name": "Ouvir evento de teste",
+        "order_key": 6
+       },
+       {
+        "action": "adicionar um node set depois do webhook para organizar os dados de uma forma melhor, pegando apenas parte dos dados que vieram",
+        "evidence_refs": [
+         "EV-0019",
+         "EV-0020"
+        ],
+        "name": "Adicionar node set",
+        "order_key": 7
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-005"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0012",
+      "EV-0013"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "antes de sair da tela",
+      "platform": "Evolution api",
+      "scope": "tela de criação da credencial",
+      "stage": "criação da credencial"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "É preciso copiar a chave/credencial e salvar num bloco de notas assim que ela é exibida, porque ao sair dessa tela não há mais como vê-la."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0013"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "n8n",
+      "scope": "antes de criar o workflow",
+      "stage": "preparação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "Antes de criar o workflow no n8n, deve-se ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0014"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": "se você não tiver os nodes instalados",
+      "platform": "n8n",
+      "scope": null,
+      "stage": "preparação"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "Se os nodes da Evolution api não estiverem instalados, deve-se clicar em Install, digitar 'n8n nodes Evolution api' e depois clicar em instalar."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0016"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "n8n",
+      "scope": "início do workflow",
+      "stage": "construção do workflow"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0016",
+      "EV-0017"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution api",
+      "scope": null,
+      "stage": "configuração do webhook"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "Na Evolution, clica-se na sessão, vai-se em events webhook e cola-se o URL ali."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0017",
+      "EV-0018"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "Evolution api",
+      "scope": "tela de events webhook da sessão",
+      "stage": "configuração do webhook"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "As três opções — enabled, base 64 e o evento 'messages up search' — têm que estar ativas, e depois deve-se clicar em salvar."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0018"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "n8n",
+      "scope": null,
+      "stage": "teste do webhook"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "De volta ao n8n, clica-se para ouvir um evento de teste e envia-se uma mensagem para si mesmo no WhatsApp."
+    },
+    {
+     "_slice_id": "SL-C-02",
+     "evidence_refs": [
+      "EV-0019",
+      "EV-0020"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": "n8n",
+      "scope": "dados recebidos no webhook",
+      "stage": "tratamento dos dados do webhook"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "Nunca se usa diretamente os dados que vêm no webhook; sempre se adiciona um node set depois do webhook para organizá-los de uma forma melhor."
+    }
+   ],
+   "slice_id": "SL-C-02",
+   "source_id": "MS001-SRC-C"
+  },
+  "SL-C-03": {
+   "raw_candidates": [
+    {
+     "_slice_id": "SL-C-03",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-001",
+      "TC-002",
+      "TC-003",
+      "TC-004",
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008",
+      "TC-009",
+      "TC-010"
+     ],
+     "defects": [
+      "SCOPE_UNSTATED"
+     ],
+     "entity_kind": "workflow_candidate",
+     "evidence_refs": [
+      "EV-0021",
+      "EV-0022",
+      "EV-0023",
+      "EV-0024",
+      "EV-0025",
+      "EV-0026",
+      "EV-0027"
+     ],
+     "structure": {
+      "name": "Mapear os cinco campos, testar, renomear o node e adicionar set vazio antes do ai Agent",
+      "steps": [
+       {
+        "action": "Definir os cinco campos: quem mandou (número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+        "evidence_refs": [
+         "EV-0021",
+         "EV-0022"
+        ],
+        "name": "Definir os cinco campos",
+        "order_key": 1
+       },
+       {
+        "action": "Salvar o número da pessoa que mandou a mensagem a partir de body data Key remote JD.",
+        "evidence_refs": [
+         "EV-0022",
+         "EV-0023"
+        ],
+        "name": "Apontar o campo quem mandou",
+        "order_key": 2
+       },
+       {
+        "action": "Pegar a Instância em Body instance.",
+        "evidence_refs": [
+         "EV-0023"
+        ],
+        "name": "Apontar a Instância",
+        "order_key": 3
+       },
+       {
+        "action": "Pegar a mensagem em Body data message conversation.",
+        "evidence_refs": [
+         "EV-0023"
+        ],
+        "name": "Apontar a mensagem",
+        "order_key": 4
+       },
+       {
+        "action": "Pegar o ID da mensagem em B data Key id.",
+        "evidence_refs": [
+         "EV-0023",
+         "EV-0024"
+        ],
+        "name": "Apontar o ID da mensagem",
+        "order_key": 5
+       },
+       {
+        "action": "Pegar o nome da pessoa em Body data push name.",
+        "evidence_refs": [
+         "EV-0024"
+        ],
+        "name": "Apontar o nome da pessoa",
+        "order_key": 6
+       },
+       {
+        "action": "Clicar em teste e verificar que aquele monte de coisa virou só esses cinco campos.",
+        "evidence_refs": [
+         "EV-0024",
+         "EV-0025"
+        ],
+        "name": "Clicar em teste",
+        "order_key": 7
+       },
+       {
+        "action": "Renomear esse node para dados.",
+        "evidence_refs": [
+         "EV-0025"
+        ],
+        "name": "Renomear o node",
+        "order_key": 8
+       },
+       {
+        "action": "Antes de criar o agente de IA, colocar um set vazio.",
+        "evidence_refs": [
+         "EV-0025",
+         "EV-0026"
+        ],
+        "name": "Colocar um set vazio",
+        "order_key": 9
+       },
+       {
+        "action": "Depois do set vazio, colocar o ai Agent e fazer as configurações dele.",
+        "evidence_refs": [
+         "EV-0026",
+         "EV-0027"
+        ],
+        "name": "Colocar o ai Agent",
+        "order_key": 10
+       }
+      ]
+     },
+     "temporary_candidate_id": "TX-001"
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "claim_refs_applicability": "APPLICABLE",
+     "claim_temp_refs": [
+      "TC-009",
+      "TC-010"
+     ],
+     "defects": [
+      "PRECEDENCE_UNDEFINED",
+      "SCOPE_UNSTATED"
+     ],
+     "entity_kind": "rule_candidate",
+     "evidence_refs": [
+      "EV-0025",
+      "EV-0026"
+     ],
+     "structure": {
+      "action": "Colocar um set vazio mesmo, porque isso vai ser melhor no futuro; depois desse set vazio colocar o ai Agent",
+      "condition": "Antes de colocar o ai Agent",
+      "do_not": [],
+      "name": "Colocar um set vazio antes do ai Agent",
+      "precedence": null,
+      "trigger": "Ao ir criar o agente de IA"
+     },
+     "temporary_candidate_id": "TX-002"
+    }
+   ],
+   "raw_claims": [
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0021",
+      "EV-0022"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-001",
+     "text": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0022",
+      "EV-0023"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-002",
+     "text": "O campo quem mandou, onde se salva o número da pessoa que mandou a mensagem, fica dentro de body data Key remote JD."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0023"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-003",
+     "text": "A Instância fica em Body instance."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0023"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-004",
+     "text": "A mensagem fica em Body data message conversation."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0023",
+      "EV-0024"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-005",
+     "text": "O ID da mensagem fica em B data Key id."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0024"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-006",
+     "text": "O nome da pessoa fica em Body data push name."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0024",
+      "EV-0025"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-007",
+     "text": "Após clicar em teste, aquele monte de coisa vira só esses cinco campos."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0025"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-008",
+     "text": "Deve-se renomear esse node para dados."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0025",
+      "EV-0026"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": "antes de criar o agente de IA"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-009",
+     "text": "Antes de criar o agente de IA, deve-se colocar um set vazio, porque isso vai ser melhor para nós no futuro."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0026",
+      "EV-0027"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": "depois do set vazio"
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-010",
+     "text": "Depois desse set vazio pode-se colocar o ai Agent e fazer as configurações dele."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0027"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-011",
+     "text": "O agente de IA é composto por quatro peças."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0027",
+      "EV-0028"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-012",
+     "text": "A primeira peça do agente é o modelo de Inteligência Artificial que ele usa; o modelo é como se fosse o cérebro do agente."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0028",
+      "EV-0029"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-013",
+     "text": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0029",
+      "EV-0030"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-014",
+     "text": "A terceira peça são as ferramentas que o agente pode utilizar, por exemplo pesquisar na internet, alterar planilhas e buscar em um banco de dados."
+    },
+    {
+     "_slice_id": "SL-C-03",
+     "evidence_refs": [
+      "EV-0030"
+     ],
+     "qualifiers": {
+      "audience": null,
+      "condition": null,
+      "platform": null,
+      "scope": null,
+      "stage": null
+     },
+     "source_language": "pt",
+     "status": "SOURCE_EXPLICIT",
+     "temporary_claim_id": "TC-015",
+     "text": "A quarta peça é o agente em si, onde você coloca as instruções do que ele deve fazer."
+    }
+   ],
+   "slice_id": "SL-C-03",
+   "source_id": "MS001-SRC-C"
+  }
+ },
+ "calls": [
+  {
+   "call_seq": 1,
+   "input_sha256": "a9c2a62b0117ae08f2be381154cac80d06659c7978c66ce00a07f6e3c5bef346",
+   "instrument_role": "EXTRACTOR_CONTROL",
+   "label": "EC",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "087e0f0f5b4eccc50c3471de78b83147da73b616f9e21f61d87ee079885c79df",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 3110,
+    "output": 1869
+   }
+  },
+  {
+   "call_seq": 2,
+   "input_sha256": "7ca697a20ff029ae794dbbf43d23224409293a5dba7a28e4d4c2fe1a1d3ae4bf",
+   "instrument_role": "ENTAILMENT_CONTROL",
+   "label": "JE",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "c413efe1aeff4237d88ad5f735a45acb2da4a87bcbb82a56def569578c0f5a3a",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 1993,
+    "output": 576
+   }
+  },
+  {
+   "call_seq": 3,
+   "input_sha256": "1ce9b73100699a52f76c39655594f16b25b0a8117ce1e92211e04437e428a0d1",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-01",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "68e635c5fe5958c7727a15eded76d3d96bd1eb38e058e5fe2d3c1810e1c730b7",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4306,
+    "output": 2468
+   }
+  },
+  {
+   "call_seq": 4,
+   "input_sha256": "ddce5e22981b27f28eb9d54b5c9df7518c6bf7dd5a360da1036eb319d86601be",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-02",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "1ba66c88470f72ac862fa31987e912a64dad7c98bb1c7c15cf62ec2b53a2b8ed",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4426,
+    "output": 4268
+   }
+  },
+  {
+   "call_seq": 5,
+   "input_sha256": "f4ab2c69df9ee7cf1430bc32ddfd66a65328a17d54da963b76c3f7cd254269e5",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-B-03",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "7e8f6be06a34140a1dbf58709f46da91c698ac5dc55d51e7c642c2a0a912332e",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4343,
+    "output": 3382
+   }
+  },
+  {
+   "call_seq": 6,
+   "input_sha256": "85d74c5e72afc8e6c3d8ab78edb4bbd0d707442c5b0a3076ae461fdf0bef0299",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-01",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "0cfe10802f8a1507188fa4f3e5a72679144d8c513c4a846db951e4c7e39668d3",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4299,
+    "output": 5579
+   }
+  },
+  {
+   "call_seq": 7,
+   "input_sha256": "6e82555df72a422ad3d90dfa55a73daa9c0ae7129159fa6d7872a002a68e8378",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-02",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "1eaec7ed51c7433c9537b16fc46d5fe733ef1b9b6dad6f938a47c181020dccd6",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4006,
+    "output": 3153
+   }
+  },
+  {
+   "call_seq": 8,
+   "input_sha256": "73213dd5c559d3d184f9232bdd2cba80904e5fd38e01b5c3ef0382077f2d1ba0",
+   "instrument_role": "EXTRACTOR",
+   "label": "SL-C-03",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "ac33a9dc557f1062960ce9f2adebf44cd165a5cdf1dcd81df0679896fb46013a",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 4072,
+    "output": 4114
+   }
+  },
+  {
+   "call_seq": 9,
+   "input_sha256": "80ffeb0960027fb82f1a0dbe5fcd82ccc4be71253bc3fb6e34feda410975b88d",
+   "instrument_role": "ENTAILMENT_JUDGE",
+   "label": "MS001-SRC-B",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "bcf90cd0de4b50fa1b0b30f0b4cd832ccbae2d5e578c031c85a4683e09f9aaa8",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 11874,
+    "output": 3566
+   }
+  },
+  {
+   "call_seq": 10,
+   "input_sha256": "62301463e93481fabbb0b7cf809f10f8d24189f0f26af90ad7c325485111aa40",
+   "instrument_role": "ENTAILMENT_JUDGE",
+   "label": "MS001-SRC-C",
+   "max_tokens": 8000,
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "output_sha256": "a24450fef7b7afc663376752f286ba0566a9104dfac719518e47a7561eb6bef9",
+   "stop_reason": "end_turn",
+   "thinking": {
+    "type": "disabled"
+   },
+   "tokens": {
+    "input": 12394,
+    "output": 4153
+   }
+  }
+ ],
+ "fin": {
+  "MS001-SRC-B": [
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0017",
+     "EV-0018"
+    ],
+    "local_id": "CL-0001",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": "escolha do período do plano",
+     "stage": "escolha do período do plano"
+    },
+    "semantic_key": "1a5988250cb37fd82ee5e170574b548c319a0a252901e7d84349738f84d04386",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O autor recomenda ir no plano anual, dizendo que depois é possível dividir e que fica legal."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0001"
+    ],
+    "local_id": "CL-0002",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "WhatsApp / Cloud Code",
+     "scope": "gerenciamento de vários grupos de WhatsApp",
+     "stage": null
+    },
+    "semantic_key": "2758a7579cd81faf0d1014c748687536641596cd1cab2a09f6ece2f7510bb548",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O vídeo mostra como gerenciar vários grupos de WhatsApp utilizando o Cloud Code."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0007"
+    ],
+    "local_id": "CL-0003",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API / WhatsApp Web",
+     "scope": "conexão do número de WhatsApp",
+     "stage": null
+    },
+    "semantic_key": "385f634546b022648a3b425b5ffd9a762c721ea7100f68a139ad10ad1fbd6b1e",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Através do Evolution API é possível conectar o número do WhatsApp como se fosse um WhatsApp Web."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "local_id": "CL-0004",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "portal",
+     "scope": "portal do provedor de VPS",
+     "stage": null
+    },
+    "semantic_key": "440128bda7047a2000942ca0faeefff94f3d66cfa0a79beec61c14b4efe53c72",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No portal aparece o servidor do usuário e, em acesso rápido, é possível abrir o console ou clicar no Evolution API direto."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "local_id": "CL-0005",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "scope": "criação de instância no Evolution API",
+     "stage": "criar instância"
+    },
+    "semantic_key": "4ce143025fd2f230b44b5399117f6bb04a195bb3c3aa7400130d97ca038f067c",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "local_id": "CL-0006",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "portal",
+     "scope": "portal do provedor de VPS",
+     "stage": null
+    },
+    "semantic_key": "54a52200a47ed7709f354904b118fae14813da82ff24abc0389848ee99d0fa89",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Clicando em gerenciar, o usuário consegue ver mais detalhes da sua VPS."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0008",
+     "EV-0009"
+    ],
+    "local_id": "CL-0007",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "após escanear e conforme permissão dada e pedidos feitos",
+     "platform": "Cloud Code / WhatsApp",
+     "scope": "acesso do Cloud Code ao WhatsApp",
+     "stage": "após escanear"
+    },
+    "semantic_key": "558a7df9b3b45726c3244c55f03cb9f9878325a2cd8b6a540e06316dc9f0468b",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Após escanear, o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e que se pedir que ele faça."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0010"
+    ],
+    "local_id": "CL-0008",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-009"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "para ficar funcionando 24 horas por dia",
+     "platform": "Evolution API / VPS",
+     "scope": "hospedagem do Evolution API",
+     "stage": null
+    },
+    "semantic_key": "64d46b329b824f3a2d09bf2ed516232a34e852946ddce692e49ad552bdb681bd",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "local_id": "CL-0009",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-010"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "HostGator",
+     "scope": "etapa de verificação/login",
+     "stage": "verificação"
+    },
+    "semantic_key": "66c959df625ce38b41ea0b4e9d4fa216b60a500fc3f4798b5e847ead741ebbc2",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Depois de conferir, deve-se ir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0029",
+     "EV-0030"
+    ],
+    "local_id": "CL-0010",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "scope": "após conectar com a chave de API global",
+     "stage": "próxima etapa"
+    },
+    "semantic_key": "678ecee71fe1828135a2dedd1d8044182fa1db29d8e21879f2f87f0c8a2749d1",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "local_id": "CL-0011",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "scope": "hospedagem e custo do Evolution API",
+     "stage": null
+    },
+    "semantic_key": "6e50a67a0cdb7350a445a59797ae17829b8eead4bedbea0923208f575aebb317",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Evolution API precisa ser hospedado em algum lugar; ele é gratuito e open source, não se paga por nada."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0019",
+     "EV-0020"
+    ],
+    "local_id": "CL-0012",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-009"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "se estiver fora do Brasil, verificar se o do México é mais próximo",
+     "platform": null,
+     "scope": "escolha da localidade do servidor no carrinho",
+     "stage": "carrinho"
+    },
+    "semantic_key": "70075785a6a1c5da1f5cdb6747530078cb86b033b68b1ec14eb1539d5a8b2bbc",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "local_id": "CL-0013",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-009"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "quando a instância aparece como desconectado",
+     "platform": "Evolution API",
+     "scope": "conexão do número do WhatsApp à instância",
+     "stage": "conectar número do WhatsApp"
+    },
+    "semantic_key": "70b2b2c0c78b75a6af10e9183a79ed12fecfef3d4b4e3df641063f6076bbcc01",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Com a instância aparecendo como desconectado, o usuário vai em configurações e gera QR Code, que deve ser escaneado pelo celular como se fosse um WhatsApp Web."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "local_id": "CL-0014",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "no primeiro acesso",
+     "platform": "Evolution API",
+     "scope": "tela de primeiro acesso do Evolution API",
+     "stage": "primeiro acesso"
+    },
+    "semantic_key": "7f5ba69eace2760b72b83e55cc0cf063f95da53b68628beca0d1f783f08dfd51",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No primeiro acesso o usuário deve colocar a chave de API global que está no seu Gmail, colar e conectar."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "local_id": "CL-0015",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "opção de alto desempenho caso queira algo mais parrudo",
+     "platform": null,
+     "scope": "tipos de servidores exibidos na tela de escolha",
+     "stage": "escolha do servidor"
+    },
+    "semantic_key": "8a9af8b8bf9a57cf9f95c4ff25d9e6ad6fc0b2d59971c4b5d274216be0cfc8ef",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Os tipos de servidores mostrados incluem os padrões de dois, quatro e oito, e também existe opção de alto desempenho caso a pessoa queira algo mais parrudo."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "local_id": "CL-0016",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution",
+     "scope": "capacidade anunciada do plano com Evolution pré-instalada",
+     "stage": "escolha do plano"
+    },
+    "semantic_key": "8bbe87db478961b091c15554cdcaeabe709ab14025249d6659fcd61b548b3e16",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A oferta indica \"Evolution pré-instalada e cabe até 20 números de WhatsApp\", ou seja, é possível conectar até 20 números de WhatsApp sem problema."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0014",
+     "EV-0015"
+    ],
+    "local_id": "CL-0017",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "se for usar muito, muito, muito",
+     "platform": null,
+     "scope": "escolha do plano de servidor",
+     "stage": "escolha do plano"
+    },
+    "semantic_key": "9d13dd31ff85b15985b9588f09e56b677dd14c45a5a691d25b64218bacbdcea9",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Se for usar muito, muito, muito, é legal pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0006"
+    ],
+    "local_id": "CL-0018",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Cloud Code / Evolution API / WhatsApp",
+     "scope": "conexão entre Cloud Code e Evolution API",
+     "stage": null
+    },
+    "semantic_key": "a608995f1df1f5cfdc3cbcdd32545b306873028dd2258d5e720c99cb11411bba",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0016"
+    ],
+    "local_id": "CL-0019",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "vai usar só uma instância",
+     "platform": null,
+     "scope": "exemplo de escolha feito na demonstração",
+     "stage": "escolha do plano"
+    },
+    "semantic_key": "a91c393b00a10d71dce911cc1d8629b5c14fbd328be519e7148d8ab5f5d2eee9",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No exemplo demonstrado o autor pega o nível NVMe dois, porque vai usar só uma instância mesmo."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0004",
+     "EV-0005",
+     "EV-0006"
+    ],
+    "local_id": "CL-0020",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Cloud Code",
+     "scope": "stack do gerenciador de grupos",
+     "stage": null
+    },
+    "semantic_key": "aebfddaf55e677c0e6c4cf2e8ff07dd9051d5e49567076e7c078f93f0a5be5dc",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Na stack do gerenciador de grupos, o Cloud Code é o orquestrador, é com ele que o autor conversa e pede para fazer determinadas ações."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "local_id": "CL-0021",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-010"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "HostGator VPS",
+     "scope": "escolha de VPS usada pelo autor",
+     "stage": null
+    },
+    "semantic_key": "b866b668c2154ae05616951a2c47724c5f4b70a62cd429e491bcd3232cd6ff1b",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A VPS que o autor utiliza é a da HostGator, que já tem a função de pré-instalar."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0016",
+     "EV-0017"
+    ],
+    "local_id": "CL-0022",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "promoção a partir de um ano de contratação",
+     "platform": null,
+     "scope": "preços exibidos para o plano escolhido no exemplo",
+     "stage": "escolha do período do plano"
+    },
+    "semantic_key": "e3f380d69b8c08026b6c11a63def773540adc2a02f0d529ea94f40d9c55f436d",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O plano de um mês custa 54,98 por mês, e a partir de um ano há uma promoção de 27,89 o mês."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "local_id": "CL-0023",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-011"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "HostGator",
+     "scope": "tela de pagamento",
+     "stage": "pagamento"
+    },
+    "semantic_key": "e936190a136b3e9237a453c6bfb693c1d1e81f0c8b0df8e4747d3dcf03b8a6e1",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Após fazer o login e preencher os dados pedidos, chega-se à tela de pagamento, onde é possível selecionar cartão de crédito."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "local_id": "CL-0024",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "WhatsApp",
+     "scope": "ações de gerenciamento de grupos de WhatsApp",
+     "stage": null
+    },
+    "semantic_key": "ebebe28ffaeb9541a001cbd11a5177186fd0d432dc82375986e903e742b0b08b",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "local_id": "CL-0025",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "scope": "tela do carrinho",
+     "stage": "carrinho"
+    },
+    "semantic_key": "efcd0e044a5d389f2d0cacb036ecb853ea78b4dc8396e93d9ffbbcfba3cb6c2f",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "local_id": "CL-0026",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "quando a página aberta aparenta erro",
+     "platform": "Evolution API",
+     "scope": "acesso ao Evolution API pelo portal",
+     "stage": null
+    },
+    "semantic_key": "f170ea5a345452f151c9149fe554cfe85b10618fb86217d6ca237f8e6e012aa0",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Ao clicar em Evolution API, abre uma página que aparenta ser um erro, mas não é erro: é porque se deve digitar barra manager no final."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "local_id": "CL-0027",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-01",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "por ser API não oficial",
+     "platform": "WhatsApp",
+     "scope": "custo de API",
+     "stage": null
+    },
+    "semantic_key": "f2273fb56dcf0aa63fca4df87ebf5f941a9955de038c89da06fbc40ffcbc0830",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Por ser API não oficial, não se paga por API oficial."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "local_id": "CL-0028",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "primeiro acesso",
+     "platform": "Evolution API",
+     "scope": "diferença entre a tela do apresentador e a do espectador",
+     "stage": "primeiro acesso"
+    },
+    "semantic_key": "fa73532f24ba1dbd452ef57b03d8017456339a6e30f21dfe00f294e14365ae1b",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "local_id": "CL-0029",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-03",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "scope": "acesso ao Evolution API",
+     "stage": null
+    },
+    "semantic_key": "fd0db7818eb9b8d062f81852717e1b85b3517d1eabcfd38d682346e476e6a94e",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Após digitar barra manager no final, o usuário de fato acessa a página."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0014"
+    ],
+    "local_id": "CL-0030",
+    "merged_from": [
+     {
+      "slice_id": "SL-B-02",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "depende da forma de utilização",
+     "platform": null,
+     "scope": "uso dos números de WhatsApp conectados",
+     "stage": null
+    },
+    "semantic_key": "fd92e47c5d1000a6fcccb846269690474de3d61ded29582cb5a4bd958bbe88d8",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A capacidade de conexão depende também da forma que a pessoa vai utilizar."
+   }
+  ],
+  "MS001-SRC-C": [
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0029",
+     "EV-0030"
+    ],
+    "local_id": "CL-0001",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-014"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "0137486921ee03baca648b7f61e506ef87ed4ec4b8f0815b040d8050bf6b2256",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A terceira peça são as ferramentas que o agente pode utilizar, por exemplo pesquisar na internet, alterar planilhas e buscar em um banco de dados."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0006",
+     "EV-0007"
+    ],
+    "local_id": "CL-0002",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-010"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Groq / OpenAI / outro provedor",
+     "scope": null,
+     "stage": "após instalar o Redis"
+    },
+    "semantic_key": "043f963fc5a5bdf9bfa378d14e5f1f34ec75a5ef119ef7ab8d3f6c490e6c965a",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O próximo passo é pegar uma chave de API do Groq ('grock'), da OpenAI ou de qualquer outro que você tiver."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0009"
+    ],
+    "local_id": "CL-0003",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-014"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Groq",
+     "scope": null,
+     "stage": "obtenção de chave de API"
+    },
+    "semantic_key": "04b5fb6eebeba187dea8403cc871efed8483c819d1c2ad8e62cbea6a554dde74",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Depois de submeter, o sistema dá a chave e você precisa copiá-la naquele momento."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0005",
+     "EV-0006"
+    ],
+    "local_id": "CL-0004",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-009"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Redis Commander",
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "05b723fc8ca1d121ac74ead97ef9d9e82b908720c8a148767e409b9cfb2b089f",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Redis Commander é um painel de gerenciamento do Redis no qual você pode visualizar os dados que estão lá dentro e editar ou apagar através do navegador."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0018"
+    ],
+    "local_id": "CL-0005",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "n8n",
+     "scope": null,
+     "stage": "teste do webhook"
+    },
+    "semantic_key": "0cdb22ea00825e06c5d07f4eeab69915ed71baa08fc45d959d8b54793455d604",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "De volta ao n8n, clica-se para ouvir um evento de teste e envia-se uma mensagem para si mesmo no WhatsApp."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "local_id": "CL-0006",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "antes de sair da tela",
+     "platform": "Evolution api",
+     "scope": "tela de criação da credencial",
+     "stage": "criação da credencial"
+    },
+    "semantic_key": "18054639b708107bc14756d3b092b3b892f672ed315d52d87ace14dab91ac1c3",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "É preciso copiar a chave/credencial e salvar num bloco de notas assim que ela é exibida, porque ao sair dessa tela não há mais como vê-la."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0030"
+    ],
+    "local_id": "CL-0007",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-015"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "1808960293d704c9dce390d41f1a15368a574cef6394a896b941eafed78170d8",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A quarta peça é o agente em si, onde você coloca as instruções do que ele deve fazer."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0002",
+     "EV-0003"
+    ],
+    "local_id": "CL-0008",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "EasyPanel",
+     "scope": null,
+     "stage": "instalação"
+    },
+    "semantic_key": "1a8853eb01959f4624137e3d17e3c200009328cba01e00342f1992ebe32a7ce5",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "local_id": "CL-0009",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "2ba9139d1c159d6bc1e5effc36c6ca3499507f15b42b8307240ad7f1987da697",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O ID da mensagem fica em B data Key id."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0023"
+    ],
+    "local_id": "CL-0010",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "3433762ae56ac6f62039c9c644b7a6080af752af2f78400797d17a2918f078d5",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A mensagem fica em Body data message conversation."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0016",
+     "EV-0017"
+    ],
+    "local_id": "CL-0011",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution api",
+     "scope": null,
+     "stage": "configuração do webhook"
+    },
+    "semantic_key": "3e875e02a0f6a09d92d2a7823ae0953f37d40adc669d4546beb1cf90572c7f5d",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Na Evolution, clica-se na sessão, vai-se em events webhook e cola-se o URL ali."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "local_id": "CL-0012",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-012"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "4343871fc465808ac0debfb6e03d04abc5dfc995d4a1eb47ec0a43c0c3622913",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A primeira peça do agente é o modelo de Inteligência Artificial que ele usa; o modelo é como se fosse o cérebro do agente."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0022",
+     "EV-0023"
+    ],
+    "local_id": "CL-0013",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "47cabd4bf499303a600eb184802d49173294ebb5e5f76273b6ff532ab780ae55",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O campo quem mandou, onde se salva o número da pessoa que mandou a mensagem, fica dentro de body data Key remote JD."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "local_id": "CL-0014",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-013"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "4fbda1f834be8ceab4bd14082c23c35652a6a806eee24cb36c7724dad4183f69",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0013"
+    ],
+    "local_id": "CL-0015",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "n8n",
+     "scope": "antes de criar o workflow",
+     "stage": "preparação"
+    },
+    "semantic_key": "50dd92bf1dee3a016226d896e42eca9f9e9631f043a299d22551cc675b0a7c0c",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Antes de criar o workflow no n8n, deve-se ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0027"
+    ],
+    "local_id": "CL-0016",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-011"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "5c9451a988e9bf054fa36ffe36b3817ad5bfea82b33e98b3cb0a9951719a4e29",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O agente de IA é composto por quatro peças."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0014"
+    ],
+    "local_id": "CL-0017",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "se você não tiver os nodes instalados",
+     "platform": "n8n",
+     "scope": null,
+     "stage": "preparação"
+    },
+    "semantic_key": "6a5c2683f0506c516b4f02db82fbc3395acfea0e60d96862ca525e2ae12f0a38",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Se os nodes da Evolution api não estiverem instalados, deve-se clicar em Install, digitar 'n8n nodes Evolution api' e depois clicar em instalar."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0025"
+    ],
+    "local_id": "CL-0018",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "6ddeba356e72d49624b46d561e29907fd17d2772e35e850b86509a76d8176fe0",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Deve-se renomear esse node para dados."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0019",
+     "EV-0020"
+    ],
+    "local_id": "CL-0019",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "n8n",
+     "scope": "dados recebidos no webhook",
+     "stage": "tratamento dos dados do webhook"
+    },
+    "semantic_key": "6f1a0829d37949708fee22a881a65a4a8ed737db33addf2f2d64e35a89e59878",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Nunca se usa diretamente os dados que vêm no webhook; sempre se adiciona um node set depois do webhook para organizá-los de uma forma melhor."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "local_id": "CL-0020",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-011"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Groq",
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "6ffbe568dad645d5fa8b6853987f7b41851adc8397c0b74b064d7944ee4debaf",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O autor apresenta o Groq ('grock') como uma opção porque o Groq é gratuito."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0002"
+    ],
+    "local_id": "CL-0021",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Redis",
+     "scope": "as operações que o autor vai fazer no material",
+     "stage": null
+    },
+    "semantic_key": "827a7e549a63ba62798b78bc60961b04993443b39c915f1719648ed318f8e152",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Redis é ideal para as operações que serão feitas (as apresentadas pelo autor)."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0001",
+     "EV-0002"
+    ],
+    "local_id": "CL-0022",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-002"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Redis",
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "83efd9bc1370e3251a6621b5677fbf4b00a69f0bc7638a7aa4ebd9de950ae04f",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No Redis é possível configurar dados que vão ter um tempo de vida."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0004",
+     "EV-0005"
+    ],
+    "local_id": "CL-0023",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "EasyPanel",
+     "scope": null,
+     "stage": "instalação"
+    },
+    "semantic_key": "85365d35bdab3745042ea16d55b01ba6faa4cd178aadf4bd31a36bce4d1385fc",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Depois de preencher os campos, pode clicar em criar e o Redis fica instalado no EasyPanel."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "local_id": "CL-0024",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-007"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "8721e3d3923d794c535c1a43a53bb4188965fe44cfdffc0b51f4553da42550b1",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Após clicar em teste, aquele monte de coisa vira só esses cinco campos."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0024"
+    ],
+    "local_id": "CL-0025",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "8e1f9ca90e95eff09b2b2bbf6c7fc837ff53475f74322a032a877d66d8bd1b39",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O nome da pessoa fica em Body data push name."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0008",
+     "EV-0009"
+    ],
+    "local_id": "CL-0026",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-013"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Groq",
+     "scope": null,
+     "stage": "obtenção de chave de API"
+    },
+    "semantic_key": "942aa754646ab582d34fcb0c8490bcce834d512ec05b285fc4cd8b5e4fbdeb6b",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0008"
+    ],
+    "local_id": "CL-0027",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-012"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Groq",
+     "scope": null,
+     "stage": "obtenção de chave de API"
+    },
+    "semantic_key": "a01eadea71b767dd822455db8aea4e9f9528109df56a8e0a6d73e884b22210e2",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "No site do Groq, você vai em 'Dev console' no canto e faz login com o Google."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0003"
+    ],
+    "local_id": "CL-0028",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-005"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "EasyPanel",
+     "scope": null,
+     "stage": "instalação"
+    },
+    "semantic_key": "a3426d10c3821a709ad9b860745529a9e7353f8deebd9f2c800470ba62b0d501",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Redis fica na opção 'redis' na parte de cima da lista de serviços; clica nela e coloca um nome para o serviço."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "local_id": "CL-0029",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-015"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "para poder gerar uma chave na OpenAI",
+     "platform": "OpenAI",
+     "scope": null,
+     "stage": "obtenção de chave de API"
+    },
+    "semantic_key": "aba1d841ad0a96239bfc613b4eb9cc5f73b9b883577803103cade452404fb1fa",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Na OpenAI é preciso colocar 5 (créditos/dólares, conforme dito na fonte) para poder gerar uma chave."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0001"
+    ],
+    "local_id": "CL-0030",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Redis",
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "b9c4f1ae5a9a835cfb1a14fa4ff04994544182d56d1b92ac002007b5d4ef43b6",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0023"
+    ],
+    "local_id": "CL-0031",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-003"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "c1ccb9b5df8e847591b663f42ebf435b3e5d4d382637d0859572eb22a251f214",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "A Instância fica em Body instance."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0005"
+    ],
+    "local_id": "CL-0032",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-008"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "EasyPanel / Redis Commander",
+     "scope": null,
+     "stage": "desenvolvimento"
+    },
+    "semantic_key": "c1eef339d94bb894ef125362720537da982f233ee99cbf9531a8a02f4eadbf11",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0003",
+     "EV-0004"
+    ],
+    "local_id": "CL-0033",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "EasyPanel",
+     "scope": "escolha do autor na demonstração",
+     "stage": "instalação"
+    },
+    "semantic_key": "c2c698dbfacbe99f9cacd2ee8a961e3a4b19f8207dc74551733f2b19d9165e01",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "O autor deixa a senha em branco para que o sistema gere uma senha aleatória, e não mexe na versão."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "local_id": "CL-0034",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-009"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": "antes de criar o agente de IA"
+    },
+    "semantic_key": "cd195ccabb987e3451da04c9a30cbe55e0d7c562b658b1df5542de4513834e3a",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Antes de criar o agente de IA, deve-se colocar um set vazio, porque isso vai ser melhor para nós no futuro."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0017",
+     "EV-0018"
+    ],
+    "local_id": "CL-0035",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-006"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "Evolution api",
+     "scope": "tela de events webhook da sessão",
+     "stage": "configuração do webhook"
+    },
+    "semantic_key": "d142af2bc3ec387996925990293e406bf891c7f7c265d416444203dc5132da15",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "As três opções — enabled, base 64 e o evento 'messages up search' — têm que estar ativas, e depois deve-se clicar em salvar."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "local_id": "CL-0036",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-001"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "semantic_key": "d9e3b0c9cd2f2b9aebc54ae720a4d99c3188fdec97d26eaeadbef7934195ef30",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "local_id": "CL-0037",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-03",
+      "temporary_claim_id": "TC-010"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": "depois do set vazio"
+    },
+    "semantic_key": "dbcbcbfb22a56ae179771377fcf18cec738ae2ef7febee5b1ee42c679d3686aa",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Depois desse set vazio pode-se colocar o ai Agent e fazer as configurações dele."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0016"
+    ],
+    "local_id": "CL-0038",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-02",
+      "temporary_claim_id": "TC-004"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "n8n",
+     "scope": "início do workflow",
+     "stage": "construção do workflow"
+    },
+    "semantic_key": "e21f38de39cc04bc560f3852cca25196937c6061907172f9e13f42066c606618",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste."
+   },
+   {
+    "entity_kind": "claim",
+    "evidence_refs": [
+     "EV-0010"
+    ],
+    "local_id": "CL-0039",
+    "merged_from": [
+     {
+      "slice_id": "SL-C-01",
+      "temporary_claim_id": "TC-016"
+     }
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "OpenAI",
+     "scope": null,
+     "stage": "obtenção de chave de API"
+    },
+    "semantic_key": "eea9fab1b9d421e77f516b9a9ff2f42139cf997dcc97a13d1edc5cd507b436e2",
+    "source_language": "pt",
+    "status_raw": [
+     "SOURCE_EXPLICIT"
+    ],
+    "text": "Na OpenAI você vai nas configurações, em 'API Keys', clica para criar uma nova, dá um nome para ela e seleciona de qual projeto ela é."
+   }
+  ]
+ },
+ "jud": {
+  "MS001-SRC-B": {
+   "CL-0001": {
+    "claim_id": "CL-0001",
+    "entail_why": "EV-0017 recomenda 'vai aqui no ano que aí você pode dividir' e EV-0018 continua 'lá depois, enfim, fica legal', sustentando a recomendação do plano anual, a divisão e o 'fica legal'.",
+    "evidence_refs_checked": [
+     "EV-0017",
+     "EV-0018"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0002": {
+    "claim_id": "CL-0002",
+    "entail_why": "EV-0001 declara literalmente que o vídeo mostrará como gerenciar vários grupos de WhatsApp utilizando o Cloud Code.",
+    "evidence_refs_checked": [
+     "EV-0001"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0003": {
+    "claim_id": "CL-0003",
+    "entail_why": "EV-0007 afirma que através dele se conecta o número do WhatsApp como se fosse um WhatsApp Web, no contexto do Evolution API.",
+    "evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0004": {
+    "claim_id": "CL-0004",
+    "entail_why": "EV-0023 mostra o servidor no portal e o 'acesso rápido', e EV-0024 confirma que ali se abre o console ou se clica no Evolution API direto.",
+    "evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0005": {
+    "claim_id": "CL-0005",
+    "entail_why": "EV-0030 indica clicar em instância e EV-0031 confirma colocar nome 'YouTube teste', salvar e aparecer como desconectado.",
+    "evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0006": {
+    "claim_id": "CL-0006",
+    "entail_why": "EV-0024 menciona 'se você vem aqui em gerenciar' e EV-0025 completa que 'você consegue ver mais detalhes da sua VPS'.",
+    "evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0007": {
+    "claim_id": "CL-0007",
+    "entail_why": "EV-0008 e EV-0009 afirmam que após escanear o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e se pedir que ele faça.",
+    "evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0008": {
+    "claim_id": "CL-0008",
+    "entail_why": "EV-0010 diz explicitamente que é preciso hospedar em uma VPS para ele ficar 24 horas por dia funcionando.",
+    "evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0009": {
+    "claim_id": "CL-0009",
+    "entail_why": "EV-0020 indica ir em 'continuar para verificação' e EV-0021 confirma colocar a conta da HostGator, podendo criar a conta com o Google.",
+    "evidence_refs_checked": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0010": {
+    "claim_id": "CL-0010",
+    "entail_why": "EV-0029 fala do acesso à página e da conexão do número, e EV-0030 confirma que a próxima etapa é criar uma instância e conectar o número do WhatsApp.",
+    "evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0011": {
+    "claim_id": "CL-0011",
+    "entail_why": "EV-0009 afirma que precisa ser hospedado em algum lugar, é gratuito e não se paga nada, e EV-0010 confirma que é open source.",
+    "evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0012": {
+    "claim_id": "CL-0012",
+    "entail_why": "EV-0019 diz manter São Paulo por ser o mais próximo e no Brasil, e EV-0020 completa a condição de verificar o do México se estiver fora do Brasil.",
+    "evidence_refs_checked": [
+     "EV-0019",
+     "EV-0020"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0013": {
+    "claim_id": "CL-0013",
+    "entail_why": "EV-0031 mostra a instância como desconectada, EV-0032 indica ir em configurações e gerar QR Code para escanear pelo celular, e EV-0033 completa 'WhatsApp Web'.",
+    "evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0014": {
+    "claim_id": "CL-0014",
+    "entail_why": "EV-0028 fala do primeiro acesso e da chave de API global e EV-0029 confirma que ela está no Gmail e que se deve colar e conectar.",
+    "evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0015": {
+    "claim_id": "CL-0015",
+    "entail_why": "EV-0012 lista dois, quatro e oito como padrões e menciona alto desempenho, e EV-0013 completa 'mais parrudo'.",
+    "evidence_refs_checked": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0016": {
+    "claim_id": "CL-0016",
+    "entail_why": "EV-0013 cita a frase 'Evolution pré-instalada e cabe até 20 números de WhatsApp' e EV-0014 confirma que se consegue conectar até 20 números sem problema.",
+    "evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0017": {
+    "claim_id": "CL-0017",
+    "entail_why": "EV-0014 inicia 'se você usa vai usar muito' e EV-0015 completa 'muito, muito, já é legal tu pegar uma peça melhor, por exemplo, a NVMe quatro para esse tipo de caso é o padrão'.",
+    "evidence_refs_checked": [
+     "EV-0014",
+     "EV-0015"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0018": {
+    "claim_id": "CL-0018",
+    "entail_why": "EV-0006 afirma que o Cloud Code vai se conectar via API com o Evolution API, que é a API não oficial do WhatsApp.",
+    "evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0019": {
+    "claim_id": "CL-0019",
+    "entail_why": "EV-0016 mostra o autor pegando o nível NVMe dois porque vai usar só uma instância.",
+    "evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0020": {
+    "claim_id": "CL-0020",
+    "entail_why": "EV-0004 apresenta a stack do gerenciador de grupos, EV-0005 diz que o Cloud Code é o orquestrador com quem o autor conversa e EV-0006 completa 'pedir para ele fazer determinadas ações'.",
+    "evidence_refs_checked": [
+     "EV-0004",
+     "EV-0005",
+     "EV-0006"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0021": {
+    "claim_id": "CL-0021",
+    "entail_why": "EV-0010 diz que a VPS utilizada é a da e EV-0011 completa 'HostGator. Já tem lá a função de pré-instalar'.",
+    "evidence_refs_checked": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0022": {
+    "claim_id": "CL-0022",
+    "entail_why": "EV-0016 informa o plano de um mês a 54,98 por e EV-0017 completa 'mês' e a promoção de 27,89 o mês a partir de um ano.",
+    "evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0023": {
+    "claim_id": "CL-0023",
+    "entail_why": "EV-0021 relata o login e o preenchimento dos dados pedidos e EV-0022 confirma a tela de pagamento com seleção de cartão de crédito.",
+    "evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0024": {
+    "claim_id": "CL-0024",
+    "entail_why": "EV-0001, EV-0002 e EV-0003 listam criar grupos em massa, mudar foto de perfil, mudar descrição, adicionar pessoas, enviar mensagem e dar relatórios de membros.",
+    "evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0025": {
+    "claim_id": "CL-0025",
+    "entail_why": "EV-0018 indica continuar para carrinho e conferir se está tudo certo com o plano, e EV-0019 completa 'correto, se tá aqui Evolution API'.",
+    "evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0026": {
+    "claim_id": "CL-0026",
+    "entail_why": "EV-0025 mostra o clique em Evolution API abrindo a página e EV-0026 explica que o que aparece não é erro e que se deve digitar barra manager no final.",
+    "evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0027": {
+    "claim_id": "CL-0027",
+    "entail_why": "EV-0007 termina com 'é API não' e EV-0008 completa 'oficial, ou seja, tu não vai pagar por API oficial'.",
+    "evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0028": {
+    "claim_id": "CL-0028",
+    "entail_why": "EV-0027 explica que no caso dele as instâncias estão conectadas porque gravava um vídeo e EV-0028 diz que teve que regravar e que no caso do espectador aparecerá a tela de primeiro acesso.",
+    "evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0029": {
+    "claim_id": "CL-0029",
+    "entail_why": "EV-0026 diz que ao digitar barra manager no final 'você vai, de fato,' e EV-0027 completa 'acessar aqui'.",
+    "evidence_refs_checked": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0030": {
+    "claim_id": "CL-0030",
+    "entail_why": "EV-0014 afirma que depende também da forma que a pessoa vai estar utilizando, no contexto da conexão de até 20 números.",
+    "evidence_refs_checked": [
+     "EV-0014"
+    ],
+    "judgment": "ENTAILED"
+   }
+  },
+  "MS001-SRC-C": {
+   "CL-0001": {
+    "claim_id": "CL-0001",
+    "entail_why": "EV-0029 e EV-0030 juntas afirmam que a terceira peça são as ferramentas que o agente pode utilizar, com os exemplos pesquisar na internet, alterar planilhas e buscar em um banco de dados.",
+    "evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0002": {
+    "claim_id": "CL-0002",
+    "entail_why": "EV-0006 e EV-0007 dizem que o próximo passo é pegar uma chave de api do grock, da Open ai ou de qualquer outro que você tiver.",
+    "evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0003": {
+    "claim_id": "CL-0003",
+    "entail_why": "EV-0009 termina em 'clica em submit e agora ele vai', não afirmando que o sistema dá a chave nem que é preciso copiá-la naquele momento.",
+    "evidence_refs_checked": [
+     "EV-0009"
+    ],
+    "judgment": "NOT_ENTAILED"
+   },
+   "CL-0004": {
+    "claim_id": "CL-0004",
+    "entail_why": "EV-0005 descreve o Reds Commander como painel de gerenciamento do Reds e EV-0006 completa que nele se pode visualizar, editar ou apagar dados pelo navegador.",
+    "evidence_refs_checked": [
+     "EV-0005",
+     "EV-0006"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0005": {
+    "claim_id": "CL-0005",
+    "entail_why": "EV-0018 sustenta voltar ao n8n e clicar para ouvir um evento de teste, mas é cortada antes de dizer que se envia uma mensagem para si mesmo no WhatsApp.",
+    "evidence_refs_checked": [
+     "EV-0018"
+    ],
+    "judgment": "NOT_ENTAILED"
+   },
+   "CL-0006": {
+    "claim_id": "CL-0006",
+    "entail_why": "EV-0012 diz que é preciso copiar agora e salvar num bloco de notas porque ao sair dessa tela não tem mais como, e EV-0013 completa com 'ver'.",
+    "evidence_refs_checked": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0007": {
+    "claim_id": "CL-0007",
+    "entail_why": "EV-0030 afirma literalmente que a quarta peça é o agente em si, onde se colocam as instruções do que ele deve fazer.",
+    "evidence_refs_checked": [
+     "EV-0030"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0008": {
+    "claim_id": "CL-0008",
+    "entail_why": "EV-0002 e EV-0003 dizem que para instalar você vai no eas panel e clica no maizinho para adicionar um novo serviço no seu projeto.",
+    "evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0009": {
+    "claim_id": "CL-0009",
+    "entail_why": "EV-0023 e EV-0024 juntas dizem que o ID da mensagem fica em B data Key id.",
+    "evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0010": {
+    "claim_id": "CL-0010",
+    "entail_why": "EV-0023 afirma que a mensagem fica em Body data message conversation.",
+    "evidence_refs_checked": [
+     "EV-0023"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0011": {
+    "claim_id": "CL-0011",
+    "entail_why": "EV-0017 afirma clicar na sessão na Evolution, vir em events web Hook e colar o URL ali.",
+    "evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0012": {
+    "claim_id": "CL-0012",
+    "entail_why": "EV-0027 e EV-0028 dizem que a primeira peça é o modelo de Inteligência Artificial que ele usa e que o modelo é como se fosse o cérebro do agente.",
+    "evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0013": {
+    "claim_id": "CL-0013",
+    "entail_why": "EV-0022 define o campo quem mandou como onde se salva o número da pessoa que mandou a mensagem e EV-0023 completa que fica dentro de body data Key remote JD.",
+    "evidence_refs_checked": [
+     "EV-0022",
+     "EV-0023"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0014": {
+    "claim_id": "CL-0014",
+    "entail_why": "EV-0028 e EV-0029 dizem que a segunda peça é a memória de chat, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+    "evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0015": {
+    "claim_id": "CL-0015",
+    "entail_why": "EV-0013 diz que antes de criar o workflow no n8n deve-se vir em settings community nodes e ver se os nodes da Evolution api estão instalados.",
+    "evidence_refs_checked": [
+     "EV-0013"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0016": {
+    "claim_id": "CL-0016",
+    "entail_why": "EV-0027 afirma que o agente de a é composto por quatro peças.",
+    "evidence_refs_checked": [
+     "EV-0027"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0017": {
+    "claim_id": "CL-0017",
+    "entail_why": "EV-0014 diz que se você não tiver é só clicar em Install, digitar n8n nodes Evolution api e depois clicar em instalar.",
+    "evidence_refs_checked": [
+     "EV-0014"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0018": {
+    "claim_id": "CL-0018",
+    "entail_why": "EV-0025 instrui a renomear esse node para dados.",
+    "evidence_refs_checked": [
+     "EV-0025"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0019": {
+    "claim_id": "CL-0019",
+    "entail_why": "EV-0019 e EV-0020 afirmam que dos dados que vêm no web Hook sempre se adiciona um node set depois do Web Hook para organizá-los de forma melhor.",
+    "evidence_refs_checked": [
+     "EV-0019",
+     "EV-0020"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0020": {
+    "claim_id": "CL-0020",
+    "entail_why": "EV-0007 e EV-0008 dizem que ele apresenta o grock como uma opção porque o grock é gratuito.",
+    "evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0021": {
+    "claim_id": "CL-0021",
+    "entail_why": "EV-0002 afirma que ele é ideal para essas operações que nós vamos fazer.",
+    "evidence_refs_checked": [
+     "EV-0002"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0022": {
+    "claim_id": "CL-0022",
+    "entail_why": "EV-0001 e EV-0002 dizem que nele se pode configurar dados que vão ter um tempo de vida.",
+    "evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0023": {
+    "claim_id": "CL-0023",
+    "entail_why": "EV-0004 e EV-0005 sustentam clicar em criar e o Reds ficar instalado no eas panel, mas nenhuma evidência menciona 'depois de preencher os campos'.",
+    "evidence_refs_checked": [
+     "EV-0004",
+     "EV-0005"
+    ],
+    "judgment": "NOT_ENTAILED"
+   },
+   "CL-0024": {
+    "claim_id": "CL-0024",
+    "entail_why": "EV-0024 e EV-0025 dizem que ao clicar em teste aquele monte de coisa virou só esses cinco.",
+    "evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0025": {
+    "claim_id": "CL-0025",
+    "entail_why": "EV-0024 afirma que o nome da pessoa fica em Body data push name.",
+    "evidence_refs_checked": [
+     "EV-0024"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0026": {
+    "claim_id": "CL-0026",
+    "entail_why": "EV-0009 descreve vir em API Case do lado esquerdo, criar uma nova, dar nome, marcar a caixinha e clicar em submit.",
+    "evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0027": {
+    "claim_id": "CL-0027",
+    "entail_why": "EV-0008 diz que no site do grock você vem em Dev console no cantinho e faz login com o Google (completado pelo trecho).",
+    "evidence_refs_checked": [
+     "EV-0008"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0028": {
+    "claim_id": "CL-0028",
+    "entail_why": "EV-0003 diz que o ris fica aqui em cima nessa opção redis, clica aqui e coloca um nome pro serviço.",
+    "evidence_refs_checked": [
+     "EV-0003"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0029": {
+    "claim_id": "CL-0029",
+    "entail_why": "EV-0010 e EV-0011 afirmam que na Open ai precisa colocar 5 para poder gerar uma chave.",
+    "evidence_refs_checked": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0030": {
+    "claim_id": "CL-0030",
+    "entail_why": "EV-0001 afirma que o Reds é um banco de dados não relacional que utiliza chaves e valores para guardar os dados.",
+    "evidence_refs_checked": [
+     "EV-0001"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0031": {
+    "claim_id": "CL-0031",
+    "entail_why": "EV-0023 afirma que a Instância fica em Body instance.",
+    "evidence_refs_checked": [
+     "EV-0023"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0032": {
+    "claim_id": "CL-0032",
+    "entail_why": "EV-0005 instrui ativar a opção do Reds Commander porque ele é muito útil pro desenvolvimento.",
+    "evidence_refs_checked": [
+     "EV-0005"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0033": {
+    "claim_id": "CL-0033",
+    "entail_why": "EV-0003 e EV-0004 dizem que ele vai deixar a senha em branco para gerar uma aleatória e não vai mexer na versão.",
+    "evidence_refs_checked": [
+     "EV-0003",
+     "EV-0004"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0034": {
+    "claim_id": "CL-0034",
+    "entail_why": "EV-0025 e EV-0026 dizem que antes de criar o agente de a coloca-se um set vazio porque isso vai ser melhor pra gente no futuro.",
+    "evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0035": {
+    "claim_id": "CL-0035",
+    "entail_why": "EV-0017 e EV-0018 mencionam enabled, base 64 e o evento messages up search, que as três opções têm que estar ativas e clicar em salvar.",
+    "evidence_refs_checked": [
+     "EV-0017",
+     "EV-0018"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0036": {
+    "claim_id": "CL-0036",
+    "entail_why": "EV-0021 e EV-0022 listam os cinco campos: quem mandou (número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+    "evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0037": {
+    "claim_id": "CL-0037",
+    "entail_why": "EV-0026 e EV-0027 dizem que depois desse set vazio pode colocar o ai Agent e fazer as configurações dele.",
+    "evidence_refs_checked": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0038": {
+    "claim_id": "CL-0038",
+    "entail_why": "EV-0016 diz que para começar adiciona um node de web Hook, configura o método dele como post e copia o URL de teste.",
+    "evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "judgment": "ENTAILED"
+   },
+   "CL-0039": {
+    "claim_id": "CL-0039",
+    "entail_why": "EV-0010 descreve vir nas configurações api Keys, clicar para criar uma nova, dar um nome e selecionar de qual projeto ela é.",
+    "evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "judgment": "ENTAILED"
+   }
+  }
+ },
+ "t2f": {
+  "SL-B-01|TC-001": "CL-0002",
+  "SL-B-01|TC-002": "CL-0024",
+  "SL-B-01|TC-003": "CL-0020",
+  "SL-B-01|TC-004": "CL-0018",
+  "SL-B-01|TC-005": "CL-0003",
+  "SL-B-01|TC-006": "CL-0027",
+  "SL-B-01|TC-007": "CL-0007",
+  "SL-B-01|TC-008": "CL-0011",
+  "SL-B-01|TC-009": "CL-0008",
+  "SL-B-01|TC-010": "CL-0021",
+  "SL-B-02|TC-001": "CL-0015",
+  "SL-B-02|TC-002": "CL-0016",
+  "SL-B-02|TC-003": "CL-0030",
+  "SL-B-02|TC-004": "CL-0017",
+  "SL-B-02|TC-005": "CL-0019",
+  "SL-B-02|TC-006": "CL-0022",
+  "SL-B-02|TC-007": "CL-0001",
+  "SL-B-02|TC-008": "CL-0025",
+  "SL-B-02|TC-009": "CL-0012",
+  "SL-B-02|TC-010": "CL-0009",
+  "SL-B-02|TC-011": "CL-0023",
+  "SL-B-03|TC-001": "CL-0004",
+  "SL-B-03|TC-002": "CL-0006",
+  "SL-B-03|TC-003": "CL-0026",
+  "SL-B-03|TC-004": "CL-0029",
+  "SL-B-03|TC-005": "CL-0028",
+  "SL-B-03|TC-006": "CL-0014",
+  "SL-B-03|TC-007": "CL-0010",
+  "SL-B-03|TC-008": "CL-0005",
+  "SL-B-03|TC-009": "CL-0013",
+  "SL-C-01|TC-001": "CL-0030",
+  "SL-C-01|TC-002": "CL-0022",
+  "SL-C-01|TC-003": "CL-0021",
+  "SL-C-01|TC-004": "CL-0008",
+  "SL-C-01|TC-005": "CL-0028",
+  "SL-C-01|TC-006": "CL-0033",
+  "SL-C-01|TC-007": "CL-0023",
+  "SL-C-01|TC-008": "CL-0032",
+  "SL-C-01|TC-009": "CL-0004",
+  "SL-C-01|TC-010": "CL-0002",
+  "SL-C-01|TC-011": "CL-0020",
+  "SL-C-01|TC-012": "CL-0027",
+  "SL-C-01|TC-013": "CL-0026",
+  "SL-C-01|TC-014": "CL-0003",
+  "SL-C-01|TC-015": "CL-0029",
+  "SL-C-01|TC-016": "CL-0039",
+  "SL-C-02|TC-001": "CL-0006",
+  "SL-C-02|TC-002": "CL-0015",
+  "SL-C-02|TC-003": "CL-0017",
+  "SL-C-02|TC-004": "CL-0038",
+  "SL-C-02|TC-005": "CL-0011",
+  "SL-C-02|TC-006": "CL-0035",
+  "SL-C-02|TC-007": "CL-0005",
+  "SL-C-02|TC-008": "CL-0019",
+  "SL-C-03|TC-001": "CL-0036",
+  "SL-C-03|TC-002": "CL-0013",
+  "SL-C-03|TC-003": "CL-0031",
+  "SL-C-03|TC-004": "CL-0010",
+  "SL-C-03|TC-005": "CL-0009",
+  "SL-C-03|TC-006": "CL-0025",
+  "SL-C-03|TC-007": "CL-0024",
+  "SL-C-03|TC-008": "CL-0018",
+  "SL-C-03|TC-009": "CL-0034",
+  "SL-C-03|TC-010": "CL-0037",
+  "SL-C-03|TC-011": "CL-0016",
+  "SL-C-03|TC-012": "CL-0012",
+  "SL-C-03|TC-013": "CL-0014",
+  "SL-C-03|TC-014": "CL-0001",
+  "SL-C-03|TC-015": "CL-0007"
+ }
+}
