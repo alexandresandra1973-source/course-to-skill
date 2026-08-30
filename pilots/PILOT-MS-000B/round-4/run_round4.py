@@ -140,14 +140,19 @@ def main():
     trans, leaks = {}, []
     for r in RUNS:
         back = json.loads((FUSDIR / f"fusion-package-R4-{r}.json").read_text(encoding="utf-8"))
-        rejected_ids = {tuple(x) for x in back["rejected_candidate_refs_NOT_CONSUMABLE"]}
+        # CORRECAO exec-2: local_id sozinho e AMBIGUO nestes pacotes (um anti-pattern
+        # reusa o local_id da rule de origem). A chave de verificacao passa a ser
+        # (source_package_hash, kind, local_id), lida do relatorio ja persistido.
+        rejected_ids = {(car["source_package_hash"], x["kind"], x["local_id"])
+                        for car in back["candidate_admission_report"].values()
+                        for x in car["records"] if x["state"] != "ADMITTED"}
         trans[r] = {}
         for pop, (kind, proj) in STRUCT.items():
             rows = []
             for item in back["fusion"][pop]:
                 sph = item["candidate_ref"]["source_package_hash"]
                 lid = item["candidate_ref"]["local_id"]
-                if (sph, lid) in rejected_ids: leaks.append([r, pop, sph, lid])
+                if (sph, kind, lid) in rejected_ids: leaks.append([r, pop, sph, kind, lid])
                 k = next(kk for kk in SRC if before[f"{r}/{kk}"]["source_package_hash"] == sph)
                 d = PKGS / r / f"pkg-{k}"
                 src_obj = next(x for x in json.loads(
@@ -180,39 +185,41 @@ def main():
     real_pu, real_pu_ok = [], True
     real_un, real_un_ok = [], True
     for r in RUNS:
-        idx = {x["local_id"]: x for x in trans[r]["workflows"]}
-        ridx = {x["local_id"]: x for x in trans[r]["rules"]}
+        idx = {(x["source_package_hash"], x["local_id"]): x for x in trans[r]["workflows"]}
+        ridx = {(x["source_package_hash"], x["local_id"]): x for x in trans[r]["rules"]}
         for k in SRC:
             sph = before[f"{r}/{k}"]["source_package_hash"]
             c = cand_all[r][k]
-            arec = {x["local_id"]: x for x in adm_all[r][k]}
+            # chave (kind, local_id): sem o kind, o registro REJECTED do anti-pattern
+            # sobrescrevia o ADMITTED da rule homonima
+            arec = {(x["kind"], x["local_id"]): x for x in adm_all[r][k]}
             for w in c["workflow_candidates"]:
                 if len(w["steps"]) != 1: continue
-                t = idx.get(w["local_id"])
-                ok = (arec[w["local_id"]]["state"] == "ADMITTED"
+                t = idx.get((sph, w["local_id"]))
+                a = arec[("workflow_candidates", w["local_id"])]
+                ok = (a["state"] == "ADMITTED"
                       and t is not None and t["preservado"]
                       and t["n_steps_source"] == 1 and t["n_steps_fusion"] == 1
-                      and "PASSO_UNICO" in arec[w["local_id"]]["inherited_defects"])
+                      and "PASSO_UNICO" in a["inherited_defects"])
                 real_pu_ok &= ok
                 real_pu.append({"run": r, "src": k, "local_id": w["local_id"],
-                                "state": arec[w["local_id"]]["state"],
-                                "defects": arec[w["local_id"]]["inherited_defects"],
+                                "state": a["state"], "defects": a["inherited_defects"],
                                 "na_fusion": t is not None,
                                 "steps_source": 1,
                                 "steps_fusion": t["n_steps_fusion"] if t else None,
                                 "hash_confere": t["preservado"] if t else None, "ok": ok})
             for ru in c["rule_candidates"]:
                 if ru.get("precedence") not in (None, "UNDEFINED"): continue
-                t = ridx.get(ru["local_id"])
-                ok = (arec[ru["local_id"]]["state"] == "ADMITTED"
+                t = ridx.get((sph, ru["local_id"]))
+                a = arec[("rule_candidates", ru["local_id"])]
+                ok = (a["state"] == "ADMITTED"
                       and t is not None and t["preservado"]
                       and t["precedence_fusion"] == "UNDEFINED"
                       and t["adjudication"] is None
-                      and "PRECEDENCE_UNDEFINED" in arec[ru["local_id"]]["inherited_defects"])
+                      and "PRECEDENCE_UNDEFINED" in a["inherited_defects"])
                 real_un_ok &= ok
                 real_un.append({"run": r, "src": k, "local_id": ru["local_id"],
-                                "state": arec[ru["local_id"]]["state"],
-                                "na_fusion": t is not None,
+                                "state": a["state"], "na_fusion": t is not None,
                                 "precedence_fusion": t["precedence_fusion"] if t else None,
                                 "adjudicado": (t["adjudication"] is not None) if t else None,
                                 "hash_confere": t["preservado"] if t else None, "ok": ok})
