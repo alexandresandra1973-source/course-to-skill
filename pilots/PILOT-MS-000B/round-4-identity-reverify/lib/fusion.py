@@ -74,22 +74,25 @@ POP = {"rule_candidates": "rules",
 
 def materialize(cand_by_kind, admission, sph):
     """Constroi as populacoes da Fusion SOMENTE a partir de candidates ADMITIDOS."""
-    adm = {r["local_id"]: r for r in admission if r["state"] == "ADMITTED"}
+    # CORRECAO exec-2: a chave e (entity_kind, local_id). Indexar por local_id sozinho
+    # fazia o registro do anti_pattern sobrescrever o da rule homonima.
+    adm = {(r["entity_kind"], r["local_id"]): r
+           for r in admission if r["state"] == "ADMITTED"}
     out = {"rules": [], "workflows": [], "anti_patterns": []}
     for kind, pop in POP.items():
+        ek = T.CONTAINER_TO_KIND[kind]
         for c in cand_by_kind.get(kind, []):
             lid = c.get("local_id")
-            if lid not in adm or adm[lid]["kind"] != kind:
+            if (ek, lid) not in adm:
                 continue
             st = STRUCT[kind](c)
-            ek = T.CONTAINER_TO_KIND[kind]
             out[pop].append({
                 "fusion_local_id": f"F-{pop.upper()[:2]}-{ek}-{lid}",
                 "candidate_ref": T.tref(sph, ek, lid),
                 "entity_kind": ek,
                 "kind": kind,
                 "structure": st,
-                "inherited_defects": adm[lid]["inherited_defects"],
+                "inherited_defects": adm[(ek, lid)]["inherited_defects"],
                 "transformation": None,
                 "adjudication": None,
             })

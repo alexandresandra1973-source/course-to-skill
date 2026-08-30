@@ -1,0 +1,66 @@
+[
+ {
+  "canary": "I26-A",
+  "desc": "mesmo input + mesmo config -> mesmo fusion_id",
+  "expected": "IGUAL",
+  "fusion_id": "52b7303a78c421b910cdb1470a2d6096d409ddc12d23b8c58307261dff12a56b",
+  "obtido": "IGUAL",
+  "ok": true
+ },
+ {
+  "canary": "I26-B",
+  "desc": "admission policy diferente -> fusion_id novo",
+  "expected": "DIFERENTE E PERMITIDO",
+  "fusion_id_1": "52b7303a78c421b910cdb1470a2d6096d409ddc12d23b8c58307261dff12a56b",
+  "fusion_id_2": "369971ca29e471a34575bde5153bc2d8e890936f835c61e0d4032b171532f233",
+  "obtido": "DIFERENTE",
+  "ok": true
+ },
+ {
+  "canary": "I26-C1",
+  "desc": "duas MTX-POLICY -> fusion_id byte-identico",
+  "expected": "IGUAL",
+  "obtido": "IGUAL",
+  "ok": true
+ },
+ {
+  "canary": "I26-C2",
+  "desc": "injetar mtx_policy_hash como input identitario",
+  "expected": "FAIL",
+  "forbidden_found": [
+   "mtx_policy_hash"
+  ],
+  "obtido": "FAIL",
+  "ok": true
+ },
+ {
+  "canary": "I26-C3",
+  "desc": "assinatura de fusion_id sem mtx_policy_hash",
+  "expected": "AUSENTE",
+  "obtido": "AUSENTE",
+  "ok": true,
+  "params": [
+   "source_package_hashes",
+   "fusion_config_hash",
+   "admission_report_hash",
+   "admitted_set_hash",
+   "outputs_hash",
+   "identity_errata_hash"
+  ]
+ },
+ {
+  "canary": "I26-C4",
+  "desc": "fusion_id_inputs do FUSION-CONFIG passam no guard",
+  "expected": "PASS",
+  "inputs": [
+   "source_package_hashes",
+   "fusion_config_hash",
+   "candidate_admission_report_hash",
+   "admitted_candidate_set_hash",
+   "outputs_hash",
+   "identity_errata_hash"
+  ],
+  "obtido": "PASS",
+  "ok": true
+ }
+]

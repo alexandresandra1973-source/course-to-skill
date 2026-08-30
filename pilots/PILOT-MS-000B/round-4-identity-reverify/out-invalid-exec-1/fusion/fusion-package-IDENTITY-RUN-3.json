@@ -1,0 +1,3975 @@
+{
+ "admitted_candidate_refs": [
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0095",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0098",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0101",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0102",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0095",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0096",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0097",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0098",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0099",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0100",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0101",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0102",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0103",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0104",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0105",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0106",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0107",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0035",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0036",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0037",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0038",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0039",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0040",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0109",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0112",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "anti_pattern_candidate",
+   "local_id": "R-0124",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0108",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0109",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0110",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0111",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0112",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0113",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0114",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0115",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0116",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0117",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0118",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0119",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0120",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0121",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0122",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0123",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0124",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0125",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "rule_candidate",
+   "local_id": "R-0126",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0041",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0042",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0044",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "entity_kind": "workflow_candidate",
+   "local_id": "WF-0045",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  }
+ ],
+ "admitted_candidate_set_hash": "33d56f2b7fd306476cd54e1fd929d50510afc9ac94f364256082de042df17280",
+ "artifact_id": "MS000B-IDENTITY-REVERIFY-FUSION-PACKAGE-RUN-3",
+ "candidate_admission_policy_hash": "f142938853239c58ff3cb80dbcc650da8ea1461d2cde2ea38978ba478d1b9caf",
+ "candidate_admission_policy_version": "v0.2",
+ "candidate_admission_report": {
+  "A": {
+   "by_kind": {
+    "TOTAL": {
+     "admitted": 23,
+     "reasons": {},
+     "received": 23,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 13,
+     "reasons": {},
+     "received": 13,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 6,
+     "reasons": {},
+     "received": 6,
+     "rejected": 0
+    }
+   },
+   "records": [
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0095",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0096",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0096",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0097",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0097",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0098",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0099",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0099",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0100",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0100",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0101",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0103",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0103",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0102",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0104",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0104",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0105",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0105",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0106",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0106",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0107",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0107",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0035",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0035",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0036",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0036",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0037",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0037",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0038",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0038",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0039",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0039",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0040",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0040",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0095",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0098",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0101",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0102",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "reasons": [],
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+     "state": "ADMITTED"
+    }
+   ],
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  "B": {
+   "by_kind": {
+    "TOTAL": {
+     "admitted": 26,
+     "reasons": {},
+     "received": 26,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 3,
+     "reasons": {},
+     "received": 3,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 19,
+     "reasons": {},
+     "received": 19,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    }
+   },
+   "records": [
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0110",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0110",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0108",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0108",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0109",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0111",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0111",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0112",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0113",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0113",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0114",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0114",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0115",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0115",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0116",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0116",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0118",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0118",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0119",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0119",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0120",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0120",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0121",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0121",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0122",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0122",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0117",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0117",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0123",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0123",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0126",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0126",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0124",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "rule_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PRECEDENCE_UNDEFINED"
+     ],
+     "kind": "rule_candidates",
+     "local_id": "R-0125",
+     "qualified_ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0125",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0041",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0041",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0042",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0042",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0044",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0044",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "workflow_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "workflow_candidates",
+     "local_id": "WF-0045",
+     "qualified_ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0045",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0109",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0112",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    },
+    {
+     "claim_validation": {
+      "broken": [],
+      "refs": [],
+      "resolvable": true,
+      "state": "NOT_APPLICABLE"
+     },
+     "entity_kind": "anti_pattern_candidate",
+     "evidence_validation": {
+      "broken": [],
+      "empty": true,
+      "n_refs": 0,
+      "resolvable": true
+     },
+     "inherited_defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+     ],
+     "kind": "anti_pattern_candidates",
+     "local_id": "R-0124",
+     "qualified_ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "reasons": [],
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911",
+     "state": "ADMITTED"
+    }
+   ],
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  }
+ },
+ "candidate_admission_report_hash": "78730df2f8fe0a8069978471f35fcee0677a5b7991f397453d57bb4127e885eb",
+ "conflict_state": "NOT_APPLICABLE",
+ "consumability_note": "SOMENTE admitted_candidate_refs sao consumiveis; a lista de rejeitados existe para auditabilidade, em estado NOT_CONSUMABLE",
+ "fusion": {
+  "anti_patterns": [
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0095",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0095",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Não depender da sessão do Claude Code para reverter mudanças de longo prazo"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0095"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0098",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0098",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Não usar nomes de versão que não descrevam a mudança feita"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0098"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0101",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0101",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Commitar node_modules",
+      "Commitar as pastas dot geradas pelo framework"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0101"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0102",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0102",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Commitar informação sensível na nuvem"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0102"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0109",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0109",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Escrever código/script customizado para cada serviço quando MCP pode padronizar a integração"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0109"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0112",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0112",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Não assumir que MCP é a única forma de dar controle de ferramentas ao agente"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0112"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "anti_pattern_candidate",
+     "local_id": "R-0124",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "anti_pattern_candidate",
+    "fusion_local_id": "F-AN-anti_pattern_candidate-R-0124",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "anti_pattern_candidates",
+    "structure": {
+     "claim_refs": [],
+     "do_not": [
+      "Não executar a deleção sem antes confirmar exatamente o que existe na conta",
+      "Não tocar nos outros projetos da conta"
+     ],
+     "evidence_refs": [],
+     "local_id": "R-0124"
+    },
+    "transformation": null
+   }
+  ],
+  "rules": [
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0096",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0096",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Configurar controle de versão para o projeto",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0096",
+     "name": "Adotar controle de versão quando há time ou reversão histórica",
+     "precedence": "UNDEFINED",
+     "trigger": "Múltiplos membros de time trabalham no mesmo projeto OU se deseja reverter para uma mudança específica feita em semanas anteriores"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0097",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0097",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Usar GitHub (gratuito) como plataforma de controle de versão",
+     "claim_refs": [],
+     "condition": "Busca-se a forma mais simples e mais barata",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0097",
+     "name": "Escolher GitHub como ferramenta de controle de versão",
+     "precedence": "UNDEFINED",
+     "trigger": "Decisão sobre como configurar controle de versão"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0099",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0099",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Criar uma branch diferente e fazer commits sobre ela",
+     "claim_refs": [],
+     "condition": "O trabalho atual está na branch main",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0099",
+     "name": "Usar branch separada para variações do projeto",
+     "precedence": "UNDEFINED",
+     "trigger": "Deseja-se criar uma mudança diferente, como uma versão beta ou uma versão dois"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0100",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0100",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Especificar explicitamente no prompt/criação a visibilidade desejada (private ou public)",
+     "claim_refs": [],
+     "condition": "Se o conteúdo deve ser visto apenas pelo dono, escolher privado; se pode ser visto por qualquer pessoa, escolher público",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0100",
+     "name": "Escolher visibilidade do repositório na criação",
+     "precedence": "UNDEFINED",
+     "trigger": "Ao criar um repositório para um projeto"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0103",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0103",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Interpretar acinzentado como ignorado pelo git (não será commitado) e não acinzentado como parte do commit",
+     "claim_refs": [],
+     "condition": "Arquivos/pastas exibidos acinzentados no file explorer do editor",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0103",
+     "name": "Ler estado de ignore pelo file explorer",
+     "precedence": "UNDEFINED",
+     "trigger": "Ao inspecionar quais arquivos entrarão no commit"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0104",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0104",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Renomear a branch master para main",
+     "claim_refs": [],
+     "condition": "Se desejado usar 'main' como nome da branch",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0104",
+     "name": "Renomear branch padrão (opcional)",
+     "precedence": "UNDEFINED",
+     "trigger": "Após git init, quando a branch padrão criada localmente é master"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0105",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0105",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Escrever manualmente a mensagem de commit descrevendo a mudança feita (ex: 'deleted the eval'), pois essa mensagem é o que será commitado nessa nova versão do projeto",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0105",
+     "name": "Escrever mensagem de commit descritiva manualmente",
+     "precedence": "UNDEFINED",
+     "trigger": "Há mudanças a serem registradas em uma nova versão do projeto"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0106",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0106",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Abrir o repositório no GitHub, ir em Settings e usar a seção 'Collaborators' para adicionar as pessoas que poderão commitar no mesmo repositório",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0106",
+     "name": "Adicionar colaboradores para edição simultânea",
+     "precedence": "UNDEFINED",
+     "trigger": "É necessário permitir que mais usuários commitem no mesmo repositório"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0107",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0107",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Copiar o commit ID da árvore de commits do painel de source control do VS Code e passá-lo ao Claude Code pedindo para reverter aquela mudança; o Claude Code reverte com base no commit ID especificado",
+     "claim_refs": [],
+     "condition": "Especialmente aplicável quando há muitas mudanças no controle de versão git, pois o commit ID identifica exatamente o ponto a reverter",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0107",
+     "name": "Reverter mudança via commit ID no Claude Code",
+     "precedence": "UNDEFINED",
+     "trigger": "Deseja-se reverter uma mudança já registrada no controle de versão"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0110",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0110",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Conectar essa ferramenta ao Claude Code para automatizar o processo tedioso",
+     "claim_refs": [],
+     "condition": "O processo na ferramenta exige clicar por diversos passos para chegar ao resultado desejado",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0110",
+     "name": "Priorizar ferramentas com processos tediosos de múltiplos cliques",
+     "precedence": "UNDEFINED",
+     "trigger": "Seleção de qual ferramenta do dia a dia conectar ao agente"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0108",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0108",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Instalar e adicionar a ferramenta ao Claude Code via protocolo MCP; se for GitHub, usar a capacidade já disponível por padrão",
+     "claim_refs": [],
+     "condition": "A ferramenta não vem por padrão com o Claude Code (GitHub vem por padrão para commits, criação de repositórios e gestão de branches)",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0108",
+     "name": "Verificar se a ferramenta já vem por padrão antes de instalar",
+     "precedence": "UNDEFINED",
+     "trigger": "Necessidade de que o Claude Code opere uma ferramenta externa"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0111",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0111",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Conectar o serviço através de servidor MCP para que a IA o utilize",
+     "claim_refs": [],
+     "condition": "Existe servidor MCP capaz de conectar ao serviço",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0111",
+     "name": "Conectar serviços externos via servidor MCP",
+     "precedence": "UNDEFINED",
+     "trigger": "Desejo de que a IA opere um software/app usado no dia a dia (Stripe, PayPal, Slack, Jira)"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0113",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0113",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Fazer o agente de IA interagir com o app/serviço pelo CLI, do mesmo modo que um humano faria no terminal: abrir o terminal, digitar o texto, rodar o programa ou script",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0113",
+     "name": "Usar CLI como interface de operação do agente sobre apps e serviços",
+     "precedence": "UNDEFINED",
+     "trigger": "O app ou serviço de terceiros expõe uma ferramenta CLI"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0114",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0114",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Usar o MCP da Vercel para que o modelo de linguagem faça o deploy da aplicação; alternativamente conectar o modelo à Vercel pelo terminal via ferramenta CLI",
+     "claim_refs": [],
+     "condition": "O provedor oferece MCP (Vercel oferece MCP e também CLI)",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0114",
+     "name": "Preferir MCP quando há medo de rodar comandos no terminal (caso Vercel)",
+     "precedence": "UNDEFINED",
+     "trigger": "Usuário faz deploy da aplicação na Vercel e tem medo de rodar comandos no terminal"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0115",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0115",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Copiar para o Claude Code a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI",
+     "claim_refs": [],
+     "condition": "Ausência de CLI ou MCP no ambiente",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0115",
+     "name": "Ambiente sem CLI/MCP disponível",
+     "precedence": "UNDEFINED",
+     "trigger": "Agente responde que não possui Vercel CLI nem MCP no sistema atual"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0116",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0116",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Usar ferramenta CLI",
+     "claim_refs": [],
+     "condition": "Prioridade em eficiência de tokens",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0116",
+     "name": "Priorizar economia de tokens",
+     "precedence": "UNDEFINED",
+     "trigger": "Objetivo declarado é economizar tokens"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0118",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0118",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Usar MCP, que expõe via protocolo padronizado um conjunto limitado de ferramentas ao agente",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0118",
+     "name": "Controlar número de ferramentas expostas ao agente",
+     "precedence": "UNDEFINED",
+     "trigger": "Necessidade de controlar quantas ferramentas o agente de IA recebe acesso"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0119",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0119",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Escolher MCP",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0119",
+     "name": "Priorizar segurança",
+     "precedence": "UNDEFINED",
+     "trigger": "Prioridade declarada é segurança"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0120",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0120",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Escolher a ferramenta MCP",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0120",
+     "name": "Ambiente de equipe",
+     "precedence": "UNDEFINED",
+     "trigger": "Vários membros de equipe trabalhando no projeto"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0121",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0121",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Usar MCP, definindo fronteiras de autenticação e trilhas de auditoria no servidor MCP",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0121",
+     "name": "Multi-tenant, controle de acesso e autenticação",
+     "precedence": "UNDEFINED",
+     "trigger": "Foco em ambiente de equipe com múltiplos tenants para agentes de IA, ou gestão de controle de acesso e autenticação"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0122",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0122",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Considerar que MCP consome mais tokens que CLI nessa decisão",
+     "claim_refs": [],
+     "condition": "Schemas das ferramentas são constantemente carregados na janela de contexto da IA",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0122",
+     "name": "Custo de tokens do MCP",
+     "precedence": "UNDEFINED",
+     "trigger": "Avaliação de consumo de tokens ao considerar MCP"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0117",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0117",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Escolher CLI como melhor opção",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0117",
+     "name": "Priorizar velocidade ou eficiência de tokens",
+     "precedence": "UNDEFINED",
+     "trigger": "Critério de escolha é velocidade ou eficiência de tokens"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0123",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0123",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Prosseguir com o pedido de deploy ao agente; se o MCP não estiver conectado, copiar o link da documentação, colar no agente de código e deixar que ele mesmo faça a conexão",
+     "claim_refs": [],
+     "condition": "A conexão do MCP na máquina local está estabelecida",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0123",
+     "name": "MCP conectado como pré-requisito de deploy",
+     "precedence": "Precede o login na Vercel e o pedido de deploy",
+     "trigger": "Antes de pedir ao agente que faça o deploy da aplicação"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0126",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0126",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Remover manualmente pelo painel (abrir as configurações do projeto e clicar em 'delete project') ou, alternativamente, instruir o próprio agente de código a deletar o projeto",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0126",
+     "name": "Escolha do caminho de remoção",
+     "precedence": "UNDEFINED",
+     "trigger": "Necessidade de remover o projeto publicado"
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "rule_candidate",
+     "local_id": "R-0125",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "rule_candidate",
+    "fusion_local_id": "F-RU-rule_candidate-R-0125",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "kind": "rule_candidates",
+    "structure": {
+     "action": "Verificar que o projeto alvo foi removido e que os outros projetos permanecem intocados",
+     "claim_refs": [],
+     "condition": "UNDEFINED",
+     "do_not": [],
+     "evidence_refs": [],
+     "local_id": "R-0125",
+     "name": "Critério de sucesso da deleção",
+     "precedence": "UNDEFINED",
+     "trigger": "Após o agente executar a deleção do projeto"
+    },
+    "transformation": null
+   }
+  ],
+  "workflows": [
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0035",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0035",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0035",
+     "name": "set up version controls using GitHub",
+     "steps": [
+      {
+       "action": "Navegar até github.com e fazer sign up para obter uma conta gratuita que permite acompanhar todos os projetos de forma privada ou pública",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0104",
+       "missing_input_action": "UNDEFINED",
+       "name": "Criar conta no GitHub",
+       "order_key": 1,
+       "required_inputs": [
+        "acesso a github.com"
+       ]
+      },
+      {
+       "action": "Para cada projeto criado, criar um repositório correspondente dentro do GitHub (ex.: repositório 'loop maker')",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0105",
+       "missing_input_action": "UNDEFINED",
+       "name": "Criar repositório para o projeto",
+       "order_key": 2,
+       "required_inputs": [
+        "conta GitHub",
+        "nome do projeto"
+       ]
+      },
+      {
+       "action": "Clicar na seção de commits do repositório para visualizar a árvore de commits inteira, que representa as diferentes versões do projeto",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0106",
+       "missing_input_action": "UNDEFINED",
+       "name": "Abrir a árvore de commits",
+       "order_key": 3,
+       "required_inputs": [
+        "repositório no GitHub"
+       ]
+      },
+      {
+       "action": "Clicar no commit desejado para ver exatamente qual mudança foi feita naquela versão",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0107",
+       "missing_input_action": "UNDEFINED",
+       "name": "Inspecionar a mudança de um commit",
+       "order_key": 4,
+       "required_inputs": [
+        "commit selecionado na árvore de commits"
+       ]
+      },
+      {
+       "action": "Interpretar o diff: a seção verde indica o que está sendo adicionado; a seção vermelha, à esquerda, indica o que está sendo deletado",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0108",
+       "missing_input_action": "UNDEFINED",
+       "name": "Ler o diff por cores",
+       "order_key": 5,
+       "required_inputs": [
+        "diff do commit aberto"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0036",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0036",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PASSO_UNICO"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0036",
+     "name": "display the rich difference",
+     "steps": [
+      {
+       "action": "Usar a opção 'display the rich difference' do GitHub para renderizar o markdown real e ver a mudança renderizada dentro do diff",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0109",
+       "missing_input_action": "UNDEFINED",
+       "name": "Ativar 'display the rich difference'",
+       "order_key": 1,
+       "required_inputs": [
+        "diff do commit aberto"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0037",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0037",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0037",
+     "name": "revert back to that specific version of the git commit",
+     "steps": [
+      {
+       "action": "Rolar até o commit da data desejada, copiar o commit ID e passá-lo ao Claude Code pedindo para reverter para aquela versão específica do git commit",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0110",
+       "missing_input_action": "UNDEFINED",
+       "name": "Reverter para versão específica via commit ID",
+       "order_key": 1,
+       "required_inputs": [
+        "data ou versão alvo",
+        "commit ID copiado do GitHub",
+        "sessão do Claude Code"
+       ]
+      },
+      {
+       "action": "Abrir um novo terminal e digitar 'claude'",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0111",
+       "missing_input_action": "UNDEFINED",
+       "name": "Abrir terminal e invocar o Claude",
+       "order_key": 2,
+       "required_inputs": [
+        "terminal",
+        "CLI claude"
+       ]
+      },
+      {
+       "action": "Pedir ao Claude: analisar a pasta inteira, criar um repositório privado para o projeto e commitar as mudanças",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0112",
+       "missing_input_action": "UNDEFINED",
+       "name": "Solicitar criação do repositório e commit",
+       "order_key": 3,
+       "required_inputs": [
+        "pasta do projeto"
+       ]
+      },
+      {
+       "action": "Deixar o Claude primeiro analisar a pasta atual e só então configurar o projeto",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0113",
+       "missing_input_action": "UNDEFINED",
+       "name": "Inspeção da pasta antes do setup",
+       "order_key": 4,
+       "required_inputs": [
+        "pasta atual"
+       ]
+      },
+      {
+       "action": "Verificar os arquivos incluídos no commit inicial (aplicação, imagens, evals, documentação) e os itens excluídos pelo gitignore",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0114",
+       "missing_input_action": "UNDEFINED",
+       "name": "Revisar conteúdo do commit inicial",
+       "order_key": 5,
+       "required_inputs": [
+        "saída do commit inicial",
+        "file explorer"
+       ]
+      },
+      {
+       "action": "Confirmar que nenhum arquivo .env nem queries SQL existem no que foi enviado ao controle de versão",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0115",
+       "missing_input_action": "UNDEFINED",
+       "name": "Verificar ausência de arquivos sensíveis",
+       "order_key": 6,
+       "required_inputs": [
+        "listagem do commit/pasta"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0038",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0038",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0038",
+     "name": "git init (criação local da branch padrão master)",
+     "steps": [
+      {
+       "action": "Ir aos repositórios no GitHub, alternar o filtro para 'private', recarregar a página e confirmar que o repositório aparece",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0116",
+       "missing_input_action": "UNDEFINED",
+       "name": "Confirmar repositório no GitHub",
+       "order_key": 1,
+       "required_inputs": [
+        "conta GitHub"
+       ]
+      },
+      {
+       "action": "Rolar a página do repositório e verificar que o readme com os dados do projeto e todas as skills criadas estão commitados",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0117",
+       "missing_input_action": "UNDEFINED",
+       "name": "Validar conteúdo publicado",
+       "order_key": 2,
+       "required_inputs": [
+        "página do repositório"
+       ]
+      },
+      {
+       "action": "Abrir o ícone de source control no VS Code e verificar a contagem de arquivos alterados; expandir a lista para ver os arquivos, inclusive os marcados como deletados quando uma pasta foi removida",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0118",
+       "missing_input_action": "UNDEFINED",
+       "name": "Inspecionar mudanças no painel de source control",
+       "order_key": 3,
+       "required_inputs": [
+        "Projeto aberto no VS Code com repositório sob controle de versão",
+        "Mudanças locais realizadas"
+       ]
+      },
+      {
+       "action": "Digitar manualmente a mensagem de commit descrevendo a mudança que será registrada nessa nova versão do projeto",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0119",
+       "missing_input_action": "UNDEFINED",
+       "name": "Escrever mensagem de commit",
+       "order_key": 4,
+       "required_inputs": [
+        "Descrição da mudança feita"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0039",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0039",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0039",
+     "name": "stage all the changes, commit e sync the changes",
+     "steps": [
+      {
+       "action": "Executar no VS Code: stage all the changes, commit e sync the changes, empurrando a alteração para o repositório no GitHub (cloud)",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0120",
+       "missing_input_action": "UNDEFINED",
+       "name": "Stage, commit e sync das mudanças",
+       "order_key": 1,
+       "required_inputs": [
+        "Mudanças locais listadas no source control",
+        "Mensagem de commit escrita"
+       ]
+      },
+      {
+       "action": "Atualizar (refresh) a página do repositório no GitHub e confirmar que o novo commit aparece com a mensagem escrita; abrir 'Code' e confirmar que a branch principal (source of truth) já reflete a mudança (ex: pasta deletada não mais presente)",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0121",
+       "missing_input_action": "UNDEFINED",
+       "name": "Verificar commit no GitHub",
+       "order_key": 2,
+       "required_inputs": [
+        "Sync das mudanças concluído",
+        "Acesso à página do repositório no GitHub"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0040",
+     "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0040",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PASSO_UNICO"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0040",
+     "name": "Collaborators (Settings do repositório)",
+     "steps": [
+      {
+       "action": "Abrir o painel de source control do VS Code, localizar a árvore de commits (commit tree) e copiar o commit ID da versão desejada",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0122",
+       "missing_input_action": "UNDEFINED",
+       "name": "Obter commit ID na árvore de commits",
+       "order_key": 1,
+       "required_inputs": [
+        "Painel de source control do VS Code com histórico de commits"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0041",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0041",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PASSO_UNICO"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0041",
+     "name": "MCP (Model Context Protocol)",
+     "steps": [
+      {
+       "action": "Checar se a aplicação alvo disponibiliza CLI, MCP ou ambos, para decidir por qual interface conectar o modelo de linguagem (ex.: Stripe tem CLI e MCPs; Google lançou seu CLI; Vercel tem MCP e CLI)",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0124",
+       "missing_input_action": "UNDEFINED",
+       "name": "Verificar quais interfaces o app de terceiro oferece",
+       "order_key": 1,
+       "required_inputs": [
+        "aplicação de terceiro alvo"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0042",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0042",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0042",
+     "name": "How to use the GoHighLevel MCP (seguir documentação para conectar MCP ao modelo)",
+     "steps": [
+      {
+       "action": "Localizar o MCP disponibilizado pelo provedor (ex.: GoHighLevel) e seguir a documentação oficial de uso para conectar o MCP ao modelo de linguagem",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0123",
+       "missing_input_action": "UNDEFINED",
+       "name": "Conectar MCP de terceiro seguindo a documentação do provedor",
+       "order_key": 1,
+       "required_inputs": [
+        "MCP disponibilizado pelo provedor",
+        "documentação de uso do MCP",
+        "modelo de linguagem a conectar"
+       ]
+      },
+      {
+       "action": "Limpar a sessão atual antes de fazer a pergunta sobre CLI/MCP",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0125",
+       "missing_input_action": "UNDEFINED",
+       "name": "Limpar a sessão atual",
+       "order_key": 2,
+       "required_inputs": [
+        "sessão ativa do agente"
+       ]
+      },
+      {
+       "action": "Perguntar ao agente se ele tem Vercel CLI ou MCP no sistema atual onde possa fazer deploy da aplicação no Vercel",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0126",
+       "missing_input_action": "UNDEFINED",
+       "name": "Descobrir suporte a deploy no ambiente",
+       "order_key": 3,
+       "required_inputs": [
+        "aplicação atual",
+        "sessão limpa"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0044",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0044",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+     "PASSO_UNICO"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0044",
+     "name": "Vercel MCP",
+     "steps": [
+      {
+       "action": "Copiar a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI para o Claude Code",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0127",
+       "missing_input_action": "UNDEFINED",
+       "name": "Fornecer documentação ao Claude Code",
+       "order_key": 1,
+       "required_inputs": [
+        "documentação Vercel MCP ou link da documentação Vercel CLI"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   },
+   {
+    "adjudication": null,
+    "candidate_ref": {
+     "entity_kind": "workflow_candidate",
+     "local_id": "WF-0045",
+     "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+    },
+    "entity_kind": "workflow_candidate",
+    "fusion_local_id": "F-WO-workflow_candidate-WF-0045",
+    "inherited_defects": [
+     "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+    ],
+    "kind": "workflow_candidates",
+    "structure": {
+     "claim_refs": [],
+     "evidence_refs": [],
+     "local_id": "WF-0045",
+     "name": "MCP server",
+     "steps": [
+      {
+       "action": "Garantir a conexão do MCP na máquina local (ou colar o link da documentação no agente de código para que ele conecte) e, depois de conectado, fazer login na conta da Vercel",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0128",
+       "missing_input_action": "Copiar o link da documentação, colar no agente de código e deixar que ele faça a conexão",
+       "name": "Conectar MCP e logar na Vercel",
+       "order_key": 1,
+       "required_inputs": [
+        "MCP conectado na máquina local",
+        "link da documentação do MCP",
+        "conta da Vercel"
+       ]
+      },
+      {
+       "action": "Enviar ao agente o prompt pedindo para criar um projeto novo na conta da Vercel usando a ferramenta de CLI para fazer o deploy da aplicação; com o MCP conectado o deploy é concluído em poucos segundos",
+       "autonomy": "Agente executa o deploy via ferramenta de CLI a pedido do usuário",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0129",
+       "missing_input_action": "UNDEFINED",
+       "name": "Pedir o deploy ao agente",
+       "order_key": 2,
+       "required_inputs": [
+        "MCP conectado",
+        "conta da Vercel logada",
+        "aplicação a ser publicada"
+       ]
+      },
+      {
+       "action": "Copiar o link gerado, abri-lo no navegador para confirmar que a aplicação está publicada e acessível, e interagir com ela (por exemplo, usar e resetar) para confirmar que está utilizável",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0130",
+       "missing_input_action": "UNDEFINED",
+       "name": "Verificar o deploy no navegador",
+       "order_key": 3,
+       "required_inputs": [
+        "link gerado pelo deploy"
+       ]
+      },
+      {
+       "action": "Abrir o painel da plataforma de hospedagem como segunda confirmação, verificando que o projeto aparece e o momento do deploy",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0131",
+       "missing_input_action": "UNDEFINED",
+       "name": "Confirmar no painel da plataforma",
+       "order_key": 4,
+       "required_inputs": [
+        "acesso ao painel da plataforma de hospedagem"
+       ]
+      },
+      {
+       "action": "Remover o projeto pelo painel (configurações do projeto → 'delete project') ou instruir o agente em linguagem natural, por exemplo 'can you delete this project right now', para que ele execute a deleção",
+       "autonomy": "Agente tem a capacidade de executar a deleção quando instruído",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0132",
+       "missing_input_action": "UNDEFINED",
+       "name": "Remover o projeto",
+       "order_key": 5,
+       "required_inputs": [
+        "projeto alvo identificado",
+        "acesso ao painel ou agente de código conectado"
+       ]
+      },
+      {
+       "action": "Navegar até o link antigo do deploy; o retorno esperado é 'deploy not found' / 404",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0133",
+       "missing_input_action": "UNDEFINED",
+       "name": "Confirmar a remoção pelo link antigo",
+       "order_key": 6,
+       "required_inputs": [
+        "link antigo do deploy"
+       ]
+      },
+      {
+       "action": "Instalar o VS Code como base do fluxo inicial de uso do Claude Code",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0134",
+       "missing_input_action": "UNDEFINED",
+       "name": "Instalar o VS Code",
+       "order_key": 7,
+       "required_inputs": [
+        "ambiente onde instalar o VS Code"
+       ]
+      },
+      {
+       "action": "Abrir o terminal dentro do ambiente instalado",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0135",
+       "missing_input_action": "UNDEFINED",
+       "name": "Abrir o terminal",
+       "order_key": 8,
+       "required_inputs": [
+        "VS Code instalado"
+       ]
+      },
+      {
+       "action": "Digitar 'claude' no terminal e começar a usar as funcionalidades oferecidas",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0136",
+       "missing_input_action": "UNDEFINED",
+       "name": "Iniciar o Claude Code",
+       "order_key": 9,
+       "required_inputs": [
+        "terminal aberto"
+       ]
+      },
+      {
+       "action": "Manter Claude Code como framework e trocar o modelo que ele chama por OpenRouter ou modelos locais usados dentro do Claude Code",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0137",
+       "missing_input_action": "UNDEFINED",
+       "name": "Rodar Claude Code de graça trocando o modelo",
+       "order_key": 10,
+       "required_inputs": [
+        "Claude Code instalado como framework",
+        "acesso a OpenRouter ou a modelos locais"
+       ]
+      },
+      {
+       "action": "Classificar o próprio uso como iniciante/aprendizado ou uso diário para decidir se o plano de $20 basta",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0138",
+       "missing_input_action": "UNDEFINED",
+       "name": "Avaliar perfil de uso e adequação do plano",
+       "order_key": 11,
+       "required_inputs": [
+        "frequência de uso pretendida"
+       ]
+      },
+      {
+       "action": "Escolher entre as duas opções para permanecer no orçamento sem upgrade: (1) rodar modelo local, (2) conectar Claude Code ao OpenRouter",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0139",
+       "missing_input_action": "UNDEFINED",
+       "name": "Escolher opção de contenção de custo",
+       "order_key": 12,
+       "required_inputs": [
+        "capacidade do computador",
+        "acesso ao OpenRouter"
+       ]
+      },
+      {
+       "action": "Conectar o Claude Code ao OpenRouter para acessar modelos alternativos baratos e potentes",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0140",
+       "missing_input_action": "UNDEFINED",
+       "name": "Conectar Claude Code ao OpenRouter",
+       "order_key": 13,
+       "required_inputs": [
+        "conta/acesso OpenRouter"
+       ]
+      },
+      {
+       "action": "Mapear substituições de modelo: substituir Sonnet por modelo DeepSeek e Opus por outro modelo de terceiros (ex.: GLM ou Grok) encontrado online",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0141",
+       "missing_input_action": "UNDEFINED",
+       "name": "Substituir modelos Anthropic por modelos de terceiros",
+       "order_key": 14,
+       "required_inputs": [
+        "lista de modelos disponíveis no OpenRouter"
+       ]
+      },
+      {
+       "action": "Assistir ao vídeo do autor com dicas de como economizar uso/tokens no Claude Code",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0142",
+       "missing_input_action": "UNDEFINED",
+       "name": "Consultar material complementar de economia de uso",
+       "order_key": 15,
+       "required_inputs": [
+        "link do vídeo indicado"
+       ]
+      },
+      {
+       "action": "Reassistir a seção de permissões do curso para endereçar a segurança de execução na própria máquina",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0143",
+       "missing_input_action": "UNDEFINED",
+       "name": "Rever a seção de permissões",
+       "order_key": 16,
+       "required_inputs": [
+        "seção de permissões do curso"
+       ]
+      },
+      {
+       "action": "Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0144",
+       "missing_input_action": "UNDEFINED",
+       "name": "Selecionar entre os modos de permissão disponíveis",
+       "order_key": 17,
+       "required_inputs": [
+        "conjunto de modos de permissão (quatro ou cinco)"
+       ]
+      },
+      {
+       "action": "Abrir o VS Code e usar o terminal integrado do VS Code para iniciar o Claude Code",
+       "autonomy": "UNDEFINED",
+       "claim_refs": [],
+       "evidence_refs": [],
+       "iteration_limit": "UNDEFINED",
+       "local_id": "S-0145",
+       "missing_input_action": "UNDEFINED",
+       "name": "Iniciar Claude Code via terminal do VS Code",
+       "order_key": 18,
+       "required_inputs": [
+        "VS Code instalado",
+        "Terminal do VS Code"
+       ]
+      }
+     ]
+    },
+    "transformation": null
+   }
+  ]
+ },
+ "fusion_config_hash": "e1da64fad9b0ff02a9d3d906d1aa5aa7bc155ace49b13bc045da380e3079dea5",
+ "fusion_id": "9a7a196558c6b537a5c2bed2fc803a8c46ab14a27fadc32777a39cf4f38a30d2",
+ "identity_errata_hash": "2f8232f6c184668370ed9e440256b0de3f6ee801a7bee67285eb291c1a527ad2",
+ "identity_model": "GLOBAL_OBJECT_IDENTITY = (source_package_hash, entity_kind, local_id)",
+ "mtx_policy_hash": null,
+ "nota_I26": "mtx_policy_hash ausente por contrato; a Candidate Admission Policy entra via FUSION-CONFIG",
+ "outputs_hash": "5d468f60afe5d5eca520bd0ce77f2ec77a642d8d8124afa6d39e9616e88c9a39",
+ "participating_source_package_hashes": [
+  "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439",
+  "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+ ],
+ "provenance_ledger": [
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0095",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0096",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0097",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0098",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0099",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0100",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0101",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0103",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0102",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0104",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0105",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0106",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0107",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0035",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0036",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0037",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0038",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0039",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0040",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0095",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0098",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0101",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0102",
+    "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_id": "MS000B-SRC-P002-CH12",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0110",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0108",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0109",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0111",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0112",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0113",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0114",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0115",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0116",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0118",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0119",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0120",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0121",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0122",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0117",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0123",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0126",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0124",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0125",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0041",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0042",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0044",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0045",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0109",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0112",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  },
+  {
+   "element_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0124",
+    "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+   },
+   "lineage": "candidate_refs",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_id": "MS000B-SRC-P002-CH13",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  }
+ ],
+ "rejected_candidate_refs_NOT_CONSUMABLE": [],
+ "relation_policy": "NOT_APPLIED",
+ "seals_verified": {
+  "pkg-A": "PASS",
+  "pkg-B": "PASS"
+ },
+ "source_independence": {
+  "A": "KNOWN_DEPENDENT",
+  "B": "KNOWN_DEPENDENT"
+ },
+ "typed_reference_schema_version": "typed-ref-v1"
+}

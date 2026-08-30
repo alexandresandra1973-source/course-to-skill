@@ -2,7 +2,9 @@
 """MS-000B — TARGETED IDENTITY REWRITE AND REVERIFY.
 NAO e Round 5. MECANICO, OFFLINE, ZERO CHAMADAS DE MODELO.
 Le os seis Source Packages selados da Round 3 como READ-ONLY. Nunca escreve neles."""
-import sys, json, hashlib, pathlib, collections
+import sys, json, hashlib, pathlib, collections, re
+
+_HEX64 = re.compile(r'[0-9a-f]{64}')
 
 HERE = pathlib.Path(__file__).resolve().parent
 MS = HERE.parent
@@ -43,7 +45,10 @@ def walk_refs(o, path=""):
             yield (path, o, T.is_typed(o))
         for k, v in o.items(): yield from walk_refs(v, f"{path}.{k}" if path else k)
     elif isinstance(o, list):
-        if len(o) == 2 and all(isinstance(x, str) for x in o) and len(o[0]) == 64:
+        # CORRECAO exec-2: "64 caracteres" pegava texto livre e listas de hashes.
+        # Uma 2-tupla nua e [sha256_hex, local_id] — o primeiro E hex de 64, o segundo NAO.
+        if (len(o) == 2 and all(isinstance(x, str) for x in o)
+                and _HEX64.fullmatch(o[0]) and not _HEX64.fullmatch(o[1])):
             yield (path, o, False)          # 2-tupla nua
         for x in o: yield from walk_refs(x, path)
 
