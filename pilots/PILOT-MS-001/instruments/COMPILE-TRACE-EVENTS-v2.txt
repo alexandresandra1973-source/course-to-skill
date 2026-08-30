@@ -1,0 +1,19 @@
+EVENTOS EXPLICITOS DO COMPILE TRACE — ordenados, por Source Package.
+
+  RAW_EXTRACTION_PERSISTED       por chamada 3-8; raw bytes antes de qualquer processamento
+  CLAIM_IDENTITY_FINALIZED       Stage A; zero modelo
+  ENTAILMENT_STARTED             call 9 ou 10; carrega o hash do payload enviado
+  ENTAILMENT_RESULT_PERSISTED    raw + parsed + resultado de validacao
+  SEALED_CLAIM_SELECTED          Stage B; so ENTAILED
+  CANDIDATE_FINALIZED            depois do anterior, por construcao
+  CANDIDATE_ELIGIBILITY_DECIDED  ultimo
+
+K12 verifica TEMPORALMENTE que as arestas de provenance do candidate
+(candidate -> evidence, candidate -> claim) existiam em RAW_EXTRACTION_PERSISTED,
+isto e, ANTES de qualquer atividade cross-source.
+No MS-001A nao ha atividade cross-source alguma — o portao de local coherence
+NO_CROSS_SOURCE_REF_ALLOWED garante isso — de modo que K12 e verificavel por
+ordem de eventos e por ausencia de refs estrangeiras.
+
+TIMESTAMP OPERACIONAL fica FORA da representacao canonica identity-relevant:
+vai ao OPERATIONAL-RUN-LOG, como decidido e aceito no MS-000B.

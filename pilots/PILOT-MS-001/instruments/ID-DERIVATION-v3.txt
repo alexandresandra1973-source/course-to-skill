@@ -1,0 +1,112 @@
+DERIVACAO DE IDENTIDADE — v3. IDENTITY != PROVENANCE.
+Supersede a formula da v1/v2. Zero modelo, deterministica, auditavel.
+
+=========================================================================
+CORRECAO CONTRA A v1/v2
+=========================================================================
+A v1 definia:
+  content_key = canon({source_id, norm(text), sorted(evidence_refs), qualifiers})
+
+ERRADO. Isso poe PROVENIENCIA dentro da IDENTIDADE. Consequencia: a MESMA claim,
+com a MESMA substancia e os MESMOS qualificadores, extraida de duas slices com
+Evidence diferentes, produziria DUAS claims distintas. E exatamente o que DI1 proibe.
+
+evidence_refs sao PROVENIENCIA. Alterar Evidence pode alterar o SOURCE_PACKAGE_HASH
+sem transformar a substancia da Claim em outra Claim.
+
+=========================================================================
+NORMALIZACAO (identidade apenas; o texto exibido permanece verbatim)
+=========================================================================
+  norm(t) = NFC -> casefold -> colapsar whitespace -> remover pontuacao periferica
+                -> preservar estrutura interna (numeros, hifens internos, siglas)
+  qualifiers_canon = objeto com as chaves fixas scope, condition, platform, stage,
+                     audience; valor norm(v) ou null; ordenado por chave.
+
+=========================================================================
+CLAIM SEMANTIC KEY — formula EXATA, pre-declarada
+=========================================================================
+  claim_semantic_key = sha256(canon({
+      "source_id":       source_id,
+      "normalized_text": norm(text),
+      "source_language": source_language,
+      "qualifiers":      qualifiers_canon
+  }))
+
+NAO ENTRAM NA IDENTIDADE DE CLAIM:
+  evidence_refs · entailed_by · entail_why · entailment judgment
+  ordem de emissao · slice_id · merged_from · status
+
+=========================================================================
+CANDIDATE STRUCTURAL KEY — formula EXATA, por kind
+=========================================================================
+  structure_canon depende do entity_kind, e contem SOMENTE campos operacionais:
+
+  rule_candidate:
+      name, trigger, condition, action, do_not[], precedence,
+      exceptions[], prerequisites[]
+  workflow_candidate:
+      name, steps[] onde cada step = (order_key, name, action,
+      required_inputs[], missing_input_action), exceptions[], prerequisites[]
+  anti_pattern_candidate:
+      do_not[], why, conditions[]
+
+  todos os campos de texto passam por norm(); listas sao ordenadas quando a ordem
+  nao for semantica (do_not, exceptions, prerequisites, required_inputs, conditions)
+  e PRESERVADAS quando for (steps, por order_key).
+
+  candidate_structural_key = sha256(canon({
+      "source_id":   source_id,
+      "entity_kind": entity_kind,
+      "structure":   structure_canon
+  }))
+
+NAO ENTRAM NA IDENTIDADE DE CANDIDATE:
+  evidence_refs · claim_temp_refs · sealed_claim_refs
+  cross_source_eligibility · entailment verdict · claim_dependency_status
+  merged_from · admission state · defects
+  (defects sao ANOTACAO/MEDICAO: PRECEDENCE_UNDEFINED, PASSO_UNICO e SCOPE_UNSTATED
+   NAO criam identidade nova. precedence, ao contrario, E campo estrutural da rule
+   e entra — porque muda o que a regra diz, nao como ela foi observada.)
+
+=========================================================================
+DEDUP ANTES DO ID FINAL — obrigatorio
+=========================================================================
+CLAIMS, dentro de cada Source:
+  raw claims -> claim_semantic_key -> agrupar duplicatas
+             -> UNIAO ordenada de evidence_refs
+             -> merged_from = [(slice_id, temporary_claim_id), ...] ordenado
+             -> ENTAO derivar o final claim_id
+
+CANDIDATES, dentro de cada Source:
+  raw candidates -> candidate_structural_key -> agrupar
+                 -> UNIAO ordenada de evidence_refs
+                 -> UNIAO ordenada de claim dependencies
+                 -> UNIAO ordenada de defects
+                 -> merged_from ordenado
+                 -> ENTAO derivar o final candidate_id
+
+NENHUM DEDUP CROSS-SOURCE. Nunca. B e C jamais sao fundidos.
+
+=========================================================================
+ATRIBUICAO DO ID FINAL
+=========================================================================
+  ordenar por (claim_semantic_key) ou (entity_kind, candidate_structural_key)
+  atribuir por posicao, 1-based:
+     claim                  CL-%04d
+     rule_candidate         R-%04d
+     workflow_candidate     WF-%04d
+     anti_pattern_candidate AP-%04d
+     workflow_step          S-%04d   (numerado dentro do workflow, por order_key)
+
+  NUNCA pela ordem de emissao do modelo.
+  Typed global identity permanece (source_package_hash, entity_kind, local_id).
+
+=========================================================================
+CANARIOS DE IDENTIDADE
+=========================================================================
+DI1  mesma Claim (substancia + qualifiers) em duas slices, Evidence A e B distintas
+     -> 1 final Claim · evidence_refs = uniao {A,B} · merged_from dos dois · 1 claim_id
+DI2  mesmo workflow estrutural em duas slices, Evidence distintas
+     -> 1 Candidate final · Evidence unida · nenhuma estrutura perdida
+DI3  duas Claims com mesmo texto e qualifiers DIFERENTES -> 2 Claims distintas
+DI4  dois Candidates de kinds diferentes com mesmo conteudo -> 2 ids, prefixos distintos

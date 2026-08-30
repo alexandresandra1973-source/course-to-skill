@@ -1,0 +1,33 @@
+PLANO DE CHAMADAS — v2, com a precisao que faltava.
+
+  call 1     EXTRACTOR MODEL CONTROL      EC1-EC6, fixture sintetico fechado
+  call 2     ENTAILMENT JUDGE CONTROL     JE1-JE4, fixture sintetico fechado
+  call 3     extraction SL-B-01
+  call 4     extraction SL-B-02
+  call 5     extraction SL-B-03
+  call 6     extraction SL-C-01
+  call 7     extraction SL-C-02
+  call 8     extraction SL-C-03
+  call 9     entailment: TODAS as claims de MS001-SRC-B vs SUAS evidences
+  call 10    entailment: TODAS as claims de MS001-SRC-C vs SUAS evidences
+
+  PLANNED = 10 | HARD_CAP = 10 | RETRY = 0
+
+PRECISAO — corrige texto anterior ambiguo:
+  as chamadas 8, 9 e 10 sao PLANEJADAS e VALIDAS.
+  executed_calls <= 10.
+  SOMENTE a chamada 11 e MS_001A_INVALID.
+  Uma versao anterior deste design dizia "oitava a decima primeira chamada -> INVALID".
+  Estava ERRADO e fica corrigido aqui.
+
+TERMINO ANTECIPADO:
+  se a rodada terminar antes por INVALID ou FAIL, as chamadas restantes NAO precisam ser
+  queimadas. Gastar chamada para "completar o plano" e proibido.
+
+CASO DE BORDA — ZERO RAW CLAIMS:
+  se uma source produzir ZERO raw Claims nas suas tres slices, NAO executar a chamada de
+  entailment vazia correspondente (call 9 ou 10).
+  Classificar antes:  ZERO_RAW_CLAIMS -> SOURCE_PACKAGE_FAIL
+  Motivo: o MS-001 exige Claim como unidade primaria de comparacao; um package sem Claim
+  nao pode cumprir o objetivo experimental.
+  PARE sem gastar a call correspondente.

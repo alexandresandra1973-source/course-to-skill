@@ -1,0 +1,58 @@
+[
+ {
+  "canary": "PD1",
+  "desc": "completude antes do selo (falta SEAL-RECORD)",
+  "expected": "FAIL/REQUIRED_MEMBER_MISSING",
+  "got": "FAIL:['SEAL-RECORD']",
+  "ok": true
+ },
+ {
+  "canary": "PD2",
+  "desc": "apos selo: completude PASS e verificador PASS",
+  "expected": "PASS/PASS",
+  "got": "PASS/PASS",
+  "ok": true
+ },
+ {
+  "canary": "PD3",
+  "desc": "manifest exclui SEAL-RECORD (condicao 7)",
+  "expected": "SEAL-RECORD ausente",
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "PD4",
+  "desc": "mutacao de CLAIM",
+  "expected": "selo FAIL e hash muda",
+  "got": "FAIL|True",
+  "ok": true
+ },
+ {
+  "canary": "PD5",
+  "desc": "mutacao de CANDIDATE",
+  "expected": "selo FAIL e hash muda",
+  "got": "FAIL|True",
+  "ok": true
+ },
+ {
+  "canary": "PD6",
+  "desc": "mutacao identity-relevant do COMPILE-TRACE",
+  "expected": "selo FAIL e hash muda",
+  "got": "FAIL|True",
+  "ok": true
+ },
+ {
+  "canary": "PD7",
+  "desc": "membro obrigatorio ausente",
+  "expected": "completude FAIL (selo isolado nao basta)",
+  "got": "completude=FAIL selo=PASS",
+  "ok": true
+ },
+ {
+  "canary": "PD8",
+  "desc": "sem SEAL-RECORD",
+  "expected": "verificador INVALID",
+  "got": "INVALID",
+  "ok": true
+ }
+]

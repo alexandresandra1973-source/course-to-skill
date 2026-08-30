@@ -1,0 +1,25 @@
+SEPARACAO DE PAPEIS DE INSTRUMENTO — registrado explicitamente.
+
+  EC controls valida o comportamento do GERADOR (extractor).
+  JE controls valida o comportamento do JUIZ (entailment).
+
+  o extractor NUNCA auto-certifica ENTAILED.
+  o juiz NUNCA cria Claim.
+  o juiz NUNCA cria Evidence.
+  o juiz NUNCA ve a outra source.
+  o juiz NUNCA ve candidates, contexto de Fusion, MTX policy ou taxonomia cross-source.
+
+O MESMO modelo pode ser usado nas duas familias de chamada, mas INSTRUMENT_ROLE e
+diferente, e prompt e input sao independentes. Isso e o que I29 exige: dois saltos
+medidos separadamente, nunca colapsados; dois campos, dois relatorios.
+
+ISOLAMENTO DE INPUT DO JUIZ — para cada Claim o juiz recebe:
+  claim_id, claim text, qualifiers/scope,
+  SOMENTE as Evidence explicitamente referenciadas POR AQUELA Claim,
+  os excerpts dessas Evidence,
+  anchor metadata necessario a auditabilidade.
+E NADA MAIS.
+
+PROVA DE NAO-VAZAMENTO: persistir a lista exata claim_id -> evidence payload enviado ao
+juiz, por chamada. Verificacao mecanica: nenhum EV- do payload de B pertence ao catalogo
+de C, e vice-versa.

@@ -1,0 +1,28 @@
+CICLO DE VIDA DA CLAIM — v2. Duas etapas, explicitamente separadas.
+
+STAGE A — IDENTITY FINALIZATION  (ANTES do entailment, zero modelo)
+  raw claim
+    -> normalized canonical representation  (ID-DERIVATION-v1)
+    -> deterministic final claim_id (CL-nnnn, ordenado por content_hash)
+  Permite ao juiz operar sobre identidade ESTAVEL.
+  final claim_id NAO significa SEALED.
+
+STAGE B — SEAL ELIGIBILITY  (DEPOIS do entailment)
+  ENTAILED                    -> incluida no membro CLAIMS, status SEALED
+  NOT_ENTAILED | INDETERMINATE-> audit-only, AUSENTE do membro CLAIMS,
+                                 preservada nos outputs/compile trace
+
+  NAO APAGAR nada. NAO confundir final claim_id com sealed claim.
+
+MEMBRO CLAIMS — nomenclatura LITERAL do contrato aceito (MS-000B), conferida:
+  local_id        CL-nnnn
+  claim_id        qualificado
+  text            verbatim
+  evidence_refs   refs SELF, kind schema-implied = evidence
+  entailed_by     "ENTAILED"   <- literal aceito; so ENTAILED entra no membro
+  entail_why      justificativa do juiz
+  + campos novos do MS-001, aditivos:
+  source_language, qualifiers, content_hash, status="SEALED"
+
+CONTAGENS OBRIGATORIAS (medidas, sem threshold):
+  raw_claims, ENTAILED, NOT_ENTAILED, INDETERMINATE, por source

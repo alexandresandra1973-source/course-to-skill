@@ -1,0 +1,82 @@
+ESTADOS DE PROVENIENCIA E ELEGIBILIDADE — v2, corrigido.
+Resolve a contradicao evidence_refs=[] que existia na v1.
+
+=========================================================================
+A. evidence_refs VAZIO NUNCA CHEGA AO GATE
+=========================================================================
+raw Claim     : evidence_refs.length >= 1   OBRIGATORIO
+raw Candidate : evidence_refs.length >= 1   OBRIGATORIO
+
+Violacao -> E05_EMPTY_EVIDENCE_REFS -> EXTRACTION_BUNDLE_INVALID
+
+Isso ocorre na VALIDACAO DE SCHEMA, ANTES do Candidate Provenance Gate.
+O objeto NAO e classificado NOT_ELIGIBLE. Ele nunca entra no conjunto valido
+de raw Candidates. O bundle inteiro e invalido e a rodada para.
+
+CORRECAO REGISTRADA: a v1 dizia "evidence_refs = [] -> NOT_ELIGIBLE". Isso era
+incoerente com o schema, que ja proibia o vazio. Um objeto que o schema rejeita
+nao pode receber um estado de elegibilidade — ele nao existe.
+
+=========================================================================
+B. NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION — significado unico
+=========================================================================
+Candidate ESTRUTURALMENTE VALIDO e DIRETAMENTE ANCORADO, que nao satisfaz um
+requisito ADICIONAL para decisao cross-source.
+
+Caso principal no MS-001A:
+
+  candidate.evidence_refs      -> validas e resolviveis            OK
+  candidate.claim_temp_refs    -> validas no raw bundle            OK
+  MAS uma ou mais Claims referenciadas NAO chegam ao conjunto
+  SEALED CLAIMS, porque o entailment independente devolveu
+  NOT_ENTAILED ou INDETERMINATE
+
+Resultado:
+  o SOURCE_LOCAL_CANDIDATE PERMANECE preservado no package
+  cross_source_eligibility = NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+  NAO apagar o Candidate
+  NAO transformar a Claim rejeitada em Claim selada
+  NAO criar ref quebrada em sealed_claim_refs
+
+=========================================================================
+C. INVALID_PROVENANCE — defeito ESTRUTURAL real
+=========================================================================
+  evidence id nao resolve
+  evidence nao alcanca anchor/L0
+  claim_temp_ref inexistente no raw bundle
+  typed ref invalida
+  source/slice incompativel
+
+Varios desses ja sao bloqueados pelo schema do extractor; aqui sao
+DEFENSE-IN-DEPTH — o gate nunca confia que o schema rodou.
+
+INVALID_PROVENANCE -> SOURCE PACKAGE FAIL
+
+=========================================================================
+D. REPRESENTACAO PERSISTIDA no SOURCE-LOCAL-CANDIDATES
+=========================================================================
+  claim_refs_applicability      APPLICABLE | NOT_APPLICABLE
+  sealed_claim_refs[]           SOMENTE refs que existem no membro CLAIMS
+  claim_dependency_status       SATISFIED | UNSATISFIED_BY_ENTAILMENT | NOT_APPLICABLE
+  unsealed_claim_dependencies[] audit trail: final_claim_id + judgment, apontando
+                                para o output/compile trace onde a raw Claim julgada
+                                esta persistida. NAO e ref para o membro CLAIMS.
+  cross_source_eligibility      ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+                                | NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+
+=========================================================================
+E. DEPENDENCIA DE CLAIM — dois casos
+=========================================================================
+CASO A  claim_refs_applicability = NOT_APPLICABLE
+        nenhuma claim dependency exigida
+        provenance direta de evidence continua OBRIGATORIA
+        evidence valida -> pode ser ELIGIBLE
+
+CASO B  claim dependency aplicavel
+        toda claim_temp_ref precisa:
+          1. resolver no raw bundle
+          2. mapear para final claim_id
+          3. e, para cross-source eligibility, TODAS as Claims requeridas
+             precisam estar SEALED/ENTAILED
+        qualquer required Claim NOT_ENTAILED ou INDETERMINATE
+          -> NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION

@@ -1,0 +1,33 @@
+CRITERIOS DE PASS — v2, medidos e sem threshold de taxa.
+
+CLAIMS
+  OBRIGATORIO: >= 1 SEALED Claim em MS001-SRC-B
+               >= 1 SEALED Claim em MS001-SRC-C
+  NAO exigido: 100% das raw claims ENTAILED
+  MEDIR e reportar, por source: raw_claims, ENTAILED, NOT_ENTAILED, INDETERMINATE
+  Claims NOT_ENTAILED/INDETERMINATE podem existir em audit outputs. Nao apagar.
+  NENHUM threshold de taxa e fixado neste piloto.
+
+CANDIDATES
+  NAO exigido: 100% ELIGIBLE
+  OBRIGATORIO: INVALID_PROVENANCE == 0
+  MEDIR e reportar, por source: total source-local, ELIGIBLE, NOT_ELIGIBLE
+  Somente ELIGIBLE podera ser entregue ao MS-001B.
+  NENHUM eligibility-rate threshold e fixado sem medicao.
+
+POPULACOES DECLARADAS NO OUTPUT DO MS-001A
+  CROSS_SOURCE_ELIGIBLE_CLAIM_POPULATION      = as SEALED Claims
+  CROSS_SOURCE_ELIGIBLE_CANDIDATE_POPULATION  = candidates ELIGIBLE
+
+O futuro blocker recebe SEALED Claims e, apenas quando explicitamente necessario para
+transporte, estruturas de Candidate ELIGIBLE. NUNCA raw Claim rejeitada.
+Blocker NAO e executado no MS-001A e nenhum threshold seu entra no Opening Record (K13).
+
+INVALID  controle EC ou JE falha · resolved_model != claude-opus-5 · schema/tooling
+         defeituoso · call 11 · hash de corpus diverge · instrumento alterado apos o
+         Opening Record · ENTAILMENT_OUTPUT_INVALID
+FAIL     instrumento valido, produto viola contrato: INVALID_PROVENANCE > 0 · membro
+         obrigatorio ausente · ref source-local quebrada · ref cross-source presente ·
+         ZERO_RAW_CLAIMS numa source · selo falha
+PASS     dois Source Packages completos, selados, auditaveis, sem relacao cross-source,
+         cada um com >= 1 SEALED Claim e INVALID_PROVENANCE == 0

@@ -1,0 +1,288 @@
+[
+ {
+  "canary": "SA0",
+  "desc": "anchors reais bem formados",
+  "expected": "todos OK",
+  "got": "33 anchors",
+  "ok": true
+ },
+ {
+  "canary": "SA1",
+  "desc": "segment id inexistente",
+  "expected": "FAIL",
+  "got": "FAIL_SEGMENT_ID",
+  "ok": true
+ },
+ {
+  "canary": "SA2",
+  "desc": "artifact hash incorreto",
+  "expected": "FAIL",
+  "got": "FAIL_ARTIFACT_HASH",
+  "ok": true
+ },
+ {
+  "canary": "SA3",
+  "desc": "quote nao reproduzido",
+  "expected": "FAIL",
+  "got": "FAIL_QUOTE",
+  "ok": true
+ },
+ {
+  "canary": "SA4",
+  "desc": "start/end incompativel",
+  "expected": "FAIL",
+  "got": "FAIL_SPAN",
+  "ok": true
+ },
+ {
+  "canary": "SC00",
+  "desc": "bundle valido de referencia",
+  "expected": "sem erro",
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "SC01",
+  "desc": "JSON invalido",
+  "expected": "E01_JSON_UNPARSEABLE",
+  "got": [
+   "E01_JSON_UNPARSEABLE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC02",
+  "desc": "campo desconhecido",
+  "expected": "E03_UNKNOWN_FIELD",
+  "got": [
+   "E03_UNKNOWN_FIELD"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC03",
+  "desc": "kind desconhecido",
+  "expected": "E04_UNKNOWN_ENTITY_KIND",
+  "got": [
+   "E04_UNKNOWN_ENTITY_KIND"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC04",
+  "desc": "evidence vazia (claim)",
+  "expected": "E05_EMPTY_EVIDENCE_REFS",
+  "got": [
+   "E05_EMPTY_EVIDENCE_REFS"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC05",
+  "desc": "evidence vazia (candidate)",
+  "expected": "E05_EMPTY_EVIDENCE_REFS",
+  "got": [
+   "E05_EMPTY_EVIDENCE_REFS"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC06",
+  "desc": "Evidence fabricada",
+  "expected": "E06_EVIDENCE_REF_NOT_IN_CATALOG",
+  "got": [
+   "E06_EVIDENCE_REF_NOT_IN_CATALOG"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC07",
+  "desc": "Evidence de outra slice",
+  "expected": "E06_EVIDENCE_REF_NOT_IN_CATALOG",
+  "got": [
+   "E06_EVIDENCE_REF_NOT_IN_CATALOG"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC08",
+  "desc": "claim temp ref quebrada",
+  "expected": "E10_CLAIM_TEMP_REF_UNRESOLVED",
+  "got": [
+   "E10_CLAIM_TEMP_REF_UNRESOLVED"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC09",
+  "desc": "temp id duplicado",
+  "expected": "E11_DUPLICATE_TEMP_ID",
+  "got": [
+   "E11_DUPLICATE_TEMP_ID"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC10",
+  "desc": "workflow sem steps",
+  "expected": "E12_WORKFLOW_NO_STEPS",
+  "got": [
+   "E12_WORKFLOW_NO_STEPS"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC11",
+  "desc": "ordem invalida",
+  "expected": "E13_WORKFLOW_ORDER_INVALID",
+  "got": [
+   "E13_WORKFLOW_ORDER_INVALID"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC12",
+  "desc": "applicability ausente",
+  "expected": "E18_CLAIM_REFS_APPLICABILITY_MISSING",
+  "got": [
+   "E18_CLAIM_REFS_APPLICABILITY_MISSING"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC13",
+  "desc": "source_id divergente",
+  "expected": "E15_SOURCE_ID_MISMATCH",
+  "got": [
+   "E15_SOURCE_ID_MISMATCH"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC14",
+  "desc": "slice_id divergente",
+  "expected": "E16_SLICE_ID_MISMATCH",
+  "got": [
+   "E16_SLICE_ID_MISMATCH"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "SC15",
+  "desc": "structure incompativel",
+  "expected": "E17_STRUCTURE_KIND_MISMATCH",
+  "got": [
+   "E03_UNKNOWN_FIELD",
+   "E17_STRUCTURE_KIND_MISMATCH"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "CP1",
+  "desc": "evidence valida, sem claim dep",
+  "expected": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "got": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "ok": true
+ },
+ {
+  "canary": "CP2",
+  "desc": "evidence ref inexistente",
+  "expected": "INVALID_PROVENANCE",
+  "got": "INVALID_PROVENANCE",
+  "ok": true
+ },
+ {
+  "canary": "CP3",
+  "desc": "evidence vazia injetada no gate",
+  "expected": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION+UNREACHABLE",
+  "got": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION|['UNREACHABLE_FROM_VALID_MS001A_EXTRACTOR_OUTPUT']",
+  "ok": true
+ },
+ {
+  "canary": "CP4",
+  "desc": "claim ref inexistente",
+  "expected": "INVALID_PROVENANCE",
+  "got": "INVALID_PROVENANCE",
+  "ok": true
+ },
+ {
+  "canary": "CP5",
+  "desc": "evidence nao alcanca L0",
+  "expected": "INVALID_PROVENANCE",
+  "got": "INVALID_PROVENANCE",
+  "ok": true
+ },
+ {
+  "canary": "CP6",
+  "desc": "claim requerida ENTAILED",
+  "expected": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "got": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "ok": true
+ },
+ {
+  "canary": "CP7",
+  "desc": "claim requerida NOT_ENTAILED",
+  "expected": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "got": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION|UNSATISFIED_BY_ENTAILMENT",
+  "ok": true
+ },
+ {
+  "canary": "CP8",
+  "desc": "claim requerida INDETERMINATE",
+  "expected": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+  "got": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION|UNSATISFIED_BY_ENTAILMENT",
+  "ok": true
+ },
+ {
+  "canary": "DI1",
+  "desc": "mesma claim em 2 slices, Evidence distintas",
+  "expected": "1 claim, refs unidas",
+  "got": "1 claim(s), refs=['EV-0001', 'EV-0020'], merged=2",
+  "ok": true
+ },
+ {
+  "canary": "DI2",
+  "desc": "mesmo workflow em 2 slices",
+  "expected": "1 candidate, Evidence unida",
+  "got": "1 cand, refs=['EV-0001', 'EV-0031'], steps=2",
+  "ok": true
+ },
+ {
+  "canary": "DI3",
+  "desc": "mesmo texto, qualifiers diferentes",
+  "expected": "2 claims",
+  "got": "2 claims",
+  "ok": true
+ },
+ {
+  "canary": "DI4",
+  "desc": "kinds diferentes -> prefixos distintos",
+  "expected": "AP- e R-",
+  "got": [
+   "AP-0001",
+   "R-0001"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "DI5",
+  "desc": "identidade de claim ignora evidence_refs",
+  "expected": "chaves iguais",
+  "got": "-",
+  "ok": true
+ },
+ {
+  "canary": "DI6",
+  "desc": "identidade de candidate ignora defects/eligibility",
+  "expected": "chaves iguais",
+  "got": "-",
+  "ok": true
+ },
+ {
+  "canary": "DI7",
+  "desc": "typed id distingue mesmo local_id em kinds diferentes",
+  "expected": "2 chaves tipadas",
+  "got": "2 tipadas vs 1 nu",
+  "ok": true
+ }
+]

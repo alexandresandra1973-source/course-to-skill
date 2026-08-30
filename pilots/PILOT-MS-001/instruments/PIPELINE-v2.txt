@@ -1,0 +1,28 @@
+ORDEM NORMATIVA DO PIPELINE — v2. Esta ordem vai LITERALMENTE ao Opening Record.
+
+  Frozen L0  (L0/RAW-CAPTION.json, bytes congelados)
+  -> Controlled Slice ARTIFACTS          (derivados, resolvem ao raw por indice)
+  -> SOURCE_ANCHORS                      (mecanico, canarios SA1-SA4)
+  -> EVIDENCE                            (mecanico, N=4 segmentos contiguos)
+  -> Extraction Calls                    (6, uma por slice)
+  -> Raw outputs persisted               (ANTES de qualquer processamento)
+  -> Claim Identity Finalization         (Stage A, zero modelo)
+  -> Entailment Judge                    (2 calls, uma por source, isolado)
+  -> SEALED CLAIM Selection              (Stage B: so ENTAILED entra em CLAIMS)
+  -> Candidate Finalization              (AGORA, depois do entailment)
+  -> Candidate Provenance/Eligibility Gate
+  -> Local Coherence
+  -> Compile Trace final
+  -> Required Members
+  -> Completeness
+  -> Member Manifest
+  -> SOURCE_PACKAGE_HASH
+  -> SEAL-RECORD
+  -> External Seal Registry
+
+MUDANCA CONTRA A v1: a finalizacao de Candidate saiu de ANTES do entailment para
+DEPOIS. Motivo: a elegibilidade cross-source de um candidate depende de quais Claims
+foram SELADAS, e isso so se sabe apos o juiz. Finalizar candidate antes obrigaria a
+reabrir suas refs depois — que e a forma exata de provenance retrofitting que K12 proibe.
+IDs de candidate continuam derivados do proprio conteudo (ID-DERIVATION-v1), nao da
+ordem de emissao nem do resultado do juiz.

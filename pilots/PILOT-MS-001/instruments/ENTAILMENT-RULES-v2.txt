@@ -1,0 +1,3 @@
+regra mecanica adicional: evidence_refs_checked DEVE ser subconjunto EXATO das refs
+ja declaradas na Claim. Superset -> E19_JUDGE_ADDED_EVIDENCE -> ENTAILMENT_OUTPUT_INVALID.
+Claim ausente do output -> E20_JUDGMENT_MISSING. Claim id desconhecido -> E21_UNKNOWN_CLAIM_ID.

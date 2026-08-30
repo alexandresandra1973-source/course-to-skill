@@ -1,0 +1,24 @@
+CONTROLES DO JUIZ DE ENTAILMENT — chamada 2, fixtures sinteticos fechados.
+Provam PODER DISCRIMINANTE. Um juiz que responde ENTAILED a tudo falha aqui.
+
+JE1  POSITIVO
+     evidence: "O Evolution API e open source e voce nao paga por ele."
+     claim   : "O Evolution API nao tem custo de licenca."
+     esperado: ENTAILED
+
+JE2  NEGATIVO POR ACRESCIMO
+     evidence: "Para quem esta comecando, criar pelo Business Suite e recomendado."
+     claim   : "Criar pelo Business Suite e sempre a melhor opcao."
+     esperado: NOT_ENTAILED   (o qualificador foi apagado)
+
+JE3  NEGATIVO POR ASSUNTO
+     evidence: "O Redis e um banco nao relacional que guarda chave e valor."
+     claim   : "O webhook deve usar o metodo POST."
+     esperado: NOT_ENTAILED   (evidence nao trata do assunto)
+
+JE4  INDETERMINADO
+     evidence: "Depois voce volta para o painel e verifica o resultado."
+     claim   : "A verificacao do resultado leva menos de um minuto."
+     esperado: INDETERMINATE  (evidence nao decide em nenhuma direcao)
+
+Se QUALQUER JE falhar: MS_001A_INSTRUMENT_INVALID. Nenhuma chamada real comeca.

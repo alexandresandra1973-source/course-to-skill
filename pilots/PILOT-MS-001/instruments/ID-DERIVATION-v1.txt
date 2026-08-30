@@ -1,0 +1,61 @@
+DERIVACAO DETERMINISTICA DE IDENTIDADE — zero modelo, auditavel, independente da ORDEM
+em que o modelo emitiu.
+
+NORMALIZACAO (aplicada antes de qualquer hash)
+  norm(t) = NFC(t) -> lowercase -> colapsar whitespace -> remover pontuacao periferica
+            -> preservar estrutura interna (numeros, hifens internos, siglas)
+  A normalizacao serve SOMENTE para identidade. O texto exibido permanece verbatim.
+
+CLAIM
+  content_key   = canon({source_id, norm(text), sorted(evidence_refs), qualifiers_norm})
+  content_hash  = sha256(content_key)
+  ordem         = sort ascendente por content_hash        <- NAO pela ordem de emissao
+  local_id      = "CL-%04d" % (posicao na ordem acima, 1-based)
+  campos selados: local_id, entity_kind="claim", text (verbatim), content_hash,
+                  evidence_refs, qualifiers, source_language, entailed_by, entail_why
+
+  Justificativa: ids legiveis e estaveis. Reexecutar a finalizacao sobre o mesmo conjunto
+  de raw_claims produz os mesmos CL-nnnn, em qualquer ordem de chegada.
+
+CANDIDATE
+  content_key   = canon({source_id, entity_kind, structure_norm, sorted(evidence_refs)})
+  content_hash  = sha256(content_key)
+  ordem         = sort por (entity_kind, content_hash)
+  prefixo por kind:
+      rule_candidate          -> "R-%04d"
+      workflow_candidate      -> "WF-%04d"
+      anti_pattern_candidate  -> "AP-%04d"      <- PREFIXO PROPRIO
+      workflow_step           -> "S-%04d"       (numerado dentro do workflow, por order_key)
+  local_id      = prefixo do kind + posicao na ordem daquele kind
+
+  NOTA DE CORRECAO NA RAIZ: o MS-000B dava ao anti_pattern o local_id da rule de origem,
+  o que produziu 21 colisoes cross-kind, uma execucao INVALID na Round 4 e outra na
+  reverify. O prefixo AP- separa os namespaces na ORIGEM. A identidade tipada
+  (source_package_hash, entity_kind, local_id) continua sendo o contrato; o prefixo e
+  defesa em profundidade, nao substituto.
+
+MAPA
+  temp_claim_id -> final local_id, persistido em CLAIM-ID-MAP.json dentro do COMPILE-TRACE.
+  As claim_temp_refs dos candidates sao reescritas por esse mapa, mecanicamente.
+
+DUPLICATAS SOURCE-LOCAL — decidido ANTES da execucao
+  regra: IDENTICAL_NORMALIZED_CONTENT          (mesma convencao do PILOT-003)
+  claims com content_hash identico     -> MERGE deterministico
+  candidates com content_hash identico -> MERGE deterministico
+  no merge:
+    evidence_refs   = UNIAO ordenada dos conjuntos
+    claim_temp_refs = UNIAO ordenada
+    defects         = UNIAO ordenada
+    merged_from     = lista ordenada dos temporary ids e slice_ids de origem
+  PROVENANCE NUNCA E PERDIDA: merged_from preserva de onde cada aresta veio.
+  Nao ha dedup cross-source. Nenhum. Fontes diferentes nunca sao fundidas aqui.
+
+--- ADENDO v2: ORDEM DO PIPELINE ---
+A finalizacao de CANDIDATE ocorre DEPOIS do entailment (PIPELINE-v2.txt), porque a
+elegibilidade cross-source depende de quais Claims foram seladas.
+
+Isso NAO altera a derivacao de identidade: o local_id do candidate continua derivado do
+proprio content_hash, jamais do resultado do juiz nem da ordem de emissao. O que o juiz
+determina e o campo cross_source_eligibility, que e METADADO de elegibilidade e NAO entra
+no content_key da identidade. Reexecutar a finalizacao sobre os mesmos raw_candidates
+produz os mesmos R-/WF-/AP-/S- independentemente do veredito de entailment.

@@ -1,0 +1,37 @@
+CANARIOS DE PROVENIENCIA — v2, reinterpretados de forma consistente e ampliados.
+
+CP1  candidate com direct Evidence valida, claim_refs_applicability = NOT_APPLICABLE
+     -> ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+
+CP2  evidence_ref inexistente
+     -> INVALID_PROVENANCE
+
+CP3  candidate sintetico com evidence_refs = [] INJETADO DIRETAMENTE no Provenance Gate,
+     contornando deliberadamente o schema do extractor
+     -> DECISAO: NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+     + marcador obrigatorio: UNREACHABLE_FROM_VALID_MS001A_EXTRACTOR_OUTPUT
+     Razao da escolha: o canario existe para provar que o GATE nunca aceita vacuidade,
+     mesmo se o schema falhar. Classificar como INVALID_PROVENANCE confundiria "defeito
+     estrutural do produto" com "defesa em profundidade exercitada". O marcador registra
+     que este estado NAO e alcancavel por output valido do extractor no MS-001A — porque
+     la o vazio e E05 e mata o bundle inteiro.
+
+CP4  claim_temp_ref inexistente no raw bundle
+     -> INVALID_PROVENANCE
+
+CP5  evidence que nao alcanca anchor/L0
+     -> INVALID_PROVENANCE
+
+CP6  candidate com evidence valida + required Claim ENTAILED
+     -> ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+
+CP7  candidate com evidence valida + required Claim NOT_ENTAILED
+     -> NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+     claim_dependency_status = UNSATISFIED_BY_ENTAILMENT
+
+CP8  candidate com evidence valida + required Claim INDETERMINATE
+     -> NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION
+     claim_dependency_status = UNSATISFIED_BY_ENTAILMENT
+
+CP7 e CP8 sao o que torna NOT_ELIGIBLE nao-trivial: sem eles, o estado so existiria no
+canario artificial CP3 e nunca no pipeline real.

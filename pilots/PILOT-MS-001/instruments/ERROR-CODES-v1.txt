@@ -1,0 +1,28 @@
+CODIGOS DE ERRO ESTAVEIS — validacao mecanica do EXTRACTION BUNDLE (zero modelo)
+Todos levam a EXTRACTION_BUNDLE_INVALID. Nenhuma resposta e "consertada" a mao.
+
+E01  JSON_UNPARSEABLE                 resposta nao e JSON valido
+E02  SCHEMA_VIOLATION                 falha contra EXTRACTION-SCHEMA-v1.json
+E03  UNKNOWN_FIELD                    campo fora do schema (additionalProperties:false)
+E04  UNKNOWN_ENTITY_KIND              entity_kind fora dos tres autorizados
+E05  EMPTY_EVIDENCE_REFS              claim ou candidate com evidence_refs = []
+E06  EVIDENCE_REF_NOT_IN_CATALOG      ref fora do catalogo fechado desta chamada
+E07  EVIDENCE_REF_FOREIGN_SLICE       ref de outra slice
+E08  EVIDENCE_REF_FOREIGN_SOURCE      ref da outra source
+E09  EVIDENCE_ID_FABRICATED           id com forma valida que nao existe no catalogo
+E10  CLAIM_TEMP_REF_UNRESOLVED        claim_temp_ref que nao resolve no MESMO bundle
+E11  DUPLICATE_TEMP_ID                temporary_claim_id ou temporary_candidate_id repetido
+E12  WORKFLOW_NO_STEPS                workflow_candidate com steps = []
+E13  WORKFLOW_ORDER_INVALID           order_key ausente, duplicada ou nao crescente
+E14  MISSING_REQUIRED_SCOPE           qualifiers.scope ausente quando o schema exige
+E15  SOURCE_ID_MISMATCH               source_id != o da chamada
+E16  SLICE_ID_MISMATCH                slice_id != o da chamada
+E17  STRUCTURE_KIND_MISMATCH          structure nao corresponde ao entity_kind declarado
+E18  CLAIM_REFS_APPLICABILITY_MISSING claim_temp_refs vazio sem claim_refs_applicability
+
+--- ADENDO v2: validacao mecanica do ENTAILMENT OUTPUT ---
+E19  JUDGE_ADDED_EVIDENCE          evidence_refs_checked nao e subconjunto das refs da Claim
+E20  JUDGMENT_MISSING              Claim enviada ao juiz sem veredito no output
+E21  UNKNOWN_CLAIM_ID              claim_id no output que nao foi enviado
+E22  JUDGE_SCHEMA_VIOLATION        falha contra ENTAILMENT-SCHEMA-v2.json
+Todos -> ENTAILMENT_OUTPUT_INVALID -> MS_001A_INVALID. Resposta nao e consertada a mao.
