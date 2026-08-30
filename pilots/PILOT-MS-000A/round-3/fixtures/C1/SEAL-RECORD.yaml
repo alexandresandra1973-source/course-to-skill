@@ -1,0 +1,12 @@
+artifact_id: SYNTHETIC-SEAL
+version: '1.0'
+producer:
+  toolchain_path: TOOLCHAIN-A.txt
+  toolchain_sha256: 'a1f4415b782a71d344b94fa087372247ab2de12886643037dfc37c66f8fe8ce3'
+members:
+  - path: alpha.txt
+    sha256: '8da4c095820f3d93030b6ea12a714546eeae51f9a64eeac69d8c7d43dfa4652a'
+  - path: beta/gamma.txt
+    sha256: '60b471c69b64c2710d905780f78f0347ab818a25269699242c066a11412f826a'
+  - path: TOOLCHAIN-A.txt
+    sha256: 'a1f4415b782a71d344b94fa087372247ab2de12886643037dfc37c66f8fe8ce3'
