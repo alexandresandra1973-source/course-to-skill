@@ -1,0 +1,91 @@
+[
+ {
+  "canary": "ID1",
+  "desc": "CROSS-KIND DUPLICATE",
+  "expected": "ambos validos e distintos",
+  "obtido": {
+   "anti_pattern_candidate": "ADMITTED",
+   "rule_candidate": "ADMITTED"
+  },
+  "ok": true,
+  "refs_distintas": true
+ },
+ {
+  "canary": "ID2",
+  "desc": "SAME-KIND DUPLICATE",
+  "expected": "REJECTED / INVALID_IDENTITY",
+  "obtido": [
+   "ADMITTED",
+   "REJECTED_STRUCTURAL"
+  ],
+  "ok": true,
+  "reasons": [
+   "LOCAL_ID_INVALIDO"
+  ]
+ },
+ {
+  "canary": "ID3",
+  "desc": "TYPED RESOLUTION",
+  "expected": "RESOLVED n=1",
+  "obtido": {
+   "anti_pattern": [
+    "RESOLVED",
+    1
+   ],
+   "rule": [
+    "RESOLVED",
+    1
+   ]
+  },
+  "ok": true
+ },
+ {
+  "canary": "ID4",
+  "desc": "OLD TUPLE AMBIGUITY",
+  "expected": "AMBIGUOUS_REF",
+  "n_alvos": 2,
+  "obtido": "AMBIGUOUS_REF",
+  "ok": true
+ },
+ {
+  "canary": "ID5",
+  "desc": "ADMITTED/REJECTED DISJOINT",
+  "expected": "intersecao vazia",
+  "n_admitted": 3,
+  "n_rejected": 1,
+  "nota": "package satisfaz (entity_kind, local_id) unico, como a errata exige",
+  "obtido": 0,
+  "ok": true
+ },
+ {
+  "canary": "ID5b",
+  "desc": "SAME-KIND DUP QUEBRA DISJUNCAO",
+  "expected": "intersecao NAO vazia — limite declarado",
+  "nota": "a identidade tipada nao discrimina duplicata same-kind; a unicidade congelada e a defesa, e ID2 e quem a aplica",
+  "obtido": 1,
+  "ok": true
+ },
+ {
+  "canary": "ID6",
+  "desc": "SCHEMA-IMPLIED SELF",
+  "expected": "RESOLVED",
+  "kind_implicado": "evidence",
+  "obtido": "RESOLVED",
+  "ok": true
+ },
+ {
+  "canary": "ID7",
+  "desc": "GENERIC SELF WITHOUT KIND",
+  "expected": "INVALID_REF",
+  "obtido": "INVALID_REF",
+  "ok": true,
+  "why": "SELF generica: schema nao determina o kind do alvo e entity_kind ausente"
+ },
+ {
+  "canary": "ID8",
+  "desc": "NO SOURCE PACKAGE MUTATION",
+  "expected": "6/6 intactos",
+  "obtido": "IDENTICOS",
+  "ok": true
+ }
+]

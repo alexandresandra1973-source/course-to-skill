@@ -1,0 +1,780 @@
+{
+ "by_kind": {
+  "TOTAL": {
+   "admitted": 26,
+   "reasons": {},
+   "received": 26,
+   "rejected": 0
+  },
+  "anti_pattern_candidate": {
+   "admitted": 3,
+   "reasons": {},
+   "received": 3,
+   "rejected": 0
+  },
+  "rule_candidate": {
+   "admitted": 19,
+   "reasons": {},
+   "received": 19,
+   "rejected": 0
+  },
+  "workflow_candidate": {
+   "admitted": 4,
+   "reasons": {},
+   "received": 4,
+   "rejected": 0
+  }
+ },
+ "policy_version": "v0.2",
+ "records": [
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0110",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0110",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0108",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0108",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0109",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0109",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0111",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0111",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0112",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0112",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0113",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0113",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0114",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0114",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0115",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0115",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0116",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0116",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0118",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0118",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0119",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0119",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0120",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0120",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0121",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0121",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0122",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0122",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0117",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0117",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0123",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0123",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0126",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0126",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0124",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0124",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "rule_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "kind": "rule_candidates",
+   "local_id": "R-0125",
+   "qualified_ref": {
+    "entity_kind": "rule_candidate",
+    "local_id": "R-0125",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "workflow_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PASSO_UNICO"
+   ],
+   "kind": "workflow_candidates",
+   "local_id": "WF-0041",
+   "qualified_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0041",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "workflow_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "workflow_candidates",
+   "local_id": "WF-0042",
+   "qualified_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0042",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "workflow_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+    "PASSO_UNICO"
+   ],
+   "kind": "workflow_candidates",
+   "local_id": "WF-0044",
+   "qualified_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0044",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "workflow_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "workflow_candidates",
+   "local_id": "WF-0045",
+   "qualified_ref": {
+    "entity_kind": "workflow_candidate",
+    "local_id": "WF-0045",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "anti_pattern_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "anti_pattern_candidates",
+   "local_id": "R-0109",
+   "qualified_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0109",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "anti_pattern_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "anti_pattern_candidates",
+   "local_id": "R-0112",
+   "qualified_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0112",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  },
+  {
+   "claim_validation": {
+    "broken": [],
+    "refs": [],
+    "resolvable": true,
+    "state": "NOT_APPLICABLE"
+   },
+   "entity_kind": "anti_pattern_candidate",
+   "evidence_validation": {
+    "broken": [],
+    "empty": true,
+    "n_refs": 0,
+    "resolvable": true
+   },
+   "inherited_defects": [
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+   ],
+   "kind": "anti_pattern_candidates",
+   "local_id": "R-0124",
+   "qualified_ref": {
+    "entity_kind": "anti_pattern_candidate",
+    "local_id": "R-0124",
+    "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+   },
+   "reasons": [],
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+   "state": "ADMITTED"
+  }
+ ],
+ "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9",
+ "typed_reference_schema_version": "typed-ref-v1"
+}

@@ -1,0 +1,4140 @@
+{
+ "admission_table": {
+  "RUN-1": {
+   "A": {
+    "TOTAL": {
+     "admitted": 23,
+     "reasons": {},
+     "received": 23,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 13,
+     "reasons": {},
+     "received": 13,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 6,
+     "reasons": {},
+     "received": 6,
+     "rejected": 0
+    }
+   },
+   "B": {
+    "TOTAL": {
+     "admitted": 26,
+     "reasons": {},
+     "received": 26,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 3,
+     "reasons": {},
+     "received": 3,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 19,
+     "reasons": {},
+     "received": 19,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    }
+   }
+  },
+  "RUN-2": {
+   "A": {
+    "TOTAL": {
+     "admitted": 23,
+     "reasons": {},
+     "received": 23,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 13,
+     "reasons": {},
+     "received": 13,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 6,
+     "reasons": {},
+     "received": 6,
+     "rejected": 0
+    }
+   },
+   "B": {
+    "TOTAL": {
+     "admitted": 26,
+     "reasons": {},
+     "received": 26,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 3,
+     "reasons": {},
+     "received": 3,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 19,
+     "reasons": {},
+     "received": 19,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    }
+   }
+  },
+  "RUN-3": {
+   "A": {
+    "TOTAL": {
+     "admitted": 23,
+     "reasons": {},
+     "received": 23,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 13,
+     "reasons": {},
+     "received": 13,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 6,
+     "reasons": {},
+     "received": 6,
+     "rejected": 0
+    }
+   },
+   "B": {
+    "TOTAL": {
+     "admitted": 26,
+     "reasons": {},
+     "received": 26,
+     "rejected": 0
+    },
+    "anti_pattern_candidate": {
+     "admitted": 3,
+     "reasons": {},
+     "received": 3,
+     "rejected": 0
+    },
+    "rule_candidate": {
+     "admitted": 19,
+     "reasons": {},
+     "received": 19,
+     "rejected": 0
+    },
+    "workflow_candidate": {
+     "admitted": 4,
+     "reasons": {},
+     "received": 4,
+     "rejected": 0
+    }
+   }
+  }
+ },
+ "ambiguous_refs": [],
+ "classificacao": "MS_000B_TYPED_IDENTITY_REVERIFY_PASS",
+ "disjointness": [
+  {
+   "disjuntos": true,
+   "intersecao": 0,
+   "n_admitted": 49,
+   "n_rejected": 0,
+   "run": "RUN-1"
+  },
+  {
+   "disjuntos": true,
+   "intersecao": 0,
+   "n_admitted": 49,
+   "n_rejected": 0,
+   "run": "RUN-2"
+  },
+  {
+   "disjuntos": true,
+   "intersecao": 0,
+   "n_admitted": 49,
+   "n_rejected": 0,
+   "run": "RUN-3"
+  }
+ ],
+ "fusion": {
+  "RUN-1": {
+   "fusion_id": "7e785a0aba34db524893e69fc4e0d064a7806320b802067ded0b938b65050562"
+  },
+  "RUN-2": {
+   "fusion_id": "f5e781ffc3d053c0e3de3200610ef5fc3972f0b27133f78c5c17548887ee9ba7"
+  },
+  "RUN-3": {
+   "fusion_id": "77db636be51f088701e9801f588ef202e7d46433d98880c3ec746e4bc6b60deb"
+  }
+ },
+ "gates": {
+  "admitted_materializados": true,
+  "admitted_rejected_disjuntos": true,
+  "anti_pattern_outcome_medido": true,
+  "errata_registrada": true,
+  "fusion_id_sem_mtx_policy": true,
+  "i26": true,
+  "identity_canaries_ID1_ID8": true,
+  "objetos_distintos": true,
+  "real_passo_unico": true,
+  "real_precedence_undefined": true,
+  "rejected_nao_consumidos": true,
+  "source_packages_intact": true,
+  "todas_refs_derivadas_tipadas": true,
+  "transporte_preservado": true,
+  "typed_qualification_zero_collisions": true,
+  "zero_model_calls": true
+ },
+ "i26_canaries": [
+  {
+   "canary": "I26-A",
+   "desc": "mesmo input + mesmo config -> mesmo fusion_id",
+   "expected": "IGUAL",
+   "fusion_id": "52b7303a78c421b910cdb1470a2d6096d409ddc12d23b8c58307261dff12a56b",
+   "obtido": "IGUAL",
+   "ok": true
+  },
+  {
+   "canary": "I26-B",
+   "desc": "admission policy diferente -> fusion_id novo",
+   "expected": "DIFERENTE E PERMITIDO",
+   "fusion_id_1": "52b7303a78c421b910cdb1470a2d6096d409ddc12d23b8c58307261dff12a56b",
+   "fusion_id_2": "369971ca29e471a34575bde5153bc2d8e890936f835c61e0d4032b171532f233",
+   "obtido": "DIFERENTE",
+   "ok": true
+  },
+  {
+   "canary": "I26-C1",
+   "desc": "duas MTX-POLICY -> fusion_id byte-identico",
+   "expected": "IGUAL",
+   "obtido": "IGUAL",
+   "ok": true
+  },
+  {
+   "canary": "I26-C2",
+   "desc": "injetar mtx_policy_hash como input identitario",
+   "expected": "FAIL",
+   "forbidden_found": [
+    "mtx_policy_hash"
+   ],
+   "obtido": "FAIL",
+   "ok": true
+  },
+  {
+   "canary": "I26-C3",
+   "desc": "assinatura de fusion_id sem mtx_policy_hash",
+   "expected": "AUSENTE",
+   "obtido": "AUSENTE",
+   "ok": true,
+   "params": [
+    "source_package_hashes",
+    "fusion_config_hash",
+    "admission_report_hash",
+    "admitted_set_hash",
+    "outputs_hash",
+    "identity_errata_hash"
+   ]
+  },
+  {
+   "canary": "I26-C4",
+   "desc": "fusion_id_inputs do FUSION-CONFIG passam no guard",
+   "expected": "PASS",
+   "inputs": [
+    "source_package_hashes",
+    "fusion_config_hash",
+    "candidate_admission_report_hash",
+    "admitted_candidate_set_hash",
+    "outputs_hash",
+    "identity_errata_hash"
+   ],
+   "obtido": "PASS",
+   "ok": true
+  }
+ ],
+ "identity_canaries": [
+  {
+   "canary": "ID1",
+   "desc": "CROSS-KIND DUPLICATE",
+   "expected": "ambos validos e distintos",
+   "obtido": {
+    "anti_pattern_candidate": "ADMITTED",
+    "rule_candidate": "ADMITTED"
+   },
+   "ok": true,
+   "refs_distintas": true
+  },
+  {
+   "canary": "ID2",
+   "desc": "SAME-KIND DUPLICATE",
+   "expected": "REJECTED / INVALID_IDENTITY",
+   "obtido": [
+    "ADMITTED",
+    "REJECTED_STRUCTURAL"
+   ],
+   "ok": true,
+   "reasons": [
+    "LOCAL_ID_INVALIDO"
+   ]
+  },
+  {
+   "canary": "ID3",
+   "desc": "TYPED RESOLUTION",
+   "expected": "RESOLVED n=1",
+   "obtido": {
+    "anti_pattern": [
+     "RESOLVED",
+     1
+    ],
+    "rule": [
+     "RESOLVED",
+     1
+    ]
+   },
+   "ok": true
+  },
+  {
+   "canary": "ID4",
+   "desc": "OLD TUPLE AMBIGUITY",
+   "expected": "AMBIGUOUS_REF",
+   "n_alvos": 2,
+   "obtido": "AMBIGUOUS_REF",
+   "ok": true
+  },
+  {
+   "canary": "ID5",
+   "desc": "ADMITTED/REJECTED DISJOINT",
+   "expected": "intersecao vazia",
+   "n_admitted": 3,
+   "n_rejected": 1,
+   "nota": "package satisfaz (entity_kind, local_id) unico, como a errata exige",
+   "obtido": 0,
+   "ok": true
+  },
+  {
+   "canary": "ID5b",
+   "desc": "SAME-KIND DUP QUEBRA DISJUNCAO",
+   "expected": "intersecao NAO vazia — limite declarado",
+   "nota": "a identidade tipada nao discrimina duplicata same-kind; a unicidade congelada e a defesa, e ID2 e quem a aplica",
+   "obtido": 1,
+   "ok": true
+  },
+  {
+   "canary": "ID6",
+   "desc": "SCHEMA-IMPLIED SELF",
+   "expected": "RESOLVED",
+   "kind_implicado": "evidence",
+   "obtido": "RESOLVED",
+   "ok": true
+  },
+  {
+   "canary": "ID7",
+   "desc": "GENERIC SELF WITHOUT KIND",
+   "expected": "INVALID_REF",
+   "obtido": "INVALID_REF",
+   "ok": true,
+   "why": "SELF generica: schema nao determina o kind do alvo e entity_kind ausente"
+  },
+  {
+   "canary": "ID8",
+   "desc": "NO SOURCE PACKAGE MUTATION",
+   "expected": "6/6 intactos",
+   "obtido": "IDENTICOS",
+   "ok": true
+  }
+ ],
+ "model_calls": 0,
+ "not_a_round": true,
+ "operation": "TARGETED_IDENTITY_REWRITE_AND_REVERIFY",
+ "policy_version": "v0.2",
+ "portoes_falhos": [],
+ "real_canaries": {
+  "anti_pattern": {
+   "casos": [
+    {
+     "hash": true,
+     "local_id": "R-0095",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0098",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0101",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0102",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0109",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0112",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0124",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0095",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0098",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0101",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0102",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0109",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0112",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0124",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0095",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0098",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0101",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0102",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0109",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0112",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "hash": true,
+     "local_id": "R-0124",
+     "na_fusion": true,
+     "ok": true,
+     "reasons": [],
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    }
+   ],
+   "n": 21,
+   "ok": true
+  },
+  "passo_unico": {
+   "casos": [
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0036",
+     "ok": true,
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0040",
+     "ok": true,
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0041",
+     "ok": true,
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0044",
+     "ok": true,
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0036",
+     "ok": true,
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0040",
+     "ok": true,
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0041",
+     "ok": true,
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0044",
+     "ok": true,
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0036",
+     "ok": true,
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0040",
+     "ok": true,
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0041",
+     "ok": true,
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    },
+    {
+     "defects": [
+      "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "PASSO_UNICO"
+     ],
+     "hash": true,
+     "local_id": "WF-0044",
+     "ok": true,
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED",
+     "steps_fusion": 1
+    }
+   ],
+   "n": 12,
+   "ok": true
+  },
+  "precedence_undefined": {
+   "casos": [
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0095",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0096",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0097",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0098",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0099",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0100",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0101",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0103",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0102",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0104",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0105",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0106",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0107",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0110",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0108",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0109",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0111",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0112",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0113",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0114",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0115",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0116",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0118",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0119",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0120",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0121",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0122",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0117",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0126",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0125",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-1",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0095",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0096",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0097",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0098",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0099",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0100",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0101",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0103",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0102",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0104",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0105",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0106",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0107",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0110",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0108",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0109",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0111",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0112",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0113",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0114",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0115",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0116",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0118",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0119",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0120",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0121",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0122",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0117",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0126",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0125",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-2",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0095",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0096",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0097",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0098",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0099",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0100",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0101",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0103",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0102",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0104",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0105",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0106",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0107",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "A",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0110",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0108",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0109",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0111",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0112",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0113",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0114",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0115",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0116",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0118",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0119",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0120",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0121",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0122",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0117",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0126",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    },
+    {
+     "adjudicado": false,
+     "hash": true,
+     "local_id": "R-0125",
+     "ok": true,
+     "precedence_fusion": "UNDEFINED",
+     "run": "RUN-3",
+     "src": "B",
+     "state": "ADMITTED"
+    }
+   ],
+   "n": 90,
+   "ok": true
+  }
+ },
+ "registry_after": "8b2eee5681b007eaf39ab40057888ff7b39b8ca3efd20e2d3f67f48815e5943f",
+ "registry_before": "8b2eee5681b007eaf39ab40057888ff7b39b8ca3efd20e2d3f67f48815e5943f",
+ "rejected_leaks": [],
+ "source_packages_after": {
+  "RUN-1/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "35236db37cdbdca146ceef4c6b1dc7d14b0e33f3ccc6ac538ec39a4b917b6208",
+   "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+  },
+  "RUN-1/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "a8ae6f2c60976670a06982bc49223d7dd6d35ae9a0b3e286817dbbc8547aab71",
+   "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+  },
+  "RUN-2/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "13170bb49d93d4479f450d2fb61440d517989797f5d36b6818592aeafa6b5e7b",
+   "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+  },
+  "RUN-2/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "87842e187e93950139979b1a4a33ee54112b28c761b36e7a1a00d5b2084adb39",
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+  },
+  "RUN-3/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  "RUN-3/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  }
+ },
+ "source_packages_before": {
+  "RUN-1/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "35236db37cdbdca146ceef4c6b1dc7d14b0e33f3ccc6ac538ec39a4b917b6208",
+   "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+  },
+  "RUN-1/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "a8ae6f2c60976670a06982bc49223d7dd6d35ae9a0b3e286817dbbc8547aab71",
+   "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+  },
+  "RUN-2/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "13170bb49d93d4479f450d2fb61440d517989797f5d36b6818592aeafa6b5e7b",
+   "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+  },
+  "RUN-2/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "87842e187e93950139979b1a4a33ee54112b28c761b36e7a1a00d5b2084adb39",
+   "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+  },
+  "RUN-3/A": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "6bcb0c735534b093df6e6aff3a0ce63ff9c041ac378723098d957b501afe1544",
+   "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+  },
+  "RUN-3/B": {
+   "completeness": "PASS",
+   "seal": "PASS",
+   "seal_record_hash": "3ffd2e904661ebbbe9e828459f35bfd4424dfac9adbd22415835aca0d3bc7dd4",
+   "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+  }
+ },
+ "source_packages_intact": true,
+ "transport": {
+  "RUN-1": {
+   "anti_patterns": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "transformation": null
+    }
+   ],
+   "rules": [
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0096",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0097",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0099",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0100",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0103",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0104",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0105",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0106",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0107",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0110",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0108",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0111",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0113",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0114",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0115",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0116",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0118",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0119",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0120",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0121",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0122",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0117",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "precedence_fusion": "Precede o login na Vercel e o pedido de deploy",
+     "precedence_source": "Precede o login na Vercel e o pedido de deploy",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0123",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0126",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "precedence_fusion": "Precede a execução da deleção",
+     "precedence_source": "Precede a execução da deleção",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0125",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "transformation": null
+    }
+   ],
+   "workflows": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "n_steps_fusion": 5,
+     "n_steps_source": 5,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0035",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0036",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "n_steps_fusion": 6,
+     "n_steps_source": 6,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0037",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "n_steps_fusion": 4,
+     "n_steps_source": 4,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0038",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "n_steps_fusion": 2,
+     "n_steps_source": 2,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0039",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0040",
+      "source_package_hash": "d5fd5dad81cfe5d1bad04f3fceeaada1b7e9b357b9c081f49dd5f287e2dbd212"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0041",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "n_steps_fusion": 3,
+     "n_steps_source": 3,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0042",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0044",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-1.json",
+     "fusion_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "n_steps_fusion": 18,
+     "n_steps_source": 18,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0045",
+      "source_package_hash": "c66b269533cedcabb8db4df28c06a2548b45a87615e298d7b57cc6333f97ebff"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-1/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "transformation": null
+    }
+   ]
+  },
+  "RUN-2": {
+   "anti_patterns": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "transformation": null
+    }
+   ],
+   "rules": [
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0096",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0097",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0099",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0100",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0103",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0104",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0105",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0106",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0107",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0110",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0108",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0111",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0113",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0114",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0115",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0116",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0118",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0119",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0120",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0121",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0122",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0117",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "precedence_fusion": "Precede o login na Vercel e o pedido de deploy",
+     "precedence_source": "Precede o login na Vercel e o pedido de deploy",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0123",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0126",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "precedence_fusion": "Precede a execução da deleção",
+     "precedence_source": "Precede a execução da deleção",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0125",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "transformation": null
+    }
+   ],
+   "workflows": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "n_steps_fusion": 5,
+     "n_steps_source": 5,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0035",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0036",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "n_steps_fusion": 6,
+     "n_steps_source": 6,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0037",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "n_steps_fusion": 4,
+     "n_steps_source": 4,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0038",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "n_steps_fusion": 2,
+     "n_steps_source": 2,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0039",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0040",
+      "source_package_hash": "70c11cfbc96f4e038266dc4a33de95cf149041b21973c650a1194296a6a87fd6"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0041",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "n_steps_fusion": 3,
+     "n_steps_source": 3,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0042",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0044",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-2.json",
+     "fusion_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "n_steps_fusion": 18,
+     "n_steps_source": 18,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0045",
+      "source_package_hash": "9ba68de595573c24b4ccc2920eebddf757706bdaa0dcad5c05e750cdc18ba8d9"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-2/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "transformation": null
+    }
+   ]
+  },
+  "RUN-3": {
+   "anti_patterns": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "7cc9410baf9d2760b57650a00fd6f7d75b632c80764212338ce9a90525ae5b0e",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d0528d594374b1620e91061d267597a4bcf0e1e301dc4b5fc8529142f0e5acf5",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "46c73aec1342f93d898911a75b38284dc1043ad1a7ffcfc8a80515077d6a6ac8",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "375555fcae048aaf263c7bd8ce181b4d4883a11fb4ba508fbc01a6c572129512",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "be2a5e5610c54aa5645a5bb5c466130b4e1d1f07ad3bb422c4f3156b5aac2506",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2608967e9f57bab1312d9ce756f7878c2bb76d0ca00ce488626b2fb05dc00aff",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "anti_pattern_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "682e88fc69f3666db01b6f898cc1f87631b9fb5cc2d03ac48fb18ed9be4cbe8c",
+     "transformation": null
+    }
+   ],
+   "rules": [
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0095",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d4b4245e93f34d0e3f60c7d5af2f2e2dd9c35271ccd19405a4bf96af3b5037f6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0096",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "36a575da1918ce49a32a408ea3562d51caf64f6fc7e455b7646a8ac7184a006e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0097",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d533c31fb188a9ec9832fecef9f4f9bdf24ed616f0c1b8e9eb0eb87adf262624",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0098",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "783829c9ec32893079de79e3b1a22d67e283d2999b2258b8e4808fef372ad124",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0099",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aba7a2fd9935a4b60a1f1a53da25b7b6cbbc35a9d3bd6ba3fe9bb8ad947394ab",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0100",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a1dcee84839678c413b1b78cbe5e0228d9ce1f926a9016f749d398450da89f80",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0101",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1437de9059ca1768b9dd8d790dfcafdcfc8d202ac2f29357f33f75d2a7734129",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0103",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "ea9a9c854d80a2a962b94ea6b21a41ca3b8e7910198ab9ed0cc7f1f20fbb6cb7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0102",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "12a304bf96c3741460557bc99c0b3ede72d9075499ac2c99a7323398ef896d5c",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0104",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "965cbe2158bbda3a01813511d26a06833a3ec850e6bf5c8bed52dc643c964baf",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0105",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8bb6680838082018c76b0f448e1a9328c53198592ab2f6d3591c212a8ca5a6e",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0106",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0f58c122024639dd2f710f06b87ea75277f5f795735d7cc3f496210fba9dc4c0",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0107",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a35077e1a89b9d37ecd13c425ef5e99a692335350e6c372d5160fe7c97d88d70",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0110",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a060f5d01dfc014b082c1eb1e77f7506e1744d56710eb782261c21182b718a31",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0108",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "77583d9b54e69942151b754e2a42b5e2adadf9dd358da4ca47e1be4d74b39747",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0109",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9fbfa9b5cd5292587820a9ff2e07b24fbbe276ecadb2330b652750a07cc5b9d2",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0111",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d3b8097e4f332b9d8e0b1b250d0e8cdbb4787c24ea6aee0cebe59dd410f51344",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0112",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "497026a5606898dcfb3dab9488123813779b147ddd107fc22fda031f30736649",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0113",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "855bcb88ae65932d56c061a1a74b65dcfdfb8130ff371d8be08d0ce88c2c4a59",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0114",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "fc97ef2d55ad41cefb9e85145f3c7aef50ea1c732d1e746418bff6d14b3a0c2a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0115",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0e2b828ec9d8a0131a55b5c1d9e20de89a05c902627d2c2cc99fa0f56500c196",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0116",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e4ff160375cb33ad4dba5f5f63f45052199aa934dd903fa031b134f98986f226",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0118",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9ca18d690ecd60d165a4786ca8952100f0eda57b92cd2a723ff64a4dbb1d1c01",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0119",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "a9464760d8bd73c5fc261a8a6cedfa9dd4019fa3763f8eda268dc003aab8e472",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0120",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "1b8c3166929537a567bf041ac640ef999f8e7edbcab75c9f15a611a7f5f36618",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0121",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "d8e2e055ce39b33bd288f43fe51ee28f466ea99b438ca7bd5e116883fa3a7d33",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0122",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8d651481fc19dbcb70763ca2770fdc9454475846b6db7fcaf9df9d6e24c3a4c7",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0117",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "aa8041ee5a9d6d2cf073476296e30549d82fc208848aa2c82ec7edeb175643a8",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "precedence_fusion": "Precede o login na Vercel e o pedido de deploy",
+     "precedence_source": "Precede o login na Vercel e o pedido de deploy",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0123",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "854a82ef16bddccda3af0b42f219738c8427f6cddeb3dfcb7313c999e3f25f7a",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0126",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "52f7d55e08fc8ac4e0770af85cf5b2203629c8b218733b417e5b12f80180b1ca",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "precedence_fusion": "Precede a execução da deleção",
+     "precedence_source": "Precede a execução da deleção",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0124",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "2087cf176639932e70b10f0b38cb69f90b0f038f078a23a2bc5bb87db1992ec6",
+     "transformation": null
+    },
+    {
+     "adjudication": null,
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "precedence_fusion": "UNDEFINED",
+     "precedence_source": "UNDEFINED",
+     "preservado": true,
+     "ref": {
+      "entity_kind": "rule_candidate",
+      "local_id": "R-0125",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "163afc1aedf65613a5c4fda58dabcf4933eb131ea4a20a0b9874877ccd4095c4",
+     "transformation": null
+    }
+   ],
+   "workflows": [
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "n_steps_fusion": 5,
+     "n_steps_source": 5,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0035",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "861458c89605c2f133a3f2c4ab509cc287c330f75f49f2583356c7c415c7459d",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0036",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "8b196b745ef8984f569313e9978e76c1015279401ef4dd39159683449f99ab5c",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "n_steps_fusion": 6,
+     "n_steps_source": 6,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0037",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "759243c4d12bb6008c5a5b3bc1b9777c8c667320e444c92352f995d7ced75300",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "n_steps_fusion": 4,
+     "n_steps_source": 4,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0038",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "abd070afba98324032bcdc5ef682a93a35742434189c723dc67bae2d998da9a6",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "n_steps_fusion": 2,
+     "n_steps_source": 2,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0039",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "3c35c93b6647d929deb862bd2b599443aeb5c12b3d74d4785ae93bddb1aa8b07",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0040",
+      "source_package_hash": "5133d40dd62c7c0f3a6fdd8d762bbad1a58f13dc291da40a96a9c7a00f6e0439"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-A/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "27101134f33dc134338e10f46ffe05d807f5ff6098ea556c0bc6c278c0ef61bc",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0041",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "710db59ffbaa14d2dcb38f418fb0f92c95c7581a1a9a23bae467a3871d525e00",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "n_steps_fusion": 3,
+     "n_steps_source": 3,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0042",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "9831e63fb1c03f5a45c6705584b06567f35dc8c88e5da7d46a2ca324a024f167",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "n_steps_fusion": 1,
+     "n_steps_source": 1,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0044",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "e9e3d7efb0029b7bf43f25571f01c0c54fdd55267df58a0d3ae683defb56bbaf",
+     "transformation": null
+    },
+    {
+     "fusion_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-4-identity-reverify/out/fusion/fusion-package-IDENTITY-RUN-3.json",
+     "fusion_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "n_steps_fusion": 18,
+     "n_steps_source": 18,
+     "preservado": true,
+     "ref": {
+      "entity_kind": "workflow_candidate",
+      "local_id": "WF-0045",
+      "source_package_hash": "c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911"
+     },
+     "source_file": "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-000B/round-3/out/packages/RUN-3/pkg-B/SOURCE-LOCAL-CANDIDATES.json",
+     "source_structure_hash": "0d74af1ac81e0c60db404611ffc30626305875e885cea82bb02411ad65b7a280",
+     "transformation": null
+    }
+   ]
+  }
+ },
+ "typed_reference_schema_version": "typed-ref-v1",
+ "untyped_refs": []
+}
