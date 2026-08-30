@@ -1,0 +1,35 @@
+{
+  "config_id": "FUSION-CONFIG-R4",
+  "candidate_admission_policy": {
+    "policy_id": "CANDIDATE-ADMISSION-POLICY",
+    "version": "v0.1",
+    "sha256": "64c2feaeebf1ac62c559031f1918741a35856fb1115b5b10e7707a1e922a75c9"
+  },
+  "candidate_consumption_version": "r4-candidate-consumption-v1",
+  "workflow_transport_version": "r4-workflow-transport-v1",
+  "relation_policy": {
+    "applied": false,
+    "value": "NOT_APPLIED_IN_ROUND_4",
+    "motivo": "a travessia candidate->fusion desta rodada nao depende de blocagem de claims. Bloco 20: nao executar trabalho desnecessario e nao fingir que claim blocking mede candidate admission."
+  },
+  "claim_blocking": {
+    "applied": false,
+    "value": "NOT_APPLIED_IN_ROUND_4"
+  },
+  "mtx_policy_hash": null,
+  "nota_I26": "mtx_policy_hash e PROIBIDO como input identitario da Fusion. A CANDIDATE-ADMISSION-POLICY entra em fusion_id por pertencer ao FUSION-CONFIG: e configuracao estrutural do proprio pipeline da Fusion, nao politica de Operationalization.",
+  "fusion_id_inputs": [
+    "source_package_hashes",
+    "fusion_config_hash",
+    "candidate_admission_report_hash",
+    "admitted_candidate_set_hash",
+    "outputs_hash"
+  ],
+  "fusion_id_forbidden_inputs": ["mtx_policy_hash"],
+  "toolchain": {
+    "lib/admission.py": "88d74f22251b8cb996ea458a7c451ae1b9db48162d9739094f9ce1c7ab4b0e27",
+    "lib/fusion.py": "5c03d3f694548ae9843240b979cfeadec91d90417dfc1bd323a183b23efe24b1"
+  },
+  "determinismo": "MECANICO, OFFLINE, zero chamadas de modelo",
+  "source_packages": "os seis Source Packages selados da Round 3, read-only, sem reselar e sem regenerar"
+}

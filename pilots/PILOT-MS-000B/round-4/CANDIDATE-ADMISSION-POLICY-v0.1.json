@@ -1,0 +1,91 @@
+{
+  "policy_id": "CANDIDATE-ADMISSION-POLICY",
+  "version": "v0.1",
+  "belongs_to": "FUSION-CONFIG",
+  "not_a": "MTX-POLICY",
+  "principle": "Admission decide SOMENTE se o candidate esta estruturalmente apto a ser consumido pela Fusion.",
+  "admission_does_not": [
+    "resolver precedence",
+    "decidir applicability MTX",
+    "avaliar preferencia comercial",
+    "eliminar knowledge por conter questao nao resolvida",
+    "melhorar o candidate"
+  ],
+  "states": ["ADMITTED", "REJECTED_STRUCTURAL"],
+  "rejection_predicates_exhaustive": [
+    "LOCAL_ID_INVALIDO",
+    "REQUIRED_FIELD_AUSENTE",
+    "WORKFLOW_SEM_PASSOS",
+    "ORDEM_INVALIDA",
+    "EVIDENCE_REF_QUEBRADA",
+    "CLAIM_REF_QUEBRADA"
+  ],
+  "non_rejection_predicates_preserved_as_inherited_defect": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO",
+    "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+  ],
+  "per_kind": {
+    "rule_candidates": {
+      "required_fields": ["local_id", "name", "trigger", "condition", "action"],
+      "admit_if": [
+        "local_id valido (nao vazio, string, unico no pacote)",
+        "todos os required_fields presentes e nao vazios",
+        "EV-RESOLVABILITY: toda evidence_ref PRESENTE resolve em evidence_ids(Source Package)",
+        "CLAIM-RESOLVABILITY: toda claim_ref PRESENTE resolve em sealed_claim_ids(Source Package)"
+      ],
+      "precedence_undefined": "NAO REJEITA. Preserva precedence=UNDEFINED e marca inherited_defect=PRECEDENCE_UNDEFINED. Nao adjudica. Nao converte automaticamente em DEFERRED_TO_RUNTIME. governance_status=NOT_YET_ADJUDICATED apenas como rotulo de fila, sem criar conflito artificial."
+    },
+    "workflow_candidates": {
+      "required_fields": ["local_id", "name", "steps"],
+      "required_step_fields": ["local_id", "order_key", "action"],
+      "admit_if": [
+        "local_id valido",
+        "todos os required_fields presentes",
+        "len(steps) >= 1",
+        "toda order_key presente e nao-nula",
+        "order_keys estritamente crescentes na ordem persistida",
+        "order_keys sem duplicata",
+        "todo step com required_step_fields presentes",
+        "EV-RESOLVABILITY em workflow e em cada step",
+        "CLAIM-RESOLVABILITY quando claim_refs presentes"
+      ],
+      "passo_unico": "NAO REJEITA. len(steps)==1 e workflow estruturalmente valido. Marca inherited_defect=PASSO_UNICO. Nao expande, nao corrige, nao transforma em dois passos."
+    },
+    "anti_pattern_candidates": {
+      "required_fields": ["local_id", "do_not"],
+      "admit_if": [
+        "local_id valido",
+        "todos os required_fields presentes e do_not nao vazio",
+        "EV-RESOLVABILITY",
+        "CLAIM-RESOLVABILITY quando claim_refs presentes"
+      ],
+      "nota": "NAO e admitido incondicionalmente. Na Round 3 nao tinha predicado algum (achado D-8)."
+    }
+  },
+  "evidence_lastro": {
+    "EV_RESOLVABILITY": {
+      "tipo": "PREDICADO DE REJEICAO",
+      "regra": "candidate.evidence_refs SUBSET evidence_ids(Source Package)",
+      "ref_quebrada": "REJECTED_STRUCTURAL com motivo EVIDENCE_REF_QUEBRADA",
+      "conjunto_vazio": "satisfaz vacuamente (conjunto vazio e subconjunto de qualquer conjunto)",
+      "canarios": ["CA5", "CA7"]
+    },
+    "EV_POPULATION": {
+      "tipo": "MEDIDA, NAO E PREDICADO DE REJEICAO",
+      "motivo": "os 147 candidatos dos seis Source Packages selados da Round 3 tem evidence_refs vazio, porque run_round3.py grava a lista literal vazia. Rejeitar por vacuidade descartaria 100% do corpus por defeito do EMPACOTADOR da Round 3, nao da camada candidate->fusion sob teste, e repetiria o achado D-3 num campo diferente.",
+      "marcacao": "inherited_defect = EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+      "limitacao_declarada": "EVIDENCE_LASTRO_NON_EMPTINESS_NOT_TESTABLE_ON_R3_CORPUS"
+    }
+  },
+  "claim_lastro": {
+    "CLAIM_RESOLVABILITY": {
+      "tipo": "PREDICADO DE REJEICAO",
+      "regra": "candidate.claim_refs SUBSET sealed_claim_ids(Source Package) quando claim_refs presentes",
+      "obrigatoriedade_no_corpus_R3": "NOT_APPLICABLE — o campo claim_refs nao existe em candidato algum dos seis pacotes",
+      "distincao": "NOT_APPLICABLE != MISSING != PASS. Implementado e testado por canario sintetico; medido como NOT_APPLICABLE no corpus real."
+    }
+  },
+  "determinismo": "MECANICO e OFFLINE. Zero chamadas de modelo. Sem mtime, sem timestamp no conjunto canonico.",
+  "nao_altera_source_package": "I20 — a admissao le o pacote selado e nunca escreve nele."
+}
