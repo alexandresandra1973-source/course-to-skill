@@ -1,0 +1,189 @@
+{
+ "bundle": {
+  "raw_candidates": [
+   {
+    "claim_refs_applicability": "APPLICABLE",
+    "claim_temp_refs": [
+     "TC-001"
+    ],
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-9001"
+    ],
+    "structure": {
+     "action": "Hospedar o Evolution API em uma VPS",
+     "condition": "Para que fique disponivel o tempo todo",
+     "do_not": [],
+     "name": "Hospedar o Evolution API em VPS",
+     "precedence": null,
+     "trigger": "Ao hospedar o Evolution API"
+    },
+    "temporary_candidate_id": "TX-001"
+   },
+   {
+    "claim_refs_applicability": "APPLICABLE",
+    "claim_temp_refs": [
+     "TC-002"
+    ],
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ],
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-9002"
+    ],
+    "structure": {
+     "action": "Criar os primeiros anuncios pelo painel, conforme recomendacao do instrutor",
+     "condition": "Para quem esta comecando",
+     "do_not": [],
+     "name": "Criar os primeiros anuncios pelo painel (iniciantes)",
+     "precedence": null,
+     "trigger": "Ao criar os primeiros anuncios"
+    },
+    "temporary_candidate_id": "TX-002"
+   },
+   {
+    "claim_refs_applicability": "APPLICABLE",
+    "claim_temp_refs": [
+     "TC-003"
+    ],
+    "defects": [],
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-9003"
+    ],
+    "structure": {
+     "name": "Criacao de instancia e conexao via QR Code",
+     "steps": [
+      {
+       "action": "Criar a instancia",
+       "evidence_refs": [
+        "EV-9003"
+       ],
+       "name": "Criar a instancia",
+       "order_key": 1
+      },
+      {
+       "action": "Gerar o QR Code",
+       "evidence_refs": [
+        "EV-9003"
+       ],
+       "name": "Gerar o QR Code",
+       "order_key": 2
+      },
+      {
+       "action": "Escanear o QR Code com o celular",
+       "evidence_refs": [
+        "EV-9003"
+       ],
+       "name": "Escanear com o celular",
+       "order_key": 3
+      }
+     ]
+    },
+    "temporary_candidate_id": "TX-003"
+   },
+   {
+    "claim_refs_applicability": "APPLICABLE",
+    "claim_temp_refs": [
+     "TC-004"
+    ],
+    "defects": [
+     "SCOPE_UNSTATED"
+    ],
+    "entity_kind": "anti_pattern_candidate",
+    "evidence_refs": [
+     "EV-9005"
+    ],
+    "structure": {
+     "do_not": [
+      "Deixar a estrutura na conta pessoal"
+     ],
+     "why": "Isso aumenta a chance de restricao."
+    },
+    "temporary_candidate_id": "TX-004"
+   }
+  ],
+  "raw_claims": [
+   {
+    "evidence_refs": [
+     "EV-9001"
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": "para ficar disponivel o tempo todo",
+     "platform": "VPS",
+     "scope": "Evolution API",
+     "stage": null
+    },
+    "source_language": "pt",
+    "status": "SOURCE_EXPLICIT",
+    "temporary_claim_id": "TC-001",
+    "text": "O Evolution API precisa ser hospedado em uma VPS para ficar disponivel o tempo todo."
+   },
+   {
+    "evidence_refs": [
+     "EV-9002"
+    ],
+    "qualifiers": {
+     "audience": "quem esta comecando",
+     "condition": null,
+     "platform": "painel",
+     "scope": "os primeiros anuncios",
+     "stage": "primeiros anuncios"
+    },
+    "source_language": "pt",
+    "status": "SOURCE_EXPLICIT",
+    "temporary_claim_id": "TC-002",
+    "text": "Para quem esta comecando, o instrutor recomenda criar os primeiros anuncios pelo painel."
+   },
+   {
+    "evidence_refs": [
+     "EV-9003"
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": null,
+     "scope": null,
+     "stage": null
+    },
+    "source_language": "pt",
+    "status": "SOURCE_EXPLICIT",
+    "temporary_claim_id": "TC-003",
+    "text": "Primeiro voce cria a instancia, depois gera o QR Code, e por fim escaneia com o celular."
+   },
+   {
+    "evidence_refs": [
+     "EV-9005"
+    ],
+    "qualifiers": {
+     "audience": null,
+     "condition": null,
+     "platform": "conta pessoal",
+     "scope": "estrutura",
+     "stage": null
+    },
+    "source_language": "pt",
+    "status": "SOURCE_EXPLICIT",
+    "temporary_claim_id": "TC-004",
+    "text": "Nao deixe a estrutura na conta pessoal: isso aumenta a chance de restricao."
+   }
+  ],
+  "slice_id": "SL-B-01",
+  "source_id": "MS001-SRC-B"
+ },
+ "checks": {
+  "EC1_supported": true,
+  "EC2_trap_refused": true,
+  "EC3_candidate_provenance": true,
+  "EC4_claim_link": true,
+  "EC5_no_candidate_from_factual": true,
+  "EC6_scope_preserved": true,
+  "ok": true,
+  "schema_errors": []
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "system_sha256": "e5edd3b4a3830368a04808d2b4030a3b464a104dbbe48eda76aa2da1ec54a211",
+ "user_sha256": "46d7f58bd9591f6c603f6368f0cfa3fd3feb364e8cc264d1b024f13faec4aa35",
+ "user": "source_id: FIXTURE\nITENS:\n[\n {\n  \"claim_id\": \"CL-9001\",\n  \"claim\": \"O Evolution API nao tem custo de licenca.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9101\",\n    \"excerpt\": \"O Evolution API e open source e voce nao paga por ele.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9002\",\n  \"claim\": \"Criar pelo Business Suite e sempre a melhor opcao.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9102\",\n    \"excerpt\": \"Para quem esta comecando, criar pelo Business Suite e recomendado.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9003\",\n  \"claim\": \"O webhook deve usar o metodo POST.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9103\",\n    \"excerpt\": \"O Redis e um banco nao relacional que guarda chave e valor.\"\n   }\n  ]\n },\n {\n  \"claim_id\": \"CL-9004\",\n  \"claim\": \"A verificacao do resultado leva menos de um minuto.\",\n  \"qualifiers\": {},\n  \"evidence\": [\n   {\n    \"evidence_id\": \"EV-9104\",\n    \"excerpt\": \"Depois voce volta para o painel e verifica o resultado.\"\n   }\n  ]\n }\n]",
+ "meta": {
+  "fixture": "JE1-JE4"
+ }
+}

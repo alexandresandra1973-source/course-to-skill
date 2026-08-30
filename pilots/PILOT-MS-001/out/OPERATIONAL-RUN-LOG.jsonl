@@ -1,0 +1,2 @@
+{"call_seq": 1, "instrument_role": "EXTRACTOR_CONTROL", "label": "EC", "started_at": "2026-08-30T20:23:46.488901-03:00", "finished_at": "2026-08-30T20:24:04.030711-03:00", "nota": "timestamp operacional: registro, NUNCA identidade"}
+{"call_seq": 2, "instrument_role": "ENTAILMENT_CONTROL", "label": "JE", "started_at": "2026-08-30T20:24:04.031376-03:00", "finished_at": "2026-08-30T20:24:09.487352-03:00", "nota": "timestamp operacional: registro, NUNCA identidade"}
