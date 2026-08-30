@@ -1,0 +1,156 @@
+[
+ {
+  "canary": "CA1",
+  "defect_esperado": "PRECEDENCE_UNDEFINED",
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "desc": "PRECEDENCE UNDEFINED",
+  "expected": "ADMITTED",
+  "obtido": "ADMITTED",
+  "ok": true,
+  "reasons": []
+ },
+ {
+  "canary": "CA2",
+  "defect_esperado": "PASSO_UNICO",
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+   "PASSO_UNICO"
+  ],
+  "desc": "PASSO UNICO",
+  "expected": "ADMITTED",
+  "obtido": "ADMITTED",
+  "ok": true,
+  "reasons": []
+ },
+ {
+  "canary": "CA3",
+  "defect_esperado": null,
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+  ],
+  "desc": "SEM PASSOS",
+  "expected": "REJECTED_STRUCTURAL",
+  "obtido": "REJECTED_STRUCTURAL",
+  "ok": true,
+  "reasons": [
+   "REQUIRED_FIELD_AUSENTE",
+   "WORKFLOW_SEM_PASSOS"
+  ]
+ },
+ {
+  "canary": "CA4",
+  "defect_esperado": null,
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+  ],
+  "desc": "ORDEM INVALIDA",
+  "expected": "REJECTED_STRUCTURAL",
+  "obtido": "REJECTED_STRUCTURAL",
+  "ok": true,
+  "reasons": [
+   "ORDEM_INVALIDA"
+  ]
+ },
+ {
+  "canary": "CA5",
+  "defect_esperado": null,
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "desc": "EVIDENCE REF QUEBRADA",
+  "expected": "REJECTED_STRUCTURAL",
+  "obtido": "REJECTED_STRUCTURAL",
+  "ok": true,
+  "reasons": [
+   "EVIDENCE_REF_QUEBRADA"
+  ]
+ },
+ {
+  "canary": "CA6",
+  "defect_esperado": null,
+  "defects": [],
+  "desc": "ANTI-PATTERN VALIDO",
+  "expected": "ADMITTED",
+  "obtido": "ADMITTED",
+  "ok": true,
+  "reasons": []
+ },
+ {
+  "canary": "CA7",
+  "defect_esperado": null,
+  "defects": [],
+  "desc": "ANTI-PATTERN EVIDENCE QUEBRADA",
+  "expected": "REJECTED_STRUCTURAL",
+  "obtido": "REJECTED_STRUCTURAL",
+  "ok": true,
+  "reasons": [
+   "EVIDENCE_REF_QUEBRADA"
+  ]
+ },
+ {
+  "canary": "CA5b",
+  "defect_esperado": null,
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "desc": "CLAIM REF QUEBRADA",
+  "expected": "REJECTED_STRUCTURAL",
+  "obtido": "REJECTED_STRUCTURAL",
+  "ok": true,
+  "reasons": [
+   "CLAIM_REF_QUEBRADA"
+  ]
+ },
+ {
+  "canary": "CA5c",
+  "defect_esperado": "PRECEDENCE_UNDEFINED",
+  "defects": [
+   "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING",
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "desc": "CLAIM REF VALIDA",
+  "expected": "ADMITTED",
+  "obtido": "ADMITTED",
+  "ok": true,
+  "reasons": []
+ },
+ {
+  "canary": "CA8",
+  "desc": "ADMITTED CONSUMPTION",
+  "detalhe": {
+   "admitidos": [
+    "A-CA8",
+    "R-CA8",
+    "W-CA8"
+   ],
+   "consumiveis": [
+    "A-CA8",
+    "R-CA8",
+    "W-CA8"
+   ]
+  },
+  "expected": "PRESENT_AND_CONSUMABLE",
+  "obtido": "PRESENT_AND_CONSUMABLE",
+  "ok": true
+ },
+ {
+  "canary": "CA9",
+  "desc": "REJECTED EXCLUSION",
+  "detalhe": {
+   "presentes_em_namespace_de_auditoria": [
+    "W-CA9"
+   ],
+   "rejeitados": [
+    "W-CA9"
+   ],
+   "vazaram": []
+  },
+  "expected": "NOT_CONSUMABLE",
+  "obtido": "NOT_CONSUMABLE",
+  "ok": true
+ }
+]
