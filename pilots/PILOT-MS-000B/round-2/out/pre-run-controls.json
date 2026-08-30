@@ -1,0 +1,279 @@
+{
+  "tokenizer": {
+    "positive": [
+      {
+        "control_id": "PEQ-01",
+        "formas": [
+          "github",
+          "github.",
+          "github,",
+          "(github)",
+          "github:",
+          "github;",
+          "'github'"
+        ],
+        "esperado": "github",
+        "obtido": [
+          [
+            "github"
+          ],
+          [
+            "github"
+          ],
+          [
+            "github"
+          ],
+          [
+            "github"
+          ],
+          [
+            "github"
+          ],
+          [
+            "github"
+          ],
+          [
+            "github"
+          ]
+        ],
+        "ok": true
+      },
+      {
+        "control_id": "PEQ-02",
+        "formas": [
+          "repository",
+          "repository.",
+          "repository,",
+          "[repository]"
+        ],
+        "esperado": "repository",
+        "obtido": [
+          [
+            "repository"
+          ],
+          [
+            "repository"
+          ],
+          [
+            "repository"
+          ],
+          [
+            "repository"
+          ]
+        ],
+        "ok": true
+      },
+      {
+        "control_id": "PEQ-03",
+        "formas": [
+          "commit",
+          "commit!",
+          "commit?",
+          "\"commit\""
+        ],
+        "esperado": "commit",
+        "obtido": [
+          [
+            "commit"
+          ],
+          [
+            "commit"
+          ],
+          [
+            "commit"
+          ],
+          [
+            "commit"
+          ]
+        ],
+        "ok": true
+      },
+      {
+        "control_id": "PEQ-04",
+        "formas": [
+          "remote",
+          "remote.",
+          "«remote»"
+        ],
+        "esperado": "remote",
+        "obtido": [
+          [
+            "remote"
+          ],
+          [
+            "remote"
+          ],
+          [
+            "remote"
+          ]
+        ],
+        "ok": true
+      }
+    ],
+    "negative": [
+      {
+        "control_id": "NEG-01",
+        "a": "knowledge/decision-rules.yaml",
+        "b": "decision-rules",
+        "tokens_a": [
+          "knowledge/decision-rules.yaml"
+        ],
+        "tokens_b": [
+          "decision-rules"
+        ],
+        "porque": "caminho nao colapsa no nome do arquivo",
+        "ok": true
+      },
+      {
+        "control_id": "NEG-02",
+        "a": "--dangerously-skip-permissions",
+        "b": "permissions",
+        "tokens_a": [
+          "dangerously-skip-permissions"
+        ],
+        "tokens_b": [
+          "permissions"
+        ],
+        "porque": "opcao completa nao colapsa no radical",
+        "ok": true
+      },
+      {
+        "control_id": "NEG-03",
+        "a": "claude.md",
+        "b": "claude",
+        "tokens_a": [
+          "claude.md"
+        ],
+        "tokens_b": [
+          "claude"
+        ],
+        "porque": "nome de arquivo com extensao nao colapsa no radical",
+        "ok": true
+      },
+      {
+        "control_id": "NEG-04",
+        "a": "v0.2.1",
+        "b": "v0",
+        "tokens_a": [
+          "v0.2.1"
+        ],
+        "tokens_b": [],
+        "porque": "versao interna preservada",
+        "ok": true
+      },
+      {
+        "control_id": "NEG-05",
+        "a": "github.com",
+        "b": "github",
+        "tokens_a": [
+          "github.com"
+        ],
+        "tokens_b": [
+          "github"
+        ],
+        "porque": "dominio nao colapsa no nome",
+        "ok": true
+      }
+    ],
+    "ok": true
+  },
+  "consolidator": {
+    "fixtures": [
+      {
+        "fixture": "FX-PASS",
+        "esperado": "PILOT_MS_000B_PASS",
+        "obtido": "PILOT_MS_000B_PASS",
+        "ok": true
+      },
+      {
+        "fixture": "FX-FAIL",
+        "esperado": "PILOT_MS_000B_FAIL",
+        "obtido": "PILOT_MS_000B_FAIL",
+        "ok": true
+      },
+      {
+        "fixture": "FX-FAIL-2",
+        "esperado": "PILOT_MS_000B_FAIL",
+        "obtido": "PILOT_MS_000B_FAIL",
+        "ok": true
+      },
+      {
+        "fixture": "FX-KILL",
+        "esperado": "PILOT_MS_000B_FAIL",
+        "obtido": "PILOT_MS_000B_FAIL",
+        "ok": true
+      },
+      {
+        "fixture": "FX-INVALID",
+        "esperado": "PILOT_MS_000B_ROUND_2_INVALID",
+        "obtido": "PILOT_MS_000B_ROUND_2_INVALID",
+        "ok": true
+      },
+      {
+        "fixture": "FX-INVALID-2",
+        "esperado": "PILOT_MS_000B_ROUND_2_INVALID",
+        "obtido": "PILOT_MS_000B_ROUND_2_INVALID",
+        "ok": true
+      },
+      {
+        "fixture": "FX-PRECED",
+        "esperado": "PILOT_MS_000B_ROUND_2_INVALID",
+        "obtido": "PILOT_MS_000B_ROUND_2_INVALID",
+        "ok": true
+      }
+    ],
+    "ok": true
+  },
+  "judge": [
+    {
+      "control_id": "JC-POSITIVE",
+      "expected": "ENTAILED",
+      "claim": "When inspecting a change, the green section shows what is being added and the red section shows what is on the left.",
+      "porque": "a proposicao segue integralmente da evidencia de A",
+      "obtido": "ENTAILED",
+      "why": "A evidência afirma explicitamente que a seção verde são as coisas que estão sendo adicionadas e que a seção vermelha está à esquerda (contendo o que será deletado). A claim apenas reafirma isso, sem adicionar fato novo.",
+      "ok": true,
+      "n_evidencias": 1
+    },
+    {
+      "control_id": "JC-NEGATIVE",
+      "expected": "NOT_ENTAILED",
+      "claim": "The green section shows what is being added, and this is why GitHub charges a fee for private repositories.",
+      "porque": "acrescenta causalidade e um fato de cobranca que a evidencia NAO sustenta",
+      "obtido": "NOT_ENTAILED",
+      "why": "A primeira parte (verde = adições) segue da evidência, mas a evidência nada diz sobre o GitHub cobrar taxa por repositórios privados nem estabelece qualquer relação causal com a cor do diff; é fato e causalidade novos.",
+      "ok": true,
+      "n_evidencias": 1
+    },
+    {
+      "control_id": "JC-INDETERMINATE",
+      "expected": "INDETERMINATE",
+      "claim": "Most developers prefer reviewing changes in the rich diff view rather than the plain view.",
+      "porque": "a evidencia menciona a rich difference mas NAO diz o que a maioria prefere; insuficiente para concluir e insuficiente para negar",
+      "obtido": "INDETERMINATE",
+      "why": "A evidência menciona a existência da visualização de 'rich difference', tocando o assunto, mas não informa nada sobre preferência da maioria dos desenvolvedores; insuficiente para confirmar ou negar.",
+      "ok": true,
+      "n_evidencias": 1
+    },
+    {
+      "control_id": "JC-CROSS-A-IN-B",
+      "expected": "NOT_ENTAILED",
+      "claim": "When inspecting a change, the green section shows what is being added and the red section shows what is on the left.",
+      "porque": "proposicao exclusiva de A julgada contra evidencia de B: aprovar seria falsa atribuicao cross-source",
+      "obtido": "NOT_ENTAILED",
+      "why": "A evidência trata de MCP, integração de ferramentas e Claude Code; não menciona inspeção de mudanças nem seções verde/vermelha do diff.",
+      "ok": true,
+      "n_evidencias": 6
+    },
+    {
+      "control_id": "JC-CROSS-B-IN-A",
+      "expected": "NOT_ENTAILED",
+      "claim": "MCP stands for Model Context Protocol and can be thought of as a USB port for artificial intelligence.",
+      "porque": "proposicao exclusiva de B julgada contra evidencia de A: aprovar seria falsa atribuicao cross-source",
+      "obtido": "NOT_ENTAILED",
+      "why": "A evidência trata de controle de versão, sessões e GitHub; não menciona MCP, seu significado nem qualquer analogia com porta USB para IA.",
+      "ok": true,
+      "n_evidencias": 6
+    }
+  ]
+}

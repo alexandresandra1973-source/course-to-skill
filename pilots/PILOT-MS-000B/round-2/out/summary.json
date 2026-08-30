@@ -1,0 +1,346 @@
+{
+  "kill1": {
+    "esperado": {
+      "FULL": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+      "CUT": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+      "EVIDENCE": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+    },
+    "real": {
+      "FULL": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+      "CUT": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+      "EVIDENCE": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+    },
+    "ok": true
+  },
+  "identity": {
+    "local_ids_total": 100,
+    "colisoes_nuas": 44,
+    "qualificadas_distintas": 100,
+    "refs_cross_package_nuas": 0,
+    "pkg_A": "115ae3500b45b2748c81187ae226b8e344559172f071151e9cd92a1ab3101a28",
+    "pkg_B": "737fc71a7c85c74621882fe4c5574c4ba8d5eb75f224ddfe2d4c8839496584e8",
+    "hashes_distintos": true,
+    "claims_no_pacote_errado": 0,
+    "ok": true
+  },
+  "provenance": {
+    "claims": 257,
+    "resolve": 257,
+    "quebradas": [],
+    "pct": 100.0,
+    "ok": true
+  },
+  "claims": {
+    "RUN-1": {
+      "raw": 84,
+      "sealed": 84,
+      "rejeitadas": 0,
+      "estados": {
+        "ENTAILED": 84
+      },
+      "motivos": {}
+    },
+    "RUN-2": {
+      "raw": 87,
+      "sealed": 87,
+      "rejeitadas": 0,
+      "estados": {
+        "ENTAILED": 87
+      },
+      "motivos": {}
+    },
+    "RUN-3": {
+      "raw": 86,
+      "sealed": 86,
+      "rejeitadas": 0,
+      "estados": {
+        "ENTAILED": 86
+      },
+      "motivos": {}
+    }
+  },
+  "kill3": {
+    "seladas": 257,
+    "seladas_entailed": 257,
+    "ok": true
+  },
+  "kill2": {
+    "por_run": {
+      "RUN-1": 84,
+      "RUN-2": 87,
+      "RUN-3": 86
+    },
+    "max": 87,
+    "min": 84,
+    "razao": 1.0357142857142858,
+    "teto": 1.5,
+    "ok": true,
+    "sobreposicao": {
+      "RUN-1∩RUN-2": 5,
+      "RUN-1∩RUN-3": 3,
+      "RUN-2∩RUN-3": 15
+    },
+    "nucleo_comum": 0
+  },
+  "workflow": {
+    "por_run": {
+      "RUN-1": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      },
+      "RUN-2": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      },
+      "RUN-3": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      }
+    },
+    "ok": true
+  },
+  "blocking": {
+    "por_run": {
+      "RUN-1": {
+        "possible": 1763,
+        "survived": 193,
+        "reduction_pct": 89.0527509926262,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": [
+              "github",
+              "repository"
+            ],
+            "survived": true
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": [
+              "remote",
+              "repository"
+            ],
+            "survived": true
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      },
+      "RUN-2": {
+        "possible": 1892,
+        "survived": 162,
+        "reduction_pct": 91.43763213530656,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": [
+              "github",
+              "repository"
+            ],
+            "survived": true
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": [
+              "remote",
+              "repository"
+            ],
+            "survived": true
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      },
+      "RUN-3": {
+        "possible": 1848,
+        "survived": 148,
+        "reduction_pct": 91.991341991342,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": [
+              "github",
+              "repository"
+            ],
+            "survived": true
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": [
+              "remote",
+              "repository"
+            ],
+            "survived": true
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      }
+    },
+    "regra": "shared_content_tokens >= 2",
+    "controles_ok": true,
+    "ok": true
+  },
+  "relations": {
+    "RUN-1": {
+      "identical": 0,
+      "pares_avaliados": 193
+    },
+    "RUN-2": {
+      "identical": 0,
+      "pares_avaliados": 162
+    },
+    "RUN-3": {
+      "identical": 0,
+      "pares_avaliados": 148
+    }
+  },
+  "isolation": {
+    "controles": [
+      {
+        "control_id": "JC-POSITIVE",
+        "expected": "ENTAILED",
+        "claim": "When inspecting a change, the green section shows what is being added and the red section shows what is on the left.",
+        "porque": "a proposicao segue integralmente da evidencia de A",
+        "obtido": "ENTAILED",
+        "ok": true,
+        "n_evidencias": 1
+      },
+      {
+        "control_id": "JC-CROSS-A-IN-B",
+        "expected": "NOT_ENTAILED",
+        "claim": "When inspecting a change, the green section shows what is being added and the red section shows what is on the left.",
+        "porque": "proposicao exclusiva de A julgada contra evidencia de B: aprovar seria falsa atribuicao cross-source",
+        "obtido": "NOT_ENTAILED",
+        "ok": true,
+        "n_evidencias": 6
+      },
+      {
+        "control_id": "JC-CROSS-B-IN-A",
+        "expected": "NOT_ENTAILED",
+        "claim": "MCP stands for Model Context Protocol and can be thought of as a USB port for artificial intelligence.",
+        "porque": "proposicao exclusiva de B julgada contra evidencia de A: aprovar seria falsa atribuicao cross-source",
+        "obtido": "NOT_ENTAILED",
+        "ok": true,
+        "n_evidencias": 6
+      }
+    ],
+    "claims_no_pacote_errado": 0,
+    "refs_nuas": 0,
+    "ok": true
+  },
+  "controls": {
+    "tokenizer": true,
+    "consolidator": true,
+    "judge": true,
+    "judge_detalhe": [
+      {
+        "control_id": "JC-POSITIVE",
+        "esperado": "ENTAILED",
+        "obtido": "ENTAILED",
+        "ok": true
+      },
+      {
+        "control_id": "JC-NEGATIVE",
+        "esperado": "NOT_ENTAILED",
+        "obtido": "NOT_ENTAILED",
+        "ok": true
+      },
+      {
+        "control_id": "JC-INDETERMINATE",
+        "esperado": "INDETERMINATE",
+        "obtido": "INDETERMINATE",
+        "ok": true
+      },
+      {
+        "control_id": "JC-CROSS-A-IN-B",
+        "esperado": "NOT_ENTAILED",
+        "obtido": "NOT_ENTAILED",
+        "ok": true
+      },
+      {
+        "control_id": "JC-CROSS-B-IN-A",
+        "esperado": "NOT_ENTAILED",
+        "obtido": "NOT_ENTAILED",
+        "ok": true
+      }
+    ]
+  },
+  "trace": {
+    "registradas": 10,
+    "esperadas": 10,
+    "cap": 24,
+    "dentro": true,
+    "tokens_in": 76370,
+    "tokens_out": 35931,
+    "modelos": [
+      "claude-opus-5"
+    ],
+    "particoes": [
+      "1 chamada por (source,run); todas as 44 evidencias do pacote A",
+      "1 chamada por (source,run); todas as 56 evidencias do pacote B",
+      "1 chamada por run; TODAS as 84 claims candidatas",
+      "1 chamada por run; TODAS as 86 claims candidatas",
+      "1 chamada por run; TODAS as 87 claims candidatas",
+      "1 chamada; os 5 controles do juiz"
+    ],
+    "completo": true,
+    "ok": true,
+    "config_identica": true
+  },
+  "gates": {
+    "tokenizer_controls": true,
+    "consolidator_controls": true,
+    "judge_controls": true,
+    "isolation_controls": true,
+    "trace_completo": true,
+    "config_identica": true,
+    "dentro_do_cap": true,
+    "kill1": true,
+    "kill2": true,
+    "kill3": true,
+    "identity": true,
+    "provenance": true,
+    "workflow": true,
+    "blocking": true,
+    "isolation": true
+  },
+  "classificacao": "PILOT_MS_000B_PASS",
+  "motivo": {
+    "motivo": "todos os portoes validos",
+    "portoes": []
+  }
+}
