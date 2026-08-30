@@ -1,0 +1,381 @@
+## Managing Version Control with GitHub
+
+**53:22**
+
+how you can rewind the conversations and rewind the changes, but there's got to be a better way to do it, right? There
+
+**53:28**
+
+got to be a better way to do your version controls where you can actually to see all the versions that we have for current projects or folders, right?
+
+**53:34**
+
+Because let's say if you have mult multiple team members working on in the same projects or let's say if you restart your computer that session might
+
+**53:41**
+
+be gone, right? And you actually want to revert back to a specific change that was done last week. Then that's really
+
+**53:47**
+
+where version control really comes in. And if you actually want to set up version controls, the simplest and the most cheapest way that you can do this
+
+**53:54**
+
+is using GitHub. So you can see here that I have navigated to github.com. It is free. Simply sign up with git and you
+
+**54:01**
+
+can be able to actually have accounts and keeping track of all your project here either privately or publicly. Okay.
+
+**54:07**
+
+So what you can do here is let's say if I were to take mine for example, right? So here you can see I have a project
+
+**54:12**
+
+created called loop maker. Yours could be you know Eric tech folder whichever project you create. You created a
+
+**54:19**
+
+repository here inside of GitHub. And you can see once you create a repository you can see let's say if I call it loop
+
+**54:24**
+
+maker right whatever project I have and you can see if I were to click on the commit section this is my entire commit
+
+**54:30**
+
+tree which is different versions that I have for this entire projects. So for each version here I give it a specific
+
+**54:36**
+
+name on exactly what I changed in that version. For example if we were go down this is the oldest version that we have.
+
+**54:43**
+
+So the oldest version here is scuffle the entire loop maker repository right and then the second version here you can
+
+**54:48**
+
+see is the terminal UX renderer and then the third one you can see it gives a specific name and if I want to click
+
+**54:54**
+
+into it to see exactly what change I made I can also see the changes here now how do you see this well the green
+
+**55:00**
+
+section here is the things that are being added and the red section which on the left is going to be the things that
+
+**55:05**
+
+are going to be deleted right now there's nothing that's deleted so far but if I were to pick a commit here to
+
+**55:11**
+
+show you example you can see I should be able to well these are all the changes
+
+**55:16**
+
+that are being added but usually if there's going to be a red section on the left that's usually the changes that are deleting well pretty much you can see
+
+**55:22**
+
+like this file right here these are the things that are being added this file right here these are the things that are being added right you can also see uh
+
+**55:29**
+
+the display the rich difference right so you can see the actual markdown here right so you can see the actual change
+
+**55:35**
+
+here inside of the difference uh furthermore if you want to actually creating different branches so the
+
+**55:40**
+
+current branch we're in here is main branch But if you want to actually create in different branches, you can also do so. So let's say if you have
+
+**55:46**
+
+like the one change that actually consistent in single branch. If you want to you know create a different change
+
+**55:51**
+
+like maybe like a beta version or like a version two of that you want to create a different branch you can also do that as well right and you can also committing
+
+**55:58**
+
+things on top of it. So the good thing about this is let's say if you tomorrow let's say if I want to you know uh want
+
+**56:04**
+
+to revert back to changes that are being worked on maybe like June 18th right if I were to scroll down maybe like there's
+
+**56:10**
+
+some changes that were done like uh many weeks ago then I can be able to copy the commit ID pass it to claw code say hey I
+
+**56:16**
+
+want to revert back to that specific version of [clears throat] that you know get commits right and simply that's how
+
+**56:22**
+
+you can be able to you know control the versions that you have in your current projects now let's try to set it up and
+
+**56:28**
+
+show you exactly how you can actually do is. So, currently I don't have any um folder or in this case a repository
+
+**56:33**
+
+inside of GitHub for this project yet. But let's say if I want to do create one, I'm just going to open a new terminal here and I'm going to just type
+
+**56:42**
+
+in claude uh and I'm going to commit in this case create a repository for this
+
+**56:47**
+
+entire folder. So, I'm going to say, hey, I want you to take a look at this entire folder here and I want you to
+
+**56:53**
+
+create a repository, a private repository here for this project. Um, and just going to commit the changes
+
+**56:59**
+
+here. Okay. So, I'm just going to tell Clawco here to create a repository. And you can think of repository here is kind
+
+**57:05**
+
+of like a project, right? Any project that you have, you want to create a project in your version control, that's going to be a repository. So, whatever
+
+**57:12**
+
+that we have right now with the current folder, we want to put that inside of a project in GitHub to add that as a
+
+**57:17**
+
+version control. So, let's try to take a look to see if it's actually able to do that. So, here you can see it's going to
+
+**57:22**
+
+take a look at the current folder first and then try to set up a project. Now, specifically, you can see I put it like
+
+**57:28**
+
+a private repository. You can actually change that to public if you want to. For example, inside of my GitHub
+
+**57:33**
+
+account, you can see if I were to go to my uh repository here called Loommaker,
+
+**57:38**
+
+there's actually this one you can see is public. So, if I were to click on my profile here and just going to go to repository, you can see I can select
+
+**57:44**
+
+public for the type for the repositories. And these are public that can be seen by anyone. So, that's
+
+**57:50**
+
+exactly what it means when creating a private repository. So basically just creating a repository that's inside of
+
+**57:56**
+
+GitHub here that's only seen by me. Okay. So currently it's just running some command here to create a repository. Let's wait for a bit until
+
+**58:02**
+
+it fully completes. Okay. So now you can see we have the repository here is fully completed. Right. So what we have
+
+**58:08**
+
+committed here you can see uh 133 files here in one initial commits. So the entire NexJS applications the images the
+
+**58:16**
+
+playrs for the evaluations and also the documentations. things that we I have
+
+**58:21**
+
+exclude here you can see is the existing ignore no modules the NexJS so like I
+
+**58:27**
+
+said before right those are the things that are not really relevant for our projects so those dot folders and also
+
+**58:33**
+
+no module here are not going to be relevant for every time we're going to you know deal with the project like
+
+**58:39**
+
+coding project here usually going to not commit that and you can see that if we were to look at the color for those fog
+
+**58:44**
+
+explore you can see these are all grayed out right and the ones that are committed are not grayed out. Okay, so
+
+**58:51**
+
+the grade out ones are be part of the get commits. So they will not be committed if there's any changes that
+
+**58:57**
+
+are inside of that folder. Okay, so that's exactly what it means. And you can see there's no MV file here or CQ
+
+**59:02**
+
+queries exist anywhere in the folder. So nothing sensitive went up. So oneup means basically like added onto the
+
+**59:09**
+
+version control tree, right? So nothing are being added into the version control because we don't want to commit any
+
+**59:14**
+
+sensitive information in the cloud, right? And one heads up here is that the default branch is master branch. So
+
+**59:20**
+
+that's what the git ignit give you uh locally. So you can also be able to you know rename this to main branch whatever
+
+**59:27**
+
+it is. But master branch basically means that this is the current branch that we're in and we only have this one
+
+**59:33**
+
+branch and that's the source of truth for all the versions that we have. Right? All the versions that we have is
+
+**59:38**
+
+stored inside of this master branch. Okay. So if I were to go to my repository here, I'm going to switch
+
+**59:44**
+
+over to private now. And now if I were to refresh here, okay, you can see we
+
+**59:50**
+
+have a repository called system design tier list. And if I were to click on this, you can see this is all the
+
+**59:56**
+
+changes that we have in the current repository here. Okay. So whatever that we have in the current folder is called
+
+**60:02**
+
+system design tier list. Okay. And you can see if I scroll down, there's our readme file which contains all the you
+
+**60:09**
+
+know project data that we have in our current projects. And furthermore, you can see all the skills that we have
+
+**60:15**
+
+created is all committed here. Okay. And if I want to see all the commits, right? Like I said, the uh the so far we have
+
+**60:22**
+
+only one commits, which means that we have only one version of our current projects, right? So if I were to see the
+
+**60:28**
+
+commits, you can see that was the initial commits that we added. So now let's just say we're going to make some changes, right? So let's say uh if I
+
+**60:34**
+
+want to delete this evaluation folder. All right, I'm going to delete this. You can see that inside of our uh source
+
+**60:41**
+
+control icon, you can see that there's seven changes that are changed, which means that there's actually seven things
+
+**60:46**
+
+that are, you know, uh actually being changed inside of our current folder. So, if I were to open this, you can see
+
+**60:52**
+
+that these are things that are being deleted. And what I can do here is I can manually just say, hey, you know, um
+
+**60:58**
+
+deleted the eval, which means that this is the commit message that we're going to commit onto this version, this new
+
+**61:04**
+
+version of this project. So if I were to stage all the changes, commit it and
+
+**61:09**
+
+sync the changes and what happened is that it's going to push that change onto the cloud right onto the GitHub here uh
+
+**61:17**
+
+that for this repository. So now if I were to refresh this you can see that we have a [snorts] new commit called
+
+**61:22**
+
+deleted eval okay and that delete eval here basically delete the entire eval folder that we just did. Okay and that's
+
+**61:29**
+
+the new version here. So now if I were to go to like code, you can see we no longer have that eval folder here in
+
+**61:36**
+
+that source of truth version. Okay. So that's exactly how you can add your version control system here inside of
+
+**61:41**
+
+your project. And like I said, the benefit of this is providing a complete historical records of all the
+
+**61:46**
+
+modifications and also you can have many user here to edit the files simultaneously without overwriting each
+
+**61:52**
+
+others. And if you actually want to add in more users, simply just going to go to the repositories that you have. Click
+
+**61:57**
+
+on settings here and you can see that there's a section called collaborators working adding more people here inside
+
+**62:02**
+
+of this repository where they can be able to commit things onto the same repository. And also you can be able to
+
+**62:07**
+
+restore all the changes that happened in the past. Okay, so that's basically the version control here in a nutshell. And
+
+**62:12**
+
+just a couple more things that you can see here that inside of the source control for VS Code, there's also the commit tree here inside of here. So
+
+**62:19**
+
+let's say if I want to revert this back this change copy the commit ID just pass it to claude say hey I want to revert
+
+**62:25**
+
+this change that we did here can you do that right let's say if there's so many changes in your git version controls you
+
+**62:30**
+
+can just copy that ID paste it to cla say hey I want to revert back to the change and claw code is going to revert
+
+**62:36**
+
+back to change based on whatever commit ID that you specify okay so that's exactly how you can be able to manage your version controls inside of your
+
+**62:42**
+
+claw code all right so by now you pretty much have all the basics down for how to use claw code the next thing we're going

@@ -1,0 +1,507 @@
+{
+  "kill1": {
+    "esperado": {
+      "FULL": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+      "CUT": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+      "EVIDENCE": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+    },
+    "real": {
+      "FULL": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+      "CUT": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+      "EVIDENCE": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+    },
+    "ok": true
+  },
+  "identity": {
+    "local_ids_total": 100,
+    "local_ids_colidindo_nus": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+    ],
+    "colisoes_nuas": 44,
+    "identidades_qualificadas_distintas": 100,
+    "pkg_hash_A": "31df720fa727867912dfe16b6c7c36fa9d10524b4f99d4482919f3276bf33ab2",
+    "pkg_hash_B": "40a786072bd3faac832be876a62d082c17995ca5cd4b3e393041fb0d74e57f8e",
+    "pkg_hashes_distintos": true,
+    "referencias_cross_package_nuas": 0,
+    "ok": true
+  },
+  "provenance": {
+    "claims": 253,
+    "resolve": 253,
+    "quebradas": [],
+    "pct": 100.0,
+    "ok": true
+  },
+  "claims": {
+    "RUN-1": {
+      "raw_propostas": 89,
+      "rejeitadas_antes_do_selo": 0,
+      "seladas": 89,
+      "seladas_entailed": 89,
+      "motivos_de_rejeicao": {},
+      "por_pacote": {
+        "A": {
+          "raw": 41,
+          "sealed": 41
+        },
+        "B": {
+          "raw": 48,
+          "sealed": 48
+        }
+      }
+    },
+    "RUN-2": {
+      "raw_propostas": 83,
+      "rejeitadas_antes_do_selo": 0,
+      "seladas": 83,
+      "seladas_entailed": 83,
+      "motivos_de_rejeicao": {},
+      "por_pacote": {
+        "A": {
+          "raw": 41,
+          "sealed": 41
+        },
+        "B": {
+          "raw": 42,
+          "sealed": 42
+        }
+      }
+    },
+    "RUN-3": {
+      "raw_propostas": 81,
+      "rejeitadas_antes_do_selo": 0,
+      "seladas": 81,
+      "seladas_entailed": 81,
+      "motivos_de_rejeicao": {},
+      "por_pacote": {
+        "A": {
+          "raw": 36,
+          "sealed": 36
+        },
+        "B": {
+          "raw": 45,
+          "sealed": 45
+        }
+      }
+    }
+  },
+  "kill3": {
+    "seladas_totais": 253,
+    "seladas_entailed": 253,
+    "ok": true
+  },
+  "variance": {
+    "seladas_por_run": {
+      "RUN-1": 89,
+      "RUN-2": 83,
+      "RUN-3": 81
+    },
+    "raw_por_run": {
+      "RUN-1": 89,
+      "RUN-2": 83,
+      "RUN-3": 81
+    },
+    "max": 89,
+    "min": 81,
+    "razao_max_min": 1.0987654320987654,
+    "teto_medido": 1.5,
+    "ok": true,
+    "sobreposicao": {
+      "RUN-1∩RUN-2": 8,
+      "RUN-1∩RUN-3": 13,
+      "RUN-2∩RUN-3": 5
+    },
+    "nucleo_comum_3_runs": 2
+  },
+  "workflow": {
+    "por_run": {
+      "RUN-1": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      },
+      "RUN-2": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      },
+      "RUN-3": {
+        "A": {
+          "struct_source": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "struct_fusion": "cecfc47162577ca75fe67a07c16e62c60d7a2fe4a2a048a315f2bd324f989278",
+          "preservado": true,
+          "workflows": 6,
+          "steps": 19
+        },
+        "B": {
+          "struct_source": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "struct_fusion": "ff95e7c0fa9cb08156e29cf898b05128795d018714a56f2f53ee909a293993a8",
+          "preservado": true,
+          "workflows": 4,
+          "steps": 23
+        }
+      }
+    },
+    "ok": true
+  },
+  "blocking": {
+    "por_run": {
+      "RUN-1": {
+        "possible": 1968,
+        "survived": 158,
+        "reduction_pct": 91.97154471544715,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": 1,
+            "survived": false
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": 1,
+            "survived": false
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      },
+      "RUN-2": {
+        "possible": 1722,
+        "survived": 115,
+        "reduction_pct": 93.32171893147503,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": 1,
+            "survived": false
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": 1,
+            "survived": false
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      },
+      "RUN-3": {
+        "possible": 1620,
+        "survived": 137,
+        "reduction_pct": 91.5432098765432,
+        "controls": [
+          {
+            "control_id": "BLK-CTRL-01",
+            "shared": 1,
+            "survived": false
+          },
+          {
+            "control_id": "BLK-CTRL-02",
+            "shared": 1,
+            "survived": false
+          }
+        ],
+        "rule": "shared_content_tokens >= 2"
+      }
+    },
+    "controles_ok": false,
+    "regra": "shared_content_tokens >= 2",
+    "ok": false
+  },
+  "isolation": {
+    "por_run": {
+      "RUN-1": {
+        "exclusivos_A": 189,
+        "exclusivos_B": 221,
+        "violacoes": [
+          {
+            "claim_id": "RUN-1-A-CL-0041",
+            "pacote": "A",
+            "tokens_exclusivos_do_outro": [
+              "code."
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0003",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0006",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0009",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0010",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0036",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0037",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0040",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0043",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "project."
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0044",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-1-B-CL-0045",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          }
+        ],
+        "falsa_atribuicao": 11
+      },
+      "RUN-2": {
+        "exclusivos_A": 189,
+        "exclusivos_B": 221,
+        "violacoes": [
+          {
+            "claim_id": "RUN-2-B-CL-0003",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-2-B-CL-0006",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-2-B-CL-0009",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-2-B-CL-0010",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-2-B-CL-0033",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-2-B-CL-0037",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          }
+        ],
+        "falsa_atribuicao": 6
+      },
+      "RUN-3": {
+        "exclusivos_A": 189,
+        "exclusivos_B": 221,
+        "violacoes": [
+          {
+            "claim_id": "RUN-3-A-CL-0036",
+            "pacote": "A",
+            "tokens_exclusivos_do_outro": [
+              "code."
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0003",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0006",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0009",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0010",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0032",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0033",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0035",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0038",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0039",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          },
+          {
+            "claim_id": "RUN-3-B-CL-0040",
+            "pacote": "B",
+            "tokens_exclusivos_do_outro": [
+              "claude"
+            ]
+          }
+        ],
+        "falsa_atribuicao": 11
+      }
+    },
+    "ok": false
+  },
+  "relations": {
+    "RUN-1": {
+      "identical": 0,
+      "pares_avaliados": 158
+    },
+    "RUN-2": {
+      "identical": 0,
+      "pares_avaliados": 115
+    },
+    "RUN-3": {
+      "identical": 0,
+      "pares_avaliados": 137
+    }
+  },
+  "trace": {
+    "chamadas_registradas": 9,
+    "chamadas_esperadas": 9,
+    "hard_cap": 24,
+    "dentro_do_cap": true,
+    "tokens_input": 73525,
+    "tokens_output": 34385,
+    "modelos_resolvidos": [
+      "claude-opus-5"
+    ],
+    "particoes": [
+      "1 chamada por (source,run); todas as 44 evidencias do pacote A",
+      "1 chamada por (source,run); todas as 56 evidencias do pacote B",
+      "1 chamada por run; TODAS as 81 claims candidatas",
+      "1 chamada por run; TODAS as 83 claims candidatas",
+      "1 chamada por run; TODAS as 89 claims candidatas"
+    ],
+    "prompt_versions": [
+      "ms000b-claimgen-v1",
+      "ms000b-entail-v1"
+    ],
+    "campos_completos": true,
+    "ok": true,
+    "config_claimgen_distintas": 2,
+    "mesma_config_entre_runs": true
+  },
+  "gates": {
+    "KILL-1 camada selada intacta": true,
+    "identidade": true,
+    "proveniencia 100%": true,
+    "KILL-3 sealed 100% ENTAILED": true,
+    "KILL-2 variancia <= 1,5x": true,
+    "workflow preservado": true,
+    "controles de blocagem": false,
+    "isolamento": false,
+    "COMPILE-TRACE completo": true,
+    "config identica entre runs": true
+  },
+  "classificacao": "PILOT_MS_000B_FAIL"
+}

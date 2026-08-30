@@ -1,0 +1,1338 @@
+{
+  "A": {
+    "workflow_candidates": [
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0035",
+        "name": "set up version controls using GitHub",
+        "anchor_evidence_id": "EV-0293",
+        "evidence_ids": [
+          "EV-0293"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0104",
+            "order_key": 3234,
+            "name": "Criar conta no GitHub",
+            "action": "Navegar até github.com e fazer sign up para obter uma conta gratuita que permite acompanhar todos os projetos de forma privada ou pública",
+            "required_inputs": [
+              "acesso a github.com"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0294"
+            ]
+          },
+          {
+            "step_id": "S-0105",
+            "order_key": 3247,
+            "name": "Criar repositório para o projeto",
+            "action": "Para cada projeto criado, criar um repositório correspondente dentro do GitHub (ex.: repositório 'loop maker')",
+            "required_inputs": [
+              "conta GitHub",
+              "nome do projeto"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0295"
+            ]
+          },
+          {
+            "step_id": "S-0106",
+            "order_key": 3264,
+            "name": "Abrir a árvore de commits",
+            "action": "Clicar na seção de commits do repositório para visualizar a árvore de commits inteira, que representa as diferentes versões do projeto",
+            "required_inputs": [
+              "repositório no GitHub"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0296"
+            ]
+          },
+          {
+            "step_id": "S-0107",
+            "order_key": 3288,
+            "name": "Inspecionar a mudança de um commit",
+            "action": "Clicar no commit desejado para ver exatamente qual mudança foi feita naquela versão",
+            "required_inputs": [
+              "commit selecionado na árvore de commits"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0299"
+            ]
+          },
+          {
+            "step_id": "S-0108",
+            "order_key": 3294,
+            "name": "Ler o diff por cores",
+            "action": "Interpretar o diff: a seção verde indica o que está sendo adicionado; a seção vermelha, à esquerda, indica o que está sendo deletado",
+            "required_inputs": [
+              "diff do commit aberto"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0300"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0036",
+        "name": "display the rich difference",
+        "anchor_evidence_id": "EV-0301",
+        "evidence_ids": [
+          "EV-0301"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0109",
+            "order_key": 3322,
+            "name": "Ativar 'display the rich difference'",
+            "action": "Usar a opção 'display the rich difference' do GitHub para renderizar o markdown real e ver a mudança renderizada dentro do diff",
+            "required_inputs": [
+              "diff do commit aberto"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0301"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0037",
+        "name": "revert back to that specific version of the git commit",
+        "anchor_evidence_id": "EV-0304",
+        "evidence_ids": [
+          "EV-0304"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0110",
+            "order_key": 3358,
+            "name": "Reverter para versão específica via commit ID",
+            "action": "Rolar até o commit da data desejada, copiar o commit ID e passá-lo ao Claude Code pedindo para reverter para aquela versão específica do git commit",
+            "required_inputs": [
+              "data ou versão alvo",
+              "commit ID copiado do GitHub",
+              "sessão do Claude Code"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0304"
+            ]
+          },
+          {
+            "step_id": "S-0111",
+            "order_key": 3393,
+            "name": "Abrir terminal e invocar o Claude",
+            "action": "Abrir um novo terminal e digitar 'claude'",
+            "required_inputs": [
+              "terminal",
+              "CLI claude"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0305"
+            ]
+          },
+          {
+            "step_id": "S-0112",
+            "order_key": 3393,
+            "name": "Solicitar criação do repositório e commit",
+            "action": "Pedir ao Claude: analisar a pasta inteira, criar um repositório privado para o projeto e commitar as mudanças",
+            "required_inputs": [
+              "pasta do projeto"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0306",
+              "EV-0305",
+              "EV-0308"
+            ]
+          },
+          {
+            "step_id": "S-0113",
+            "order_key": 3437,
+            "name": "Inspeção da pasta antes do setup",
+            "action": "Deixar o Claude primeiro analisar a pasta atual e só então configurar o projeto",
+            "required_inputs": [
+              "pasta atual"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0309"
+            ]
+          },
+          {
+            "step_id": "S-0114",
+            "order_key": 3482,
+            "name": "Revisar conteúdo do commit inicial",
+            "action": "Verificar os arquivos incluídos no commit inicial (aplicação, imagens, evals, documentação) e os itens excluídos pelo gitignore",
+            "required_inputs": [
+              "saída do commit inicial",
+              "file explorer"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0312",
+              "EV-0313",
+              "EV-0315"
+            ]
+          },
+          {
+            "step_id": "S-0115",
+            "order_key": 3537,
+            "name": "Verificar ausência de arquivos sensíveis",
+            "action": "Confirmar que nenhum arquivo .env nem queries SQL existem no que foi enviado ao controle de versão",
+            "required_inputs": [
+              "listagem do commit/pasta"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0316",
+              "EV-0317"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0038",
+        "name": "git init (criação local da branch padrão master)",
+        "anchor_evidence_id": "EV-0319",
+        "evidence_ids": [
+          "EV-0319"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0116",
+            "order_key": 3578,
+            "name": "Confirmar repositório no GitHub",
+            "action": "Ir aos repositórios no GitHub, alternar o filtro para 'private', recarregar a página e confirmar que o repositório aparece",
+            "required_inputs": [
+              "conta GitHub"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0321"
+            ]
+          },
+          {
+            "step_id": "S-0117",
+            "order_key": 3602,
+            "name": "Validar conteúdo publicado",
+            "action": "Rolar a página do repositório e verificar que o readme com os dados do projeto e todas as skills criadas estão commitados",
+            "required_inputs": [
+              "página do repositório"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0322"
+            ]
+          },
+          {
+            "step_id": "S-0118",
+            "order_key": 3634,
+            "name": "Inspecionar mudanças no painel de source control",
+            "action": "Abrir o ícone de source control no VS Code e verificar a contagem de arquivos alterados; expandir a lista para ver os arquivos, inclusive os marcados como deletados quando uma pasta foi removida",
+            "required_inputs": [
+              "Projeto aberto no VS Code com repositório sob controle de versão",
+              "Mudanças locais realizadas"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0324"
+            ]
+          },
+          {
+            "step_id": "S-0119",
+            "order_key": 3652,
+            "name": "Escrever mensagem de commit",
+            "action": "Digitar manualmente a mensagem de commit descrevendo a mudança que será registrada nessa nova versão do projeto",
+            "required_inputs": [
+              "Descrição da mudança feita"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0325"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0039",
+        "name": "stage all the changes, commit e sync the changes",
+        "anchor_evidence_id": "EV-0326",
+        "evidence_ids": [
+          "EV-0326"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0120",
+            "order_key": 3664,
+            "name": "Stage, commit e sync das mudanças",
+            "action": "Executar no VS Code: stage all the changes, commit e sync the changes, empurrando a alteração para o repositório no GitHub (cloud)",
+            "required_inputs": [
+              "Mudanças locais listadas no source control",
+              "Mensagem de commit escrita"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0326"
+            ]
+          },
+          {
+            "step_id": "S-0121",
+            "order_key": 3677,
+            "name": "Verificar commit no GitHub",
+            "action": "Atualizar (refresh) a página do repositório no GitHub e confirmar que o novo commit aparece com a mensagem escrita; abrir 'Code' e confirmar que a branch principal (source of truth) já reflete a mudança (ex: pasta deletada não mais presente)",
+            "required_inputs": [
+              "Sync das mudanças concluído",
+              "Acesso à página do repositório no GitHub"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0327"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0040",
+        "name": "Collaborators (Settings do repositório)",
+        "anchor_evidence_id": "EV-0329",
+        "evidence_ids": [
+          "EV-0329"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0122",
+            "order_key": 3732,
+            "name": "Obter commit ID na árvore de commits",
+            "action": "Abrir o painel de source control do VS Code, localizar a árvore de commits (commit tree) e copiar o commit ID da versão desejada",
+            "required_inputs": [
+              "Painel de source control do VS Code com histórico de commits"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0331",
+              "EV-0332"
+            ]
+          }
+        ]
+      }
+    ],
+    "rule_candidates": [
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0095",
+        "name": "Não confiar em rewind de sessão como mecanismo de reversão",
+        "trigger": "Precisa desfazer mudanças feitas em um projeto com Claude Code",
+        "condition": "O único mecanismo disponível é o rewind da conversa/sessão; a sessão pode desaparecer ao reiniciar o computador",
+        "action": "Tratar o rewind de sessão como insuficiente e adotar controle de versão externo à sessão",
+        "do_not": [
+          "Não depender da sessão do Claude Code para reverter mudanças de longo prazo"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0290",
+          "EV-0291"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0096",
+        "name": "Adotar controle de versão quando há time ou reversão histórica",
+        "trigger": "Múltiplos membros de time trabalham no mesmo projeto OU se deseja reverter para uma mudança específica feita em semanas anteriores",
+        "condition": "UNDEFINED",
+        "action": "Configurar controle de versão para o projeto",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0292"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0097",
+        "name": "Escolher GitHub como ferramenta de controle de versão",
+        "trigger": "Decisão sobre como configurar controle de versão",
+        "condition": "Busca-se a forma mais simples e mais barata",
+        "action": "Usar GitHub (gratuito) como plataforma de controle de versão",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0293",
+          "EV-0294"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0098",
+        "name": "Nomear cada commit pela mudança exata",
+        "trigger": "Criação de uma nova versão (commit) no repositório",
+        "condition": "UNDEFINED",
+        "action": "Dar ao commit um nome específico descrevendo exatamente o que foi alterado naquela versão",
+        "do_not": [
+          "Não usar nomes de versão que não descrevam a mudança feita"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0297"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0099",
+        "name": "Usar branch separada para variações do projeto",
+        "trigger": "Deseja-se criar uma mudança diferente, como uma versão beta ou uma versão dois",
+        "condition": "O trabalho atual está na branch main",
+        "action": "Criar uma branch diferente e fazer commits sobre ela",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0302",
+          "EV-0303"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0100",
+        "name": "Escolher visibilidade do repositório na criação",
+        "trigger": "Ao criar um repositório para um projeto",
+        "condition": "Se o conteúdo deve ser visto apenas pelo dono, escolher privado; se pode ser visto por qualquer pessoa, escolher público",
+        "action": "Especificar explicitamente no prompt/criação a visibilidade desejada (private ou public)",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0310",
+          "EV-0311"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0101",
+        "name": "Não commitar node_modules nem pastas dot",
+        "trigger": "Ao commitar um projeto de código",
+        "condition": "Sempre que existirem node_modules ou pastas dot geradas (ex.: .next do Next.js)",
+        "action": "Manter esses itens excluídos via gitignore, pois não são relevantes para o projeto",
+        "do_not": [
+          "Commitar node_modules",
+          "Commitar as pastas dot geradas pelo framework"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0313",
+          "EV-0314"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0103",
+        "name": "Ler estado de ignore pelo file explorer",
+        "trigger": "Ao inspecionar quais arquivos entrarão no commit",
+        "condition": "Arquivos/pastas exibidos acinzentados no file explorer do editor",
+        "action": "Interpretar acinzentado como ignorado pelo git (não será commitado) e não acinzentado como parte do commit",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0315"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0102",
+        "name": "Não commitar informação sensível",
+        "trigger": "Antes/durante o envio de conteúdo ao controle de versão",
+        "condition": "Se houver arquivos com informação sensível (ex.: .env, queries SQL)",
+        "action": "Não adicionar esses arquivos ao controle de versão",
+        "do_not": [
+          "Commitar informação sensível na nuvem"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0317",
+          "EV-0316"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0104",
+        "name": "Renomear branch padrão (opcional)",
+        "trigger": "Após git init, quando a branch padrão criada localmente é master",
+        "condition": "Se desejado usar 'main' como nome da branch",
+        "action": "Renomear a branch master para main",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0319"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0105",
+        "name": "Escrever mensagem de commit descritiva manualmente",
+        "trigger": "Há mudanças a serem registradas em uma nova versão do projeto",
+        "condition": "UNDEFINED",
+        "action": "Escrever manualmente a mensagem de commit descrevendo a mudança feita (ex: 'deleted the eval'), pois essa mensagem é o que será commitado nessa nova versão do projeto",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0325"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0106",
+        "name": "Adicionar colaboradores para edição simultânea",
+        "trigger": "É necessário permitir que mais usuários commitem no mesmo repositório",
+        "condition": "UNDEFINED",
+        "action": "Abrir o repositório no GitHub, ir em Settings e usar a seção 'Collaborators' para adicionar as pessoas que poderão commitar no mesmo repositório",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0329",
+          "EV-0328"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0107",
+        "name": "Reverter mudança via commit ID no Claude Code",
+        "trigger": "Deseja-se reverter uma mudança já registrada no controle de versão",
+        "condition": "Especialmente aplicável quando há muitas mudanças no controle de versão git, pois o commit ID identifica exatamente o ponto a reverter",
+        "action": "Copiar o commit ID da árvore de commits do painel de source control do VS Code e passá-lo ao Claude Code pedindo para reverter aquela mudança; o Claude Code reverte com base no commit ID especificado",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0332",
+          "EV-0333",
+          "EV-0331",
+          "EV-0330"
+        ]
+      }
+    ],
+    "anti_pattern_candidates": [
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0095",
+        "do_not": [
+          "Não depender da sessão do Claude Code para reverter mudanças de longo prazo"
+        ],
+        "evidence_ids": [
+          "EV-0290",
+          "EV-0291"
+        ]
+      },
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0098",
+        "do_not": [
+          "Não usar nomes de versão que não descrevam a mudança feita"
+        ],
+        "evidence_ids": [
+          "EV-0297"
+        ]
+      },
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0101",
+        "do_not": [
+          "Commitar node_modules",
+          "Commitar as pastas dot geradas pelo framework"
+        ],
+        "evidence_ids": [
+          "EV-0313",
+          "EV-0314"
+        ]
+      },
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0102",
+        "do_not": [
+          "Commitar informação sensível na nuvem"
+        ],
+        "evidence_ids": [
+          "EV-0317",
+          "EV-0316"
+        ]
+      }
+    ]
+  },
+  "B": {
+    "workflow_candidates": [
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0041",
+        "name": "MCP (Model Context Protocol)",
+        "anchor_evidence_id": "EV-0339",
+        "evidence_ids": [
+          "EV-0339"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0124",
+            "order_key": 3955,
+            "name": "Verificar quais interfaces o app de terceiro oferece",
+            "action": "Checar se a aplicação alvo disponibiliza CLI, MCP ou ambos, para decidir por qual interface conectar o modelo de linguagem (ex.: Stripe tem CLI e MCPs; Google lançou seu CLI; Vercel tem MCP e CLI)",
+            "required_inputs": [
+              "aplicação de terceiro alvo"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0350",
+              "EV-0351",
+              "EV-0354"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0042",
+        "name": "How to use the GoHighLevel MCP (seguir documentação para conectar MCP ao modelo)",
+        "anchor_evidence_id": "EV-0352",
+        "evidence_ids": [
+          "EV-0352"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0123",
+            "order_key": 3972,
+            "name": "Conectar MCP de terceiro seguindo a documentação do provedor",
+            "action": "Localizar o MCP disponibilizado pelo provedor (ex.: GoHighLevel) e seguir a documentação oficial de uso para conectar o MCP ao modelo de linguagem",
+            "required_inputs": [
+              "MCP disponibilizado pelo provedor",
+              "documentação de uso do MCP",
+              "modelo de linguagem a conectar"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0352"
+            ]
+          },
+          {
+            "step_id": "S-0125",
+            "order_key": 4041,
+            "name": "Limpar a sessão atual",
+            "action": "Limpar a sessão atual antes de fazer a pergunta sobre CLI/MCP",
+            "required_inputs": [
+              "sessão ativa do agente"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0357"
+            ]
+          },
+          {
+            "step_id": "S-0126",
+            "order_key": 4041,
+            "name": "Descobrir suporte a deploy no ambiente",
+            "action": "Perguntar ao agente se ele tem Vercel CLI ou MCP no sistema atual onde possa fazer deploy da aplicação no Vercel",
+            "required_inputs": [
+              "aplicação atual",
+              "sessão limpa"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0356"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0044",
+        "name": "Vercel MCP",
+        "anchor_evidence_id": "EV-0358",
+        "evidence_ids": [
+          "EV-0358"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0127",
+            "order_key": 4054,
+            "name": "Fornecer documentação ao Claude Code",
+            "action": "Copiar a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI para o Claude Code",
+            "required_inputs": [
+              "documentação Vercel MCP ou link da documentação Vercel CLI"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0358"
+            ]
+          }
+        ]
+      },
+      {
+        "candidate_type": "WORKFLOW_CANDIDATE",
+        "local_id": "WF-0045",
+        "name": "MCP server",
+        "anchor_evidence_id": "EV-0367",
+        "evidence_ids": [
+          "EV-0367"
+        ],
+        "steps": [
+          {
+            "step_id": "S-0128",
+            "order_key": 4176,
+            "name": "Conectar MCP e logar na Vercel",
+            "action": "Garantir a conexão do MCP na máquina local (ou colar o link da documentação no agente de código para que ele conecte) e, depois de conectado, fazer login na conta da Vercel",
+            "required_inputs": [
+              "MCP conectado na máquina local",
+              "link da documentação do MCP",
+              "conta da Vercel"
+            ],
+            "missing_input_action": "Copiar o link da documentação, colar no agente de código e deixar que ele faça a conexão",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0373",
+              "EV-0374",
+              "EV-0375"
+            ]
+          },
+          {
+            "step_id": "S-0129",
+            "order_key": 4189,
+            "name": "Pedir o deploy ao agente",
+            "action": "Enviar ao agente o prompt pedindo para criar um projeto novo na conta da Vercel usando a ferramenta de CLI para fazer o deploy da aplicação; com o MCP conectado o deploy é concluído em poucos segundos",
+            "required_inputs": [
+              "MCP conectado",
+              "conta da Vercel logada",
+              "aplicação a ser publicada"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "Agente executa o deploy via ferramenta de CLI a pedido do usuário",
+            "evidence_ids": [
+              "EV-0376",
+              "EV-0377"
+            ]
+          },
+          {
+            "step_id": "S-0130",
+            "order_key": 4207,
+            "name": "Verificar o deploy no navegador",
+            "action": "Copiar o link gerado, abri-lo no navegador para confirmar que a aplicação está publicada e acessível, e interagir com ela (por exemplo, usar e resetar) para confirmar que está utilizável",
+            "required_inputs": [
+              "link gerado pelo deploy"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0378",
+              "EV-0379"
+            ]
+          },
+          {
+            "step_id": "S-0131",
+            "order_key": 4230,
+            "name": "Confirmar no painel da plataforma",
+            "action": "Abrir o painel da plataforma de hospedagem como segunda confirmação, verificando que o projeto aparece e o momento do deploy",
+            "required_inputs": [
+              "acesso ao painel da plataforma de hospedagem"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0380"
+            ]
+          },
+          {
+            "step_id": "S-0132",
+            "order_key": 4236,
+            "name": "Remover o projeto",
+            "action": "Remover o projeto pelo painel (configurações do projeto → 'delete project') ou instruir o agente em linguagem natural, por exemplo 'can you delete this project right now', para que ele execute a deleção",
+            "required_inputs": [
+              "projeto alvo identificado",
+              "acesso ao painel ou agente de código conectado"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "Agente tem a capacidade de executar a deleção quando instruído",
+            "evidence_ids": [
+              "EV-0381",
+              "EV-0382",
+              "EV-0383"
+            ]
+          },
+          {
+            "step_id": "S-0133",
+            "order_key": 4299,
+            "name": "Confirmar a remoção pelo link antigo",
+            "action": "Navegar até o link antigo do deploy; o retorno esperado é 'deploy not found' / 404",
+            "required_inputs": [
+              "link antigo do deploy"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0388"
+            ]
+          },
+          {
+            "step_id": "S-0134",
+            "order_key": 4399,
+            "name": "Instalar o VS Code",
+            "action": "Instalar o VS Code como base do fluxo inicial de uso do Claude Code",
+            "required_inputs": [
+              "ambiente onde instalar o VS Code"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0397"
+            ]
+          },
+          {
+            "step_id": "S-0135",
+            "order_key": 4399,
+            "name": "Abrir o terminal",
+            "action": "Abrir o terminal dentro do ambiente instalado",
+            "required_inputs": [
+              "VS Code instalado"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0397"
+            ]
+          },
+          {
+            "step_id": "S-0136",
+            "order_key": 4399,
+            "name": "Iniciar o Claude Code",
+            "action": "Digitar 'claude' no terminal e começar a usar as funcionalidades oferecidas",
+            "required_inputs": [
+              "terminal aberto"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0397"
+            ]
+          },
+          {
+            "step_id": "S-0137",
+            "order_key": 4491,
+            "name": "Rodar Claude Code de graça trocando o modelo",
+            "action": "Manter Claude Code como framework e trocar o modelo que ele chama por OpenRouter ou modelos locais usados dentro do Claude Code",
+            "required_inputs": [
+              "Claude Code instalado como framework",
+              "acesso a OpenRouter ou a modelos locais"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0405"
+            ]
+          },
+          {
+            "step_id": "S-0138",
+            "order_key": 4569,
+            "name": "Avaliar perfil de uso e adequação do plano",
+            "action": "Classificar o próprio uso como iniciante/aprendizado ou uso diário para decidir se o plano de $20 basta",
+            "required_inputs": [
+              "frequência de uso pretendida"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0414",
+              "EV-0415"
+            ]
+          },
+          {
+            "step_id": "S-0139",
+            "order_key": 4592,
+            "name": "Escolher opção de contenção de custo",
+            "action": "Escolher entre as duas opções para permanecer no orçamento sem upgrade: (1) rodar modelo local, (2) conectar Claude Code ao OpenRouter",
+            "required_inputs": [
+              "capacidade do computador",
+              "acesso ao OpenRouter"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0418",
+              "EV-0419",
+              "EV-0420"
+            ]
+          },
+          {
+            "step_id": "S-0140",
+            "order_key": 4604,
+            "name": "Conectar Claude Code ao OpenRouter",
+            "action": "Conectar o Claude Code ao OpenRouter para acessar modelos alternativos baratos e potentes",
+            "required_inputs": [
+              "conta/acesso OpenRouter"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0420"
+            ]
+          },
+          {
+            "step_id": "S-0141",
+            "order_key": 4611,
+            "name": "Substituir modelos Anthropic por modelos de terceiros",
+            "action": "Mapear substituições de modelo: substituir Sonnet por modelo DeepSeek e Opus por outro modelo de terceiros (ex.: GLM ou Grok) encontrado online",
+            "required_inputs": [
+              "lista de modelos disponíveis no OpenRouter"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0421",
+              "EV-0422",
+              "EV-0423"
+            ]
+          },
+          {
+            "step_id": "S-0142",
+            "order_key": 4648,
+            "name": "Consultar material complementar de economia de uso",
+            "action": "Assistir ao vídeo do autor com dicas de como economizar uso/tokens no Claude Code",
+            "required_inputs": [
+              "link do vídeo indicado"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0425"
+            ]
+          },
+          {
+            "step_id": "S-0143",
+            "order_key": 4697,
+            "name": "Rever a seção de permissões",
+            "action": "Reassistir a seção de permissões do curso para endereçar a segurança de execução na própria máquina",
+            "required_inputs": [
+              "seção de permissões do curso"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0430"
+            ]
+          },
+          {
+            "step_id": "S-0144",
+            "order_key": 4697,
+            "name": "Selecionar entre os modos de permissão disponíveis",
+            "action": "Considerar os quatro ou cinco modos de permissão distintos e definir o modo correto para a execução",
+            "required_inputs": [
+              "conjunto de modos de permissão (quatro ou cinco)"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0431",
+              "EV-0432"
+            ]
+          },
+          {
+            "step_id": "S-0145",
+            "order_key": 4735,
+            "name": "Iniciar Claude Code via terminal do VS Code",
+            "action": "Abrir o VS Code e usar o terminal integrado do VS Code para iniciar o Claude Code",
+            "required_inputs": [
+              "VS Code instalado",
+              "Terminal do VS Code"
+            ],
+            "missing_input_action": "UNDEFINED",
+            "iteration_limit": "UNDEFINED",
+            "autonomy": "UNDEFINED",
+            "evidence_ids": [
+              "EV-0435"
+            ]
+          }
+        ]
+      }
+    ],
+    "rule_candidates": [
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0110",
+        "name": "Priorizar ferramentas com processos tediosos de múltiplos cliques",
+        "trigger": "Seleção de qual ferramenta do dia a dia conectar ao agente",
+        "condition": "O processo na ferramenta exige clicar por diversos passos para chegar ao resultado desejado",
+        "action": "Conectar essa ferramenta ao Claude Code para automatizar o processo tedioso",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0335",
+          "EV-0334"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0108",
+        "name": "Verificar se a ferramenta já vem por padrão antes de instalar",
+        "trigger": "Necessidade de que o Claude Code opere uma ferramenta externa",
+        "condition": "A ferramenta não vem por padrão com o Claude Code (GitHub vem por padrão para commits, criação de repositórios e gestão de branches)",
+        "action": "Instalar e adicionar a ferramenta ao Claude Code via protocolo MCP; se for GitHub, usar a capacidade já disponível por padrão",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0336",
+          "EV-0337",
+          "EV-0338"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0109",
+        "name": "Usar MCP em vez de código customizado para integração",
+        "trigger": "A IA precisa acessar serviços externos ou dados (Google Drive, GitHub, banco de dados local, web)",
+        "condition": "A integração seria feita por script/código customizado escrito pelo desenvolvedor",
+        "action": "Usar MCP como padrão de integração, com cliente MCP (aplicação de IA com que você conversa, como o app desktop do Claude ou agentes do Claude Code) e servidor MCP (programa leve que lê arquivos locais, acessa banco de dados ou busca dados na web)",
+        "do_not": [
+          "Escrever código/script customizado para cada serviço quando MCP pode padronizar a integração"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0342",
+          "EV-0343",
+          "EV-0344"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0111",
+        "name": "Conectar serviços externos via servidor MCP",
+        "trigger": "Desejo de que a IA opere um software/app usado no dia a dia (Stripe, PayPal, Slack, Jira)",
+        "condition": "Existe servidor MCP capaz de conectar ao serviço",
+        "action": "Conectar o serviço através de servidor MCP para que a IA o utilize",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0345"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0112",
+        "name": "Escolher MCP ou CLI indiferentemente para dar controle de ferramentas ao agente",
+        "trigger": "Necessidade de permitir que um agente de IA chame uma aplicação de terceiros em nosso nome",
+        "condition": "A aplicação oferece MCP ou ferramenta CLI (ambos são tratados como equivalentes para esse fim)",
+        "action": "Conectar o agente via MCP ou via ferramenta CLI, pois não importa qual dos dois seja usado — ambos são ferramentas que permitem ao agente chamar aplicações de terceiros",
+        "do_not": [
+          "Não assumir que MCP é a única forma de dar controle de ferramentas ao agente"
+        ],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0346",
+          "EV-0349",
+          "EV-0355"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0113",
+        "name": "Usar CLI como interface de operação do agente sobre apps e serviços",
+        "trigger": "O app ou serviço de terceiros expõe uma ferramenta CLI",
+        "condition": "UNDEFINED",
+        "action": "Fazer o agente de IA interagir com o app/serviço pelo CLI, do mesmo modo que um humano faria no terminal: abrir o terminal, digitar o texto, rodar o programa ou script",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0347",
+          "EV-0348"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0114",
+        "name": "Preferir MCP quando há medo de rodar comandos no terminal (caso Vercel)",
+        "trigger": "Usuário faz deploy da aplicação na Vercel e tem medo de rodar comandos no terminal",
+        "condition": "O provedor oferece MCP (Vercel oferece MCP e também CLI)",
+        "action": "Usar o MCP da Vercel para que o modelo de linguagem faça o deploy da aplicação; alternativamente conectar o modelo à Vercel pelo terminal via ferramenta CLI",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0353",
+          "EV-0354"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0115",
+        "name": "Ambiente sem CLI/MCP disponível",
+        "trigger": "Agente responde que não possui Vercel CLI nem MCP no sistema atual",
+        "condition": "Ausência de CLI ou MCP no ambiente",
+        "action": "Copiar para o Claude Code a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0358"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0116",
+        "name": "Priorizar economia de tokens",
+        "trigger": "Objetivo declarado é economizar tokens",
+        "condition": "Prioridade em eficiência de tokens",
+        "action": "Usar ferramenta CLI",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0362",
+          "EV-0361"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0118",
+        "name": "Controlar número de ferramentas expostas ao agente",
+        "trigger": "Necessidade de controlar quantas ferramentas o agente de IA recebe acesso",
+        "condition": "UNDEFINED",
+        "action": "Usar MCP, que expõe via protocolo padronizado um conjunto limitado de ferramentas ao agente",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0364",
+          "EV-0363",
+          "EV-0365"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0119",
+        "name": "Priorizar segurança",
+        "trigger": "Prioridade declarada é segurança",
+        "condition": "UNDEFINED",
+        "action": "Escolher MCP",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0369",
+          "EV-0365"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0120",
+        "name": "Ambiente de equipe",
+        "trigger": "Vários membros de equipe trabalhando no projeto",
+        "condition": "UNDEFINED",
+        "action": "Escolher a ferramenta MCP",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0366",
+          "EV-0367"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0121",
+        "name": "Multi-tenant, controle de acesso e autenticação",
+        "trigger": "Foco em ambiente de equipe com múltiplos tenants para agentes de IA, ou gestão de controle de acesso e autenticação",
+        "condition": "UNDEFINED",
+        "action": "Usar MCP, definindo fronteiras de autenticação e trilhas de auditoria no servidor MCP",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0371",
+          "EV-0367"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0122",
+        "name": "Custo de tokens do MCP",
+        "trigger": "Avaliação de consumo de tokens ao considerar MCP",
+        "condition": "Schemas das ferramentas são constantemente carregados na janela de contexto da IA",
+        "action": "Considerar que MCP consome mais tokens que CLI nessa decisão",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0368"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0117",
+        "name": "Priorizar velocidade ou eficiência de tokens",
+        "trigger": "Critério de escolha é velocidade ou eficiência de tokens",
+        "condition": "UNDEFINED",
+        "action": "Escolher CLI como melhor opção",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0370",
+          "EV-0369"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0123",
+        "name": "MCP conectado como pré-requisito de deploy",
+        "trigger": "Antes de pedir ao agente que faça o deploy da aplicação",
+        "condition": "A conexão do MCP na máquina local está estabelecida",
+        "action": "Prosseguir com o pedido de deploy ao agente; se o MCP não estiver conectado, copiar o link da documentação, colar no agente de código e deixar que ele mesmo faça a conexão",
+        "do_not": [],
+        "precedence": "Precede o login na Vercel e o pedido de deploy",
+        "evidence_ids": [
+          "EV-0373",
+          "EV-0374"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0126",
+        "name": "Escolha do caminho de remoção",
+        "trigger": "Necessidade de remover o projeto publicado",
+        "condition": "UNDEFINED",
+        "action": "Remover manualmente pelo painel (abrir as configurações do projeto e clicar em 'delete project') ou, alternativamente, instruir o próprio agente de código a deletar o projeto",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0381",
+          "EV-0382"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0124",
+        "name": "Confirmar contexto da conta antes de ação destrutiva",
+        "trigger": "Pedido de deleção de projeto ao agente",
+        "condition": "Existe mais de um projeto na conta",
+        "action": "O agente primeiro sinaliza o contexto antes de agir, listando os projetos da conta e identificando quais são propriedades ativas que ele não criou, para deletar a coisa certa e nada mais",
+        "do_not": [
+          "Não executar a deleção sem antes confirmar exatamente o que existe na conta",
+          "Não tocar nos outros projetos da conta"
+        ],
+        "precedence": "Precede a execução da deleção",
+        "evidence_ids": [
+          "EV-0385",
+          "EV-0386"
+        ]
+      },
+      {
+        "candidate_type": "RULE_CANDIDATE",
+        "local_id": "R-0125",
+        "name": "Critério de sucesso da deleção",
+        "trigger": "Após o agente executar a deleção do projeto",
+        "condition": "UNDEFINED",
+        "action": "Verificar que o projeto alvo foi removido e que os outros projetos permanecem intocados",
+        "do_not": [],
+        "precedence": "UNDEFINED",
+        "evidence_ids": [
+          "EV-0387"
+        ]
+      }
+    ],
+    "anti_pattern_candidates": [
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0109",
+        "do_not": [
+          "Escrever código/script customizado para cada serviço quando MCP pode padronizar a integração"
+        ],
+        "evidence_ids": [
+          "EV-0342",
+          "EV-0343",
+          "EV-0344"
+        ]
+      },
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0112",
+        "do_not": [
+          "Não assumir que MCP é a única forma de dar controle de ferramentas ao agente"
+        ],
+        "evidence_ids": [
+          "EV-0346",
+          "EV-0349",
+          "EV-0355"
+        ]
+      },
+      {
+        "candidate_type": "ANTI_PATTERN_CANDIDATE",
+        "local_id": "R-0124",
+        "do_not": [
+          "Não executar a deleção sem antes confirmar exatamente o que existe na conta",
+          "Não tocar nos outros projetos da conta"
+        ],
+        "evidence_ids": [
+          "EV-0385",
+          "EV-0386"
+        ]
+      }
+    ]
+  }
+}

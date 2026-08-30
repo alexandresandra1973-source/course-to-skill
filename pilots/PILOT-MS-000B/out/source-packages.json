@@ -1,0 +1,2794 @@
+{
+  "A": {
+    "profile": {
+      "artifact_id": "MS000B-SOURCE-PROFILE-A",
+      "scope": "PILOT_MS_000B_ONLY",
+      "source_model": "SOURCE = CHAPTER (excecao experimental; producao = SOURCE curso / ARTIFACT aula)",
+      "chapter_n": 12,
+      "chapter_titulo": "Managing Version Control with GitHub",
+      "boundary_origin": "linha '## ' declarada pela propria fonte",
+      "linha_ini": 1831,
+      "linha_fim": 2212,
+      "t_ini": 3202,
+      "t_fim": 3762,
+      "source_independence": "KNOWN_DEPENDENT",
+      "independence_evidence": "mesmo autor, mesma gravacao, mesmo curso do PILOT-002",
+      "authority": "DECLARED_EXTERNALLY (SOURCE-PROFILE); nunca derivada da qualidade das claims",
+      "lang": "en",
+      "text_source_lang": "en",
+      "provenance_chain": {
+        "FULL_L0": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+        "CUT_L0": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+        "CHAPTER_SLICE": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "slice_derived_from": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+        "slice_created_at": "2026-08-30",
+        "nota": "o CHAPTER SLICE e artefato NOVO e derivado desta rodada; nao existia antes"
+      },
+      "evidence_source": {
+        "path": "_mirror/pilots/PILOT-002-v2/EVIDENCE.jsonl",
+        "sha256": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+      },
+      "model_policy": {
+        "model": "claude-opus-5",
+        "thinking": {
+          "type": "disabled"
+        },
+        "max_tokens": 8000,
+        "prompt_version": "ms000b-claimgen-v1",
+        "judge_version": "ms000b-entail-v1"
+      },
+      "items_count": 44
+    },
+    "anchors": [
+      {
+        "anchor_id": "AN-0001",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3202,
+          "end_s": 3208
+        },
+        "quote": "how you can rewind the conversations and rewind the changes, but there's got to be a better way to do it, right? There",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0002",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3214,
+          "end_s": 3221
+        },
+        "quote": "Because let's say if you have mult multiple team members working on in the same projects or let's say if you restart your computer that session might",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0003",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3221,
+          "end_s": 3227
+        },
+        "quote": "be gone, right? And you actually want to revert back to a specific change that was done last week. Then that's really",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0004",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3227,
+          "end_s": 3234
+        },
+        "quote": "And if you actually want to set up version controls, the simplest and the most cheapest way that you can do this",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0005",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3234,
+          "end_s": 3247
+        },
+        "quote": "is using GitHub. So you can see here that I have navigated to github.com. It is free. Simply sign up with git and you\n\n**54:01**\n\ncan be able to actually have accounts and keeping track of all your project here either privately or publicly. Okay.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0006",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3247,
+          "end_s": 3264
+        },
+        "quote": "So here you can see I have a project\n\n**54:12**\n\ncreated called loop maker. Yours could be you know Eric tech folder whichever project you create. You created a\n\n**54:19**\n\nrepository here inside of GitHub.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0007",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3264,
+          "end_s": 3276
+        },
+        "quote": "and you can see if I were to click on the commit section this is my entire commit\n\n**54:30**\n\ntree which is different versions that I have for this entire projects.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0008",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3270,
+          "end_s": 3276
+        },
+        "quote": "So for each version here I give it a specific\n\n**54:36**\n\nname on exactly what I changed in that version.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0009",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3276,
+          "end_s": 3294
+        },
+        "quote": "For example if we were go down this is the oldest version that we have.\n\n**54:43**\n\nSo the oldest version here is scuffle the entire loop maker repository right and then the second version here you can\n\n**54:48**\n\nsee is the terminal UX renderer",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0010",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3288,
+          "end_s": 3300
+        },
+        "quote": "and if I want to click\n\n**54:54**\n\ninto it to see exactly what change I made I can also see the changes here",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0011",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3294,
+          "end_s": 3311
+        },
+        "quote": "now how do you see this well the green\n\n**55:00**\n\nsection here is the things that are being added and the red section which on the left is going to be the things that\n\n**55:05**\n\nare going to be deleted right",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0012",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3322,
+          "end_s": 3335
+        },
+        "quote": "you can also see uh\n\n**55:29**\n\nthe display the rich difference right so you can see the actual markdown here right so you can see the actual change\n\n**55:35**\n\nhere inside of the difference",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0013",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3335,
+          "end_s": 3346
+        },
+        "quote": "furthermore if you want to actually creating different branches so the\n\n**55:40**\n\ncurrent branch we're in here is main branch But if you want to actually create in different branches, you can also do so.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0014",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3346,
+          "end_s": 3358
+        },
+        "quote": "If you want to you know create a different change\n\n**55:51**\n\nlike maybe like a beta version or like a version two of that you want to create a different branch you can also do that as well right and you can also committing\n\n**55:58**\n\nthings on top of it.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0015",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3358,
+          "end_s": 3376
+        },
+        "quote": "let's say if I want to you know uh want\n\n**56:04**\n\nto revert back to changes that are being worked on maybe like June 18th right if I were to scroll down maybe like there's\n\n**56:10**\n\nsome changes that were done like uh many weeks ago then I can be able to copy the commit ID pass it to claw code say hey I\n\n**56:16**\n\nwant to revert back to that specific version of [clears throat] that you know get commits right",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0016",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3393,
+          "end_s": 3419
+        },
+        "quote": "But let's say if I want to do create one, I'm just going to open a new terminal here and I'm going to just type",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0017",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3407,
+          "end_s": 3419
+        },
+        "quote": "So, I'm going to say, hey, I want you to take a look at this entire folder here and I want you to\n\n**56:53**\n\ncreate a repository, a private repository here for this project. Um, and just going to commit the changes\n\n**56:59**\n\nhere.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0018",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3419,
+          "end_s": 3432
+        },
+        "quote": "And you can think of repository here is kind\n\n**57:05**\n\nof like a project, right? Any project that you have, you want to create a project in your version control, that's going to be a repository.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0019",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3432,
+          "end_s": 3437
+        },
+        "quote": "So, whatever\n\n**57:12**\n\nthat we have right now with the current folder, we want to put that inside of a project in GitHub to add that as a\n\n**57:17**\n\nversion control.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0020",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3437,
+          "end_s": 3448
+        },
+        "quote": "So, here you can see it's going to\n\n**57:22**\n\ntake a look at the current folder first and then try to set up a project.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0021",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3442,
+          "end_s": 3453
+        },
+        "quote": "Now, specifically, you can see I put it like\n\n**57:28**\n\na private repository. You can actually change that to public if you want to.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0022",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3464,
+          "end_s": 3476
+        },
+        "quote": "And these are public that can be seen by anyone. So, that's\n\n**57:50**\n\nexactly what it means when creating a private repository. So basically just creating a repository that's inside of\n\n**57:56**\n\nGitHub here that's only seen by me.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0023",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3482,
+          "end_s": 3501
+        },
+        "quote": "So what we have\n\n**58:08**\n\ncommitted here you can see uh 133 files here in one initial commits. So the entire NexJS applications the images the\n\n**58:16**\n\nplayrs for the evaluations and also the documentations.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0024",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3501,
+          "end_s": 3519
+        },
+        "quote": "things that we I have\n\n**58:21**\n\nexclude here you can see is the existing ignore no modules the NexJS so like I\n\n**58:27**\n\nsaid before right those are the things that are not really relevant for our projects so those dot folders and also\n\n**58:33**\n\nno module here are not going to be relevant",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0025",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3513,
+          "end_s": 3524
+        },
+        "quote": "every time we're going to you know deal with the project like\n\n**58:39**\n\ncoding project here usually going to not commit that",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0026",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3519,
+          "end_s": 3537
+        },
+        "quote": "and you can see that if we were to look at the color for those fog\n\n**58:44**\n\nexplore you can see these are all grayed out right and the ones that are committed are not grayed out. Okay, so\n\n**58:51**\n\nthe grade out ones are be part of the get commits. So they will not be committed if there's any changes that\n\n**58:57**\n\nare inside of that folder.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0027",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3537,
+          "end_s": 3549
+        },
+        "quote": "And you can see there's no MV file here or CQ\n\n**59:02**\n\nqueries exist anywhere in the folder. So nothing sensitive went up.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0028",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3542,
+          "end_s": 3549
+        },
+        "quote": "So oneup means basically like added onto the\n\n**59:09**\n\nversion control tree, right?",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0029",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3549,
+          "end_s": 3560
+        },
+        "quote": "So nothing are being added into the version control because we don't want to commit any\n\n**59:14**\n\nsensitive information in the cloud, right?",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0030",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3554,
+          "end_s": 3567
+        },
+        "quote": "And one heads up here is that the default branch is master branch. So\n\n**59:20**\n\nthat's what the git ignit give you uh locally. So you can also be able to you know rename this to main branch whatever\n\n**59:27**\n\nit is.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0031",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3567,
+          "end_s": 3578
+        },
+        "quote": "But master branch basically means that this is the current branch that we're in and we only have this one\n\n**59:33**\n\nbranch and that's the source of truth for all the versions that we have. Right? All the versions that we have is\n\n**59:38**\n\nstored inside of this master branch.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0032",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3578,
+          "end_s": 3590
+        },
+        "quote": "So if I were to go to my repository here, I'm going to switch\n\n**59:44**\n\nover to private now. And now if I were to refresh here, okay, you can see we\n\n**59:50**\n\nhave a repository called system design tier list.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0033",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3602,
+          "end_s": 3615
+        },
+        "quote": "And you can see if I scroll down, there's our readme file which contains all the you\n\n**60:09**\n\nknow project data that we have in our current projects. And furthermore, you can see all the skills that we have\n\n**60:15**\n\ncreated is all committed here.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0034",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3615,
+          "end_s": 3622
+        },
+        "quote": "the uh the so far we have\n\n**60:22**\n\nonly one commits, which means that we have only one version of our current projects, right?",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0035",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3634,
+          "end_s": 3652
+        },
+        "quote": "You can see that inside of our uh source\n\n**60:41**\n\ncontrol icon, you can see that there's seven changes that are changed, which means that there's actually seven things\n\n**60:46**\n\nthat are, you know, uh actually being changed inside of our current folder. So, if I were to open this, you can see\n\n**60:52**\n\nthat these are things that are being deleted.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0036",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3652,
+          "end_s": 3664
+        },
+        "quote": "And what I can do here is I can manually just say, hey, you know, um\n\n**60:58**\n\ndeleted the eval, which means that this is the commit message that we're going to commit onto this version, this new\n\n**61:04**\n\nversion of this project.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0037",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3664,
+          "end_s": 3677
+        },
+        "quote": "So if I were to stage all the changes, commit it and\n\n**61:09**\n\nsync the changes and what happened is that it's going to push that change onto the cloud right onto the GitHub here uh\n\n**61:17**\n\nthat for this repository.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0038",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3677,
+          "end_s": 3696
+        },
+        "quote": "So now if I were to refresh this you can see that we have a [snorts] new commit called\n\n**61:22**\n\ndeleted eval okay and that delete eval here basically delete the entire eval folder that we just did. Okay and that's\n\n**61:29**\n\nthe new version here. So now if I were to go to like code, you can see we no longer have that eval folder here in\n\n**61:36**\n\nthat source of truth version.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0039",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3701,
+          "end_s": 3712
+        },
+        "quote": "the benefit of this is providing a complete historical records of all the\n\n**61:46**\n\nmodifications and also you can have many user here to edit the files simultaneously without overwriting each\n\n**61:52**\n\nothers.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0040",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3712,
+          "end_s": 3727
+        },
+        "quote": "And if you actually want to add in more users, simply just going to go to the repositories that you have. Click\n\n**61:57**\n\non settings here and you can see that there's a section called collaborators working adding more people here inside\n\n**62:02**\n\nof this repository where they can be able to commit things onto the same repository.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0041",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3727,
+          "end_s": 3732
+        },
+        "quote": "And also you can be able to\n\n**62:07**\n\nrestore all the changes that happened in the past.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0042",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3732,
+          "end_s": 3739
+        },
+        "quote": "inside of the source control for VS Code, there's also the commit tree here inside of here.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0043",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3732,
+          "end_s": 3756
+        },
+        "quote": "So let's say if I want to revert this back this change copy the commit ID just pass it to claude say hey I want to revert\n\n**62:25**\n\nthis change that we did here can you do that right let's say if there's so many changes in your git version controls you\n\n**62:30**\n\ncan just copy that ID paste it to cla say hey I want to revert back to the change and claw code is going to revert\n\n**62:36**\n\nback to change based on whatever commit ID that you specify",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "MISSING",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0044",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "6d9e718cf5dbb08811f0d73673a13e83084d79457a506bc523d81e6b32de33b7",
+        "span": {
+          "start_s": 3745,
+          "end_s": 3750
+        },
+        "quote": "let's say if there's so many changes in your git version controls you\n\n**62:30**\n\ncan just copy that ID paste it to cla",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      }
+    ],
+    "items": [
+      {
+        "local_id": "EV-0001",
+        "origin_local_id_p002": "EV-0290",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "Rewinding a Claude Code conversation to undo changes is presented as insufficient; a better mechanism is needed to see all versions of a project or folder",
+        "quote": "how you can rewind the conversations and rewind the changes, but there's got to be a better way to do it, right? There",
+        "span": {
+          "start_s": 3202,
+          "end_s": 3208
+        },
+        "anchor_id": "AN-0001"
+      },
+      {
+        "local_id": "EV-0002",
+        "origin_local_id_p002": "EV-0291",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "WARNING",
+        "claim_text_p002": "Session-based rewind is fragile: restarting your computer can make the session gone, so you lose the ability to revert",
+        "quote": "Because let's say if you have mult multiple team members working on in the same projects or let's say if you restart your computer that session might",
+        "span": {
+          "start_s": 3214,
+          "end_s": 3221
+        },
+        "anchor_id": "AN-0002"
+      },
+      {
+        "local_id": "EV-0003",
+        "origin_local_id_p002": "EV-0292",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "Version control is needed when multiple team members work on the same project or when you want to revert to a specific change made last week",
+        "quote": "be gone, right? And you actually want to revert back to a specific change that was done last week. Then that's really",
+        "span": {
+          "start_s": 3221,
+          "end_s": 3227
+        },
+        "anchor_id": "AN-0003"
+      },
+      {
+        "local_id": "EV-0004",
+        "origin_local_id_p002": "EV-0293",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "The simplest and cheapest way to set up version control is using GitHub",
+        "quote": "And if you actually want to set up version controls, the simplest and the most cheapest way that you can do this",
+        "span": {
+          "start_s": 3227,
+          "end_s": 3234
+        },
+        "anchor_id": "AN-0004"
+      },
+      {
+        "local_id": "EV-0005",
+        "origin_local_id_p002": "EV-0294",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "GitHub is free; you sign up and get an account to keep track of all your projects either privately or publicly",
+        "quote": "is using GitHub. So you can see here that I have navigated to github.com. It is free. Simply sign up with git and you\n\n**54:01**\n\ncan be able to actually have accounts and keeping track of all your project here either privately or publicly. Okay.",
+        "span": {
+          "start_s": 3234,
+          "end_s": 3247
+        },
+        "anchor_id": "AN-0005"
+      },
+      {
+        "local_id": "EV-0006",
+        "origin_local_id_p002": "EV-0295",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "For each project you create a repository inside GitHub; the instructor's example project is called 'loop maker'",
+        "quote": "So here you can see I have a project\n\n**54:12**\n\ncreated called loop maker. Yours could be you know Eric tech folder whichever project you create. You created a\n\n**54:19**\n\nrepository here inside of GitHub.",
+        "span": {
+          "start_s": 3247,
+          "end_s": 3264
+        },
+        "anchor_id": "AN-0006"
+      },
+      {
+        "local_id": "EV-0007",
+        "origin_local_id_p002": "EV-0296",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "The commit section of a GitHub repository shows the entire commit tree, which is the different versions you have for the whole project",
+        "quote": "and you can see if I were to click on the commit section this is my entire commit\n\n**54:30**\n\ntree which is different versions that I have for this entire projects.",
+        "span": {
+          "start_s": 3264,
+          "end_s": 3276
+        },
+        "anchor_id": "AN-0007"
+      },
+      {
+        "local_id": "EV-0008",
+        "origin_local_id_p002": "EV-0297",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Each version (commit) should be given a specific name describing exactly what was changed in that version",
+        "quote": "So for each version here I give it a specific\n\n**54:36**\n\nname on exactly what I changed in that version.",
+        "span": {
+          "start_s": 3270,
+          "end_s": 3276
+        },
+        "anchor_id": "AN-0008"
+      },
+      {
+        "local_id": "EV-0009",
+        "origin_local_id_p002": "EV-0298",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Example commit history: the oldest version is 'scuffle the entire loop maker repository' and the second version is the 'terminal UX renderer'",
+        "quote": "For example if we were go down this is the oldest version that we have.\n\n**54:43**\n\nSo the oldest version here is scuffle the entire loop maker repository right and then the second version here you can\n\n**54:48**\n\nsee is the terminal UX renderer",
+        "span": {
+          "start_s": 3276,
+          "end_s": 3294
+        },
+        "anchor_id": "AN-0009"
+      },
+      {
+        "local_id": "EV-0010",
+        "origin_local_id_p002": "EV-0299",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Clicking into a commit lets you see exactly what change was made in that version",
+        "quote": "and if I want to click\n\n**54:54**\n\ninto it to see exactly what change I made I can also see the changes here",
+        "span": {
+          "start_s": 3288,
+          "end_s": 3300
+        },
+        "anchor_id": "AN-0010"
+      },
+      {
+        "local_id": "EV-0011",
+        "origin_local_id_p002": "EV-0300",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "In a commit diff, the green section shows things being added and the red section on the left shows things being deleted",
+        "quote": "now how do you see this well the green\n\n**55:00**\n\nsection here is the things that are being added and the red section which on the left is going to be the things that\n\n**55:05**\n\nare going to be deleted right",
+        "span": {
+          "start_s": 3294,
+          "end_s": 3311
+        },
+        "anchor_id": "AN-0011"
+      },
+      {
+        "local_id": "EV-0012",
+        "origin_local_id_p002": "EV-0301",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "GitHub offers a 'display the rich difference' option that renders the actual markdown so you can see the change rendered inside the diff",
+        "quote": "you can also see uh\n\n**55:29**\n\nthe display the rich difference right so you can see the actual markdown here right so you can see the actual change\n\n**55:35**\n\nhere inside of the difference",
+        "span": {
+          "start_s": 3322,
+          "end_s": 3335
+        },
+        "anchor_id": "AN-0012"
+      },
+      {
+        "local_id": "EV-0013",
+        "origin_local_id_p002": "EV-0302",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "The current branch in the example is the main branch, and you can create different branches as well",
+        "quote": "furthermore if you want to actually creating different branches so the\n\n**55:40**\n\ncurrent branch we're in here is main branch But if you want to actually create in different branches, you can also do so.",
+        "span": {
+          "start_s": 3335,
+          "end_s": 3346
+        },
+        "anchor_id": "AN-0013"
+      },
+      {
+        "local_id": "EV-0014",
+        "origin_local_id_p002": "EV-0303",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Use a separate branch when you want to create a different change such as a beta version or a version two, and you can commit on top of it",
+        "quote": "If you want to you know create a different change\n\n**55:51**\n\nlike maybe like a beta version or like a version two of that you want to create a different branch you can also do that as well right and you can also committing\n\n**55:58**\n\nthings on top of it.",
+        "span": {
+          "start_s": 3346,
+          "end_s": 3358
+        },
+        "anchor_id": "AN-0014"
+      },
+      {
+        "local_id": "EV-0015",
+        "origin_local_id_p002": "EV-0304",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "PROCEDURE",
+        "claim_text_p002": "To revert to an older state, scroll to the commit from the desired date, copy the commit ID, and pass it to Claude Code asking to revert back to that specific version of the git commit",
+        "quote": "let's say if I want to you know uh want\n\n**56:04**\n\nto revert back to changes that are being worked on maybe like June 18th right if I were to scroll down maybe like there's\n\n**56:10**\n\nsome changes that were done like uh many weeks ago then I can be able to copy the commit ID pass it to claw code say hey I\n\n**56:16**\n\nwant to revert back to that specific version of [clears throat] that you know get commits right",
+        "span": {
+          "start_s": 3358,
+          "end_s": 3376
+        },
+        "anchor_id": "AN-0015"
+      },
+      {
+        "local_id": "EV-0016",
+        "origin_local_id_p002": "EV-0305",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Um repositório é criado delegando a tarefa ao Claude via terminal: abre-se um novo terminal, digita-se 'claude' e pede-se que ele analise a pasta inteira e crie um repositório privado, commitando as mudanças",
+        "quote": "But let's say if I want to do create one, I'm just going to open a new terminal here and I'm going to just type",
+        "span": {
+          "start_s": 3393,
+          "end_s": 3419
+        },
+        "anchor_id": "AN-0016"
+      },
+      {
+        "local_id": "EV-0017",
+        "origin_local_id_p002": "EV-0306",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O prompt usado é formulado como: analisar a pasta inteira, criar um repositório privado para o projeto e commitar as mudanças",
+        "quote": "So, I'm going to say, hey, I want you to take a look at this entire folder here and I want you to\n\n**56:53**\n\ncreate a repository, a private repository here for this project. Um, and just going to commit the changes\n\n**56:59**\n\nhere.",
+        "span": {
+          "start_s": 3407,
+          "end_s": 3419
+        },
+        "anchor_id": "AN-0017"
+      },
+      {
+        "local_id": "EV-0018",
+        "origin_local_id_p002": "EV-0307",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Um repositório equivale conceitualmente a um projeto: qualquer projeto que se queira colocar sob controle de versão torna-se um repositório",
+        "quote": "And you can think of repository here is kind\n\n**57:05**\n\nof like a project, right? Any project that you have, you want to create a project in your version control, that's going to be a repository.",
+        "span": {
+          "start_s": 3419,
+          "end_s": 3432
+        },
+        "anchor_id": "AN-0018"
+      },
+      {
+        "local_id": "EV-0019",
+        "origin_local_id_p002": "EV-0308",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "O objetivo de colocar a pasta atual dentro de um projeto no GitHub é adicioná-la ao controle de versão",
+        "quote": "So, whatever\n\n**57:12**\n\nthat we have right now with the current folder, we want to put that inside of a project in GitHub to add that as a\n\n**57:17**\n\nversion control.",
+        "span": {
+          "start_s": 3432,
+          "end_s": 3437
+        },
+        "anchor_id": "AN-0019"
+      },
+      {
+        "local_id": "EV-0020",
+        "origin_local_id_p002": "EV-0309",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "O Claude primeiro inspeciona a pasta atual e só depois tenta configurar o projeto",
+        "quote": "So, here you can see it's going to\n\n**57:22**\n\ntake a look at the current folder first and then try to set up a project.",
+        "span": {
+          "start_s": 3437,
+          "end_s": 3448
+        },
+        "anchor_id": "AN-0020"
+      },
+      {
+        "local_id": "EV-0021",
+        "origin_local_id_p002": "EV-0310",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "A visibilidade do repositório é uma escolha: pode-se especificar privado ou público no momento da criação",
+        "quote": "Now, specifically, you can see I put it like\n\n**57:28**\n\na private repository. You can actually change that to public if you want to.",
+        "span": {
+          "start_s": 3442,
+          "end_s": 3453
+        },
+        "anchor_id": "AN-0021"
+      },
+      {
+        "local_id": "EV-0022",
+        "origin_local_id_p002": "EV-0311",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Um repositório público pode ser visto por qualquer pessoa; um repositório privado só é visto pelo próprio dono",
+        "quote": "And these are public that can be seen by anyone. So, that's\n\n**57:50**\n\nexactly what it means when creating a private repository. So basically just creating a repository that's inside of\n\n**57:56**\n\nGitHub here that's only seen by me.",
+        "span": {
+          "start_s": 3464,
+          "end_s": 3476
+        },
+        "anchor_id": "AN-0022"
+      },
+      {
+        "local_id": "EV-0023",
+        "origin_local_id_p002": "EV-0312",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O commit inicial do projeto incluiu 133 arquivos: a aplicação Next.js, imagens, arquivos de avaliação (evals) e a documentação",
+        "quote": "So what we have\n\n**58:08**\n\ncommitted here you can see uh 133 files here in one initial commits. So the entire NexJS applications the images the\n\n**58:16**\n\nplayrs for the evaluations and also the documentations.",
+        "span": {
+          "start_s": 3482,
+          "end_s": 3501
+        },
+        "anchor_id": "AN-0023"
+      },
+      {
+        "local_id": "EV-0024",
+        "origin_local_id_p002": "EV-0313",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "node_modules e as pastas dot do Next.js foram excluídas do commit via gitignore porque não são relevantes para o projeto",
+        "quote": "things that we I have\n\n**58:21**\n\nexclude here you can see is the existing ignore no modules the NexJS so like I\n\n**58:27**\n\nsaid before right those are the things that are not really relevant for our projects so those dot folders and also\n\n**58:33**\n\nno module here are not going to be relevant",
+        "span": {
+          "start_s": 3501,
+          "end_s": 3519
+        },
+        "anchor_id": "AN-0024"
+      },
+      {
+        "local_id": "EV-0025",
+        "origin_local_id_p002": "EV-0314",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Em projetos de código, normalmente não se commitam node_modules nem as pastas dot geradas",
+        "quote": "every time we're going to you know deal with the project like\n\n**58:39**\n\ncoding project here usually going to not commit that",
+        "span": {
+          "start_s": 3513,
+          "end_s": 3524
+        },
+        "anchor_id": "AN-0025"
+      },
+      {
+        "local_id": "EV-0026",
+        "origin_local_id_p002": "EV-0315",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "No file explorer do editor, arquivos e pastas acinzentados são os ignorados pelo git e não serão commitados, enquanto os não acinzentados fazem parte do commit",
+        "quote": "and you can see that if we were to look at the color for those fog\n\n**58:44**\n\nexplore you can see these are all grayed out right and the ones that are committed are not grayed out. Okay, so\n\n**58:51**\n\nthe grade out ones are be part of the get commits. So they will not be committed if there's any changes that\n\n**58:57**\n\nare inside of that folder.",
+        "span": {
+          "start_s": 3519,
+          "end_s": 3537
+        },
+        "anchor_id": "AN-0026"
+      },
+      {
+        "local_id": "EV-0027",
+        "origin_local_id_p002": "EV-0316",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "QUALITY_CRITERION",
+        "claim_text_p002": "Após o commit, verifica-se que nenhum arquivo .env nem queries SQL foram enviados, confirmando que nada sensível subiu para o controle de versão",
+        "quote": "And you can see there's no MV file here or CQ\n\n**59:02**\n\nqueries exist anywhere in the folder. So nothing sensitive went up.",
+        "span": {
+          "start_s": 3537,
+          "end_s": 3549
+        },
+        "anchor_id": "AN-0027"
+      },
+      {
+        "local_id": "EV-0028",
+        "origin_local_id_p002": "EV-0318",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "CONCEPT",
+        "claim_text_p002": "'Up' no contexto do git significa adicionado à árvore de controle de versão",
+        "quote": "So oneup means basically like added onto the\n\n**59:09**\n\nversion control tree, right?",
+        "span": {
+          "start_s": 3542,
+          "end_s": 3549
+        },
+        "anchor_id": "AN-0028"
+      },
+      {
+        "local_id": "EV-0029",
+        "origin_local_id_p002": "EV-0317",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Informação sensível não deve ser commitada na nuvem",
+        "quote": "So nothing are being added into the version control because we don't want to commit any\n\n**59:14**\n\nsensitive information in the cloud, right?",
+        "span": {
+          "start_s": 3549,
+          "end_s": 3560
+        },
+        "anchor_id": "AN-0029"
+      },
+      {
+        "local_id": "EV-0030",
+        "origin_local_id_p002": "EV-0319",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "CONCEPT",
+        "claim_text_p002": "O git init cria localmente a branch padrão chamada master, e ela pode ser renomeada para main se desejado",
+        "quote": "And one heads up here is that the default branch is master branch. So\n\n**59:20**\n\nthat's what the git ignit give you uh locally. So you can also be able to you know rename this to main branch whatever\n\n**59:27**\n\nit is.",
+        "span": {
+          "start_s": 3554,
+          "end_s": 3567
+        },
+        "anchor_id": "AN-0030"
+      },
+      {
+        "local_id": "EV-0031",
+        "origin_local_id_p002": "EV-0320",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Com uma única branch, a master é a fonte da verdade e armazena todas as versões do projeto",
+        "quote": "But master branch basically means that this is the current branch that we're in and we only have this one\n\n**59:33**\n\nbranch and that's the source of truth for all the versions that we have. Right? All the versions that we have is\n\n**59:38**\n\nstored inside of this master branch.",
+        "span": {
+          "start_s": 3567,
+          "end_s": 3578
+        },
+        "anchor_id": "AN-0031"
+      },
+      {
+        "local_id": "EV-0032",
+        "origin_local_id_p002": "EV-0321",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Para verificar o resultado, alterna-se o filtro de repositórios no GitHub para 'private' e recarrega-se a página, confirmando que o repositório aparece",
+        "quote": "So if I were to go to my repository here, I'm going to switch\n\n**59:44**\n\nover to private now. And now if I were to refresh here, okay, you can see we\n\n**59:50**\n\nhave a repository called system design tier list.",
+        "span": {
+          "start_s": 3578,
+          "end_s": 3590
+        },
+        "anchor_id": "AN-0032"
+      },
+      {
+        "local_id": "EV-0033",
+        "origin_local_id_p002": "EV-0322",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O repositório criado contém o arquivo readme com os dados do projeto e todas as skills criadas",
+        "quote": "And you can see if I scroll down, there's our readme file which contains all the you\n\n**60:09**\n\nknow project data that we have in our current projects. And furthermore, you can see all the skills that we have\n\n**60:15**\n\ncreated is all committed here.",
+        "span": {
+          "start_s": 3602,
+          "end_s": 3615
+        },
+        "anchor_id": "AN-0033"
+      },
+      {
+        "local_id": "EV-0034",
+        "origin_local_id_p002": "EV-0323",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Ter apenas um commit significa ter apenas uma versão do projeto",
+        "quote": "the uh the so far we have\n\n**60:22**\n\nonly one commits, which means that we have only one version of our current projects, right?",
+        "span": {
+          "start_s": 3615,
+          "end_s": 3622
+        },
+        "anchor_id": "AN-0034"
+      },
+      {
+        "local_id": "EV-0035",
+        "origin_local_id_p002": "EV-0324",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "O ícone de source control no VS Code mostra a contagem de arquivos alterados; ao deletar uma pasta, os arquivos aparecem listados como deletados",
+        "quote": "You can see that inside of our uh source\n\n**60:41**\n\ncontrol icon, you can see that there's seven changes that are changed, which means that there's actually seven things\n\n**60:46**\n\nthat are, you know, uh actually being changed inside of our current folder. So, if I were to open this, you can see\n\n**60:52**\n\nthat these are things that are being deleted.",
+        "span": {
+          "start_s": 3634,
+          "end_s": 3652
+        },
+        "anchor_id": "AN-0035"
+      },
+      {
+        "local_id": "EV-0036",
+        "origin_local_id_p002": "EV-0325",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "A mensagem de commit é escrita manualmente para descrever a mudança que será registrada nessa nova versão do projeto (ex: 'deleted the eval')",
+        "quote": "And what I can do here is I can manually just say, hey, you know, um\n\n**60:58**\n\ndeleted the eval, which means that this is the commit message that we're going to commit onto this version, this new\n\n**61:04**\n\nversion of this project.",
+        "span": {
+          "start_s": 3652,
+          "end_s": 3664
+        },
+        "anchor_id": "AN-0036"
+      },
+      {
+        "local_id": "EV-0037",
+        "origin_local_id_p002": "EV-0326",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "O fluxo de commit no VS Code é: stage all the changes, commit e sync the changes, o que empurra a alteração para o repositório no GitHub",
+        "quote": "So if I were to stage all the changes, commit it and\n\n**61:09**\n\nsync the changes and what happened is that it's going to push that change onto the cloud right onto the GitHub here uh\n\n**61:17**\n\nthat for this repository.",
+        "span": {
+          "start_s": 3664,
+          "end_s": 3677
+        },
+        "anchor_id": "AN-0037"
+      },
+      {
+        "local_id": "EV-0038",
+        "origin_local_id_p002": "EV-0327",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Após o sync, ao atualizar a página do GitHub aparece o novo commit com a mensagem escrita, e o código na branch principal já não contém a pasta deletada",
+        "quote": "So now if I were to refresh this you can see that we have a [snorts] new commit called\n\n**61:22**\n\ndeleted eval okay and that delete eval here basically delete the entire eval folder that we just did. Okay and that's\n\n**61:29**\n\nthe new version here. So now if I were to go to like code, you can see we no longer have that eval folder here in\n\n**61:36**\n\nthat source of truth version.",
+        "span": {
+          "start_s": 3677,
+          "end_s": 3696
+        },
+        "anchor_id": "AN-0038"
+      },
+      {
+        "local_id": "EV-0039",
+        "origin_local_id_p002": "EV-0328",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "Os benefícios do controle de versão citados são: registro histórico completo de todas as modificações e múltiplos usuários editando arquivos simultaneamente sem sobrescrever uns aos outros",
+        "quote": "the benefit of this is providing a complete historical records of all the\n\n**61:46**\n\nmodifications and also you can have many user here to edit the files simultaneously without overwriting each\n\n**61:52**\n\nothers.",
+        "span": {
+          "start_s": 3701,
+          "end_s": 3712
+        },
+        "anchor_id": "AN-0039"
+      },
+      {
+        "local_id": "EV-0040",
+        "origin_local_id_p002": "EV-0329",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Para adicionar mais usuários ao repositório, vá em Settings do repositório e use a seção 'Collaborators' para adicionar pessoas que poderão commitar no mesmo repositório",
+        "quote": "And if you actually want to add in more users, simply just going to go to the repositories that you have. Click\n\n**61:57**\n\non settings here and you can see that there's a section called collaborators working adding more people here inside\n\n**62:02**\n\nof this repository where they can be able to commit things onto the same repository.",
+        "span": {
+          "start_s": 3712,
+          "end_s": 3727
+        },
+        "anchor_id": "AN-0040"
+      },
+      {
+        "local_id": "EV-0041",
+        "origin_local_id_p002": "EV-0330",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "O controle de versão também permite restaurar todas as mudanças que ocorreram no passado",
+        "quote": "And also you can be able to\n\n**62:07**\n\nrestore all the changes that happened in the past.",
+        "span": {
+          "start_s": 3727,
+          "end_s": 3732
+        },
+        "anchor_id": "AN-0041"
+      },
+      {
+        "local_id": "EV-0042",
+        "origin_local_id_p002": "EV-0331",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "TOOL_USAGE",
+        "claim_text_p002": "O painel de source control do VS Code exibe uma árvore de commits (commit tree)",
+        "quote": "inside of the source control for VS Code, there's also the commit tree here inside of here.",
+        "span": {
+          "start_s": 3732,
+          "end_s": 3739
+        },
+        "anchor_id": "AN-0042"
+      },
+      {
+        "local_id": "EV-0043",
+        "origin_local_id_p002": "EV-0332",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Para reverter uma mudança, copie o commit ID da árvore de commits e passe para o Claude Code pedindo para reverter aquela mudança; o Claude reverte com base no commit ID especificado",
+        "quote": "So let's say if I want to revert this back this change copy the commit ID just pass it to claude say hey I want to revert\n\n**62:25**\n\nthis change that we did here can you do that right let's say if there's so many changes in your git version controls you\n\n**62:30**\n\ncan just copy that ID paste it to cla say hey I want to revert back to the change and claw code is going to revert\n\n**62:36**\n\nback to change based on whatever commit ID that you specify",
+        "span": {
+          "start_s": 3732,
+          "end_s": 3756
+        },
+        "anchor_id": "AN-0043"
+      },
+      {
+        "local_id": "EV-0044",
+        "origin_local_id_p002": "EV-0333",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "Copiar o commit ID é útil especialmente quando existem muitas mudanças no controle de versão git, pois identifica exatamente qual ponto reverter",
+        "quote": "let's say if there's so many changes in your git version controls you\n\n**62:30**\n\ncan just copy that ID paste it to cla",
+        "span": {
+          "start_s": 3745,
+          "end_s": 3750
+        },
+        "anchor_id": "AN-0044"
+      }
+    ],
+    "source_package_hash": "31df720fa727867912dfe16b6c7c36fa9d10524b4f99d4482919f3276bf33ab2"
+  },
+  "B": {
+    "profile": {
+      "artifact_id": "MS000B-SOURCE-PROFILE-B",
+      "scope": "PILOT_MS_000B_ONLY",
+      "source_model": "SOURCE = CHAPTER (excecao experimental; producao = SOURCE curso / ARTIFACT aula)",
+      "chapter_n": 13,
+      "chapter_titulo": "Connecting Tools & Deploying Apps via MCP and CLI",
+      "boundary_origin": "linha '## ' declarada pela propria fonte",
+      "linha_ini": 2213,
+      "linha_fim": 2574,
+      "t_ini": 3767,
+      "t_fim": 4312,
+      "source_independence": "KNOWN_DEPENDENT",
+      "independence_evidence": "mesmo autor, mesma gravacao, mesmo curso do PILOT-002",
+      "authority": "DECLARED_EXTERNALLY (SOURCE-PROFILE); nunca derivada da qualidade das claims",
+      "lang": "en",
+      "text_source_lang": "en",
+      "provenance_chain": {
+        "FULL_L0": "43b58271feb0a1d518ae6f81ab29836eb9c7f2bec5eb02e53f70c7bd1eb514ed",
+        "CUT_L0": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+        "CHAPTER_SLICE": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "slice_derived_from": "85ea229011a989ea7ea2b096a15deaca7a0f44d598314e08a342ed9e5a94bb29",
+        "slice_created_at": "2026-08-30",
+        "nota": "o CHAPTER SLICE e artefato NOVO e derivado desta rodada; nao existia antes"
+      },
+      "evidence_source": {
+        "path": "_mirror/pilots/PILOT-002-v2/EVIDENCE.jsonl",
+        "sha256": "64853f7ac06a470f09333a80469b38e443ea5ce7aa3aee2e116ea1877059abfd"
+      },
+      "model_policy": {
+        "model": "claude-opus-5",
+        "thinking": {
+          "type": "disabled"
+        },
+        "max_tokens": 8000,
+        "prompt_version": "ms000b-claimgen-v1",
+        "judge_version": "ms000b-entail-v1"
+      },
+      "items_count": 56
+    },
+    "anchors": [
+      {
+        "anchor_id": "AN-0001",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3767,
+          "end_s": 3792
+        },
+        "quote": "let's say you're currently using Jira to manage your project board or let's say you're currently using Universell to\n\n**63:00**\n\ndeploy your applications or let's say if you're using Stripe to creating products for your e-commerce store or let's say\n\n**63:05**\n\nif you're using Facebook, right, to creating Facebook ads or creating Facebook communities, right?",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0002",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3792,
+          "end_s": 3803
+        },
+        "quote": "To help you to automate those tedious process where you have to\n\n**63:18**\n\nclick into different steps here to actually get to what you want, right?",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0003",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3803,
+          "end_s": 3821
+        },
+        "quote": "which is GitHub and GitHub is one of the tools that\n\n**63:34**\n\ncomes by default with claw code that claw code can be able to actually call to commits creating repositories to\n\n**63:41**\n\nmanage the branch all those kind of things are already come by default.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0004",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3821,
+          "end_s": 3833
+        },
+        "quote": "But there's also a lot of tools here that\n\n**63:47**\n\naren't come by default that we can actually install and add it to claw code to actually make claw code here really\n\n**63:53**\n\nreally powerful",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0005",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3833,
+          "end_s": 3841
+        },
+        "quote": "and to actually have our AI agent here to connecting those tools is using a protocol called MCP",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0006",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3841,
+          "end_s": 3846
+        },
+        "quote": "you can see that MCP stands for model context protocol",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "MISSING",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0007",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3841,
+          "end_s": 3860
+        },
+        "quote": "which stands between\n\n**64:06**\n\nthe AI agents right our claw code and also our tools right any apps we're currently using day-to-day Facebook\n\n**64:13**\n\nShopify e-commerce or whatever software we're using day-to-day. These are the gateways that connects the AI here with\n\n**64:20**\n\nall those tools that we have.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0008",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3860,
+          "end_s": 3867
+        },
+        "quote": "And you can think of MCP is kind of like a USB port for your artificial intelligence.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0009",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3867,
+          "end_s": 3880
+        },
+        "quote": "Before MCP developer have to write custom code, right? Custom script that can have AI here to call those script\n\n**64:34**\n\nlike Google Drive, GitHub or local database to actually have AI agent here to give hands to manage those.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0010",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3880,
+          "end_s": 3893
+        },
+        "quote": "But now\n\n**64:40**\n\nwith MCP we can standard this so that the MCB client is our AI applications\n\n**64:47**\n\nwhere you're chatting with like claw code desktop app or your claw code AI agents right",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0011",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3893,
+          "end_s": 3900
+        },
+        "quote": "and the MCB server is a\n\n**64:53**\n\nlightweight program that allow AI here to reading those local files right access your database or searching data\n\n**65:00**\n\non the web",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0012",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3900,
+          "end_s": 3905
+        },
+        "quote": "or connecting to maybe like Stripe or PayPal or people to connect to\n\n**65:05**\n\nSlack or Jira whichever softwares or apps you're using day-to-day you can have AI here to actually use it",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0013",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3912,
+          "end_s": 3930
+        },
+        "quote": "that's basically how MCP works. Now MCP isn't just only one tool that have AI\n\n**65:18**\n\nagent here to control right you can also have the ability here to control using CLI tool and how we can be able to have\n\n**65:25**\n\nAI here to connect it is also the other way to do it",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0014",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3930,
+          "end_s": 3936
+        },
+        "quote": "does is kind of like a command line where you open your terminal here you type in a text simply you run a program",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0015",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3936,
+          "end_s": 3948
+        },
+        "quote": "or run a script to interact with a third party software you can also have AI\n\n**65:42**\n\nagent here to interact with those apps apps or services through the CLI as well.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0016",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3942,
+          "end_s": 3955
+        },
+        "quote": "But the point here is that it\n\n**65:48**\n\ndoesn't matter if it's MCP or CLI. Those are the tools that we can have AI agent here calling third party applications on\n\n**65:55**\n\nour behalf.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0017",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3955,
+          "end_s": 3966
+        },
+        "quote": "And believe it or not, apps like Stripe has CLI and they also have\n\n**66:00**\n\nMCPs where we can have our log function model here to connect to.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0018",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3960,
+          "end_s": 3966
+        },
+        "quote": "And even Google here also has released their CLI",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0019",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3972,
+          "end_s": 3992
+        },
+        "quote": "you can see that go high\n\n**66:19**\n\nlevel also has their MCP, right? How to use the go high level MCP here and simply just follow documentation and you\n\n**66:26**\n\ncan connect your MCP with your large model.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0020",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3986,
+          "end_s": 4004
+        },
+        "quote": "Or let's say if you're currently using Verscell right for deploying your\n\n**66:32**\n\napplication and you're scared to running commands in your terminal and you want to have your large model here to do it\n\n**66:37**\n\nlike deploy your application to Verscell you can also using the Verscell MCP",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0021",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 3997,
+          "end_s": 4010
+        },
+        "quote": "and you can see that Verscell here also has\n\n**66:44**\n\nCLI tool which you can also have your large model here to connect your Versell with the terminal right through the CLI\n\n**66:50**\n\ntool.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0022",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4010,
+          "end_s": 4011
+        },
+        "quote": "So there's actually many ways that you can do this.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0023",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4021,
+          "end_s": 4028
+        },
+        "quote": "we're going to sign in with Verscell just creating a new application here and\n\n**67:08**\n\nit's actually completely free",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0024",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4041,
+          "end_s": 4054
+        },
+        "quote": "I'm going to clear the current session that we have and I'm just going to ask do you\n\n**67:27**\n\nhave Versell CLI or MCP in your current system where I can actually deploy the current application onto Verscell.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0025",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4041,
+          "end_s": 4047
+        },
+        "quote": "simply I'm going to clear the current session that we have",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0026",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4054,
+          "end_s": 4066
+        },
+        "quote": "but if you don't have one simply just going to come over\n\n**67:39**\n\nto documentation for connecting Versell to MCP or you can also copy the documentation for Versell CLI link over\n\n**67:46**\n\nto claw code.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0027",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4072,
+          "end_s": 4078
+        },
+        "quote": "CLI tool stands for command line interface, right? Let's AI here to actually execute any shell\n\n**67:58**\n\ncommands in a terminal.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0028",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4078,
+          "end_s": 4086
+        },
+        "quote": "MCP provides a standardized secure bridging connections between AI to remote tools and data.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0029",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4086,
+          "end_s": 4092
+        },
+        "quote": "CLI tools relies on AI generated running terminals in your local environment,\n\n**68:12**\n\nwhich is highly token efficient.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0030",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4092,
+          "end_s": 4097
+        },
+        "quote": "So let's say if you want to save tokens that using CLI here is the best option",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0031",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4097,
+          "end_s": 4104
+        },
+        "quote": "but if you're using MCP that basically have a standardized protocol here exposing tools that are limited to AI\n\n**68:24**\n\nagent here to use",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0032",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4104,
+          "end_s": 4110
+        },
+        "quote": "so let's say if you want to controlling how many tools the AI agent want to give access you can\n\n**68:30**\n\nuse MCP",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0033",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4110,
+          "end_s": 4116
+        },
+        "quote": "but that definitely shines in security here because you have control over what tools to ask uh to give AI\n\n**68:36**\n\nagent here to access to",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0034",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4116,
+          "end_s": 4128
+        },
+        "quote": "and also have the ability here to have a better team environment let's say if you have a bunch of team members here to actually\n\n**68:43**\n\nwork on it then MCB tool here is the best option",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0035",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4123,
+          "end_s": 4133
+        },
+        "quote": "because you can actually set the authentication boundaries and the\n\n**68:48**\n\naudit trails using MCP server because it's a server by the end of the day that you can keep track of all the requests\n\n**68:53**\n\nbeing made",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0036",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4133,
+          "end_s": 4147
+        },
+        "quote": "however though it consumes more tokens be compared to just using the CLI because the tool here for\n\n**69:00**\n\nthe schemas are constantly loaded into the AI context window and that's exactly why MTP here actually consume more token",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0037",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4147,
+          "end_s": 4153
+        },
+        "quote": "but if you want to go for like security then MCP is definitely the option if you want to go for token efficiency then\n\n**69:13**\n\ntoken efficiency here is going to be CLI tool.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0038",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4153,
+          "end_s": 4160
+        },
+        "quote": "if you're looking for speed\n\n**69:20**\n\nor token efficiency CLI is the best option",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0039",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4160,
+          "end_s": 4171
+        },
+        "quote": "but if you're mostly focusing on like a team environment where you want\n\n**69:25**\n\nto build multiple tenant for the AI agents here or managing access control and authentication then definitely using\n\n**69:31**\n\nthe MCP here is the best option",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0040",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4176,
+          "end_s": 4182
+        },
+        "quote": "and also the MCP is fully connected in my local machine.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0041",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4176,
+          "end_s": 4182
+        },
+        "quote": "documentation link paste the claw code and let it connect it for you.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0042",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4182,
+          "end_s": 4189
+        },
+        "quote": "Once you connected log into your versell then",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0043",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4189,
+          "end_s": 4196
+        },
+        "quote": "what we're going to do here is just going to say I want you to create a brand new project in my versel account using the CLI tool here to actually uh",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0044",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4202,
+          "end_s": 4207
+        },
+        "quote": "let clock here to figure this out. All right with just a few seconds now you can see that we have our applications",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0045",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4207,
+          "end_s": 4218
+        },
+        "quote": "Going to paste that link right here. And now you can see we have our system",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0046",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4218,
+          "end_s": 4230
+        },
+        "quote": "this is everything is usable. I can also resets. Everything looks pretty good.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0047",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4230,
+          "end_s": 4236
+        },
+        "quote": "you can see that this application here was deployed 15 minutes ago.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0048",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4236,
+          "end_s": 4248
+        },
+        "quote": "I can click on the settings here and just going to go back right and click on delete project right",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0049",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4248,
+          "end_s": 4254
+        },
+        "quote": "here or the other way you can do this here is I can just tell claw code say hey I want you to delete this project",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0050",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4254,
+          "end_s": 4260
+        },
+        "quote": "okay can you delete this project right now and it's going to have the ability here to do so in this case we're going",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0051",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4260,
+          "end_s": 4265
+        },
+        "quote": "to have claw code here to actually delete this project so that it's not really available to the public so is",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0052",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4265,
+          "end_s": 4278
+        },
+        "quote": "exactly what's there. So, I deleted the right thing and nothing else. So, here you can see we're flagging here before I",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0053",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4278,
+          "end_s": 4289
+        },
+        "quote": "act. Your account here has three projects. Two are already the live properties that I didn't create. So, the",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0054",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4289,
+          "end_s": 4294
+        },
+        "quote": "delete. And now you can see we have the application here is fully deleted now. And your other two project here is",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0055",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4299,
+          "end_s": 4306
+        },
+        "quote": "now if I were to navigate to the link, you can see it's showing deploy not found. So 404 here.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      },
+      {
+        "anchor_id": "AN-0056",
+        "anchor_type": "text_span_timecoded",
+        "artifact": "CHAPTER-SLICE",
+        "slice_sha256": "2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5",
+        "span": {
+          "start_s": 4306,
+          "end_s": 4312
+        },
+        "quote": "see we can have our AI here to have the ability to connect it to any application tools and help us to act on our behalf.",
+        "LOCATED_IN": "PASS",
+        "REPRODUCED_FROM": "PASS",
+        "SUPPORTED_BY": "NOT_APPLICABLE"
+      }
+    ],
+    "items": [
+      {
+        "local_id": "EV-0001",
+        "origin_local_id_p002": "EV-0334",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O objetivo é ter o Claude Code assumindo o controle dos apps e ferramentas usados no dia a dia, como Jira para gerenciar quadros de projeto, Vercel para deploy de aplicações, Stripe para criar produtos de e-commerce e Facebook para criar anúncios ou comunidades",
+        "quote": "let's say you're currently using Jira to manage your project board or let's say you're currently using Universell to\n\n**63:00**\n\ndeploy your applications or let's say if you're using Stripe to creating products for your e-commerce store or let's say\n\n**63:05**\n\nif you're using Facebook, right, to creating Facebook ads or creating Facebook communities, right?",
+        "span": {
+          "start_s": 3767,
+          "end_s": 3792
+        },
+        "anchor_id": "AN-0001"
+      },
+      {
+        "local_id": "EV-0002",
+        "origin_local_id_p002": "EV-0335",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "O valor de conectar ferramentas externas ao Claude Code é automatizar processos tediosos em que você teria que clicar por diversos passos para chegar ao que quer",
+        "quote": "To help you to automate those tedious process where you have to\n\n**63:18**\n\nclick into different steps here to actually get to what you want, right?",
+        "span": {
+          "start_s": 3792,
+          "end_s": 3803
+        },
+        "anchor_id": "AN-0002"
+      },
+      {
+        "local_id": "EV-0003",
+        "origin_local_id_p002": "EV-0336",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "GitHub é uma das ferramentas que já vem por padrão com o Claude Code, permitindo que ele faça commits, crie repositórios e gerencie branches",
+        "quote": "which is GitHub and GitHub is one of the tools that\n\n**63:34**\n\ncomes by default with claw code that claw code can be able to actually call to commits creating repositories to\n\n**63:41**\n\nmanage the branch all those kind of things are already come by default.",
+        "span": {
+          "start_s": 3803,
+          "end_s": 3821
+        },
+        "anchor_id": "AN-0003"
+      },
+      {
+        "local_id": "EV-0004",
+        "origin_local_id_p002": "EV-0337",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Existem muitas ferramentas que não vêm por padrão e que podem ser instaladas e adicionadas ao Claude Code para torná-lo muito mais poderoso",
+        "quote": "But there's also a lot of tools here that\n\n**63:47**\n\naren't come by default that we can actually install and add it to claw code to actually make claw code here really\n\n**63:53**\n\nreally powerful",
+        "span": {
+          "start_s": 3821,
+          "end_s": 3833
+        },
+        "anchor_id": "AN-0004"
+      },
+      {
+        "local_id": "EV-0005",
+        "origin_local_id_p002": "EV-0338",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "O mecanismo para conectar o agente de IA a essas ferramentas externas é um protocolo chamado MCP",
+        "quote": "and to actually have our AI agent here to connecting those tools is using a protocol called MCP",
+        "span": {
+          "start_s": 3833,
+          "end_s": 3841
+        },
+        "anchor_id": "AN-0005"
+      },
+      {
+        "local_id": "EV-0006",
+        "origin_local_id_p002": "EV-0339",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "MCP significa Model Context Protocol",
+        "quote": "you can see that MCP stands for model context protocol",
+        "span": {
+          "start_s": 3841,
+          "end_s": 3846
+        },
+        "anchor_id": "AN-0006"
+      },
+      {
+        "local_id": "EV-0007",
+        "origin_local_id_p002": "EV-0340",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "O MCP fica entre os agentes de IA (como o Claude Code) e as ferramentas/apps usados no dia a dia, funcionando como o gateway que conecta a IA a todas essas ferramentas",
+        "quote": "which stands between\n\n**64:06**\n\nthe AI agents right our claw code and also our tools right any apps we're currently using day-to-day Facebook\n\n**64:13**\n\nShopify e-commerce or whatever software we're using day-to-day. These are the gateways that connects the AI here with\n\n**64:20**\n\nall those tools that we have.",
+        "span": {
+          "start_s": 3841,
+          "end_s": 3860
+        },
+        "anchor_id": "AN-0007"
+      },
+      {
+        "local_id": "EV-0008",
+        "origin_local_id_p002": "EV-0341",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Uma analogia útil para entender o MCP é pensá-lo como uma porta USB para a inteligência artificial",
+        "quote": "And you can think of MCP is kind of like a USB port for your artificial intelligence.",
+        "span": {
+          "start_s": 3860,
+          "end_s": 3867
+        },
+        "anchor_id": "AN-0008"
+      },
+      {
+        "local_id": "EV-0009",
+        "origin_local_id_p002": "EV-0342",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Antes do MCP, desenvolvedores tinham que escrever código/scripts customizados para que a IA pudesse acessar serviços como Google Drive, GitHub ou bancos de dados locais",
+        "quote": "Before MCP developer have to write custom code, right? Custom script that can have AI here to call those script\n\n**64:34**\n\nlike Google Drive, GitHub or local database to actually have AI agent here to give hands to manage those.",
+        "span": {
+          "start_s": 3867,
+          "end_s": 3880
+        },
+        "anchor_id": "AN-0009"
+      },
+      {
+        "local_id": "EV-0010",
+        "origin_local_id_p002": "EV-0343",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "CONCEPT",
+        "claim_text_p002": "O MCP padroniza essa integração: o cliente MCP é a aplicação de IA com a qual você conversa (como o app desktop do Claude ou os agentes do Claude Code)",
+        "quote": "But now\n\n**64:40**\n\nwith MCP we can standard this so that the MCB client is our AI applications\n\n**64:47**\n\nwhere you're chatting with like claw code desktop app or your claw code AI agents right",
+        "span": {
+          "start_s": 3880,
+          "end_s": 3893
+        },
+        "anchor_id": "AN-0010"
+      },
+      {
+        "local_id": "EV-0011",
+        "origin_local_id_p002": "EV-0344",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "CONCEPT",
+        "claim_text_p002": "O servidor MCP é um programa leve que permite à IA ler arquivos locais, acessar bancos de dados ou buscar dados na web",
+        "quote": "and the MCB server is a\n\n**64:53**\n\nlightweight program that allow AI here to reading those local files right access your database or searching data\n\n**65:00**\n\non the web",
+        "span": {
+          "start_s": 3893,
+          "end_s": 3900
+        },
+        "anchor_id": "AN-0011"
+      },
+      {
+        "local_id": "EV-0012",
+        "origin_local_id_p002": "EV-0345",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Servidores MCP também permitem conectar a serviços externos como Stripe, PayPal, Slack ou Jira — qualquer software ou app que você use no dia a dia",
+        "quote": "or connecting to maybe like Stripe or PayPal or people to connect to\n\n**65:05**\n\nSlack or Jira whichever softwares or apps you're using day-to-day you can have AI here to actually use it",
+        "span": {
+          "start_s": 3900,
+          "end_s": 3905
+        },
+        "anchor_id": "AN-0012"
+      },
+      {
+        "local_id": "EV-0013",
+        "origin_local_id_p002": "EV-0346",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "MCP não é a única forma de dar controle de ferramentas a um agente de IA: também é possível controlar via ferramenta CLI, o que é outra maneira de conectar a IA.",
+        "quote": "that's basically how MCP works. Now MCP isn't just only one tool that have AI\n\n**65:18**\n\nagent here to control right you can also have the ability here to control using CLI tool and how we can be able to have\n\n**65:25**\n\nAI here to connect it is also the other way to do it",
+        "span": {
+          "start_s": 3912,
+          "end_s": 3930
+        },
+        "anchor_id": "AN-0013"
+      },
+      {
+        "local_id": "EV-0014",
+        "origin_local_id_p002": "EV-0347",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "O CLI funciona como uma linha de comando: você abre o terminal, digita um texto, roda um programa ou um script para interagir com um software de terceiros.",
+        "quote": "does is kind of like a command line where you open your terminal here you type in a text simply you run a program",
+        "span": {
+          "start_s": 3930,
+          "end_s": 3936
+        },
+        "anchor_id": "AN-0014"
+      },
+      {
+        "local_id": "EV-0015",
+        "origin_local_id_p002": "EV-0348",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Um agente de IA pode interagir com apps ou serviços através do CLI, do mesmo modo que um humano faria pelo terminal.",
+        "quote": "or run a script to interact with a third party software you can also have AI\n\n**65:42**\n\nagent here to interact with those apps apps or services through the CLI as well.",
+        "span": {
+          "start_s": 3936,
+          "end_s": 3948
+        },
+        "anchor_id": "AN-0015"
+      },
+      {
+        "local_id": "EV-0016",
+        "origin_local_id_p002": "EV-0349",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Não importa se é MCP ou CLI: ambos são ferramentas que permitem ao agente de IA chamar aplicações de terceiros em nosso nome.",
+        "quote": "But the point here is that it\n\n**65:48**\n\ndoesn't matter if it's MCP or CLI. Those are the tools that we can have AI agent here calling third party applications on\n\n**65:55**\n\nour behalf.",
+        "span": {
+          "start_s": 3942,
+          "end_s": 3955
+        },
+        "anchor_id": "AN-0016"
+      },
+      {
+        "local_id": "EV-0017",
+        "origin_local_id_p002": "EV-0350",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O Stripe oferece tanto CLI quanto MCPs, ambos passíveis de conexão com um modelo de linguagem.",
+        "quote": "And believe it or not, apps like Stripe has CLI and they also have\n\n**66:00**\n\nMCPs where we can have our log function model here to connect to.",
+        "span": {
+          "start_s": 3955,
+          "end_s": 3966
+        },
+        "anchor_id": "AN-0017"
+      },
+      {
+        "local_id": "EV-0018",
+        "origin_local_id_p002": "EV-0351",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O Google lançou seu próprio CLI, ao qual um agente de IA pode se conectar.",
+        "quote": "And even Google here also has released their CLI",
+        "span": {
+          "start_s": 3960,
+          "end_s": 3966
+        },
+        "anchor_id": "AN-0018"
+      },
+      {
+        "local_id": "EV-0019",
+        "origin_local_id_p002": "EV-0352",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "PROCEDURE",
+        "claim_text_p002": "O GoHighLevel disponibiliza um MCP próprio; basta seguir a documentação para conectá-lo ao modelo de linguagem.",
+        "quote": "you can see that go high\n\n**66:19**\n\nlevel also has their MCP, right? How to use the go high level MCP here and simply just follow documentation and you\n\n**66:26**\n\ncan connect your MCP with your large model.",
+        "span": {
+          "start_s": 3972,
+          "end_s": 3992
+        },
+        "anchor_id": "AN-0019"
+      },
+      {
+        "local_id": "EV-0020",
+        "origin_local_id_p002": "EV-0353",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "DECISION",
+        "claim_text_p002": "Se você usa Vercel para deploy e tem medo de rodar comandos no terminal, pode usar o MCP da Vercel para que o modelo de linguagem faça o deploy da aplicação.",
+        "quote": "Or let's say if you're currently using Verscell right for deploying your\n\n**66:32**\n\napplication and you're scared to running commands in your terminal and you want to have your large model here to do it\n\n**66:37**\n\nlike deploy your application to Verscell you can also using the Verscell MCP",
+        "span": {
+          "start_s": 3986,
+          "end_s": 4004
+        },
+        "anchor_id": "AN-0020"
+      },
+      {
+        "local_id": "EV-0021",
+        "origin_local_id_p002": "EV-0354",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "EXAMPLE",
+        "claim_text_p002": "A Vercel também possui uma ferramenta CLI, permitindo que o modelo de linguagem se conecte à Vercel pelo terminal através do CLI.",
+        "quote": "and you can see that Verscell here also has\n\n**66:44**\n\nCLI tool which you can also have your large model here to connect your Versell with the terminal right through the CLI\n\n**66:50**\n\ntool.",
+        "span": {
+          "start_s": 3997,
+          "end_s": 4010
+        },
+        "anchor_id": "AN-0021"
+      },
+      {
+        "local_id": "EV-0022",
+        "origin_local_id_p002": "EV-0355",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "Existem muitas maneiras diferentes de conectar um modelo de linguagem a aplicações de terceiros (MCP, CLI, etc.).",
+        "quote": "So there's actually many ways that you can do this.",
+        "span": {
+          "start_s": 4010,
+          "end_s": 4011
+        },
+        "anchor_id": "AN-0022"
+      },
+      {
+        "local_id": "EV-0023",
+        "origin_local_id_p002": "EV-0372",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Criar conta no Vercel para uma nova aplicação é completamente gratuito",
+        "quote": "we're going to sign in with Verscell just creating a new application here and\n\n**67:08**\n\nit's actually completely free",
+        "span": {
+          "start_s": 4021,
+          "end_s": 4028
+        },
+        "anchor_id": "AN-0023"
+      },
+      {
+        "local_id": "EV-0024",
+        "origin_local_id_p002": "EV-0356",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Para descobrir se o ambiente já suporta deploy, pergunte ao agente se ele tem Vercel CLI ou MCP no sistema atual onde possa fazer deploy da aplicação",
+        "quote": "I'm going to clear the current session that we have and I'm just going to ask do you\n\n**67:27**\n\nhave Versell CLI or MCP in your current system where I can actually deploy the current application onto Verscell.",
+        "span": {
+          "start_s": 4041,
+          "end_s": 4054
+        },
+        "anchor_id": "AN-0024"
+      },
+      {
+        "local_id": "EV-0025",
+        "origin_local_id_p002": "EV-0357",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Limpar a sessão atual antes de fazer a pergunta sobre CLI/MCP",
+        "quote": "simply I'm going to clear the current session that we have",
+        "span": {
+          "start_s": 4041,
+          "end_s": 4047
+        },
+        "anchor_id": "AN-0025"
+      },
+      {
+        "local_id": "EV-0026",
+        "origin_local_id_p002": "EV-0358",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Se o ambiente não tiver CLI ou MCP disponível, copie a documentação de conexão do Vercel ao MCP ou o link da documentação do Vercel CLI para o Claude Code",
+        "quote": "but if you don't have one simply just going to come over\n\n**67:39**\n\nto documentation for connecting Versell to MCP or you can also copy the documentation for Versell CLI link over\n\n**67:46**\n\nto claw code.",
+        "span": {
+          "start_s": 4054,
+          "end_s": 4066
+        },
+        "anchor_id": "AN-0026"
+      },
+      {
+        "local_id": "EV-0027",
+        "origin_local_id_p002": "EV-0359",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "CLI significa command line interface e permite que a IA execute comandos de shell em um terminal",
+        "quote": "CLI tool stands for command line interface, right? Let's AI here to actually execute any shell\n\n**67:58**\n\ncommands in a terminal.",
+        "span": {
+          "start_s": 4072,
+          "end_s": 4078
+        },
+        "anchor_id": "AN-0027"
+      },
+      {
+        "local_id": "EV-0028",
+        "origin_local_id_p002": "EV-0360",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "MCP fornece uma ponte de conexão padronizada e segura entre a IA e ferramentas e dados remotos",
+        "quote": "MCP provides a standardized secure bridging connections between AI to remote tools and data.",
+        "span": {
+          "start_s": 4078,
+          "end_s": 4086
+        },
+        "anchor_id": "AN-0028"
+      },
+      {
+        "local_id": "EV-0029",
+        "origin_local_id_p002": "EV-0361",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Ferramentas CLI dependem de comandos de terminal gerados pela IA rodando no ambiente local, o que é altamente eficiente em tokens",
+        "quote": "CLI tools relies on AI generated running terminals in your local environment,\n\n**68:12**\n\nwhich is highly token efficient.",
+        "span": {
+          "start_s": 4086,
+          "end_s": 4092
+        },
+        "anchor_id": "AN-0029"
+      },
+      {
+        "local_id": "EV-0030",
+        "origin_local_id_p002": "EV-0362",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Se o objetivo é economizar tokens, usar CLI é a melhor opção",
+        "quote": "So let's say if you want to save tokens that using CLI here is the best option",
+        "span": {
+          "start_s": 4092,
+          "end_s": 4097
+        },
+        "anchor_id": "AN-0030"
+      },
+      {
+        "local_id": "EV-0031",
+        "origin_local_id_p002": "EV-0363",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "MCP usa um protocolo padronizado que expõe ferramentas limitadas ao agente de IA",
+        "quote": "but if you're using MCP that basically have a standardized protocol here exposing tools that are limited to AI\n\n**68:24**\n\nagent here to use",
+        "span": {
+          "start_s": 4097,
+          "end_s": 4104
+        },
+        "anchor_id": "AN-0031"
+      },
+      {
+        "local_id": "EV-0032",
+        "origin_local_id_p002": "EV-0364",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Se você quer controlar quantas ferramentas o agente de IA recebe acesso, use MCP",
+        "quote": "so let's say if you want to controlling how many tools the AI agent want to give access you can\n\n**68:30**\n\nuse MCP",
+        "span": {
+          "start_s": 4104,
+          "end_s": 4110
+        },
+        "anchor_id": "AN-0032"
+      },
+      {
+        "local_id": "EV-0033",
+        "origin_local_id_p002": "EV-0365",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "MCP se destaca em segurança porque dá controle sobre quais ferramentas o agente de IA pode acessar",
+        "quote": "but that definitely shines in security here because you have control over what tools to ask uh to give AI\n\n**68:36**\n\nagent here to access to",
+        "span": {
+          "start_s": 4110,
+          "end_s": 4116
+        },
+        "anchor_id": "AN-0033"
+      },
+      {
+        "local_id": "EV-0034",
+        "origin_local_id_p002": "EV-0366",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "DECISION",
+        "claim_text_p002": "Em ambiente de equipe com vários membros trabalhando no projeto, a ferramenta MCP é a melhor opção",
+        "quote": "and also have the ability here to have a better team environment let's say if you have a bunch of team members here to actually\n\n**68:43**\n\nwork on it then MCB tool here is the best option",
+        "span": {
+          "start_s": 4116,
+          "end_s": 4128
+        },
+        "anchor_id": "AN-0034"
+      },
+      {
+        "local_id": "EV-0035",
+        "origin_local_id_p002": "EV-0367",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "Com um servidor MCP é possível definir fronteiras de autenticação e trilhas de auditoria, porque sendo um servidor permite rastrear todas as requisições feitas",
+        "quote": "because you can actually set the authentication boundaries and the\n\n**68:48**\n\naudit trails using MCP server because it's a server by the end of the day that you can keep track of all the requests\n\n**68:53**\n\nbeing made",
+        "span": {
+          "start_s": 4123,
+          "end_s": 4133
+        },
+        "anchor_id": "AN-0035"
+      },
+      {
+        "local_id": "EV-0036",
+        "origin_local_id_p002": "EV-0368",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "MCP consome mais tokens que CLI porque os schemas das ferramentas são constantemente carregados na janela de contexto da IA",
+        "quote": "however though it consumes more tokens be compared to just using the CLI because the tool here for\n\n**69:00**\n\nthe schemas are constantly loaded into the AI context window and that's exactly why MTP here actually consume more token",
+        "span": {
+          "start_s": 4133,
+          "end_s": 4147
+        },
+        "anchor_id": "AN-0036"
+      },
+      {
+        "local_id": "EV-0037",
+        "origin_local_id_p002": "EV-0369",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Trade-off central: escolha MCP se a prioridade é segurança; escolha CLI se a prioridade é eficiência de tokens",
+        "quote": "but if you want to go for like security then MCP is definitely the option if you want to go for token efficiency then\n\n**69:13**\n\ntoken efficiency here is going to be CLI tool.",
+        "span": {
+          "start_s": 4147,
+          "end_s": 4153
+        },
+        "anchor_id": "AN-0037"
+      },
+      {
+        "local_id": "EV-0038",
+        "origin_local_id_p002": "EV-0370",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Se o critério é velocidade ou eficiência de tokens, CLI é a melhor opção",
+        "quote": "if you're looking for speed\n\n**69:20**\n\nor token efficiency CLI is the best option",
+        "span": {
+          "start_s": 4153,
+          "end_s": 4160
+        },
+        "anchor_id": "AN-0038"
+      },
+      {
+        "local_id": "EV-0039",
+        "origin_local_id_p002": "EV-0371",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "DECISION",
+        "claim_text_p002": "Se o foco é ambiente de equipe com múltiplos tenants para agentes de IA, ou gestão de controle de acesso e autenticação, MCP é a melhor opção",
+        "quote": "but if you're mostly focusing on like a team environment where you want\n\n**69:25**\n\nto build multiple tenant for the AI agents here or managing access control and authentication then definitely using\n\n**69:31**\n\nthe MCP here is the best option",
+        "span": {
+          "start_s": 4160,
+          "end_s": 4171
+        },
+        "anchor_id": "AN-0039"
+      },
+      {
+        "local_id": "EV-0040",
+        "origin_local_id_p002": "EV-0373",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONSTRAINT",
+        "claim_text_p002": "A conexão do MCP na máquina local é pré-requisito para pedir ao agente que faça o deploy da aplicação.",
+        "quote": "and also the MCP is fully connected in my local machine.",
+        "span": {
+          "start_s": 4176,
+          "end_s": 4182
+        },
+        "anchor_id": "AN-0040"
+      },
+      {
+        "local_id": "EV-0041",
+        "origin_local_id_p002": "EV-0374",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Se o MCP ainda não estiver conectado, basta copiar o link da documentação, colar no agente de código e deixar que ele mesmo faça a conexão para você.",
+        "quote": "documentation link paste the claw code and let it connect it for you.",
+        "span": {
+          "start_s": 4176,
+          "end_s": 4182
+        },
+        "anchor_id": "AN-0041"
+      },
+      {
+        "local_id": "EV-0042",
+        "origin_local_id_p002": "EV-0375",
+        "epistemic_status": "MODEL_INFERENCE",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Depois de conectar o MCP, faça login na sua conta da Vercel antes de seguir.",
+        "quote": "Once you connected log into your versell then",
+        "span": {
+          "start_s": 4182,
+          "end_s": 4189
+        },
+        "anchor_id": "AN-0042"
+      },
+      {
+        "local_id": "EV-0043",
+        "origin_local_id_p002": "EV-0376",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Prompt de deploy usado: pedir ao agente para criar um projeto novo na conta da Vercel usando a ferramenta de CLI para fazer o deploy da aplicação.",
+        "quote": "what we're going to do here is just going to say I want you to create a brand new project in my versel account using the CLI tool here to actually uh",
+        "span": {
+          "start_s": 4189,
+          "end_s": 4196
+        },
+        "anchor_id": "AN-0043"
+      },
+      {
+        "local_id": "EV-0044",
+        "origin_local_id_p002": "EV-0377",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Com o MCP conectado, o deploy da aplicação é concluído pelo agente em poucos segundos após o envio do pedido.",
+        "quote": "let clock here to figure this out. All right with just a few seconds now you can see that we have our applications",
+        "span": {
+          "start_s": 4202,
+          "end_s": 4207
+        },
+        "anchor_id": "AN-0044"
+      },
+      {
+        "local_id": "EV-0045",
+        "origin_local_id_p002": "EV-0378",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Verifique o deploy copiando o link gerado e abrindo-o no navegador para confirmar que a aplicação está publicada e acessível.",
+        "quote": "Going to paste that link right here. And now you can see we have our system",
+        "span": {
+          "start_s": 4207,
+          "end_s": 4218
+        },
+        "anchor_id": "AN-0045"
+      },
+      {
+        "local_id": "EV-0046",
+        "origin_local_id_p002": "EV-0379",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "QUALITY_CRITERION",
+        "claim_text_p002": "A validação vai além de a página carregar: interagir com a aplicação publicada (por exemplo, usar e resetar) confirma que ela está utilizável.",
+        "quote": "this is everything is usable. I can also resets. Everything looks pretty good.",
+        "span": {
+          "start_s": 4218,
+          "end_s": 4230
+        },
+        "anchor_id": "AN-0046"
+      },
+      {
+        "local_id": "EV-0047",
+        "origin_local_id_p002": "EV-0380",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "O painel da plataforma de hospedagem serve como segunda confirmação, mostrando o projeto e o momento do deploy.",
+        "quote": "you can see that this application here was deployed 15 minutes ago.",
+        "span": {
+          "start_s": 4230,
+          "end_s": 4236
+        },
+        "anchor_id": "AN-0047"
+      },
+      {
+        "local_id": "EV-0048",
+        "origin_local_id_p002": "EV-0381",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Uma forma de remover o projeto publicado é manualmente pelo painel: abrir as configurações do projeto e clicar em 'delete project'.",
+        "quote": "I can click on the settings here and just going to go back right and click on delete project right",
+        "span": {
+          "start_s": 4236,
+          "end_s": 4248
+        },
+        "anchor_id": "AN-0048"
+      },
+      {
+        "local_id": "EV-0049",
+        "origin_local_id_p002": "EV-0382",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "A alternativa ao caminho manual é instruir o próprio agente de código a deletar o projeto.",
+        "quote": "here or the other way you can do this here is I can just tell claw code say hey I want you to delete this project",
+        "span": {
+          "start_s": 4248,
+          "end_s": 4254
+        },
+        "anchor_id": "AN-0049"
+      },
+      {
+        "local_id": "EV-0050",
+        "origin_local_id_p002": "EV-0383",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "Exemplo de comando destrutivo dado em linguagem natural ao agente: 'can you delete this project right now'.",
+        "quote": "okay can you delete this project right now and it's going to have the ability here to do so in this case we're going",
+        "span": {
+          "start_s": 4254,
+          "end_s": 4260
+        },
+        "anchor_id": "AN-0050"
+      },
+      {
+        "local_id": "EV-0051",
+        "origin_local_id_p002": "EV-0384",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "RATIONALE",
+        "claim_text_p002": "A razão para deletar o projeto de demonstração é impedir que ele fique disponível publicamente.",
+        "quote": "to have claw code here to actually delete this project so that it's not really available to the public so is",
+        "span": {
+          "start_s": 4260,
+          "end_s": 4265
+        },
+        "anchor_id": "AN-0051"
+      },
+      {
+        "local_id": "EV-0052",
+        "origin_local_id_p002": "EV-0385",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PRINCIPLE",
+        "claim_text_p002": "Antes de executar uma ação destrutiva, o agente primeiro confirma o que existe na conta, para deletar a coisa certa e nada mais.",
+        "quote": "exactly what's there. So, I deleted the right thing and nothing else. So, here you can see we're flagging here before I",
+        "span": {
+          "start_s": 4265,
+          "end_s": 4278
+        },
+        "anchor_id": "AN-0052"
+      },
+      {
+        "local_id": "EV-0053",
+        "origin_local_id_p002": "EV-0386",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "EXAMPLE",
+        "claim_text_p002": "O agente sinaliza o contexto antes de agir, listando os três projetos da conta e identificando os dois que já eram propriedades ativas não criadas por ele.",
+        "quote": "act. Your account here has three projects. Two are already the live properties that I didn't create. So, the",
+        "span": {
+          "start_s": 4278,
+          "end_s": 4289
+        },
+        "anchor_id": "AN-0053"
+      },
+      {
+        "local_id": "EV-0054",
+        "origin_local_id_p002": "EV-0387",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "QUALITY_CRITERION",
+        "claim_text_p002": "Critério de sucesso da deleção: o projeto alvo é removido e os outros projetos permanecem intocados.",
+        "quote": "delete. And now you can see we have the application here is fully deleted now. And your other two project here is",
+        "span": {
+          "start_s": 4289,
+          "end_s": 4294
+        },
+        "anchor_id": "AN-0054"
+      },
+      {
+        "local_id": "EV-0055",
+        "origin_local_id_p002": "EV-0388",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "PROCEDURE",
+        "claim_text_p002": "Confirme a remoção navegando até o link antigo: o retorno esperado é 'deploy not found' / 404.",
+        "quote": "now if I were to navigate to the link, you can see it's showing deploy not found. So 404 here.",
+        "span": {
+          "start_s": 4299,
+          "end_s": 4306
+        },
+        "anchor_id": "AN-0055"
+      },
+      {
+        "local_id": "EV-0056",
+        "origin_local_id_p002": "EV-0389",
+        "epistemic_status": "SOURCE_EXPLICIT",
+        "category": "CONCEPT",
+        "claim_text_p002": "O ponto central da integração via MCP é dar à IA a capacidade de se conectar a qualquer ferramenta de aplicação e agir em seu nome.",
+        "quote": "see we can have our AI here to have the ability to connect it to any application tools and help us to act on our behalf.",
+        "span": {
+          "start_s": 4306,
+          "end_s": 4312
+        },
+        "anchor_id": "AN-0056"
+      }
+    ],
+    "source_package_hash": "40a786072bd3faac832be876a62d082c17995ca5cd4b3e393041fb0d74e57f8e"
+  }
+}
