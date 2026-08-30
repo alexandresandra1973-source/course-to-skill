@@ -1,0 +1,279 @@
+{
+  "iniciado": "2026-08-30T02:40:49.633021-03:00",
+  "opening_record_sha256": "bb4427c458e21f2938ce0ee0a9d084676d0d2a681d061b686ef5481aeec281e6",
+  "seal_verifier_sha256": "63cfe229de85713a2717b2d9cd3cd6d49de871b10bad255284af379259dc717f",
+  "identity_verifier_sha256": "51aede028a9e3069faad6bdfb1912a6cada2259918a1a8cf760e8e21691f7c84",
+  "build_fixtures_sha256": "dc42a0d15565d8ebd7ace7d8d4d5ce69205d5022c2adda504a5ffbb82f026b26",
+  "runner_sha256": "d438dff1c7fe5aa6679fb0944d0d4434f54b8332a705e802c3d0640ea6dfedd8",
+  "fixtures_executadas": 8,
+  "fixtures_na_matriz": 8,
+  "resultados_inesperados": [],
+  "fixtures_sem_defeito": [],
+  "c5_asserçoes": {
+    "local_ids_podem_repetir": true,
+    "identidade_nua_colide": true,
+    "identidade_qualificada_distinta": true
+  },
+  "c5_ok": true,
+  "classificacao": "PILOT_MS_000A_PASS",
+  "linhas": [
+    {
+      "fixture": "HAPPY",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "conjunto integro por construcao",
+      "esperado": "PASS",
+      "observado": "PASS",
+      "codigos_esperados": [],
+      "codigos_observados": [],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD.yaml"
+        ],
+        "versions_declared": [
+          "1.0"
+        ],
+        "members_listed": 3,
+        "extra_on_disk": [],
+        "missing_on_disk": [],
+        "hash_mismatched": [],
+        "producer_declared": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "producer_real": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "seal_sha256": "119ac91426b2357eab71bc2155b1fd1da32cebcc6126274fbab8bfa4aed69d89"
+      }
+    },
+    {
+      "fixture": "C1",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "2 selos, versoes ['1.0', '2.0']",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "SHARED_MUTABLE_DIRECTORY"
+      ],
+      "codigos_observados": [
+        "SHARED_MUTABLE_DIRECTORY"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD-v2.yaml",
+          "SEAL-RECORD.yaml"
+        ],
+        "versions_declared": [
+          "1.0",
+          "2.0"
+        ],
+        "members_listed": 3,
+        "extra_on_disk": [],
+        "missing_on_disk": [],
+        "hash_mismatched": [],
+        "producer_declared": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "producer_real": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "seal_sha256": "1fcc3eb49e90dd91f4cd9c8c13129a9d518ab2f99306a53cc4cab47809ed09a3"
+      }
+    },
+    {
+      "fixture": "C2",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "selo byte-identico ao de C2_SET_A=True; diverge no lugar=True",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "DOES_NOT_VALIDATE_IN_PLACE"
+      ],
+      "codigos_observados": [
+        "DOES_NOT_VALIDATE_IN_PLACE",
+        "MEMBER_HASH_MISMATCH"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD.yaml"
+        ],
+        "versions_declared": [
+          "1.0"
+        ],
+        "members_listed": 2,
+        "extra_on_disk": [],
+        "missing_on_disk": [],
+        "hash_mismatched": [
+          "alpha.txt"
+        ],
+        "producer_declared": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "producer_real": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "seal_sha256": "cc249e80ee38a7b0a02c86a88622b3ae5296be9d3ad30536d89fc0503bba9f23"
+      }
+    },
+    {
+      "fixture": "C3",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "members[] contem o proprio selo: ['SEAL-RECORD.yaml']",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "SEAL_SELF_REFERENCE"
+      ],
+      "codigos_observados": [
+        "DOES_NOT_VALIDATE_IN_PLACE",
+        "MEMBER_HASH_MISMATCH",
+        "MEMBER_SET_MISMATCH",
+        "SEAL_SELF_REFERENCE"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD.yaml"
+        ],
+        "versions_declared": [
+          "1.0"
+        ],
+        "members_listed": 4,
+        "self_refs": [
+          "SEAL-RECORD.yaml"
+        ],
+        "extra_on_disk": [],
+        "missing_on_disk": [
+          "SEAL-RECORD.yaml"
+        ],
+        "hash_mismatched": [
+          "SEAL-RECORD.yaml"
+        ],
+        "producer_declared": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "producer_real": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "seal_sha256": "3c8d2fc0f99360c2720701b5cc75ad885a907b3812e997cde541d00034300287"
+      }
+    },
+    {
+      "fixture": "C4",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "declarado=0000000000000000… real=51f9de0ff7846c3b…",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "PRODUCER_IDENTITY_MISMATCH"
+      ],
+      "codigos_observados": [
+        "PRODUCER_IDENTITY_MISMATCH"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD.yaml"
+        ],
+        "versions_declared": [
+          "1.0"
+        ],
+        "members_listed": 3,
+        "extra_on_disk": [],
+        "missing_on_disk": [],
+        "hash_mismatched": [],
+        "producer_declared": "0000000000000000000000000000000000000000000000000000000000000000",
+        "producer_real": "51f9de0ff7846c3bc51d073c4de3bf75a97e19c6bf6fcc325c1abfd98c8fdbc1",
+        "seal_sha256": "df96b1562e9ac58aedb3e92d882a0dfcf935ccc11b59717353fbbefb7664634e"
+      }
+    },
+    {
+      "fixture": "C5",
+      "classe": "PACKAGE_IDENTITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "local_ids=['EV-0001', 'EV-0002', 'EV-0001', 'EV-0002']; repetidos=True",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "GLOBAL_ID_COLLISION"
+      ],
+      "codigos_observados": [
+        "GLOBAL_ID_COLLISION"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "packages": [
+          "pkg-A.json",
+          "pkg-B.json"
+        ],
+        "local_ids_total": 4,
+        "naked_collisions": [
+          "EV-0001",
+          "EV-0002"
+        ],
+        "qualified_distinct": 4,
+        "naked_refs": []
+      }
+    },
+    {
+      "fixture": "C6",
+      "classe": "PACKAGE_IDENTITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "cross_refs sem source_package_hash: [{'local_id': 'EV-0001'}]",
+      "esperado": "FAIL",
+      "observado": "FAIL",
+      "codigos_esperados": [
+        "NAKED_LOCAL_ID"
+      ],
+      "codigos_observados": [
+        "NAKED_LOCAL_ID"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "packages": [
+          "pkg-A.json",
+          "pkg-B.json"
+        ],
+        "local_ids_total": 2,
+        "naked_collisions": [],
+        "qualified_distinct": 2,
+        "naked_refs": [
+          {
+            "pacote": "pkg-A.json",
+            "ref": {
+              "local_id": "EV-0001"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "CTRL-INVALID",
+      "classe": "SEAL_INTEGRITY",
+      "defeito_presente": true,
+      "assercao_estrutural": "YAML ilegivel: ScannerError",
+      "esperado": "INVALID",
+      "observado": "INVALID",
+      "codigos_esperados": [
+        "SEAL_RECORD_UNPARSEABLE"
+      ],
+      "codigos_observados": [
+        "SEAL_RECORD_UNPARSEABLE"
+      ],
+      "veredito_confere": true,
+      "motivo_confere": true,
+      "resultado": "ESPERADO",
+      "detail": {
+        "seal_records_found": [
+          "SEAL-RECORD.yaml"
+        ],
+        "erro": "SEAL-RECORD.yaml: ScannerError"
+      }
+    }
+  ]
+}
