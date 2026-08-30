@@ -1,0 +1,136 @@
+# ARCHITECTURE-FREEZE-RECORD — Course-to-Skill Multi-Source
+# SEAL-RECORD do ARCHITECTURE FREEZE de 2026-08-30.
+#
+# Este selo cumpre as sete condicoes de SEALED que o proprio freeze congela (secao 13):
+#  1. enumera TODOS os membros por caminho relativo + sha256           -> members[]
+#  2. o hash deste selo e registrado FORA do conjunto selado           -> na mensagem do commit
+#  3. valida NO LUGAR, contra o diretorio em que vive                  -> caminhos relativos a este arquivo
+#  4. o diretorio nao e escrito por outra versao selada                -> _mirror/docs/architecture/ e exclusivo deste freeze
+#  5. produtor e entidade com hash proprio, nao campo de texto         -> producer{}
+#  6. validacao determinística e offline; NAO usa mtime, rede ou relogio
+#  7. NENHUM membro se auto-referencia: este selo NAO se lista em members[]
+#
+# Verificacao:
+#   cd _mirror/docs/architecture && python3 -c "import yaml,hashlib,pathlib;d=yaml.safe_load(open('ARCHITECTURE-FREEZE-RECORD.yaml'));\
+#   print(all(hashlib.sha256(pathlib.Path(m['path']).read_bytes()).hexdigest()==m['sha256'] for m in d['members']))"
+
+artifact_id: COURSE-TO-SKILL-MULTI-SOURCE-ARCHITECTURE-FREEZE-RECORD
+artifact_status: SEALED
+schema_version: 1.0.0
+frozen_at: '2026-08-30'
+status: ARCHITECTURE_FROZEN
+
+base:
+  head_commit: 8d3bc019f150e1f54feaa09c73461513c87e4c40
+  repo: course-to-skill
+  branch: main
+
+producer:
+  toolchain: git + python3 + hashlib(sha256)
+  commit_da_materializacao_de_governanca: 8d3bc019f150e1f54feaa09c73461513c87e4c40
+  nota: >-
+    O produtor e referenciado por commit com hash proprio, nao por campo de texto livre.
+    Nenhuma etapa deste selo dependeu de rede, relogio ou mtime.
+
+self:
+  nota: >-
+    Este arquivo NAO consta de members[] (condicao 7). Seu proprio sha256 e registrado
+    fora do conjunto selado, na mensagem do commit que o cria (condicao 2).
+
+members_count: 17
+members:
+  - path: COURSE-TO-SKILL-MULTI-SOURCE-ARCHITECTURE-FREEZE.md
+    class: freeze
+    bytes: 35445
+    sha256: 6d0eb7ddabe4d7c7b46d7e1934783e8f0e1603b9e3ac9241cbff1a24cfbc780b
+  - path: COURSE-TO-SKILL-MULTI-SOURCE-DESIGN-REVIEW-v0.md
+    class: normativo
+    bytes: 39700
+    sha256: ae4d4efd9b916f8bf3f0333dc6d8f2dc02dfd8f830537235a04de15726b975b6
+  - path: COURSE-TO-SKILL-MULTI-SOURCE-ARCHITECTURE-PROPOSAL-v1-SHA913753.md
+    class: normativo
+    bytes: 46313
+    sha256: 913753700e72758d22add234509c507cde8de004c8464ceaa718ebea13fdaab5
+  - path: COURSE-TO-SKILL-MULTI-SOURCE-ARCHITECTURE-PROPOSAL-v1.1.md
+    class: normativo
+    bytes: 23511
+    sha256: f2f9f4b755e0ed66703a4e3d9d436b5ccc01b8f5d6c8b5377cfa6f7786aa8b33
+  - path: COURSE-TO-SKILL-MULTI-SOURCE-ARCHITECTURE-PROPOSAL-v1.2.md
+    class: normativo
+    bytes: 13151
+    sha256: 54e1eee3100bee0072b8df82173404a624dca37b7000fd31e63be09918f08e92
+  - path: ../audit/pre-freeze-20260830/PRE_FREEZE_AUDIT_FAIL.md
+    class: evidencia
+    bytes: 16770
+    sha256: b9e607e2742facc27d255da8f13b5bb4029f3d783d656787ab15a8b516126677
+  - path: ../measurements/reproduced-from-baseline-20260830/REPRODUCED_FROM_MEASUREMENT_OPENING_RECORD.md
+    class: evidencia
+    bytes: 9088
+    sha256: 35cd4abf5df72758c1d0e9019c757e8503c1a1aba02fea8ffef0b22babba8634
+  - path: ../measurements/reproduced-from-baseline-20260830/measure_reproduced_from.py
+    class: evidencia
+    bytes: 17467
+    sha256: 4843c331d0d88d91e70d92bd44d7ea208e9354c670bbc75f2054ed72b884010c
+  - path: ../measurements/reproduced-from-baseline-20260830/fixtures/fixture-cases.json
+    class: evidencia
+    bytes: 716
+    sha256: 59d091289570c7c0e3b0c4035ebfefda616a01352cb7ba78327beae4757fef1c
+  - path: ../measurements/reproduced-from-baseline-20260830/out/reproduced-from-raw.jsonl
+    class: evidencia
+    bytes: 365339
+    sha256: 7fce84bc543ce5d0257682092f0e5515433ac76b83cf8a603d2f3cfda57d1bd6
+  - path: ../measurements/reproduced-from-baseline-20260830/out/reproduced-from-summary.json
+    class: evidencia
+    bytes: 4682
+    sha256: 95d7d0b80edbfa2a787b6a539f7d0af8ec3351545fd0e2549a8e6fa5a659df73
+  - path: ../measurements/reproduced-from-baseline-20260830/out/REPRODUCED-FROM-BASELINE-REPORT.md
+    class: evidencia
+    bytes: 2867
+    sha256: c680ff6aac2d1b3d0200223705db59501e72b892708da9c90f8c251520e251eb
+  - path: ../measurements/reproduced-from-baseline-20260830/out/SUPPORTED-BY-12-226-LOCATION.md
+    class: evidencia
+    bytes: 6310
+    sha256: 9b69e129b748fd5b627673e049a753c340d112d900261e25797afeab7d2b64f3
+  - path: PROPOSAL-V0-NOT-ARCHIVED.md
+    class: governanca
+    bytes: 8556
+    sha256: 8cdaf2a8255857e3976b0c993eaed8f66ac72ebffa45561ba26d99ed6cad050c
+  - path: ../GIT-NATIVE-BY-DESIGN-GOVERNANCE-MATERIALIZED-FROM-378d764.md
+    class: governanca
+    bytes: 12066
+    sha256: a87de14b1abff422995457e9c3d5e26826ec65048e010090af848c5ed406a823
+  - path: ../ADR-ACERVO-001-CANONICIDADE-PILOT-003-ACCOUNT-AUDIT.md
+    class: governanca
+    bytes: 8652
+    sha256: c5b63d02ce8d18e2fdd6601a5a20a8bfe17d3e06776aa509018ae1265561e1e8
+  - path: ../ERRATA-MIRROR-MANIFEST-N6-20260829-AUDIT-PILOT-003.md
+    class: governanca
+    bytes: 3888
+    sha256: 0d45635a9a3ccfb1f8f64a1fe590e773c1f4fc62a9a274c9814773ac963a40bc
+
+nao_congelado:
+  - thresholds nao medidos
+  - algoritmo de blocagem
+  - embeddings
+  - banco vetorial
+  - tecnologia de indice
+  - linguagem de implementacao
+  - nomes finais dos modulos
+  - taxonomia final de relacoes (poda pelo MS-001)
+  - destino de PRESUPPOSES
+  - tabela de reproducao por anchor_type
+  - valores dependentes de MS-000B ou MS-001
+
+limitacoes:
+  - PROPOSAL_V0_NOT_ARCHIVED (DOCUMENTARY_PRESERVATION_LIMITATION)
+  - I1-I30 sem verificadores implementados; contrato congelado, scripts sao pos-freeze
+  - SUPPORTED_BY e julgamento com rubrica pre-registrada, auditavel por replay
+  - contagem de espelhamento do 378d764 materializada como declarada, nao reconciliada
+
+sequencia_experimental:
+  - PILOT-MS-000A - SEAL CANARY
+  - PILOT-MS-000B - MULTI-AULA / MESMO AUTOR
+  - PILOT-MS-001 - DUAS MICROFONTES CONTROLADAS
+regra_de_ordem: nenhum salto sem novo DECISION_RECORD
+
+zero_implementation: true
