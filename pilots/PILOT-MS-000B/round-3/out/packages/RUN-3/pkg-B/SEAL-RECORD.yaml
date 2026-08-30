@@ -1,0 +1,39 @@
+# MS-000B ROUND 3 — SEAL-RECORD
+# Cumpre as sete condicoes de SEALED do ARCHITECTURE FREEZE.
+# Nao se auto-referencia (condicao 7). Nao usa mtime (condicao 6).
+artifact_id: MS000B-R3-SEAL-RECORD
+artifact_status: SEALED
+seal_contract_version: 'SEALED/7-conditions/freeze-6d0eb7dd'
+source_id: 'MS000B-SRC-P002-CH13'
+source_content_hash: '2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5'
+member_manifest_hash: 'c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911'
+source_package_hash: 'c9ce7f61760a05cea8d6d1a7603f2ba279691b86f364f60aa73912c337186911'
+producer:
+  toolchain_path: TOOLCHAIN.json
+  toolchain_sha256: '3e5240d183a2852406cf99dc2bff5e2afcc4c23568426115f789538b687a1caa'
+members_count: 12
+members:
+  - path: ARTIFACTS/ARTIFACT-INDEX.json
+    sha256: '1cfd6a14eacbeb4bca9129e73e0ed4dd04ccf0a821aa77ee3100b5c8b0221277'
+  - path: ARTIFACTS/temporal-map-slice.json
+    sha256: '0f7467000960363b1f070aeffcdee62cd5eff6e9d16c449a684e789bc5801f80'
+  - path: CLAIMS.jsonl
+    sha256: 'a6031b2b46eabc8d0b2cfe1e8effd0deeaf2005cf817693eccbe280b3337282a'
+  - path: COMPILE-TRACE.jsonl
+    sha256: '814dd8308c85de84b3dd74683000a7fa4ea5eae76eaf7a42017934d64e7463a0'
+  - path: DECLARATION-SPACE-INDEX.json
+    sha256: '14ce96df6e023a57b7dcf02aa479b43c68aaef5a4fce14d5ee5bf1a24a7bf662'
+  - path: EVIDENCE.jsonl
+    sha256: 'bbdf81983684d76c6c229aa42fdf3e559dc2ca6e81a96f94281b3cef4ab7bb62'
+  - path: L0/CHAPTER-SLICE.txt
+    sha256: '2768b11c408363719c539ad6bc889e8a1245c078d34b66a502de2351ebe044d5'
+  - path: LOCAL-COHERENCE-REPORT.json
+    sha256: 'a000cc54e7a51aa3866d14a2349e6e041111156bf6ce78ba8fe93de5699b3f50'
+  - path: SOURCE-ANCHORS.jsonl
+    sha256: 'f7065ea4430e4e38ec38786eabc80311bb3778f4c86e93ab4b146c29b44ac542'
+  - path: SOURCE-LOCAL-CANDIDATES.json
+    sha256: 'c2a75f4610f43e66ad7a65f63bcb4d969486e62a057e1ec1fa721bd65a121d58'
+  - path: SOURCE-PROFILE.json
+    sha256: '1091597926cc257783707ac3135c352f9faa86168ce39e41cbbd278d3e0cb4d1'
+  - path: TOOLCHAIN.json
+    sha256: '3e5240d183a2852406cf99dc2bff5e2afcc4c23568426115f789538b687a1caa'

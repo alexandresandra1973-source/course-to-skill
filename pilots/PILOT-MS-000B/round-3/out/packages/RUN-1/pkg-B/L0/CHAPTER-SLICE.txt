@@ -1,0 +1,361 @@
+## Connecting Tools & Deploying Apps via MCP and CLI
+
+**62:47**
+
+to take a look at is how people to level uh by having clock over here to take control of the apps or tools that we're currently using day-to-day. For example,
+
+**62:54**
+
+let's say you're currently using Jira to manage your project board or let's say you're currently using Universell to
+
+**63:00**
+
+deploy your applications or let's say if you're using Stripe to creating products for your e-commerce store or let's say
+
+**63:05**
+
+if you're using Facebook, right, to creating Facebook ads or creating Facebook communities, right? How can you
+
+**63:12**
+
+actually have Clawo here to take over that, right? To help you to automate those tedious process where you have to
+
+**63:18**
+
+click into different steps here to actually get to what you want, right? How can you have clawo here to control
+
+**63:23**
+
+those applications that you're already using today? And that's really comes with the tools that claw code here can
+
+**63:29**
+
+be able to call and honestly you're already using right now which is GitHub and GitHub is one of the tools that
+
+**63:34**
+
+comes by default with claw code that claw code can be able to actually call to commits creating repositories to
+
+**63:41**
+
+manage the branch all those kind of things are already come by default. But there's also a lot of tools here that
+
+**63:47**
+
+aren't come by default that we can actually install and add it to claw code to actually make claw code here really
+
+**63:53**
+
+really powerful and to actually have our AI agent here to connecting those tools is using a protocol called MCP and you
+
+**64:01**
+
+can see that MCP stands for model context protocol which stands between
+
+**64:06**
+
+the AI agents right our claw code and also our tools right any apps we're currently using day-to-day Facebook
+
+**64:13**
+
+Shopify e-commerce or whatever software we're using day-to-day. These are the gateways that connects the AI here with
+
+**64:20**
+
+all those tools that we have. And you can think of MCP is kind of like a USB port for your artificial intelligence.
+
+**64:27**
+
+Before MCP developer have to write custom code, right? Custom script that can have AI here to call those script
+
+**64:34**
+
+like Google Drive, GitHub or local database to actually have AI agent here to give hands to manage those. But now
+
+**64:40**
+
+with MCP we can standard this so that the MCB client is our AI applications
+
+**64:47**
+
+where you're chatting with like claw code desktop app or your claw code AI agents right and the MCB server is a
+
+**64:53**
+
+lightweight program that allow AI here to reading those local files right access your database or searching data
+
+**65:00**
+
+on the web or connecting to maybe like Stripe or PayPal or people to connect to
+
+**65:05**
+
+Slack or Jira whichever softwares or apps you're using day-to-day you can have AI here to actually use it and
+
+**65:12**
+
+that's basically how MCP works. Now MCP isn't just only one tool that have AI
+
+**65:18**
+
+agent here to control right you can also have the ability here to control using CLI tool and how we can be able to have
+
+**65:25**
+
+AI here to connect it is also the other way to do it and essentially what it
+
+**65:30**
+
+does is kind of like a command line where you open your terminal here you type in a text simply you run a program
+
+**65:36**
+
+or run a script to interact with a third party software you can also have AI
+
+**65:42**
+
+agent here to interact with those apps apps or services through the CLI as well. But the point here is that it
+
+**65:48**
+
+doesn't matter if it's MCP or CLI. Those are the tools that we can have AI agent here calling third party applications on
+
+**65:55**
+
+our behalf. And believe it or not, apps like Stripe has CLI and they also have
+
+**66:00**
+
+MCPs where we can have our log function model here to connect to. And even Google here also has released their CLI
+
+**66:06**
+
+where we can have our AI agent here to connect that as well. And if you want to get in more about like how you can actually have your Google workspace to
+
+**66:12**
+
+connect it to your large function model, you can check out this video right here. Or let's say if you're using goh high level a lot, you can see that go high
+
+**66:19**
+
+level also has their MCP, right? How to use the go high level MCP here and simply just follow documentation and you
+
+**66:26**
+
+can connect your MCP with your large model. Or let's say if you're currently using Verscell right for deploying your
+
+**66:32**
+
+application and you're scared to running commands in your terminal and you want to have your large model here to do it
+
+**66:37**
+
+like deploy your application to Verscell you can also using the Verscell MCP and you can see that Verscell here also has
+
+**66:44**
+
+CLI tool which you can also have your large model here to connect your Versell with the terminal right through the CLI
+
+**66:50**
+
+tool. So there's actually many ways that you can do this. So in this video I'm going to demonstrate to you how you can
+
+**66:55**
+
+actually use the Versell CLI or in this case the MCP to actually connect it to your logic model here to deploy your
+
+**67:01**
+
+current application to Verscell. Now first thing first we're going to do here is we're going to sign in with Verscell just creating a new application here and
+
+**67:08**
+
+it's actually completely free and you can see that once I have my project for my Verscell you can see currently I already have my existing project in
+
+**67:15**
+
+there and what I'm going to do here is because I already have my Versell connected. So what I'm going to do here is I'm going to come over to my project
+
+**67:21**
+
+here inside of my VS Code and simply I'm going to clear the current session that we have and I'm just going to ask do you
+
+**67:27**
+
+have Versell CLI or MCP in your current system where I can actually deploy the current application onto Verscell. So
+
+**67:34**
+
+I'm just going to ask that inside of my current application but if you don't have one simply just going to come over
+
+**67:39**
+
+to documentation for connecting Versell to MCP or you can also copy the documentation for Versell CLI link over
+
+**67:46**
+
+to claw code. And you might be wondering, okay, what's the difference between CLI or MCP? Which one should you
+
+**67:52**
+
+really use? Right now, CLI tool stands for command line interface, right? Let's AI here to actually execute any shell
+
+**67:58**
+
+commands in a terminal. MCP provides a standardized secure bridging connections between AI to remote tools and data. So,
+
+**68:06**
+
+CLI tools relies on AI generated running terminals in your local environment,
+
+**68:12**
+
+which is highly token efficient. So let's say if you want to save tokens that using CLI here is the best option
+
+**68:17**
+
+but if you're using MCP that basically have a standardized protocol here exposing tools that are limited to AI
+
+**68:24**
+
+agent here to use right so let's say if you want to controlling how many tools the AI agent want to give access you can
+
+**68:30**
+
+use MCP but that definitely shines in security here because you have control over what tools to ask uh to give AI
+
+**68:36**
+
+agent here to access to and also have the ability here to have a better team environment let's say if you have a bunch of team members here to actually
+
+**68:43**
+
+work on it then MCB tool here is the best option because you can actually set the authentication boundaries and the
+
+**68:48**
+
+audit trails using MCP server because it's a server by the end of the day that you can keep track of all the requests
+
+**68:53**
+
+being made and however though it consumes more tokens be compared to just using the CLI because the tool here for
+
+**69:00**
+
+the schemas are constantly loaded into the AI context window and that's exactly why MTP here actually consume more token
+
+**69:07**
+
+but if you want to go for like security then MCP is definitely the option if you want to go for token efficiency then
+
+**69:13**
+
+token efficiency here is going to be CLI tool. So in terms of which one to use like I said if you're looking for speed
+
+**69:20**
+
+or token efficiency CLI is the best option but if you're mostly focusing on like a team environment where you want
+
+**69:25**
+
+to build multiple tenant for the AI agents here or managing access control and authentication then definitely using
+
+**69:31**
+
+the MCP here is the best option and now if I were to go back to cloud code you can see that yes we do have both the CLI
+
+**69:36**
+
+and also the MCP is fully connected in my local machine. Now if you don't have that connected simply just copy that
+
+**69:42**
+
+documentation link paste the claw code and let it connect it for you. Once you connected log into your versell then
+
+**69:49**
+
+what we're going to do here is just going to say I want you to create a brand new project in my versel account using the CLI tool here to actually uh
+
+**69:56**
+
+connect or in this case deploy this application on there. Okay. And in this case I'm going to send this request and
+
+**70:02**
+
+let clock here to figure this out. All right with just a few seconds now you can see that we have our applications
+
+**70:07**
+
+completely deployed on our cell. So, if I were to copy this link, right, and I'm
+
+**70:12**
+
+just going to go over to a browser. Going to paste that link right here. And now you can see we have our system
+
+**70:18**
+
+design tier lab here is fully deployed. And it's actually a link that I can actually to use it right away. Okay. And
+
+**70:25**
+
+this is everything is usable. I can also resets. Everything looks pretty good. And now if I were to go back to versel
+
+**70:30**
+
+for dashboard, you can see that this application here was deployed 15 minutes ago. And you can see this is exactly the
+
+**70:36**
+
+uh projects right that was deployed. And if I want to dis this this and if I want to actually unemploy this or in this
+
+**70:42**
+
+case like delete this I can click on the settings here and just going to go back right and click on delete project right
+
+**70:48**
+
+here or the other way you can do this here is I can just tell claw code say hey I want you to delete this project
+
+**70:54**
+
+okay can you delete this project right now and it's going to have the ability here to do so in this case we're going
+
+**71:00**
+
+to have claw code here to actually delete this project so that it's not really available to the public so is
+
+**71:05**
+
+able to do that so In this case, it's going to remove the versel project that I just created. Let me first confirm
+
+**71:12**
+
+exactly what's there. So, I deleted the right thing and nothing else. So, here you can see we're flagging here before I
+
+**71:18**
+
+act. Your account here has three projects. Two are already the live properties that I didn't create. So, the
+
+**71:23**
+
+book zero and also the lead magnet which is true. And it's going to find the right one here to actually go ahead and
+
+**71:29**
+
+delete. And now you can see we have the application here is fully deleted now. And your other two project here is
+
+**71:34**
+
+untouched which is good. And now if I were to head over to versel, you can see we only have two projects left here. And
+
+**71:39**
+
+now if I were to navigate to the link, you can see it's showing deploy not found. So 404 here. Okay. So now you can
+
+**71:46**
+
+see we can have our AI here to have the ability to connect it to any application tools and help us to act on our behalf.
+
+**71:52**
+
+Okay. Really powerful here. All right. So that's exactly how you can connect your tools into your claw code. So the last part we're going to go over here is

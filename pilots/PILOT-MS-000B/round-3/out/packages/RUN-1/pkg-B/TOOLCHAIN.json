@@ -1,0 +1,1 @@
+{"artifact_id":"MS000B-R3-TOOLCHAIN","components":["git","python3","hashlib/sha256","anthropic-sdk"],"nota":"artefato de PRODUTOR exigido pela condicao 5 de SEALED; nao e uma 12a categoria de conteudo","seal_contract_version":"SEALED/7-conditions/freeze-6d0eb7dd"}
