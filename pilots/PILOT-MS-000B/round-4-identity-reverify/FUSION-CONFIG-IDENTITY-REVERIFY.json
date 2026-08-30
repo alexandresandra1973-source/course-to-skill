@@ -1,0 +1,26 @@
+{
+  "config_id": "FUSION-CONFIG-IDENTITY-REVERIFY",
+  "operation": "TARGETED_IDENTITY_REWRITE_AND_REVERIFY",
+  "not_a_round": true,
+  "architecture_identity_errata": {
+    "artifact": "_mirror/docs/architecture/ARCHITECTURE-FREEZE-ERRATA-IDENTITY-QUALIFICATION-v1.md",
+    "sha256": "2f8232f6c184668370ed9e440256b0de3f6ee801a7bee67285eb291c1a527ad2",
+    "decision_record": "DECISION-RECORD-IDENTITY-QUALIFICATION-ERRATA.md",
+    "decision_record_sha256": "a4b0736a96f5ea912b94785b535611c7a62e58607c2f503641043b7c6a27df92"
+  },
+  "candidate_admission_policy": {"policy_id":"CANDIDATE-ADMISSION-POLICY","version":"v0.2","sha256":"f142938853239c58ff3cb80dbcc650da8ea1461d2cde2ea38978ba478d1b9caf"},
+  "typed_reference_schema_version": "typed-ref-v1",
+  "global_object_identity": "(source_package_hash, entity_kind, local_id)",
+  "candidate_consumption_version": "identity-reverify-candidate-consumption-v1",
+  "workflow_transport_version": "identity-reverify-workflow-transport-v1",
+  "relation_policy": {"applied": false, "value": "NOT_APPLIED"},
+  "claim_blocking": {"applied": false, "value": "NOT_APPLIED"},
+  "mtx_policy_hash": null,
+  "nota_I26": "mtx_policy_hash PROIBIDO como input identitario. A CANDIDATE-ADMISSION-POLICY entra via FUSION-CONFIG por ser configuracao estrutural do pipeline da Fusion.",
+  "fusion_id_inputs": ["source_package_hashes","fusion_config_hash","candidate_admission_report_hash",
+                       "admitted_candidate_set_hash","outputs_hash","identity_errata_hash"],
+  "fusion_id_forbidden_inputs": ["mtx_policy_hash"],
+  "toolchain": {"lib/typedref.py":"03df6113f24360b8a5b52a2c63a483748dde5049e140fdb974aebe3800fa451b","lib/admission.py":"24ab979a54fec4d93e7c45e39ddc44489c08e6d9732318ad7e8afb1675d0871c","lib/fusion.py":"28308bf008db36abae24eeb364330d77ff7088b12d9de5ae9a5311e3cb1ed40d"},
+  "source_packages": "os seis Source Packages selados da Round 3, read-only, sem reabrir, reselar ou regenerar",
+  "determinismo": "MECANICO, OFFLINE, zero chamadas de modelo"
+}

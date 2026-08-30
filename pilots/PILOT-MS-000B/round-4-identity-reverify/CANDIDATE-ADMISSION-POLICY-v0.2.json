@@ -1,0 +1,52 @@
+{
+  "policy_id": "CANDIDATE-ADMISSION-POLICY",
+  "version": "v0.2",
+  "supersedes": {"version": "v0.1", "sha256": "64c2feaeebf1ac62c559031f1918741a35856fb1115b5b10e7707a1e922a75c9"},
+  "normative_basis": {
+    "artifact": "ARCHITECTURE-FREEZE-ERRATA-IDENTITY-QUALIFICATION-v1.md",
+    "sha256": "2f8232f6c184668370ed9e440256b0de3f6ee801a7bee67285eb291c1a527ad2"
+  },
+  "belongs_to": "FUSION-CONFIG",
+  "not_a": "MTX-POLICY",
+  "principle": "Admission decide SOMENTE se o candidate esta estruturalmente apto a ser consumido pela Fusion.",
+
+  "UNICA_MUDANCA_NORMATIVA": {
+    "predicado": "LOCAL_ID_INVALIDO",
+    "OLD_v0_1": "local_id deve ser unico PACKAGE-WIDE (entre todos os kinds)",
+    "NEW_v0_2": "(entity_kind, local_id) deve ser unico DENTRO do package; um local_id PODE repetir entre kinds diferentes",
+    "motivo": "errata secao 3. Preserva rule_candidate R-0095 e anti_pattern_candidate R-0095 como objetos diferentes, que e o que eles sao.",
+    "nota": "nenhuma regra nova de qualidade e introduzida; nenhum outro predicado muda"
+  },
+
+  "identity": {
+    "GLOBAL_OBJECT_IDENTITY": "(source_package_hash, entity_kind, local_id)",
+    "typed_reference_schema_version": "typed-ref-v1",
+    "ref_shape": {"source_package_hash": "...", "entity_kind": "...", "local_id": "..."},
+    "proibido": "[source_package_hash, local_id] — 2-tupla nao resolve sozinha",
+    "entity_kind_canonical": ["artifact","source_anchor","evidence","claim","rule_candidate",
+                              "workflow_candidate","workflow_step","anti_pattern_candidate"]
+  },
+
+  "states": ["ADMITTED", "REJECTED_STRUCTURAL"],
+  "rejection_predicates_exhaustive": [
+    "LOCAL_ID_INVALIDO", "REQUIRED_FIELD_AUSENTE", "WORKFLOW_SEM_PASSOS",
+    "ORDEM_INVALIDA", "EVIDENCE_REF_QUEBRADA", "CLAIM_REF_QUEBRADA"
+  ],
+  "non_rejection_predicates_preserved_as_inherited_defect": [
+    "PRECEDENCE_UNDEFINED", "PASSO_UNICO", "EVIDENCE_REFS_EMPTY_INHERITED_FROM_R3_PACKAGING"
+  ],
+  "inalterado_desde_v0_1": {
+    "rule_candidates_required_fields": ["local_id","name","trigger","condition","action"],
+    "workflow_candidates_required_fields": ["local_id","name","steps"],
+    "workflow_step_required_fields": ["local_id","order_key","action"],
+    "anti_pattern_candidates_required_fields": ["local_id","do_not"],
+    "workflow_order": "len(steps)>=1; order_key presente, sem duplicata, estritamente crescente",
+    "precedence_undefined": "NAO REJEITA. Preserva UNDEFINED, marca inherited_defect, nao adjudica.",
+    "passo_unico": "NAO REJEITA. Marca inherited_defect, transporta como um passo.",
+    "EV_RESOLVABILITY": "ref PRESENTE tem de resolver; conjunto vazio satisfaz vacuamente",
+    "EV_POPULATION": "MEDIDA, nao predicado de rejeicao",
+    "CLAIM_RESOLVABILITY": "ref PRESENTE tem de resolver; campo ausente = NOT_APPLICABLE"
+  },
+  "determinismo": "MECANICO e OFFLINE. Zero chamadas de modelo.",
+  "nao_altera_source_package": "I20 — le o pacote selado, nunca escreve nele."
+}
