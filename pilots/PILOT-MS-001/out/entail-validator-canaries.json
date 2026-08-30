@@ -1,0 +1,105 @@
+[
+ {
+  "canary": "EO0",
+  "desc": "output correto de referencia",
+  "expected": null,
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "EO1",
+  "desc": "claim omitida",
+  "expected": "E20_JUDGMENT_MISSING",
+  "got": [
+   "E20_JUDGMENT_MISSING"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO2",
+  "desc": "claim duplicada",
+  "expected": "E24_JUDGMENT_DUPLICATED",
+  "got": [
+   "E24_JUDGMENT_DUPLICATED"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO3",
+  "desc": "claim_id desconhecida",
+  "expected": "E21_UNKNOWN_CLAIM_ID",
+  "got": [
+   "E21_UNKNOWN_CLAIM_ID"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO4",
+  "desc": "campo extra",
+  "expected": "E04b_JUDGE_EXTRA_FIELD",
+  "got": [
+   "E04b_JUDGE_EXTRA_FIELD"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO5",
+  "desc": "judgment fora da enum",
+  "expected": "E25_JUDGMENT_NOT_IN_ENUM",
+  "got": [
+   "E25_JUDGMENT_NOT_IN_ENUM"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO6",
+  "desc": "formato ANTIGO da v1",
+  "expected": "E23_JUDGE_LEGACY_FORMAT",
+  "got": [
+   "E04b_JUDGE_EXTRA_FIELD",
+   "E20_JUDGMENT_MISSING",
+   "E22_JUDGE_SCHEMA_VIOLATION",
+   "E23_JUDGE_LEGACY_FORMAT"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO7",
+  "desc": "evidence_refs_checked acrescentada",
+  "expected": "E19_JUDGE_ADDED_EVIDENCE",
+  "got": [
+   "E19_JUDGE_ADDED_EVIDENCE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO8",
+  "desc": "evidence_refs_checked omitida",
+  "expected": "E27_JUDGE_OMITTED_EVIDENCE",
+  "got": [
+   "E27_JUDGE_OMITTED_EVIDENCE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO9",
+  "desc": "evidence estrangeira",
+  "expected": "E26_FOREIGN_EVIDENCE",
+  "got": [
+   "E19_JUDGE_ADDED_EVIDENCE",
+   "E26_FOREIGN_EVIDENCE",
+   "E27_JUDGE_OMITTED_EVIDENCE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "EO10",
+  "desc": "evidence_refs_checked ausente",
+  "expected": "E22_JUDGE_SCHEMA_VIOLATION",
+  "got": [
+   "E20_JUDGMENT_MISSING",
+   "E22_JUDGE_SCHEMA_VIOLATION"
+  ],
+  "ok": true
+ }
+]

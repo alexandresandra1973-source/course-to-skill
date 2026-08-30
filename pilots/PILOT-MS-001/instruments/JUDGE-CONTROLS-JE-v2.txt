@@ -1,0 +1,48 @@
+CONTROLES DO JUIZ DE ENTAILMENT — v2. Fixtures sinteticos fechados, uma unica Call 2.
+Substituem JE1-JE4 da v1. Provam PODER DISCRIMINANTE e, sobretudo, SILENCE != INDETERMINATE.
+
+JE1  ENTAILED
+  Evidence EV-9201: "O sistema exige autenticacao por token antes de aceitar a requisicao."
+  Claim   CL-9201: "A requisicao exige autenticacao por token."
+  esperado: ENTAILED
+
+JE2  UNSUPPORTED GENERALIZATION
+  Evidence EV-9202: "Para quem esta comecando, a configuracao simples costuma ser suficiente."
+  Claim   CL-9202: "A configuracao simples e suficiente para todos os usuarios."
+  esperado: NOT_ENTAILED   (caso B: apagou o qualificador e generalizou)
+
+JE3  WRONG SUBJECT
+  Evidence EV-9203: "O Redis e configurado adicionando um novo servico no painel e definindo
+                     um nome e uma senha para a instancia."
+  Claim   CL-9203: "A Evolution API exige autenticacao por chave global."
+  esperado: NOT_ENTAILED   (caso C: objeto diferente)
+
+JE4  EXPLICITLY UNRESOLVED
+  Evidence EV-9204: "A fonte informa que nao esta definido se o recurso X e obrigatorio ou
+                     opcional neste cenario."
+  Claim   CL-9204: "O recurso X e obrigatorio neste cenario."
+  esperado: INDETERMINATE
+  Este e o controle discriminante CORRETO: a Evidence NAO esta fora do assunto e NAO esta
+  apenas silenciosa — ela DECLARA a questao como nao resolvida.
+
+JE5  SAME SUBJECT BUT SILENT
+  Evidence EV-9205: "A Evolution API pode ser executada em uma VPS."
+  Claim   CL-9205: "A Evolution API exige exatamente 4 GB de RAM."
+  esperado: NOT_ENTAILED   (caso D: mesmo objeto, silenciosa sobre o atributo)
+  JE5 existe para provar mecanicamente que SILENCE != INDETERMINATE.
+
+PORTAO DE DISCRIMINACAO NEGATIVA — Call 2 so passa com os cinco EXATOS:
+  JE1 = ENTAILED
+  JE2 = NOT_ENTAILED
+  JE3 = NOT_ENTAILED
+  JE4 = INDETERMINATE
+  JE5 = NOT_ENTAILED
+Qualquer divergencia: MS_001A_EXEC_2_INSTRUMENT_INVALID. PARE.
+NAO reinterpretar o resultado depois.
+
+O QUE A v1 ERRAVA, registrado:
+  o JE4 da v1 usava Evidence pertinente mas SILENCIOSA sobre o atributo, esperando
+  INDETERMINATE. Sob a semantica agora congelada, aquele caso e NOT_ENTAILED (caso D) —
+  e o juiz da Exec 1 estava CERTO. O fixture e que testava a fronteira errada.
+  Na v2 esse caso virou JE5, com o rotulo correto, e o JE4 passou a testar a unica
+  situacao que e de fato INDETERMINATE: a fonte declarando a questao em aberto.
