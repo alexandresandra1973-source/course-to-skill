@@ -16,12 +16,12 @@ Registrada em `MS-001A-EXEC-1-INSTRUMENT-INVALID.md`
 ## 2. Sobre o segundo defeito — o juiz estava certo
 
 Sob a semântica agora congelada, evidence **do mesmo objeto porém silenciosa sobre o
-atributo afirmado** é **** (caso D), não . O veredito
- que a Execução 1 recebeu para `CL-9004` era **correto**. O fixture é que
+atributo afirmado** é **`NOT_ENTAILED`** (caso D), não `INDETERMINATE`. O veredito
+`NOT_ENTAILED` que a Execução 1 recebeu para `CL-9004` era **correto**. O fixture é que
 estava errado.
 
 Na v2 esse caso vira **`JE5`**, com o rótulo certo, e **`JE4`** passa a testar a única
-situação genuinamente : **a fonte declarando a questão em aberto**.
+situação genuinamente `INDETERMINATE`: **a fonte declarando a questão em aberto**.
 
 ## 3. O que muda — e só isto
 
