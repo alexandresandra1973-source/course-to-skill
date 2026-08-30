@@ -1,0 +1,106 @@
+schema_version: 0.1.0
+pilot_id: PILOT-MS-001
+artifact_status: SOURCE_SEALED
+sealed_at_utc: '2026-08-30'
+sealed_by_machine: LenovoAIO27ARR9
+identity_model: 'GLOBAL_OBJECT_IDENTITY = (source_package_hash, entity_kind, local_id)'
+identity_errata: ARCHITECTURE-FREEZE-ERRATA-IDENTITY-QUALIFICATION-v1.md
+identity_errata_sha256: 2f8232f6c184668370ed9e440256b0de3f6ee801a7bee67285eb291c1a527ad2
+
+NOTA_DE_IDENTIDADE: 'SOURCE_ID e logico e estavel; nao carrega timestamp de aquisicao.
+  SOURCE_CONTENT_HASH sao os bytes do artefato de caption congelado nesta rodada, NAO
+  reaudquiridos para decidir o hash. URL nao e identidade de conteudo: o video pode ser
+  editado, re-legendado ou removido sob o mesmo URL.'
+
+sources:
+  - source_id: MS001-SRC-B
+    source_content_hash: 2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862
+    content_hash_basis: 'raw caption artifact, JSON canonico com start/duration/text por segmento'
+    artifact: B-dtAoZYMEzcM-pt.json
+    canonical_url: https://www.youtube.com/watch?v=dtAoZYMEzcM
+    video_id: dtAoZYMEzcM
+    title: Como Gerenciar Grupos de WhatsApp com Claude Code
+    authority: Anderson Adelino | IA e Automacoes
+    channel_handle: '@oandersonadelino'
+    channel_id: UCI5WcISxqiFfoh4mse1s-HA
+    upload_date: '2026-06-24T13:52:55-07:00'
+    duration_s: 1056
+    category: Science & Technology
+    language: pt
+    caption_type: PLATFORM_AUTO_CAPTION
+    caption_tracks_available:
+      - {lang: en, kind: AUTHOR_PROVIDED, used: false}
+      - {lang: es, kind: AUTHOR_PROVIDED, used: false}
+      - {lang: pt, kind: PLATFORM_AUTO_CAPTION, used: true}
+    media_type: video/youtube
+    segments: 488
+    chars: 17846
+    first_s: 0.0
+    last_s: 1055.2
+    source_boundary: 'video inteiro. O &t=330s do URL original foi IGNORADO como boundary.'
+    text_status: SOURCE_TEXT_READY_WITH_LIMITATION
+    provenance_evidence:
+      watch_page_sha256: 4d5d999c6a67eb6975720ccf3486c82135994247404a39e8ff09cbe22e0c99cd
+      watch_page_location: 'scratch ~/ms001-controlled-corpus-design/raw/ — 1,3 MB, volatil, NAO versionado'
+      oembed: oembed-dtAoZYMEzcM.json
+      metadata: B-dtAoZYMEzcM-meta.json
+
+  - source_id: MS001-SRC-C
+    source_content_hash: ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7
+    content_hash_basis: 'raw caption artifact, JSON canonico com start/duration/text por segmento'
+    artifact: C-NvrBpnbNfv4-pt.json
+    canonical_url: https://www.youtube.com/watch?v=NvrBpnbNfv4
+    video_id: NvrBpnbNfv4
+    title: 'N8N + WhatsApp: Responda Mensagens utilizando um Agente de IA! (Tutorial Facil para Iniciantes 2025)'
+    authority: Guilherme Lazarotto - Tecnologia & Automacao
+    channel_handle: '@guilherme_laz'
+    channel_id: UCO0x-39c7EttOhmFAsngfgg
+    upload_date: '2025-02-19T10:45:04-08:00'
+    duration_s: 824
+    category: Education
+    language: pt
+    caption_type: PLATFORM_AUTO_CAPTION
+    caption_tracks_available:
+      - {lang: pt, kind: PLATFORM_AUTO_CAPTION, used: true}
+    media_type: video/youtube
+    segments: 389
+    chars: 14376
+    first_s: 0.0
+    last_s: 823.1
+    source_boundary: 'video inteiro'
+    text_status: SOURCE_TEXT_READY_WITH_LIMITATION
+    provenance_evidence:
+      watch_page_sha256: 73e0019d4fc1d3dd794a130825659ac86856f6b4107b31209ef706dafa4d8d71
+      watch_page_location: 'scratch ~/ms001-controlled-corpus-design/raw/ — 1,3 MB, volatil, NAO versionado'
+      oembed: oembed-NvrBpnbNfv4.json
+      metadata: C-NvrBpnbNfv4-meta.json
+
+TEXT_LIMITATION:
+  status: SOURCE_TEXT_READY_WITH_LIMITATION
+  aplica_a: [MS001-SRC-B, MS001-SRC-C]
+  propriedades:
+    - 'ASR automatico da plataforma'
+    - 'timestamps utilizaveis: 0 invalidos, ordem monotonica, 0 gaps > 3s'
+    - 'spans SOBREPOSTOS por design da auto-caption: a soma de duracoes da ~199,9% da
+       extensao. E propriedade do artefato, NAO defeito. NAO corrigir para 100%.'
+    - 'erros de reconhecimento localizados: "Reds" por Redis, "Cloud Code" por Claude Code,
+       "messages up search" por MESSAGES_UPSERT, "grock" por Groq'
+    - 'NENHUMA correcao semantica aplicada. O artefato e byte-faithful.'
+  ordem_canonica: 'start_s, depois indice do segmento no array original'
+
+EXTERNAL_RESOURCES:
+  politica: 'REFERENCED_EXTERNAL_RESOURCE_NOT_IN_CORPUS. Nenhum foi seguido ou baixado.'
+  MS001-SRC-B:
+    - {resource: 'VPS HostGator (link de afiliado)', decision: OUT_OF_CORPUS}
+    - {resource: 'curso Zenithon Academy', decision: OUT_OF_CORPUS}
+    - {resource: 'grupo gratuito de Claude Code', decision: OUT_OF_CORPUS}
+  MS001-SRC-C:
+    - {resource: 'curso N8N Facil', decision: OUT_OF_CORPUS}
+    - {resource: 'VPS Hostinger / Contabo', decision: OUT_OF_CORPUS}
+    - {resource: 'grupo WhatsApp com workflow JSON + script Docker', decision: OUT_OF_CORPUS}
+    - {resource: 'Groq / OpenAI', decision: OUT_OF_CORPUS}
+    - {resource: 'VIDEO ANTERIOR com o setup de Evolution + n8n na VPS'
+       , decision: REFERENCED_EXTERNAL_RESOURCE_NOT_IN_CORPUS
+       , nota: 'reduz o lado C do cluster de setup. C permanece autossuficiente para o
+                que ensina; a sobreposicao com B se da pelo lado CONSUMIDOR da API,
+                que esta em C. Limitacao registrada, nao bloqueio.'}

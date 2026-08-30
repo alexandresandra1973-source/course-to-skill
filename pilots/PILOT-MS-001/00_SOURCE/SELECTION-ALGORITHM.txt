@@ -1,0 +1,16 @@
+ALGORITMO DE SELECAO DE SLICES — declarado ANTES de selecionar, deterministico e reproduzivel.
+
+1. CLUSTER: usar apenas conceitos com estado PRESENT_BOTH na matriz de sobreposicao
+   (>=3 ocorrencias em cada fonte). Nenhum cluster e criado para preencher lista.
+2. JANELAS: varrer cada fonte com janela deslizante de 90s, passo 30s.
+3. DENSIDADE: score(janela) = nº de conceitos PRESENT_BOTH distintos presentes na janela.
+4. BOILERPLATE: descartar janela cujo texto dispare >=1 marcador de meta-discurso
+   (curso, treinamento, link na descricao, comentario fixado, inscreva, cupom, desconto,
+   assiste ate o final, deixa o like, se inscreve).
+5. BOUNDARY: expandir a janela selecionada ate a fronteira de segmento mais proxima e
+   registrar frase inicial e final; marcar BOUNDARY_REVIEW_REQUIRED se a frase inicial
+   comecar por conector de continuidade (entao, ai, e ai, porque, mas, ou seja, dai).
+6. RANK: ordenar por score desc, depois por start asc. Empates resolvidos pelo start menor.
+7. NAO SOBREPOR: ao selecionar, descartar janela que sobreponha uma ja selecionada.
+8. A selecao NAO consulta relacao semantica alguma. Nenhuma janela e escolhida por
+   "conter conflito" ou por qualquer classificacao futura.

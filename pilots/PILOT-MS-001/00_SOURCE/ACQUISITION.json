@@ -1,0 +1,26 @@
+{
+ "B": {
+  "video_id": "dtAoZYMEzcM",
+  "file": "raw/B-dtAoZYMEzcM-pt.json",
+  "sha256": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+  "bytes": 47164,
+  "segments": 488,
+  "first_s": 0.0,
+  "last_s": 1057.52,
+  "chars": 17846,
+  "lang": "pt",
+  "kind": "PLATFORM_AUTO_CAPTION"
+ },
+ "C": {
+  "video_id": "NvrBpnbNfv4",
+  "file": "raw/C-NvrBpnbNfv4-pt.json",
+  "sha256": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+  "bytes": 37838,
+  "segments": 389,
+  "first_s": 0.04,
+  "last_s": 825.68,
+  "chars": 14376,
+  "lang": "pt",
+  "kind": "PLATFORM_AUTO_CAPTION"
+ }
+}

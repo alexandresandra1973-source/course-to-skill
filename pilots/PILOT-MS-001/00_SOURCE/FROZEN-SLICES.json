@@ -1,0 +1,161 @@
+{
+ "SL-B-01": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1574,
+  "end_s": 90.0,
+  "first_segment_text": "Nesse vídeo, eu vou mostrar para vocês",
+  "last_segment_text": "pré-instalar, tá? Então, quando você for",
+  "n_segments": 42,
+  "parent_artifact_video_id": "dtAoZYMEzcM",
+  "parent_caption_artifact_sha256": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+  "selection_score": 7,
+  "shared_concepts": [
+   "API/tool",
+   "Evolution API",
+   "VPS/hosting",
+   "WhatsApp",
+   "automation/orchestration",
+   "conversation",
+   "message"
+  ],
+  "slice_id": "SL-B-01",
+  "slice_text_sha256": "60d5da35e07209a053dbbb8cd91b7a6c6d64d6fb7f0c81be097d71fa50039113",
+  "source_id": "MS001-SRC-B",
+  "start_s": 0.0,
+  "transcript_segment_ids": [
+   0,
+   41
+  ]
+ },
+ "SL-B-02": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1614,
+  "end_s": 240.0,
+  "first_segment_text": "conseguir ver aqui os o os tipos de",
+  "last_segment_text": "tá selecionando cartão de crédito,",
+  "n_segments": 42,
+  "parent_artifact_video_id": "dtAoZYMEzcM",
+  "parent_caption_artifact_sha256": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+  "selection_score": 5,
+  "shared_concepts": [
+   "API/tool",
+   "Evolution API",
+   "QR/instance",
+   "VPS/hosting",
+   "WhatsApp"
+  ],
+  "slice_id": "SL-B-02",
+  "slice_text_sha256": "ac37fa83349fd1c4509b9fc478be5a223047a90f76a339ff3157dfea5089c1a7",
+  "source_id": "MS001-SRC-B",
+  "start_s": 150.0,
+  "transcript_segment_ids": [
+   71,
+   112
+  ]
+ },
+ "SL-B-03": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1528,
+  "end_s": 360.0,
+  "first_segment_text": "aqui no portal. E aqui você vai ver o",
+  "last_segment_text": "Ó, se for iPhone, você vem aqui em",
+  "n_segments": 42,
+  "parent_artifact_video_id": "dtAoZYMEzcM",
+  "parent_caption_artifact_sha256": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+  "selection_score": 6,
+  "shared_concepts": [
+   "API/tool",
+   "Evolution API",
+   "QR/instance",
+   "VPS/hosting",
+   "WhatsApp",
+   "test/validate"
+  ],
+  "slice_id": "SL-B-03",
+  "slice_text_sha256": "d03eaa3a6806cf7024d95b7de1edfc1a46698596f7dac767aabdacfb57df7731",
+  "source_id": "MS001-SRC-B",
+  "start_s": 270.0,
+  "transcript_segment_ids": [
+   128,
+   169
+  ]
+ },
+ "SL-C-01": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1710,
+  "end_s": 120.0,
+  "first_segment_text": "VPS o Reds é um banco de dados não",
+  "last_segment_text": "para ela seleciona de qual projeto ela",
+  "n_segments": 45,
+  "parent_artifact_video_id": "NvrBpnbNfv4",
+  "parent_caption_artifact_sha256": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+  "selection_score": 3,
+  "shared_concepts": [
+   "API/tool",
+   "VPS/hosting",
+   "conversation"
+  ],
+  "slice_id": "SL-C-01",
+  "slice_text_sha256": "bfbab44cb3c251bc0d946b1f6b95808445edfaeea11f412a04160663b0adef28",
+  "source_id": "MS001-SRC-C",
+  "start_s": 30.0,
+  "transcript_segment_ids": [
+   15,
+   59
+  ]
+ },
+ "SL-C-02": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1426,
+  "end_s": 210.0,
+  "first_segment_text": "faz parte e clica em criar aqui é a",
+  "last_segment_text": "aqui no web Hook nós vamos pegar apenas",
+  "n_segments": 37,
+  "parent_artifact_video_id": "NvrBpnbNfv4",
+  "parent_caption_artifact_sha256": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+  "selection_score": 7,
+  "shared_concepts": [
+   "API/tool",
+   "Evolution API",
+   "QR/instance",
+   "WhatsApp",
+   "automation/orchestration",
+   "message",
+   "test/validate"
+  ],
+  "slice_id": "SL-C-02",
+  "slice_text_sha256": "5918fe7cd59e180ada88d406529dcfad75bb3b01465cdca8010aeec817e3c36a",
+  "source_id": "MS001-SRC-C",
+  "start_s": 120.0,
+  "transcript_segment_ids": [
+   60,
+   96
+  ]
+ },
+ "SL-C-03": {
+  "boundary_status": "BOUNDARY_SAFE",
+  "chars": 1483,
+  "end_s": 300.0,
+  "first_segment_text": "cinco que são os campos quem mandou que",
+  "last_segment_text": "fazer e com base nessas instruções ele",
+  "n_segments": 40,
+  "parent_artifact_video_id": "NvrBpnbNfv4",
+  "parent_caption_artifact_sha256": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+  "selection_score": 5,
+  "shared_concepts": [
+   "API/tool",
+   "QR/instance",
+   "conversation",
+   "message",
+   "test/validate"
+  ],
+  "slice_id": "SL-C-03",
+  "slice_text_sha256": "a7157b09428082b900dc5846045b7c9e88ca9c947226e0f3b4525247be9081bb",
+  "source_id": "MS001-SRC-C",
+  "start_s": 210.0,
+  "transcript_segment_ids": [
+   97,
+   136
+  ]
+ }
+}

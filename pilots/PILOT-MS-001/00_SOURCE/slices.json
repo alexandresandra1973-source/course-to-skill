@@ -1,0 +1,208 @@
+{
+ "B": [
+  {
+   "start": 0.0,
+   "end": 90.0,
+   "score": 7,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "VPS/hosting",
+    "WhatsApp",
+    "automation/orchestration",
+    "conversation",
+    "message"
+   ],
+   "boiler": false,
+   "first": "Nesse vídeo, eu vou mostrar para vocês",
+   "last": "pré-instalar, tá? Então, quando você for",
+   "nseg": 42,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 150.0,
+   "end": 240.0,
+   "score": 5,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "QR/instance",
+    "VPS/hosting",
+    "WhatsApp"
+   ],
+   "boiler": false,
+   "first": "conseguir ver aqui os o os tipos de",
+   "last": "tá selecionando cartão de crédito,",
+   "nseg": 42,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 270.0,
+   "end": 360.0,
+   "score": 6,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "QR/instance",
+    "VPS/hosting",
+    "WhatsApp",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "aqui no portal. E aqui você vai ver o",
+   "last": "Ó, se for iPhone, você vem aqui em",
+   "nseg": 42,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 570.0,
+   "end": 660.0,
+   "score": 6,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "QR/instance",
+    "VPS/hosting",
+    "WhatsApp",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "e o número IP. Aí eu venho aqui, colo",
+   "last": "sou admin. Cloud, eu quero que você me",
+   "nseg": 36,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 660.0,
+   "end": 750.0,
+   "score": 2,
+   "concepts": [
+    "Evolution API",
+    "automation/orchestration"
+   ],
+   "boiler": false,
+   "first": "passe uma lista de todos os grupos que",
+   "last": "abriu o navegador aqui automaticamente.",
+   "nseg": 40,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 960.0,
+   "end": 1050.0,
+   "score": 3,
+   "concepts": [
+    "API/tool",
+    "message",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "o c cedilha.",
+   "last": "vocês assistam também esse vídeo que eu",
+   "nseg": 44,
+   "boundary": "BOUNDARY_SAFE"
+  }
+ ],
+ "C": [
+  {
+   "start": 30.0,
+   "end": 120.0,
+   "score": 3,
+   "concepts": [
+    "API/tool",
+    "VPS/hosting",
+    "conversation"
+   ],
+   "boiler": false,
+   "first": "VPS o Reds é um banco de dados não",
+   "last": "para ela seleciona de qual projeto ela",
+   "nseg": 45,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 120.0,
+   "end": 210.0,
+   "score": 7,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "QR/instance",
+    "WhatsApp",
+    "automation/orchestration",
+    "message",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "faz parte e clica em criar aqui é a",
+   "last": "aqui no web Hook nós vamos pegar apenas",
+   "nseg": 37,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 210.0,
+   "end": 300.0,
+   "score": 5,
+   "concepts": [
+    "API/tool",
+    "QR/instance",
+    "conversation",
+    "message",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "cinco que são os campos quem mandou que",
+   "last": "fazer e com base nessas instruções ele",
+   "nseg": 40,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 300.0,
+   "end": 390.0,
+   "score": 3,
+   "concepts": [
+    "API/tool",
+    "conversation",
+    "message"
+   ],
+   "boiler": false,
+   "first": "vai chamar as ferramentas que ele tem à",
+   "last": "do prompt o nome do cliente e a data e",
+   "nseg": 43,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 450.0,
+   "end": 540.0,
+   "score": 4,
+   "concepts": [
+    "API/tool",
+    "automation/orchestration",
+    "conversation",
+    "message"
+   ],
+   "boiler": false,
+   "first": "já deu sucesso a próxima configuração é",
+   "last": "kais in Foz do Iguaçu o método que eu",
+   "nseg": 43,
+   "boundary": "BOUNDARY_SAFE"
+  },
+  {
+   "start": 660.0,
+   "end": 750.0,
+   "score": 7,
+   "concepts": [
+    "API/tool",
+    "Evolution API",
+    "VPS/hosting",
+    "WhatsApp",
+    "automation/orchestration",
+    "message",
+    "test/validate"
+   ],
+   "boiler": false,
+   "first": "demorando agora um pouquinho para fazer",
+   "last": "baixar essa pasta que o deixei abri ela",
+   "nseg": 42,
+   "boundary": "BOUNDARY_SAFE"
+  }
+ ]
+}
