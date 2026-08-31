@@ -1,0 +1,14 @@
+{
+ "claude_code_version": "2.1.251",
+ "compiler": "run_compile.py",
+ "compiler_sha256": "8baf38571c7441c783282d6b6039cb0d1b045c8802924637e0257a9195846a53",
+ "entailment_prompt_sha256": "762fdd82c09e5fa02e80d8278774fbe31b4e42a72acf752901a7fba6ba6e0ff5",
+ "entailment_schema_sha256": "faf97bd398d56fdf1deed09dbd037391b506d896d91974ecfa8a923d2bb4456c",
+ "extraction_prompt_sha256": "c2bc1d9eb6ac091e59e2ca874c6dc98e035c7a0c1708e33bbd94f26c037f3edd",
+ "extraction_schema_sha256": "94731dca0d2b882335d7d35c9d5720a7f54b7bef0b7b897fa7ba7204ff44e569",
+ "l0_builder_sha256": "7419e6aca579f5e5055211b46c379da04beea4442ded928ba88117f5c1eda0c6",
+ "model": "claude-opus-5",
+ "model_transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+ "payg_api_used": 0,
+ "transport_sha256": "be1f504c41e827e000bd7483b46e231e1bfeab5832ab29ecba71c31558fd2889"
+}

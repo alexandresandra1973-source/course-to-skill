@@ -1,0 +1,382 @@
+source_id: MS002-SRC-C
+ITENS:
+[
+ {
+  "claim_id": "CL-0001",
+  "claim_text": "A solução para responder mensagens do WhatsApp com Inteligência Artificial usa a ferramenta n8n, o banco de dados Redis e a API Evolution para WhatsApp.",
+  "evidence": [
+   {
+    "local_id": "EV-0001",
+    "excerpt": "quer aprender a responder as mensagens que chegam no seu WhatsApp utilizando Inteligência Artificial assiste até o final desse vídeo que eu vou te mostrar"
+   },
+   {
+    "local_id": "EV-0002",
+    "excerpt": "como que faz usando a ferramenta n8n o banco de dados Reds e a api Evolution pro WhatsApp se você ainda não tem a Evolution e o n8n configurados na sua"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0002",
+  "claim_text": "Se você ainda não tem a Evolution e o n8n configurados na sua VPS, veja o vídeo anterior que ensina passo a passo, ou baixe na descrição o script para rodar localmente.",
+  "evidence": [
+   {
+    "local_id": "EV-0002",
+    "excerpt": "como que faz usando a ferramenta n8n o banco de dados Reds e a api Evolution pro WhatsApp se você ainda não tem a Evolution e o n8n configurados na sua"
+   },
+   {
+    "local_id": "EV-0003",
+    "excerpt": "VPS Vê o vídeo anterior que eu ensinei passo a passo de uma forma muito fácil como que faz isso tudo ou baixe aí na descrição o meu script para rodar"
+   },
+   {
+    "local_id": "EV-0004",
+    "excerpt": "localmente no final do vídeo eu dou mais detalhes de como que executa ele o primeiro passo é instalar o Red na sua VPS o Reds é um banco de dados não"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0003",
+  "claim_text": "O primeiro passo é instalar o Redis na sua VPS.",
+  "evidence": [
+   {
+    "local_id": "EV-0004",
+    "excerpt": "localmente no final do vídeo eu dou mais detalhes de como que executa ele o primeiro passo é instalar o Red na sua VPS o Reds é um banco de dados não"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0004",
+  "claim_text": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados, e nele é possível configurar dados que vão ter um tempo de vida, o que o torna ideal para as operações que serão feitas.",
+  "evidence": [
+   {
+    "local_id": "EV-0004",
+    "excerpt": "localmente no final do vídeo eu dou mais detalhes de como que executa ele o primeiro passo é instalar o Red na sua VPS o Reds é um banco de dados não"
+   },
+   {
+    "local_id": "EV-0005",
+    "excerpt": "relacional que utiliza Chaves e valores para guardar os dados nele a gente pode configurar dados que vão ter um tempo de vida então ele é ideal para essas"
+   },
+   {
+    "local_id": "EV-0006",
+    "excerpt": "operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo serviço no seu projeto o ris fica aqui"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0005",
+  "claim_text": "Para instalar o Redis, vá no EasyPanel, clique no mais para adicionar um novo serviço no projeto, escolha a opção redis, coloque um nome para o serviço, deixe a senha em branco para gerar uma aleatória, não mexa na versão e clique em criar.",
+  "evidence": [
+   {
+    "local_id": "EV-0006",
+    "excerpt": "operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo serviço no seu projeto o ris fica aqui"
+   },
+   {
+    "local_id": "EV-0007",
+    "excerpt": "em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em branco para ele gerar uma aleatória para"
+   },
+   {
+    "local_id": "EV-0008",
+    "excerpt": "mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds instalado no eas panel ativa essa opção"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0006",
+  "claim_text": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento: é um painel de gerenciamento do Redis que permite visualizar, editar ou apagar os dados através do navegador.",
+  "evidence": [
+   {
+    "local_id": "EV-0008",
+    "excerpt": "mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds instalado no eas panel ativa essa opção"
+   },
+   {
+    "local_id": "EV-0009",
+    "excerpt": "do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você pode visualizar os dados que tem lá"
+   },
+   {
+    "local_id": "EV-0010",
+    "excerpt": "dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock ou da Open a ou de qualquer outro que"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0007",
+  "claim_text": "O próximo passo é pegar uma chave de API do Groq, da OpenAI ou de qualquer outro provedor que você tiver.",
+  "evidence": [
+   {
+    "local_id": "EV-0010",
+    "excerpt": "dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock ou da Open a ou de qualquer outro que"
+   },
+   {
+    "local_id": "EV-0011",
+    "excerpt": "você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock aqui como uma opção porque o grock é"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0008",
+  "claim_text": "O Groq é apresentado como opção porque é gratuito.",
+  "evidence": [
+   {
+    "local_id": "EV-0011",
+    "excerpt": "você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock aqui como uma opção porque o grock é"
+   },
+   {
+    "local_id": "EV-0012",
+    "excerpt": "gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o Google e aqui do lado esquerdo Você vai"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0009",
+  "claim_text": "No site do Groq, vá em Dev Console, faça login com o Google, vá em API Keys no lado esquerdo, clique para criar uma nova, dê um nome, marque a caixinha e clique em submit.",
+  "evidence": [
+   {
+    "local_id": "EV-0012",
+    "excerpt": "gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o Google e aqui do lado esquerdo Você vai"
+   },
+   {
+    "local_id": "EV-0013",
+    "excerpt": "vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai te dar a chave você precisa copiar ela"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0010",
+  "claim_text": "É preciso copiar a chave assim que ela é exibida e colar num bloco de notas, porque depois que você sair dessa tela não tem mais como ver.",
+  "evidence": [
+   {
+    "local_id": "EV-0013",
+    "excerpt": "vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai te dar a chave você precisa copiar ela"
+   },
+   {
+    "local_id": "EV-0014",
+    "excerpt": "agora porque depois que você sair dessa tela não tem mais como ver então copia e cola num bloco de notas para não esquecer na Open ai precisa colocar 5"
+   },
+   {
+    "local_id": "EV-0016",
+    "excerpt": "faz parte e clica em criar aqui é a mesma coisa você precisa copiar ela agora e salvar num bloco de notas porque quando sair dessa tela não tem mais como"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0011",
+  "claim_text": "Na OpenAI é preciso colocar 5 (dólares) para poder gerar uma chave; então vá nas configurações, API Keys, clique para criar uma nova, dê um nome, selecione de qual projeto ela faz parte e clique em criar.",
+  "evidence": [
+   {
+    "local_id": "EV-0014",
+    "excerpt": "agora porque depois que você sair dessa tela não tem mais como ver então copia e cola num bloco de notas para não esquecer na Open ai precisa colocar 5"
+   },
+   {
+    "local_id": "EV-0015",
+    "excerpt": "para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome para ela seleciona de qual projeto ela"
+   },
+   {
+    "local_id": "EV-0016",
+    "excerpt": "faz parte e clica em criar aqui é a mesma coisa você precisa copiar ela agora e salvar num bloco de notas porque quando sair dessa tela não tem mais como"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0012",
+  "claim_text": "Antes de criar o workflow no n8n, vá em settings > community nodes e veja se os nodes da Evolution API estão instalados; se não estiverem, clique em Install, digite n8n nodes Evolution api e clique em instalar.",
+  "evidence": [
+   {
+    "local_id": "EV-0017",
+    "excerpt": "ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados"
+   },
+   {
+    "local_id": "EV-0018",
+    "excerpt": "se você não tiver é só clicar em Install e digitar n8n nodes Evolution api e depois clicar em instalar Beleza então vamos aqui no menu principal criar um"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0013",
+  "claim_text": "A ideia do exemplo é fazer um chatbot que consulta a API do autor sobre pontos turísticos em Foz do Iguaçu e responde à pessoa através do WhatsApp.",
+  "evidence": [
+   {
+    "local_id": "EV-0019",
+    "excerpt": "novo workflow e vou dar o nome dele aqui a minha ideia é fazer um chatbot que vai consultar a minha api sobre pontos turísticos em Foz de Iguaçu e responder"
+   },
+   {
+    "local_id": "EV-0020",
+    "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0014",
+  "claim_text": "Para começar o workflow, adicione um node de Webhook, configure o método dele como POST e copie a URL de teste.",
+  "evidence": [
+   {
+    "local_id": "EV-0020",
+    "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0015",
+  "claim_text": "Na Evolution, clique na sua sessão, vá em events webhook, cole a URL e verifique que as três opções estejam ativas: enabled, base 64 e o evento chamado messages upsert; depois clique em salvar.",
+  "evidence": [
+   {
+    "local_id": "EV-0021",
+    "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento"
+   },
+   {
+    "local_id": "EV-0022",
+    "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0016",
+  "claim_text": "Volte ao n8n, clique para ouvir um evento de teste e mande uma mensagem para você mesmo no seu WhatsApp para que os dados cheguem.",
+  "evidence": [
+   {
+    "local_id": "EV-0022",
+    "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode"
+   },
+   {
+    "local_id": "EV-0023",
+    "excerpt": "mandar uma mensagem para você no seu WhatsApp mandei aqui já chegaram os dados e agora vamos trabalhar com eles nós nunca usamos diretamente os dados"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0017",
+  "claim_text": "Nunca usar diretamente os dados que vêm no Webhook; sempre adicionar um node Set depois do Webhook para organizá-los de uma forma melhor.",
+  "evidence": [
+   {
+    "local_id": "EV-0023",
+    "excerpt": "mandar uma mensagem para você no seu WhatsApp mandei aqui já chegaram os dados e agora vamos trabalhar com eles nós nunca usamos diretamente os dados"
+   },
+   {
+    "local_id": "EV-0024",
+    "excerpt": "que vem no web Hook a gente sempre adiciona um node set depois do Web Hook para organizar eles de uma forma melhor então de todos esses dados que vieram"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0018",
+  "claim_text": "De todos os dados que vêm no Webhook são usados apenas cinco campos: quem mandou (número da pessoa), a instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+  "evidence": [
+   {
+    "local_id": "EV-0025",
+    "excerpt": "aqui no web Hook nós vamos pegar apenas cinco que são os campos quem mandou que vai ser o número da pessoa o outro Campo vai ser a Instância que recebeu a"
+   },
+   {
+    "local_id": "EV-0026",
+    "excerpt": "mensagem o outro Campo vai ser a mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0019",
+  "claim_text": "Os caminhos dos campos são: quem mandou em body.data.key.remoteJid, a instância em body.instance, a mensagem em body.data.message.conversation, o ID da mensagem em body.data.key.id e o nome da pessoa em body.data.pushName.",
+  "evidence": [
+   {
+    "local_id": "EV-0027",
+    "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message"
+   },
+   {
+    "local_id": "EV-0028",
+    "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0020",
+  "claim_text": "Após clicar em teste, os dados são reduzidos a esses cinco campos; renomeie esse node para 'dados'.",
+  "evidence": [
+   {
+    "local_id": "EV-0028",
+    "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e"
+   },
+   {
+    "local_id": "EV-0029",
+    "excerpt": "agora veja que aquele monte de coisa virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0021",
+  "claim_text": "Antes de criar o agente de IA, coloque um set vazio, porque isso vai ser melhor no futuro; depois desse set vazio coloque o AI Agent.",
+  "evidence": [
+   {
+    "local_id": "EV-0029",
+    "excerpt": "agora veja que aquele monte de coisa virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já"
+   },
+   {
+    "local_id": "EV-0030",
+    "excerpt": "vai criar o nosso agente de a mas antes coloca aqui um set vazio mesmo que isso vai ser melhor pra gente no futuro pode depois desse set vazio colocar o ai"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0022",
+  "claim_text": "O agente de IA é composto por quatro peças: o modelo de Inteligência Artificial (o cérebro), a memória de chat (onde guarda o histórico de mensagens com alguma pessoa), as ferramentas que o agente pode utilizar (por exemplo pesquisar na internet, alterar planilhas, buscar em um banco de dados) e o agente em si, onde se colocam as instruções.",
+  "evidence": [
+   {
+    "local_id": "EV-0031",
+    "excerpt": "Agent e aqui vamos fazer as as configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência"
+   },
+   {
+    "local_id": "EV-0032",
+    "excerpt": "Artificial que ele usa o modelo é como se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um"
+   },
+   {
+    "local_id": "EV-0033",
+    "excerpt": "histórico de mensagens que ele teve com alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo"
+   },
+   {
+    "local_id": "EV-0034",
+    "excerpt": "pesquisar na internet alterar planilhas buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0023",
+  "claim_text": "Com base nas instruções, o agente chama as ferramentas que tem à disposição para responder o usuário: no caso de uma pergunta ele busca no banco de dados; no caso de uma ordem ele realiza uma ação.",
+  "evidence": [
+   {
+    "local_id": "EV-0034",
+    "excerpt": "pesquisar na internet alterar planilhas buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve"
+   },
+   {
+    "local_id": "EV-0035",
+    "excerpt": "fazer e com base nessas instruções ele vai chamar as ferramentas que ele tem à disposição para que ele responda o usuário no caso de uma pergunta aí ele"
+   },
+   {
+    "local_id": "EV-0036",
+    "excerpt": "vai buscar no banco de dados ou que ele realize uma ação no caso de uma ordem o tipo de agente vamos deixar em Tools Agent que é o mais avançado que tem"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0024",
+  "claim_text": "O tipo de agente deve ficar em Tools Agent, que é o mais avançado e que tem acesso a ferramentas.",
+  "evidence": [
+   {
+    "local_id": "EV-0036",
+    "excerpt": "vai buscar no banco de dados ou que ele realize uma ação no caso de uma ordem o tipo de agente vamos deixar em Tools Agent que é o mais avançado que tem"
+   },
+   {
+    "local_id": "EV-0037",
+    "excerpt": "acesso a ferramentas em source for prompt nós vamos tirar essa opção de connected chat Trigger e mudar pra outra que é definir abaixo aqui nós vamos"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0025",
+  "claim_text": "Em Source for Prompt, tire a opção 'connected chat trigger' e mude para 'definir abaixo', informando a mensagem que a pessoa mandou, que é o que será passado ao agente para gerar uma resposta.",
+  "evidence": [
+   {
+    "local_id": "EV-0037",
+    "excerpt": "acesso a ferramentas em source for prompt nós vamos tirar essa opção de connected chat Trigger e mudar pra outra que é definir abaixo aqui nós vamos"
+   },
+   {
+    "local_id": "EV-0038",
+    "excerpt": "informar a mensagem que a pessoa mandou é isso que vai ser passado pro nosso agente gerar uma resposta então clica aqui do lado para trazer os dados"
+   }
+  ]
+ }
+]

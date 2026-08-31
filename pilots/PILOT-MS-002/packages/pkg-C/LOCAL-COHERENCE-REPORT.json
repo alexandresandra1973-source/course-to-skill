@@ -1,0 +1,20 @@
+{
+ "INVALID_PROVENANCE": 0,
+ "all_claims_have_evidence": true,
+ "all_sealed_are_entailed": true,
+ "candidates_by_kind": {
+  "anti_pattern_candidates": 1,
+  "rule_candidates": 14,
+  "workflow_candidates": 9
+ },
+ "candidates_eligible": 23,
+ "candidates_total": 24,
+ "claims_sealed": 60,
+ "claims_total": 61,
+ "duplicate_semantic_keys": 0,
+ "entailment_distribution": {
+  "ENTAILED": 60,
+  "NOT_ENTAILED": 1
+ },
+ "source_id": "MS002-SRC-C"
+}

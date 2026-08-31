@@ -23,6 +23,43 @@ EN_SYS, EN_USR = T.split_prompt((H / "instruments/ENTAILMENT-PROMPT-v3.txt").rea
 EX_SCHEMA = (H / "instruments/EXTRACTION-SCHEMA-v3.json").read_text(encoding="utf-8")
 EN_SCHEMA = (H / "instruments/ENTAILMENT-SCHEMA-v3.json").read_text(encoding="utf-8")
 EX_SCH = json.loads(EX_SCHEMA); EN_SCH = json.loads(EN_SCHEMA)
+
+# ---------------------------------------------------------------------------
+# NORMALIZACAO DETERMINISTICA PRE-VALIDACAO  (recuperacao instrumental, ADDENDUM-01)
+# Remove EXCLUSIVAMENTE chaves desconhecidas cujo valor e literalmente null.
+# Uma chave desconhecida com valor NAO-null continua sendo falha fail-closed.
+# Nenhum valor e alterado, nenhum campo obrigatorio e preenchido, nenhuma correcao
+# semantica e feita. Toda remocao e registrada em STRIPPED para auditoria.
+STRIPPED = []
+def strip_null_unknown(node, schema, path=""):
+    if not isinstance(node, dict) or not isinstance(schema, dict):
+        return node
+    props = schema.get("properties")
+    if props is not None and schema.get("additionalProperties") is False:
+        for k in [k for k in node if k not in props]:
+            if node[k] is None:
+                STRIPPED.append({"path": f"{path}.{k}", "value": None}); del node[k]
+    for k, v in list(node.items()):
+        sub = (props or {}).get(k)
+        if sub is None:
+            continue
+        if isinstance(v, dict):
+            strip_null_unknown(v, sub, f"{path}.{k}")
+        elif isinstance(v, list) and isinstance(sub.get("items"), dict):
+            for i, it in enumerate(v):
+                strip_null_unknown(it, sub["items"], f"{path}.{k}[{i}]")
+    return node
+
+def validate_strict(doc, schema, where):
+    """Normaliza chaves-null desconhecidas, depois valida. Fail-closed no resto."""
+    before = len(STRIPPED)
+    strip_null_unknown(doc, schema, where)
+    n = len(STRIPPED) - before
+    if n:
+        print(f"      [ADDENDUM-01] {where}: {n} chave(s) desconhecida(s) de valor null removida(s): "
+              + ", ".join(s["path"] for s in STRIPPED[before:]))
+    jsonschema.validate(doc, schema)
+    return doc
 BUDGET = T.Budget(cap=int(next((a.split("=")[1] for a in sys.argv if a.startswith("--cap=")), 90)))
 
 SYSDIR = OUT / "sys"; SYSDIR.mkdir(exist_ok=True)
@@ -47,7 +84,7 @@ def ec_control():
               .replace("{JSON_SCHEMA}", EX_SCHEMA))
     txt, _ = T.call(BUDGET, SYSDIR / "EXTRACT-SYSTEM.txt", u, OUT / "controls", "EC")
     d = json.loads(T.jparse(txt))
-    jsonschema.validate(d, EX_SCH)
+    validate_strict(d, EX_SCH, "control/EC")
     cl, cd = d["raw_claims"], d["raw_candidates"]
     allev = {i for i, _ in EC_EV}
     res = {}
@@ -117,7 +154,7 @@ def extract_source(src):
             continue
         txt, rec = T.call(BUDGET, SYSDIR / "EXTRACT-SYSTEM.txt", u, OUT / f"raw-{src}", sl["slice_id"])
         d = json.loads(T.jparse(txt))
-        jsonschema.validate(d, EX_SCH)
+        validate_strict(d, EX_SCH, f"extract/{sl['slice_id']}")
         if d["source_id"] != sid or d["slice_id"] != sl["slice_id"]:
             raise SystemExit(f"X01_SLICE_MISMATCH em {sl['slice_id']} — MS_002_INVALID")
         allow = {e["local_id"] for e in chunk}
@@ -178,7 +215,7 @@ def entail(src, claims, evidence_by_id):
         label = f"ENTAIL-{i//B+1:02d}"
         txt, _ = T.call(BUDGET, SYSDIR / "ENTAIL-SYSTEM.txt", u, OUT / f"raw-{src}", label)
         d = json.loads(T.jparse(txt))
-        jsonschema.validate(d, EN_SCH)
+        validate_strict(d, EN_SCH, f"entail/{label}")
         got = {v["claim_id"]: v for v in d["verdicts"]}
         want = {c["local_id"] for c in chunk}
         if set(got) != want:
@@ -329,6 +366,7 @@ def main():
         print(f"    SEALED: {coh['claims_sealed']}/{coh['claims_total']} claims · "
               f"{coh['candidates_total']} candidates ({coh['candidates_eligible']} eligible) · hash {h[:16]}…")
     state["calls"] = BUDGET.calls; state["executed_calls"] = BUDGET.n
+    state["addendum_01_stripped_null_unknown_keys"] = STRIPPED
     (OUT / ("COMPILE-STATE-dry.json" if DRY else "COMPILE-STATE.json")).write_text(
         json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  chamadas: {BUDGET.n}/{BUDGET.cap}")

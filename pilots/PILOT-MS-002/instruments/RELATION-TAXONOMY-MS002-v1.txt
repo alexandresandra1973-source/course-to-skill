@@ -1,0 +1,91 @@
+TAXONOMIA DE RELACAO — MS-002, herdada sem alteracao semantica do MS-001B.
+Unica mudanca: a convencao de direcao passa a ser definida para tres fontes (abaixo).
+Os sete labels, suas definicoes e as regras de scope sao BYTE-EQUIVALENTES ao MS-001B.
+
+TAXONOMIA DE RELACAO — congelada experimentalmente. Sete labels, nenhuma outra.
+PRESUPPOSES = NOT_REQUIRED / OPEN.
+
+=========================================================================
+CONVENCAO DE DIRECAO — FIXADA AQUI, UMA UNICA
+=========================================================================
+  MS-002 (tres fontes): para cada par, LEFT e RIGHT sao fixados pela ORDEM LEXICOGRAFICA
+  do source_id. A<B<C, logo:
+      par A-B: LEFT = Claim de MS002-SRC-A, RIGHT = Claim de MS002-SRC-B
+      par A-C: LEFT = Claim de MS002-SRC-A, RIGHT = Claim de MS002-SRC-C
+      par B-C: LEFT = Claim de MS002-SRC-B, RIGHT = Claim de MS002-SRC-C
+  A convencao e deterministica e nao muda entre runs nem entre pares.
+  LEFT_TO_RIGHT significa: "LEFT tem a propriedade EM RELACAO A RIGHT"
+     SPECIALIZES + LEFT_TO_RIGHT  =>  LEFT e a mais especifica; RIGHT e a mais geral
+     SUPERSEDES  + LEFT_TO_RIGHT  =>  LEFT substitui RIGHT
+  RIGHT_TO_LEFT e o espelho.
+  Esta convencao NAO muda entre runs.
+
+=========================================================================
+IDENTICAL — simetrica, direction NONE
+=========================================================================
+  mesma proposicao substantiva com qualifiers e escopo MATERIALMENTE EQUIVALENTES.
+  Parafrase e idioma diferente PODEM ser IDENTICAL.
+  Vocabulario compartilhado SOZINHO nao basta.
+  Exige scope_state = EQUIVALENT_SCOPE.
+
+CORROBORATES — simetrica, direction NONE
+  Claims independentes, semanticamente COMPATIVEIS, dando suporte CONVERGENTE a mesma
+  substancia ou conclusao, mas nao equivalentes o bastante para IDENTICAL.
+  Nao exige texto igual.
+
+SPECIALIZES — DIRECIONAL
+  uma Claim e versao mais especifica/restrita da outra, PRESERVANDO compatibilidade.
+  Normalmente exige scope_state = NESTED_COMPATIBLE_SCOPE.
+  Diferenca de escopo POR SI SO nao garante SPECIALIZES: e preciso que a mais especifica
+  seja um caso da mais geral, nao um caso diferente.
+  Output obrigatorio: LEFT_TO_RIGHT (LEFT mais especifica) ou RIGHT_TO_LEFT.
+
+CONTRADICTS — simetrica, direction NONE
+  as duas Claims sao INCOMPATIVEIS sob: mesmo objeto, qualifiers relevantes compativeis e
+  mesmo contexto/condicao material.
+  Exige scope_state = EQUIVALENT_SCOPE, ou compatibilidade material EXPLICITAMENTE
+  justificada em relation_why.
+  PROIBIDO CONTRADICTS quando a diferenca aparente e explicavel SOMENTE por:
+     plataforma diferente · objeto diferente · versao diferente · populacao diferente ·
+     condicao diferente · escopo aninhado compativel.
+  CONTRADICTS NAO decide qual lado vence.
+
+SUPERSEDES — DIRECIONAL
+  usar SOMENTE com evidencia EXPLICITA de versao, temporalidade, substituicao ou
+  atualizacao, e a Claim posterior substitui a anterior sobre o mesmo objeto/escopo.
+  PROIBIDO inferir supersession apenas porque uma fonte foi publicada depois.
+  Output: LEFT_TO_RIGHT (LEFT substitui RIGHT) ou RIGHT_TO_LEFT.
+
+UNRELATED — simetrica, direction NONE
+  nao ha relacao semantica material suficiente para nenhuma das cinco acima.
+  O fato de o blocker ter RETIDO o par NAO impede UNRELATED.
+  Este label existe justamente porque blocker != semantic judge.
+
+INDETERMINATE — simetrica, direction NONE
+  o material fornecido nao permite classificar responsavelmente.
+  NAO e fallback preguicoso. NAO e "nao sei porque nao li".
+  relation_why TEM de explicar qual ambiguidade ou insuficiencia impede a classificacao.
+
+=========================================================================
+SCOPE_STATE — emitido SEMPRE, campo separado
+=========================================================================
+  EQUIVALENT_SCOPE         mesmos qualifiers materiais
+  NESTED_COMPATIBLE_SCOPE  um escopo contido no outro, sem incompatibilidade
+  DIFFERENT_SCOPE          escopos materialmente distintos e nao aninhaveis
+  AMBIGUOUS_SCOPE          nao da para determinar
+
+  IDENTICAL   exige EQUIVALENT_SCOPE
+  SPECIALIZES normalmente exige NESTED_COMPATIBLE_SCOPE
+  CONTRADICTS exige EQUIVALENT_SCOPE ou justificativa material explicita
+  DIFFERENT_SCOPE IMPEDE falsa contradicao
+  AMBIGUOUS_SCOPE pode levar a INDETERMINATE
+
+  ORDEM OBRIGATORIA DE RACIOCINIO: ESCOPO PRIMEIRO, RELACAO DEPOIS.
+
+=========================================================================
+EIXO SEMANTICO != EIXO DE GOVERNANCA
+=========================================================================
+  o output semantico NAO decide precedence, winner, applicability MTX nem politica
+  operacional. Toda relation que possa exigir decisao futura recebe, fora do output do
+  juiz, governance_state = NOT_YET_ADJUDICATED.
+  CONTRADICTS NAO implica resolucao.

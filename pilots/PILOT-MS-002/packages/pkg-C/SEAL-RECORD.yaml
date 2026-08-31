@@ -1,0 +1,35 @@
+artifact_id: MS002-SEAL-MS002-SRC-C
+artifact_status: SEALED
+member_manifest_hash: 60cb63175ad556e1d901a7ca0cd23246daf1e280da6b96f8245c6b5f859cc7df
+members:
+- path: CLAIMS-REJECTED.jsonl
+  sha256: 65026172a57edd615cb9c9ec62ddbade3dc8315b4b622dba30ed323b98401027
+- path: CLAIMS.jsonl
+  sha256: 7ae6ce1f1d356ebe6da404d5470c1810712be3e59c95932c0ce885ae450dfb88
+- path: DECLARATION-SPACE-INDEX.json
+  sha256: c5f1d2a98ad1404621e05051821a0481c707ecf93225b61446f233a6a834ca4e
+- path: EVIDENCE.jsonl
+  sha256: 9894e48ab7360c2eff2bbaa5fa4a472e279dbecd3a5790dd0f7675180e4d9fb3
+- path: L0/RAW-CAPTION.json
+  sha256: ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7
+- path: LOCAL-COHERENCE-REPORT.json
+  sha256: f2cbf5000fb288d8ac85aadc4b0098b2397d4dd5eded84e782af44123e3f63f7
+- path: SLICES.json
+  sha256: 85458bbeef2e457d8300a46a96ac84a3d02987c8f67d44cf6ec88221a93e340b
+- path: SOURCE-ANCHORS.jsonl
+  sha256: d02dd2acc39eb751051c5052e9737ceb0310d090eb8cd5aefc856917e87ed841
+- path: SOURCE-LOCAL-CANDIDATES.json
+  sha256: 33391aff1145902bde74879ada294acc7663c2e1a7133fa861166ced2b6ce8a0
+- path: SOURCE-PROFILE.json
+  sha256: 3948f9fe51d3e0774ff5accca98ba394e86a71d2e8e43dfdd37a3194a715f873
+- path: TOOLCHAIN.json
+  sha256: 0647f1fceb443501b960dea857a80133f9806225779f23abe1d371e197819928
+members_count: 11
+nota: SEAL-RECORD nao se auto-referencia. Sem mtime.
+producer:
+  toolchain_path: TOOLCHAIN.json
+  toolchain_sha256: 0647f1fceb443501b960dea857a80133f9806225779f23abe1d371e197819928
+seal_contract_version: SEALED/7-conditions/MS-002
+source_content_hash: ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7
+source_id: MS002-SRC-C
+source_package_hash: 60cb63175ad556e1d901a7ca0cd23246daf1e280da6b96f8245c6b5f859cc7df

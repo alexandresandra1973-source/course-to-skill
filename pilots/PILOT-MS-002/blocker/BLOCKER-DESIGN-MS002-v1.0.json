@@ -1,0 +1,112 @@
+{
+ "design_id": "MS-002-CLAIM-BLOCKER-DESIGN",
+ "version": "v1.0",
+ "phase": "DESIGN_FREEZE",
+ "declared_before": "qualquer medicao de retencao e ANTES de qualquer chamada do juiz semantico",
+ "herda_de": {
+   "design": "MS-001-CLAIM-BLOCKER-DESIGN v0.3",
+   "sha256": "fa62c8159f2cef53ce435d56b3f7f68aedea950acb6ea47822bff8767059cba8",
+   "herdado_sem_alteracao": ["arquitetura de tres canais separados",
+     "ordem logica: texto normalizado -> conceito congelado -> objeto nomeado -> tokenizacao de conteudo",
+     "Channel A e B NAO sujeitos a min_len", "ZERO_CONTROL_OVERRIDES",
+     "BLOCKER_RETENTION != SEMANTIC_RELATION"],
+   "nao_herdado": "os numeros/thresholds do microcorpus MS-001; recalibrados aqui para o corpus real"
+ },
+ "PROBLEMA_ESTRUTURAL_DECLARADO": {
+   "achado": "O corpus real e BILINGUE. MS002-SRC-A esta em ingles; MS002-SRC-B e MS002-SRC-C em portugues.",
+   "medicao_mecanica": "Dos 76 termos de conteudo compartilhados por >=2 fontes, a quase totalidade dos compartilhados entre A e B/C sao anglicismos tecnicos que sobrevivem na fala portuguesa (api, cloud, code, web, link, chat, workflow, html, url, hook, video, youtube, google). Nao ha ponte lexical geral entre ingles e portugues.",
+   "consequencia": "O CHANNEL C (content tokens) e estruturalmente incapaz de detectar sobreposicao entre A e B/C. Isso e limitacao do canal, nao ausencia de relacao.",
+   "estrategia_conservadora_pre_declarada": "O CHANNEL A (frozen concepts) passa a ser BILINGUE: cada conceito carrega aliases em ingles e portugues. E o unico canal capaz de atravessar a fronteira de idioma. O CHANNEL C permanece no desenho e e MEDIDO, mas sua contribuicao cross-language e declarada como esperada-nula ANTES da medicao."
+ },
+ "CHANNEL_A_FROZEN_CONCEPTS": {
+   "deteccao": "catalogo congelado, sobre TEXTO NORMALIZADO, por fronteira de palavra",
+   "sujeito_a_min_len": false,
+   "bilingue": true,
+   "conceitos": {
+     "whatsapp":        ["whatsapp","whats","zap"],
+     "evolution_api":   ["evolution"],
+     "instance_session":["instance","instances","instancia","instancias","session","sessions","sessao","sessoes","qr","qrcode"],
+     "message":         ["message","messages","messaging","mensagem","mensagens","texto","text"],
+     "conversation":    ["conversation","conversations","chat","chats","conversa","conversas","reply","replies","responder","resposta","respostas"],
+     "agent_ai":        ["agent","agents","agente","agentes","ai","ia","llm","model","modelo","assistant","assistente"],
+     "automation":      ["automation","automate","automated","automating","automacao","automatizar","automatiza","workflow","workflows","fluxo","fluxos","orquestracao","pipeline"],
+     "api_tool":        ["api","apis","endpoint","endpoints","tool","tools","ferramenta","ferramentas","integration","integracao"],
+     "hosting":         ["vps","server","servers","servidor","servidores","host","hosting","hospedar","hospedagem","deploy","deployment","cloud","hostinger","hostgator","easypanel","docker"],
+     "database_memory": ["database","databases","banco","dados","data","redis","memory","memoria","context","contexto","cache"],
+     "webhook_event":   ["webhook","webhooks","hook","hooks","trigger","triggers","gatilho","gatilhos","event","events","evento","eventos"],
+     "credential_auth": ["token","tokens","key","keys","chave","chaves","apikey","credential","credentials","credencial","auth","autenticacao","login"],
+     "content_creative":["content","conteudo","image","images","imagem","imagens","video","videos","creative","criativo","criativos","post","posts","copy","thumbnail"],
+     "channel_social":  ["instagram","reels","story","stories","tiktok","youtube","facebook","linkedin","email","newsletter","sms"],
+     "ads_paid":        ["ads","ad","anuncio","anuncios","campaign","campaigns","campanha","campanhas","budget","orcamento","cpc","roas"],
+     "lead_customer":   ["lead","leads","customer","customers","cliente","clientes","prospect","prospects","audience","audiencia","publico"],
+     "followup_speed":  ["followup","follow","speed","velocidade","response","tempo","time","fast","rapido","imediato","instant"],
+     "dashboard_data":  ["dashboard","dashboards","painel","paineis","metric","metrics","metrica","metricas","report","reports","relatorio","analytics","sheet","sheets","planilha"],
+     "observability":   ["observability","observabilidade","log","logs","monitor","monitoring","monitorar","error","errors","erro","erros","debug","alert","alerts","alerta"],
+     "maintenance":     ["maintenance","manutencao","update","updates","atualizar","atualizacao","fix","fixes","corrigir","break","breaks","quebra","version","versao"],
+     "human_handoff":   ["human","humano","handoff","takeover","manual","operator","operador","atendente","escalate","escalonar"],
+     "prompt_skill":    ["prompt","prompts","skill","skills","habilidade","instruction","instructions","instrucao","instrucoes","routine","routines","rotina","rotinas","loop","loops"],
+     "test_validate":   ["test","tests","testing","testar","teste","testes","validate","validation","validar","validacao","verify","verificar"],
+     "bottleneck":      ["bottleneck","bottlenecks","gargalo","gargalos","constraint","constraints","restricao","blocker","bloqueio"],
+     "personalization": ["personalization","personalize","personalizar","personalizacao","variable","variables","variavel","variaveis","fuzzy","dynamic","dinamico","custom","customizar"],
+     "group_contact":   ["group","groups","grupo","grupos","contact","contacts","contato","contatos","number","numbers","numero","numeros"]
+   }
+ },
+ "CHANNEL_B_NAMED_OBJECTS": {
+   "deteccao": "catalogo congelado de objetos nomeados, sobre TEXTO NORMALIZADO, por fronteira de palavra",
+   "sujeito_a_min_len": false,
+   "nota_asr": "'claude code' aparece como 'cloud code' no ASR de MS002-SRC-B; ambas as grafias entram no catalogo do MESMO objeto, e isso e uma correcao de RECONHECIMENTO, nao uma correcao semantica do output do modelo.",
+   "objetos": {
+     "claude_code":   ["claude code","cloud code","claude"],
+     "evolution_api": ["evolution api","evolution"],
+     "n8n":           ["n8n"],
+     "redis":         ["redis"],
+     "whatsapp":      ["whatsapp"],
+     "instagram":     ["instagram"],
+     "google_ads":    ["google ads","google adwords"],
+     "google_sheets": ["google sheets","sheets","planilha"],
+     "openai":        ["openai","gpt","chatgpt"],
+     "docker":        ["docker"],
+     "youtube":       ["youtube"],
+     "easypanel":     ["easypanel"],
+     "hostinger":     ["hostinger"],
+     "hostgator":     ["hostgator"],
+     "airtable":      ["airtable"],
+     "make_zapier":   ["make com","zapier"],
+     "supabase":      ["supabase"],
+     "nano_banana":   ["nano banana"],
+     "veo":           ["veo"],
+     "apify":         ["apify"]
+   }
+ },
+ "CHANNEL_C_CONTENT_TOKENS": {
+   "min_len": 4,
+   "stopwords": "listas semanticas en+pt, aplicadas apos normalizacao",
+   "expectativa_declarada": "contribuicao cross-language A x (B|C) esperada NULA ou proxima de nula; medida e reportada, nao usada para justificar o desenho a posteriori"
+ },
+ "VARIANTES_PRE_DECLARADAS": {
+   "V1": "reter se compartilham >=1 conceito congelado (Channel A)",
+   "V2": "reter se compartilham >=1 objeto nomeado (Channel B)",
+   "V3": "reter se (>=1 conceito) OU (>=1 objeto)",
+   "V4": "reter se (>=2 conceitos) OU (>=1 objeto)",
+   "V5": "reter se (>=2 conceitos) E (>=1 objeto)",
+   "V6": "reter se (>=3 conceitos) E (>=1 objeto)",
+   "V7": "reter se (>=3 conceitos) E (>=1 objeto) E (>=1 content token compartilhado)"
+ },
+ "CAPACIDADE_DO_JUIZ_DECLARADA": {
+   "MAX_PAIRS_FOR_JUDGE": 300,
+   "derivacao": "3 runs independentes x (1 controle J1-J10 + 12 batches de 25 pares) = 39 invocacoes; 12 x 25 = 300 pares",
+   "declarada_em": "2026-08-31, ANTES de qualquer medicao de retencao"
+ },
+ "REGRA_DE_SELECAO": {
+   "regra": "selecionar a variante MENOS ESTRITA cuja contagem de pares retidos seja <= MAX_PAIRS_FOR_JUDGE, na ordem V1,V3,V4,V2,V5,V6,V7",
+   "justificativa": "maximiza recall sujeito a uma capacidade declarada previamente; a capacidade e derivada de orcamento, nao de resultado",
+   "PROIBIDO": ["usar output do juiz semantico para escolher variante ou threshold",
+                "tratar scenario bucket como semantic ground truth",
+                "fabricar reducao apenas para economizar chamadas",
+                "reabrir a regra depois de ver a retencao"],
+   "se_nenhuma_variante_couber": "aplicar amostragem deterministica declarada: ordenar os pares retidos pela variante mais estrita por (n_conceitos desc, n_objetos desc, pair_id asc) e tomar os primeiros MAX_PAIRS_FOR_JUDGE; registrar como AMOSTRA_LIMITADA_POR_CAPACIDADE, nunca como cobertura exaustiva"
+ },
+ "POPULACAO": "todos os pares cross-source de Claims SEALED: A x B, A x C, B x C. Nenhum par intra-fonte.",
+ "IDENTIDADE": "pair_id = sha256(canon({left: typed_ref, right: typed_ref})); typed_ref = (source_package_hash, entity_kind, local_id)",
+ "KILL": "BLOCKER_RETENTION != SEMANTIC_RELATION. A retencao mede alcance lexical/conceitual, nunca existencia de relacao."
+}

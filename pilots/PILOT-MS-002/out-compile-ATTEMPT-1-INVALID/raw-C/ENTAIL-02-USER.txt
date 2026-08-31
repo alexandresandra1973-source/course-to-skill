@@ -1,0 +1,406 @@
+source_id: MS002-SRC-C
+ITENS:
+[
+ {
+  "claim_id": "CL-0026",
+  "claim_text": "Clique ao lado para trazer os dados anteriores e arraste o campo mensagem para o campo text do AI Agent.",
+  "evidence": [
+   {
+    "local_id": "EV-0038",
+    "excerpt": "informar a mensagem que a pessoa mandou é isso que vai ser passado pro nosso agente gerar uma resposta então clica aqui do lado para trazer os dados"
+   },
+   {
+    "local_id": "EV-0039",
+    "excerpt": "anteriores e vamos arrastar aqui o campo mensagem para o campo text do nosso ai Agent aqui embaixo em add option adiciona essa opção do System message"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0027",
+  "claim_text": "Em add option, adicione a opção System message, que é onde se passa o prompt para o agente dizendo a ele o que deve fazer.",
+  "evidence": [
+   {
+    "local_id": "EV-0039",
+    "excerpt": "anteriores e vamos arrastar aqui o campo mensagem para o campo text do nosso ai Agent aqui embaixo em add option adiciona essa opção do System message"
+   },
+   {
+    "local_id": "EV-0040",
+    "excerpt": "que é onde nós vamos passar o prompt para o nosso agente dizer a ele o que ele deve fazer então eu vou digitar aqui no meu caso eu quero que ele consulte os"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0028",
+  "claim_text": "No prompt do agente pode-se colocar dados dinâmicos: para incluir o nome do cliente, arrasta-se o dado do nome para o prompt e a variável é inserida.",
+  "evidence": [
+   {
+    "local_id": "EV-0042",
+    "excerpt": "é isso que ele deve fazer aqui ó uma coisa legal é que nós podemos colocar dados dinâmicos então se eu digitar aqui por exemplo nome do cliente dois pontos"
+   },
+   {
+    "local_id": "EV-0043",
+    "excerpt": "e quiser colocar o nome aqui direto no prompt pro nosso agente saber quem é essa pessoa a gente só pega o dado aqui do nome e arrasta pro prompt também que"
+   },
+   {
+    "local_id": "EV-0044",
+    "excerpt": "ele vai inserir essa variável outra variável legal é a de data atual então você pode digitar data atual Abrir duas Chaves colocar um cifrão e selecionar"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0029",
+  "claim_text": "Para passar a data atual ao agente, digita-se 'data atual', abre-se duas chaves, coloca-se um cifrão e seleciona-se 'Now', que é uma variável do JavaScript que retorna a data e horário atual.",
+  "evidence": [
+   {
+    "local_id": "EV-0044",
+    "excerpt": "ele vai inserir essa variável outra variável legal é a de data atual então você pode digitar data atual Abrir duas Chaves colocar um cifrão e selecionar"
+   },
+   {
+    "local_id": "EV-0045",
+    "excerpt": "esse aqui ó Now essa é uma variável do jav script que retorna a data e horário atual então nós estamos passando aí além do prompt o nome do cliente e a data e"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0030",
+  "claim_text": "No Chat Model há vários modelos de IA disponíveis; pode-se usar a chave de API do Groq (que é gratuito) ou da OpenAI, ou qualquer outro modelo listado.",
+  "evidence": [
+   {
+    "local_id": "EV-0046",
+    "excerpt": "horário atual pro nosso agente agora vamos configurar o cérebro do nosso agente Temos vários modelos de a vindo aqui em chat Model eu mostrei Como que"
+   },
+   {
+    "local_id": "EV-0047",
+    "excerpt": "você pode pegar uma chave de api do grock que é gratuito e também da Open ai eu vou usar o da Open ai mas se você tiver de algum outro você pode usar de"
+   },
+   {
+    "local_id": "EV-0048",
+    "excerpt": "qualquer um desses aqui aqui nas configurações do Open ai chat Model ou do grock se você tiver usando o grock você vai criar uma nova credencial aqui"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0031",
+  "claim_text": "Nas configurações do OpenAI Chat Model ou do Groq, cria-se uma nova credencial colando a chave de API que foi gerada no campo e salvando.",
+  "evidence": [
+   {
+    "local_id": "EV-0048",
+    "excerpt": "qualquer um desses aqui aqui nas configurações do Open ai chat Model ou do grock se você tiver usando o grock você vai criar uma nova credencial aqui"
+   },
+   {
+    "local_id": "EV-0049",
+    "excerpt": "em cima e é muito fácil é só você pegar aquela chave de api que foi gerada e colar nesse Campo pode salvar e já deu sucesso agora vamos Configurar a memória"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0032",
+  "claim_text": "Para a memória de chat do agente usa-se o banco Redis, adicionando o node Redis Chat Memory e configurando a credencial.",
+  "evidence": [
+   {
+    "local_id": "EV-0049",
+    "excerpt": "em cima e é muito fácil é só você pegar aquela chave de api que foi gerada e colar nesse Campo pode salvar e já deu sucesso agora vamos Configurar a memória"
+   },
+   {
+    "local_id": "EV-0050",
+    "excerpt": "de chat dele vamos usar o banco do redis então adiciona aqui o redis chat Memory e vamos configurar a credencial para quem está usando o Easy panel como eu"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0033",
+  "claim_text": "Para quem está usando o Easy Panel, as credenciais do Redis ficam no Easy Panel: clica-se no serviço do Redis e vai em credentials, copiando user, senha (password) e host para os campos correspondentes; a porta não mudou.",
+  "evidence": [
+   {
+    "local_id": "EV-0050",
+    "excerpt": "de chat dele vamos usar o banco do redis então adiciona aqui o redis chat Memory e vamos configurar a credencial para quem está usando o Easy panel como eu"
+   },
+   {
+    "local_id": "EV-0051",
+    "excerpt": "ensinei as credenciais do Reds ficam nessa página aqui vai no easy panel clica no serviço do Reds e vai em credentials e aqui estão todas as"
+   },
+   {
+    "local_id": "EV-0052",
+    "excerpt": "credenciais que a gente precisa colocar lá então aqui a user vou copiar e colar aqui no user a minha senha vou copiar e colar aqui no password o meu host vou"
+   },
+   {
+    "local_id": "EV-0053",
+    "excerpt": "copiar colar aqui no HOST a porta não mudou então só vou clicar para salvar e já deu sucesso a próxima configuração é o session ID a gente precisa informar"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0034",
+  "claim_text": "O session ID deve ser um valor único para cada pessoa, para vincular a conversa àquela pessoa e conseguir trazer as conversas de volta.",
+  "evidence": [
+   {
+    "local_id": "EV-0053",
+    "excerpt": "copiar colar aqui no HOST a porta não mudou então só vou clicar para salvar e já deu sucesso a próxima configuração é o session ID a gente precisa informar"
+   },
+   {
+    "local_id": "EV-0054",
+    "excerpt": "uma chave para ele vincular com aquela pessoa e conseguir trazer as conversas de volta o que que é importante você saber esse deve ser um valor único para"
+   },
+   {
+    "local_id": "EV-0055",
+    "excerpt": "cada pessoa O que que é único que não vai mudar de nenhuma pessoa para outra o número então a gente vai colocar como chave o número da pessoa pois é um valor"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0035",
+  "claim_text": "Usa-se o número da pessoa como chave do session ID, pois é um valor único para cada pessoa, assim como o CPF; nunca haverá duas pessoas com o mesmo número de telefone.",
+  "evidence": [
+   {
+    "local_id": "EV-0055",
+    "excerpt": "cada pessoa O que que é único que não vai mudar de nenhuma pessoa para outra o número então a gente vai colocar como chave o número da pessoa pois é um valor"
+   },
+   {
+    "local_id": "EV-0056",
+    "excerpt": "que é único para cada pessoa assim como o CPF nunca vão haver duas pessoas que tem um número de telefone igual aqui em session time to leave é um tempo em"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0036",
+  "claim_text": "O session time to leave é um tempo em segundos que a lista de mensagens vai durar; para durar para sempre pode-se deixar zero, e para durar 1 hora coloca-se 3600 segundos.",
+  "evidence": [
+   {
+    "local_id": "EV-0056",
+    "excerpt": "que é único para cada pessoa assim como o CPF nunca vão haver duas pessoas que tem um número de telefone igual aqui em session time to leave é um tempo em"
+   },
+   {
+    "local_id": "EV-0057",
+    "excerpt": "segundos que essa chave que essa lista de mensagens vai durar se você quiser que ela dure para sempre pode deixar zero eu quero que dure apenas 1 hora"
+   },
+   {
+    "local_id": "EV-0058",
+    "excerpt": "então eu vou colocar 3600 segundos e context Window Len é o tanto de mensagens do histórico que vão ser enviadas pro agente de a como contexto"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0037",
+  "claim_text": "O context Window Length é o tanto de mensagens do histórico enviadas ao agente de IA como contexto da conversa; o padrão vem em cinco e no exemplo foi aumentado para 10.",
+  "evidence": [
+   {
+    "local_id": "EV-0058",
+    "excerpt": "então eu vou colocar 3600 segundos e context Window Len é o tanto de mensagens do histórico que vão ser enviadas pro agente de a como contexto"
+   },
+   {
+    "local_id": "EV-0059",
+    "excerpt": "da conversa o padrão vem em cinco eu vou aumentar para 10 pronto a configuração tá feita pode clicar fora e vamos agora configurar uma Tool existem vários tipos"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0038",
+  "claim_text": "Existem vários tipos de Tool, incluindo as pré-definidas do Google Drive, Google Sheets e Google Docs.",
+  "evidence": [
+   {
+    "local_id": "EV-0059",
+    "excerpt": "da conversa o padrão vem em cinco eu vou aumentar para 10 pronto a configuração tá feita pode clicar fora e vamos agora configurar uma Tool existem vários tipos"
+   },
+   {
+    "local_id": "EV-0060",
+    "excerpt": "de Tool as que eu acho mais legais dessas que já vem pré-definida são as do Google Drive Google sheets Google Docs eu vou fazer outro vídeo mostrando como"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0039",
+  "claim_text": "Podem-se usar outros workflows como Tools, código JavaScript ou Python e requisições HTTP como ferramentas do agente.",
+  "evidence": [
+   {
+    "local_id": "EV-0061",
+    "excerpt": "que integra elas nesse exemplo eu vou usar uma requisição http mas olha só que legal você pode usar outros workflows como Tools você pode usar código"
+   },
+   {
+    "local_id": "EV-0062",
+    "excerpt": "JavaScript ou Python e requisições http ou seja praticamente qualquer coisa então eu vou adicionar aqui a requisição e configurar o node uma requisição http"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0040",
+  "claim_text": "Uma requisição HTTP nada mais é do que consultar uma página; no exemplo configura-se a descrição da Tool ('retorna dados sobre locais em Foz do Iguaçu'), o método GET e a URL, que basicamente é o link do site.",
+  "evidence": [
+   {
+    "local_id": "EV-0062",
+    "excerpt": "JavaScript ou Python e requisições http ou seja praticamente qualquer coisa então eu vou adicionar aqui a requisição e configurar o node uma requisição http"
+   },
+   {
+    "local_id": "EV-0063",
+    "excerpt": "nada mais é do que consultar uma página no caso eu vou consultar a minha api então eu vou colocar aqui na descrição dessa Tool que é retorna dados sobre loc"
+   },
+   {
+    "local_id": "EV-0064",
+    "excerpt": "kais in Foz do Iguaçu o método que eu configurei lá na minha api é get e a URL eu vou digitar aqui a URL basicamente é o link do site se você quiser consultar"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0041",
+  "claim_text": "Para fazer um teste, pode-se colocar o link de uma página na URL da requisição HTTP.",
+  "evidence": [
+   {
+    "local_id": "EV-0064",
+    "excerpt": "kais in Foz do Iguaçu o método que eu configurei lá na minha api é get e a URL eu vou digitar aqui a URL basicamente é o link do site se você quiser consultar"
+   },
+   {
+    "local_id": "EV-0065",
+    "excerpt": "uma página também para fazer um um teste é só você colocar o link dessa página aqui na URL feita essa configuração simples pode clicar fora e salvar agora"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0042",
+  "claim_text": "Adiciona-se um nó da Evolution com recurso 'chat' e operação 'ler mensagem' para visualizar a mensagem que chegou, informando o nome da instância, o contato (número de quem mandou) e o ID da mensagem vindo do node set.",
+  "evidence": [
+   {
+    "local_id": "EV-0066",
+    "excerpt": "vamos responder a pessoa com a resposta gerada pela ia adiciona mais um nó aqui da Evolution agora Primeiro vou visualizar a mensagem que chegou então"
+   },
+   {
+    "local_id": "EV-0067",
+    "excerpt": "aqui no recurso eu vou colocar chat a operação vai ser ler mensag vou clicar aqui para trazer os dados anteriores e vamos lá o nome da"
+   },
+   {
+    "local_id": "EV-0068",
+    "excerpt": "instância vai ser a Instância que é o nome que a gente dá lá na Evolution quando cria ela o contato vai ser o número de quem mandou e o ID da mensagem"
+   },
+   {
+    "local_id": "EV-0069",
+    "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0043",
+  "claim_text": "Adiciona-se outro nó da Evolution com recurso 'mensagem' e operação 'enviar texto', informando o nome da instância e o número de quem mandou, pegos do node de dados.",
+  "evidence": [
+   {
+    "local_id": "EV-0069",
+    "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos"
+   },
+   {
+    "local_id": "EV-0070",
+    "excerpt": "adicionar mais um agora da Evolution de novo e dessa vez vai ser para enviar a resposta então vai ser aqui o recurso mensagem enviar texto na operação e o"
+   },
+   {
+    "local_id": "EV-0071",
+    "excerpt": "nome da instância a mesma coisa pega lá do node dados um número pega aqui o quem mandou o número da pessoa que mandou e a mensagem é aqui que muita gente estava"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0044",
+  "claim_text": "No campo mensagem do node de envio coloca-se o output do node do AI Agent, ou seja, a resposta que o agente de IA deu, para ser enviada direto ao WhatsApp.",
+  "evidence": [
+   {
+    "local_id": "EV-0071",
+    "excerpt": "nome da instância a mesma coisa pega lá do node dados um número pega aqui o quem mandou o número da pessoa que mandou e a mensagem é aqui que muita gente estava"
+   },
+   {
+    "local_id": "EV-0072",
+    "excerpt": "com dúvida me perguntando nos comentários dos outros vídeos aqui a gente coloca o output do node do ai Agent a resposta que o agente de a nos"
+   },
+   {
+    "local_id": "EV-0073",
+    "excerpt": "deu nós vamos colocar aqui no campo mensagem para ser enviado direto lá pro WhatsApp por último aqui nas opções tem esse delay que é um tempo para ficar"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0045",
+  "claim_text": "Nas opções do node de envio há um delay, que é um tempo para ficar digitando; no exemplo configurou-se 3000 ms para digitar 3 segundos antes de enviar as mensagens.",
+  "evidence": [
+   {
+    "local_id": "EV-0073",
+    "excerpt": "deu nós vamos colocar aqui no campo mensagem para ser enviado direto lá pro WhatsApp por último aqui nas opções tem esse delay que é um tempo para ficar"
+   },
+   {
+    "local_id": "EV-0074",
+    "excerpt": "digitando eu vou configurar aqui 3000 msos para ele digitar 3 segundos antes de enviar as mensagens também tem essa outra opção aqui ó legal preview de link"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0046",
+  "claim_text": "Há a opção de preview de link, que faz aparecer a fotinha do site em cima quando se manda um link; o autor considera essa opção interessante para quem for enviar bastante link.",
+  "evidence": [
+   {
+    "local_id": "EV-0074",
+    "excerpt": "digitando eu vou configurar aqui 3000 msos para ele digitar 3 segundos antes de enviar as mensagens também tem essa outra opção aqui ó legal preview de link"
+   },
+   {
+    "local_id": "EV-0075",
+    "excerpt": "que é quando você manda um link aparecer aquela fotinha do site em cima para quem for enviar bastante link eu acho legal essa opção e tá pronto o fluxo do agente"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0047",
+  "claim_text": "Depois de pronto o fluxo, clica-se para testar e manda-se uma mensagem no WhatsApp para o número configurado; a mensagem chegou e o processamento foi rápido.",
+  "evidence": [
+   {
+    "local_id": "EV-0075",
+    "excerpt": "que é quando você manda um link aparecer aquela fotinha do site em cima para quem for enviar bastante link eu acho legal essa opção e tá pronto o fluxo do agente"
+   },
+   {
+    "local_id": "EV-0076",
+    "excerpt": "vou clicar aqui agora para testar e me mandar uma mensagem no WhatsApp nesse número que eu configurei aqui ó mandei a mensagem chegou ele fez aqui o"
+   },
+   {
+    "local_id": "EV-0077",
+    "excerpt": "processamento bem rápido agora eu vou fazer uma pergunta sobre Foz de Iguaçu para ver se ele vai utilizar a ferramenta que eu dei para"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0048",
+  "claim_text": "Ao perguntar 'quais pontos turísticos tem em Foz', o agente consultou a Tool e demorou um pouco no processamento porque a resposta da API é gigante, com mais de 3.000 linhas, retornando vários locais em Foz do Iguaçu.",
+  "evidence": [
+   {
+    "local_id": "EV-0077",
+    "excerpt": "processamento bem rápido agora eu vou fazer uma pergunta sobre Foz de Iguaçu para ver se ele vai utilizar a ferramenta que eu dei para"
+   },
+   {
+    "local_id": "EV-0078",
+    "excerpt": "ele então eu vou testar de novo e vou perguntar quais pontos turísticos tem em fo ele consultou ali a Tool ele tá demorando agora um pouquinho para fazer"
+   },
+   {
+    "local_id": "EV-0079",
+    "excerpt": "o processamento né porque a resposta dessa pi aí é gigante tem mais de 3.000 linhas e pronto ele me deu aqui a resposta com vários locais em Foz de"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0049",
+  "claim_text": "O prompt informa ao agente que ele deve responder dúvidas dos clientes sobre locais em Foz do Iguaçu consultando a API.",
+  "evidence": [
+   {
+    "local_id": "EV-0041",
+    "excerpt": "dados da minha api sobre Foz do Iguaçu então vou falar você deve responder dúvidas dos clientes sobre locais em fo do Iguaçu consultando a nossa api ponto"
+   },
+   {
+    "local_id": "EV-0042",
+    "excerpt": "é isso que ele deve fazer aqui ó uma coisa legal é que nós podemos colocar dados dinâmicos então se eu digitar aqui por exemplo nome do cliente dois pontos"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0050",
+  "claim_text": "No n8n, quando você arrasta os dados de um node anterior (um node imediatamente antes), ele traz a referência na forma json.nome_do_campo.",
+  "evidence": [
+   {
+    "local_id": "EV-0081",
+    "excerpt": "foi colocado aquele set vazio ali no meio é porque é o seguinte no n8n quando você arrasta os dados de um node anterior por exemplo um node apenas"
+   },
+   {
+    "local_id": "EV-0082",
+    "excerpt": "antes ele traz dessa forma aqui json pon nome do campo quando nós evoluirmos esse workflow mais pra frente que eu vou utilizar ele como base pros próximos"
+   }
+  ]
+ }
+]

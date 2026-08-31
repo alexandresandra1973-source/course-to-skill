@@ -1,0 +1,130 @@
+MS-002 compile · fontes=['A', 'B'] · dry=False · cap=80
+  controle EC (extrator)...
+    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
+  controle JE (entailment)...
+    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
+  === fonte A ===
+Traceback (most recent call last):
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 337, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 314, in main
+    bundles, trace = extract_source(src)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 120, in extract_source
+    jsonschema.validate(d, EX_SCH)
+  File "/usr/lib/python3/dist-packages/jsonschema/validators.py", line 1080, in validate
+    raise error
+jsonschema.exceptions.ValidationError: Additional properties are not allowed ('temporary_claim_id_placeholder' was unexpected)
+
+Failed validating 'additionalProperties' in schema['properties']['raw_candidates']['items']:
+    {'additionalProperties': False,
+     'properties': {'claim_refs_applicability': {'enum': ['APPLICABLE',
+                                                          'NOT_APPLICABLE']},
+                    'claim_temp_refs': {'items': {'pattern': '^TC-[0-9]{3}$',
+                                                  'type': 'string'},
+                                        'type': 'array'},
+                    'defects': {'items': {'enum': ['PRECEDENCE_UNDEFINED',
+                                                   'PASSO_UNICO',
+                                                   'SCOPE_UNSTATED']},
+                                'type': 'array'},
+                    'entity_kind': {'enum': ['rule_candidate',
+                                             'workflow_candidate',
+                                             'anti_pattern_candidate']},
+                    'evidence_refs': {'items': {'pattern': '^EV-[0-9]{4}$',
+                                                'type': 'string'},
+                                      'minItems': 1,
+                                      'type': 'array'},
+                    'structure': {'oneOf': [{'additionalProperties': False,
+                                             'properties': {'action': {'type': 'string'},
+                                                            'condition': {'type': 'string'},
+                                                            'do_not': {'items': {'type': 'string'},
+                                                                       'type': 'array'},
+                                                            'exceptions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'name': {'type': 'string'},
+                                                            'precedence': {'type': ['string',
+                                                                                    'null']},
+                                                            'prerequisites': {'items': {'type': 'string'},
+                                                                              'type': 'array'},
+                                                            'trigger': {'type': 'string'}},
+                                             'required': ['name',
+                                                          'trigger',
+                                                          'condition',
+                                                          'action',
+                                                          'do_not',
+                                                          'precedence'],
+                                             'type': 'object'},
+                                            {'additionalProperties': False,
+                                             'properties': {'exceptions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'name': {'type': 'string'},
+                                                            'prerequisites': {'items': {'type': 'string'},
+                                                                              'type': 'array'},
+                                                            'steps': {'items': {'additionalProperties': False,
+                                                                                'properties': {'action': {'type': 'string'},
+                                                                                               'evidence_refs': {'items': {'pattern': '^EV-[0-9]{4}$',
+                                                                                                                           'type': 'string'},
+                                                                                                                 'minItems': 1,
+                                                                                                                 'type': 'array'},
+                                                                                               'missing_input_action': {'type': ['string',
+                                                                                                                                 'null']},
+                                                                                               'name': {'type': 'string'},
+                                                                                               'order_key': {'minimum': 1,
+                                                                                                             'type': 'integer'},
+                                                                                               'required_inputs': {'items': {'type': 'string'},
+                                                                                                                   'type': 'array'}},
+                                                                                'required': ['order_key',
+                                                                                             'name',
+                                                                                             'action',
+                                                                                             'evidence_refs'],
+                                                                                'type': 'object'},
+                                                                      'minItems': 1,
+                                                                      'type': 'array'}},
+                                             'required': ['name', 'steps'],
+                                             'type': 'object'},
+                                            {'additionalProperties': False,
+                                             'properties': {'conditions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'do_not': {'items': {'type': 'string'},
+                                                                       'minItems': 1,
+                                                                       'type': 'array'},
+                                                            'why': {'type': 'string'}},
+                                             'required': ['do_not', 'why'],
+                                             'type': 'object'}]},
+                    'temporary_candidate_id': {'pattern': '^TX-[0-9]{3}$',
+                                               'type': 'string'}},
+     'required': ['temporary_candidate_id',
+                  'entity_kind',
+                  'evidence_refs',
+                  'claim_temp_refs',
+                  'structure',
+                  'defects'],
+     'type': 'object'}
+
+On instance['raw_candidates'][4]:
+    {'claim_refs_applicability': 'APPLICABLE',
+     'claim_temp_refs': ['TC-026'],
+     'defects': ['PRECEDENCE_UNDEFINED'],
+     'entity_kind': 'rule_candidate',
+     'evidence_refs': ['EV-0051', 'EV-0052'],
+     'structure': {'action': "Render the user's morning brief as a styled "
+                             'HTML artifact or set it up as a recurring '
+                             'weekday task',
+                   'condition': 'Only when the user explicitly asks to '
+                                'run, see, or set up their morning brief, '
+                                'or invokes /morning by name',
+                   'do_not': ['Do not treat a question about their day, '
+                              'schedule, or calendar as by itself a '
+                              'request for the brief; answer it directly '
+                              'instead'],
+                   'exceptions': [],
+                   'name': 'Morning brief skill invocation condition',
+                   'precedence': None,
+                   'prerequisites': ["The 'morning' skill available under "
+                                     'customize > skills'],
+                   'trigger': 'The user asks something about their day, '
+                              'schedule or calendar, or asks for the '
+                              'morning brief'},
+     'temporary_candidate_id': 'TX-005',
+     'temporary_claim_id_placeholder': None}

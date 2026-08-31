@@ -1,0 +1,310 @@
+{
+  "source_id": "MS002-SRC-C",
+  "slice_id": "SL-C-03",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "No n8n, quando você arrasta os dados de um node anterior (um node imediatamente antes), ele traz a referência na forma json.nome_do_campo.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0081", "EV-0082"],
+      "qualifiers": {
+        "scope": "arrastar dados de um node apenas antes",
+        "condition": null,
+        "platform": "n8n",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Foi inserido um node set vazio (node fake) no meio do fluxo para que a referência ao dado já venha indicando de qual node vem o dado, em vez de apenas json.message.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0081", "EV-0083", "EV-0084"],
+      "qualifiers": {
+        "scope": "workflow apresentado no vídeo",
+        "condition": null,
+        "platform": "n8n",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Se a referência ficasse na forma json.nome_do_campo, ao evoluir esse workflow nos próximos vídeos isso daria bug e seria necessário fazer alteração, deixando algumas pessoas perdidas.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0082", "EV-0083"],
+      "qualifiers": {
+        "scope": "evolução futura do workflow usado como base para próximos vídeos",
+        "condition": "quando o workflow for evoluído mais pra frente",
+        "platform": "n8n",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Para colocar o workflow em produção: no node do Webhook mudar para a production URL, copiá-la, ir na Evolution API em events webhook, colar essa URL nova, ir lá embaixo e clicar em salvar, voltar no n8n e ativar o workflow.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0085", "EV-0086"],
+      "qualifiers": {
+        "scope": "colocar o workflow em produção",
+        "condition": null,
+        "platform": "n8n + Evolution API",
+        "stage": "produção",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "Após ativar o workflow, ele vai estar respondendo todo mundo que enviar mensagem, utilizando as ferramentas e lógicas criadas.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0086", "EV-0087"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "após colar a production URL na Evolution API, salvar e ativar o workflow",
+        "platform": "n8n + Evolution API",
+        "stage": "produção",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "O download do fluxo feito no vídeo está na descrição, e também será deixado um docker compose na descrição para quem ainda não tem uma VPS e quer apenas testar.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0087", "EV-0088"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "quem ainda não tem uma VPS e está só querendo testar"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Para instalar localmente: baixar a pasta disponibilizada, abri-la, abrir um terminal nela e digitar ./start.ps1 (para quem está no Windows), respondendo as perguntas do script como senha do postgres, senha do Redis e e-mail de admin do PGAdmin, e esperar ele baixar e subir os containers.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0088", "EV-0089", "EV-0090"],
+      "qualifiers": {
+        "scope": "instalação local",
+        "condition": null,
+        "platform": "Windows / Docker",
+        "stage": "instalação",
+        "audience": "quem ainda não tem uma VPS e está só querendo testar"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Ao final do script, você tem uma Evolution com n8n instalado localmente.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0090", "EV-0091"],
+      "qualifiers": {
+        "scope": "instalação local",
+        "condition": "após o script baixar e subir os containers",
+        "platform": "Docker",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "O autor esqueceu de configurar uma senha para a Evolution no script; a senha padrão está na descrição.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0091", "EV-0092"],
+      "qualifiers": {
+        "scope": "script de instalação local",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "Para parar os contêineres basta abrir o aplicativo do Docker e parar; para iniciar de novo, abrir o aplicativo do Docker e clicar para iniciar todos.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0092", "EV-0093"],
+      "qualifiers": {
+        "scope": "ambiente local com Docker",
+        "condition": null,
+        "platform": "Docker",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "Aquele script só se utiliza da primeira vez.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0093"],
+      "qualifiers": {
+        "scope": "script de instalação local",
+        "condition": null,
+        "platform": "Docker",
+        "stage": "instalação",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "Os próximos vídeos anotados pelo autor serão: juntar mensagens (esperando uns 10 segundos) para evitar que o bot responda uma vez para cada mensagem, fazer o bot parar de responder quando um humano enviar mensagem, e quebrar uma mensagem longa em várias menores.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0094", "EV-0095", "EV-0096", "EV-0097"],
+      "qualifiers": {
+        "scope": "planos para próximos vídeos",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0081", "EV-0082", "EV-0083", "EV-0084"],
+      "claim_temp_refs": ["TC-001", "TC-002", "TC-003"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Inserir node set vazio (node fake) para referenciar o node de origem do dado",
+        "trigger": "Ao montar um workflow no n8n que será evoluído mais pra frente como base para próximos vídeos",
+        "condition": "Quando os dados são arrastados de um node imediatamente anterior, a referência vem como json.nome_do_campo",
+        "action": "Inserir um node set vazio (node fake) no meio do fluxo para que a referência já venha indicando de qual node vem o dado, em vez de apenas json.message",
+        "do_not": [
+          "Deixar a referência apenas como json.message quando o workflow for evoluído mais pra frente"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0085", "EV-0086"],
+      "claim_temp_refs": ["TC-004", "TC-005"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Colocar o workflow em produção (Webhook n8n + Evolution API)",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Mudar o Webhook para production URL",
+            "action": "Vir no node do Web Hook e mudar para production URL",
+            "evidence_refs": ["EV-0085"]
+          },
+          {
+            "order_key": 2,
+            "name": "Copiar a URL",
+            "action": "Copiar a production URL",
+            "evidence_refs": ["EV-0085"]
+          },
+          {
+            "order_key": 3,
+            "name": "Colar na Evolution API",
+            "action": "Vir na Evolution API em events webhook e colar essa URL nova",
+            "evidence_refs": ["EV-0085", "EV-0086"]
+          },
+          {
+            "order_key": 4,
+            "name": "Salvar",
+            "action": "Ir lá embaixo e clicar em salvar",
+            "evidence_refs": ["EV-0086"]
+          },
+          {
+            "order_key": 5,
+            "name": "Ativar o workflow",
+            "action": "Voltar no n8n e ativar o workflow",
+            "evidence_refs": ["EV-0086"]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0088", "EV-0089", "EV-0090", "EV-0091"],
+      "claim_temp_refs": ["TC-006", "TC-007", "TC-008"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Subir Evolution + n8n localmente com o docker compose da descrição (Windows)",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Baixar a pasta",
+            "action": "Baixar a pasta deixada na descrição e abri-la",
+            "evidence_refs": ["EV-0088", "EV-0089"]
+          },
+          {
+            "order_key": 2,
+            "name": "Abrir terminal e rodar o script",
+            "action": "Abrir um terminal na pasta e digitar ./start.ps1 (para quem está no Windows)",
+            "evidence_refs": ["EV-0089"]
+          },
+          {
+            "order_key": 3,
+            "name": "Responder as perguntas do script",
+            "action": "Dar as respostas que o script vai pedir, por exemplo senha do postgres, senha do Redis e e-mail de admin do PGAdmin",
+            "required_inputs": [
+              "senha do postgres",
+              "senha do Redis",
+              "e-mail de admin do PGAdmin"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0089", "EV-0090"]
+          },
+          {
+            "order_key": 4,
+            "name": "Esperar baixar e subir os containers",
+            "action": "Esperar ele baixar e subir os containers; ao final você tem uma Evolution com n8n instalado localmente",
+            "evidence_refs": ["EV-0090", "EV-0091"]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "Ser destinado a quem ainda não tem uma VPS e está só querendo testar"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0092", "EV-0093"],
+      "claim_temp_refs": ["TC-010", "TC-011"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Parar e iniciar os contêineres pelo aplicativo do Docker",
+        "trigger": "Quando quiser parar ou iniciar novamente os contêineres do ambiente local",
+        "condition": "O ambiente já foi criado pelo script na primeira vez",
+        "action": "Abrir o aplicativo do Docker e parar; para iniciar de novo, abrir o aplicativo do Docker e clicar para iniciar todos",
+        "do_not": [
+          "Utilizar aquele script novamente; ele só se utiliza da primeira vez"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "Ter rodado o script de instalação na primeira vez"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "bounded_to": "MS002-SRC-C",
+ "nota": "enumera SO o proprio pacote. filesystem scan != corpus audit.",
+ "referenced": [
+  "DR-MS-002-INDEP-001",
+  "OPENING-RECORD-MS-002-COMPILE"
+ ],
+ "slices": [
+  "SL-C-01",
+  "SL-C-02",
+  "SL-C-03"
+ ]
+}

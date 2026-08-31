@@ -1,0 +1,663 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-01",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "No programming experience and no prior AI experience are required to understand this course.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0003"],
+      "qualifiers": {
+        "scope": "the course content taught in this video",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "course viewers"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "The viewer does not need to jump around; they should follow the course in the order it is laid out.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0004"],
+      "qualifiers": {
+        "scope": "consuming this course",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "course viewers"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Automation is approached at four levels: prompts, skills, loops, and cloud routines, with prompting as the simplest level and Claude routines as the most advanced level.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0006"],
+      "qualifiers": {
+        "scope": "framework used in this course",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Prompting requires you working on your computer, whereas cloud routines are effectively a loop that is scheduled and runs in the cloud without you.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0006", "EV-0007"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "The first step is to create an account by heading over to claude.com and clicking continue with Google or continue with email.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0012", "EV-0013"],
+      "qualifiers": {
+        "scope": "Claude account creation",
+        "condition": null,
+        "platform": "claude.com",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "During onboarding, if it's just you for now, click personal use rather than the team/enterprise option.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0015", "EV-0016"],
+      "qualifiers": {
+        "scope": "onboarding questions during account creation",
+        "condition": "if it's just you for now",
+        "platform": "Claude",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "You have to pay in order to use Claude Code; Claude can be used for free but not the code aspect.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0016", "EV-0017", "EV-0019"],
+      "qualifiers": {
+        "scope": "Claude Code usage",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "If you don't have the funds, you can watch the course build-alongs without paying and sign up later, then circle back after watching end to end.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0018"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you don't have the funds",
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": "viewers without budget"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "The download is selected according to your operating system and pops up automatically based on a browser cookie.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0020", "EV-0021"],
+      "qualifiers": {
+        "scope": "downloading Claude",
+        "condition": null,
+        "platform": "macOS / Windows",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "Chrome often blocks the download; to proceed, use 'download unverified file' in the top right hand corner.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0021"],
+      "qualifiers": {
+        "scope": "downloading the Claude installer",
+        "condition": "when Chrome blocks the download",
+        "platform": "Chrome browser",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "On Mac, installation is done by dragging the Claude app over to the applications folder; on Windows you go through the install prompt instead.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0022"],
+      "qualifiers": {
+        "scope": "installing Claude desktop app",
+        "condition": null,
+        "platform": "Mac (and Windows alternative)",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "After launching Claude you click get started, log in with your email address, and enter the verification code received by email.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0023", "EV-0024", "EV-0025"],
+      "qualifiers": {
+        "scope": "first launch of the Claude desktop app",
+        "condition": null,
+        "platform": "Claude desktop app",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "Anthropic frequently changes user interface features, so they are short-lived and the interface may look different for the viewer.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0013", "EV-0026", "EV-0027"],
+      "qualifiers": {
+        "scope": "Claude interface",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "There are two products in the interface, a Claude product and a Claude Code product; the home product is simpler, and the intended choice for this course is the code product.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0028", "EV-0029"],
+      "qualifiers": {
+        "scope": "choosing between home and code tabs",
+        "condition": null,
+        "platform": "Claude app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "An artifact is a visual that Claude can create for you, generated by asking it to build a code artifact such as a self-contained web page published with the artifact tool.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0032", "EV-0033"],
+      "qualifiers": {
+        "scope": "Claude artifacts",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "Claude suggests an autocomplete which can be accepted by pressing tab; this is letting Claude drive your conversation and it is not always the best thing to do, being right maybe 30-40% of the time.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0035", "EV-0036"],
+      "qualifiers": {
+        "scope": "autocomplete suggestions during a Claude conversation",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "When a command requires approval, Claude shows a request with three options: deny (1), always allow (2), and allow once (3), with allow once highlighted as what it generally thinks is the right answer.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0037", "EV-0038"],
+      "qualifiers": {
+        "scope": "permission requests for commands",
+        "condition": "when the command requires approval",
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "The speaker chose 'always allow' because the task was just building a simple web page and probably would not try to delete the computer by accident.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0038", "EV-0039"],
+      "qualifiers": {
+        "scope": "one specific low-risk task (building a simple web page)",
+        "condition": "when the command is low risk",
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "Tokens are a big part of how you are billed at the end of the month and of how much usage you have with Claude; bigger projects require more tokens, so it is important to have visibility into your token budgets.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0040", "EV-0041"],
+      "qualifiers": {
+        "scope": "token usage and billing",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "An artifact is not on the internet by default and is not going to be perfect all the time.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0043"],
+      "qualifiers": {
+        "scope": "generated artifacts",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "Information generated from publicly available sources may not be up to date and can be wrong, as in the case of the college claim in the generated page.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0036", "EV-0037", "EV-0044", "EV-0045"],
+      "qualifiers": {
+        "scope": "content Claude generates from publicly available web information",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "An artifact can be expanded or opened in a default browser and then shared with people in your company on a teams or enterprise plan or with anybody on the internet via a share link, accessible without being signed in.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0046", "EV-0047", "EV-0048"],
+      "qualifiers": {
+        "scope": "sharing artifacts",
+        "condition": "once the artifact is online",
+        "platform": "Claude / Chrome",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "Artifacts remove the need to host a website, which is useful particularly for dashboards and for managing projects for clients.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0048", "EV-0049"],
+      "qualifiers": {
+        "scope": "client web interfaces and internal tools",
+        "condition": null,
+        "platform": "Claude artifacts",
+        "stage": null,
+        "audience": "people doing client work"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "Skills are found in the skills tab under customize and are almost like domain-specific programs that you can run on knowledge work; adding skills is how you customize your Claude Code instance.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0050", "EV-0054", "EV-0055"],
+      "qualifiers": {
+        "scope": "customizing Claude Code",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "A skill automates the process of coming up with a prompt and telling a model what to do; invoking it by name (e.g. /morning) pumps a long prompt into Claude that generates the output.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0052", "EV-0053", "EV-0054"],
+      "qualifiers": {
+        "scope": "skill invocation",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "The morning skill instructs that it be used only when the user explicitly asks to run, see, or set up their morning brief or invokes /morning by name; a question about their day, schedule, or calendar is not by itself a request for the brief and should be answered directly instead.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0051", "EV-0052"],
+      "qualifiers": {
+        "scope": "the built-in 'morning' skill",
+        "condition": "only on explicit request or /morning invocation",
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "A skill can be set on a loop, for example once a day, to automatically pull data from sources like the Google Analytics API, a Google sheet, and agency analytics software, and use it to populate a dashboard.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0056", "EV-0057"],
+      "qualifiers": {
+        "scope": "dashboard skill example",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "Connectors are ways to hook up apps to Claude, such as Gmail, Google Drive, Slack and Spotify, and are used to integrate different data sources into Claude Code.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0058", "EV-0059", "EV-0060"],
+      "qualifiers": {
+        "scope": "connectors in the Claude app",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "The course covers five marketing functions: top-of-funnel creative generation (images, video, audio), personalization of copy (newsletters, cold emails from templates), middle-of-funnel speed-to-lead systems for appointment booking, data collection/tracking/dashboards, and bottom-of-funnel automated follow-ups.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0005", "EV-0007", "EV-0008", "EV-0009", "EV-0010", "EV-0011"],
+      "qualifiers": {
+        "scope": "course curriculum",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "top, middle and bottom of funnel",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0012", "EV-0013", "EV-0014", "EV-0015", "EV-0016", "EV-0019", "EV-0020", "EV-0021", "EV-0022", "EV-0023", "EV-0024", "EV-0025"],
+      "claim_temp_refs": ["TC-005", "TC-006", "TC-007", "TC-009", "TC-010", "TC-011", "TC-012"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Create an account, subscribe, download and install Claude Code",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Go to claude.com",
+            "action": "Head over to claude.com to create an account.",
+            "evidence_refs": ["EV-0012", "EV-0013"]
+          },
+          {
+            "order_key": 2,
+            "name": "Start signup",
+            "action": "Click continue with Google or continue with email; the speaker uses continue with email and enters an email address.",
+            "required_inputs": ["email address or Google account"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0013", "EV-0014"]
+          },
+          {
+            "order_key": 3,
+            "name": "Confirm via emailed link",
+            "action": "Click continue to have a link sent, go to your email and click 'sign in to claude.ai', which takes you back to the page.",
+            "required_inputs": ["access to the email inbox"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0014"]
+          },
+          {
+            "order_key": 4,
+            "name": "Answer consent and onboarding questions",
+            "action": "Agree and consent to the prompts (the speaker declines promotional emails and notifications) and fill in the onboarding questions including date of birth.",
+            "evidence_refs": ["EV-0014", "EV-0015"]
+          },
+          {
+            "order_key": 5,
+            "name": "Choose usage type",
+            "action": "Select personal use; if it's just you for now, click personal use instead of the team/enterprise feature.",
+            "evidence_refs": ["EV-0015", "EV-0016"]
+          },
+          {
+            "order_key": 6,
+            "name": "Pay for a plan",
+            "action": "Choose monthly and go down to payment method to enter payment info, since you have to pay in order to use Claude Code.",
+            "required_inputs": ["payment method"],
+            "missing_input_action": "If you don't have the funds, watch the course builds and sign up later, then circle back after watching end to end.",
+            "evidence_refs": ["EV-0016", "EV-0018", "EV-0019"]
+          },
+          {
+            "order_key": 7,
+            "name": "Download for your operating system",
+            "action": "Download it according to your operating system; the correct button pops up automatically based on a browser cookie.",
+            "evidence_refs": ["EV-0019", "EV-0020", "EV-0021"]
+          },
+          {
+            "order_key": 8,
+            "name": "Unblock the download in Chrome",
+            "action": "If Chrome blocks the download, click 'download unverified file' in the top right hand corner so you can see the file.",
+            "evidence_refs": ["EV-0021"]
+          },
+          {
+            "order_key": 9,
+            "name": "Install the app",
+            "action": "On Mac, drag the Claude app over to the applications folder; on Windows go through the install prompt.",
+            "evidence_refs": ["EV-0021", "EV-0022"]
+          },
+          {
+            "order_key": 10,
+            "name": "Launch Claude",
+            "action": "Launch the Claude desktop app (the speaker uses Raycast and types Claude) and confirm the 'app downloaded from the internet' dialog.",
+            "evidence_refs": ["EV-0023", "EV-0024"]
+          },
+          {
+            "order_key": 11,
+            "name": "Sign in inside the app",
+            "action": "Click get started, continue with your email address, then enter the verification code from your email and click sign in, which takes you back to the app.",
+            "required_inputs": ["email verification code"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0024", "EV-0025"]
+          },
+          {
+            "order_key": 12,
+            "name": "Finish in-app onboarding",
+            "action": "Click continue and answer the remaining questions (name, kind of role) until you are in.",
+            "evidence_refs": ["EV-0025", "EV-0026"]
+          }
+        ],
+        "exceptions": [
+          "The interface may look a little bit different by the time the viewer follows along.",
+          "Windows steps differ from the Mac drag-to-applications step."
+        ],
+        "prerequisites": [
+          "An email address or Google account",
+          "A payment method (approximately $24 Canadian per month in the speaker's case)"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0032", "EV-0033", "EV-0034", "EV-0035", "EV-0037", "EV-0038", "EV-0043", "EV-0046", "EV-0047"],
+      "claim_temp_refs": ["TC-015", "TC-017", "TC-022"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Create an artifact web page in Claude and share it",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Start a new artifact request",
+            "action": "Click new under the artifacts area and enter a request such as 'I want to build a code artifact, a self-contained web page published with the artifact tool' with the page topic.",
+            "required_inputs": ["the subject/topic of the page"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0032", "EV-0033"]
+          },
+          {
+            "order_key": 2,
+            "name": "Answer Claude's clarifying questions",
+            "action": "Press enter; Claude confirms the angle and gathers key facts by asking questions such as what the page's job is, which you answer (autocomplete suggestions can be accepted with tab).",
+            "evidence_refs": ["EV-0034", "EV-0035"]
+          },
+          {
+            "order_key": 3,
+            "name": "Respond to the permission request",
+            "action": "When a request appears because the command requires approval, choose deny (1), always allow (2), or allow once (3); the speaker chose always allow for this simple web page.",
+            "evidence_refs": ["EV-0037", "EV-0038", "EV-0039"]
+          },
+          {
+            "order_key": 4,
+            "name": "Observe the build",
+            "action": "Optionally click the 'creating' tab to see the commands running under the hood, plus total time spent and total tokens spent.",
+            "evidence_refs": ["EV-0039", "EV-0040"]
+          },
+          {
+            "order_key": 5,
+            "name": "Open the finished artifact",
+            "action": "When it is done, view the generated web page; use the button in the top right hand corner to expand it or open it in a default browser.",
+            "evidence_refs": ["EV-0043", "EV-0046"]
+          },
+          {
+            "order_key": 6,
+            "name": "Share the artifact",
+            "action": "Once the artifact is online, share it with people in your company on a teams or enterprise plan or with anyone with the link; copy the link, which can then be opened even while not signed in.",
+            "evidence_refs": ["EV-0046", "EV-0047", "EV-0048"]
+          }
+        ],
+        "exceptions": [
+          "The artifact is not on the internet by default and is not going to be perfect all the time.",
+          "Information pulled from publicly available pages may be out of date or wrong."
+        ],
+        "prerequisites": [
+          "A signed-in Claude account"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0028", "EV-0029"],
+      "claim_temp_refs": ["TC-014"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Use the code product, not the home product",
+        "trigger": "Choosing between the home tab and the code tab in the Claude app",
+        "condition": "For the automation work covered in this course",
+        "action": "Jump over to the code product; a lot will change when you do",
+        "do_not": ["Do not use the home product, which is simpler"],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["Signed in to the Claude app"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0015", "EV-0016"],
+      "claim_temp_refs": ["TC-006"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Select personal use during onboarding",
+        "trigger": "Onboarding asks whether the account is for personal use or team/enterprise",
+        "condition": "If it's just you for now",
+        "action": "Click personal use (the speaker recommends the viewer do the same)",
+        "do_not": ["Do not pick the team/enterprise feature if it's just you for now"],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_claim_id_placeholder": null,
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0051", "EV-0052"],
+      "claim_temp_refs": ["TC-026"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Morning brief skill invocation condition",
+        "trigger": "The user asks something about their day, schedule or calendar, or asks for the morning brief",
+        "condition": "Only when the user explicitly asks to run, see, or set up their morning brief, or invokes /morning by name",
+        "action": "Render the user's morning brief as a styled HTML artifact or set it up as a recurring weekday task",
+        "do_not": [
+          "Do not treat a question about their day, schedule, or calendar as by itself a request for the brief; answer it directly instead"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["The 'morning' skill available under customize > skills"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0004"],
+      "claim_temp_refs": ["TC-002"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Follow the course in order",
+        "trigger": "Consuming the course",
+        "condition": "None stated",
+        "action": "Literally just follow the course as it is laid out",
+        "do_not": ["Do not jump around"],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0035", "EV-0036"],
+      "claim_temp_refs": ["TC-016"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not always accept Claude's autocomplete suggestion by pressing tab, since that is letting Claude drive your conversation and it is not always the best thing to do"
+        ],
+        "why": "It knows what the user wants to do next maybe only 30-40% of the time",
+        "conditions": ["When an autocomplete suggestion pops up at the bottom during a conversation"]
+      },
+      "defects": []
+    }
+  ]
+}
