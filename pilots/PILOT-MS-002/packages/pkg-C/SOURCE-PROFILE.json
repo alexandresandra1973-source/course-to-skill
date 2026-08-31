@@ -1,0 +1,25 @@
+{
+ "authority": "Guilherme Lazarotto - Tecnologia \\u0026 Automação",
+ "canonical_url": "https://www.youtube.com/watch?v=NvrBpnbNfv4",
+ "caption_type": "PLATFORM_AUTO_CAPTION",
+ "channel_id": "UCO0x-39c7EttOhmFAsngfgg",
+ "independence_decision_record": "DR-MS-002-INDEP-001",
+ "language": "pt",
+ "limitations": [
+  "Legenda automatica da plataforma, nao transcricao humana revisada.",
+  "Sem pontuacao confiavel; fronteiras de frase sao aproximadas.",
+  "Nomes proprios e termos tecnicos podem estar corrompidos pelo ASR (exemplo verificado: em MS002-SRC-B, 'Claude Code' aparece como 'Cloud Code').",
+  "Conteudo visual (tela, codigo, diagramas) NAO esta capturado no texto.",
+  "Nenhuma correcao semantica de ASR foi aplicada; os bytes sao os adquiridos."
+ ],
+ "media_type": "video/youtube",
+ "provenance_chain": [
+  "video -> raw caption artifact -> anchors -> evidence"
+ ],
+ "source_boundary": "video inteiro, cobertura integral",
+ "source_content_hash": "ed967fae27146d9aa9cc45769672f751d8eb199bc6ed7564bbb5fdb4a226fab7",
+ "source_id": "MS002-SRC-C",
+ "source_independence_state": "DECLARED_INDEPENDENT",
+ "text_status": "SOURCE_TEXT_READY_WITH_LIMITATION",
+ "video_id": "NvrBpnbNfv4"
+}

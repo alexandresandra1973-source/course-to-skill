@@ -1,0 +1,23 @@
+[
+ {
+  "slice_id": "SL-C-01",
+  "n_units": 40,
+  "start_s": 0.04,
+  "end_s": 350.96,
+  "chars": 6027
+ },
+ {
+  "slice_id": "SL-C-02",
+  "n_units": 40,
+  "start_s": 348.6,
+  "end_s": 682.48,
+  "chars": 6075
+ },
+ {
+  "slice_id": "SL-C-03",
+  "n_units": 18,
+  "start_s": 680.8,
+  "end_s": 825.68,
+  "chars": 2565
+ }
+]

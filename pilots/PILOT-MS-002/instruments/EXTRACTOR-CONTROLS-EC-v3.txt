@@ -1,0 +1,33 @@
+CONTROLE DO EXTRATOR — chamada 1, fixture sintetico fechado, catalogo pequeno.
+Schema compliance NAO prova evidence-grounding. Estes seis subcasos provam.
+
+CATALOGO SINTETICO (5 evidences, fora do corpus real):
+  EV-9001 "O Evolution API precisa ser hospedado em uma VPS para ficar disponivel o tempo todo."
+  EV-9002 "Para quem esta comecando, o instrutor recomenda criar os primeiros anuncios pelo painel."
+  EV-9003 "Primeiro voce cria a instancia, depois gera o QR Code, e por fim escaneia com o celular."
+  EV-9004 "O video foi gravado em um domingo de manha."
+  EV-9005 "Nao deixe a estrutura na conta pessoal: isso aumenta a chance de restricao."
+
+EC1  SUPPORTED CLAIM
+     esperado: claim sobre hospedagem em VPS, com evidence_ref = ["EV-9001"]
+
+EC2  UNSUPPORTED TRAP
+     o trecho insinua que "a VPS da HostGator e a mais rapida do mercado", proposicao que
+     NAO esta em evidence alguma.
+     esperado: essa proposicao NAO aparece em raw_claims
+
+EC3  CANDIDATE PROVENANCE
+     esperado: anti_pattern_candidate a partir de EV-9005, com evidence_refs nao vazias
+
+EC4  CLAIM LINK
+     esperado: workflow_candidate de EV-9003 com claim_temp_refs resolvendo no MESMO bundle
+
+EC5  NO CANDIDATE
+     EV-9004 e factual e nao operacional.
+     esperado: NENHUM candidate derivado de EV-9004; arrays vazios sao resposta valida
+
+EC6  SCOPE
+     esperado: a claim de EV-9002 PRESERVA "para quem esta comecando" em qualifiers;
+               nao generaliza para "sempre"
+
+Se QUALQUER EC falhar: MS_001A_INSTRUMENT_INVALID. Nenhuma chamada real comeca.

@@ -1,0 +1,2442 @@
+[
+ {
+  "start": 0.0,
+  "duration": 3.6,
+  "text": "Nesse vídeo, eu vou mostrar para vocês"
+ },
+ {
+  "start": 1.56,
+  "duration": 4.08,
+  "text": "como vocês podem estar gerenciando seus"
+ },
+ {
+  "start": 3.6,
+  "duration": 4.12,
+  "text": "vários grupos de WhatsApp utilizando o"
+ },
+ {
+  "start": 5.64,
+  "duration": 4.08,
+  "text": "Cloud Code. Seja criar vários grupos em"
+ },
+ {
+  "start": 7.72,
+  "duration": 4.16,
+  "text": "massa, é mudar foto de perfil, botar"
+ },
+ {
+  "start": 9.72,
+  "duration": 3.68,
+  "text": "mudando a descrição desse grupo,"
+ },
+ {
+  "start": 11.88,
+  "duration": 2.76,
+  "text": "adicionando pessoas, enviando uma"
+ },
+ {
+  "start": 13.4,
+  "duration": 3.0,
+  "text": "mensagem para os grupos, dando"
+ },
+ {
+  "start": 14.64,
+  "duration": 3.04,
+  "text": "relatórios de membros desse grupo"
+ },
+ {
+  "start": 16.4,
+  "duration": 2.76,
+  "text": "também. Então, tudo isso você consegue"
+ },
+ {
+  "start": 17.68,
+  "duration": 3.08,
+  "text": "estar fazendo com esse método que eu vou"
+ },
+ {
+  "start": 19.16,
+  "duration": 3.84,
+  "text": "te ensinar nesse vídeo. Então, fica até"
+ },
+ {
+  "start": 20.76,
+  "duration": 4.6,
+  "text": "o final e você vai sair desse vídeo já"
+ },
+ {
+  "start": 23.0,
+  "duration": 4.52,
+  "text": "montando aí a sua automação."
+ },
+ {
+  "start": 25.36,
+  "duration": 5.28,
+  "text": "E bora lá. Primeiro, vou mostrar para"
+ },
+ {
+  "start": 27.52,
+  "duration": 5.16,
+  "text": "vocês aqui a stack do nosso gerenciador"
+ },
+ {
+  "start": 30.64,
+  "duration": 5.08,
+  "text": "de grupos, né? Como que vai funcionar."
+ },
+ {
+  "start": 32.68,
+  "duration": 6.36,
+  "text": "Então, primeiro de tudo, Cloud Code, né?"
+ },
+ {
+  "start": 35.72,
+  "duration": 4.6,
+  "text": "Ele que vai ser o orquestrador, é com"
+ },
+ {
+  "start": 39.04,
+  "duration": 4.0,
+  "text": "ele que eu vou estar conversando, eu vou"
+ },
+ {
+  "start": 40.32,
+  "duration": 5.08,
+  "text": "pedir para ele fazer determinadas ações."
+ },
+ {
+  "start": 43.04,
+  "duration": 6.36,
+  "text": "A partir disso, o Cloud Code ele vai se"
+ },
+ {
+  "start": 45.4,
+  "duration": 5.68,
+  "text": "conectar via API com o Evolution API,"
+ },
+ {
+  "start": 49.4,
+  "duration": 4.4,
+  "text": "que é o API não oficial do WhatsApp, ou"
+ },
+ {
+  "start": 51.08,
+  "duration": 4.88,
+  "text": "seja, através dele, a gente vai"
+ },
+ {
+  "start": 53.8,
+  "duration": 3.6,
+  "text": "conseguir estar conectando o nosso"
+ },
+ {
+  "start": 55.96,
+  "duration": 3.6,
+  "text": "número do WhatsApp como se fosse um"
+ },
+ {
+  "start": 57.4,
+  "duration": 4.52,
+  "text": "WhatsApp Web, tá? Então, é API não"
+ },
+ {
+  "start": 59.56,
+  "duration": 5.36,
+  "text": "oficial, ou seja, tu não vai pagar por"
+ },
+ {
+  "start": 61.92,
+  "duration": 5.88,
+  "text": "API oficial. E após escanear lá, o Cloud"
+ },
+ {
+  "start": 64.92,
+  "duration": 4.56,
+  "text": "Code vai ter acesso ao nosso WhatsApp de"
+ },
+ {
+  "start": 67.8,
+  "duration": 3.16,
+  "text": "acordo com as coisas que a gente for"
+ },
+ {
+  "start": 69.48,
+  "duration": 4.28,
+  "text": "dando permissão e pedindo para que ele"
+ },
+ {
+  "start": 70.96,
+  "duration": 4.32,
+  "text": "faça. O Evolution API, ele precisa ser"
+ },
+ {
+  "start": 73.76,
+  "duration": 3.12,
+  "text": "hospedado em algum lugar. Ele é"
+ },
+ {
+  "start": 75.28,
+  "duration": 3.0,
+  "text": "gratuito, tá? Tu não paga por nada,"
+ },
+ {
+  "start": 76.88,
+  "duration": 3.28,
+  "text": "porque ele é open source, porém você"
+ },
+ {
+  "start": 78.28,
+  "duration": 5.08,
+  "text": "precisa hospedar em uma VPS para ele"
+ },
+ {
+  "start": 80.16,
+  "duration": 5.96,
+  "text": "ficar lá 24 horas por dia funcionando. E"
+ },
+ {
+  "start": 83.36,
+  "duration": 5.08,
+  "text": "a VPS que a gente utiliza é a da"
+ },
+ {
+  "start": 86.12,
+  "duration": 4.28,
+  "text": "HostGator. Já tem lá a função de"
+ },
+ {
+  "start": 88.44,
+  "duration": 4.12,
+  "text": "pré-instalar, tá? Então, quando você for"
+ },
+ {
+  "start": 90.4,
+  "duration": 4.16,
+  "text": "contratar, já pode ir na opção de"
+ },
+ {
+  "start": 92.56,
+  "duration": 3.24,
+  "text": "Evolution API e automaticamente, assim"
+ },
+ {
+  "start": 94.56,
+  "duration": 2.72,
+  "text": "que você contratar, já vai ter"
+ },
+ {
+  "start": 95.8,
+  "duration": 3.16,
+  "text": "instalada, é só acessar e pronto, não"
+ },
+ {
+  "start": 97.28,
+  "duration": 3.84,
+  "text": "tem que ficar fazendo configuração,"
+ },
+ {
+  "start": 98.96,
+  "duration": 4.32,
+  "text": "mexendo com outras coisas não, tá? A"
+ },
+ {
+  "start": 101.12,
+  "duration": 3.84,
+  "text": "ideia aqui é ser ser simplificado. E a"
+ },
+ {
+  "start": 103.28,
+  "duration": 3.72,
+  "text": "partir disso, seu Cloud Code vai ter"
+ },
+ {
+  "start": 104.96,
+  "duration": 3.56,
+  "text": "acesso ao WhatsApp, tá? Então, ele vai"
+ },
+ {
+  "start": 107.0,
+  "duration": 3.92,
+  "text": "conseguir acessar grupos, enviar"
+ },
+ {
+  "start": 108.52,
+  "duration": 4.2,
+  "text": "mensagens, coisas do tipo, né? Aí aqui"
+ },
+ {
+  "start": 110.92,
+  "duration": 5.12,
+  "text": "tá o final, que seria realmente acessar"
+ },
+ {
+  "start": 112.72,
+  "duration": 5.08,
+  "text": "os grupos, verificar membros, é editar o"
+ },
+ {
+  "start": 116.04,
+  "duration": 3.68,
+  "text": "grupo, enviar mensagens, fazer"
+ },
+ {
+  "start": 117.8,
+  "duration": 3.56,
+  "text": "relatórios, coisas do tipo. E aqui no"
+ },
+ {
+  "start": 119.72,
+  "duration": 4.0,
+  "text": "vídeo vamos estar trabalhando em quatro"
+ },
+ {
+  "start": 121.36,
+  "duration": 4.32,
+  "text": "etapas, tá? Vamos seguir aqui esses"
+ },
+ {
+  "start": 123.72,
+  "duration": 4.88,
+  "text": "quatro pontos aqui passo a passo, que é"
+ },
+ {
+  "start": 125.68,
+  "duration": 5.72,
+  "text": "para estar funcionando sem problema. E o"
+ },
+ {
+  "start": 128.6,
+  "duration": 6.0,
+  "text": "primeiro passo é instalar e contratar a"
+ },
+ {
+  "start": 131.4,
+  "duration": 4.36,
+  "text": "VPS com Evolution API. Então, bora lá."
+ },
+ {
+  "start": 134.6,
+  "duration": 2.68,
+  "text": "Você vai acessar o link que eu vou"
+ },
+ {
+  "start": 135.76,
+  "duration": 3.48,
+  "text": "deixar aqui na descrição, no comentário"
+ },
+ {
+  "start": 137.28,
+  "duration": 4.64,
+  "text": "fixado, aí você vai direto para essa"
+ },
+ {
+  "start": 139.24,
+  "duration": 4.96,
+  "text": "página aqui, que já é já é a seção do"
+ },
+ {
+  "start": 141.92,
+  "duration": 5.039,
+  "text": "Evolution API dentro da HostGator."
+ },
+ {
+  "start": 144.2,
+  "duration": 5.6,
+  "text": "Então, olha só, a automatize, integre e"
+ },
+ {
+  "start": 146.959,
+  "duration": 4.641,
+  "text": "escale seu WhatsApp com Evolution API."
+ },
+ {
+  "start": 149.8,
+  "duration": 3.8,
+  "text": "Descendo aqui embaixo, você vai"
+ },
+ {
+  "start": 151.6,
+  "duration": 4.16,
+  "text": "conseguir ver aqui os o os tipos de"
+ },
+ {
+  "start": 153.6,
+  "duration": 4.84,
+  "text": "servidores, tá? Dois, quatro, oito."
+ },
+ {
+  "start": 155.76,
+  "duration": 4.28,
+  "text": "Esses aqui são os padrões, tem de alto"
+ },
+ {
+  "start": 158.44,
+  "duration": 3.68,
+  "text": "desempenho também, caso você queira um"
+ },
+ {
+  "start": 160.04,
+  "duration": 4.4,
+  "text": "negócio assim mais parrudo. Mas se você"
+ },
+ {
+  "start": 162.12,
+  "duration": 5.68,
+  "text": "observar aqui, ó, aqui ele já fala, ó:"
+ },
+ {
+  "start": 164.44,
+  "duration": 4.72,
+  "text": "\"Evolution pré-instalada e cabe até 20"
+ },
+ {
+  "start": 167.8,
+  "duration": 2.4,
+  "text": "números de WhatsApp\". Então, você"
+ },
+ {
+  "start": 169.16,
+  "duration": 2.88,
+  "text": "consegue estar conectando até 20 números"
+ },
+ {
+  "start": 170.2,
+  "duration": 3.08,
+  "text": "de WhatsApp sem problema, tá? Claro,"
+ },
+ {
+  "start": 172.04,
+  "duration": 3.28,
+  "text": "depende também da forma que tu vai estar"
+ },
+ {
+  "start": 173.28,
+  "duration": 4.72,
+  "text": "utilizando. Se você usa vai usar muito,"
+ },
+ {
+  "start": 175.32,
+  "duration": 4.919,
+  "text": "muito, muito, já é legal tu pegar um um"
+ },
+ {
+  "start": 178.0,
+  "duration": 4.0,
+  "text": "peça melhor, por exemplo, a NVMe quatro"
+ },
+ {
+  "start": 180.239,
+  "duration": 4.201,
+  "text": "para esse tipo de caso é o ali o o"
+ },
+ {
+  "start": 182.0,
+  "duration": 3.84,
+  "text": "padrão, certo? Enfim, tu vai escolher"
+ },
+ {
+  "start": 184.44,
+  "duration": 4.76,
+  "text": "aqui o plano, por exemplo, pega aqui o"
+ },
+ {
+  "start": 185.84,
+  "duration": 5.399,
+  "text": "nível NVMe dois, vou usar só uma uma"
+ },
+ {
+  "start": 189.2,
+  "duration": 4.44,
+  "text": "instância mesmo. Aqui tu tem o plano de"
+ },
+ {
+  "start": 191.239,
+  "duration": 4.401,
+  "text": "um mês, então paga aqui, ó, 54,98 por"
+ },
+ {
+  "start": 193.64,
+  "duration": 3.28,
+  "text": "mês, vou pagar mensal, mas tu pegar a"
+ },
+ {
+  "start": 195.64,
+  "duration": 4.56,
+  "text": "partir de um ano já tem uma promoção aí"
+ },
+ {
+  "start": 196.92,
+  "duration": 4.92,
+  "text": "bem bacana, ó, de 27,89 o mês. Então,"
+ },
+ {
+  "start": 200.2,
+  "duration": 4.16,
+  "text": "vai aqui no ano que aí você pode dividir"
+ },
+ {
+  "start": 201.84,
+  "duration": 4.72,
+  "text": "lá depois, enfim, fica legal. Vindo aqui"
+ },
+ {
+  "start": 204.36,
+  "duration": 5.24,
+  "text": "em continuar para carrinho, aqui"
+ },
+ {
+  "start": 206.56,
+  "duration": 4.92,
+  "text": "primeiro você vai só conferir se tá tudo"
+ },
+ {
+  "start": 209.6,
+  "duration": 4.56,
+  "text": "certo, né? Se realmente tá o plano"
+ },
+ {
+  "start": 211.48,
+  "duration": 5.16,
+  "text": "correto, se tá aqui, ó, Evolution API,"
+ },
+ {
+  "start": 214.16,
+  "duration": 3.76,
+  "text": "tá? O servidor tu você mantém aqui São"
+ },
+ {
+  "start": 216.64,
+  "duration": 3.16,
+  "text": "Paulo, que é o mais próximo, tem no"
+ },
+ {
+  "start": 217.92,
+  "duration": 4.76,
+  "text": "Brasil, né? Se tu tiver fora do Brasil,"
+ },
+ {
+  "start": 219.8,
+  "duration": 5.6,
+  "text": "tu vê aqui se o do México aqui ele chega"
+ },
+ {
+  "start": 222.68,
+  "duration": 5.08,
+  "text": "a ser mais mais próximo. Então,"
+ },
+ {
+  "start": 225.4,
+  "duration": 4.24,
+  "text": "conferiu, vem aqui para continuar para"
+ },
+ {
+  "start": 227.76,
+  "duration": 3.96,
+  "text": "verificação, aí aqui tu vai colocar aqui"
+ },
+ {
+  "start": 229.64,
+  "duration": 3.64,
+  "text": "sua conta aqui da HostGator, né? Pode"
+ },
+ {
+  "start": 231.72,
+  "duration": 3.64,
+  "text": "estar criando a conta aqui, contando com"
+ },
+ {
+  "start": 233.28,
+  "duration": 4.04,
+  "text": "o Google. Fiz ali o meu meu login, né?"
+ },
+ {
+  "start": 235.36,
+  "duration": 3.68,
+  "text": "Preenchi os dados que ele pediu e aí eu"
+ },
+ {
+  "start": 237.32,
+  "duration": 3.24,
+  "text": "caio nessa tela aqui de pagamento. Pode"
+ },
+ {
+  "start": 239.04,
+  "duration": 4.16,
+  "text": "tá selecionando cartão de crédito,"
+ },
+ {
+  "start": 240.56,
+  "duration": 4.76,
+  "text": "boleto, PayPal, Pix, tá? Então, você"
+ },
+ {
+  "start": 243.2,
+  "duration": 4.24,
+  "text": "seleciona aí o seu modelo aqui, tu pode"
+ },
+ {
+  "start": 245.32,
+  "duration": 3.8,
+  "text": "parcelar aqui também, caso prefira, e"
+ },
+ {
+  "start": 247.44,
+  "duration": 2.84,
+  "text": "clica em realizar pagamento. E aí,"
+ },
+ {
+  "start": 249.12,
+  "duration": 3.56,
+  "text": "depois que realizar o pagamento, você"
+ },
+ {
+  "start": 250.28,
+  "duration": 4.56,
+  "text": "vai acessar lá o painel."
+ },
+ {
+  "start": 252.68,
+  "duration": 4.32,
+  "text": "Você recebe um e-mail dessa forma aqui,"
+ },
+ {
+  "start": 254.84,
+  "duration": 4.64,
+  "text": "tá? Da HostGator, com aparecendo aqui"
+ },
+ {
+  "start": 257.0,
+  "duration": 4.48,
+  "text": "dados de acesso ao seu VPS. Pode clicar"
+ },
+ {
+  "start": 259.48,
+  "duration": 4.04,
+  "text": "aqui, já vai direto pro portal e tem"
+ },
+ {
+  "start": 261.48,
+  "duration": 3.56,
+  "text": "aqui o token do seu Evolution, tá? Cara,"
+ },
+ {
+  "start": 263.52,
+  "duration": 4.32,
+  "text": "copia isso aqui, ó, e salva em algum"
+ },
+ {
+  "start": 265.04,
+  "duration": 4.48,
+  "text": "local, beleza? Você vai precisar dele."
+ },
+ {
+  "start": 267.84,
+  "duration": 4.079,
+  "text": "Vocês vão entender. Aí você vem aqui, ó,"
+ },
+ {
+  "start": 269.52,
+  "duration": 4.72,
+  "text": "em VPS e dedicados, né? Que já entrou"
+ },
+ {
+  "start": 271.919,
+  "duration": 4.281,
+  "text": "aqui no portal. E aqui você vai ver o"
+ },
+ {
+  "start": 274.24,
+  "duration": 4.28,
+  "text": "seu servidor. No caso, eu tenho esse"
+ },
+ {
+  "start": 276.2,
+  "duration": 4.24,
+  "text": "daqui, né? Ele tá online. E aqui em"
+ },
+ {
+  "start": 278.52,
+  "duration": 3.24,
+  "text": "acesso rápido, ó, observe que aqui você"
+ },
+ {
+  "start": 280.44,
+  "duration": 3.08,
+  "text": "consegue"
+ },
+ {
+  "start": 281.76,
+  "duration": 3.56,
+  "text": "abrir o console ou clicar aqui no"
+ },
+ {
+  "start": 283.52,
+  "duration": 3.399,
+  "text": "Evolution API direto. Se você vem aqui"
+ },
+ {
+  "start": 285.32,
+  "duration": 4.36,
+  "text": "em gerenciar,"
+ },
+ {
+  "start": 286.919,
+  "duration": 6.081,
+  "text": "você consegue ver mais detalhes da sua"
+ },
+ {
+  "start": 289.68,
+  "duration": 6.44,
+  "text": "VPS aqui, tá? Mas aqui nesse caso, você"
+ },
+ {
+  "start": 293.0,
+  "duration": 5.28,
+  "text": "vai clicar aqui em Evolution API. Daí"
+ },
+ {
+  "start": 296.12,
+  "duration": 3.6,
+  "text": "ele vai abrir essa página aqui, tá? Vai"
+ },
+ {
+  "start": 298.28,
+  "duration": 3.2,
+  "text": "aparecer esse, como se fosse um erro,"
+ },
+ {
+  "start": 299.72,
+  "duration": 3.96,
+  "text": "mas isso aqui não é erro, tá? Isso aqui"
+ },
+ {
+  "start": 301.48,
+  "duration": 5.16,
+  "text": "é porque você deve, ó, digitar barra"
+ },
+ {
+  "start": 303.68,
+  "duration": 5.44,
+  "text": "manager no final. Aí você vai, de fato,"
+ },
+ {
+  "start": 306.64,
+  "duration": 3.44,
+  "text": "acessar aqui, tá? No meu caso aqui, tá"
+ },
+ {
+  "start": 309.12,
+  "duration": 1.84,
+  "text": "conectado as instâncias aqui porque eu"
+ },
+ {
+  "start": 310.08,
+  "duration": 2.04,
+  "text": "tava gravando um vídeo pro YouTube,"
+ },
+ {
+  "start": 310.96,
+  "duration": 3.88,
+  "text": "acabou dando um problema aqui com o"
+ },
+ {
+  "start": 312.12,
+  "duration": 4.76,
+  "text": "áudio, tive que regravar. Então, no caso"
+ },
+ {
+  "start": 314.84,
+  "duration": 4.0,
+  "text": "de vocês vai aparecer assim, ó, dessa"
+ },
+ {
+  "start": 316.88,
+  "duration": 3.48,
+  "text": "forma. Seu primeiro acesso. E aqui tu"
+ },
+ {
+  "start": 318.84,
+  "duration": 3.52,
+  "text": "vai colocar aquela chave de API global"
+ },
+ {
+  "start": 320.36,
+  "duration": 4.84,
+  "text": "que tá lá no seu Gmail. Você vai colar"
+ },
+ {
+  "start": 322.36,
+  "duration": 5.0,
+  "text": "aqui, conectar e pronto. Tu vai acessar"
+ },
+ {
+  "start": 325.2,
+  "duration": 5.08,
+  "text": "essa página aqui, certo? E a partir"
+ },
+ {
+  "start": 327.36,
+  "duration": 5.28,
+  "text": "daqui você vai poder tá conectando o seu"
+ },
+ {
+  "start": 330.28,
+  "duration": 4.24,
+  "text": "número do WhatsApp, que é justamente, ó,"
+ },
+ {
+  "start": 332.64,
+  "duration": 3.96,
+  "text": "a próxima etapa, criar uma instância e"
+ },
+ {
+  "start": 334.52,
+  "duration": 4.12,
+  "text": "conectar o número do WhatsApp. Então,"
+ },
+ {
+  "start": 336.6,
+  "duration": 3.64,
+  "text": "você vem aqui, clica aqui em instância."
+ },
+ {
+  "start": 338.64,
+  "duration": 3.56,
+  "text": "Aqui tu coloca algum nome, por exemplo,"
+ },
+ {
+  "start": 340.24,
+  "duration": 4.36,
+  "text": "eu vou colocar aqui YouTube teste. Venho"
+ },
+ {
+  "start": 342.2,
+  "duration": 5.24,
+  "text": "aqui em salvar. Aparece aqui como"
+ },
+ {
+  "start": 344.6,
+  "duration": 5.52,
+  "text": "desconectado, tá? Nesse caso aqui,"
+ },
+ {
+  "start": 347.44,
+  "duration": 5.2,
+  "text": "vocês vão vir aqui em configurações e"
+ },
+ {
+  "start": 350.12,
+  "duration": 5.68,
+  "text": "gerar QR Code. Vai aparecer o QR Code"
+ },
+ {
+  "start": 352.64,
+  "duration": 4.48,
+  "text": "aqui para que vocês possam tá escaneando"
+ },
+ {
+  "start": 355.8,
+  "duration": 2.92,
+  "text": "pelo seu celular como se fosse um"
+ },
+ {
+  "start": 357.12,
+  "duration": 3.6,
+  "text": "WhatsApp Web."
+ },
+ {
+  "start": 358.72,
+  "duration": 3.76,
+  "text": "Ó, se for iPhone, você vem aqui em"
+ },
+ {
+  "start": 360.72,
+  "duration": 4.44,
+  "text": "configurações,"
+ },
+ {
+  "start": 362.48,
+  "duration": 4.44,
+  "text": "aí vem aqui em dispositivos conectados,"
+ },
+ {
+  "start": 365.16,
+  "duration": 3.72,
+  "text": "eu acho que no Android é a mesma coisa."
+ },
+ {
+  "start": 366.92,
+  "duration": 4.88,
+  "text": "E aí você clica em conectar dispositivo"
+ },
+ {
+  "start": 368.88,
+  "duration": 5.84,
+  "text": "e escaneia aqui. Tá aqui conectando,"
+ },
+ {
+  "start": 371.8,
+  "duration": 4.84,
+  "text": "vamos esperar aqui pelo celular, tá? Tem"
+ },
+ {
+  "start": 374.72,
+  "duration": 3.56,
+  "text": "que tá conectado no celular aqui."
+ },
+ {
+  "start": 376.64,
+  "duration": 4.08,
+  "text": "Pronto, ele perguntou aqui o nome, vou"
+ },
+ {
+  "start": 378.28,
+  "duration": 4.76,
+  "text": "colocar aqui só YouTube aqui mesmo no"
+ },
+ {
+  "start": 380.72,
+  "duration": 4.4,
+  "text": "celular. Se eu sair daqui, ó, fechar,"
+ },
+ {
+  "start": 383.04,
+  "duration": 4.08,
+  "text": "pronto, já apareceu ali o meu nome, foto"
+ },
+ {
+  "start": 385.12,
+  "duration": 4.28,
+  "text": "de perfil e o número de telefone."
+ },
+ {
+  "start": 387.12,
+  "duration": 4.56,
+  "text": "Pronto, então tá conectado já, beleza?"
+ },
+ {
+  "start": 389.4,
+  "duration": 5.0,
+  "text": "Segundo passo tá completo. O próximo"
+ },
+ {
+  "start": 391.68,
+  "duration": 4.72,
+  "text": "passo aqui é ir para o VS Code e"
+ },
+ {
+  "start": 394.4,
+  "duration": 4.2,
+  "text": "configurar o Cloud Code, tá? Porque"
+ },
+ {
+  "start": 396.4,
+  "duration": 3.6,
+  "text": "agora a gente já tá com a VPS Evolution"
+ },
+ {
+  "start": 398.6,
+  "duration": 3.44,
+  "text": "e o número lá tudo conectado,"
+ },
+ {
+  "start": 400.0,
+  "duration": 4.68,
+  "text": "funcionando show de bola. Agora a gente"
+ },
+ {
+  "start": 402.04,
+  "duration": 4.879,
+  "text": "quer dar acesso desse local, né, do"
+ },
+ {
+  "start": 404.68,
+  "duration": 3.76,
+  "text": "Evolution para o Cloud Code, além de"
+ },
+ {
+  "start": 406.919,
+  "duration": 2.801,
+  "text": "passar para ele algumas documentações"
+ },
+ {
+  "start": 408.44,
+  "duration": 3.56,
+  "text": "para ele entender exatamente como que"
+ },
+ {
+  "start": 409.72,
+  "duration": 3.96,
+  "text": "funciona a API do Evolution. Vou mostrar"
+ },
+ {
+  "start": 412.0,
+  "duration": 3.08,
+  "text": "para vocês. Pausa rápida. Se esse vídeo"
+ },
+ {
+  "start": 413.68,
+  "duration": 2.84,
+  "text": "está te ajudando, então presta atenção."
+ },
+ {
+  "start": 415.08,
+  "duration": 3.4,
+  "text": "Tudo que eu mostro no meu canal sobre o"
+ },
+ {
+  "start": 416.52,
+  "duration": 4.399,
+  "text": "Cloud Code, eu ensino bem mastigado no"
+ },
+ {
+  "start": 418.48,
+  "duration": 5.28,
+  "text": "meu treinamento Operação Cloud Code. São"
+ },
+ {
+  "start": 420.919,
+  "duration": 5.281,
+  "text": "vários módulos, já são mais de 60 aulas,"
+ },
+ {
+  "start": 423.76,
+  "duration": 4.6,
+  "text": "do zero até você botar uma automação"
+ },
+ {
+  "start": 426.2,
+  "duration": 4.64,
+  "text": "rodando na nuvem 24 horas por dia, além"
+ },
+ {
+  "start": 428.36,
+  "duration": 5.0,
+  "text": "de framework para skills, MC P's,"
+ },
+ {
+  "start": 430.84,
+  "duration": 4.32,
+  "text": "rotinas, até mesmo construção de site. O"
+ },
+ {
+  "start": 433.36,
+  "duration": 3.96,
+  "text": "curso não é só teoria, ele é realmente"
+ },
+ {
+  "start": 435.16,
+  "duration": 3.8,
+  "text": "mão na massa, você vai começar do zero e"
+ },
+ {
+  "start": 437.32,
+  "duration": 3.32,
+  "text": "já vai sair de lá com automações"
+ },
+ {
+  "start": 438.96,
+  "duration": 3.16,
+  "text": "prontas. O link do curso está fixado"
+ },
+ {
+  "start": 440.64,
+  "duration": 3.16,
+  "text": "aqui no primeiro comentário e também"
+ },
+ {
+  "start": 442.12,
+  "duration": 3.12,
+  "text": "está na descrição. Enfim, bora de volta"
+ },
+ {
+  "start": 443.8,
+  "duration": 4.119,
+  "text": "para o vídeo."
+ },
+ {
+  "start": 445.24,
+  "duration": 4.12,
+  "text": "Pronto, tô aqui no VS Code, eh, já tô"
+ },
+ {
+  "start": 447.919,
+  "duration": 3.321,
+  "text": "aqui com o chat do Cloud Code aqui do"
+ },
+ {
+  "start": 449.36,
+  "duration": 4.08,
+  "text": "lado também. Se você não sabe colocar o"
+ },
+ {
+  "start": 451.24,
+  "duration": 4.44,
+  "text": "Cloud Code aqui no VS Code e tudo mais,"
+ },
+ {
+  "start": 453.44,
+  "duration": 4.16,
+  "text": "eu tenho um vídeo que ensino, eh, a"
+ },
+ {
+  "start": 455.68,
+  "duration": 3.8,
+  "text": "parte básica do Cloud Code, tá? Deixando"
+ },
+ {
+  "start": 457.6,
+  "duration": 4.08,
+  "text": "aqui no card para você dar uma acessada"
+ },
+ {
+  "start": 459.48,
+  "duration": 4.48,
+  "text": "lá, dar uma olhada, e tu volta aqui."
+ },
+ {
+  "start": 461.68,
+  "duration": 4.16,
+  "text": "Enfim, eu tenho aqui uma pasta chamada"
+ },
+ {
+  "start": 463.96,
+  "duration": 3.56,
+  "text": "docs dentro do meu projeto gestor de"
+ },
+ {
+  "start": 465.84,
+  "duration": 4.44,
+  "text": "grupos. Em docs eu tenho aqui dois"
+ },
+ {
+  "start": 467.52,
+  "duration": 4.92,
+  "text": "arquivos: Evolution API e gerenciar"
+ },
+ {
+  "start": 470.28,
+  "duration": 5.52,
+  "text": "grupos com Cloud Code. Esse Evolution"
+ },
+ {
+  "start": 472.44,
+  "duration": 6.88,
+  "text": "API aqui, ele é a documentação todinha"
+ },
+ {
+  "start": 475.8,
+  "duration": 6.0,
+  "text": "aqui em markdown do Evolution, tá? E"
+ },
+ {
+  "start": 479.32,
+  "duration": 4.84,
+  "text": "aqui é ele explicando de uma maneira"
+ },
+ {
+  "start": 481.8,
+  "duration": 3.76,
+  "text": "mais geral o que que dá para ser feito"
+ },
+ {
+  "start": 484.16,
+  "duration": 3.2,
+  "text": "de gerenciamento de grupos com Cloud"
+ },
+ {
+  "start": 485.56,
+  "duration": 3.68,
+  "text": "Code. Ele já tem uma noção de como é que"
+ },
+ {
+  "start": 487.36,
+  "duration": 3.92,
+  "text": "funciona de maneira mais fácil. Todos"
+ },
+ {
+  "start": 489.24,
+  "duration": 3.36,
+  "text": "esses arquivos aqui, ó, a pasta docs e"
+ },
+ {
+  "start": 491.28,
+  "duration": 3.6,
+  "text": "esses outros aqui, vou já mostrar para"
+ },
+ {
+  "start": 492.6,
+  "duration": 4.12,
+  "text": "vocês o que que é, eu vou compactar em"
+ },
+ {
+  "start": 494.88,
+  "duration": 4.4,
+  "text": "um arquivo zip e vou disponibilizar para"
+ },
+ {
+  "start": 496.72,
+  "duration": 4.12,
+  "text": "vocês no meu hub de templates gratuito,"
+ },
+ {
+  "start": 499.28,
+  "duration": 3.88,
+  "text": "certo? Esse aqui é o meu hub de"
+ },
+ {
+  "start": 500.84,
+  "duration": 4.92,
+  "text": "templates, beleza? Tu vem aqui embaixo,"
+ },
+ {
+  "start": 503.16,
+  "duration": 4.48,
+  "text": "aí aqui, ó, vai estar o material desse"
+ },
+ {
+  "start": 505.76,
+  "duration": 3.36,
+  "text": "vídeo aqui, tá? Agora não tá porque eu"
+ },
+ {
+  "start": 507.64,
+  "duration": 2.92,
+  "text": "ainda não coloquei, mas quando eu"
+ },
+ {
+  "start": 509.12,
+  "duration": 3.599,
+  "text": "finalizar esse vídeo eu vou subir, então"
+ },
+ {
+  "start": 510.56,
+  "duration": 3.8,
+  "text": "quando você for acessar já vai ter aqui."
+ },
+ {
+  "start": 512.719,
+  "duration": 4.32,
+  "text": "Se você não tiver achando, só colocar o"
+ },
+ {
+  "start": 514.36,
+  "duration": 4.44,
+  "text": "URL do vídeo aqui que aparece, tá bom?"
+ },
+ {
+  "start": 517.039,
+  "duration": 4.041,
+  "text": "Aí você baixa o material. Para acessar"
+ },
+ {
+  "start": 518.8,
+  "duration": 4.919,
+  "text": "esse link, vou deixar aqui na descrição,"
+ },
+ {
+  "start": 521.08,
+  "duration": 4.8,
+  "text": "aqui no comentário fixado também, o link"
+ },
+ {
+  "start": 523.719,
+  "duration": 3.361,
+  "text": "do meu grupo gratuito de Cloud Code. O"
+ },
+ {
+  "start": 525.88,
+  "duration": 3.72,
+  "text": "link para o hub vai estar lá na"
+ },
+ {
+  "start": 527.08,
+  "duration": 4.56,
+  "text": "descrição desse grupo, beleza? Enfim, aí"
+ },
+ {
+  "start": 529.6,
+  "duration": 5.88,
+  "text": "tu baixou, descompactou, enfim, colocou"
+ },
+ {
+  "start": 531.64,
+  "duration": 5.6,
+  "text": "aqui, OK. Aqui no cloud.md é o prompt do"
+ },
+ {
+  "start": 535.48,
+  "duration": 4.44,
+  "text": "Cloud para explicar de uma maneira"
+ },
+ {
+  "start": 537.24,
+  "duration": 4.4,
+  "text": "simples o que que ele faz aqui,"
+ },
+ {
+  "start": 539.92,
+  "duration": 4.16,
+  "text": "o contexto geral. E aqui eu tenho o"
+ },
+ {
+  "start": 541.64,
+  "duration": 4.04,
+  "text": "arquivo {ponto} env, que é onde você vai"
+ },
+ {
+  "start": 544.08,
+  "duration": 4.72,
+  "text": "colocar suas credenciais do Evolution,"
+ },
+ {
+  "start": 545.68,
+  "duration": 4.24,
+  "text": "tá? A URL, chave API global e o nome da"
+ },
+ {
+  "start": 548.8,
+  "duration": 3.16,
+  "text": "instância."
+ },
+ {
+  "start": 549.92,
+  "duration": 4.52,
+  "text": "E o gitignore é para caso você for"
+ },
+ {
+  "start": 551.96,
+  "duration": 4.52,
+  "text": "acabar subindo o repositório no GitHub,"
+ },
+ {
+  "start": 554.44,
+  "duration": 4.28,
+  "text": "é, você acabar não passando ali o o"
+ },
+ {
+  "start": 556.48,
+  "duration": 3.64,
+  "text": "{ponto} env no repositório. Ah, não sei"
+ },
+ {
+  "start": 558.72,
+  "duration": 3.4,
+  "text": "o que é repositório, não não sei o que é"
+ },
+ {
+  "start": 560.12,
+  "duration": 3.96,
+  "text": "GitHub, tranquilo. Se tu for rodar só no"
+ },
+ {
+  "start": 562.12,
+  "duration": 3.719,
+  "text": "computador aqui tranquilamente, pode ir"
+ },
+ {
+  "start": 564.08,
+  "duration": 3.48,
+  "text": "sem se preocupar. Mas mantenha esses"
+ },
+ {
+  "start": 565.839,
+  "duration": 4.0,
+  "text": "arquivos aqui por padrão. Então bora"
+ },
+ {
+  "start": 567.56,
+  "duration": 6.279,
+  "text": "configurar aqui agora as credenciais do"
+ },
+ {
+  "start": 569.839,
+  "duration": 6.401,
+  "text": "Evolution. A URL é essa daqui, ó, https"
+ },
+ {
+  "start": 573.839,
+  "duration": 4.881,
+  "text": "e o número IP. Aí eu venho aqui, colo"
+ },
+ {
+  "start": 576.24,
+  "duration": 5.24,
+  "text": "aqui, eu tiro essa barra do final, tá?"
+ },
+ {
+  "start": 578.72,
+  "duration": 5.04,
+  "text": "Dou um Ctrl S para salvar. Show. A chave"
+ },
+ {
+  "start": 581.48,
+  "duration": 4.4,
+  "text": "API é aquela que você recebeu no seu"
+ },
+ {
+  "start": 583.76,
+  "duration": 5.48,
+  "text": "e-mail. Pronto, eu coloquei ela aqui,"
+ },
+ {
+  "start": 585.88,
+  "duration": 5.56,
+  "text": "Ctrl S. Tudo de bola. E agora, a"
+ },
+ {
+  "start": 589.24,
+  "duration": 4.16,
+  "text": "instância do Evolution. A instância está"
+ },
+ {
+  "start": 591.44,
+  "duration": 3.2,
+  "text": "aqui, ó, YouTube teste, que é a minha"
+ },
+ {
+  "start": 593.4,
+  "duration": 3.96,
+  "text": "que eu coloquei. A de vocês vai estar"
+ },
+ {
+  "start": 594.64,
+  "duration": 5.28,
+  "text": "diferente. Aí, você vem aqui, ó, Ctrl V,"
+ },
+ {
+  "start": 597.36,
+  "duration": 4.36,
+  "text": "Ctrl S e pronto. Já colocou as"
+ },
+ {
+  "start": 599.92,
+  "duration": 4.8,
+  "text": "credenciais. E agora, vamos fazer um"
+ },
+ {
+  "start": 601.72,
+  "duration": 5.36,
+  "text": "teste, só para ver se está funcionando."
+ },
+ {
+  "start": 604.72,
+  "duration": 4.4,
+  "text": "Vou colocar aqui, ó, bypass e vou deixar"
+ },
+ {
+  "start": 607.08,
+  "duration": 4.44,
+  "text": "aqui o Sonnet mesmo, o reforço no médio"
+ },
+ {
+  "start": 609.12,
+  "duration": 5.56,
+  "text": "mesmo. Beleza. Vou fazer a seguinte"
+ },
+ {
+  "start": 611.52,
+  "duration": 6.16,
+  "text": "pergunta aqui, ó: \"Quais instâncias"
+ },
+ {
+  "start": 614.68,
+  "duration": 4.76,
+  "text": "tenho conectado no Evolution?\" Se ele"
+ },
+ {
+  "start": 617.68,
+  "duration": 3.4,
+  "text": "mostrar aqui um e falar o nome da"
+ },
+ {
+  "start": 619.44,
+  "duration": 3.88,
+  "text": "instância, é porque já está conectado"
+ },
+ {
+  "start": 621.08,
+  "duration": 4.48,
+  "text": "com sucesso, né? Deu certo a parte de"
+ },
+ {
+  "start": 623.32,
+  "duration": 4.04,
+  "text": "configuração, né, de conexão. Pronto,"
+ },
+ {
+  "start": 625.56,
+  "duration": 5.32,
+  "text": "ele passou aqui, ó, número, nome do"
+ },
+ {
+  "start": 627.36,
+  "duration": 6.0,
+  "text": "perfil, nome. Ou seja, está funcionando"
+ },
+ {
+  "start": 630.88,
+  "duration": 4.68,
+  "text": "com sucesso. Perfeito, então. Então, já"
+ },
+ {
+  "start": 633.36,
+  "duration": 4.56,
+  "text": "já contratamos a VPS, colocamos o"
+ },
+ {
+  "start": 635.56,
+  "duration": 5.36,
+  "text": "Evolution, conectamos o WhatsApp,"
+ },
+ {
+  "start": 637.92,
+  "duration": 5.36,
+  "text": "configuramos o VS Code. Agora, nos resta"
+ },
+ {
+  "start": 640.92,
+  "duration": 4.0,
+  "text": "fazer, de fato agora, as requisições"
+ },
+ {
+  "start": 643.28,
+  "duration": 3.28,
+  "text": "para o Cloud Code. Vou te mostrar aqui"
+ },
+ {
+  "start": 644.92,
+  "duration": 4.4,
+  "text": "alguns casos de uso, alguns exemplos que"
+ },
+ {
+  "start": 646.56,
+  "duration": 5.88,
+  "text": "vocês podem estar utilizando. Beleza?"
+ },
+ {
+  "start": 649.32,
+  "duration": 6.16,
+  "text": "Vamos começar pedindo para que o Cloud"
+ },
+ {
+  "start": 652.44,
+  "duration": 5.92,
+  "text": "me forneça uma lista com todos os grupos"
+ },
+ {
+  "start": 655.48,
+  "duration": 5.64,
+  "text": "do qual eu faço parte e os grupos que eu"
+ },
+ {
+  "start": 658.36,
+  "duration": 5.0,
+  "text": "sou admin. Cloud, eu quero que você me"
+ },
+ {
+  "start": 661.12,
+  "duration": 4.719,
+  "text": "passe uma lista de todos os grupos que"
+ },
+ {
+  "start": 663.36,
+  "duration": 5.2,
+  "text": "eu faço parte e também me lista ali os"
+ },
+ {
+  "start": 665.839,
+  "duration": 4.081,
+  "text": "grupos que eu sou admin. E bora aguardar"
+ },
+ {
+  "start": 668.56,
+  "duration": 2.76,
+  "text": "aqui o resultado. Então, olha só, nem"
+ },
+ {
+  "start": 669.92,
+  "duration": 2.6,
+  "text": "preciso explicar para ele que eu quero"
+ },
+ {
+  "start": 671.32,
+  "duration": 2.8,
+  "text": "que ele use o Evolution, que não sei o"
+ },
+ {
+  "start": 672.52,
+  "duration": 4.2,
+  "text": "quê. Não, porque eu já coloquei no"
+ },
+ {
+  "start": 674.12,
+  "duration": 4.4,
+  "text": "cloud.md essa parte, esse contexto"
+ },
+ {
+  "start": 676.72,
+  "duration": 3.96,
+  "text": "inicial, tá? Por isso que é legal ter um"
+ },
+ {
+  "start": 678.52,
+  "duration": 3.52,
+  "text": "cloud.md. Então, tudo que tu perguntar"
+ },
+ {
+  "start": 680.68,
+  "duration": 3.28,
+  "text": "relacionado a grupo, ele já vai saber"
+ },
+ {
+  "start": 682.04,
+  "duration": 3.36,
+  "text": "que é para usar o Evolution. Ele"
+ },
+ {
+  "start": 683.96,
+  "duration": 3.36,
+  "text": "consulta lá a documentação para ver como"
+ },
+ {
+  "start": 685.4,
+  "duration": 5.439,
+  "text": "é que usa e pronto. E pronto, ele me"
+ },
+ {
+  "start": 687.32,
+  "duration": 5.72,
+  "text": "passou aqui, ó, a lista aqui dos grupos,"
+ },
+ {
+  "start": 690.839,
+  "duration": 5.241,
+  "text": "né? O nome do grupo, quantidade de"
+ },
+ {
+  "start": 693.04,
+  "duration": 5.36,
+  "text": "membros e se eu sou admin ou não."
+ },
+ {
+  "start": 696.08,
+  "duration": 4.92,
+  "text": "Beleza? Então aqui, ó, 10 grupos como"
+ },
+ {
+  "start": 698.4,
+  "duration": 3.92,
+  "text": "admin. Então, primeira coisa, tá"
+ },
+ {
+  "start": 701.0,
+  "duration": 3.28,
+  "text": "funcionando essa questão de requisição"
+ },
+ {
+  "start": 702.32,
+  "duration": 5.84,
+  "text": "de grupos. Eu vou pedir agora para que"
+ },
+ {
+  "start": 704.28,
+  "duration": 6.48,
+  "text": "ele faça um dashboard em HTML para mim"
+ },
+ {
+  "start": 708.16,
+  "duration": 5.36,
+  "text": "dos membros do meu grupo gratuito Cloud"
+ },
+ {
+  "start": 710.76,
+  "duration": 4.64,
+  "text": "Code de acordo com o estado. É para ter"
+ },
+ {
+  "start": 713.52,
+  "duration": 3.96,
+  "text": "noção lá quais são os estados que mais"
+ },
+ {
+  "start": 715.4,
+  "duration": 4.92,
+  "text": "tem pessoas no meu grupo. Cloud, eu"
+ },
+ {
+  "start": 717.48,
+  "duration": 5.6,
+  "text": "quero que você faça um relatório, aí"
+ },
+ {
+  "start": 720.32,
+  "duration": 5.6,
+  "text": "você me traga aqui em HTML estatísticas"
+ },
+ {
+  "start": 723.08,
+  "duration": 5.88,
+  "text": "dos membros do meu grupo Cloud Code"
+ },
+ {
+  "start": 725.92,
+  "duration": 4.68,
+  "text": "Anderson Adelino. Eu quero um gráfico lá"
+ },
+ {
+  "start": 728.96,
+  "duration": 4.44,
+  "text": "informando"
+ },
+ {
+  "start": 730.6,
+  "duration": 4.24,
+  "text": "as pessoas de acordo com o estado delas."
+ },
+ {
+  "start": 733.4,
+  "duration": 3.04,
+  "text": "Beleza? E se tiver alguma outra"
+ },
+ {
+  "start": 734.84,
+  "duration": 3.52,
+  "text": "informação que você acha interessante"
+ },
+ {
+  "start": 736.44,
+  "duration": 4.4,
+  "text": "mostrar também, fica à vontade para"
+ },
+ {
+  "start": 738.36,
+  "duration": 4.2,
+  "text": "fazer. Ele veio aqui e vamos aguardar"
+ },
+ {
+  "start": 740.84,
+  "duration": 4.48,
+  "text": "para ver como que ele vai fazer esse"
+ },
+ {
+  "start": 742.56,
+  "duration": 5.72,
+  "text": "dashboard. E aqui está o resultado, né?"
+ },
+ {
+  "start": 745.32,
+  "duration": 4.8,
+  "text": "Ele me trouxe aqui esse painel HTML e já"
+ },
+ {
+  "start": 748.28,
+  "duration": 4.4,
+  "text": "abriu o navegador aqui automaticamente."
+ },
+ {
+  "start": 750.12,
+  "duration": 5.2,
+  "text": "E tá aqui, Cloud Code Anderson Adelino,"
+ },
+ {
+  "start": 752.68,
+  "duration": 5.2,
+  "text": "data de geração, a instância, o ID do"
+ },
+ {
+  "start": 755.32,
+  "duration": 3.92,
+  "text": "grupo e aqui, ó, 432"
+ },
+ {
+  "start": 757.88,
+  "duration": 4.24,
+  "text": "total de membros, a quantidade de"
+ },
+ {
+  "start": 759.24,
+  "duration": 5.08,
+  "text": "brasileiros, quantos eh que estão em"
+ },
+ {
+  "start": 762.12,
+  "duration": 5.28,
+  "text": "outro país, a quantidade de admins e"
+ },
+ {
+  "start": 764.32,
+  "duration": 7.32,
+  "text": "estados presentes. Aqui um gráfico, ó,"
+ },
+ {
+  "start": 767.4,
+  "duration": 6.8,
+  "text": "top cinco estados. Aqui a gente tem eh"
+ },
+ {
+  "start": 771.64,
+  "duration": 6.12,
+  "text": "um gráfico mostrando a porcentagem de"
+ },
+ {
+  "start": 774.2,
+  "duration": 6.2,
+  "text": "membros por estado e aqui a questão de"
+ },
+ {
+  "start": 777.76,
+  "duration": 5.24,
+  "text": "quantitativo mesmo, ó. Legal. Temos duas"
+ },
+ {
+  "start": 780.4,
+  "duration": 4.92,
+  "text": "visualizações aqui diferentes. São Paulo"
+ },
+ {
+  "start": 783.0,
+  "duration": 5.96,
+  "text": "predomina, que é do meu estado aqui, ó,"
+ },
+ {
+  "start": 785.32,
+  "duration": 6.44,
+  "text": "RN, tem nove pessoas. Legal. E aqui"
+ },
+ {
+  "start": 788.96,
+  "duration": 5.2,
+  "text": "distribuição por região, tá? Então o"
+ },
+ {
+  "start": 791.76,
+  "duration": 4.0,
+  "text": "sudeste predomina e nordeste vem em"
+ },
+ {
+  "start": 794.16,
+  "duration": 3.28,
+  "text": "segundo lugar. Pronto, então aqui eu"
+ },
+ {
+  "start": 795.76,
+  "duration": 3.96,
+  "text": "tenho informações do meu grupo, tá? Do"
+ },
+ {
+  "start": 797.44,
+  "duration": 5.16,
+  "text": "meu grupo gratuito aqui de Cloud Code,"
+ },
+ {
+  "start": 799.72,
+  "duration": 4.4,
+  "text": "tá? Eh espero que aumente, né, mais, que"
+ },
+ {
+  "start": 802.6,
+  "duration": 3.04,
+  "text": "que você vai entrar aí no grupo, né?"
+ },
+ {
+  "start": 804.12,
+  "duration": 2.719,
+  "text": "Você e outras pessoas vai sempre"
+ },
+ {
+  "start": 805.64,
+  "duration": 2.8,
+  "text": "aumentando aí essa quantidade de"
+ },
+ {
+  "start": 806.839,
+  "duration": 3.681,
+  "text": "pessoas. Então, beleza, isso aqui é uma"
+ },
+ {
+  "start": 808.44,
+  "duration": 3.2,
+  "text": "função muito interessante, porque eu tô"
+ },
+ {
+  "start": 810.52,
+  "duration": 3.6,
+  "text": "falando aqui de um grupo, mas imagina"
+ },
+ {
+  "start": 811.64,
+  "duration": 3.88,
+  "text": "que você tenha aí um 20 grupos, por"
+ },
+ {
+  "start": 814.12,
+  "duration": 3.4,
+  "text": "exemplo, um lançamento que você faz,"
+ },
+ {
+  "start": 815.52,
+  "duration": 4.12,
+  "text": "onde é que tu tem eh vários grupos de"
+ },
+ {
+  "start": 817.52,
+  "duration": 4.08,
+  "text": "clientes e você quer puxar esses dados,"
+ },
+ {
+  "start": 819.64,
+  "duration": 4.32,
+  "text": "então já é uma coisa interessante a se"
+ },
+ {
+  "start": 821.6,
+  "duration": 4.52,
+  "text": "fazer, tá? Até mesmo se você quiser"
+ },
+ {
+  "start": 823.96,
+  "duration": 5.4,
+  "text": "buscar tem vários grupos ali presentes,"
+ },
+ {
+  "start": 826.12,
+  "duration": 5.28,
+  "text": "você quer puxar ali eh os contatos dessa"
+ },
+ {
+  "start": 829.36,
+  "duration": 4.0,
+  "text": "galera, você pode fazer também. Então,"
+ },
+ {
+  "start": 831.4,
+  "duration": 4.44,
+  "text": "pode já é o já seria aqui um um segundo"
+ },
+ {
+  "start": 833.36,
+  "duration": 4.88,
+  "text": "caso a ser feito, né? Eu quero que você"
+ },
+ {
+  "start": 835.84,
+  "duration": 6.08,
+  "text": "agora crie para mim uma planilha para o"
+ },
+ {
+  "start": 838.24,
+  "duration": 6.36,
+  "text": "Excel contendo nome e contato de todos"
+ },
+ {
+  "start": 841.92,
+  "duration": 4.6,
+  "text": "os membros desse mesmo grupo, ou seja,"
+ },
+ {
+  "start": 844.6,
+  "duration": 3.72,
+  "text": "eu agora consigo pegar ali, transformar"
+ },
+ {
+  "start": 846.52,
+  "duration": 3.72,
+  "text": "numa planilha e a partir disso fazer"
+ },
+ {
+  "start": 848.32,
+  "duration": 4.2,
+  "text": "alguma campanha, algo do tipo, tá?"
+ },
+ {
+  "start": 850.24,
+  "duration": 4.28,
+  "text": "Repito, se você tem, faz parte de vários"
+ },
+ {
+  "start": 852.52,
+  "duration": 4.0,
+  "text": "grupos aí, você consegue fazer isso em"
+ },
+ {
+  "start": 854.52,
+  "duration": 3.68,
+  "text": "vários grupos, então também bem"
+ },
+ {
+  "start": 856.52,
+  "duration": 4.0,
+  "text": "interessante. E enquanto ele tá gerando"
+ },
+ {
+  "start": 858.2,
+  "duration": 4.84,
+  "text": "aqui, eu já vou abrir aqui"
+ },
+ {
+  "start": 860.52,
+  "duration": 5.16,
+  "text": "um outro chat e vou fazendo outra função"
+ },
+ {
+  "start": 863.04,
+  "duration": 4.36,
+  "text": "aqui simultaneamente. Inclusive, vou até"
+ },
+ {
+  "start": 865.68,
+  "duration": 3.04,
+  "text": "usar aqui o Haiku, eu quero testar se"
+ },
+ {
+  "start": 867.4,
+  "duration": 3.4,
+  "text": "mesmo usando o Haiku, que é um modelo"
+ },
+ {
+  "start": 868.72,
+  "duration": 3.76,
+  "text": "mais fraco, se ele vai conseguir"
+ },
+ {
+  "start": 870.8,
+  "duration": 4.08,
+  "text": "executar algumas ações, né? Como por"
+ },
+ {
+  "start": 872.48,
+  "duration": 3.8,
+  "text": "exemplo, eu quero que você crie três"
+ },
+ {
+  "start": 874.88,
+  "duration": 3.32,
+  "text": "grupos para um lançamento que eu vou"
+ },
+ {
+  "start": 876.28,
+  "duration": 4.52,
+  "text": "fazer. O nome do grupo, você pode"
+ },
+ {
+  "start": 878.2,
+  "duration": 6.16,
+  "text": "colocar \"Lançamento"
+ },
+ {
+  "start": 880.8,
+  "duration": 5.8,
+  "text": "teste YouTube #\" e o número do grupo."
+ },
+ {
+  "start": 884.36,
+  "duration": 4.0,
+  "text": "Pronto. Então, já vou criar aqui três"
+ },
+ {
+  "start": 886.6,
+  "duration": 4.48,
+  "text": "grupos já também."
+ },
+ {
+  "start": 888.36,
+  "duration": 4.84,
+  "text": "Aqui, ó, deu um um um problema aqui ao"
+ },
+ {
+  "start": 891.08,
+  "duration": 4.96,
+  "text": "criar os grupos, que ele falou que ah eu"
+ },
+ {
+  "start": 893.2,
+  "duration": 5.16,
+  "text": "preciso pelo menos de uma outra pessoa"
+ },
+ {
+  "start": 896.04,
+  "duration": 3.56,
+  "text": "para criar o grupo. Isso realmente é uma"
+ },
+ {
+  "start": 898.36,
+  "duration": 2.52,
+  "text": "restrição, né? Até se eu for criar um"
+ },
+ {
+  "start": 899.6,
+  "duration": 3.0,
+  "text": "grupo manualmente aqui, eu tenho que"
+ },
+ {
+  "start": 900.88,
+  "duration": 3.72,
+  "text": "adicionar uma pessoa. Então, vou colocar"
+ },
+ {
+  "start": 902.6,
+  "duration": 3.64,
+  "text": "aqui, ó, o número um outro número que eu"
+ },
+ {
+  "start": 904.6,
+  "duration": 5.8,
+  "text": "tenho para ele adicionar essa pessoa"
+ },
+ {
+  "start": 906.24,
+  "duration": 5.72,
+  "text": "nesses grupos e pode colocar de admin."
+ },
+ {
+  "start": 910.4,
+  "duration": 3.439,
+  "text": "Eu já vou dizer para ele já botar como"
+ },
+ {
+  "start": 911.96,
+  "duration": 5.68,
+  "text": "admin essa pessoa também. Ele criou aqui"
+ },
+ {
+  "start": 913.839,
+  "duration": 5.881,
+  "text": "os grupos, criou e já colocou a outra"
+ },
+ {
+  "start": 917.64,
+  "duration": 4.92,
+  "text": "conta lá como admin também, então olha"
+ },
+ {
+  "start": 919.72,
+  "duration": 4.76,
+  "text": "só, ela tá aqui como admin. Só teve um"
+ },
+ {
+  "start": 922.56,
+  "duration": 3.52,
+  "text": "dois detalhes aqui que eu acredito que"
+ },
+ {
+  "start": 924.48,
+  "duration": 3.4,
+  "text": "seja por causa do Haiku, né? Se for um"
+ },
+ {
+  "start": 926.08,
+  "duration": 3.92,
+  "text": "Sonet isso aqui já não vai acontecer."
+ },
+ {
+  "start": 927.88,
+  "duration": 5.6,
+  "text": "Coisa simples. É, o grupo um e o grupo"
+ },
+ {
+  "start": 930.0,
+  "duration": 5.52,
+  "text": "dois, ele criou duas vezes. Ou seja, ele"
+ },
+ {
+  "start": 933.48,
+  "duration": 4.16,
+  "text": "fez uma e depois fez outra vez. E em"
+ },
+ {
+  "start": 935.52,
+  "duration": 4.16,
+  "text": "lançamento, ao invés de c cedilha, ele"
+ },
+ {
+  "start": 937.64,
+  "duration": 3.8,
+  "text": "colocou um ponto de interrogação porque"
+ },
+ {
+  "start": 939.68,
+  "duration": 3.8,
+  "text": "deu algum problema na hora de fazer. Ou"
+ },
+ {
+  "start": 941.44,
+  "duration": 3.96,
+  "text": "seja, essas duas coisas aqui com o Sonet"
+ },
+ {
+  "start": 943.48,
+  "duration": 3.84,
+  "text": "seria resolvido. Inclusive eu fazer isso"
+ },
+ {
+  "start": 945.4,
+  "duration": 3.92,
+  "text": "aqui. Eu já vou mudar aqui para o o"
+ },
+ {
+  "start": 947.32,
+  "duration": 4.52,
+  "text": "Sonet e vou explicar esse problema. Você"
+ },
+ {
+  "start": 949.32,
+  "duration": 5.04,
+  "text": "acabou duplicando esses grupos que você"
+ },
+ {
+  "start": 951.84,
+  "duration": 4.72,
+  "text": "criou. Tu criou duas vezes, tá? E o"
+ },
+ {
+  "start": 954.36,
+  "duration": 4.76,
+  "text": "título do grupo contém um ponto de"
+ },
+ {
+  "start": 956.56,
+  "duration": 5.12,
+  "text": "interrogação no lugar do cedilha."
+ },
+ {
+  "start": 959.12,
+  "duration": 4.32,
+  "text": "Corrige isso aí. Aí aqui, ó, coloca aqui"
+ },
+ {
+  "start": 961.68,
+  "duration": 3.96,
+  "text": "o c cedilha."
+ },
+ {
+  "start": 963.44,
+  "duration": 5.32,
+  "text": "Excelente. Ele já corrigiu aqui os nomes"
+ },
+ {
+  "start": 965.64,
+  "duration": 5.4,
+  "text": "e também já removeu os duplicados."
+ },
+ {
+  "start": 968.76,
+  "duration": 4.32,
+  "text": "Então, perfeito. Já vindo aqui para a"
+ },
+ {
+  "start": 971.04,
+  "duration": 5.2,
+  "text": "parte da planilha, olha só. Ele já gerou"
+ },
+ {
+  "start": 973.08,
+  "duration": 4.88,
+  "text": "aqui também uma planilha Excel, tá?"
+ },
+ {
+  "start": 976.24,
+  "duration": 3.84,
+  "text": "Então, não vou abrir aqui não, mas tá"
+ },
+ {
+  "start": 977.96,
+  "duration": 4.68,
+  "text": "aqui o arquivo. Ele gerou aqui em CSV e"
+ },
+ {
+  "start": 980.08,
+  "duration": 4.08,
+  "text": "gerou em XLSX também, que eu posso subir"
+ },
+ {
+  "start": 982.64,
+  "duration": 3.56,
+  "text": "ele no Google Sheets e já ver e fazer"
+ },
+ {
+  "start": 984.16,
+  "duration": 3.12,
+  "text": "outras coisas a partir disso aqui."
+ },
+ {
+  "start": 986.2,
+  "duration": 3.08,
+  "text": "Outra coisa que eu posso estar fazendo"
+ },
+ {
+  "start": 987.28,
+  "duration": 3.68,
+  "text": "também é disparar mensagem em massa para"
+ },
+ {
+  "start": 989.28,
+  "duration": 3.559,
+  "text": "esses grupos marcando todo mundo. Aqui a"
+ },
+ {
+  "start": 990.96,
+  "duration": 3.92,
+  "text": "gente tem que tomar cuidado, tá? Para"
+ },
+ {
+  "start": 992.839,
+  "duration": 4.201,
+  "text": "também não fazer isso de uma só vez com"
+ },
+ {
+  "start": 994.88,
+  "duration": 3.24,
+  "text": "vários grupos com muitas pessoas. Mas eu"
+ },
+ {
+  "start": 997.04,
+  "duration": 3.04,
+  "text": "vou mostrar aqui que também é possível"
+ },
+ {
+  "start": 998.12,
+  "duration": 4.8,
+  "text": "fazer. Eu quero que você envie uma"
+ },
+ {
+  "start": 1000.08,
+  "duration": 6.12,
+  "text": "mensagem para esses três grupos, apenas"
+ },
+ {
+  "start": 1002.92,
+  "duration": 5.52,
+  "text": "esses três grupos, mandando um teste e"
+ },
+ {
+  "start": 1006.2,
+  "duration": 4.52,
+  "text": "marcando todo mundo. E pronto, ó."
+ },
+ {
+  "start": 1008.44,
+  "duration": 5.48,
+  "text": "Mensagem enviada com sucesso. Ele mandou"
+ },
+ {
+  "start": 1010.72,
+  "duration": 4.28,
+  "text": "aqui para o pessoal. Então, então era"
+ },
+ {
+  "start": 1013.92,
+  "duration": 3.76,
+  "text": "isso que eu queria mostrar para vocês"
+ },
+ {
+  "start": 1015.0,
+  "duration": 3.8,
+  "text": "aqui nesse vídeo. Um outro passo que"
+ },
+ {
+  "start": 1017.68,
+  "duration": 2.52,
+  "text": "você pode estar explorando aí, que você"
+ },
+ {
+  "start": 1018.8,
+  "duration": 2.52,
+  "text": "pode ser tema também de um outro vídeo"
+ },
+ {
+  "start": 1020.2,
+  "duration": 3.72,
+  "text": "meu, né? Senão vou fazer aqui senão vai"
+ },
+ {
+  "start": 1021.32,
+  "duration": 5.08,
+  "text": "ficar muito longo. Que já é a parte"
+ },
+ {
+  "start": 1023.92,
+  "duration": 3.96,
+  "text": "é passiva, né? Aqui, já falando, ele"
+ },
+ {
+  "start": 1026.4,
+  "duration": 4.76,
+  "text": "está chamando via API. Então, eu dou um"
+ },
+ {
+  "start": 1027.88,
+  "duration": 5.36,
+  "text": "comando aqui no no Cloud Code e aí ele"
+ },
+ {
+  "start": 1031.16,
+  "duration": 4.08,
+  "text": "usa a API para fazer alguma ação. Mas a"
+ },
+ {
+  "start": 1033.24,
+  "duration": 3.56,
+  "text": "gente pode estar criando scripts que que"
+ },
+ {
+  "start": 1035.24,
+  "duration": 3.92,
+  "text": "online 24 horas por dia e que recebem"
+ },
+ {
+  "start": 1036.8,
+  "duration": 3.84,
+  "text": "webhooks, ou seja, ah, o cara entrou num"
+ },
+ {
+  "start": 1039.16,
+  "duration": 3.08,
+  "text": "grupo, aí tu vai lá e manda uma mensagem"
+ },
+ {
+  "start": 1040.64,
+  "duration": 3.48,
+  "text": "no privado da pessoa dando boas-vindas,"
+ },
+ {
+  "start": 1042.24,
+  "duration": 3.64,
+  "text": "é um exemplo, tá? Então, dá para fazer"
+ },
+ {
+  "start": 1044.12,
+  "duration": 3.44,
+  "text": "isso também. Pode ser tema para outro"
+ },
+ {
+  "start": 1045.88,
+  "duration": 3.44,
+  "text": "vídeo, se vocês tiverem interesse, deixa"
+ },
+ {
+  "start": 1047.56,
+  "duration": 3.8,
+  "text": "nos comentários aí. Eu recomendo que"
+ },
+ {
+  "start": 1049.32,
+  "duration": 3.84,
+  "text": "vocês assistam também esse vídeo que eu"
+ },
+ {
+  "start": 1051.36,
+  "duration": 3.88,
+  "text": "ensino vocês a estarem criando um"
+ },
+ {
+  "start": 1053.16,
+  "duration": 4.36,
+  "text": "disparador de mensagens usando o Cloud"
+ },
+ {
+  "start": 1055.24,
+  "duration": 2.28,
+  "text": "Code."
+ }
+]

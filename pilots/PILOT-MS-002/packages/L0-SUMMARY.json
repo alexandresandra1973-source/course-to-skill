@@ -1,0 +1,32 @@
+{
+ "MS002-SRC-A": {
+  "source_id": "MS002-SRC-A",
+  "units": 1125,
+  "anchors": 1125,
+  "evidence": 1125,
+  "slices": 19,
+  "chars": 425602,
+  "coverage_segments": 11250,
+  "total_segments": 11250
+ },
+ "MS002-SRC-B": {
+  "source_id": "MS002-SRC-B",
+  "units": 122,
+  "anchors": 122,
+  "evidence": 122,
+  "slices": 3,
+  "chars": 18212,
+  "coverage_segments": 488,
+  "total_segments": 488
+ },
+ "MS002-SRC-C": {
+  "source_id": "MS002-SRC-C",
+  "units": 98,
+  "anchors": 98,
+  "evidence": 98,
+  "slices": 3,
+  "chars": 14667,
+  "coverage_segments": 389,
+  "total_segments": 389
+ }
+}

@@ -1,0 +1,135 @@
+[
+ {
+  "slice_id": "SL-A-01",
+  "n_units": 60,
+  "start_s": 0.0,
+  "end_s": 1134.64,
+  "chars": 22976
+ },
+ {
+  "slice_id": "SL-A-02",
+  "n_units": 60,
+  "start_s": 1132.799,
+  "end_s": 2286.16,
+  "chars": 22872
+ },
+ {
+  "slice_id": "SL-A-03",
+  "n_units": 60,
+  "start_s": 2284.56,
+  "end_s": 3425.92,
+  "chars": 22760
+ },
+ {
+  "slice_id": "SL-A-04",
+  "n_units": 60,
+  "start_s": 3424.16,
+  "end_s": 4625.36,
+  "chars": 22847
+ },
+ {
+  "slice_id": "SL-A-05",
+  "n_units": 60,
+  "start_s": 4623.12,
+  "end_s": 5742.56,
+  "chars": 22883
+ },
+ {
+  "slice_id": "SL-A-06",
+  "n_units": 60,
+  "start_s": 5740.48,
+  "end_s": 6874.4,
+  "chars": 22797
+ },
+ {
+  "slice_id": "SL-A-07",
+  "n_units": 60,
+  "start_s": 6872.719,
+  "end_s": 8081.44,
+  "chars": 22583
+ },
+ {
+  "slice_id": "SL-A-08",
+  "n_units": 60,
+  "start_s": 8078.239,
+  "end_s": 9242.319,
+  "chars": 22975
+ },
+ {
+  "slice_id": "SL-A-09",
+  "n_units": 60,
+  "start_s": 9240.96,
+  "end_s": 10383.439,
+  "chars": 22666
+ },
+ {
+  "slice_id": "SL-A-10",
+  "n_units": 60,
+  "start_s": 10382.0,
+  "end_s": 11528.399,
+  "chars": 22274
+ },
+ {
+  "slice_id": "SL-A-11",
+  "n_units": 60,
+  "start_s": 11526.399,
+  "end_s": 12647.04,
+  "chars": 22992
+ },
+ {
+  "slice_id": "SL-A-12",
+  "n_units": 60,
+  "start_s": 12644.8,
+  "end_s": 13797.92,
+  "chars": 22741
+ },
+ {
+  "slice_id": "SL-A-13",
+  "n_units": 60,
+  "start_s": 13795.6,
+  "end_s": 14986.399,
+  "chars": 22691
+ },
+ {
+  "slice_id": "SL-A-14",
+  "n_units": 60,
+  "start_s": 14985.199,
+  "end_s": 16183.76,
+  "chars": 22314
+ },
+ {
+  "slice_id": "SL-A-15",
+  "n_units": 60,
+  "start_s": 16181.92,
+  "end_s": 17330.32,
+  "chars": 22688
+ },
+ {
+  "slice_id": "SL-A-16",
+  "n_units": 60,
+  "start_s": 17327.44,
+  "end_s": 18529.6,
+  "chars": 22734
+ },
+ {
+  "slice_id": "SL-A-17",
+  "n_units": 60,
+  "start_s": 18527.12,
+  "end_s": 19711.52,
+  "chars": 22604
+ },
+ {
+  "slice_id": "SL-A-18",
+  "n_units": 60,
+  "start_s": 19710.08,
+  "end_s": 20932.958,
+  "chars": 22212
+ },
+ {
+  "slice_id": "SL-A-19",
+  "n_units": 45,
+  "start_s": 20931.04,
+  "end_s": 21770.878,
+  "chars": 16993
+ }
+]

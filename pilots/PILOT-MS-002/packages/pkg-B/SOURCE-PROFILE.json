@@ -1,0 +1,25 @@
+{
+ "authority": "Anderson Adelino | IA e Automações",
+ "canonical_url": "https://www.youtube.com/watch?v=dtAoZYMEzcM",
+ "caption_type": "PLATFORM_AUTO_CAPTION",
+ "channel_id": "UCI5WcISxqiFfoh4mse1s-HA",
+ "independence_decision_record": "DR-MS-002-INDEP-001",
+ "language": "pt",
+ "limitations": [
+  "Legenda automatica da plataforma, nao transcricao humana revisada.",
+  "Sem pontuacao confiavel; fronteiras de frase sao aproximadas.",
+  "Nomes proprios e termos tecnicos podem estar corrompidos pelo ASR (exemplo verificado: em MS002-SRC-B, 'Claude Code' aparece como 'Cloud Code').",
+  "Conteudo visual (tela, codigo, diagramas) NAO esta capturado no texto.",
+  "Nenhuma correcao semantica de ASR foi aplicada; os bytes sao os adquiridos."
+ ],
+ "media_type": "video/youtube",
+ "provenance_chain": [
+  "video -> raw caption artifact -> anchors -> evidence"
+ ],
+ "source_boundary": "video inteiro, cobertura integral",
+ "source_content_hash": "2a6ab098868e0714e5d4bc5cebb8018216d78f0243ee890b2c531516fbda7862",
+ "source_id": "MS002-SRC-B",
+ "source_independence_state": "DECLARED_INDEPENDENT",
+ "text_status": "SOURCE_TEXT_READY_WITH_LIMITATION",
+ "video_id": "dtAoZYMEzcM"
+}

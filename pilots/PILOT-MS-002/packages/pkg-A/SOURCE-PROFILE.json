@@ -1,0 +1,25 @@
+{
+ "authority": "Nick Saraev",
+ "canonical_url": "https://www.youtube.com/watch?v=yulWjh3rq28",
+ "caption_type": "PLATFORM_AUTO_CAPTION",
+ "channel_id": "UCbo-KbSjJDG6JWQ_MTZ_rNA",
+ "independence_decision_record": "DR-MS-002-INDEP-001",
+ "language": "en",
+ "limitations": [
+  "Legenda automatica da plataforma, nao transcricao humana revisada.",
+  "Sem pontuacao confiavel; fronteiras de frase sao aproximadas.",
+  "Nomes proprios e termos tecnicos podem estar corrompidos pelo ASR (exemplo verificado: em MS002-SRC-B, 'Claude Code' aparece como 'Cloud Code').",
+  "Conteudo visual (tela, codigo, diagramas) NAO esta capturado no texto.",
+  "Nenhuma correcao semantica de ASR foi aplicada; os bytes sao os adquiridos."
+ ],
+ "media_type": "video/youtube",
+ "provenance_chain": [
+  "video -> raw caption artifact -> anchors -> evidence"
+ ],
+ "source_boundary": "video inteiro, cobertura integral",
+ "source_content_hash": "2880a4c3996f5abcddbe81a3c8cdf9fee3d57bf30c6f1baeb283b2246a98367e",
+ "source_id": "MS002-SRC-A",
+ "source_independence_state": "DECLARED_INDEPENDENT",
+ "text_status": "SOURCE_TEXT_READY_WITH_LIMITATION",
+ "video_id": "yulWjh3rq28"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ENTAILMENT-JUDGMENT v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "verdicts"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "verdicts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "judgment",
+          "entail_why",
+          "evidence_refs_checked"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "pattern": "^CL-[0-9]{4}$"
+          },
+          "judgment": {
+            "enum": [
+              "ENTAILED",
+              "NOT_ENTAILED",
+              "INDETERMINATE"
+            ]
+          },
+          "entail_why": {
+            "type": "string",
+            "minLength": 10
+          },
+          "evidence_refs_checked": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          }
+        }
+      }
+    }
+  }
+}
