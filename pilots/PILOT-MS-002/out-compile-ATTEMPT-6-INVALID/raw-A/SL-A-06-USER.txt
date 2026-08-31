@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-06
+boundaries: 5740.48s - 6874.4s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+I think. So, we'll stick with overlay. and then maybe do some color RGB static. Cool. So, I I really like this. I mean, I don't know if you guys could tell, but it just adds a tiny bit of additional finesse to it. Um, and then, you know, I'm just going to wait until it finishes with this, and then we can actually generate a thousand. It's also added um the ability to use radial bursts, which is kind of neat. So, you can even see like I don't know, you could add the gradient right over here or something like that. Um, which probably spices it up even more. Still, I think I'm going to keep it simple with just linear. And then I can just like adjust the colors and stuff like that as they will. Uh, nothing super special. Looks like we also now have the ability to change the fonts. So, this is what I wanted the first time. I think they tend to use inter for everything. So, I would I would just want mine to look a little bit different. Basically, we need to do is we just need to wait for this to stand out so it doesn't look like, you know, the rest of this. Um, I don't know. Man rope. Man's such a funny name for a Who comes up with that? Maybe we'll do this. I would say change the letter spacing so it's tight. I don't know. Could be distinctive. Sora, that's a little too big. Bricklage grotesque. I actually really like Red Hat display. I think that's probably the best we could get here. So, I'm actually just going to make it a tiny bit smaller. Maybe I'll add a period at the end of it. Okay. Land your first client in 90 days or it's free. So, we'll just change the letter spacing a little bit. Make it nice and tight. And then now I'm just going to zoom out. And h maybe I'll actually just make everything just a tad bigger. You know, one of my friends once told me that literally like one of the biggest problems with ads is people just can't see them. Okay, zooming out now. You know, people looking at it on their phones. Maybe we'll do even a tiny bit bigger. Cool. That looks pretty nice to me. I like this. Um, cool. So, what I'm going to do now is just export this as JSON. Copy. And then go back here and I'll say, "Great. I really like this. Now that we've created a format that looks pretty good, uh, I want you to apply these settings and then I just want you to generate like 50 different ads for me. uh all with different CTAs, all with different looks and and so on and so forth. What I'll do is I'll just pick the best ones. Then I want you to turn this into an artifact and a reusable resource. So anybody on my team can just quickly jump in and then generate these ads at scale. Uh eventually we'll scale it up and then make it a little bit different where uh you know, we have the ability to change which ads we want to generate as well. But yeah, for now this is this is pretty good. First generate me 50 so I can quickly look through and then pick and then do work on generating the artifact afterwards. Cool. So, as you guys can see, we are slowly alleviating bottlenecks and we're making an internal tool to build these sorts of artifacts in just a few minutes. Um, really hasn't taken me that long to do. I'm just going to cut to, you know, when we actually have it. And, uh, yeah, let's take a look. Now, under the hood, what it's doing is it's actually creating a script to do it for us. Like, we've, um, used intelligence, okay, this really flexible sort of intelligence to, you know, create a script that is now multiplying and iterating through all the different procedural things we could do. Um, so you know, I hope you guys know like what this has done is it's actually gone through and then already generated all of these things. It's now just going to iterate through all of them. So we can take a look at what that looks like um now because it's gone through and done it. And I'm just going to take a look at it now. Cool. Taking a look here. You can see we've now generated uh something like 50 in total. It's even then kind of given me some information on the angles and stuff like that. So land your first AI client 90 days or it's free. Add AI services. Get 21k in tools free. I'm in your inbox every day until you land a client. Your first day a client guaranteed in 90 days. I like this one. Sounds pretty cool. So, you know, I could just note like I want to keep four for instance. Daily coaching day one 05. Okay. So, we're starting to get a little bit more impressive here with the various gradients and and looks and stuff. Um, I am finding that we should probably vary like I think we should vary the angle of whatever is going on. So, we're not doing that right now. Um, I think it's probably just not actually doing this with uh I don't know its settings. Like it's not actually varying the angle. So, I'm just going to go back. Going to hold command D. This looks great. You should also be varying the angle of that cool background gradient thing so that it doesn't all look vertical. Right now, the vast majority of it looks vertical. Also, ideally, we'd have a quick and easy way for me just to select all the winners and then download them, too. So, hopefully that gives it some more context. Um, but yeah, I mean, it did did a pretty good job. Okay, so what have we done now? We've basically built like a procedural ad generator just based off of a scooped template if you think about it. Um, and you know, the idea is not that you just build systems that scoop other people's templates and then just like duplicate the hell out of them. Obviously, the idea is that you get inspired by winning performers um either that your own team has created or that you have run in the past that do quite well and then you kind of scoop your own work, right? And then you just generate variants of that really really quickly. You know, I think these variants are pretty neat, but obviously there's only so much we could do with procedural looks, right? We can only do so many things just by varying uh I don't know, changing little procedural variables in the background with color and angle and stuff like that. Even if we fixed the angle and we made that look a little bit better. Obviously, there's only so much we could do. Uh so what I want to do next is I want to take this from a like procedural image generator and then I want to turn it into an AI based image generator flow where instead of us just using um you know like this sort of gradient background or whatever we're actually using an AI model to generate imagery and maybe we combine it with our procedural generator to get the best of both worlds and also keep cost pretty low. And then after that, what I want to do is show you guys how you guys could go one step further and you could make video ads with, you know, AI. Have AI orchestrate all of that. And then, um, now, you know, your creative, while still costing money, does not cost, I don't know, let's say $500 per video ad that you're testing. Maybe you can get it down to $2 per video ad that you're testing. In doing so, test 10x as many, 100x as many video ads and then have the market actually tell you which ones are the best. Because I find in general that tends to be the approach these days. You don't really just want um you know to like spend a bunch of time and energy on your opinionated idea about what performs the best. You know the cost of production is now so cheap as you guys could see here that it makes sense to build systems to produce a lot and then just have the market actually select things for you. Okay. But first I just want to make sure that we do have a repeatable process for this. Okay. And now we have what looks to be um a promptbased way of doing this. And what we can do now is we can also select maybe the ones that we like. Obviously I'm just doing this with like two formats. Imagine if you had 50 and afterwards it'll actually download them all onto your computer. So, for instance, I've now downloaded all of these which hopefully you guys could see are now pretty straightforward and easy to like I don't know upload to uh Google uh Facebook ads or whatever ad library manager that you were using. Um but I I just want to turn this into a skill really quick uh before we proceed with the next step and then show you guys how also to loop it. And then we can also have like cloud routines do this for us too. So, you know, now that we've basically accomplished the um prompt done, would you run me through the skill? Well, first thing is if I go maker school ads, you can actually see it um now populating down here. So, no longer do I need to manually do this. You know what I can do is now next time I can just write maker school uh ads. But if we read the skill.md, this is the file that it actually went ahead and generated for us based off of my conversation with it. So, you know, I prompted it back and forth. I figured out a prompt that works and then I said, "Hey, I want you to consolidate this into a skill, right?" So, it went through and it did. So, generate stripe style minimalistic ad creative with an organic gradient header and bold headline plus CTA for Maker School, Nick's AI automation and coaching program. Use this whenever anyone asks to create ad creative, add variants, add copy with visuals, or run a creative pipeline or ad batch. And you can see that, you know, we have a bunch of layers to this. We even have the scripts involved and so on and so forth. So, it'll go through and generate copy. You know, it it's doing quite a bit here. What we've done is we basically taken our whole prompt, which was a series of distributed messages, and we've codified it as a instruction set that we can now feed in and just have it generate over and over and over again. You know, for instance, what I could do is I could actually just open up a new chat, one that has no context, run maker school ads, and now, you know, this model is now going to run based off of this entire long strip. So, you know, this has zero context of our prior conversation, right? And now it's asking, what do you want to do? Generate a single ad, run a batch, adjust the visual profile? Um, no. I want to run let's Gen 10 ads and then I don't know maybe instead of maker school ads I want to do this for another product but do it for Clarvo. My startup is clarvo.io. Once done send me contact sheet. So now for instance what I've done is and it's asking me about Clarvo. I'll say research it claro.io. Um I'm going to have it research clarvo.io for me. So, it's going to go find a bunch of information about my dialer and stuff like that. And now I can actually spin this and I can use the skill regardless of whatever, you know, product I'm selling. It can go and it can find that information for me, apply it to the skill, and then it can spin it, mutate it in a variety of different ways. So, what it's going to do now is it's actually going to generate a bunch of its own, gone through and just ran all of the different ways you could pitch things. And now I even have a contact sheet, uh, which I'm going to open the folder of, and then double click on to show you guys. So now, you know, I've done this, but I've done it for a different software platform entirely. How cool is that? Uh, and the reason why is because I have that reusable instruction set that I can change very slightly. So this one's cool. Dial leads in seconds. Hit 85% pickup rates. See how you paid for the lead. Talk to them. Start now. Call every lead while they're still warm. Get started. I mean, these are all pretty cool. Um, so you know, based off whatever background gradient I have, you guys could see how you could extend this. How do I turn this from a skill, which is that instruction instruction set that is reusable, into a loop? Well, I mean, this situation is a little bit different because we've already built in like an ad format, uh, for instance. And, you know, that obviously required some manual work, but hopefully you could see if instead of this set of two ad formats that were duplicating, we had 500 ad formats that were duplicating, we could genuinely create some novel things on a daily basis. maybe once every morning, you know, I would come in here and because we're spinning 500 different ad variants times, I don't know, 10 different brands times 10 different formats, 10 different niches or whatever, every time I come in here, you know, I can choose from like one of like 50,000 options. Maybe every morning we could generate, you know, a big batch of them and then have some creative specialist that just goes through, finds the best ones, and then sends them off to the media buy team. Um, that's actually fairly easy to do. So, what I'll do now is I'm going to go back to my main chat, which is general coding session, and I'll say, "This sounds great. I want you to um put this on a loop." The idea is we want to run this every morning at 5:59 a.m. So that when our creative specialist gets in at 6:00 a.m., they could take a look through the ads and then identify and pick the winning um combinations. So now what we're going to do is we're going to turn this skill into said loop. It's going to run unattended every morning and ask me for some scope size. So batch size, why don't we do 20 copy pool, we will generate new copy every time. And you can see, you know, it's also asking me questions here. I'm just going to answer it manually because I think that's easier. Output location delivery. Um, we're going to generate locally. And then old batches. Um, don't clean up for now. Maybe later. Cool. So now what we're doing is we're converting this from that program that we've run into a selfgenerating or running program that does it all without me. Now in the process of converting from a skill to a loop, you know, some things will probably have to change because we're no longer here. If it needs to ask us some questions about, hey, you know, how should I generate the ads? Um, you know, obviously I I I I'm not around to actually like guide it at 5:59 a.m. Well, knowing me, I probably am, but uh we need to give it even more autonomy than it already has. And so what we did is rather than it using a bunch of fixed like pieces of copy that it had created and just ran through and iterated through a script, now it'll actually pass through itself every time when it runs. So it'll actually basically say like, "Hey, here are all the ads that we've generated so far. You I want you to make this one different." and it's going to come through and then make something new, something timebased so that it actually runs and varies on a day-to-day basis. So, it's done a little bit of testing and now it's going to do a real batch render to show me how it works before actually instituting it on my computer uh via a platform called cron which you know actually goes through and then makes it happen. Here it's setting up the daily automation. First, it's going to check a scheduling skill because cloud actually has a built-in skill called schedule which outlines how to do all of this. And now it's going to actually run this. Okay, now it's asking me some final confirmation info like does this run every day or does it do it, you know, Monday to Friday instead. Um, just gave it that information and now it looks like it's good to go. It's going to run tomorrow morning at 559. Uh, just cuz right now we're already at 8:52. But as we know that is not enough, right? We went from prompts to skills, skills to loops, and now we need to go from loops to routines. The major difference between loops and routines being that just because this thing runs at 5:59 a.m., it's still doing so on my computer, meaning I'd need to have like an office computer, you know, uh, at my HQ that somebody signs into every day. That's kind of a pain in the ass. Rather than doing that, what I want to do now is convert this into basically a cloud-based skill that runs autonomously on a schedule and then dumps the information not into a local folder on my computer, but some company accessible folder that anybody in my company can use. The question is obviously, how the heck do I do that? You know, everything up until now has been done entirely locally on my computer, and now I'm considering giving it access to something else. Well, like most things in life, you can just talk to Claude about it. Hey, now that I have done the prompt to skill and skill to loop step, what I want to do is convert this from a loop into a Claude routine. My idea here is rather than generate these locally at 559, what I want to do is generate these in a Google Drive folder and then make that Google Drive folder accessible so that anybody that has the link can look at it. I'm then just going to give the link to a couple of team members so that when they come in at 6 a.m. they'll all have access to the exact same ad pool. Uh, walk me through how to do this step by step and then set it up for me. Um, I know we'll have to give some access to some platforms. That's totally okay. Okay, cool. Now that it has everything that it needs, we're going to convert this again up to uh the highest quality version of this, which is the architecture shift. Obviously, since I'm doing this, it's saying, "Hey, okay, we should probably kill the local one that we're doing and then turn it into something on the internet. Um, does that sound okay with you? How should we do it?" Well, now what I'm going to do is because we're on cloud, I need to figure out the time zone. It's also going to ask about GitHub repos. So, what I'm going to do is I will create a new GitHub repo. um that for people that don't know is just like an online place to put code so that code can run without my involvement. What should we do? New dated subfolder and uh you know anything else here it's asking about like some routine information on one time setup and so on. So I need to give it some information in my Google Drive. I'm going to start with a private GitHub repo. I'm actually already authenticated but if I was not authenticated it would ask me to sign in. Uh as you guys could see it's not very big ask. It would just basically say hey do you want to sign in? I'd then click yes, sign in, and then I'd be in. Uh, if you don't have an account, it would then prompt you to create an account, which is fairly straightforward, not that big of a deal. The cool thing is Cloud will just walk you through most of this now, assuming that you um have a clear defined step. Uh, this is now finding the Clarvo branded variant of the pipeline that I created before in Maker School ads conversation. So, it's just kind of removing that. And now, it's asking me some questions. Yeah, I did this earlier. Not a big deal. can remove. Eventually, it'll ask me about Google Drive. So, what I'm going to do is open cloud.ai/customize connectors in a browser, connect Google Drive, authorize with the right Google account, and then come back here. Um, so in order to do that, I'm just going to go to the top right hand corner, go settings, and underneath connectors, which is all the way down at the bottom. If you guys remember, I'm now going to connect to my Google Drive. So, just click that button. It'll now say, "Hey, can we connect?" So, it'll then open up a browser. I'm then going to give it access to my Google. I'll just say use all uh for now. Okay, now we can go back. So, we should be good. It says connected to Google Drive. So, I'm going to go back here and I'll say connected. And it should actually be able to set up the list and then create the folder. Cool. And it's gone through and actually added that information. And we now even have a folder called Maker School Ads, which I can click and open right over here. Uh worth noting we don't have information in there yet. The reason why is because it's saying the connector can't change sharing settings. So you might have to do this once and uh that's fine. Uh so I'm just going to go to the top right hand corner, go to share, click share, and then change this to anyone with the link can now view the ads. So now I'm going to go back here and then I'll say good to go. So now team members will have access to this folder cuz I'm just going to share it, you know, within my company or whatever. And then it'll actually build the routine that generates the batch. And the last thing we need to do is just give it access to the Google Drive itself. Um, and I say Google Drive itself, not as we haven't already done that because we have done that, but we've done that locally. If you think about it, what it needs to do is it now needs to connect Google Drive in the cloud routine instead of here. And it looks like it also connected the Google Drive connector too, which means we now have the routine created. It even kicked off a test run. It's going to check on the status um you know sort of as time goes on. If you go back to routines in the top lefthand corner you'll see that we now actually have maker school daily ad batch. So I'm going to give that button a quick click and it's actually testing it right now which is why the status is still paused. So as you guys can see very similar um to the skill. It's just sort of done almost in like this I don't know cloud way. Generate today's maker school ad badge and upload it to Google Drive context. This repo is a stripe style ad creative generator for Maker School. It is a tuned visual profile and a batch script that generates ads with procedurally varied copy each run. Okay, there's a bunch of instructions down here where it runs it through how to do the thing. We then have cloud code remote Google Drive as connectors. Then we even have the GitHub repository which again is just like a it's like a Google Drive but for code and that allows it to do things. You can see that we've actually started running it. If I click on that run button at the background, it there's literally like a cloud chat going on with Claude. So, it's doing all of the work, but it's just not doing it on my computer. This is now in the cloud. And anytime you see this little cloud logo, you know that it's not occurring on your computer, which means that it also just doesn't depend on you. So, it's going through this whole process right now. And uh, you know, I'll check back in a minute to confirm that the routine is done. And once it's done, we can move on. Gone through and generated the ad successfully. Now, it's just going to verify the output directory contents before uploading it to the Google Drive. So, it's creating a dated subfolder in Google Drive, which I'm going to take a look at right now. Show you guys what's going on. You can see it's now created that. Okay. Now, if I double click on this, it's in the process of uploading the ads. So, we'll see them pop up as um you know, the advertisements get uploaded. Obviously, these are images,
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0301",
+  "excerpt": "I think. So, we'll stick with overlay. and then maybe do some color RGB static. Cool. So, I I really like this. I mean, I don't know if you guys could tell, but it just adds a tiny bit of additional finesse to it. Um, and then, you know, I'm just going to wait until it finishes with this, and then we can actually generate a thousand. It's also added um the ability to use radial bursts, which"
+ },
+ {
+  "local_id": "EV-0302",
+  "excerpt": "is kind of neat. So, you can even see like I don't know, you could add the gradient right over here or something like that. Um, which probably spices it up even more. Still, I think I'm going to keep it simple with just linear. And then I can just like adjust the colors and stuff like that as they will. Uh, nothing super special. Looks like we also now have the ability to change the"
+ },
+ {
+  "local_id": "EV-0303",
+  "excerpt": "fonts. So, this is what I wanted the first time. I think they tend to use inter for everything. So, I would I would just want mine to look a little bit different. Basically, we need to do is we just need to wait for this to stand out so it doesn't look like, you know, the rest of this. Um, I don't know. Man rope. Man's such a funny name for a Who comes up with that? Maybe"
+ },
+ {
+  "local_id": "EV-0304",
+  "excerpt": "we'll do this. I would say change the letter spacing so it's tight. I don't know. Could be distinctive. Sora, that's a little too big. Bricklage grotesque. I actually really like Red Hat display. I think that's probably the best we could get here. So, I'm actually just going to make it a tiny bit smaller. Maybe I'll add a period at the end of it. Okay. Land your first client in 90 days or"
+ },
+ {
+  "local_id": "EV-0305",
+  "excerpt": "it's free. So, we'll just change the letter spacing a little bit. Make it nice and tight. And then now I'm just going to zoom out. And h maybe I'll actually just make everything just a tad bigger. You know, one of my friends once told me that literally like one of the biggest problems with ads is people just can't see them. Okay, zooming out now. You know, people looking at it on their"
+ },
+ {
+  "local_id": "EV-0306",
+  "excerpt": "phones. Maybe we'll do even a tiny bit bigger. Cool. That looks pretty nice to me. I like this. Um, cool. So, what I'm going to do now is just export this as JSON. Copy. And then go back here and I'll say, \"Great. I really like this. Now that we've created a format that looks pretty good, uh, I want you to apply these settings and then I just want you to generate like 50 different"
+ },
+ {
+  "local_id": "EV-0307",
+  "excerpt": "ads for me. uh all with different CTAs, all with different looks and and so on and so forth. What I'll do is I'll just pick the best ones. Then I want you to turn this into an artifact and a reusable resource. So anybody on my team can just quickly jump in and then generate these ads at scale. Uh eventually we'll scale it up and then make it a little bit different where uh"
+ },
+ {
+  "local_id": "EV-0308",
+  "excerpt": "you know, we have the ability to change which ads we want to generate as well. But yeah, for now this is this is pretty good. First generate me 50 so I can quickly look through and then pick and then do work on generating the artifact afterwards. Cool. So, as you guys can see, we are slowly alleviating bottlenecks and we're making an internal tool to build these"
+ },
+ {
+  "local_id": "EV-0309",
+  "excerpt": "sorts of artifacts in just a few minutes. Um, really hasn't taken me that long to do. I'm just going to cut to, you know, when we actually have it. And, uh, yeah, let's take a look. Now, under the hood, what it's doing is it's actually creating a script to do it for us. Like, we've, um, used intelligence, okay, this really flexible sort of intelligence to, you know, create a"
+ },
+ {
+  "local_id": "EV-0310",
+  "excerpt": "script that is now multiplying and iterating through all the different procedural things we could do. Um, so you know, I hope you guys know like what this has done is it's actually gone through and then already generated all of these things. It's now just going to iterate through all of them. So we can take a look at what that looks like um now because it's gone through and done"
+ },
+ {
+  "local_id": "EV-0311",
+  "excerpt": "it. And I'm just going to take a look at it now. Cool. Taking a look here. You can see we've now generated uh something like 50 in total. It's even then kind of given me some information on the angles and stuff like that. So land your first AI client 90 days or it's free. Add AI services. Get 21k in tools free. I'm in your inbox every day until you land a client. Your first day a client"
+ },
+ {
+  "local_id": "EV-0312",
+  "excerpt": "guaranteed in 90 days. I like this one. Sounds pretty cool. So, you know, I could just note like I want to keep four for instance. Daily coaching day one 05. Okay. So, we're starting to get a little bit more impressive here with the various gradients and and looks and stuff. Um, I am finding that we should probably vary like I think we should vary the angle of whatever is going on."
+ },
+ {
+  "local_id": "EV-0313",
+  "excerpt": "So, we're not doing that right now. Um, I think it's probably just not actually doing this with uh I don't know its settings. Like it's not actually varying the angle. So, I'm just going to go back. Going to hold command D. This looks great. You should also be varying the angle of that cool background gradient thing so that it doesn't all look vertical. Right now, the vast"
+ },
+ {
+  "local_id": "EV-0314",
+  "excerpt": "majority of it looks vertical. Also, ideally, we'd have a quick and easy way for me just to select all the winners and then download them, too. So, hopefully that gives it some more context. Um, but yeah, I mean, it did did a pretty good job. Okay, so what have we done now? We've basically built like a procedural ad generator just based off of a scooped template if you"
+ },
+ {
+  "local_id": "EV-0315",
+  "excerpt": "think about it. Um, and you know, the idea is not that you just build systems that scoop other people's templates and then just like duplicate the hell out of them. Obviously, the idea is that you get inspired by winning performers um either that your own team has created or that you have run in the past that do quite well and then you kind of scoop your own work, right? And then you just"
+ },
+ {
+  "local_id": "EV-0316",
+  "excerpt": "generate variants of that really really quickly. You know, I think these variants are pretty neat, but obviously there's only so much we could do with procedural looks, right? We can only do so many things just by varying uh I don't know, changing little procedural variables in the background with color and angle and stuff like that. Even if we fixed the angle and we made that look"
+ },
+ {
+  "local_id": "EV-0317",
+  "excerpt": "a little bit better. Obviously, there's only so much we could do. Uh so what I want to do next is I want to take this from a like procedural image generator and then I want to turn it into an AI based image generator flow where instead of us just using um you know like this sort of gradient background or whatever we're actually using an AI model to generate imagery and maybe we combine it"
+ },
+ {
+  "local_id": "EV-0318",
+  "excerpt": "with our procedural generator to get the best of both worlds and also keep cost pretty low. And then after that, what I want to do is show you guys how you guys could go one step further and you could make video ads with, you know, AI. Have AI orchestrate all of that. And then, um, now, you know, your creative, while still costing money, does not cost, I don't know, let's say $500 per video ad"
+ },
+ {
+  "local_id": "EV-0319",
+  "excerpt": "that you're testing. Maybe you can get it down to $2 per video ad that you're testing. In doing so, test 10x as many, 100x as many video ads and then have the market actually tell you which ones are the best. Because I find in general that tends to be the approach these days. You don't really just want um you know to like spend a bunch of time and energy on your opinionated idea about what"
+ },
+ {
+  "local_id": "EV-0320",
+  "excerpt": "performs the best. You know the cost of production is now so cheap as you guys could see here that it makes sense to build systems to produce a lot and then just have the market actually select things for you. Okay. But first I just want to make sure that we do have a repeatable process for this. Okay. And now we have what looks to be um a promptbased way of doing this. And what"
+ },
+ {
+  "local_id": "EV-0321",
+  "excerpt": "we can do now is we can also select maybe the ones that we like. Obviously I'm just doing this with like two formats. Imagine if you had 50 and afterwards it'll actually download them all onto your computer. So, for instance, I've now downloaded all of these which hopefully you guys could see are now pretty straightforward and easy to like I don't know upload to uh Google"
+ },
+ {
+  "local_id": "EV-0322",
+  "excerpt": "uh Facebook ads or whatever ad library manager that you were using. Um but I I just want to turn this into a skill really quick uh before we proceed with the next step and then show you guys how also to loop it. And then we can also have like cloud routines do this for us too. So, you know, now that we've basically accomplished the um prompt done, would you run me through the"
+ },
+ {
+  "local_id": "EV-0323",
+  "excerpt": "skill? Well, first thing is if I go maker school ads, you can actually see it um now populating down here. So, no longer do I need to manually do this. You know what I can do is now next time I can just write maker school uh ads. But if we read the skill.md, this is the file that it actually went ahead and generated for us based off of my conversation with it. So, you know, I"
+ },
+ {
+  "local_id": "EV-0324",
+  "excerpt": "prompted it back and forth. I figured out a prompt that works and then I said, \"Hey, I want you to consolidate this into a skill, right?\" So, it went through and it did. So, generate stripe style minimalistic ad creative with an organic gradient header and bold headline plus CTA for Maker School, Nick's AI automation and coaching program. Use this whenever anyone asks"
+ },
+ {
+  "local_id": "EV-0325",
+  "excerpt": "to create ad creative, add variants, add copy with visuals, or run a creative pipeline or ad batch. And you can see that, you know, we have a bunch of layers to this. We even have the scripts involved and so on and so forth. So, it'll go through and generate copy. You know, it it's doing quite a bit here. What we've done is we basically taken our whole prompt, which was a series of"
+ },
+ {
+  "local_id": "EV-0326",
+  "excerpt": "distributed messages, and we've codified it as a instruction set that we can now feed in and just have it generate over and over and over again. You know, for instance, what I could do is I could actually just open up a new chat, one that has no context, run maker school ads, and now, you know, this model is now going to run based off of this entire long strip. So, you know, this"
+ },
+ {
+  "local_id": "EV-0327",
+  "excerpt": "has zero context of our prior conversation, right? And now it's asking, what do you want to do? Generate a single ad, run a batch, adjust the visual profile? Um, no. I want to run let's Gen 10 ads and then I don't know maybe instead of maker school ads I want to do this for another product but do it for Clarvo. My startup is clarvo.io. Once done send me contact sheet. So now"
+ },
+ {
+  "local_id": "EV-0328",
+  "excerpt": "for instance what I've done is and it's asking me about Clarvo. I'll say research it claro.io. Um I'm going to have it research clarvo.io for me. So, it's going to go find a bunch of information about my dialer and stuff like that. And now I can actually spin this and I can use the skill regardless of whatever, you know, product I'm selling. It can go and it"
+ },
+ {
+  "local_id": "EV-0329",
+  "excerpt": "can find that information for me, apply it to the skill, and then it can spin it, mutate it in a variety of different ways. So, what it's going to do now is it's actually going to generate a bunch of its own, gone through and just ran all of the different ways you could pitch things. And now I even have a contact sheet, uh, which I'm going to open the folder of, and then double"
+ },
+ {
+  "local_id": "EV-0330",
+  "excerpt": "click on to show you guys. So now, you know, I've done this, but I've done it for a different software platform entirely. How cool is that? Uh, and the reason why is because I have that reusable instruction set that I can change very slightly. So this one's cool. Dial leads in seconds. Hit 85% pickup rates. See how you paid for the lead. Talk to them. Start now. Call"
+ },
+ {
+  "local_id": "EV-0331",
+  "excerpt": "every lead while they're still warm. Get started. I mean, these are all pretty cool. Um, so you know, based off whatever background gradient I have, you guys could see how you could extend this. How do I turn this from a skill, which is that instruction instruction set that is reusable, into a loop? Well, I mean, this situation is a little bit different"
+ },
+ {
+  "local_id": "EV-0332",
+  "excerpt": "because we've already built in like an ad format, uh, for instance. And, you know, that obviously required some manual work, but hopefully you could see if instead of this set of two ad formats that were duplicating, we had 500 ad formats that were duplicating, we could genuinely create some novel things on a daily basis. maybe once every morning, you know, I would come in here and"
+ },
+ {
+  "local_id": "EV-0333",
+  "excerpt": "because we're spinning 500 different ad variants times, I don't know, 10 different brands times 10 different formats, 10 different niches or whatever, every time I come in here, you know, I can choose from like one of like 50,000 options. Maybe every morning we could generate, you know, a big batch of them and then have some creative specialist that just goes through, finds"
+ },
+ {
+  "local_id": "EV-0334",
+  "excerpt": "the best ones, and then sends them off to the media buy team. Um, that's actually fairly easy to do. So, what I'll do now is I'm going to go back to my main chat, which is general coding session, and I'll say, \"This sounds great. I want you to um put this on a loop.\" The idea is we want to run this every morning at 5:59 a.m. So that when our creative specialist gets in at 6:00"
+ },
+ {
+  "local_id": "EV-0335",
+  "excerpt": "a.m., they could take a look through the ads and then identify and pick the winning um combinations. So now what we're going to do is we're going to turn this skill into said loop. It's going to run unattended every morning and ask me for some scope size. So batch size, why don't we do 20 copy pool, we will generate new copy every time. And you can see, you know, it's"
+ },
+ {
+  "local_id": "EV-0336",
+  "excerpt": "also asking me questions here. I'm just going to answer it manually because I think that's easier. Output location delivery. Um, we're going to generate locally. And then old batches. Um, don't clean up for now. Maybe later. Cool. So now what we're doing is we're converting this from that program that we've run into a selfgenerating or running program that does it all without me. Now in the"
+ },
+ {
+  "local_id": "EV-0337",
+  "excerpt": "process of converting from a skill to a loop, you know, some things will probably have to change because we're no longer here. If it needs to ask us some questions about, hey, you know, how should I generate the ads? Um, you know, obviously I I I I'm not around to actually like guide it at 5:59 a.m. Well, knowing me, I probably am, but uh we need to give it even more autonomy"
+ },
+ {
+  "local_id": "EV-0338",
+  "excerpt": "than it already has. And so what we did is rather than it using a bunch of fixed like pieces of copy that it had created and just ran through and iterated through a script, now it'll actually pass through itself every time when it runs. So it'll actually basically say like, \"Hey, here are all the ads that we've generated so far. You I want you to make this one different.\" and it's"
+ },
+ {
+  "local_id": "EV-0339",
+  "excerpt": "going to come through and then make something new, something timebased so that it actually runs and varies on a day-to-day basis. So, it's done a little bit of testing and now it's going to do a real batch render to show me how it works before actually instituting it on my computer uh via a platform called cron which you know actually goes through and then makes it happen. Here"
+ },
+ {
+  "local_id": "EV-0340",
+  "excerpt": "it's setting up the daily automation. First, it's going to check a scheduling skill because cloud actually has a built-in skill called schedule which outlines how to do all of this. And now it's going to actually run this. Okay, now it's asking me some final confirmation info like does this run every day or does it do it, you know, Monday to Friday instead. Um, just gave"
+ },
+ {
+  "local_id": "EV-0341",
+  "excerpt": "it that information and now it looks like it's good to go. It's going to run tomorrow morning at 559. Uh, just cuz right now we're already at 8:52. But as we know that is not enough, right? We went from prompts to skills, skills to loops, and now we need to go from loops to routines. The major difference between loops and routines being that just because this thing runs at 5:59"
+ },
+ {
+  "local_id": "EV-0342",
+  "excerpt": "a.m., it's still doing so on my computer, meaning I'd need to have like an office computer, you know, uh, at my HQ that somebody signs into every day. That's kind of a pain in the ass. Rather than doing that, what I want to do now is convert this into basically a cloud-based skill that runs autonomously on a schedule and then dumps the information not into a local folder on"
+ },
+ {
+  "local_id": "EV-0343",
+  "excerpt": "my computer, but some company accessible folder that anybody in my company can use. The question is obviously, how the heck do I do that? You know, everything up until now has been done entirely locally on my computer, and now I'm considering giving it access to something else. Well, like most things in life, you can just talk to Claude about it."
+ },
+ {
+  "local_id": "EV-0344",
+  "excerpt": "Hey, now that I have done the prompt to skill and skill to loop step, what I want to do is convert this from a loop into a Claude routine. My idea here is rather than generate these locally at 559, what I want to do is generate these in a Google Drive folder and then make that Google Drive folder accessible so that anybody that has the link can look at it. I'm then just going to give the"
+ },
+ {
+  "local_id": "EV-0345",
+  "excerpt": "link to a couple of team members so that when they come in at 6 a.m. they'll all have access to the exact same ad pool. Uh, walk me through how to do this step by step and then set it up for me. Um, I know we'll have to give some access to some platforms. That's totally okay. Okay, cool. Now that it has everything that it needs, we're going to convert this again up to uh the highest quality"
+ },
+ {
+  "local_id": "EV-0346",
+  "excerpt": "version of this, which is the architecture shift. Obviously, since I'm doing this, it's saying, \"Hey, okay, we should probably kill the local one that we're doing and then turn it into something on the internet. Um, does that sound okay with you? How should we do it?\" Well, now what I'm going to do is because we're on cloud, I need to figure out the time zone. It's also going to"
+ },
+ {
+  "local_id": "EV-0347",
+  "excerpt": "ask about GitHub repos. So, what I'm going to do is I will create a new GitHub repo. um that for people that don't know is just like an online place to put code so that code can run without my involvement. What should we do? New dated subfolder and uh you know anything else here it's asking about like some routine information on one time setup and so on. So I need to give it some"
+ },
+ {
+  "local_id": "EV-0348",
+  "excerpt": "information in my Google Drive. I'm going to start with a private GitHub repo. I'm actually already authenticated but if I was not authenticated it would ask me to sign in. Uh as you guys could see it's not very big ask. It would just basically say hey do you want to sign in? I'd then click yes, sign in, and then I'd be in. Uh, if you don't have an account, it would then prompt you to"
+ },
+ {
+  "local_id": "EV-0349",
+  "excerpt": "create an account, which is fairly straightforward, not that big of a deal. The cool thing is Cloud will just walk you through most of this now, assuming that you um have a clear defined step. Uh, this is now finding the Clarvo branded variant of the pipeline that I created before in Maker School ads conversation. So, it's just kind of removing that."
+ },
+ {
+  "local_id": "EV-0350",
+  "excerpt": "And now, it's asking me some questions. Yeah, I did this earlier. Not a big deal. can remove. Eventually, it'll ask me about Google Drive. So, what I'm going to do is open cloud.ai/customize connectors in a browser, connect Google Drive, authorize with the right Google account, and then come back here. Um, so in order to do that, I'm just going to go to the top right hand corner, go"
+ },
+ {
+  "local_id": "EV-0351",
+  "excerpt": "settings, and underneath connectors, which is all the way down at the bottom. If you guys remember, I'm now going to connect to my Google Drive. So, just click that button. It'll now say, \"Hey, can we connect?\" So, it'll then open up a browser. I'm then going to give it access to my Google. I'll just say use all uh for now. Okay, now we can go back. So, we should be good. It says"
+ },
+ {
+  "local_id": "EV-0352",
+  "excerpt": "connected to Google Drive. So, I'm going to go back here and I'll say connected. And it should actually be able to set up the list and then create the folder. Cool. And it's gone through and actually added that information. And we now even have a folder called Maker School Ads, which I can click and open right over here. Uh worth noting we don't have information in there yet. The reason why"
+ },
+ {
+  "local_id": "EV-0353",
+  "excerpt": "is because it's saying the connector can't change sharing settings. So you might have to do this once and uh that's fine. Uh so I'm just going to go to the top right hand corner, go to share, click share, and then change this to anyone with the link can now view the ads. So now I'm going to go back here and then I'll say good to go. So now team members will have access to this"
+ },
+ {
+  "local_id": "EV-0354",
+  "excerpt": "folder cuz I'm just going to share it, you know, within my company or whatever. And then it'll actually build the routine that generates the batch. And the last thing we need to do is just give it access to the Google Drive itself. Um, and I say Google Drive itself, not as we haven't already done that because we have done that, but we've done that locally. If you think"
+ },
+ {
+  "local_id": "EV-0355",
+  "excerpt": "about it, what it needs to do is it now needs to connect Google Drive in the cloud routine instead of here. And it looks like it also connected the Google Drive connector too, which means we now have the routine created. It even kicked off a test run. It's going to check on the status um you know sort of as time goes on. If you go back to routines in the top lefthand corner you'll see that"
+ },
+ {
+  "local_id": "EV-0356",
+  "excerpt": "we now actually have maker school daily ad batch. So I'm going to give that button a quick click and it's actually testing it right now which is why the status is still paused. So as you guys can see very similar um to the skill. It's just sort of done almost in like this I don't know cloud way. Generate today's maker school ad badge and upload it to Google Drive context. This repo is"
+ },
+ {
+  "local_id": "EV-0357",
+  "excerpt": "a stripe style ad creative generator for Maker School. It is a tuned visual profile and a batch script that generates ads with procedurally varied copy each run. Okay, there's a bunch of instructions down here where it runs it through how to do the thing. We then have cloud code remote Google Drive as connectors. Then we even have the GitHub repository which again is just like a"
+ },
+ {
+  "local_id": "EV-0358",
+  "excerpt": "it's like a Google Drive but for code and that allows it to do things. You can see that we've actually started running it. If I click on that run button at the background, it there's literally like a cloud chat going on with Claude. So, it's doing all of the work, but it's just not doing it on my computer. This is now in the cloud. And anytime you see this little cloud logo, you know that"
+ },
+ {
+  "local_id": "EV-0359",
+  "excerpt": "it's not occurring on your computer, which means that it also just doesn't depend on you. So, it's going through this whole process right now. And uh, you know, I'll check back in a minute to confirm that the routine is done. And once it's done, we can move on. Gone through and generated the ad successfully. Now, it's just going to verify the output directory contents"
+ },
+ {
+  "local_id": "EV-0360",
+  "excerpt": "before uploading it to the Google Drive. So, it's creating a dated subfolder in Google Drive, which I'm going to take a look at right now. Show you guys what's going on. You can see it's now created that. Okay. Now, if I double click on this, it's in the process of uploading the ads. So, we'll see them pop up as um you know, the advertisements get uploaded. Obviously, these are images,"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,346 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0001",
+  "claim_text": "No programming experience and no prior AI experience are needed to understand this course.",
+  "evidence": [
+   {
+    "local_id": "EV-0003",
+    "excerpt": "you know, generating large returns in a real functioning business. So, all that to say, you don't need any programming experience. You don't need any prior AI experience to understand all this. I don't have a degree in coding or anything like that. I learned everything I'm about to teach you from free YouTube videos just like this one. We're going to start by looking at a really brief"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0002",
+  "claim_text": "You don't need to jump around; just follow the course as laid out and by the end you'll know everything you need to automate your marketing.",
+  "evidence": [
+   {
+    "local_id": "EV-0004",
+    "excerpt": "outline and then I'm going to walk you through it. And you don't need to jump around. Literally just follow the course as I laid it out and by the end of it you'll know everything you need in order to automate your marketing. Let's get into it. So the course is going to be focused on actionable real implementations. In order to get there, first I'll show you how to download,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0003",
+  "claim_text": "Prompting is the simplest level and Claude routines are the most advanced level; prompting requires you working on your computer whereas a cloud routine is effectively a loop that is scheduled and runs in the cloud without you.",
+  "evidence": [
+   {
+    "local_id": "EV-0006",
+    "excerpt": "to use for that. Then I'll run you guys through the difference between prompts, skills, loops, and cloud routines. And the way we're going to approach the rest of the course is I'm going to be showing you guys how to automate things using Claude uh at each of these four levels. And you can think of prompting as the simplest level, Claude routines as the most advanced level. Prompting requires"
+   },
+   {
+    "local_id": "EV-0007",
+    "excerpt": "you working on your computer whereas cloud routines effect effectively is a loop that is scheduled that runs in the cloud without you. Then we'll actually go and build stuff. So I'm first going to show you guys top of funnel how to automate the generation of creative. You guys will be able to automate ads, creative for organic. We'll be doing this via images, video, even some audio."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0004",
+  "claim_text": "The first step is to create an account by heading over to claude.com and clicking continue with Google or continue with email.",
+  "evidence": [
+   {
+    "local_id": "EV-0012",
+    "excerpt": "businesses, multi-billion dollar enterprises, and so on. Okay? So, you don't need to worry too much about any of this stuff right now. We're going to go step by step. We're going to start slow and by the end of the course as mentioned you'll be able to do everything that I just talked about. The first step we need to do is we need to create an account and the way to do that"
+   },
+   {
+    "local_id": "EV-0013",
+    "excerpt": "is to head over to claude.com. So I'm going to do that first with you guys. claude.com right here. Now in order to create an account all you need to do is click continue with Google or continue with email. The interface may look a little bit different by the time that you guys are looking at it. But what I'll do is I'll just go continue with email and I'm just going to pump in"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0005",
+  "claim_text": "The interface may look a little bit different by the time you are looking at it.",
+  "evidence": [
+   {
+    "local_id": "EV-0013",
+    "excerpt": "is to head over to claude.com. So I'm going to do that first with you guys. claude.com right here. Now in order to create an account all you need to do is click continue with Google or continue with email. The interface may look a little bit different by the time that you guys are looking at it. But what I'll do is I'll just go continue with email and I'm just going to pump in"
+   },
+   {
+    "local_id": "EV-0019",
+    "excerpt": "about that. Uh, but if you want to do things with this, you will most definitely have to eventually pay. Okay. Okay. So, monthly right up here. I'm going to go down to payment method to actually put in some info. Okay. And I just wrapped that up. Cool. So, now once we're done, it'll automatically take us to the next step. As mentioned, if your interface looks a little bit different,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0006",
+  "claim_text": "During onboarding, choose personal use if it's just you for now, rather than the team/enterprise option.",
+  "evidence": [
+   {
+    "local_id": "EV-0015",
+    "excerpt": "I agree. I consent. And I think I'm not going to subscribe to the promotional emails and notifications. Sorry, Anthropic. Now, we're going to have to do some onboarding questions. So, just for the sake of not doxing myself, I'm just going to put in a bunch of random dates here. We'll go 010190. Makes me squarely millennial. Uh, I'm going to be using this for personal use,"
+   },
+   {
+    "local_id": "EV-0016",
+    "excerpt": "and I'd recommend that you do as well. They're trying a team/enterprise feature, but if it's just you for now, just click personal use. Now, you will have to pay in order to use claude code. Hopefully that's clear. This is a financial transaction. The idea being you invest, in my case, $24 Canadian per month into this. Then you make far more than $24 Canadian a month back in ROI. I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0007",
+  "claim_text": "You will have to pay in order to use Claude Code; Claude can be used for free but the code aspect cannot.",
+  "evidence": [
+   {
+    "local_id": "EV-0016",
+    "excerpt": "and I'd recommend that you do as well. They're trying a team/enterprise feature, but if it's just you for now, just click personal use. Now, you will have to pay in order to use claude code. Hopefully that's clear. This is a financial transaction. The idea being you invest, in my case, $24 Canadian per month into this. Then you make far more than $24 Canadian a month back in ROI. I"
+   },
+   {
+    "local_id": "EV-0017",
+    "excerpt": "can say as somebody that operates a business that does half a million per month. Um, this is by far my number one investment. I probably receive an ROI uh something to the tune of an absurd 10,000% or something like that just off my Cloud Code subscription. Um, you can use Cloud for free. It's just you can't use the code aspect. And as you'll see, the code aspect is very foundational to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0008",
+  "claim_text": "If you don't have the funds, you can just watch the builds in the course, wait until you have the monthly fee, and circle back after watching it end to end.",
+  "evidence": [
+   {
+    "local_id": "EV-0018",
+    "excerpt": "us being able to use Cloud to do really, really high level automation super quickly. So, I'd recommend that you guys do this for sure. But if you don't have the funds, know that you can also just watch me build things in the course. Maybe wait until you have the 28 Canadians a month, let's say, to sign up and then circle back after you watched it end to end. So, don't worry too much"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0009",
+  "claim_text": "After payment, download Claude according to your operating system; the correct download appears automatically based on a browser cookie.",
+  "evidence": [
+   {
+    "local_id": "EV-0019",
+    "excerpt": "about that. Uh, but if you want to do things with this, you will most definitely have to eventually pay. Okay. Okay. So, monthly right up here. I'm going to go down to payment method to actually put in some info. Okay. And I just wrapped that up. Cool. So, now once we're done, it'll automatically take us to the next step. As mentioned, if your interface looks a little bit different,"
+   },
+   {
+    "local_id": "EV-0020",
+    "excerpt": "that's okay. What we do after this is we're going to download it according to our operating system. Now, in my case, my operating system is MacOSS. If you guys couldn't already tell, just based off the way the Windows look and stuff like that. It'll be a little bit different uh if you guys are using Windows, but it'll automatically pop up right over here based off of like a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0010",
+  "claim_text": "Chrome will often automatically block the download; you can go to 'download unverified file' in the top right hand corner to access it.",
+  "evidence": [
+   {
+    "local_id": "EV-0021",
+    "excerpt": "little browser cookie thing. So, I'm going to give this button a quick click. And as you can see, a lot of the time on Chrome, it will automatically block the download. So, what you can do is you can just go to download unverified file in the top right hand corner. Okay? And then you'll actually be able to see it. So, claude 6.d. Okay. And then once you're done with that, all you have to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0011",
+  "claim_text": "On Mac, install by dragging the Claude app into the applications folder; on Windows you go through the installer prompt.",
+  "evidence": [
+   {
+    "local_id": "EV-0022",
+    "excerpt": "do is just drag this little Claude app over to the applications folder. So, I'm doing that. And I just heard a little chime in the back end. That's because it has gone through and actually copied Claude to my applications. That's just how you do things on a Mac. On a Windows, you'll have to go through that whole prompt uh that you guys are probably pretty familiar with. And then"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0012",
+  "claim_text": "After installing, launch Claude, click get started, log in with your email address and enter the verification code sent to that email.",
+  "evidence": [
+   {
+    "local_id": "EV-0023",
+    "excerpt": "once that's done, all you need to do is actually launch Claude. And then we will have opened, you know, the Claude desktop app. So on Mac, all I do that uh in order to do that, all I do is I take this little window. This is called Raycast. Then I just type Claude. You can see I'm actually right over here. Don't pay attention to the rest of the stuff. Once I give that a quick click,"
+   },
+   {
+    "local_id": "EV-0024",
+    "excerpt": "it will then open Claude. And if I go down to the bottom here, it'll say it's an app downloaded from the internet. Are you sure you want to open it? After you're done, it'll then look something like this. And all we have to do is click get started. I'm now going to relog in. So, continuing with my email address here. I'm then going to have to go to my email address and then enter"
+   },
+   {
+    "local_id": "EV-0025",
+    "excerpt": "the verification code, which I will get right over here. When you click sign in, it'll take you back to the app and we should be good to go. Cool. So, I've already created the account to be clear. Um, what it's doing here is it's just double-checking a lot of the stuff. So, I'm just going to click continue. We'll start with my name, Nick. What kind of role we do, I'm just going to say"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0013",
+  "claim_text": "Anthropic is testing many different user interface features and changes them pretty often, so the interface elements are short-lived.",
+  "evidence": [
+   {
+    "local_id": "EV-0026",
+    "excerpt": "product management. I'm then going to say I have my own topic. And now we are in. So, first of all, there's a lot going on on this interface and you'll see so many little widgets and buttons and tools and things you can push and pull. Uh, I'm not going to cover every single one because I don't think that would be a very good use of time. And what you'll quickly find is Anthropic,"
+   },
+   {
+    "local_id": "EV-0027",
+    "excerpt": "the parent company of Cloud, is testing a lot of different user interface features and they're trying to collect a lot of data on what people actually like. So they'll change these up pretty often and they're pretty short-lived. But what I will do is show you a couple of them. Um top lefthand corner. Okay, we have obviously the three little close the window buttons. If you're on a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0014",
+  "claim_text": "There are two products, a Claude home product and a Claude code product; we don't want to use the home product, we want to use the code product.",
+  "evidence": [
+   {
+    "local_id": "EV-0028",
+    "excerpt": "Windows, it'll probably be in the top right hand corner. Then you have a tab open or close button, which is how you open or close the sidebar. Then you have a search chats and projects button which allows you to basically um search through all conversations that you've had to find more or less any info. That's actually pretty useful. Next up you have the home versus code tab. And"
+   },
+   {
+    "local_id": "EV-0029",
+    "excerpt": "so basically there's almost like two products here. There's like a clawed product and then there's like a clawed code product. And so basically what we want to do is we don't want to use the home product, okay, which is simpler to be clear. We want to use the code product. When you jump over to the code product, a lot will change. you know, if it's the first time you've run it, it'll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0015",
+  "claim_text": "An artifact is basically a visual that Claude can create for you, and it can be accessed anytime inside Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0033",
+    "excerpt": "guys didn't know, an artifact is basically a visual that Claude can create for you. And so if you wanted to create a brief visual, what you can do is build a code artifact. Um well, in this case, I just clicked new and it automatically populated this. I want to build a code artifact, a self-contained web page published with the artifact tool. Um make this page about Nick Sar."
+   },
+   {
+    "local_id": "EV-0034",
+    "excerpt": "Okay. Okay. And then I'm going to press enter. And what it will do now is it'll actually go through presumably ask me a couple of questions. And then it's going to design a visual interface for me, an artifact inside of Claude that I can then access anytime I want. So now it's confirming the angle, gathering a couple key facts before designing. And now it's going to go through and get me some"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0016",
+  "claim_text": "Claude suggests an autocomplete that can be accepted by pressing tab, which lets Claude drive your conversation; it is not always the best thing to do and is right maybe 30-40% of the time.",
+  "evidence": [
+   {
+    "local_id": "EV-0035",
+    "excerpt": "questions. So what's this page's job? A personal bio portfolio site. I'm just going to say it's a personal bio portfolio page emphasizing the YouTube channel and automation agency. And what you'll notice just happened there is Claude actually suggested an autocomplete down at the bottom. And so all I had to do when that autocomplete popped up is I just pressed tab and then"
+   },
+   {
+    "local_id": "EV-0036",
+    "excerpt": "it automatically went all the way to the end. This is basically now letting Claude drive your conversation. And it's not always the best thing to do to be clear. Um but it is pretty neat and I would say it knows what I want to do next maybe 30 40% of the time which helps. And you can see it's now coming up with a bunch of uh information based off of publicly available work like"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0017",
+  "claim_text": "When a command requires approval, Claude shows a permission request with three options: deny (1), always allow (2), and allow once (3), with allow once highlighted as the generally suggested answer.",
+  "evidence": [
+   {
+    "local_id": "EV-0037",
+    "excerpt": "leftclick maker school my subscribers where I live and so on and so forth. Not all this is up to date because it's been a while since you know the web pages that hosted all this information um have been created but it's pretty dang solid. It did that in just a few seconds. Okay. Now here we have what's called a request. This is asking to see if I should allow Claude to run this command"
+   },
+   {
+    "local_id": "EV-0038",
+    "excerpt": "because this command requires my approval. And so you can see there are three things that have popped up here. There's a deny button, a one, an always allow button, which is two, or an allow once button, which is three. Generally, it thinks that allow once is the right answer, which is why it's popping up as that little highlighted thing. In my case, I'm just going to go always allow"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0018",
+  "claim_text": "The speaker chose 'always allow' because the task was just building a simple web page and probably not going to delete his computer by accident.",
+  "evidence": [
+   {
+    "local_id": "EV-0038",
+    "excerpt": "because this command requires my approval. And so you can see there are three things that have popped up here. There's a deny button, a one, an always allow button, which is two, or an allow once button, which is three. Generally, it thinks that allow once is the right answer, which is why it's popping up as that little highlighted thing. In my case, I'm just going to go always allow"
+   },
+   {
+    "local_id": "EV-0039",
+    "excerpt": "because this is just building a simple web page. It's probably not going to try and delete my computer by accident. Now, once we've done this, you can see the interface change more. There's this little tab that says creating. If you click on this tab, it'll actually show you guys the commands that it's running under the hood. If you guys feel like supercomputer programming, you want to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0019",
+  "claim_text": "Tokens are a big part of how you are billed at the end of the month and how much usage you have; bigger projects require more tokens, so it is important to have visibility into your token budgets.",
+  "evidence": [
+   {
+    "local_id": "EV-0040",
+    "excerpt": "see what's going on. And you can actually see as well the amount of total time that it's spent working as well as the total number of tokens that it is spent as well. Now, tokens are important to understand because tokens are a big part of how you are build at the end of the month. They're also a big part of how much uh usage you basically have with Claude. The more usage you have"
+   },
+   {
+    "local_id": "EV-0041",
+    "excerpt": "with Claude, the more tokens you can, you know, run through. And typically, the bigger and sexier the project, the more tokens you will require. So, it's important to understand and sort of have visibility into your token budgets, which is why Anthropic does it right here. Now, I'm running this in real time because I want you to actually be able to see everything that is running. Like,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0020",
+  "claim_text": "An artifact is not on the internet by default and is not going to be perfect all the time.",
+  "evidence": [
+   {
+    "local_id": "EV-0043",
+    "excerpt": "least see what a real flow looks like start to finish. Okay, once all of this is done, if I just move my big fat head out of the way, you can see that we now have um, you know, we actually have a web page that we built. Okay, and this web page is the artifact. Now, this isn't on the internet to be clear, and it's not going to be perfect all the time, but I'd say it's pretty good. You"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0021",
+  "claim_text": "Once the artifact is opened in the browser and shared with 'anyone with the link', it can be accessed by people who are not signed in, letting you host web pages with Anthropic and Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0046",
+    "excerpt": "can make a website. Hopefully you guys know that by now. If I move my head back here in the top right hand corner, you can um click this little button here to expand it or open it in a default browser. So now this is actually open in my Chrome and the really cool part about opening it in your Chrome is once you have the artifact online you can actually share it with people. So what"
+   },
+   {
+    "local_id": "EV-0047",
+    "excerpt": "you can do is you can actually share it with people that are in your uh company using a teams or enterprise plan or you can share it with people um that are just on the internet like basic any basically anybody. And so I'm now gone to share anyone with the link. If I go copy here, then I open this up in let's say an incognito tab and then I paste this, you'll see that I'm now accessing"
+   },
+   {
+    "local_id": "EV-0048",
+    "excerpt": "that artifact despite the fact that I'm not even signed in. And so in this way, you can basically host web pages now with anthropic and and cloud. And it's really useful particularly for like dashboards and for managing projects for clients. You know, I do a lot of client work now and a big chunk of my client work these days is actually building like web interfaces and internal tools"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0022",
+  "claim_text": "Artifacts are useful particularly for dashboards and for managing projects for clients, removing the need to host a website.",
+  "evidence": [
+   {
+    "local_id": "EV-0048",
+    "excerpt": "that artifact despite the fact that I'm not even signed in. And so in this way, you can basically host web pages now with anthropic and and cloud. And it's really useful particularly for like dashboards and for managing projects for clients. You know, I do a lot of client work now and a big chunk of my client work these days is actually building like web interfaces and internal tools"
+   },
+   {
+    "local_id": "EV-0049",
+    "excerpt": "for people. Well, Artifacts solve that for me completely. I no longer need to worry about actually hosting a website. I can just whip up a quick artifact and then give somebody the link. So that's that artifacts tab is right here. Okay. Next up, you have the ability to customize. I know the second you click this, it'll look really intimidating and frankly quite terrifying. Uh but this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0023",
+  "claim_text": "Skills are found under the customize button in the skills tab and are almost like programs you can run on knowledge work; adding skills is how you customize your Claude Code instance.",
+  "evidence": [
+   {
+    "local_id": "EV-0050",
+    "excerpt": "customize button is is quite valuable. It'll basically take you all the way down to the skills tab under customize, which is where you can add uh what is probably going to be one of the most important parts of this course. skills which are almost like programs that you can run on knowledge work. So, Enthropic will have created a couple for you assuming you're watching this at least"
+   },
+   {
+    "local_id": "EV-0054",
+    "excerpt": "prompt in to claude which is quite long as you guys can see here. You can actually add a lot of detailed information. Then all the way down at the bottom it'll basically generate a page for you. Okay. So why is this under the customize button? This is under the customize button because this is how you customize your cloud instance. This is how you optim uh customize cloud code."
+   },
+   {
+    "local_id": "EV-0055",
+    "excerpt": "You add skills which are basically domainspecific programs that you can run to do things for you. And so for instance when we do ad creative uh later on in the course when I actually automate that for you using cloud code we will be using like an ad creative skill. I will create one alongside you and that ad creative skill will automate the process of like producing a bunch of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0024",
+  "claim_text": "A skill automates the process of coming up with a prompt and telling a model what to do; invoking it by name (e.g. /morning) pumps a long prompt into Claude which then generates the output.",
+  "evidence": [
+   {
+    "local_id": "EV-0052",
+    "excerpt": "artifact or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief or if they invoke /morning by name. You may be wondering exactly what that means. I'll show you guys in a second. A question about their day, schedule, or calendar is not by itself a request for the brief. So, answer it directly instead. And so what"
+   },
+   {
+    "local_id": "EV-0053",
+    "excerpt": "this is going to do basically is this is going to automate the process of coming up with a prompt and telling a model what to do. Um you know before I said hey make me a website. The website is a one page we're about nixar. Well now what we have is we have a skill which all we need to do in order to actually generate a page is invoke it by going /wmarning. When you do it'll pump this"
+   },
+   {
+    "local_id": "EV-0054",
+    "excerpt": "prompt in to claude which is quite long as you guys can see here. You can actually add a lot of detailed information. Then all the way down at the bottom it'll basically generate a page for you. Okay. So why is this under the customize button? This is under the customize button because this is how you customize your cloud instance. This is how you optim uh customize cloud code."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0025",
+  "claim_text": "The morning skill instructs to use it only when the user explicitly asks to run, see, or set up their morning brief or invokes /morning by name; a question about their day, schedule or calendar is not by itself a request for the brief and should be answered directly instead.",
+  "evidence": [
+   {
+    "local_id": "EV-0051",
+    "excerpt": "sometime in the next month or two uh like morning and uh they'll also have done I don't know setup writing style and skill creator. These are just meta skills to show you how they work but I'm just going to run you through this one here morning to start. Now the idea is this is a skill. This is something you actually have access to. Render the user's morning brief as a styled HTML"
+   },
+   {
+    "local_id": "EV-0052",
+    "excerpt": "artifact or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief or if they invoke /morning by name. You may be wondering exactly what that means. I'll show you guys in a second. A question about their day, schedule, or calendar is not by itself a request for the brief. So, answer it directly instead. And so what"
+   }
+  ]
+ }
+]

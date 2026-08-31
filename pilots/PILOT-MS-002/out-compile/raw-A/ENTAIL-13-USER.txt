@@ -1,0 +1,350 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0301",
+  "claim_text": "The approach is to feed an image of a product plus an image of an influencer and get the influencer to talk about the product, which is actually multiple steps.",
+  "evidence": [
+   {
+    "local_id": "EV-0492",
+    "excerpt": "using some media over here, some user generated content stuff um of somebody talking about a product. And I think what a lot of people don't understand is that you can't just do this in one shot and expect it to work really well. What you need to do is you actually need to like vary it and have multiple different shots. And so what I'm going to do is I'm going to feed it an image of a"
+   },
+   {
+    "local_id": "EV-0493",
+    "excerpt": "product and then I'm also going to feed an image of like an influencer and then I'm going to get the influencer to like talk about the product. But if you think about that that's like that's actually multiple steps. Um so what I'm going to do first is I'm going to go actually not over to video but to image and this allows you to generate things using um image models. So as you can see that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0302",
+  "claim_text": "The first step is to go to image (not video) and generate using image models, referencing the previously generated product image and a UGC style influencer found on Pinterest.",
+  "evidence": [
+   {
+    "local_id": "EV-0493",
+    "excerpt": "product and then I'm also going to feed an image of like an influencer and then I'm going to get the influencer to like talk about the product. But if you think about that that's like that's actually multiple steps. Um so what I'm going to do first is I'm going to go actually not over to video but to image and this allows you to generate things using um image models. So as you can see that"
+   },
+   {
+    "local_id": "EV-0494",
+    "excerpt": "midnight clay thing that I generated is right over here. So, I'm actually going to reference this in an image flow. And then I'm actually going to go and I'm going to find some like UGC style influencer on Pinterest. So, I don't know. I'm just going to go like, as you can see, there's a lot of like UGC style influencers here talking about products and stuff. Um, I don't know. Let's use"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0303",
+  "claim_text": "Most of the time UGC content features a woman demoing a product, because mathematically they found that when women demo products they do a lot better.",
+  "evidence": [
+   {
+    "local_id": "EV-0495",
+    "excerpt": "this one. You know, obviously most of the time, and I I don't want to stress this too much, but most of the time it's like a woman that is demoing a product of some kind. And that's just because mathematically they found that when they have women demo products, they do a lot better. So a lot of these UGC's are going to be um you know images and videos and stuff like that of women. But"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0304",
+  "claim_text": "Auto size is important because it depends on how you are going to generate your videos; for simplicity the presenter goes 1:1 and assumes everything is generated 1:1.",
+  "evidence": [
+   {
+    "local_id": "EV-0496",
+    "excerpt": "anyway, I'm just going to feed in this woman. And then what I want is I actually want to go to uh what do we have? GBT image 2. I don't know. I think we had GBT image somewhere here. So let me find it. There you go. 4K images. And uh we have a bunch of settings here. We can go high, best visual fidelity, 2K, 1K, 4K, auto size, which is important. So this is going to depend on how we how"
+   },
+   {
+    "local_id": "EV-0497",
+    "excerpt": "we're going to generate our videos. For the purposes of simplicity, I'm just going to go one one and assume that we're generating everything one. And then batch size. Batch size is just the total number of gens that I am going to create here with these two images. And so what I want to do first is I want to generate a woman that's kind of like this woman. Okay. Actually, so let me"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0305",
+  "claim_text": "Batch size is the total number of gens created with the two input images.",
+  "evidence": [
+   {
+    "local_id": "EV-0497",
+    "excerpt": "we're going to generate our videos. For the purposes of simplicity, I'm just going to go one one and assume that we're generating everything one. And then batch size. Batch size is just the total number of gens that I am going to create here with these two images. And so what I want to do first is I want to generate a woman that's kind of like this woman. Okay. Actually, so let me"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0306",
+  "claim_text": "The prompt used is to generate a woman that contains all of the features that the reference woman has but is ultimately different (change her hair a little), and to put her indoors instead of outdoors, because she will be used in a product shoot later.",
+  "evidence": [
+   {
+    "local_id": "EV-0497",
+    "excerpt": "we're going to generate our videos. For the purposes of simplicity, I'm just going to go one one and assume that we're generating everything one. And then batch size. Batch size is just the total number of gens that I am going to create here with these two images. And so what I want to do first is I want to generate a woman that's kind of like this woman. Okay. Actually, so let me"
+   },
+   {
+    "local_id": "EV-0498",
+    "excerpt": "just go back. Generate a woman that contains all of the features that this woman has, but is ultimately different. Um I don't know, change her hair a little bit. Uh and then instead of outdoors, put her indoors. Uh the reason for that is I'm going to use her in like a product shoot later. So I want to generate I don't know three options which is going to cost me 21"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0307",
+  "claim_text": "Generating three options costs 21 credits.",
+  "evidence": [
+   {
+    "local_id": "EV-0498",
+    "excerpt": "just go back. Generate a woman that contains all of the features that this woman has, but is ultimately different. Um I don't know, change her hair a little bit. Uh and then instead of outdoors, put her indoors. Uh the reason for that is I'm going to use her in like a product shoot later. So I want to generate I don't know three options which is going to cost me 21"
+   },
+   {
+    "local_id": "EV-0499",
+    "excerpt": "credits. And the workflow is you know we're just going to take this woman who is I don't know if she's real. Maybe she's already an AI generated image or something. She might be. But we're going to take her and then we're going to stick her in a fake environment that I've made and it's going to be indoors and we're going to use this woman who is now fake. It's not like a real woman to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0308",
+  "claim_text": "The workflow is to take the reference woman, put her in a fake indoors environment that was made, and use that now-fake woman to advertise products by turning that into a video; that is a three or four step flow.",
+  "evidence": [
+   {
+    "local_id": "EV-0499",
+    "excerpt": "credits. And the workflow is you know we're just going to take this woman who is I don't know if she's real. Maybe she's already an AI generated image or something. She might be. But we're going to take her and then we're going to stick her in a fake environment that I've made and it's going to be indoors and we're going to use this woman who is now fake. It's not like a real woman to"
+   },
+   {
+    "local_id": "EV-0500",
+    "excerpt": "advertise our products by turning that into a video. So that's sort of the three or fourstep flow. And uh yeah, I always like doing this manually at least once because it's important for you guys to understand how it works manually before you guys move to fully automating it with cloud code. If you guys don't know how to do the process manually, I find a lot of the time you're just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0309",
+  "claim_text": "The presenter always likes doing this manually at least once, because it's important to understand how it works manually before moving to fully automating it with Claude Code; if you don't know the manual process you often misunderstand the different features and options available.",
+  "evidence": [
+   {
+    "local_id": "EV-0500",
+    "excerpt": "advertise our products by turning that into a video. So that's sort of the three or fourstep flow. And uh yeah, I always like doing this manually at least once because it's important for you guys to understand how it works manually before you guys move to fully automating it with cloud code. If you guys don't know how to do the process manually, I find a lot of the time you're just"
+   },
+   {
+    "local_id": "EV-0501",
+    "excerpt": "misunderstanding the the different features and the different options that are available. Uh I generated this in 2K. You could just generate this in 1K, which is just 1024 pixels. Uh, but I find that, you know, if we want really high quality input images to be used for the purposes of video, it's better to, uh, you know, do this with like a high 2K. Um, yeah, and then, you know,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0310",
+  "claim_text": "The presenter generated in 2K rather than 1K (1024 pixels) because if you want really high quality input images to be used for video, it's better to do this with a high 2K.",
+  "evidence": [
+   {
+    "local_id": "EV-0501",
+    "excerpt": "misunderstanding the the different features and the different options that are available. Uh I generated this in 2K. You could just generate this in 1K, which is just 1024 pixels. Uh, but I find that, you know, if we want really high quality input images to be used for the purposes of video, it's better to, uh, you know, do this with like a high 2K. Um, yeah, and then, you know,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0311",
+  "claim_text": "There are several image models to choose from (Higsfield Soul, Higsfield Soul Cinema, Cream 5.0 Pro) and at the time of recording they offer a bunch of free usage on last-gen, cheap-inference models as an advertising play.",
+  "evidence": [
+   {
+    "local_id": "EV-0502",
+    "excerpt": "there's a bunch of different models you could choose here, too. There's Higsfield Soul, Higsfield Soul Cinema, Cream 5.0 Pro. This one's actually pretty good. Um, they're also offering, at least as the time of this recording, a bunch of free usage. So, that's pretty neat. Uh, it's just like an advertising play where they're trying to, you know, make as much money as humanly possible"
+   },
+   {
+    "local_id": "EV-0503",
+    "excerpt": "by incentivizing models that are last gen, pretty cheap inference-wise to run. And it's kind of like a Costco chicken. You come in through the door, buy yourself a Costco chicken, and then you're like, well, I'm at Costco, I might as well buy myself some tomatoes. Yeah, that's their whole idea. This is not occurring instantly because it is quite computationally intensive. We are"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0312",
+  "claim_text": "Generation is not instant because it is quite computationally intensive, using GPT image 2 to generate roughly 2048 x 2048 pixel images.",
+  "evidence": [
+   {
+    "local_id": "EV-0503",
+    "excerpt": "by incentivizing models that are last gen, pretty cheap inference-wise to run. And it's kind of like a Costco chicken. You come in through the door, buy yourself a Costco chicken, and then you're like, well, I'm at Costco, I might as well buy myself some tomatoes. Yeah, that's their whole idea. This is not occurring instantly because it is quite computationally intensive. We are"
+   },
+   {
+    "local_id": "EV-0504",
+    "excerpt": "using GBT image 2 and generating, you know, 20 48 pixel x 20848 pixel images. So, I'm just going to circle back when this is done. Okay. And so, we now have a bunch. Uh, I like probably this one the best. I think it's like it's a little different from the original, right? It's a little different. I mean, like, yeah, the lips are a little bit different. She's wearing the same"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0313",
+  "claim_text": "The chosen generated woman image is used as a reference alongside the product, with a prompt to make the woman hold the product in an environment like a bathroom where it would make sense, being enthusiastic about the product but not overselling it.",
+  "evidence": [
+   {
+    "local_id": "EV-0505",
+    "excerpt": "outfit. So, I'm looking at this one more and like this is obviously an AI image as well. So, we are just putting AI on AI on AI. But, uh, yeah, this is fine. So, I'm just going to download this now. Well, actually, you don't even need to download it to be honest. Uh, and then what I want to do is I want to use this as a reference. So, I'm going to"
+   },
+   {
+    "local_id": "EV-0506",
+    "excerpt": "reference this here. And then over here is going to be my generated woman. Okay. And then what I want is um make it so that the woman is holding my product. Uh maybe in like a bathroom or something like that where it would make sense to put on a midnight clay mask. She should be enthusiastic about using the product. Uh but don't like oversell it. The reason why last time we generated"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0314",
+  "claim_text": "Three variations were generated previously to give a bunch of different options for diversity, but the presenter finds he doesn't really need that diversity because it does a pretty good job, so he one-shotted it this time (again at 2K).",
+  "evidence": [
+   {
+    "local_id": "EV-0506",
+    "excerpt": "reference this here. And then over here is going to be my generated woman. Okay. And then what I want is um make it so that the woman is holding my product. Uh maybe in like a bathroom or something like that where it would make sense to put on a midnight clay mask. She should be enthusiastic about using the product. Uh but don't like oversell it. The reason why last time we generated"
+   },
+   {
+    "local_id": "EV-0507",
+    "excerpt": "three is just because I wanted to provide myself a lot of um and I'm just going to do this 2K again is because I wanted to give myself a bunch of different options just to make sure that like you know we had diversity, but I'm finding that I don't really need that diversity. It does a pretty good job. So, I just one-shoted it and I'm going to see how it looks now when she's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0315",
+  "claim_text": "The presenter gives Claude Code the product image and asks it to generate three scripts similar to what a real influencer would say, pretending the influencer is a young woman who found value in the product, roughly 30 seconds long.",
+  "evidence": [
+   {
+    "local_id": "EV-0509",
+    "excerpt": "to Claude. I'll go to new and then I will give it um a picture of this product and then I'll have it generate me a script for my VSSL. So, just scrolling down here to uh this midnight clay mask. Okay, actually I don't think I have the midnight clay mask set up yet. So, let me go and grab that. We're actually going to go here, download this. So now we've downloaded"
+   },
+   {
+    "local_id": "EV-0510",
+    "excerpt": "it. Go back to Claude Code. Going to go to Finder. And then this midnight clay mask is jumping in here. This is a product that I am about to record a UGC style ad for. I want you to generate me three scripts similar to what a real influencer would say talking about this product. Pretend the influencer is a young woman that's found a lot of value in our midnight clay mask. and then make"
+   },
+   {
+    "local_id": "EV-0511",
+    "excerpt": "it somewhere between 30 seconds or so. Okay, so now uh it's going to read the image and then generate me a bunch of different options. Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay Overnight Mask and I have combo skin that's oily in my T-zone but flaky everywhere else. So"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0316",
+  "claim_text": "The presenter judges the AI-generated script as not really all that good and edits it slightly to produce the final script for the video.",
+  "evidence": [
+   {
+    "local_id": "EV-0512",
+    "excerpt": "most clay masks either dry me out or don't do anything. This one's different cuz you can literally sleep in it. I put it on like a thin layer before bed, wake up, rinse it off, my skin just looks calm, like less redness, my pores look smaller, and it's not stripped at all. So, I mean, like, this is, you know, it's not really all that good. Yeah, I think I'm just going to like edit it"
+   },
+   {
+    "local_id": "EV-0513",
+    "excerpt": "slightly. So, I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the midnight clay overnight mask. I have combo skin that's oily in my T-zone but flake everywhere else. So, most clay zones either dry me out or don't do anything. But, this one changed the game for me. I can literally sleep in it. Or maybe you can literally"
+   },
+   {
+    "local_id": "EV-0514",
+    "excerpt": "sleep in it. You just put on a thin layer before bed like this. Then wake up and rinse it off. Your skin just looks really calm. Way less redness. My pores look smaller and it's not stripped at all. This is going to be my little script for the video. Uh let's go back and see how the gens are looking. Cool. So, she's now holding this, you know, in a in a bathroom supposedly. So, that's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0317",
+  "claim_text": "The generated image of the woman holding the product in a bathroom is then turned into a video.",
+  "evidence": [
+   {
+    "local_id": "EV-0514",
+    "excerpt": "sleep in it. You just put on a thin layer before bed like this. Then wake up and rinse it off. Your skin just looks really calm. Way less redness. My pores look smaller and it's not stripped at all. This is going to be my little script for the video. Uh let's go back and see how the gens are looking. Cool. So, she's now holding this, you know, in a in a bathroom supposedly. So, that's"
+   },
+   {
+    "local_id": "EV-0515",
+    "excerpt": "nice. I'm now going to turn it into a video just like this. Okay. All right. Okay. And what I want to do, there are a variety of different models you could choose for this. Uh, let's see. I think I'm probably going to do the Well, we can actually just go test a bunch of this to be honest. Uh, I'm going to try C dance 2.0 fast, but yeah, I'm just I'm going to test a bunch. So, this is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0318",
+  "claim_text": "There are a variety of video models to choose from and the presenter tests a bunch (C dance 2.0 fast, Cling, Cling Turbo) to see which ones work best.",
+  "evidence": [
+   {
+    "local_id": "EV-0515",
+    "excerpt": "nice. I'm now going to turn it into a video just like this. Okay. All right. Okay. And what I want to do, there are a variety of different models you could choose for this. Uh, let's see. I think I'm probably going to do the Well, we can actually just go test a bunch of this to be honest. Uh, I'm going to try C dance 2.0 fast, but yeah, I'm just I'm going to test a bunch. So, this is"
+   },
+   {
+    "local_id": "EV-0518",
+    "excerpt": "prop. It's actually added to the prompt box. Uh, and then cool. I mean, I I see cling here. I'm just going to try a bunch of different models. We'll see which ones work best. Okay. And now what I'm going to do is I'm going to turn on sound and then I'm just going to generate multiple. So, I'm going to do, you know, generate 10 with cling. What I'm going to do here just so I can test"
+   },
+   {
+    "local_id": "EV-0519",
+    "excerpt": "out a couple of different approaches. So I'll do the same thing with Cling Turbo and then I'm going to do the same thing with Cance 2.0. Okay. And after a little bit of playing around, uh, we now have a couple of different ads. So I'm going to turn this on. Hopefully you guys can hear this. >> Okay. So I need to talk about this because I've been sitting on it for like"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0319",
+  "claim_text": "The video prompt used is 'a woman influencer doing a UGC style ad talking about a product', starting really small.",
+  "evidence": [
+   {
+    "local_id": "EV-0516",
+    "excerpt": "a woman doing, let's say, a woman doing a UGC style. Let's say a woman influencer doing a UGC style ad talking about a product. Okay. And I think just for starters, I'm probably going to make it really small. And there's also a bunch of elements that you can reuse. So, what I'm going to do is I'm just going to upload that media from before. The"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0320",
+  "claim_text": "If you don't upload media as an element, sometimes it will not actually keep the midnight clay mask in the right place; adding the product as a named element with a description gives the video generation access to the product to use as a prop, and it is added to the prompt box.",
+  "evidence": [
+   {
+    "local_id": "EV-0516",
+    "excerpt": "a woman doing, let's say, a woman doing a UGC style. Let's say a woman influencer doing a UGC style ad talking about a product. Okay. And I think just for starters, I'm probably going to make it really small. And there's also a bunch of elements that you can reuse. So, what I'm going to do is I'm just going to upload that media from before. The"
+   },
+   {
+    "local_id": "EV-0517",
+    "excerpt": "reason why is because um if you don't upload media, sometimes it will like not actually keep the midnight clay mask in the right place. So, I'm just going to add this to my element. Here it is. Midnight clay mask. This is a clay mask used for product videography. Okay, so now it now it actually has access to the midnight clay mask for the video. So, we're just going to use this as our"
+   },
+   {
+    "local_id": "EV-0518",
+    "excerpt": "prop. It's actually added to the prompt box. Uh, and then cool. I mean, I I see cling here. I'm just going to try a bunch of different models. We'll see which ones work best. Okay. And now what I'm going to do is I'm going to turn on sound and then I'm just going to generate multiple. So, I'm going to do, you know, generate 10 with cling. What I'm going to do here just so I can test"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0321",
+  "claim_text": "The presenter turns on sound and generates multiple (e.g. generate 10 with Cling), repeating the same thing with Cling Turbo and C dance 2.0 to test a couple of different approaches.",
+  "evidence": [
+   {
+    "local_id": "EV-0518",
+    "excerpt": "prop. It's actually added to the prompt box. Uh, and then cool. I mean, I I see cling here. I'm just going to try a bunch of different models. We'll see which ones work best. Okay. And now what I'm going to do is I'm going to turn on sound and then I'm just going to generate multiple. So, I'm going to do, you know, generate 10 with cling. What I'm going to do here just so I can test"
+   },
+   {
+    "local_id": "EV-0519",
+    "excerpt": "out a couple of different approaches. So I'll do the same thing with Cling Turbo and then I'm going to do the same thing with Cance 2.0. Okay. And after a little bit of playing around, uh, we now have a couple of different ads. So I'm going to turn this on. Hopefully you guys can hear this. >> Okay. So I need to talk about this because I've been sitting on it for like"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0322",
+  "claim_text": "A short generation was made first as a test to make sure audio could actually be heard and didn't seem crazy.",
+  "evidence": [
+   {
+    "local_id": "EV-0520",
+    "excerpt": "2 weeks and I'm mad I didn't try it sooner. This is the midnight. I have combo. >> So as you guys can see, we generated a pretty short one here and I did that just as a test. I wanted to make sure that we could actually hear, you know, audio and it didn't seem super crazy. Um, but suffice to say, you can actually do Yeah, you can do a fair amount with"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0323",
+  "claim_text": "You can expect to spend maybe $10 to $20 doing this initial test round across a variety of models, and the whole idea is that you want a reusable pipeline.",
+  "evidence": [
+   {
+    "local_id": "EV-0521",
+    "excerpt": "this. assuming the woman's moving her mouth. She's like promoing the product. There's even a little zoom in which is kind of neat. Um, so I'm going to try this on a variety of different models and just see what the best one is, at least as the time of this recording. Uh, you can expect to spend maybe like $10 to $20 doing this initial test round. The whole idea is you just want like a"
+   },
+   {
+    "local_id": "EV-0522",
+    "excerpt": "reusable pipeline, right? >> Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay overnight mask. I have combo skin that's oily and >> Okay, so this is good. I mean, I like what we what we had here. This is probably a little bit better than Cling 3.0 Turbo. The issue is obviously the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0324",
+  "claim_text": "Video length is a constraint: the presenter maxes out at around 15 seconds, and Gemini Omni Flash is only 10 seconds, so the script needs to be made shorter to fit.",
+  "evidence": [
+   {
+    "local_id": "EV-0522",
+    "excerpt": "reusable pipeline, right? >> Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay overnight mask. I have combo skin that's oily and >> Okay, so this is good. I mean, I like what we what we had here. This is probably a little bit better than Cling 3.0 Turbo. The issue is obviously the"
+   },
+   {
+    "local_id": "EV-0523",
+    "excerpt": "time here. Um, you know, that's just not enough time to actually do the ad. So, I think what I'm probably going to do is I'm just going to max it out at like 15 seconds. What was the Gemini Omni Flash good for? I think it's only 10 seconds. Yeah, it's only 10 seconds. So, basically, we need to like we need to make this a little bit shorter. Maybe instead it'll just be like you need to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0325",
+  "claim_text": "The presenter times the working script with a word counter: about 146 characters, and decides on roughly 170 characters, or expressed in words, 27 to about 30 words.",
+  "evidence": [
+   {
+    "local_id": "EV-0528",
+    "excerpt": "recommend. Change the game for me. >> Okay, so that one's much better. I think we could probably just rip this ad over and over and over again. Um, so yeah, this is this is good. I think what we need to do is we just need to time this. So, let's check out word counter and then figure out exactly how many words are here. [sighs and gasps] Looks like it's about 146 characters. I think we"
+   },
+   {
+    "local_id": "EV-0529",
+    "excerpt": "could probably go to like 170 characters. So, I think that's what I'll do. I'll say 170 character. Uh, well, why don't we just do words instead? 27 to Yeah, 27 to maybe like 30 words or so. So, I'm going to go back to Claude and I'm just going to voice dump all of this in as the process. Hey, I'm going to give you an image of a product. I then want you to use the"
+   }
+  ]
+ }
+]

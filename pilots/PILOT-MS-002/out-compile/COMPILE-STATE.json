@@ -1,0 +1,548 @@
+{
+ "controls": {
+  "EC": {
+   "EC1": true,
+   "EC2": true,
+   "EC3": true,
+   "EC4": true,
+   "EC5": true,
+   "EC6": true,
+   "EC0_no_invented_ev": true
+  },
+  "JE": {
+   "JE1": true,
+   "JE2": true,
+   "JE3": true,
+   "JE4": true,
+   "JE5": true
+  }
+ },
+ "A": {
+  "source_id": "MS002-SRC-A",
+  "claims_total": 649,
+  "claims_sealed": 642,
+  "entailment_distribution": {
+   "ENTAILED": 642,
+   "NOT_ENTAILED": 6,
+   "CONTRACT_VIOLATION": 1
+  },
+  "candidates_total": 237,
+  "candidates_by_kind": {
+   "rule_candidates": 136,
+   "workflow_candidates": 59,
+   "anti_pattern_candidates": 42
+  },
+  "candidates_eligible": 229,
+  "INVALID_PROVENANCE": 0,
+  "all_claims_have_evidence": true,
+  "all_sealed_are_entailed": true,
+  "duplicate_semantic_keys": 0,
+  "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc"
+ },
+ "B": {
+  "source_id": "MS002-SRC-B",
+  "claims_total": 58,
+  "claims_sealed": 56,
+  "entailment_distribution": {
+   "ENTAILED": 56,
+   "NOT_ENTAILED": 2
+  },
+  "candidates_total": 25,
+  "candidates_by_kind": {
+   "rule_candidates": 15,
+   "workflow_candidates": 9,
+   "anti_pattern_candidates": 1
+  },
+  "candidates_eligible": 23,
+  "INVALID_PROVENANCE": 0,
+  "all_claims_have_evidence": true,
+  "all_sealed_are_entailed": true,
+  "duplicate_semantic_keys": 0,
+  "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889"
+ },
+ "C": {
+  "source_id": "MS002-SRC-C",
+  "claims_total": 66,
+  "claims_sealed": 66,
+  "entailment_distribution": {
+   "ENTAILED": 66
+  },
+  "candidates_total": 19,
+  "candidates_by_kind": {
+   "rule_candidates": 8,
+   "workflow_candidates": 10,
+   "anti_pattern_candidates": 1
+  },
+  "candidates_eligible": 19,
+  "INVALID_PROVENANCE": 0,
+  "all_claims_have_evidence": true,
+  "all_sealed_are_entailed": true,
+  "duplicate_semantic_keys": 0,
+  "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df"
+ },
+ "calls": [
+  {
+   "call_seq": 1,
+   "label": "EC",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 4171,
+    "output_tokens": 1491,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "b8e80f17d27f6df1b5673d56fe3e080fb75762fae1fdef54490dc89bf29dcd15",
+   "output_sha256": "e548ce436b8e1a09bf16e8cd3b1691b510c727d1506ac44c8e143783bfbf7797",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:35:53.432914-03:00",
+   "finished_at": "2026-08-31T11:34:52.761929-03:00",
+   "cost_estimate_usd_list_price": 0.039370499999999996,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 2,
+   "label": "JE",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 2185,
+    "output_tokens": 581,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "84316acfbcc92097316b79c89b412f1ed698cb73887ea9bc0490275a6ce8e35d",
+   "output_sha256": "8a2b9a7f1b04caa1ac8cbe88770f2b5805b70fe3c30f249c43aa08cb2b4a886d",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:34:52.766475-03:00",
+   "finished_at": "2026-08-31T11:35:00.671527-03:00",
+   "cost_estimate_usd_list_price": 0.015627500000000003,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 3,
+   "label": "ENTAIL-25",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10515,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 3310,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "96a74798849fa3491ab3fc2ff78babcd4b9a51c8202f40c6a557803f8934a219",
+   "output_sha256": "b263c5d0649ec5682f28d60c5327c5d8b296ba97e3892022ddcc38dfcfc71b0b",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:35:00.867335-03:00",
+   "finished_at": "2026-08-31T11:35:33.659531-03:00",
+   "cost_estimate_usd_list_price": 0.18858,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 4,
+   "label": "ENTAIL-26",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 9640,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 3005,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "a4376525dfaa90998be6183972991c81c08f0542e12b3aa552340ee187e1d25e",
+   "output_sha256": "c96ccff516b96c7f726bb5d8836614ac4beb79b0a1f4c6bda7d4d2b82d54c89f",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:36:48.487035-03:00",
+   "finished_at": "2026-08-31T11:36:03.163264-03:00",
+   "cost_estimate_usd_list_price": 0.172205,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 5,
+   "label": "SL-B-01",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10828,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 8904,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "6c10e8d30503e476bccbed483ac66436a5da87b992b7a731eb7cd0133fa1f196",
+   "output_sha256": "024b5de3e9824671f616fe5d223f1dd90acbcffa6e459ce3f0a0230e1ef28c93",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:36:03.209354-03:00",
+   "finished_at": "2026-08-31T11:37:21.699028-03:00",
+   "cost_estimate_usd_list_price": 0.3313475,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 6,
+   "label": "SL-B-02",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10766,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 8235,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "73dcfc38c0963a9489853edf239257bda8e79853a5bd20ac4d1161adf0e87dd8",
+   "output_sha256": "5c7ff1e5c4a20b3db544f98a5dbf04a3f2b216528aeb6f36c6ce408a257d8733",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:37:21.705828-03:00",
+   "finished_at": "2026-08-31T11:38:36.684469-03:00",
+   "cost_estimate_usd_list_price": 0.31400249999999996,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 7,
+   "label": "SL-B-03",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 6273,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 3600,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "61e3602838e519eba708a323be47a8d3d1c212a00e729802c773d198b6371971",
+   "output_sha256": "f739f4501511fec4d27a199982367e1c0f6355dd102e2188ce7217ea39d8186d",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:38:36.691340-03:00",
+   "finished_at": "2026-08-31T11:39:12.020807-03:00",
+   "cost_estimate_usd_list_price": 0.1531975,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 8,
+   "label": "ENTAIL-01",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 7644,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 3302,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "af32c53754f982aafdd86981f67e445b9df1b438c5ef6d75fbfbbf5466ed9477",
+   "output_sha256": "25b608652bd104eb1f3f81ba6100be680309c2f39f87535949258fa463a9d4e1",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:39:12.031144-03:00",
+   "finished_at": "2026-08-31T11:40:59.028877-03:00",
+   "cost_estimate_usd_list_price": 0.15966999999999998,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 9,
+   "label": "ENTAIL-02",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 9076,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 3239,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "69d39b1a3748725c60e3e93b9af4b1ebaec81f6e04cd8cfba8af3fa8ceaba4fc",
+   "output_sha256": "98d94bd8c11d82cd18d37296792fccffd13c94777e2477e56350b38c1cb2604c",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:40:59.030994-03:00",
+   "finished_at": "2026-08-31T11:40:15.164935-03:00",
+   "cost_estimate_usd_list_price": 0.172415,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 10,
+   "label": "ENTAIL-03",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3317,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 1211,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "c78abf54d4d6ee188bc2f1f96f46c8d30905a1b5ea45e2a0172038d53f29501f",
+   "output_sha256": "4270b9e4086bca42d49eb618bc11c33c241aafe67cbb81acd9764635179e96d4",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:40:15.167099-03:00",
+   "finished_at": "2026-08-31T11:40:28.344387-03:00",
+   "cost_estimate_usd_list_price": 0.064125,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 11,
+   "label": "SL-C-01",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 8680,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 8848,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "e50b8e0bb2d954c2044a4d8d51f463dd9f53e19a91cde6f2b7bb8bb922aa9df5",
+   "output_sha256": "903fa259bc8e1a98792f4c0cebaaf8542b6ba5a532188acbbe1c728d964cbf63",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:40:28.358744-03:00",
+   "finished_at": "2026-08-31T11:41:46.759224-03:00",
+   "cost_estimate_usd_list_price": 0.3084675,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 12,
+   "label": "SL-C-02",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 8723,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 10095,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "92cf6af5e0da29c0a3e424f4546290001640525f51971fbe13835e6a258a8db4",
+   "output_sha256": "33ff930f4e34a72e87a790088d03787cedd1ff1d17929bcf1cf5a72c0ad61105",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:41:46.765495-03:00",
+   "finished_at": "2026-08-31T11:44:29.443620-03:00",
+   "cost_estimate_usd_list_price": 0.3400725,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 13,
+   "label": "SL-C-03",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 5353,
+    "cache_read_input_tokens": 915,
+    "output_tokens": 4231,
+    "service_tier": "standard"
+   },
+   "system_sha256": "1c72080f429706096f2e071aebc526205b5736a0ed7ac5ee48833e1412603e00",
+   "user_sha256": "3d881f0f0a3f50f806d7506ef4ebd65c107df1067e243e2ee0502e0860bf4a73",
+   "output_sha256": "182aec940bc00ead40c1c434d14fac900e0058e58f785267dc726912be328773",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:44:29.449326-03:00",
+   "finished_at": "2026-08-31T11:43:55.974844-03:00",
+   "cost_estimate_usd_list_price": 0.1597725,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 14,
+   "label": "ENTAIL-01",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 7232,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 2959,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "d2ffe7e2c2d7c445a7050d2f1301d5494e2b30424b76752f3fbdc1b66ee98dff",
+   "output_sha256": "479a39ea3791cfccf5c925f73dcea8f8fd1abbbe084bc2895821555aabdbfc12",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:43:55.983593-03:00",
+   "finished_at": "2026-08-31T11:44:24.664460-03:00",
+   "cost_estimate_usd_list_price": 0.146975,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 15,
+   "label": "ENTAIL-02",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 7750,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 3190,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "a470690fb15ef496aef6fbeb50e8a4918c9b379ba13f368890e4d8b1a94a5211",
+   "output_sha256": "67cff960cbd620e2620c701b4d3cf463d21b76331a8501b8e41fcd4b8ae4a287",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:44:24.666842-03:00",
+   "finished_at": "2026-08-31T11:44:56.165708-03:00",
+   "cost_estimate_usd_list_price": 0.15793000000000001,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 16,
+   "label": "ENTAIL-03",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 5151,
+    "cache_read_input_tokens": 1340,
+    "output_tokens": 2130,
+    "service_tier": "standard"
+   },
+   "system_sha256": "c09f0e5af43ab8c88f6babe992d5f975d0111a04e23a61644be5151f023313ab",
+   "user_sha256": "bdff16af6f62776485d996496b37bf3aed5f67c20b195fe60f291413caf0d9fc",
+   "output_sha256": "45183b94f528f5318a25d85a5cd932d26b48260c2e6fd9f5978bfbec61186e09",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:44:56.168281-03:00",
+   "finished_at": "2026-08-31T11:45:18.427352-03:00",
+   "cost_estimate_usd_list_price": 0.10544,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  }
+ ],
+ "executed_calls": 16,
+ "addendum_01_stripped_null_unknown_keys": [
+  {
+   "path": "resume/SL-A-04.raw_claims[2].qualifiers.audience_note",
+   "value": null
+  }
+ ],
+ "addendum_03_defaulted_empty_sets": [
+  {
+   "path": "resume/SL-A-01.raw_candidates[6].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-01.raw_candidates[7].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-06.raw_candidates[4].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-06.raw_candidates[5].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-10.raw_candidates[11].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-10.raw_candidates[12].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-10.raw_candidates[13].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-17.raw_candidates[11].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-17.raw_candidates[12].defects",
+   "inserted": "list"
+  },
+  {
+   "path": "resume/SL-A-19.raw_candidates[10].defects",
+   "inserted": "list"
+  }
+ ],
+ "addendum_05_rejected_entailment_contract_violations": [
+  {
+   "claim_id": "CL-0591",
+   "sent": [
+    "EV-1022",
+    "EV-1024"
+   ],
+   "returned": [
+    "EV-1022"
+   ],
+   "discarded_judgment": "ENTAILED",
+   "batch": "ENTAIL-24"
+  }
+ ]
+}

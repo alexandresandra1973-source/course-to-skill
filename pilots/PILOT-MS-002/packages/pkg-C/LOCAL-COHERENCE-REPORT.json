@@ -4,17 +4,16 @@
  "all_sealed_are_entailed": true,
  "candidates_by_kind": {
   "anti_pattern_candidates": 1,
-  "rule_candidates": 14,
-  "workflow_candidates": 9
+  "rule_candidates": 8,
+  "workflow_candidates": 10
  },
- "candidates_eligible": 23,
- "candidates_total": 24,
- "claims_sealed": 60,
- "claims_total": 61,
+ "candidates_eligible": 19,
+ "candidates_total": 19,
+ "claims_sealed": 66,
+ "claims_total": 66,
  "duplicate_semantic_keys": 0,
  "entailment_distribution": {
-  "ENTAILED": 60,
-  "NOT_ENTAILED": 1
+  "ENTAILED": 66
  },
  "source_id": "MS002-SRC-C"
 }

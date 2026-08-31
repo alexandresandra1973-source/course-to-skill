@@ -1,0 +1,495 @@
+source_id: MS002-SRC-C
+slice_id: SL-C-01
+boundaries: 0.04s - 350.96s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+quer aprender a responder as mensagens que chegam no seu WhatsApp utilizando Inteligência Artificial assiste até o final desse vídeo que eu vou te mostrar como que faz usando a ferramenta n8n o banco de dados Reds e a api Evolution pro WhatsApp se você ainda não tem a Evolution e o n8n configurados na sua VPS Vê o vídeo anterior que eu ensinei passo a passo de uma forma muito fácil como que faz isso tudo ou baixe aí na descrição o meu script para rodar localmente no final do vídeo eu dou mais detalhes de como que executa ele o primeiro passo é instalar o Red na sua VPS o Reds é um banco de dados não relacional que utiliza Chaves e valores para guardar os dados nele a gente pode configurar dados que vão ter um tempo de vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em branco para ele gerar uma aleatória para mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds instalado no eas panel ativa essa opção do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você pode visualizar os dados que tem lá dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock ou da Open a ou de qualquer outro que você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock aqui como uma opção porque o grock é gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o Google e aqui do lado esquerdo Você vai vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai te dar a chave você precisa copiar ela agora porque depois que você sair dessa tela não tem mais como ver então copia e cola num bloco de notas para não esquecer na Open ai precisa colocar 5 para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome para ela seleciona de qual projeto ela faz parte e clica em criar aqui é a mesma coisa você precisa copiar ela agora e salvar num bloco de notas porque quando sair dessa tela não tem mais como ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados se você não tiver é só clicar em Install e digitar n8n nodes Evolution api e depois clicar em instalar Beleza então vamos aqui no menu principal criar um novo workflow e vou dar o nome dele aqui a minha ideia é fazer um chatbot que vai consultar a minha api sobre pontos turísticos em Foz de Iguaçu e responder à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode mandar uma mensagem para você no seu WhatsApp mandei aqui já chegaram os dados e agora vamos trabalhar com eles nós nunca usamos diretamente os dados que vem no web Hook a gente sempre adiciona um node set depois do Web Hook para organizar eles de uma forma melhor então de todos esses dados que vieram aqui no web Hook nós vamos pegar apenas cinco que são os campos quem mandou que vai ser o número da pessoa o outro Campo vai ser a Instância que recebeu a mensagem o outro Campo vai ser a mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e agora veja que aquele monte de coisa virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já vai criar o nosso agente de a mas antes coloca aqui um set vazio mesmo que isso vai ser melhor pra gente no futuro pode depois desse set vazio colocar o ai Agent e aqui vamos fazer as as configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência Artificial que ele usa o modelo é como se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um histórico de mensagens que ele teve com alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo pesquisar na internet alterar planilhas buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve fazer e com base nessas instruções ele vai chamar as ferramentas que ele tem à disposição para que ele responda o usuário no caso de uma pergunta aí ele vai buscar no banco de dados ou que ele realize uma ação no caso de uma ordem o tipo de agente vamos deixar em Tools Agent que é o mais avançado que tem acesso a ferramentas em source for prompt nós vamos tirar essa opção de connected chat Trigger e mudar pra outra que é definir abaixo aqui nós vamos informar a mensagem que a pessoa mandou é isso que vai ser passado pro nosso agente gerar uma resposta então clica aqui do lado para trazer os dados anteriores e vamos arrastar aqui o campo mensagem para o campo text do nosso ai Agent aqui embaixo em add option adiciona essa opção do System message que é onde nós vamos passar o prompt para o nosso agente dizer a ele o que ele deve fazer então eu vou digitar aqui no meu caso eu quero que ele consulte os
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0001",
+  "excerpt": "quer aprender a responder as mensagens que chegam no seu WhatsApp utilizando Inteligência Artificial assiste até o final desse vídeo que eu vou te mostrar"
+ },
+ {
+  "local_id": "EV-0002",
+  "excerpt": "como que faz usando a ferramenta n8n o banco de dados Reds e a api Evolution pro WhatsApp se você ainda não tem a Evolution e o n8n configurados na sua"
+ },
+ {
+  "local_id": "EV-0003",
+  "excerpt": "VPS Vê o vídeo anterior que eu ensinei passo a passo de uma forma muito fácil como que faz isso tudo ou baixe aí na descrição o meu script para rodar"
+ },
+ {
+  "local_id": "EV-0004",
+  "excerpt": "localmente no final do vídeo eu dou mais detalhes de como que executa ele o primeiro passo é instalar o Red na sua VPS o Reds é um banco de dados não"
+ },
+ {
+  "local_id": "EV-0005",
+  "excerpt": "relacional que utiliza Chaves e valores para guardar os dados nele a gente pode configurar dados que vão ter um tempo de vida então ele é ideal para essas"
+ },
+ {
+  "local_id": "EV-0006",
+  "excerpt": "operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo serviço no seu projeto o ris fica aqui"
+ },
+ {
+  "local_id": "EV-0007",
+  "excerpt": "em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em branco para ele gerar uma aleatória para"
+ },
+ {
+  "local_id": "EV-0008",
+  "excerpt": "mim e também não vou mexer na versão Então pode clicar em criar Pronto já temos aqui o nosso Reds instalado no eas panel ativa essa opção"
+ },
+ {
+  "local_id": "EV-0009",
+  "excerpt": "do Reds Commander porque ele é muito útil pro desenvolvimento Esse é um painel de gerenciamento do Reds que você pode visualizar os dados que tem lá"
+ },
+ {
+  "local_id": "EV-0010",
+  "excerpt": "dentro e editar ou apagar através do navegador então agora o próximo passo vai ser pegar uma chave de api do grock ou da Open a ou de qualquer outro que"
+ },
+ {
+  "local_id": "EV-0011",
+  "excerpt": "você tiver eu vou mostrar como que pega no grock e Como que pega no open a que é o chat GPT eu estou apresentando o grock aqui como uma opção porque o grock é"
+ },
+ {
+  "local_id": "EV-0012",
+  "excerpt": "gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o Google e aqui do lado esquerdo Você vai"
+ },
+ {
+  "local_id": "EV-0013",
+  "excerpt": "vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai te dar a chave você precisa copiar ela"
+ },
+ {
+  "local_id": "EV-0014",
+  "excerpt": "agora porque depois que você sair dessa tela não tem mais como ver então copia e cola num bloco de notas para não esquecer na Open ai precisa colocar 5"
+ },
+ {
+  "local_id": "EV-0015",
+  "excerpt": "para poder gerar uma chave então você vai vir aqui nas configurações api Keys e clicar para criar uma nova dá um nome para ela seleciona de qual projeto ela"
+ },
+ {
+  "local_id": "EV-0016",
+  "excerpt": "faz parte e clica em criar aqui é a mesma coisa você precisa copiar ela agora e salvar num bloco de notas porque quando sair dessa tela não tem mais como"
+ },
+ {
+  "local_id": "EV-0017",
+  "excerpt": "ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados"
+ },
+ {
+  "local_id": "EV-0018",
+  "excerpt": "se você não tiver é só clicar em Install e digitar n8n nodes Evolution api e depois clicar em instalar Beleza então vamos aqui no menu principal criar um"
+ },
+ {
+  "local_id": "EV-0019",
+  "excerpt": "novo workflow e vou dar o nome dele aqui a minha ideia é fazer um chatbot que vai consultar a minha api sobre pontos turísticos em Foz de Iguaçu e responder"
+ },
+ {
+  "local_id": "EV-0020",
+  "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na"
+ },
+ {
+  "local_id": "EV-0021",
+  "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento"
+ },
+ {
+  "local_id": "EV-0022",
+  "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode"
+ },
+ {
+  "local_id": "EV-0023",
+  "excerpt": "mandar uma mensagem para você no seu WhatsApp mandei aqui já chegaram os dados e agora vamos trabalhar com eles nós nunca usamos diretamente os dados"
+ },
+ {
+  "local_id": "EV-0024",
+  "excerpt": "que vem no web Hook a gente sempre adiciona um node set depois do Web Hook para organizar eles de uma forma melhor então de todos esses dados que vieram"
+ },
+ {
+  "local_id": "EV-0025",
+  "excerpt": "aqui no web Hook nós vamos pegar apenas cinco que são os campos quem mandou que vai ser o número da pessoa o outro Campo vai ser a Instância que recebeu a"
+ },
+ {
+  "local_id": "EV-0026",
+  "excerpt": "mensagem o outro Campo vai ser a mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o"
+ },
+ {
+  "local_id": "EV-0027",
+  "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message"
+ },
+ {
+  "local_id": "EV-0028",
+  "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e"
+ },
+ {
+  "local_id": "EV-0029",
+  "excerpt": "agora veja que aquele monte de coisa virou só esse cinco aqui renome esse node para dados e vamos continuar agora a gente já"
+ },
+ {
+  "local_id": "EV-0030",
+  "excerpt": "vai criar o nosso agente de a mas antes coloca aqui um set vazio mesmo que isso vai ser melhor pra gente no futuro pode depois desse set vazio colocar o ai"
+ },
+ {
+  "local_id": "EV-0031",
+  "excerpt": "Agent e aqui vamos fazer as as configurações dele o agente de a é composto por quatro peças a primeira delas é o modelo de Inteligência"
+ },
+ {
+  "local_id": "EV-0032",
+  "excerpt": "Artificial que ele usa o modelo é como se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um"
+ },
+ {
+  "local_id": "EV-0033",
+  "excerpt": "histórico de mensagens que ele teve com alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo"
+ },
+ {
+  "local_id": "EV-0034",
+  "excerpt": "pesquisar na internet alterar planilhas buscar em um banco de dados e a quarta peça é o agente em si é aqui que você coloca as instruções do que ele deve"
+ },
+ {
+  "local_id": "EV-0035",
+  "excerpt": "fazer e com base nessas instruções ele vai chamar as ferramentas que ele tem à disposição para que ele responda o usuário no caso de uma pergunta aí ele"
+ },
+ {
+  "local_id": "EV-0036",
+  "excerpt": "vai buscar no banco de dados ou que ele realize uma ação no caso de uma ordem o tipo de agente vamos deixar em Tools Agent que é o mais avançado que tem"
+ },
+ {
+  "local_id": "EV-0037",
+  "excerpt": "acesso a ferramentas em source for prompt nós vamos tirar essa opção de connected chat Trigger e mudar pra outra que é definir abaixo aqui nós vamos"
+ },
+ {
+  "local_id": "EV-0038",
+  "excerpt": "informar a mensagem que a pessoa mandou é isso que vai ser passado pro nosso agente gerar uma resposta então clica aqui do lado para trazer os dados"
+ },
+ {
+  "local_id": "EV-0039",
+  "excerpt": "anteriores e vamos arrastar aqui o campo mensagem para o campo text do nosso ai Agent aqui embaixo em add option adiciona essa opção do System message"
+ },
+ {
+  "local_id": "EV-0040",
+  "excerpt": "que é onde nós vamos passar o prompt para o nosso agente dizer a ele o que ele deve fazer então eu vou digitar aqui no meu caso eu quero que ele consulte os"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

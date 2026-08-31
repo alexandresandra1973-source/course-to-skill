@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-10
+boundaries: 10382.0s - 11528.399s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+holding the product, which is more or less exactly what I wanted. Cool. Midnight clay overnight face mask. Fully kind of comprehensible and digestible. Everything here is good. What we want to do now is we want to take all this and then just like we did with Higsfield earlier, uh we just want to have that generated through uh I think like an initial start frame uh which we did primarily using Gemini Omni Flash. So the question is how do we you know take uh Gemini Omni Flash and then actually make it kind of accessible within Cloud Code. Well, it involves the MCP and CLI feature that we did before. So if I go to MCP and CLI, you'll see here we have Hixfield MCP and CLI for an AI. I'm just going to go to cloud code. Then what I'm going to do is I'm going to copy this and then go back to my cloud code instance here. And then I'm just going to paste this in. Okay. And so I think I actually already have, you know, some form of Higsfield MCP on. So that's okay. I'm just going to say run it. What it's going to do now is install the Higsfield CLI globally. And what you have to do after you install a command line interface or a CLI and make it accessible to cloud codes. You have to log in. And that's just how we're going to authenticate. If you think about it, previously we did so in kind of an inefficient way. We had to get the API key from Google uh from GPT uh image 2 directly, right? And then we had to like add that to our environment. Well, this is just a simpler and easier way of adding stuff to our environment. So, anytime there is like a CLI option, I would highly recommend it. CLI options are awesome. They also save you just a tremendous amount of time. And uh, you know, it's a very easy and straightforward way of doing this. And so, one thing you guys don't see is it just asked me to sign into Higsfield right over here. So, here's where I'm going to do the sign in. I'm just going to go click um, you know, sign in and then go from there. Now, it's saying, you know, hey, we want to access this. Is this authorized? Yes, it's authorized. I can actually close this out. And now it's saying authenticated. Now, the skills can all install. So now we've authenticated inside of Higsfield and we have everything that we need in order to actually use it. Um so yeah, this is fantastic. Now we can actually run this. So what is the next step after this? Well, the next step is we're just going to cross them. So what I'm going to do, okay, is I'm just going to voice transcribe. I want you now to take the provided image, the hero frame, and then I want you to use this as a start frame for the Gemini Omni Flash model. Set it to 10second total gen on a 16x9 aspect ratio. The prompt I want you to provide is as follows. Eg. A woman influencer talking about a product. Ensure the provided scripts are reasonably short so we can get them in the whole 10-second gen. Um, every time that I ask you to do this, I'd like you to generate three candidate options. And for those of you guys that are probably wondering what's going on here with the voice transcription tool, I like using Claude's built-in voice transcription tool, but um I also have my own. If I just hold Fn on my computer, it'll pop up and it allows me to paste text into any box. So I keep on trying to use the Claude one because I'm trying to showcase Claude code features, but I also just oftent times forget and then use my own. Um same deal. So it's going to go through this whole process and it's actually going to select things for me. It's going to build them and so on and so forth. Um, you know, it's double checking with me that, you know, I'm okay with getting build for this. Obviously, I am okay getting build with this. The first time I think it'll probably realistically take uh a little bit more, you know, trial than you'll think. It'll take more credits. It'll just not be necessarily perfect. But over time, you'll be able to make this cheaper. And then once you consolidate it as a skill, uh, you can go. So, I'm going to say yes. And now it'll actually do the generation. And yeah, I mean, like check out these scripts. You need to try this. This is the midnight clay mask. Fixes oily skin without any flakes. 10 out of 10. Would recommend a change of game for me. Okay, I have to talk about this. Midnight Clay Overnight Mask. You put it on before bed. You wake up glowing. No effort, just results. Genuinely obsessed with this thing. Like for instance, I don't like that tone of voice, but we could tweak it. [gasps] Uh, if you have oily skin, you need this. Midnight clay works overnight. So, you wake up matte, not greasy. It's the best skincare purchase I've ever made all year. Hands down. I could absolutely see, you know, some woman talk about it on like a UGC UGC style video at Crush. And what's cool is um you can parallelize these. So what we've done here is we've actually sent three jobs simultaneously. So we have job A in the queue at the same time as job B in the queue and job C. And we're just going to grab all three of these once they're all done and then combine them back into the output. Uh it's then going to present the output to me just to verify that like this did what I wanted it to do. And once I have verified that it has done what I wanted to do, I'm going to turn this into a skill. Anyway, we now have the jobs. So we have the videos right over here. >> You need to try this. This is the midnight clay mask. Fixes oily skin without any flakes. 10 out of 10. Would recommend. 10 out of 10. Would recommend. It changed the game for me. >> Okay, so we could see we had some weird things there cuz uh the script was a lot shorter than the 10-second video length that tried to like come up with stuff. >> Okay, I have to talk about this midnight clay overnight mask. Put it on before bed. Wake up glowing. No effort, just results. Genuinely obsessed with this thing. >> Cool. So, that looks pretty solid. If you have oily skin, you need this. Midnight clay works overnight so you wake up matte, not greasy. Best skinare purchase I have made. >> Okay, so see this is the sort of stuff that I'm talking about. That's like kind of weird. So we just went from having the product like physically like what happened there? >> So you wake up matte, not greasy. Best >> it just disappeared like >> in purchase >> vanishes. So I mean like this is the sort of thing you don't want to happen which is why you're going to need some sort of Q&A. Um that said, I mean people still rip it, right? Like it's not that crazy. Um, maybe she's just a a magician that can summon the midnight clay mask. >> Your hands >> like I'm more interested, girl, in how you summon the midnight clay mask to your hands. Anyway, um, cool. So, now we we we basically have the skill, right? So, we're pretty good. Um, this is fantastic. We now have everything that we need in order to create a skill. Um, only one tiny change. I'm finding the script for the first video was just a little bit too short. So, the woman had to repeat herself a couple of times. Uh, we need to make shorter scripts just a tiny bit shorter on the video side as well. Eg. candidate A could have been done in 8 seconds instead of 10. This will also make us a lot more credit efficient as well. Oh, and then once I'm done with that, I'm going to say, let's now turn this into a repeatable skill. I should be able to simply say, "Generate me uh videos of this using the AI video generator product ad skill." And then you should be able to take the products that I supply you, the influencer that I supply you, and then turn that into a set. Okay. And now it's just going to reconfirm the product pipeline with me. So what is the pipeline? We're going to take product images and influencer images as input. Prep resize each. Generate hero frames. Generate 10 script candidates. Show the hero frames and scripts for approval before spending video credits on confirmation. Generate three video candidates per approved script via this model using the hero frame um 16x9 8second duration not 10. And then download and deliver all video candidates. So it's not actually correct. Uh we don't want it to uh we don't actually care about this step. So we'll say no step five self select the winner scripts no fixed 8second duration. Sometimes if the uh script is a little longer use 10 seconds if it's a little shorter use 8 seconds. And then if I supply multiple influencers in a folder plus multiple products cross them. eg have influencer A on both product A and product B and influencer B on both product A and product B. Then generate them autonomously and deliver to me in a folder. No human oversight until the last step and parallelize where possible. Okay. So, what I'm now going to do is I'm just going to make a folder here. And I'm just going to call this um I don't know, video add gens video add assets. Okay. And then we're just going to combine both of these in here for now. And then the duration rule. What's the actual word count threshold? So, less than 22 words, 8 seconds. More than 22 words, 10 seconds. Script A was 28 words and worked fine at tech 10 seconds, but felt short. Okay. So, as part of me now testing the skill on multiple gens, um we have two products. We have the woman with the midnight clay, but we also have a man with uh what looks to be some rosemary scalp oil. So, the idea is we're going to cross them. Um she's going to do this and she's also going to do this and then he's going to do this and he's also going to do this. This should allow us to test what the kind of cross functionality is like and whether or not that works. So, I'm just going to feed this into the skill that we just generated and make sure that this is fine, that we have the skill. It's a simple product uh byproduct of just checking to see, hey, you know, can you do this on the video add assets folder and it's just going to look at each image and classify them. I could probably actually have created a subfolder structure that does this. So yeah, we'll give that a try and then have it run. It looks like it misunderstood me the first time. It wanted to generate nine videos per person instead of three, which would have been like,00 credits or something like that. So we've uh cut that down to 360. And it's actually going to be less than 360. I think it's probably going to be like 300 cuz we're going to do a bunch at 8 seconds instead of 10 seconds. So, we'll see how all that goes. But, yeah, we have woman and mask, woman and scalp, man and mask, man and scalp. And we're going to do three of each of these hero frames. It's now just going to run this through top to bottom. Um, and then also generate uh the scripts, too. Sorry about that. My fire alarm just went off. That was pretty fun. Anyway, where we at? Woman x mask. You need this. Midnight clay pulls out all the gunk out overnight. No effort. I just wake up glowing. Generally, the best thing in my routine right now. When in scalp oil, my hair stylist asked what I've been doing differently. It's this rosemary and mint scalp oil. A few drops for a bed and my scalp actually feels alive again. So, this is kind of neat. You can see we're actually implementing that logic where the shorter word ones are 8 seconds, the longer word ones are 10. So, yeah, we're we're going through and generating. It looks like there was some issues with some sort of concurrency limit. Looks like you can only have eight jobs at the same time, whereas it is firing 12 at once cuz we did four pairings times three candidates. So, that's okay. We're just going to kind of update the skill to reflect that. And it looks like that's what it is doing. Um, candidates within a script should submit and wait in parallel for speed capped at three concurrent. So, we're already six done. We're just going to retry the two failed man pairings one at a time to avoid the concurrency cap, which is kind of neat. [gasps] Um, I'm just going to take a look at this right now. Cool. We actually have the videos up here now that I could test. So, >> you need this midnight clay pulls all the gunk out overnight. No effort. just wake up glowing. >> Cool. Thank you. >> You need this. Midnight clay pulls all the gunk out. >> And see how we're testing different angles. I should move my fat head around. See how we're testing out different angles now? Uh we have different like product shots. You know, this time we're actually showing this. Her hair looks a little bit different. She's actually putting this on in this one. This is the sort of creativity that we want. >> You need this. Midnight clay pulls all the gunk out. >> Cool. And I like how we're having a lot more adherence to the thing. Uh I think Do we have anyone with men? My hair stylist asked My hair stylist asked what I've been. It's this rosemary and mint scalp oil. A few drops before bed and my scalp actually feels alive again. >> That's cool. Yeah. Yeah. And the timing is basically perfect. >> My hair stylist asked what I've been doing different. >> Okay. And so some of these are just going to sound weird, kind of more staccatoy, but that's okay. We're just frontloading again the the gens. Um so I'm just going to go and find the ones of the dudes. Looks like we got them right over here. >> I was skeptical about clay masks, but this one's different. Midnight clay works overnight. There is no mess. No mess at all. And I wake >> No mess. No mess at all. >> Wake up looking like I >> Anyway, obviously that >> I was skeptical about clay masks, but this one's different. Midnight clay works overnight. No mess. And I wake up looking like I actually slept well and startardy. I was >> don't know what the hell that was. You know what's really interesting? I think there's just less training data out there on men. Um and so as a result, the the male ads tend to always >> I was skeptical about clay >> kind of suck more. This audio is really good >> masks, but this one's different. Midnight clay works overnight, no mess, and I wake up looking like I actually slept well. >> That's cool. Yeah, I like this one the best. So, you can see how, you know, we need to generate multiple, otherwise we're not going to get like good good uh shots. And who knows, maybe this works better. Maybe having some handsome dude, you know, show off the clay mask is going to work better for a specific core audience. You never really know, right? Anyway, so what we have now, we actually have a reproducible skill uh that does this. And uh as mentioned, you know, I think you could realistically run this, I don't know how many times it was. I don't know what our math was, but a lot. Uh you could have run this realistically like every morning, let's say, on something like 10 gens, and then by the end of the month, you would have significantly alleviated the bottleneck in a lot of ad uh production flows. And yeah, you know, well, you can experiment with making this better. You could have like some slight audio track in the background. You could make it a little bit noisy. You could add like grain to the videos to maybe remove some of the more characteristic AI components. Like I'd say his skin is just a tiny bit too smooth. It's almost like a little too real. Um yeah, you could have like automated processes that check to see, hey, you know, is the text totally legible on the midnight clay mask? Hey, anything weird going on with the person? What's the start frame here? Right? Like cuz it looks like for whatever reason it screws up the start frame on this one. Maybe it's like, oh, every video cut in like three frames so that we always start at a good one. Or I don't know, like if a person doesn't have anything to say, just kind of smile and like wave, right? >> [sighs and gasps] >> I'll leave it there because I think you guys probably know where to go. Um, all I'm going to do now is do the same thing. Transform it from a loop uh from a skill into a loop and then from a loop into a routine. Exact same idea just with the Higsfield connector instead. And um yeah, then when we're done uh I will have successfully walked you guys through the process end to end of generating a very in-depth series of prompts, skills, loops, and routines. Okay. Now, in order to connect HGfield, what you have to do is go up here to MCP and CLI, copy this URL. Okay. Then go back to Claude. What we'll do is we'll scroll all the way down to connectors. Under add, we'll go add custom connector. Add this as the URL and call it Higsfield. And then you will now essentially automatically connect to Higsfield via their OOTH flow. That just means it's going to open up a little window, which it just did in my other screen. So I'm just going to bring that puppy over here. Then you can actually proceed with the login. And now this is just another version of what we did earlier. It's just now we actually have the ability to connect to this through um our cloud routines as well. Okay, great. So now that we have this uh if we go back to routines and then at the top right hand corner go new routine can then go cloud. And what's cool is we now have the ability to connect our Higsfield connector. It'll actually automatically populate um every time we do this. And so then I can go down here to our prompt and then I can just ask it hey make this a routine. Awesome. And now I just told it make me the routine. What it's doing is creating a tople Google Drive folder for me. This is where all of this information is going to be stored. Now, it's actually uploading the raw source images. Um, the ones that I was showing you guys earlier of the men and the woman and then the clay mask and then the rosemary oil. So, what it's doing is it's going to upload via some tool. Uh, this is I guess some base 64 representation of my file. I don't know. You can turn images into like big long strings and then you can send them over over the wire. Um, and that's what this tried to do. It didn't do it a very good job though. Uh, and now it's actually downsizing the images, sending them over, and then it's going to, you know, base 64 encode, upload each. All right. And now we have generated both the uh, loop and the routine. And so you guys could see that um, right over here. If we go back to routines, we have UGC video ads daily batch. So we can connect, you know, the platforms that we need via custom connectors right over here. We also have cloud code remote, which I think is just what Cloud Code always inserts now if you want to be able to contact it. Um, and you can see the step-by-step file. So, list the files in the asset drive folder. Uh, for simplicity, that is this folder right here. So, you can see that like they're images that we are providing of the rosemary oil of the product and the people. So, maybe we could make it easier by subdividing that. I don't know. Determine which assets are new since the last run. So, it actually checks to see is there a dated uh subfolder that exists within the AI video gens in drive. So, it's not this folder, it's another folder. If there is no dated subfolder, it'll actually go through and then build the cross of every influencer times product. So two influencers, two products means four pairings. For each pairing, it'll generate a hero frame, write 10 adcript candidates, select the best ones, determine the video duration by word count using a rule, generate three video candidates for the pairing, then actually insert all of that into the Google Drive link. So this is how you develop a small granular application in your company using cloud code. Uh this is going to run for cents on the dollar every day. The credits that we're spending on Higsfield gens are going to cost more than that obviously. Um but that's okay. Uh you know this is still way cheaper than actually having like a production studio go find influencers to do this with, right? And uh yeah you know you guys now have essentially a full endto-end pipeline allowing you guys to do this for whatever product you guys want. So that is a end to end step-by-step walkthrough of how to basically go through that full like prompt to routine process for you know creative ad generation. I want you guys to know probably looking at the time and you're like looking at the skills that we still have to build and and so on. Um I decided to go really in depth on that first one cuz I wanted you guys to see everything involved in the actual production process. Future ones are going to be a lot faster because now that you guys understand how to go from a prompt to a skill, a skill to a loop, and a loop to a routine, we don't actually need to do this whole process every single time. Instead, what I'll do is I'll math it out, make it a skill, and then just automate the process of turning it into a routine, just using a little prompt template. I'm also going to just proceed a little bit faster, and maybe explain things a little bit less, and just show you guys what the process of building it looks like. Um, just so that you know, you guys aren't sitting here forever waiting for an agent to finish. Uh, and now that you guys understand how kind of realistic the weight times are and stuff like that, I think we'll all be able to proceed a little bit faster. Hopefully you guys have appreciated this so far. Let's move on to our next major step. What is that next major step, you might be asking? Well, now that we're done with creative generation, which is that top offunnel sort of step, I want to work our way down just one more substep before we get to middleunnel with the generation of personalized copy. So, text, templates, and really outreach. And uh I'm going to show this to you guys in the context of two major you know assets. The first is going to be like a newsletter campaign where we're using AI to automat automate the process of filling out variables. And the second is going to be like an outbound email campaign where we're using AI to automate the process of entering in little icebreaker snippets and like custom assets and stuff like that. So all of this is in the pursuit of making copy sound like you wrote it yourself even though you probably didn't. And so if you think about it, okay, these newsletters that we're usually sending out now for um flash sales and, you know, multi-step sort of
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0541",
+  "excerpt": "holding the product, which is more or less exactly what I wanted. Cool. Midnight clay overnight face mask. Fully kind of comprehensible and digestible. Everything here is good. What we want to do now is we want to take all this and then just like we did with Higsfield earlier, uh we just want to have that generated through uh I think like an initial start frame uh which we did"
+ },
+ {
+  "local_id": "EV-0542",
+  "excerpt": "primarily using Gemini Omni Flash. So the question is how do we you know take uh Gemini Omni Flash and then actually make it kind of accessible within Cloud Code. Well, it involves the MCP and CLI feature that we did before. So if I go to MCP and CLI, you'll see here we have Hixfield MCP and CLI for an AI. I'm just going to go to cloud code. Then what I'm going to do is I'm going to copy this"
+ },
+ {
+  "local_id": "EV-0543",
+  "excerpt": "and then go back to my cloud code instance here. And then I'm just going to paste this in. Okay. And so I think I actually already have, you know, some form of Higsfield MCP on. So that's okay. I'm just going to say run it. What it's going to do now is install the Higsfield CLI globally. And what you have to do after you install a command line interface or a"
+ },
+ {
+  "local_id": "EV-0544",
+  "excerpt": "CLI and make it accessible to cloud codes. You have to log in. And that's just how we're going to authenticate. If you think about it, previously we did so in kind of an inefficient way. We had to get the API key from Google uh from GPT uh image 2 directly, right? And then we had to like add that to our environment. Well, this is just a simpler and easier way of adding stuff to our environment."
+ },
+ {
+  "local_id": "EV-0545",
+  "excerpt": "So, anytime there is like a CLI option, I would highly recommend it. CLI options are awesome. They also save you just a tremendous amount of time. And uh, you know, it's a very easy and straightforward way of doing this. And so, one thing you guys don't see is it just asked me to sign into Higsfield right over here. So, here's where I'm going to do the sign in. I'm just going"
+ },
+ {
+  "local_id": "EV-0546",
+  "excerpt": "to go click um, you know, sign in and then go from there. Now, it's saying, you know, hey, we want to access this. Is this authorized? Yes, it's authorized. I can actually close this out. And now it's saying authenticated. Now, the skills can all install. So now we've authenticated inside of Higsfield and we have everything that we need in order to actually use it. Um so yeah,"
+ },
+ {
+  "local_id": "EV-0547",
+  "excerpt": "this is fantastic. Now we can actually run this. So what is the next step after this? Well, the next step is we're just going to cross them. So what I'm going to do, okay, is I'm just going to voice transcribe. I want you now to take the provided image, the hero frame, and then I want you to use this as a start frame for the Gemini Omni Flash model. Set it to"
+ },
+ {
+  "local_id": "EV-0548",
+  "excerpt": "10second total gen on a 16x9 aspect ratio. The prompt I want you to provide is as follows. Eg. A woman influencer talking about a product. Ensure the provided scripts are reasonably short so we can get them in the whole 10-second gen. Um, every time that I ask you to do this, I'd like you to generate three candidate options. And for those of you guys that are probably wondering what's"
+ },
+ {
+  "local_id": "EV-0549",
+  "excerpt": "going on here with the voice transcription tool, I like using Claude's built-in voice transcription tool, but um I also have my own. If I just hold Fn on my computer, it'll pop up and it allows me to paste text into any box. So I keep on trying to use the Claude one because I'm trying to showcase Claude code features, but I also just oftent times forget and then"
+ },
+ {
+  "local_id": "EV-0550",
+  "excerpt": "use my own. Um same deal. So it's going to go through this whole process and it's actually going to select things for me. It's going to build them and so on and so forth. Um, you know, it's double checking with me that, you know, I'm okay with getting build for this. Obviously, I am okay getting build with this. The first time I think it'll probably realistically take uh a little"
+ },
+ {
+  "local_id": "EV-0551",
+  "excerpt": "bit more, you know, trial than you'll think. It'll take more credits. It'll just not be necessarily perfect. But over time, you'll be able to make this cheaper. And then once you consolidate it as a skill, uh, you can go. So, I'm going to say yes. And now it'll actually do the generation. And yeah, I mean, like check out these scripts. You need to try this. This is the midnight clay"
+ },
+ {
+  "local_id": "EV-0552",
+  "excerpt": "mask. Fixes oily skin without any flakes. 10 out of 10. Would recommend a change of game for me. Okay, I have to talk about this. Midnight Clay Overnight Mask. You put it on before bed. You wake up glowing. No effort, just results. Genuinely obsessed with this thing. Like for instance, I don't like that tone of voice, but we could tweak it. [gasps] Uh, if you have oily skin, you need"
+ },
+ {
+  "local_id": "EV-0553",
+  "excerpt": "this. Midnight clay works overnight. So, you wake up matte, not greasy. It's the best skincare purchase I've ever made all year. Hands down. I could absolutely see, you know, some woman talk about it on like a UGC UGC style video at Crush. And what's cool is um you can parallelize these. So what we've done here is we've actually sent three jobs simultaneously. So we have job A in the"
+ },
+ {
+  "local_id": "EV-0554",
+  "excerpt": "queue at the same time as job B in the queue and job C. And we're just going to grab all three of these once they're all done and then combine them back into the output. Uh it's then going to present the output to me just to verify that like this did what I wanted it to do. And once I have verified that it has done what I wanted to do, I'm going to turn this into a skill. Anyway, we now"
+ },
+ {
+  "local_id": "EV-0555",
+  "excerpt": "have the jobs. So we have the videos right over here. >> You need to try this. This is the midnight clay mask. Fixes oily skin without any flakes. 10 out of 10. Would recommend. 10 out of 10. Would recommend. It changed the game for me. >> Okay, so we could see we had some weird things there cuz uh the script was a lot shorter than the 10-second video length"
+ },
+ {
+  "local_id": "EV-0556",
+  "excerpt": "that tried to like come up with stuff. >> Okay, I have to talk about this midnight clay overnight mask. Put it on before bed. Wake up glowing. No effort, just results. Genuinely obsessed with this thing. >> Cool. So, that looks pretty solid. If you have oily skin, you need this. Midnight clay works overnight so you wake up matte, not greasy. Best skinare"
+ },
+ {
+  "local_id": "EV-0557",
+  "excerpt": "purchase I have made. >> Okay, so see this is the sort of stuff that I'm talking about. That's like kind of weird. So we just went from having the product like physically like what happened there? >> So you wake up matte, not greasy. Best >> it just disappeared like >> in purchase >> vanishes. So I mean like this is the"
+ },
+ {
+  "local_id": "EV-0558",
+  "excerpt": "sort of thing you don't want to happen which is why you're going to need some sort of Q&A. Um that said, I mean people still rip it, right? Like it's not that crazy. Um, maybe she's just a a magician that can summon the midnight clay mask. >> Your hands >> like I'm more interested, girl, in how you summon the midnight clay mask to your hands. Anyway, um, cool. So, now we"
+ },
+ {
+  "local_id": "EV-0559",
+  "excerpt": "we we basically have the skill, right? So, we're pretty good. Um, this is fantastic. We now have everything that we need in order to create a skill. Um, only one tiny change. I'm finding the script for the first video was just a little bit too short. So, the woman had to repeat herself a couple of times. Uh, we need to"
+ },
+ {
+  "local_id": "EV-0560",
+  "excerpt": "make shorter scripts just a tiny bit shorter on the video side as well. Eg. candidate A could have been done in 8 seconds instead of 10. This will also make us a lot more credit efficient as well. Oh, and then once I'm done with that, I'm going to say, let's now turn this into a repeatable skill. I should be able to simply say, \"Generate me uh videos of this using the AI video"
+ },
+ {
+  "local_id": "EV-0561",
+  "excerpt": "generator product ad skill.\" And then you should be able to take the products that I supply you, the influencer that I supply you, and then turn that into a set. Okay. And now it's just going to reconfirm the product pipeline with me. So what is the pipeline? We're going to take product images and influencer images as input. Prep resize each. Generate hero frames. Generate 10 script"
+ },
+ {
+  "local_id": "EV-0562",
+  "excerpt": "candidates. Show the hero frames and scripts for approval before spending video credits on confirmation. Generate three video candidates per approved script via this model using the hero frame um 16x9 8second duration not 10. And then download and deliver all video candidates. So it's not actually correct. Uh we don't want it to uh we don't actually care about this step. So"
+ },
+ {
+  "local_id": "EV-0563",
+  "excerpt": "we'll say no step five self select the winner scripts no fixed 8second duration. Sometimes if the uh script is a little longer use 10 seconds if it's a little shorter use 8 seconds. And then if I supply multiple influencers in a folder plus multiple products cross them. eg have influencer A on both product A and product B and"
+ },
+ {
+  "local_id": "EV-0564",
+  "excerpt": "influencer B on both product A and product B. Then generate them autonomously and deliver to me in a folder. No human oversight until the last step and parallelize where possible. Okay. So, what I'm now going to do is I'm just going to make a folder here. And I'm just going to call this um I don't know, video add gens video add assets. Okay."
+ },
+ {
+  "local_id": "EV-0565",
+  "excerpt": "And then we're just going to combine both of these in here for now. And then the duration rule. What's the actual word count threshold? So, less than 22 words, 8 seconds. More than 22 words, 10 seconds. Script A was 28 words and worked fine at tech 10 seconds, but felt short. Okay. So, as part of me now testing the skill on multiple gens, um we have two products. We have the woman"
+ },
+ {
+  "local_id": "EV-0566",
+  "excerpt": "with the midnight clay, but we also have a man with uh what looks to be some rosemary scalp oil. So, the idea is we're going to cross them. Um she's going to do this and she's also going to do this and then he's going to do this and he's also going to do this. This should allow us to test what the kind of cross functionality is like and whether or not that works. So, I'm just going to"
+ },
+ {
+  "local_id": "EV-0567",
+  "excerpt": "feed this into the skill that we just generated and make sure that this is fine, that we have the skill. It's a simple product uh byproduct of just checking to see, hey, you know, can you do this on the video add assets folder and it's just going to look at each image and classify them. I could probably actually have created a subfolder structure that does this. So"
+ },
+ {
+  "local_id": "EV-0568",
+  "excerpt": "yeah, we'll give that a try and then have it run. It looks like it misunderstood me the first time. It wanted to generate nine videos per person instead of three, which would have been like,00 credits or something like that. So we've uh cut that down to 360. And it's actually going to be less than 360. I think it's probably going to be like 300"
+ },
+ {
+  "local_id": "EV-0569",
+  "excerpt": "cuz we're going to do a bunch at 8 seconds instead of 10 seconds. So, we'll see how all that goes. But, yeah, we have woman and mask, woman and scalp, man and mask, man and scalp. And we're going to do three of each of these hero frames. It's now just going to run this through top to bottom. Um, and then also generate uh the scripts, too. Sorry about that. My fire alarm just went off."
+ },
+ {
+  "local_id": "EV-0570",
+  "excerpt": "That was pretty fun. Anyway, where we at? Woman x mask. You need this. Midnight clay pulls out all the gunk out overnight. No effort. I just wake up glowing. Generally, the best thing in my routine right now. When in scalp oil, my hair stylist asked what I've been doing differently. It's this rosemary and mint scalp oil. A few drops for a bed and my scalp actually feels alive again. So,"
+ },
+ {
+  "local_id": "EV-0571",
+  "excerpt": "this is kind of neat. You can see we're actually implementing that logic where the shorter word ones are 8 seconds, the longer word ones are 10. So, yeah, we're we're going through and generating. It looks like there was some issues with some sort of concurrency limit. Looks like you can only have eight jobs at the same time, whereas it is firing 12 at once cuz we did four pairings times"
+ },
+ {
+  "local_id": "EV-0572",
+  "excerpt": "three candidates. So, that's okay. We're just going to kind of update the skill to reflect that. And it looks like that's what it is doing. Um, candidates within a script should submit and wait in parallel for speed capped at three concurrent. So, we're already six done. We're just going to retry the two failed man pairings one at a time to avoid the concurrency cap, which is kind of neat."
+ },
+ {
+  "local_id": "EV-0573",
+  "excerpt": "[gasps] Um, I'm just going to take a look at this right now. Cool. We actually have the videos up here now that I could test. So, >> you need this midnight clay pulls all the gunk out overnight. No effort. just wake up glowing. >> Cool. Thank you. >> You need this. Midnight clay pulls all the gunk out."
+ },
+ {
+  "local_id": "EV-0574",
+  "excerpt": ">> And see how we're testing different angles. I should move my fat head around. See how we're testing out different angles now? Uh we have different like product shots. You know, this time we're actually showing this. Her hair looks a little bit different. She's actually putting this on in this one. This is the sort of creativity that we want."
+ },
+ {
+  "local_id": "EV-0575",
+  "excerpt": ">> You need this. Midnight clay pulls all the gunk out. >> Cool. And I like how we're having a lot more adherence to the thing. Uh I think Do we have anyone with men? My hair stylist asked My hair stylist asked what I've been. It's this rosemary and mint scalp oil. A few drops before bed and my scalp actually feels alive again. >> That's cool. Yeah. Yeah. And the timing"
+ },
+ {
+  "local_id": "EV-0576",
+  "excerpt": "is basically perfect. >> My hair stylist asked what I've been doing different. >> Okay. And so some of these are just going to sound weird, kind of more staccatoy, but that's okay. We're just frontloading again the the gens. Um so I'm just going to go and find the ones of the dudes. Looks like we got them right over here."
+ },
+ {
+  "local_id": "EV-0577",
+  "excerpt": ">> I was skeptical about clay masks, but this one's different. Midnight clay works overnight. There is no mess. No mess at all. And I wake >> No mess. No mess at all. >> Wake up looking like I >> Anyway, obviously that >> I was skeptical about clay masks, but this one's different. Midnight clay works overnight. No mess. And I wake up"
+ },
+ {
+  "local_id": "EV-0578",
+  "excerpt": "looking like I actually slept well and startardy. I was >> don't know what the hell that was. You know what's really interesting? I think there's just less training data out there on men. Um and so as a result, the the male ads tend to always >> I was skeptical about clay >> kind of suck more. This audio is really good"
+ },
+ {
+  "local_id": "EV-0579",
+  "excerpt": ">> masks, but this one's different. Midnight clay works overnight, no mess, and I wake up looking like I actually slept well. >> That's cool. Yeah, I like this one the best. So, you can see how, you know, we need to generate multiple, otherwise we're not going to get like good good uh shots. And who knows, maybe this works better. Maybe having some handsome dude,"
+ },
+ {
+  "local_id": "EV-0580",
+  "excerpt": "you know, show off the clay mask is going to work better for a specific core audience. You never really know, right? Anyway, so what we have now, we actually have a reproducible skill uh that does this. And uh as mentioned, you know, I think you could realistically run this, I don't know how many times it was. I don't know what our math was, but a lot. Uh you could have run this realistically"
+ },
+ {
+  "local_id": "EV-0581",
+  "excerpt": "like every morning, let's say, on something like 10 gens, and then by the end of the month, you would have significantly alleviated the bottleneck in a lot of ad uh production flows. And yeah, you know, well, you can experiment with making this better. You could have like some slight audio track in the background. You could make it a little bit noisy. You could add like grain to"
+ },
+ {
+  "local_id": "EV-0582",
+  "excerpt": "the videos to maybe remove some of the more characteristic AI components. Like I'd say his skin is just a tiny bit too smooth. It's almost like a little too real. Um yeah, you could have like automated processes that check to see, hey, you know, is the text totally legible on the midnight clay mask? Hey, anything weird going on with the person? What's the start frame here? Right? Like"
+ },
+ {
+  "local_id": "EV-0583",
+  "excerpt": "cuz it looks like for whatever reason it screws up the start frame on this one. Maybe it's like, oh, every video cut in like three frames so that we always start at a good one. Or I don't know, like if a person doesn't have anything to say, just kind of smile and like wave, right? >> [sighs and gasps] >> I'll leave it there because I think you"
+ },
+ {
+  "local_id": "EV-0584",
+  "excerpt": "guys probably know where to go. Um, all I'm going to do now is do the same thing. Transform it from a loop uh from a skill into a loop and then from a loop into a routine. Exact same idea just with the Higsfield connector instead. And um yeah, then when we're done uh I will have successfully walked you guys through the process end to end of generating a very in-depth series of"
+ },
+ {
+  "local_id": "EV-0585",
+  "excerpt": "prompts, skills, loops, and routines. Okay. Now, in order to connect HGfield, what you have to do is go up here to MCP and CLI, copy this URL. Okay. Then go back to Claude. What we'll do is we'll scroll all the way down to connectors. Under add, we'll go add custom connector. Add this as the URL and call it Higsfield. And then you will now essentially automatically connect to"
+ },
+ {
+  "local_id": "EV-0586",
+  "excerpt": "Higsfield via their OOTH flow. That just means it's going to open up a little window, which it just did in my other screen. So I'm just going to bring that puppy over here. Then you can actually proceed with the login. And now this is just another version of what we did earlier. It's just now we actually have the ability to connect to this through um our cloud routines as well. Okay,"
+ },
+ {
+  "local_id": "EV-0587",
+  "excerpt": "great. So now that we have this uh if we go back to routines and then at the top right hand corner go new routine can then go cloud. And what's cool is we now have the ability to connect our Higsfield connector. It'll actually automatically populate um every time we do this. And so then I can go down here to our prompt and then I can just ask it hey make this a routine. Awesome. And"
+ },
+ {
+  "local_id": "EV-0588",
+  "excerpt": "now I just told it make me the routine. What it's doing is creating a tople Google Drive folder for me. This is where all of this information is going to be stored. Now, it's actually uploading the raw source images. Um, the ones that I was showing you guys earlier of the men and the woman and then the clay mask and then the rosemary oil. So, what it's doing is it's going to upload"
+ },
+ {
+  "local_id": "EV-0589",
+  "excerpt": "via some tool. Uh, this is I guess some base 64 representation of my file. I don't know. You can turn images into like big long strings and then you can send them over over the wire. Um, and that's what this tried to do. It didn't do it a very good job though. Uh, and now it's actually downsizing the images, sending them over, and then it's going to, you know, base 64 encode, upload"
+ },
+ {
+  "local_id": "EV-0590",
+  "excerpt": "each. All right. And now we have generated both the uh, loop and the routine. And so you guys could see that um, right over here. If we go back to routines, we have UGC video ads daily batch. So we can connect, you know, the platforms that we need via custom connectors right over here. We also have cloud code remote, which I think is just what Cloud Code always inserts now if"
+ },
+ {
+  "local_id": "EV-0591",
+  "excerpt": "you want to be able to contact it. Um, and you can see the step-by-step file. So, list the files in the asset drive folder. Uh, for simplicity, that is this folder right here. So, you can see that like they're images that we are providing of the rosemary oil of the product and the people. So, maybe we could make it easier by subdividing that. I don't know. Determine which"
+ },
+ {
+  "local_id": "EV-0592",
+  "excerpt": "assets are new since the last run. So, it actually checks to see is there a dated uh subfolder that exists within the AI video gens in drive. So, it's not this folder, it's another folder. If there is no dated subfolder, it'll actually go through and then build the cross of every influencer times product. So two influencers, two products means four pairings. For each pairing, it'll"
+ },
+ {
+  "local_id": "EV-0593",
+  "excerpt": "generate a hero frame, write 10 adcript candidates, select the best ones, determine the video duration by word count using a rule, generate three video candidates for the pairing, then actually insert all of that into the Google Drive link. So this is how you develop a small granular application in your company using cloud code. Uh this is going to run for cents on the dollar"
+ },
+ {
+  "local_id": "EV-0594",
+  "excerpt": "every day. The credits that we're spending on Higsfield gens are going to cost more than that obviously. Um but that's okay. Uh you know this is still way cheaper than actually having like a production studio go find influencers to do this with, right? And uh yeah you know you guys now have essentially a full endto-end pipeline allowing you guys to do this for whatever product you"
+ },
+ {
+  "local_id": "EV-0595",
+  "excerpt": "guys want. So that is a end to end step-by-step walkthrough of how to basically go through that full like prompt to routine process for you know creative ad generation. I want you guys to know probably looking at the time and you're like looking at the skills that we still have to build and and so on. Um I decided to go really in depth on that first one cuz I wanted you guys to see"
+ },
+ {
+  "local_id": "EV-0596",
+  "excerpt": "everything involved in the actual production process. Future ones are going to be a lot faster because now that you guys understand how to go from a prompt to a skill, a skill to a loop, and a loop to a routine, we don't actually need to do this whole process every single time. Instead, what I'll do is I'll math it out, make it a skill, and then just automate the process of"
+ },
+ {
+  "local_id": "EV-0597",
+  "excerpt": "turning it into a routine, just using a little prompt template. I'm also going to just proceed a little bit faster, and maybe explain things a little bit less, and just show you guys what the process of building it looks like. Um, just so that you know, you guys aren't sitting here forever waiting for an agent to finish. Uh, and now that you guys understand how kind of realistic the"
+ },
+ {
+  "local_id": "EV-0598",
+  "excerpt": "weight times are and stuff like that, I think we'll all be able to proceed a little bit faster. Hopefully you guys have appreciated this so far. Let's move on to our next major step. What is that next major step, you might be asking? Well, now that we're done with creative generation, which is that top offunnel sort of step, I want to work our way down just one more substep before we get"
+ },
+ {
+  "local_id": "EV-0599",
+  "excerpt": "to middleunnel with the generation of personalized copy. So, text, templates, and really outreach. And uh I'm going to show this to you guys in the context of two major you know assets. The first is going to be like a newsletter campaign where we're using AI to automat automate the process of filling out variables. And the second is going to be like an outbound email campaign where we're"
+ },
+ {
+  "local_id": "EV-0600",
+  "excerpt": "using AI to automate the process of entering in little icebreaker snippets and like custom assets and stuff like that. So all of this is in the pursuit of making copy sound like you wrote it yourself even though you probably didn't. And so if you think about it, okay, these newsletters that we're usually sending out now for um flash sales and, you know, multi-step sort of"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

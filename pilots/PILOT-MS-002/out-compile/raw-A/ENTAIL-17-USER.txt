@@ -1,0 +1,382 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0401",
+  "claim_text": "The revised short plausible reasons are described as far better and also way shorter than the previous versions.",
+  "evidence": [
+   {
+    "local_id": "EV-0665",
+    "excerpt": "looking over here at the update. So you guys could see now a short plausible reason is you're pushing North P partners past 20K a month. You want to run lead genen for LuminOps that runs while you sleep. You and your co-founder want a lead genen engine. You're launching Harbor Digital's automation agency. You got curious how Claude could sharpen your cold emails. These are all"
+   },
+   {
+    "local_id": "EV-0666",
+    "excerpt": "far better. They're also way shorter. And typically the fewer AI generated words you have in your email as a proportion of total words, the lower the probability is. Anybody would be like, \"Wait a second, did AI write that?\" Like your biggest challenge is keeping up with how fast AI changes. That's really cool, right? If you consider that in the context of our U template, it's like, I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0402",
+  "claim_text": "In Kit you have to add what's called a custom field in order to use these expanded personalization variables, and the speaker thinks the same might be true for Mailchimp.",
+  "evidence": [
+   {
+    "local_id": "EV-0668",
+    "excerpt": "going to um basically upload this list and then like pre preview this so that we could see, you know, whether or not this is what we want it to look like. So, I'm just going to go over to subscribers and I'm going to hide the rest of this from you. Now, in order to do that in Kit, you have to add what's called a custom field. And I think the same might be true for Mailchimp. Um,"
+   },
+   {
+    "local_id": "EV-0669",
+    "excerpt": "kind of annoying, but anyway, we're going to go to the subscribers tab here. Okay. Now, I'm going to go and add a custom field here. And if you guys think about it, we needed how many did we need? Okay. And then eventually, you will have all of these fields. So, first name, just going to be first name. Uh, last name. We don't actually have a last name, which is unfortunate. Probably"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0403",
+  "claim_text": "The three fields wanted are: short plausible reason why they signed up, short custom reason why it's useful, and paraphrase challenge.",
+  "evidence": [
+   {
+    "local_id": "EV-0670",
+    "excerpt": "shouldn't have added that. There's a bunch of this stuff down here. What we really want is we just want these, right? Like we want short plausible reason why they signed up. We want a short custom reason why it's useful. And then paraphrase challenge right here. Then I'm going to go next. And you can see that we can identify this import with a new tag. Sorry for zooming in so"
+   },
+   {
+    "local_id": "EV-0672",
+    "excerpt": "double check why. Probably the variable syntax is a little bit different. Uh, I think if I go here. Yeah. So, short plausible reason why they signed up is almost certainly different. I think they just happen to use a different one. So, that's fine. There you go. Looks like there's just a space between the two and it's uh subscriber and then all of it is lowercase. This is short custom reason"
+   },
+   {
+    "local_id": "EV-0673",
+    "excerpt": "why it's useful. We'll add that in. And then this one here is paraphrase challenge. Cool. So now if I go preview and now if I preview as Marcus at North Partnersh you guys could see it says hey Marcus welcome to Maker School extremely excited to have you with us especially because you're pushing North Partners past 20K a month with automation. This down here is a second one particularly"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0404",
+  "claim_text": "When variables did not render in the preview, the cause was that the variable syntax was different (a space between the two words, prefixed with subscriber and all lowercase).",
+  "evidence": [
+   {
+    "local_id": "EV-0671",
+    "excerpt": "much. I just don't want this to, you know, leak a bunch of personal information. Okay. And now what I'm going to do is I just want to preview this so I can make sure that we're actually getting the email. It looks like there's just some issue here with the variable. Well, it did get the first name, but it didn't get any of those expanded ones. So, I'm just going to"
+   },
+   {
+    "local_id": "EV-0672",
+    "excerpt": "double check why. Probably the variable syntax is a little bit different. Uh, I think if I go here. Yeah. So, short plausible reason why they signed up is almost certainly different. I think they just happen to use a different one. So, that's fine. There you go. Looks like there's just a space between the two and it's uh subscriber and then all of it is lowercase. This is short custom reason"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0405",
+  "claim_text": "It's always good to test these things: preview the email as specific subscribers to verify the personalization renders correctly.",
+  "evidence": [
+   {
+    "local_id": "EV-0671",
+    "excerpt": "much. I just don't want this to, you know, leak a bunch of personal information. Okay. And now what I'm going to do is I just want to preview this so I can make sure that we're actually getting the email. It looks like there's just some issue here with the variable. Well, it did get the first name, but it didn't get any of those expanded ones. So, I'm just going to"
+   },
+   {
+    "local_id": "EV-0675",
+    "excerpt": "going to exit out of that. And then then we'll do one more test just to make sure that this does indeed work. Uh, where's our newsletter? Rachel at LuminOps. So, we'll go back to kit and then I'll go to the preview button. Then, always good to test these things, right? Especially because you want lead genen for Lumops that runs while you sleep. particularly useful in your case because our"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0406",
+  "claim_text": "After proving the concept and verifying it works through a prompt, the next step is to systematize it.",
+  "evidence": [
+   {
+    "local_id": "EV-0676",
+    "excerpt": "day-to-day structure turns lessons into shipped automations. I know a big challenge for you is finding time to implement what you learn. Cool. That looks fantastic to me. Awesome. So, what we've done is we've done sort of the proof of concept and we verified that we can do this through a prompt. So, we have to do now is we have to systematize it. How do you systematize it? Well,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0407",
+  "claim_text": "One simple systematization is connecting the Kit API key to Claude so that a skill runs once a day (a 24-hour loop), points at the new email subscribers from the previous 24 hours, enriches them with the custom fields, and puts them into the campaign that publishes the broadcast message.",
+  "evidence": [
+   {
+    "local_id": "EV-0677",
+    "excerpt": "there are like a majillion different ways you could. Um, but a simple one that I think would make sense is if we connect the kit API, okay, so whatever uh their API key is in the back end to Claude and what the skill does is every day, okay, we pointed towards the new email subscribers and like the previous, I don't know, let's just say like 10 hours or something like that, 24 hours,"
+   },
+   {
+    "local_id": "EV-0678",
+    "excerpt": "maybe once a day, uh, 24 hours in a loop, I think would make sense. And then it goes through and actually enriches. So, it adds the custom fields, these why they signed up, the biggest challenge, the, you know, reasons why it's useful. And then it is now in the campaign set that publishes that broadcasted message. So, I don't know entirely if this is possible, but we're going to have Claude"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0408",
+  "claim_text": "Claude's proposed approach creates a tag called 'maker school welcome pending', tags new subscribers with it via an API call, updates the draft broadcast to filter on that tag, sets send_at to now, and removes the tag after sending, which the speaker thinks prevents double messages.",
+  "evidence": [
+   {
+    "local_id": "EV-0681",
+    "excerpt": "So now uh what I wanted to do is just go out and do a little bit of research for me. So it's come up with a couple of ways to get what I asked for done. First it'll create a tag called maker school welcome pending. It'll then tag new subscribers with it via some API call. Then it'll update the draft broadcast to filter on that tag and then send the set the send at to now and then in doing so"
+   },
+   {
+    "local_id": "EV-0682",
+    "excerpt": "it'll send after it's done it'll just remove the maker school welcome pending tat. That's kind of neat and I think that like prevents double messages and stuff like that. So here's what it is doing uh every single day generating these short fields from the profile data, same logic as the sheets exercise and so on and so forth. It will require my kit API key and you know a bunch of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0409",
+  "claim_text": "The MCP does not cover what was needed, so the API key route had to be used instead.",
+  "evidence": [
+   {
+    "local_id": "EV-0683",
+    "excerpt": "other information about it. So I'm just going to wait until it's done and then give it all that info. So that's fairly easy to do. You just go to settings and then I think we could probably do this via MCP too now that I think about it. Okay, never mind. I'm just taking a look at this and it's saying that the MCP does not actually cover what we need it for which is kind of annoying. So, we"
+   },
+   {
+    "local_id": "EV-0684",
+    "excerpt": "are going to have to do that um you know API key thing. Unfortunate. Just one of those things we tried. Uh we'll go back to the dev tools. And as you guys can see, I have an API key here. I'm just going to go V4. We're going to call this for YouTube. And I'm calling it that because I am going to change this immediately after uh the video. Okay. So, first we need to disconnect the kit"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0410",
+  "claim_text": "If you want to use the API key route, you have to first disconnect the Kit API integration and make sure it's not part of your flow.",
+  "evidence": [
+   {
+    "local_id": "EV-0684",
+    "excerpt": "are going to have to do that um you know API key thing. Unfortunate. Just one of those things we tried. Uh we'll go back to the dev tools. And as you guys can see, I have an API key here. I'm just going to go V4. We're going to call this for YouTube. And I'm calling it that because I am going to change this immediately after uh the video. Okay. So, first we need to disconnect the kit"
+   },
+   {
+    "local_id": "EV-0685",
+    "excerpt": "API. Unfortunate, but you just have to make sure that it's not part of your flow if you want to use the API key route. Then, uh I'm going to go add new conversation. Go to local. I can click on this little thing and I'll call it kit API key equals that. Save it. I'll say okay. Added kit. Let's just say what did I actually call this thing for Christ sake."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0411",
+  "claim_text": "The API key was named 'for YouTube' and the speaker states he is going to change it immediately after the video.",
+  "evidence": [
+   {
+    "local_id": "EV-0684",
+    "excerpt": "are going to have to do that um you know API key thing. Unfortunate. Just one of those things we tried. Uh we'll go back to the dev tools. And as you guys can see, I have an API key here. I'm just going to go V4. We're going to call this for YouTube. And I'm calling it that because I am going to change this immediately after uh the video. Okay. So, first we need to disconnect the kit"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0412",
+  "claim_text": "After adding the Kit API key as a local credential, verify it by asking the assistant to make a harmless read-only query against the Kit API in the new conversation thread, since the assistant cannot natively see the local environment variable.",
+  "evidence": [
+   {
+    "local_id": "EV-0685",
+    "excerpt": "API. Unfortunate, but you just have to make sure that it's not part of your flow if you want to use the API key route. Then, uh I'm going to go add new conversation. Go to local. I can click on this little thing and I'll call it kit API key equals that. Save it. I'll say okay. Added kit. Let's just say what did I actually call this thing for Christ sake."
+   },
+   {
+    "local_id": "EV-0686",
+    "excerpt": "Kit API key. Added kit API key as a local credential. See if you can use it for something. Um we'll see whether or not it actually has access to that. So it's going to try hitting a harmless readonly kit endpoint. If it is not in this shell, the probability of this occurring uh sorry, the situation in which it does not have"
+   },
+   {
+    "local_id": "EV-0687",
+    "excerpt": "access to these things is probably just because it's in the same conversation thread as it was before and we just added this in technically a new conversation thread. And then it will say, can you verify if kit API key exists? Make a random query using that variable. I added it to local environment. you won't natively be able to see it. So, just make a kit query."
+   },
+   {
+    "local_id": "EV-0688",
+    "excerpt": "And now what it's going to do is it's going to just try to call the kit API key and then um you know it'll essentially allow us to verify in our new thread whether or not that's fine. So now it's testing a query against the kit API to confirm that it is valid. Cool. There you go. So it just actually did so and everything is working fine. What I'm going to do now is I'm just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0413",
+  "claim_text": "Conversation context can be carried across threads by copying the entire conversation history from the previous thread and pasting it into the new one.",
+  "evidence": [
+   {
+    "local_id": "EV-0688",
+    "excerpt": "And now what it's going to do is it's going to just try to call the kit API key and then um you know it'll essentially allow us to verify in our new thread whether or not that's fine. So now it's testing a query against the kit API to confirm that it is valid. Cool. There you go. So it just actually did so and everything is working fine. What I'm going to do now is I'm just"
+   },
+   {
+    "local_id": "EV-0689",
+    "excerpt": "going to paste our entire conversation history from the last one which I can find right over here all the way down to the bottom. Then go all the way back up here and paste that in. And in that way I have continued the conversation. I've just sort of taken it out of one thread and then pumped it into another thread. So uh what are we going to do here? Um code review first then a readonly"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0414",
+  "claim_text": "Blasting a bunch of fake emails is how you hurt your deliverability, so the speaker avoided sending to the fake emails he added.",
+  "evidence": [
+   {
+    "local_id": "EV-0690",
+    "excerpt": "verification pass. Yeah, sure. That sounds good. Okay. And we got it. Um, we now have the system that automates the process of adding these paraphrase challenges, short custom reasons why it's useful, and short plausible reasons why they signed up to emails. Um, I will note that I did add a bunch of fake emails in order to do this and I don't want to blast a bunch of fake emails cuz"
+   },
+   {
+    "local_id": "EV-0691",
+    "excerpt": "that is how you hurt your deliverability. Uh, but this is now actually pulling real data based off challenges from my list and then it is enriching it in this way. Um, so I have that set up right now as a skill, which is cool, but obviously I want to go past just the skill and then I want to eventually turn this into like a fully automated system that just fires once a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0415",
+  "claim_text": "A skill that runs locally can be extended to a loop that runs locally on a schedule, or turned into a routine, and the routine requires manually provisioning the Kit API key access in the cloud environment via the gear icon.",
+  "evidence": [
+   {
+    "local_id": "EV-0691",
+    "excerpt": "that is how you hurt your deliverability. Uh, but this is now actually pulling real data based off challenges from my list and then it is enriching it in this way. Um, so I have that set up right now as a skill, which is cool, but obviously I want to go past just the skill and then I want to eventually turn this into like a fully automated system that just fires once a"
+   },
+   {
+    "local_id": "EV-0692",
+    "excerpt": "day on my command. Um, and so, you know, obviously we know how to do that via loops because I just showed you guys how to do that. Um, you could very easily extend what I did via skill that runs locally to a loop that runs locally as well, just on a schedule. But, uh, now we just need to turn it into a routine. And if we head over to the routines tab, you can see that we now have the routine"
+   },
+   {
+    "local_id": "EV-0693",
+    "excerpt": "created. Run today's Maker School welcome email personalization batch against Kit contacts. This finds new Maker School subscribers, generates three personalized merge fields per subscriber, writes them into Kit custom fields, and sends the existing welcome broadcast to exactly that day's new signups. Uh, you have no local file system access, no blah blah blah. And"
+   },
+   {
+    "local_id": "EV-0694",
+    "excerpt": "then it gives me a bunch of information. It gives it a bunch of information rather about the kit API_key which I just provisioned it access to by heading over to you know a new routine going into the cloud environment and then um actually like manually provisioning it that access. So you can do so just by clicking on cloud and then same thing that little like gear icon."
+   },
+   {
+    "local_id": "EV-0695",
+    "excerpt": "Hold on a second so I can move my head. That little gear icon just to the right of that and that'll open up a thing that allows you to select your API key. Add them in just like we did locally and then uh yeah you're you're good to go. So yeah, I mean like we we've done it we've done this now I think a couple of times and most people here are probably significantly more familiar with the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0416",
+  "claim_text": "The recommended way to build these automated systems is to hammer it out manually over and over until you get what you want, then turn it into a repeatable process; start locally and eventually have it on the cloud.",
+  "evidence": [
+   {
+    "local_id": "EV-0695",
+    "excerpt": "Hold on a second so I can move my head. That little gear icon just to the right of that and that'll open up a thing that allows you to select your API key. Add them in just like we did locally and then uh yeah you're you're good to go. So yeah, I mean like we we've done it we've done this now I think a couple of times and most people here are probably significantly more familiar with the"
+   },
+   {
+    "local_id": "EV-0696",
+    "excerpt": "workflow than they were when they started. This is how I would recommend you build these automated systems. You have to hammer it out time and time again manually over and over and over until you eventually get what you want. But when you do get what you want, turning it into like a repeatable process is quite simple. Start locally, eventually you'll have it on the cloud."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0417",
+  "claim_text": "In the cold outreach flow, data is scraped from services like LinkedIn Sales Navigator and connected to services such as Vein, Air Scale, or Amplify, producing raw rows that Claude reads to write the fuzzy variables before inserting into a templated platform.",
+  "evidence": [
+   {
+    "local_id": "EV-0698",
+    "excerpt": "them a many chat link and them opting into an offer. Well, over here on our cold outreachbased flow, which is another form of marketing, um what we do is we just scrape their data from services like LinkedIn Sales Navigator. Then, you know, we connect them to a bunch of these different services. Vein is one of them. Air scale is another one. Amplify is another one. You get a"
+   },
+   {
+    "local_id": "EV-0699",
+    "excerpt": "bunch of raw rows and then cloud will just read each row and write the fuzzy variables before inserting into some sort of templated platform. Big difference is the templated platforms are just different. Right? So um as opposed to me using kit for instance today I'm going to use a cold email platform called instantly. Okay. And this is just the exact same thing that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0418",
+  "claim_text": "The big difference between the newsletter and cold outreach flows is that the templated platforms are different; instead of Kit, a cold email platform called Instantly is used, which does the exact same thing but sends to people who never opted in.",
+  "evidence": [
+   {
+    "local_id": "EV-0699",
+    "excerpt": "bunch of raw rows and then cloud will just read each row and write the fuzzy variables before inserting into some sort of templated platform. Big difference is the templated platforms are just different. Right? So um as opposed to me using kit for instance today I'm going to use a cold email platform called instantly. Okay. And this is just the exact same thing that"
+   },
+   {
+    "local_id": "EV-0700",
+    "excerpt": "kit does. It's just instead of sending it to people that have already opted in uh to a mailing list and they want to get and receive email from me. This is for people that have never met me in their entire lives and they don't know who I am and I'm trying to sell them regardless. And so I used to do this way back in the day um quite a bit. You know, I would go doortodoor and then"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0419",
+  "claim_text": "In the speaker's experience, the degree to which you personalized your comms was the number one determining variable of how likely people were to reply: totally templated messages got maybe 1 to 2% reply rate, while personalized ones got about 5%, roughly 200 to 250% of the revenue.",
+  "evidence": [
+   {
+    "local_id": "EV-0701",
+    "excerpt": "when that eventually failed, I would pick up the phone and I would dial and then when that would eventually fail, I would start sending like cold outreach via emails and DMs on X and Instagram and all this stuff. And um the degree to which you personalized your comps was like the number one determining variable to how likely people were to reply. You know, if I sent a 100 DMs or emails and"
+   },
+   {
+    "local_id": "EV-0702",
+    "excerpt": "they were totally templated and there was nothing personalized. It was literally just like, I don't know, even like, \"Hey, Nick, I have something that could help you or something,\" I would get maybe 1 to 2% of people replying. But if I said, \"Hey, Nick, love your last vid, man.\" Or, \"Big fan of XYZ business, man. I want to help you with this thing, and I think it makes sense"
+   },
+   {
+    "local_id": "EV-0703",
+    "excerpt": "given what you're currently focusing on,\" I would get like a 5% reply rate. And so, that's like 200 to 250% of the revenue if you just zoom out. uh because every dollar I made was entirely contingent on cold outreach. If I got 2.5 times better at cold outreach, I would make 2.5 times the money. And you think about that proposition with a lot of companies that are doing doortodoor"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0420",
+  "claim_text": "By weaving some form of personalization into your process you can massively increase the profitability of a business doing door-to-door, cold emails, cold DMs or cold videos, and it is very much a reach-based activity.",
+  "evidence": [
+   {
+    "local_id": "EV-0703",
+    "excerpt": "given what you're currently focusing on,\" I would get like a 5% reply rate. And so, that's like 200 to 250% of the revenue if you just zoom out. uh because every dollar I made was entirely contingent on cold outreach. If I got 2.5 times better at cold outreach, I would make 2.5 times the money. And you think about that proposition with a lot of companies that are doing doortodoor"
+   },
+   {
+    "local_id": "EV-0704",
+    "excerpt": "cold emails, cold DMs, cold videos, whatever. Um by weaving some form of personalization into your process, you can massively increase the profitability of that business. And it is very much an R or reachbased activity, too. So that's what I'm going to show you guys how to do here. Um, to make a long story short, you basically start with the same flow. You will usually have their name almost"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0421",
+  "claim_text": "In cold outreach you will usually have the prospect's name, usually some company information, and sometimes scraped bios and posts from social platforms like LinkedIn, but the speaker will show how to do it without the scraped posts.",
+  "evidence": [
+   {
+    "local_id": "EV-0704",
+    "excerpt": "cold emails, cold DMs, cold videos, whatever. Um by weaving some form of personalization into your process, you can massively increase the profitability of that business. And it is very much an R or reachbased activity, too. So that's what I'm going to show you guys how to do here. Um, to make a long story short, you basically start with the same flow. You will usually have their name almost"
+   },
+   {
+    "local_id": "EV-0705",
+    "excerpt": "certainly. Um, we'll usually have some information about their company. Sometimes we'll have scraped bios and posts on social media platforms like LinkedIn, but I'll show you guys how to do this without it. And then we'll have, you know, the icebreer icebreaker actually written by. So, I don't know, let's say this is some, you know, dental firm and there are a bunch of posts that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0422",
+  "claim_text": "You can have AI take scraped post information and write a short punchy icebreaker (e.g. 'Hey, loved your post on hiring hygienists' or 'Congrats on the second crew'), which then goes right into the rest of your copy.",
+  "evidence": [
+   {
+    "local_id": "EV-0705",
+    "excerpt": "certainly. Um, we'll usually have some information about their company. Sometimes we'll have scraped bios and posts on social media platforms like LinkedIn, but I'll show you guys how to do this without it. And then we'll have, you know, the icebreer icebreaker actually written by. So, I don't know, let's say this is some, you know, dental firm and there are a bunch of posts that"
+   },
+   {
+    "local_id": "EV-0706",
+    "excerpt": "uh talk about hiring hygienists or something like that and how important it is to do X, Y, and Z. Will you hire a hygienist? Is that how you say that? Or hygienists. Okay. Anyway, um what you can do is you can have AI take that information and then write a short punchy icebreaker that's literally like, \"Hey, loved your post on hiring hygienists.\" Boom. And then it just goes"
+   },
+   {
+    "local_id": "EV-0707",
+    "excerpt": "right into the rest of your copy. Or in this case with Omar at Peak Reefer, uh Peak Roofing. Congrats on the second crew. Imagine you see that immediately after hiring a second crew and making a post about it. You're like, \"Hey, this person knows who I am. This person's actually watched and read my content. This isn't totally cold outrage. This is somebody that like meaningfully has a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0423",
+  "claim_text": "The speaker's best email copy so far had over a 20% positive reply rate using a method like this combined with conference leads, and he has also had campaigns at a 2 to 4% reply rate that still made hundreds of thousands of dollars.",
+  "evidence": [
+   {
+    "local_id": "EV-0708",
+    "excerpt": "connection with me.\" your open rates and your reply rates are going to be through the roof. Ain't no way you're getting an X on that message. Uh I mean obviously you still will because you know people are quite discerning these days, but it'll certainly improve the odds with which you see success. My best email copy on planet Earth so far has had over a 20% reply rate. And uh you know I was"
+   },
+   {
+    "local_id": "EV-0709",
+    "excerpt": "using a method like this combined with conference leads which are leads that are going to the same conference as you. I had a bunch of information about their companies. I was able to turn that into a very convincing, very personalized flow. And yeah, I had like a 20 something% reply, a positive reply rate, which means like one in four people that I emailed would send me back something"
+   },
+   {
+    "local_id": "EV-0710",
+    "excerpt": "like, \"Hey, Nick. Yeah, sure. That sounds great, man. Let's chat. Do you have any idea how much money I made from that list?\" It's it's insane. I've also had cold email campaigns that are much more conservative at a 2 to 4% reply rate, and I've still made hundreds of thousands of dollars from them. So, it's not that you can't at a sufficient scale make money from cold email, even if your"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0424",
+  "claim_text": "You can make money from cold email at sufficient scale even if reply rates are poor, but you have to be smart about how you do the fuzzy variable generation.",
+  "evidence": [
+   {
+    "local_id": "EV-0710",
+    "excerpt": "like, \"Hey, Nick. Yeah, sure. That sounds great, man. Let's chat. Do you have any idea how much money I made from that list?\" It's it's insane. I've also had cold email campaigns that are much more conservative at a 2 to 4% reply rate, and I've still made hundreds of thousands of dollars from them. So, it's not that you can't at a sufficient scale make money from cold email, even if your"
+   },
+   {
+    "local_id": "EV-0711",
+    "excerpt": "reply rates are kind of poor. It's just you have to be smart about how you do this sort of fuzzy variable generation. Okay. So, yeah, that's what we're going to do and it's going to be sweet. So, first things first, I'm just going to exit out of these kit pages because uh Oh, and I should probably resend my API key now that I think about it. So, I'll do that after. Um, first things first,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0425",
+  "claim_text": "Leads can be obtained from a scraping platform like Amplify (Pipeline Labs Leadfinder with emails, Apollo, Zoom Info), filtering by job title, seniority, email status and phone status, at roughly $1.50 to $180 per 1,000 leads.",
+  "evidence": [
+   {
+    "local_id": "EV-0712",
+    "excerpt": "you know, we got to get leads from somewhere. A really simple and easy place to get leads from is this service here on uh a scraping platform called Amplify. I use these ones all the time. It's Pipeline Labs Leadfinder with emails, Apollo, Zoom Info. Basically, it's like a big database of leads and then you just look for the leads based off your filters. So, you'll have"
+   },
+   {
+    "local_id": "EV-0713",
+    "excerpt": "filters like job title, I don't know, I'm looking for founders. Seniority, okay, I'm looking for seuite people. Email status, you know, needs to be high quality or deliverable. Phone status, okay, this needs a phone so I can also cold call them and so on and so forth. And then you end up just paying for um I guess a $1.50 to $180 per 1,000 leads in order to, you know, actually like"
+   }
+  ]
+ }
+]

@@ -1,0 +1,366 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0176",
+  "claim_text": "The procedural template outputs won't be the highest quality right off the bat and will have to be massaged a little bit, but the end result is a repeatable template that can produce e.g. 400 ads on demand.",
+  "evidence": [
+   {
+    "local_id": "EV-0276",
+    "excerpt": "platforms like image magic and stuff like that. So, these aren't going to be like the highest quality things right off the bat. We're going to have to massage them a little bit. But, the idea is at the end of it, we're going to have a pretty repeatable template and then anytime we want to come up with a different ad, boom, we're just going to like say, \"Hey, you know, come up with"
+   },
+   {
+    "local_id": "EV-0277",
+    "excerpt": "400 ads.\" And it'll do. So the benefit to that as well is it's very cheap. You know there are image generation platforms out there which I am going to show you guys how to do after this. Um but these image generation platforms also cost a fair amount of money. Uh if it costs me $2 let's say to generate an ad and I want to generate a 100 of those. That's $200 every time. And while"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0177",
+  "claim_text": "Image generation platforms cost a fair amount of money — at $2 per ad, generating 100 ads costs $200 every time — which is a fair amount for most viewers, whereas the procedural approach is very cheap and more accessible.",
+  "evidence": [
+   {
+    "local_id": "EV-0277",
+    "excerpt": "400 ads.\" And it'll do. So the benefit to that as well is it's very cheap. You know there are image generation platforms out there which I am going to show you guys how to do after this. Um but these image generation platforms also cost a fair amount of money. Uh if it costs me $2 let's say to generate an ad and I want to generate a 100 of those. That's $200 every time. And while"
+   },
+   {
+    "local_id": "EV-0278",
+    "excerpt": "$200 every time for something that is a top offunnel growth lever like ads might not make that much difference to like a $10,000 a day business. You know it's a fair amount I think for most people that are probably watching this. And yeah, I wanted to make sure that it was about as accessible as humanly possible. Okay, so what it's doing is it's actually generating an HTML template to show me"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0178",
+  "claim_text": "Give Claude feedback on the first output and have it generate a web page with sliders to quickly make changes and alter settings until they are exactly how you want them.",
+  "evidence": [
+   {
+    "local_id": "EV-0281",
+    "excerpt": "to be pretty clean. So, what I'm going to do next is I'm just going to give it a bunch of feedback on this and see how well it did. I'm also going to have it generate me a web page that I can very quickly use to uh, make changes and alter things. So, first thing I'm going to do is I'm just going to hold command D because that's how you record. Hey, this is an okay job. I thought we"
+   },
+   {
+    "local_id": "EV-0283",
+    "excerpt": "like that. I'll show you or I will use an image model later. For now, I want to do things entirely procedurally. I also think the text spacing is a little bit off and uh yeah, I just want to significantly improve the quality of this first. So, in order to do so, could you create me a web page that I could use to adjust various sliders to change things until the settings are exactly"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0179",
+  "claim_text": "After tuning, save the settings and make them concrete, and once they are concrete you can spin hundreds if not thousands of ads.",
+  "evidence": [
+   {
+    "local_id": "EV-0284",
+    "excerpt": "how I want them to be? Uh, think about it as like me placing something on a on a page, let's say. Uh, build me the ability to, I don't know, change the font width and the different styles and and and where they're placed on the page and so on and so forth. Um, after we're done, we'll save those and make those concrete. And then once they're concrete, then we can spin, you know,"
+   },
+   {
+    "local_id": "EV-0285",
+    "excerpt": "hundreds if not thousands of these um to, you know, generate a bunch of ads. You see it's now actually building an SVG filter pipeline to try and reproduce what we're seeing here, uh, which is some sort of smooth meshed design that obviously Stripe used their own internal image model or something like that to generate. So, we're going to try doing this procedurally and programmatically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0180",
+  "claim_text": "For now the speaker wants to do things entirely procedurally and will use an image model later.",
+  "evidence": [
+   {
+    "local_id": "EV-0282",
+    "excerpt": "got maybe 70% of the way there, but we do need to significantly improve the design and make it much closer to the initial stripe one that I showed you guys. Um, so we do need to push the CSS further with a variety of different gradient styles. Um, we could actually generate high quality gradient background images as well. Uh, and then, you know, do a bunch of flips and stuff"
+   },
+   {
+    "local_id": "EV-0283",
+    "excerpt": "like that. I'll show you or I will use an image model later. For now, I want to do things entirely procedurally. I also think the text spacing is a little bit off and uh yeah, I just want to significantly improve the quality of this first. So, in order to do so, could you create me a web page that I could use to adjust various sliders to change things until the settings are exactly"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0181",
+  "claim_text": "When you have Claude start a task and give you the results, it will self-manage a lot of errors and debugs by passing its own outputs back in as input to the next step, whereas in the past you typically had to do a lot of that debugging yourself.",
+  "evidence": [
+   {
+    "local_id": "EV-0287",
+    "excerpt": "tighten that up. Now, one thing you'll find when you just have Claude start a task and then, you know, give you the results is it'll self-manage a lot of errors and debugs. In the past, this didn't happen. In the past, you typically had to do a lot of this debugging yourself. But you'll see that it's just passing its own outputs back in as an input to the next step and then"
+   },
+   {
+    "local_id": "EV-0288",
+    "excerpt": "progressively getting closer and closer to what it is that you want. Um, we're also coming up on like 3 minutes here. Uh, there are a lot of prompts that I run that now genuinely take somewhere between 15 to 20 minutes. And so I will fire off a task by dumping in a bunch of my demands and want and then I'll just step away or, you know, I'll work on something else. Or what I'll do is I'll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0182",
+  "claim_text": "Many prompts genuinely take 15 to 20 minutes, so the speaker fires off a task by dumping in his demands and then steps away, works on something else, or spawns a bunch of tasks, returning when the icon goes from gray to yellow indicating it is done.",
+  "evidence": [
+   {
+    "local_id": "EV-0288",
+    "excerpt": "progressively getting closer and closer to what it is that you want. Um, we're also coming up on like 3 minutes here. Uh, there are a lot of prompts that I run that now genuinely take somewhere between 15 to 20 minutes. And so I will fire off a task by dumping in a bunch of my demands and want and then I'll just step away or, you know, I'll work on something else. Or what I'll do is I'll"
+   },
+   {
+    "local_id": "EV-0289",
+    "excerpt": "just spawn a bunch of these. And then eventually this little icon here will go from gray to yellow. And the second that it's yellow, I know that I, you know, it's done and I need to come back in and actually check in with it. I think sometimes that also turns green. We can actually see the filter debug right here. It's actually coming up with a variety of different filters. Um, I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0183",
+  "claim_text": "Export the tuned settings from the ad tuner page so you can copy and paste them into Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0297",
+    "excerpt": "school. Okay, great. So I really like this. I'm actually just going to export the settings which is right over here. This will allow me then to copy and paste it into Claude. Uh, and then I'm just going to give it one final piece of advice. I'll say, \"Okay, let's find a way to make the Maker School logo more interesting.\" Right now, it's uh I don't know why I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0184",
+  "claim_text": "While Claude is working on a request you can keep adjusting other things in the tuner, and this is something viewers should do pretty often.",
+  "evidence": [
+   {
+    "local_id": "EV-0298",
+    "excerpt": "not using voice transcription here. Just a little too spread out, aka the letter spacing makes it look not as professional. Um, but the fact that we're using a default font also makes it sort of bleed into the rest of the design. So, come up with like 20 different fonts that I could use that are all very high-end, new, and clean. And you can see while I was doing that,"
+   },
+   {
+    "local_id": "EV-0299",
+    "excerpt": "and this is something that you guys should um do uh pretty often. While I was doing that, it also allowed me to adjust the grain. So, it came up with a new way basically of doing this. So, I can now change the grain. It's a little bit difficult to see here, but if I change some of the colors just to maybe I don't know, let's see here. Maybe instead of white, I want it to be kind"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0185",
+  "claim_text": "The presented process is a cookie cutter process that is probably above average in terms of performance, and viewers who have their own successful marketing mix should do whatever they want there.",
+  "evidence": [
+   {
+    "local_id": "EV-0241",
+    "excerpt": "any means. I used to run a PPC company, but it wasn't super successful. I mean, the PPC company probably capped out at like 200,000 in a year. Um you know, I run ads for my own products now, my information products, and then my education products, but um I don't know. I mean, like 5 to maybe a 10x rowass was considered okay, but it's probably not considered the best. So, I just want to"
+   },
+   {
+    "local_id": "EV-0242",
+    "excerpt": "give you guys like a cookie cutter process that is probably above average in terms of performance, but I also want you guys to know that you guys all have your own internal and successful marketing mix. So, you guys should do whatever the heck you want there. Just map out the process ahead of time and follow the series of steps that I'm going to show you to convert this into,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0186",
+  "claim_text": "After tuning the ad format, the speaker exports it as JSON and copies it back into the chat so the settings can be applied to generated ads.",
+  "evidence": [
+   {
+    "local_id": "EV-0306",
+    "excerpt": "phones. Maybe we'll do even a tiny bit bigger. Cool. That looks pretty nice to me. I like this. Um, cool. So, what I'm going to do now is just export this as JSON. Copy. And then go back here and I'll say, \"Great. I really like this. Now that we've created a format that looks pretty good, uh, I want you to apply these settings and then I just want you to generate like 50 different"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0187",
+  "claim_text": "The speaker asks the model to first generate 50 ad variants (different CTAs, different looks) so he can look through and pick the best ones, and only afterwards work on generating the artifact / reusable resource.",
+  "evidence": [
+   {
+    "local_id": "EV-0306",
+    "excerpt": "phones. Maybe we'll do even a tiny bit bigger. Cool. That looks pretty nice to me. I like this. Um, cool. So, what I'm going to do now is just export this as JSON. Copy. And then go back here and I'll say, \"Great. I really like this. Now that we've created a format that looks pretty good, uh, I want you to apply these settings and then I just want you to generate like 50 different"
+   },
+   {
+    "local_id": "EV-0307",
+    "excerpt": "ads for me. uh all with different CTAs, all with different looks and and so on and so forth. What I'll do is I'll just pick the best ones. Then I want you to turn this into an artifact and a reusable resource. So anybody on my team can just quickly jump in and then generate these ads at scale. Uh eventually we'll scale it up and then make it a little bit different where uh"
+   },
+   {
+    "local_id": "EV-0308",
+    "excerpt": "you know, we have the ability to change which ads we want to generate as well. But yeah, for now this is this is pretty good. First generate me 50 so I can quickly look through and then pick and then do work on generating the artifact afterwards. Cool. So, as you guys can see, we are slowly alleviating bottlenecks and we're making an internal tool to build these"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0188",
+  "claim_text": "Under the hood the model creates a script that multiplies and iterates through the different procedural variations rather than producing each ad by hand.",
+  "evidence": [
+   {
+    "local_id": "EV-0309",
+    "excerpt": "sorts of artifacts in just a few minutes. Um, really hasn't taken me that long to do. I'm just going to cut to, you know, when we actually have it. And, uh, yeah, let's take a look. Now, under the hood, what it's doing is it's actually creating a script to do it for us. Like, we've, um, used intelligence, okay, this really flexible sort of intelligence to, you know, create a"
+   },
+   {
+    "local_id": "EV-0310",
+    "excerpt": "script that is now multiplying and iterating through all the different procedural things we could do. Um, so you know, I hope you guys know like what this has done is it's actually gone through and then already generated all of these things. It's now just going to iterate through all of them. So we can take a look at what that looks like um now because it's gone through and done"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0189",
+  "claim_text": "On reviewing the batch the speaker notices the gradient angle is not being varied and goes back to instruct the model to vary the angle of the background gradient so the ads don't all look vertical, and also to add a quick way to select all winners and download them.",
+  "evidence": [
+   {
+    "local_id": "EV-0312",
+    "excerpt": "guaranteed in 90 days. I like this one. Sounds pretty cool. So, you know, I could just note like I want to keep four for instance. Daily coaching day one 05. Okay. So, we're starting to get a little bit more impressive here with the various gradients and and looks and stuff. Um, I am finding that we should probably vary like I think we should vary the angle of whatever is going on."
+   },
+   {
+    "local_id": "EV-0313",
+    "excerpt": "So, we're not doing that right now. Um, I think it's probably just not actually doing this with uh I don't know its settings. Like it's not actually varying the angle. So, I'm just going to go back. Going to hold command D. This looks great. You should also be varying the angle of that cool background gradient thing so that it doesn't all look vertical. Right now, the vast"
+   },
+   {
+    "local_id": "EV-0314",
+    "excerpt": "majority of it looks vertical. Also, ideally, we'd have a quick and easy way for me just to select all the winners and then download them, too. So, hopefully that gives it some more context. Um, but yeah, I mean, it did did a pretty good job. Okay, so what have we done now? We've basically built like a procedural ad generator just based off of a scooped template if you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0190",
+  "claim_text": "The speaker states the idea is not to build systems that scoop other people's templates and duplicate them, but to get inspired by winning performers your own team created or that you ran in the past, scoop your own work, and generate variants of that quickly.",
+  "evidence": [
+   {
+    "local_id": "EV-0315",
+    "excerpt": "think about it. Um, and you know, the idea is not that you just build systems that scoop other people's templates and then just like duplicate the hell out of them. Obviously, the idea is that you get inspired by winning performers um either that your own team has created or that you have run in the past that do quite well and then you kind of scoop your own work, right? And then you just"
+   },
+   {
+    "local_id": "EV-0316",
+    "excerpt": "generate variants of that really really quickly. You know, I think these variants are pretty neat, but obviously there's only so much we could do with procedural looks, right? We can only do so many things just by varying uh I don't know, changing little procedural variables in the background with color and angle and stuff like that. Even if we fixed the angle and we made that look"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0191",
+  "claim_text": "The speaker says there is only so much you can do with procedural looks, since you can only vary procedural variables like color and angle in the background.",
+  "evidence": [
+   {
+    "local_id": "EV-0316",
+    "excerpt": "generate variants of that really really quickly. You know, I think these variants are pretty neat, but obviously there's only so much we could do with procedural looks, right? We can only do so many things just by varying uh I don't know, changing little procedural variables in the background with color and angle and stuff like that. Even if we fixed the angle and we made that look"
+   },
+   {
+    "local_id": "EV-0317",
+    "excerpt": "a little bit better. Obviously, there's only so much we could do. Uh so what I want to do next is I want to take this from a like procedural image generator and then I want to turn it into an AI based image generator flow where instead of us just using um you know like this sort of gradient background or whatever we're actually using an AI model to generate imagery and maybe we combine it"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0192",
+  "claim_text": "The speaker's stated next step is to turn the procedural image generator into an AI-based image generator flow, possibly combining it with the procedural generator to get the best of both worlds and keep cost low.",
+  "evidence": [
+   {
+    "local_id": "EV-0317",
+    "excerpt": "a little bit better. Obviously, there's only so much we could do. Uh so what I want to do next is I want to take this from a like procedural image generator and then I want to turn it into an AI based image generator flow where instead of us just using um you know like this sort of gradient background or whatever we're actually using an AI model to generate imagery and maybe we combine it"
+   },
+   {
+    "local_id": "EV-0318",
+    "excerpt": "with our procedural generator to get the best of both worlds and also keep cost pretty low. And then after that, what I want to do is show you guys how you guys could go one step further and you could make video ads with, you know, AI. Have AI orchestrate all of that. And then, um, now, you know, your creative, while still costing money, does not cost, I don't know, let's say $500 per video ad"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0193",
+  "claim_text": "The speaker says that because production cost is now cheap, it makes sense to build systems that produce a lot and let the market select the winners rather than spending time and energy on your opinionated idea about what performs best.",
+  "evidence": [
+   {
+    "local_id": "EV-0319",
+    "excerpt": "that you're testing. Maybe you can get it down to $2 per video ad that you're testing. In doing so, test 10x as many, 100x as many video ads and then have the market actually tell you which ones are the best. Because I find in general that tends to be the approach these days. You don't really just want um you know to like spend a bunch of time and energy on your opinionated idea about what"
+   },
+   {
+    "local_id": "EV-0320",
+    "excerpt": "performs the best. You know the cost of production is now so cheap as you guys could see here that it makes sense to build systems to produce a lot and then just have the market actually select things for you. Okay. But first I just want to make sure that we do have a repeatable process for this. Okay. And now we have what looks to be um a promptbased way of doing this. And what"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0194",
+  "claim_text": "The speaker wants first to make sure there is a repeatable, prompt-based process before proceeding to the next step.",
+  "evidence": [
+   {
+    "local_id": "EV-0320",
+    "excerpt": "performs the best. You know the cost of production is now so cheap as you guys could see here that it makes sense to build systems to produce a lot and then just have the market actually select things for you. Okay. But first I just want to make sure that we do have a repeatable process for this. Okay. And now we have what looks to be um a promptbased way of doing this. And what"
+   },
+   {
+    "local_id": "EV-0322",
+    "excerpt": "uh Facebook ads or whatever ad library manager that you were using. Um but I I just want to turn this into a skill really quick uh before we proceed with the next step and then show you guys how also to loop it. And then we can also have like cloud routines do this for us too. So, you know, now that we've basically accomplished the um prompt done, would you run me through the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0195",
+  "claim_text": "The speaker turns the working prompt into a skill by asking the model to consolidate the back-and-forth conversation into a skill, which generates a skill.md file.",
+  "evidence": [
+   {
+    "local_id": "EV-0322",
+    "excerpt": "uh Facebook ads or whatever ad library manager that you were using. Um but I I just want to turn this into a skill really quick uh before we proceed with the next step and then show you guys how also to loop it. And then we can also have like cloud routines do this for us too. So, you know, now that we've basically accomplished the um prompt done, would you run me through the"
+   },
+   {
+    "local_id": "EV-0323",
+    "excerpt": "skill? Well, first thing is if I go maker school ads, you can actually see it um now populating down here. So, no longer do I need to manually do this. You know what I can do is now next time I can just write maker school uh ads. But if we read the skill.md, this is the file that it actually went ahead and generated for us based off of my conversation with it. So, you know, I"
+   },
+   {
+    "local_id": "EV-0324",
+    "excerpt": "prompted it back and forth. I figured out a prompt that works and then I said, \"Hey, I want you to consolidate this into a skill, right?\" So, it went through and it did. So, generate stripe style minimalistic ad creative with an organic gradient header and bold headline plus CTA for Maker School, Nick's AI automation and coaching program. Use this whenever anyone asks"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0196",
+  "claim_text": "The generated skill.md describes what it generates and includes a 'use this whenever' clause specifying when the skill should be invoked (create ad creative, ad variants, ad copy with visuals, run a creative pipeline or ad batch).",
+  "evidence": [
+   {
+    "local_id": "EV-0324",
+    "excerpt": "prompted it back and forth. I figured out a prompt that works and then I said, \"Hey, I want you to consolidate this into a skill, right?\" So, it went through and it did. So, generate stripe style minimalistic ad creative with an organic gradient header and bold headline plus CTA for Maker School, Nick's AI automation and coaching program. Use this whenever anyone asks"
+   },
+   {
+    "local_id": "EV-0325",
+    "excerpt": "to create ad creative, add variants, add copy with visuals, or run a creative pipeline or ad batch. And you can see that, you know, we have a bunch of layers to this. We even have the scripts involved and so on and so forth. So, it'll go through and generate copy. You know, it it's doing quite a bit here. What we've done is we basically taken our whole prompt, which was a series of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0197",
+  "claim_text": "The skill codifies a whole prompt that was a series of distributed messages into an instruction set that can be fed in and run repeatedly.",
+  "evidence": [
+   {
+    "local_id": "EV-0325",
+    "excerpt": "to create ad creative, add variants, add copy with visuals, or run a creative pipeline or ad batch. And you can see that, you know, we have a bunch of layers to this. We even have the scripts involved and so on and so forth. So, it'll go through and generate copy. You know, it it's doing quite a bit here. What we've done is we basically taken our whole prompt, which was a series of"
+   },
+   {
+    "local_id": "EV-0326",
+    "excerpt": "distributed messages, and we've codified it as a instruction set that we can now feed in and just have it generate over and over and over again. You know, for instance, what I could do is I could actually just open up a new chat, one that has no context, run maker school ads, and now, you know, this model is now going to run based off of this entire long strip. So, you know, this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0198",
+  "claim_text": "The speaker tests the skill by opening a new chat with zero context of the prior conversation and running the skill there.",
+  "evidence": [
+   {
+    "local_id": "EV-0326",
+    "excerpt": "distributed messages, and we've codified it as a instruction set that we can now feed in and just have it generate over and over and over again. You know, for instance, what I could do is I could actually just open up a new chat, one that has no context, run maker school ads, and now, you know, this model is now going to run based off of this entire long strip. So, you know, this"
+   },
+   {
+    "local_id": "EV-0327",
+    "excerpt": "has zero context of our prior conversation, right? And now it's asking, what do you want to do? Generate a single ad, run a batch, adjust the visual profile? Um, no. I want to run let's Gen 10 ads and then I don't know maybe instead of maker school ads I want to do this for another product but do it for Clarvo. My startup is clarvo.io. Once done send me contact sheet. So now"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0199",
+  "claim_text": "The skill can be reused for a different product by asking it to research that product's site, apply the found information to the skill, and then mutate it in a variety of ways.",
+  "evidence": [
+   {
+    "local_id": "EV-0327",
+    "excerpt": "has zero context of our prior conversation, right? And now it's asking, what do you want to do? Generate a single ad, run a batch, adjust the visual profile? Um, no. I want to run let's Gen 10 ads and then I don't know maybe instead of maker school ads I want to do this for another product but do it for Clarvo. My startup is clarvo.io. Once done send me contact sheet. So now"
+   },
+   {
+    "local_id": "EV-0328",
+    "excerpt": "for instance what I've done is and it's asking me about Clarvo. I'll say research it claro.io. Um I'm going to have it research clarvo.io for me. So, it's going to go find a bunch of information about my dialer and stuff like that. And now I can actually spin this and I can use the skill regardless of whatever, you know, product I'm selling. It can go and it"
+   },
+   {
+    "local_id": "EV-0329",
+    "excerpt": "can find that information for me, apply it to the skill, and then it can spin it, mutate it in a variety of different ways. So, what it's going to do now is it's actually going to generate a bunch of its own, gone through and just ran all of the different ways you could pitch things. And now I even have a contact sheet, uh, which I'm going to open the folder of, and then double"
+   },
+   {
+    "local_id": "EV-0330",
+    "excerpt": "click on to show you guys. So now, you know, I've done this, but I've done it for a different software platform entirely. How cool is that? Uh, and the reason why is because I have that reusable instruction set that I can change very slightly. So this one's cool. Dial leads in seconds. Hit 85% pickup rates. See how you paid for the lead. Talk to them. Start now. Call"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0200",
+  "claim_text": "The speaker converts the skill into a loop by telling the main chat to put it on a loop that runs every morning at 5:59 a.m. so the creative specialist arriving at 6:00 a.m. can review and pick winning combinations.",
+  "evidence": [
+   {
+    "local_id": "EV-0334",
+    "excerpt": "the best ones, and then sends them off to the media buy team. Um, that's actually fairly easy to do. So, what I'll do now is I'm going to go back to my main chat, which is general coding session, and I'll say, \"This sounds great. I want you to um put this on a loop.\" The idea is we want to run this every morning at 5:59 a.m. So that when our creative specialist gets in at 6:00"
+   },
+   {
+    "local_id": "EV-0335",
+    "excerpt": "a.m., they could take a look through the ads and then identify and pick the winning um combinations. So now what we're going to do is we're going to turn this skill into said loop. It's going to run unattended every morning and ask me for some scope size. So batch size, why don't we do 20 copy pool, we will generate new copy every time. And you can see, you know, it's"
+   }
+  ]
+ }
+]

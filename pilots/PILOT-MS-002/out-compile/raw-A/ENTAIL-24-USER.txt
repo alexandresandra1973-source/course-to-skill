@@ -1,0 +1,354 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0576",
+  "claim_text": "The speaker's habit with all automations is to first go to the connector library and check whether a pre-created connector exists; if it does, oneshot connect to it, if not, more complicated work is needed.",
+  "evidence": [
+   {
+    "local_id": "EV-0989",
+    "excerpt": "that you're using. I want you to know that's okay. Um, processes are going to be quite similar. either you're going to connect to the MCP or you're going to connect to the API. And I'm going to try connecting to the MCP since obviously that's preferential. So, first thing I'm going to do, and uh this is just what I've gotten in the habit of doing with all my automations, is I'm going to go"
+   },
+   {
+    "local_id": "EV-0990",
+    "excerpt": "down to the connector library, and I'm just going to see, do we have a pre-created ClickUp connector somewhere here? I'm going to type ClickUp. If we have a ClickUp connector, we're just going to oneshot connect to that. If we don't have a ClickUp connector, then we'll have to do a little bit more complicated work. And as you guys can see here, we actually do have a oneshot"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0577",
+  "claim_text": "The speaker always wants to start at the end by verifying that the information can actually be retrieved, e.g. asking Claude to query a specific list within a space and return some information to confirm the connection works.",
+  "evidence": [
+   {
+    "local_id": "EV-0993",
+    "excerpt": "Claude and then I'm going to say I just added and let me voice transcribe this. I keep on forgetting that I can do that. I just added a ClickUp connector. I want you to query a specific list within a space and then get me some of the information therein just to verify that you can actually connect and everything is okay. So as mentioned I always want to start"
+   },
+   {
+    "local_id": "EV-0994",
+    "excerpt": "at the end just by verifying can I actually get that information. This is the list and I'll say get me everyone that hasn't been let's see how do I frame this inside of the CRM. Get me anything with a days outstanding of seven days. let's say with a days outstanding equal to 7 days. So the whole idea will be this will now um demo my flow and sorry I just reached my"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0578",
+  "claim_text": "The Gmail connector exposes create draft and update draft but no send message and no send draft; the speaker verified this by having the model look through the actual tools rather than relying on the tool name list.",
+  "evidence": [
+   {
+    "local_id": "EV-0999",
+    "excerpt": "have cues. and I'll say thanks Nick. So, we should have an email to Erica aka Nickleftclick.ai with this. Now, it's saying we can't actually do this. We don't have the ability to send from my email. I'm just going to double check why. So, I'll say is there no sending uh tool inside of the Gmail connector. Ask it that question. We'll see how it"
+   },
+   {
+    "local_id": "EV-1000",
+    "excerpt": "goes. Let me actually check rather than rely on the tool name list. So, now it's actually going to look through the tools. I checked and my claim holds up. The Gmail connector exposes these tools. So, create draft, update draft, no send message, no send draft. Um, so, okay, after finagling it, it's given me three options that we could use to create emails and then actually send them. I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0579",
+  "claim_text": "The question is not whether you will get a bug or be unable to do it the way you want, but when; the workaround used was the Gmail API with your own OAuth client, building a brief pipeline and an authentication script.",
+  "evidence": [
+   {
+    "local_id": "EV-1001",
+    "excerpt": "was unaware. I thought you could do this in the Gmail connector. Um, doesn't look like you can, but that's okay. Uh, you know, the question is not will I get a bug or will I not be able to do it the way I want to do it, but when I will not be able to do it. So, let me show you guys how I deal with that. Um, first I asked, so what are our options? I had to do a bunch of research and now it's"
+   },
+   {
+    "local_id": "EV-1002",
+    "excerpt": "giving me Gmail API with your own OOTH client. Let's do Gmail API. What it's going to do now is build a brief pipeline that allows us to do this. It's then going to open up OOTH, which is that like, you know, check-in thing where it like stores my credentials. So, it's went it's found some libraries. It's now going to write an authentication script. After it's done"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0580",
+  "claim_text": "After authentication, the model sends a message to the speaker's own address to prove the whole path works without actually touching a client.",
+  "evidence": [
+   {
+    "local_id": "EV-1003",
+    "excerpt": "authenticating me, I will have to um log in. Basically, still doing just a little bit of testing. Okay. Hey, and I'm now logging in to my email account. So, it was fairly straightforward. The model just asked me a couple questions, gave me a link to click to like give it my uh Google Cloud Console access. And now it's actually going to send a message to my own address to prove that the whole"
+   },
+   {
+    "local_id": "EV-1004",
+    "excerpt": "path works without actually touching a client. So, it sent one to me. Let me now take a look. And you can see that it has actually done this. Hey Nick, just wanted to check in. How are things going on with the invoice? Let me know if you have cues. Now, we said Erica, but uh you know, it's actually done uh uh you know, Nick. So, a couple things. I'm going to change the subject line now and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0581",
+  "claim_text": "Because the follow-ups run completely automatically on a loop, the messages are written as light, soft one-line nudges rather than pushy ones, with no m dashes, no invoice number mentioned, and all signed off with 'thanks - Nick'.",
+  "evidence": [
+   {
+    "local_id": "EV-1005",
+    "excerpt": "then I'm going to change the message that we're sending. First, I'm going to say write 10 simple messages like the one you just sent me for checkin purposes. Use very light language. Nothing hard, just super soft nudges that fit on one line. Okay. And then um for subjects use straightforward ones like first name or maybe I don't know like invoice first"
+   },
+   {
+    "local_id": "EV-1006",
+    "excerpt": "name or you know how are things going etc. So these aren't you know the most pushy of follow-ups but the idea is it's going to run completely automatically on a loop so you might as well um you know be nicer as opposed to be super crazy harsh. I've done a lot of following up in my time. There's really smart ways to"
+   },
+   {
+    "local_id": "EV-1007",
+    "excerpt": "follow up and there's also kind of hard ways to follow up. So, all of these have m dashes. I'll say no m dashes. We're just going to fix all of that right now. Just checking on invoice. Uh, we don't need the number. Also, don't mention the invoice number. So, what else do we got? Cool. And then sign off all of them with thanks dashnick."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0582",
+  "claim_text": "Two identical templates can never be sent in a row; they always need to be different templates.",
+  "evidence": [
+   {
+    "local_id": "EV-1009",
+    "excerpt": "It's just all pretty simple. So, excellent. This will be our template pool. The idea is we can never send two of these in a row if they're the exact same. They always need to be different templates. So the flow will work like this. To start once per day, you will query ClickUp. You'll determine whether people are 1 day outstanding, 2 days"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0583",
+  "claim_text": "The flow runs once per day: query ClickUp, determine whether people are at 1, 2, 3, 7, 14, 21, 28, 56 or 84 days outstanding, and for each match send an email template with merge variables filled in with the prospect's actual information.",
+  "evidence": [
+   {
+    "local_id": "EV-1009",
+    "excerpt": "It's just all pretty simple. So, excellent. This will be our template pool. The idea is we can never send two of these in a row if they're the exact same. They always need to be different templates. So the flow will work like this. To start once per day, you will query ClickUp. You'll determine whether people are 1 day outstanding, 2 days"
+   },
+   {
+    "local_id": "EV-1010",
+    "excerpt": "outstanding, 3 days outstanding, 7 days outstanding, 14 days outstanding, 21 days outstanding, 28 days outstanding, uh 56 days outstanding, um 84 days outstanding. And what happens is every time that you find a person that is one of those days outstanding, you send an email template. um you fill in the information provided in the merge variables with the"
+   },
+   {
+    "local_id": "EV-1011",
+    "excerpt": "customer's actual or rather the prospect's actual uh information. So if it's being sent to a woman named Erica for instance, you should say hey Erica you should not say hey first name and we will slowly and reliably continuously nudge them towards the finish line. One more step just so that we don't end up sending the same email. After you um verify"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0584",
+  "claim_text": "After verifying a days-outstanding threshold match, go through all email conversation history with the prospect to see what follow-ups were already sent, so the exact same message is not sent twice.",
+  "evidence": [
+   {
+    "local_id": "EV-1011",
+    "excerpt": "customer's actual or rather the prospect's actual uh information. So if it's being sent to a woman named Erica for instance, you should say hey Erica you should not say hey first name and we will slowly and reliably continuously nudge them towards the finish line. One more step just so that we don't end up sending the same email. After you um verify"
+   },
+   {
+    "local_id": "EV-1012",
+    "excerpt": "that it is matching one of the days outstanding thresholds, go through all of our email conversation history with the prospect to verify and see what sort of follow-ups we've um sent them. That way, we're not going to send them the exact same message twice. Okay, so kind of all over the place there, but I think I got what I wanted to say. Let's see how it performs."
+   },
+   {
+    "local_id": "EV-1013",
+    "excerpt": "Looks like it's going to start by confirming the scopes of my quote unquote token. And uh the history check can't work with the token. So, we're just going to have to make a new one. So, I'll say add a read scope to verify. Basically, what we want to do is we just want to like actually check my the real live email to make sure that we're not sending the same thing twice."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0585",
+  "claim_text": "A read scope had to be added to the token because the history check could not work with the existing token.",
+  "evidence": [
+   {
+    "local_id": "EV-1013",
+    "excerpt": "Looks like it's going to start by confirming the scopes of my quote unquote token. And uh the history check can't work with the token. So, we're just going to have to make a new one. So, I'll say add a read scope to verify. Basically, what we want to do is we just want to like actually check my the real live email to make sure that we're not sending the same thing twice."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0586",
+  "claim_text": "If the prospect explicitly tells us not to follow up with them, flag that on the ClickUp task and do not send the email; the model used a notes field and a chase stage with a closed option, plus a comment for the audit trail.",
+  "evidence": [
+   {
+    "local_id": "EV-1014",
+    "excerpt": "There are some situations as well in which it might make sense not to send the email at all. Like for instance, if a person says, \"Please stop emailing me. I've received tons of emails from you. I don't want another one or something like that,\" then obviously I probably shouldn't email them. So, we'll uh we'll add that functionality in later just uh to verify that, you know, it's actually"
+   },
+   {
+    "local_id": "EV-1017",
+    "excerpt": "the way I want it to occur.\" One more change before we do this. There will be some situations in which it doesn't make sense to continue it continue the nudging process. If the prospect explicitly tells us not to follow up with them for whatever reason, then flag that on the actual ClickUp task and then don't send the email logically. So now it's actually going to go through the"
+   },
+   {
+    "local_id": "EV-1018",
+    "excerpt": "opt- out detection flow and then narrate everything that it is doing. So what ClickUp fields are available for flagging, a notes, and a chase stage with a closed option. Looks like it'll use both of those, which is nice. And it'll actually start updating my CRM. Okay, now it's running the full flow. It's found a bunch of my own emails um to myself. So, it's just going to verify"
+   },
+   {
+    "local_id": "EV-1020",
+    "excerpt": "this invoice through our lawyer.\" Okay, so that's what it came up with. If there are situations where that would occur, you should probably not continue emailing the person, right? Kind of makes sense. Um, if that does happen, then you've done something wrong. Okay. Chase stage to close a note and a comment for the audit trail. So now it's actually updating the flow. Let me"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0587",
+  "claim_text": "When running the flow the speaker asks the model to go through the whole process end to end on a 7 day threshold and narrate everything it sees, so the flow can be verified.",
+  "evidence": [
+   {
+    "local_id": "EV-1016",
+    "excerpt": "a manual check. Sunhill Property, Pace Orthodontics, Ridgeway Autodetailing. These are the three that should be followed up with. Okay. So I'm going to go back to Claude and I'll say, \"Okay, let's run this on a 7day threshold. Again, I want you to go through the whole process end to end and actually tell me everything that you see so that I can verify if the flow is occurring"
+   },
+   {
+    "local_id": "EV-1017",
+    "excerpt": "the way I want it to occur.\" One more change before we do this. There will be some situations in which it doesn't make sense to continue it continue the nudging process. If the prospect explicitly tells us not to follow up with them for whatever reason, then flag that on the actual ClickUp task and then don't send the email logically. So now it's actually going to go through the"
+   },
+   {
+    "local_id": "EV-1018",
+    "excerpt": "opt- out detection flow and then narrate everything that it is doing. So what ClickUp fields are available for flagging, a notes, and a chase stage with a closed option. Looks like it'll use both of those, which is nice. And it'll actually start updating my CRM. Okay, now it's running the full flow. It's found a bunch of my own emails um to myself. So, it's just going to verify"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0588",
+  "claim_text": "An app plus a data ingestion pipeline can be put together in roughly 30 minutes, and the speaker did it using cheap models while being rate limited.",
+  "evidence": [
+   {
+    "local_id": "EV-0961",
+    "excerpt": "10 as well. Um but I think they were like so great that we're probably not seeing them on this dashboard. Point that I'm making is you guys can design basically your own apps at this point very easily and very um straightforwardly. I would encourage you guys have something like this at least for your own companies. Uh it's very easy to put together along with a data"
+   },
+   {
+    "local_id": "EV-0962",
+    "excerpt": "ingestion pipeline. You know you could do this thing in I don't know probably like 30 minutes or so just like I did here. Um and keep in mind I was also just using cheap models and I was being quite rate limited as well. um you know, like for my own companies because tokens are not a concern. You know, it's like a business expense and I'm happy to spend a tremendous amount. I think one month I"
+   },
+   {
+    "local_id": "EV-0964",
+    "excerpt": "because I want you to understand and be able to learn. Um, we still got something extraordinarily economically valuable done in just half an hour. And that takes me to that middle of funnel data collection and tracking item now done. All we really have left on the project side is a automation of highquality follow-ups again via email and SMS. We'll use the same um tools"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0589",
+  "claim_text": "After the flow runs, verify that the flag actually landed on the record and double check that the job was done correctly.",
+  "evidence": [
+   {
+    "local_id": "EV-1021",
+    "excerpt": "verify the flag actually landed on the record. So now it's just going to double check that its job was done correctly. And now we should actually see what's going on. So it did match the 7day records. It then searched Gmail. It then selected the template high net quick nudge on the invoice. Then had an opt out check just to verify whether or"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0590",
+  "claim_text": "The run matched the 7-day records, searched Gmail, selected the template 'high net quick nudge on the invoice', and then had an opt-out check to verify whether that worked.",
+  "evidence": [
+   {
+    "local_id": "EV-1021",
+    "excerpt": "verify the flag actually landed on the record. So now it's just going to double check that its job was done correctly. And now we should actually see what's going on. So it did match the 7day records. It then searched Gmail. It then selected the template high net quick nudge on the invoice. Then had an opt out check just to verify whether or"
+   },
+   {
+    "local_id": "EV-1022",
+    "excerpt": "not that worked. And then which recipients got uh went through this flow just cuz I want to verify that was actually those three. Um, why one? There were three with sevenday flags because I never put there were three real contacts. Yes, of course. I want you to run this for real using the info in the CRM. You'll find cloud will do stuff like this fairly often because it"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0591",
+  "claim_text": "The presenter verifies which recipients went through the flow, wanting to confirm it was actually those three records with seven-day flags.",
+  "evidence": [
+   {
+    "local_id": "EV-1022",
+    "excerpt": "not that worked. And then which recipients got uh went through this flow just cuz I want to verify that was actually those three. Um, why one? There were three with sevenday flags because I never put there were three real contacts. Yes, of course. I want you to run this for real using the info in the CRM. You'll find cloud will do stuff like this fairly often because it"
+   },
+   {
+    "local_id": "EV-1024",
+    "excerpt": "going? Hi Nick. How are things going on the invoice? Happy to help if anything's unclear. And then this one here is hey Nick. Just checking in on the invoice. Let me know if you have Q. So these were these were sent to our three records basically. Um, it actually went through and it found those three that each have 7-day days outstanding sent to them. Um, it's also then logged a bunch of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0592",
+  "claim_text": "Claude will often avoid doing things for real because it doesn't want to use tokens, which the presenter describes as generally reasonably positive behavior; the fix is to instruct it to run for real using the info in the CRM.",
+  "evidence": [
+   {
+    "local_id": "EV-1022",
+    "excerpt": "not that worked. And then which recipients got uh went through this flow just cuz I want to verify that was actually those three. Um, why one? There were three with sevenday flags because I never put there were three real contacts. Yes, of course. I want you to run this for real using the info in the CRM. You'll find cloud will do stuff like this fairly often because it"
+   },
+   {
+    "local_id": "EV-1023",
+    "excerpt": "doesn't want to use tokens, which is generally reasonably positive behavior. So you guys could see here we're 44% of the way through our 5h hour limit which resets in 1 hour and 27 minutes. Um and that's you know just cuz we're on Opus 5 which is a little bit smarter than sonnet 5 which is the model we were using at the beginning of all this. And let's just take a look. How are things"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0593",
+  "claim_text": "The session was running on Opus 5, which is a little bit smarter than Sonnet 5, the model used at the beginning; usage was 44% of the way through a 5-hour limit resetting in 1 hour 27 minutes.",
+  "evidence": [
+   {
+    "local_id": "EV-1023",
+    "excerpt": "doesn't want to use tokens, which is generally reasonably positive behavior. So you guys could see here we're 44% of the way through our 5h hour limit which resets in 1 hour and 27 minutes. Um and that's you know just cuz we're on Opus 5 which is a little bit smarter than sonnet 5 which is the model we were using at the beginning of all this. And let's just take a look. How are things"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0594",
+  "claim_text": "When a contact replies asking to stop being emailed, or when the chase stage is set to closed, the system stops following up with them.",
+  "evidence": [
+   {
+    "local_id": "EV-1025",
+    "excerpt": "information about them, I believe. So, this was the uh fake, hey, Nick, please stop emailing me about this. So, we obviously don't run into like crazy stop conditions. And now it's kind of letting us know, hey, you know, Chase stage is set to close, so we're not going to continue following up with them. And we did all this pretty easily just using like a demo CRM that I set up in just a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0595",
+  "claim_text": "Convert everything discussed and all the fixes into a skill that will be run once every morning, manually for now rather than as a loop.",
+  "evidence": [
+   {
+    "local_id": "EV-1026",
+    "excerpt": "few seconds. If you guys run your own real CRM through cloud like the way that I did so today, you can obviously get tremendous alpha. So, what are we going to do now? Well, I basically want to extend this and turn this into a full endto-end flow. So, uh I want to check all of those dates. Hey, this sounds great. I now want you to convert everything that we've talked about so"
+   },
+   {
+    "local_id": "EV-1027",
+    "excerpt": "far and all of the fixes therein into a skill. The idea is I will run the skill once every morning. For now, I'll do it myself, not as a loop. But we'll run the skill once every morning. And then it will go through uh 1 2 3 7 14 28 56 uh 84 and so on and then match to the templates as appropriately. Um we'll also make sure to do that opt out check and everything else that we talked"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0596",
+  "claim_text": "The skill goes through the day intervals 1, 2, 3, 7, 14, 28, 56, 84 and so on and matches to the templates as appropriate, including the opt-out check.",
+  "evidence": [
+   {
+    "local_id": "EV-1027",
+    "excerpt": "far and all of the fixes therein into a skill. The idea is I will run the skill once every morning. For now, I'll do it myself, not as a loop. But we'll run the skill once every morning. And then it will go through uh 1 2 3 7 14 28 56 uh 84 and so on and then match to the templates as appropriately. Um we'll also make sure to do that opt out check and everything else that we talked"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0597",
+  "claim_text": "Convert the flow into a simple bulleted SOP so that a future Claude instance that does not have the context of the conversation will still be able to execute it reliably.",
+  "evidence": [
+   {
+    "local_id": "EV-1028",
+    "excerpt": "about. Uh convert it into a simple bulleted SOP so that a future cloud instance that does not have the context of our conversation will still be able to execute this reliably. Excellent. So now I'm going to go from that prompt to a skill stage. And then I'm going to retest this. And it's mentioning that the connector is an MCP integration that only works inside a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0598",
+  "claim_text": "The connector is an MCP integration that only works inside a cloud session; the skill as SOP looks for the script and uses its own built-in integration each time it is run.",
+  "evidence": [
+   {
+    "local_id": "EV-1028",
+    "excerpt": "about. Uh convert it into a simple bulleted SOP so that a future cloud instance that does not have the context of our conversation will still be able to execute this reliably. Excellent. So now I'm going to go from that prompt to a skill stage. And then I'm going to retest this. And it's mentioning that the connector is an MCP integration that only works inside a"
+   },
+   {
+    "local_id": "EV-1029",
+    "excerpt": "cloud session. That's great. That's basically exactly what we want. The skill is now a standard operating procedure that every time I run it is just going to look for that script. It's going to use its own built-in integration. It's going to run it and then we're basically good to go. Um, if you think about it, what we need to do now is we need to turn it into a loop."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0599",
+  "claim_text": "The next step after the skill is to turn it into a loop that fires every morning at 5:59 a.m., running via a cloud instance rather than locally on the computer.",
+  "evidence": [
+   {
+    "local_id": "EV-1029",
+    "excerpt": "cloud session. That's great. That's basically exactly what we want. The skill is now a standard operating procedure that every time I run it is just going to look for that script. It's going to use its own built-in integration. It's going to run it and then we're basically good to go. Um, if you think about it, what we need to do now is we need to turn it into a loop."
+   },
+   {
+    "local_id": "EV-1030",
+    "excerpt": "So this looks great. I'd like now to turn this into a loop that fires every morning at 5:59 a.m. On the local credential side, how could we turn this into a routine where we can run this using a cloud instance as opposed to locally on my computer? You mentioned the MCP integration for ClickUp. I know we can add that as a connector in the cloud environment. How can we do the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0600",
+  "claim_text": "The ClickUp MCP integration can be added as a connector in the cloud environment; the presenter asks how to do the same for the local script.",
+  "evidence": [
+   {
+    "local_id": "EV-1030",
+    "excerpt": "So this looks great. I'd like now to turn this into a loop that fires every morning at 5:59 a.m. On the local credential side, how could we turn this into a routine where we can run this using a cloud instance as opposed to locally on my computer? You mentioned the MCP integration for ClickUp. I know we can add that as a connector in the cloud environment. How can we do the"
+   },
+   {
+    "local_id": "EV-1031",
+    "excerpt": "same with the local uh script? Okay. And after all is said and done, we now have a routine set up for the daily invoice/proposal chase. I'm sure you guys could see how you could extend this virtually arbitrarily to whatever the heck you want. Um, I just did mine on that 1 2 3 74 218 56 and 84day schedule. Um, granted, if you are chasing people for more than 84 days and they still"
+   }
+  ]
+ }
+]

@@ -1,0 +1,402 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0451",
+  "claim_text": "Most companies that run advertisements do not treat their leads with the time, energy and respect needed, so they only get a small fraction of their lead spend back; e.g. spending $10,000 a month on leads and receiving $20,000, a 2x ROAS, which is quite poor.",
+  "evidence": [
+   {
+    "local_id": "EV-0774",
+    "excerpt": "spend lots of money on leads, okay? And then you only get a small fraction of that money back. The reason why is because most companies that run advertisements of any kind, hell, even organic brand-based advertisements like I do on my YouTube channel, is they do not treat their leads with the time, energy, and respect that they need in order to, you know,"
+   },
+   {
+    "local_id": "EV-0776",
+    "excerpt": "directly convertible to, you know, freedom dollars, Benjamins, Jefferson's. I'm not American. If it's not clear, I don't actually know what y'all call your money. Um, but you can convert gleeds to money. um if you know how to squeeze out every last drop of it. The issue is most people are just converting at a very low exchange rate right now. So they spend, you know, let's say $10,000 on leads a"
+   },
+   {
+    "local_id": "EV-0777",
+    "excerpt": "month and then they will receive maybe $20,000 on their leads a month, which is a 2x ros, which is quite poor. Uh means that you're spending 50% of every dollar you earn basically on the marketing to acquire that. It means your cost uh to acquire, you know, a lead is about 50% of what you make. [gasps] The the reality is if you treat your leads better, if you respond to them faster,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0452",
+  "claim_text": "If you treat leads better — respond faster, make it feel more customized and personalized, and give them the best experience possible before they pay you — you can convert the same lead spend into much more revenue.",
+  "evidence": [
+   {
+    "local_id": "EV-0777",
+    "excerpt": "month and then they will receive maybe $20,000 on their leads a month, which is a 2x ros, which is quite poor. Uh means that you're spending 50% of every dollar you earn basically on the marketing to acquire that. It means your cost uh to acquire, you know, a lead is about 50% of what you make. [gasps] The the reality is if you treat your leads better, if you respond to them faster,"
+   },
+   {
+    "local_id": "EV-0778",
+    "excerpt": "if you make them think it's more customized and personalized, if you do everything in your power to give them the best experience possible before they pay you, ideally after they pay you, too. But that's definitely not marketing's job. You can turn that single solitary dollar sign into a lot of dollar bills, y'all. And so this is more or less what um I actually do all"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0453",
+  "claim_text": "Once a lead is booked in your calendar you have already paid for them (e.g. a $30 cost per meeting), so you should check in with them immediately, call them ASAP within a few seconds of them filling out your form, send text messages and follow up.",
+  "evidence": [
+   {
+    "local_id": "EV-0779",
+    "excerpt": "day. And when I mean all day, I mean, you know, like probably like 20 30% of my day. Um, I do it so much that I actually ended up starting a whole business around this with a friend of mine, uh, called Clearville. And the idea behind this is very similar to what I just talked about. You know, you paid for the lead. You just paid, I don't know, like a $30 cost per meeting or"
+   },
+   {
+    "local_id": "EV-0780",
+    "excerpt": "something, okay? And if they're in your calendar, you spent $30 on them. You might as well make as much money out of that person as humanly possible, right? Just makes sense. So, you know, check in with them immediately. Actually call them ASAP within a few seconds of them filling out your form. send them text messages, follow up and squeeze them like a damn wet rag. I mean, they gave"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0454",
+  "claim_text": "In the speaker's own practice, they weave in flows that call leads immediately and build intelligent dispositions, which are outcomes such that if a lead does not pick up, the lead is routed in the right ways to the right places to maximize the probability of them picking up in the future.",
+  "evidence": [
+   {
+    "local_id": "EV-0781",
+    "excerpt": "you your information and you bought them, you might as well get the most value out of them. In our case, the way that we do it, and this is just a highle explanation cuz again, I want to make this contextually relevant for people that are watching. um is we will weave in flows that call leads immediately. And then we'll also build what are called dispositions, intelligent"
+   },
+   {
+    "local_id": "EV-0782",
+    "excerpt": "dispositions, which are outcomes such that if we call somebody and maybe they don't pick up, we route them in the right ways to the right places to maximize the probability of them picking up in the future. We also do things like leave voicemails intelligently. We dial them with good phone numbers that maximize the possibility and probability they'll pick up cuz how many people here"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0455",
+  "claim_text": "The speaker's practice also includes leaving voicemails intelligently and dialing leads with good phone numbers that maximize the probability they will pick up, plus branding the numbers.",
+  "evidence": [
+   {
+    "local_id": "EV-0782",
+    "excerpt": "dispositions, which are outcomes such that if we call somebody and maybe they don't pick up, we route them in the right ways to the right places to maximize the probability of them picking up in the future. We also do things like leave voicemails intelligently. We dial them with good phone numbers that maximize the possibility and probability they'll pick up cuz how many people here"
+   },
+   {
+    "local_id": "EV-0783",
+    "excerpt": "get random spam calls a day? Like we all do now. Um we brand them. uh we you know allow call centers uh visible monitoring and stuff like that so we could see sort of what people are saying what they're doing and why it's not working. We customized the information on our immediate post uh post ad for form fill calls such that we actually have like AI that can help coach people. We do a lot"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0456",
+  "claim_text": "A home services client's revenue went from 3 million a month to 9 million a month (300% revenue growth) simply by calling leads ASAP, calling them consistently and repeatedly, and dialing them with really good dial practices.",
+  "evidence": [
+   {
+    "local_id": "EV-0784",
+    "excerpt": "of stuff and um this is how we deliver absolutely absurd outcomes for a lot of the clients that we work with like a home services company that uh I've mentioned over and over and over again on the channel but they're just probably the best example of this. They were spending god knows how much money on leads before. I don't actually know the figure. We took the revenue from 3 mil a"
+   },
+   {
+    "local_id": "EV-0785",
+    "excerpt": "month to literally $9 million a month which is 300% revenue growth simply by treating their leads like gold. you know, simply by actually calling these leads ASAP, calling them consistently and repeatedly, and then dialing them with like really good dial practices. [clears throat] Okay, so this is what a speedtole system does really. Okay, and it's um affectionately referred to as"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0457",
+  "claim_text": "Speed to lead (S2L) allows you to squeeze significantly more juice out of leads: instead of an average wait of about 10 minutes before someone dials a new lead, after a speed to lead system the average wait is about 30 seconds.",
+  "evidence": [
+   {
+    "local_id": "EV-0786",
+    "excerpt": "S2L in the industry. Those of you guys that just want that spelled out, that's speed to lead. It allows you to squeeze significantly more juice out of leads. If before, [clears throat] let's say you get a new lead, somebody that fills out a form or an ad or something, and then I don't know, you have an average wait time of,"
+   },
+   {
+    "local_id": "EV-0787",
+    "excerpt": "let's say, 10 minutes before somebody picks up the phone and dials them after a speed to lead system. Okay? They'll fill out the form and then on average, they'll, I don't know, wait maybe like 30 seconds. In doing so, the person that filled out the form or the person that signed up to your offer, opted in, they'll still be in the same mindset that they were when"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0458",
+  "claim_text": "Contacting the lead fast keeps them in the same mindset they were in when they opted in; the longer they wait, the lower the likelihood they will actually want to engage with the offer.",
+  "evidence": [
+   {
+    "local_id": "EV-0787",
+    "excerpt": "let's say, 10 minutes before somebody picks up the phone and dials them after a speed to lead system. Okay? They'll fill out the form and then on average, they'll, I don't know, wait maybe like 30 seconds. In doing so, the person that filled out the form or the person that signed up to your offer, opted in, they'll still be in the same mindset that they were when"
+   },
+   {
+    "local_id": "EV-0788",
+    "excerpt": "they actually did it. The longer that they wait, the lower the likelihood is that they're actually going to want to engage in the offer cuz how many times have you filled out a form for something you don't actually need, but you just kind of felt like you did in the moment, right? Like we all do this sort of thing all day long. So, yeah, that's um that's sort of the idea here. And uh today,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0459",
+  "claim_text": "The triggering event for the system is 'intent demonstrated', and intent can be demonstrated in any way: a form fill, a phone call, an email to your brand, or an SMS.",
+  "evidence": [
+   {
+    "local_id": "EV-0789",
+    "excerpt": "what I'm going to do specifically with you guys is is I'm going to show you a simple system. Sorry, somebody's blowing up my phone. They do not have branded numbers though, so I'm not picking that puppy up. Is I'm going to show you guys a system that basically you're going to have some sort of, you know, event. So, I'm going to call this intent demonstrated. And this intent can be"
+   },
+   {
+    "local_id": "EV-0790",
+    "excerpt": "demonstrated in any way, whether it's a form fill, whether it's a phone call, whether it's an an email to your brand, whether it's an SMS. And instead of it taking, you know, like 10 minutes, um, we're going to cut that down and we're actually going to we're actually going to get them talking to you within like 30 seconds. Hell, probably even less. probably like 5 seconds. Uh what we're"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0460",
+  "claim_text": "Immediately after receiving the message, the system sends the lead an SMS and an email, both AI-customized based on the information in the form fill (name, why they signed up, their challenges, whatever is collected on ad opt-ins).",
+  "evidence": [
+   {
+    "local_id": "EV-0791",
+    "excerpt": "going to do is immediately after we get the message, okay, we're going to send them a text/ SMS. We're also going to send them a email. Both of these are going to be AI customized just like we customized our outreach a moment ago based off the information in the form fill. The information in the form fill is going to be stuff like I don't know their name."
+   },
+   {
+    "local_id": "EV-0792",
+    "excerpt": "It's going to be stuff like why they signed up. It's going to be stuff like their challenges, whatever sort of stuff you collect on your um opt-ins for ads. Then once we have AI do this, then we can even extend this. And I don't know if I'll get to that part today cuz I don't know if that's super important, but we can even extend this to some sort of like merged call. And there are a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0461",
+  "claim_text": "The flow can optionally be extended to a merged call, where somebody in a call center gets merged into calls with people that just filled out a form, so the person does not have to wait; this requires more intense software and third-party services assist with call merging.",
+  "evidence": [
+   {
+    "local_id": "EV-0792",
+    "excerpt": "It's going to be stuff like why they signed up. It's going to be stuff like their challenges, whatever sort of stuff you collect on your um opt-ins for ads. Then once we have AI do this, then we can even extend this. And I don't know if I'll get to that part today cuz I don't know if that's super important, but we can even extend this to some sort of like merged call. And there are a"
+   },
+   {
+    "local_id": "EV-0793",
+    "excerpt": "bunch of services out there that can actually assist in the merging of call. That's that's what we do over at Clarabo. But it but it is more kind of intense software that we would have to build where you know there's somebody in a call center or something and they just constantly get merged into calls with people that just filled out a form. Uh and you know because they're getting"
+   },
+   {
+    "local_id": "EV-0794",
+    "excerpt": "merged like the second that it happens the person on the other end of the line doesn't have to wait. Like the second they fill out the form 5 seconds past they get a phone call. It's like what? You know back in the day I lived with uh this guy Jonno and we were both running kind of like wedding based videography based photography based uh companies. And I remember one day he he made over"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0462",
+  "claim_text": "The speaker's former roommate promised on his website to call within 30 to 60 seconds of a form fill, and delivered it by texting immediately ('just saw you filled out the form, I'm going to give you a ring in a second'), then emailing ('just following up on the text I sent you a moment ago'), then immediately calling via an automated phone merge.",
+  "evidence": [
+   {
+    "local_id": "EV-0795",
+    "excerpt": "like $20,000 one month and I was really broke at the time, you know, eating rice and beans for the most part. So I was just like listening through the wall. He was my roommate and I was just like, \"What the hell is going on? How's he how's he doing this?\" And he had like a thing on his website where it would say if you fill out this form, I will call you within 30 seconds or something like"
+   },
+   {
+    "local_id": "EV-0796",
+    "excerpt": "that. Maybe it was 60 seconds. And people would fill it out and they would be like, \"Well, obviously he's not actually gonna call me in 60 seconds.\" But he had like a proprietary new, this was six years agoish at the time, version of this. He would text them immediately, be like, \"Hey, you know, just saw you filled out the form. I'm going to give you a ring in a second."
+   },
+   {
+    "local_id": "EV-0797",
+    "excerpt": "Stay tuned.\" He'd send them an email. Hey, just following up on the text I sent you a moment ago. Wanted to make sure you had everything. And then he'd immediately call them, too, based using like an automated uh phone merge thing. [gasps and sighs] So, very low hanging fruit, right? But you'd just be surprised at how many companies don't do this. You'd be surprised how many"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0463",
+  "claim_text": "Leads are perishable: you should try to reach people within just a few minutes, and definitely not wait an hour or wait until the next day, because the amount of money the business makes is directly contingent on this.",
+  "evidence": [
+   {
+    "local_id": "EV-0798",
+    "excerpt": "companies make $30,000 a month when they could be making $100,000 a month or 50k instead of like 150 or 200k. And what I want to do is I want to show you guys how to do that. um you know using uh speed to lead. Okay, no more perishable leads. Uh we're going to try and reach other people in just a few minutes. We're definitely not going to wait an hour and we're definitely not going to"
+   },
+   {
+    "local_id": "EV-0799",
+    "excerpt": "wait the next day. Um the amount of money that your business makes is directly contingent on all of this. So it's very important that we we reach out. So now that I'm done yapping, how the hell are we going to do this? Well, as I'm sure you can imagine, we're going to use Claude. So what I'm going to do is I'm just going to set up like a hypothetical form fill. And this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0464",
+  "claim_text": "The companies a speed to lead flow crushes for tend to be home services, blue collar, and really boring businesses that you never would have considered.",
+  "evidence": [
+   {
+    "local_id": "EV-0802",
+    "excerpt": "you see we have an ad right here, right? Let's say I'm on this page and I'm filling out this form. So, we're basically going to rebuild the flow that would occur immediately after this. And these are exactly the sorts of companies that a speed to lead flow like crushes for, by the way. Like, they tend to be home services. They tend to be blue collar. They tend to be really boring"
+   },
+   {
+    "local_id": "EV-0803",
+    "excerpt": "businesses that you never would have considered. Uh, but yeah, these guys these guys would crush if they had something like this. And I guarantee you they don't. Maybe I'll fill it out just to see how long it takes for them to reach out to me. But no, I guess I'd have to put my phone number on here, and I don't really want to. Okay, so uh yeah, let me let me run you guys through"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0465",
+  "claim_text": "The demo form fill was built with Claude as an HTML artifact, and it needs a form backend endpoint to actually send email; without something like that the page cannot send an email directly. The speaker uses a service called Form Scree (Formspree), which is free and takes about two seconds to sign up for.",
+  "evidence": [
+   {
+    "local_id": "EV-0804",
+    "excerpt": "this. First thing I'm going to do is I'm going to go back to Claude. I'm going to go new and I'll say, \"Hey, I'm creating a demo to show people how speed to lead works. Essentially, I want to make a simple form fill for a hypothetical error conditioner installation service. Pretend that I'm running an ad for this. When I fill out the form, I want to receive an email and my email address."
+   },
+   {
+    "local_id": "EV-0805",
+    "excerpt": "I'm then going to build a speed to lead system that monitors that email address and then um, you know, emails and then SMSes them immediately after they fill out the form. So, help me build this HTML artifact, whatever works, needs to actually send me an email. Yep. Okay. Now, in order to actually receive these emails, we're going to need to"
+   },
+   {
+    "local_id": "EV-0807",
+    "excerpt": "set up a demo like this unless you have a [sighs and gasps] something set up. Maybe we'll say suggested by AI. What prompted use, dude? Nothing. Let me sign up for the love of God. Okay, we're going to add a new form. Okay, and we're back over here. Um I just gave it a little form fill. uh basically something that like wires in an endpoint to allow it to connect to my"
+   },
+   {
+    "local_id": "EV-0808",
+    "excerpt": "email. If you don't have something like this, it can't actually send an email directly from this page. So, it's kind of [clears throat] annoying, but u I just use a service called Form Scree. It's totally free. It takes like two seconds to sign up. Anyway, you can see we actually have the the form here, which is nice. Um it's nice. Like, it it actually looks pretty good. I'm just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0466",
+  "claim_text": "The speaker makes the 'anything we should know' field mandatory because he wants AI to take that information and weave it into the email reply template.",
+  "evidence": [
+   {
+    "local_id": "EV-0811",
+    "excerpt": "can see it right over here, which is cool. So, we've now verified that this is entirely possible. And we also have information like source, notes, service, home, email, you know, zip code and and all that stuff. [gasps] So, if I refresh this, anything else we should know? Cool. I can put some information in there. Condo, new install, two twotory units about 15 years old. I think what"
+   },
+   {
+    "local_id": "EV-0812",
+    "excerpt": "I'll do um make the anything we should know field mandatory and then change it because I want to use AI to take that information and then weave it into a cool email reply template. [snorts] So I'm just going to feed that in and then Okay, cool. We now basically have everything we need in order to make this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0467",
+  "claim_text": "The flow is: the lead fills out the ad form; a polling system constantly checks the mailbox for emails that look like form fills; if found, an email is sent to that address immediately and an SMS is personalized.",
+  "evidence": [
+   {
+    "local_id": "EV-0813",
+    "excerpt": "work. So what is the flow actually going to look like? Uh well the flow is going to be fairly straightforward. We're going to start, okay, with the lead filling out the ad. Immediately after, I'm going to build a polling system, which is going to be new to you guys, but it's going to be a system that essentially checks my email constantly to see if emails exist that look like"
+   },
+   {
+    "local_id": "EV-0814",
+    "excerpt": "this. And if they do, we are going to send an email to that address immediately. We're also going to personalize an SMS. Now, there variety of different ways to do SMS personalization, uh, and stuff like that. I'm going to show you guys a simple way that I do it and then at the end um I don't think we're actually going to do the full call merge, but uh"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0468",
+  "claim_text": "If you respond too fast, people will think it is fake, so responses have to be within the bounds of reason; the speaker suggests spreading it out, e.g. 30 seconds, and notes that some people insert a little spelling mistake or a human-sounding message to make it seem more realistic.",
+  "evidence": [
+   {
+    "local_id": "EV-0815",
+    "excerpt": "I'll show you guys what you need to do if you did want to do a full call merge like let's say for a company that you're working with that does phone based marketing. And uh yeah, I mean like we can do all this thing. We can also do this in like 5 seconds. We can do this not in 5 minutes, in 5 seconds. Um but I think I'll probably spread it out just a little bit so it doesn't seem like too"
+   },
+   {
+    "local_id": "EV-0816",
+    "excerpt": "crazy. And that is something worth noting like if you do this too fast people will think it is fake. So, you do have to sort of be in the bounds of reason. Uh, could be like 30 seconds. You could insert like a little spelling mistake. That's something that a lot of people will do where they'll say like, \"Hey, Pete, just coming back from the office."
+   },
+   {
+    "local_id": "EV-0817",
+    "excerpt": "You know, just driving into the garage right now. I just saw this and I will call you. Can you give me like 3 minutes?\" They do stuff like that to make it seem more realistic. It just depends on on sort of how you want to to do it. Um, anyway, cool. So, what's going on with your current system? Awesome. Why don't I just take this and load this in a new browser? So, we'll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0469",
+  "claim_text": "The speaker recommends connecting the mailbox through a Gmail connector directly (connector > Gmail > continue > select all), which grants read, compose and send access to Gmail.",
+  "evidence": [
+   {
+    "local_id": "EV-0820",
+    "excerpt": "that we have this system, I need a way to pull my mailbox for new form fills.\" Okay. And next up, it is checking my Gmail to see if it can connect to um you know my my address and then grab all the information. I would recommend just doing this through a Gmail connector directly. So you can just go to connector and then go Gmail. I'm going to connect this directly."
+   },
+   {
+    "local_id": "EV-0821",
+    "excerpt": "Then I'll go down to continue. I'll select all. And now I can read, compose, and send emails from my Gmail. So then I will go back here. Then I'll just stop this cuz it's on a wild goose chase. Hey, I just added a connector. So, you can uh take a look at that now. Cool. That looks pretty solid to me. And now that we have this information, looks like it's skipping the whole OOTH dance."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0470",
+  "claim_text": "The polling system must actively check the mailbox once every minute for new entries that aren't already part of the old list of entries; two things are needed: a way to verify entries are new, and a way to take that information and immediately send an email back to the lead.",
+  "evidence": [
+   {
+    "local_id": "EV-0823",
+    "excerpt": "verifying that the OOTH client is usable. Should just try and log me in. Okay, cool. I think it did. Okay. And it looks like we also now have a list of all the leads. And it's even giving me the number of seconds since they got sent, which is awesome. All right. So, from here, we need to build some sort of polling system that actively checks the mailbox uh once every minute to see if"
+   },
+   {
+    "local_id": "EV-0824",
+    "excerpt": "there are new entries that aren't already part of, you know, the old list of entries. So, we need two things. We need one, a way to verify that these are new. And then two, we need a way to basically take that information and then immediately send an email back to them, you know, asking them questions and then verifying and making it seem real human. I'm going to give you the copy in a sec."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0471",
+  "claim_text": "The email copy uses a subject line of 'Re: [first name] air conditioning' and a body that says the sender just saw the form fill, includes a paraphrased version of the request, and promises that the sender or someone on the team will call in the next five minutes.",
+  "evidence": [
+   {
+    "local_id": "EV-0825",
+    "excerpt": "Okay, so it's going to go and do that. Um, while it's doing that, I'm just going to go to Google Docs and just write a couple of messages. So, email is going to be a little bit longer, but I think what I'm going to do is I'll just say re first name because that makes sense. And if you get an email, it's like repeater and then I'll say air conditioning. That's going to be the"
+   },
+   {
+    "local_id": "EV-0826",
+    "excerpt": "subject line. Um, and then I'll say, \"Hey, Peter, you know, first name, sorry, just got your request. I hear paraphrased version of their request.\" Just got your form or just saw you filled out a form. I hear a paraphrased version of your request. Will happily help you with that. I or someone on my team will call you in the next I don't"
+   },
+   {
+    "local_id": "EV-0827",
+    "excerpt": "know let's just say 5 minutes. Thanks Nick. And maybe just you know for my own sanity I'm not going to use Nick. I'll pretend that the person's name that's calling is Jonah. So hey Nick, just saw you filled out a form. I hear your upstairs is getting pretty hot these days. We'll happily help you with that. I or someone on my team will call you in the next five minutes. Maybe I'll"
+   },
+   {
+    "local_id": "EV-0828",
+    "excerpt": "say we'll call you in the next five minutes. to book a time to come. Or maybe I won't even mention that and sort this out. Cool. Why don't we do that? Now, um for SMS, typically you want something way shorter. Um there's like 160 character constraints on SMS. So, I'm just going to go here uh and say okay, ooth off me. I'm going to go back"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0472",
+  "claim_text": "SMS copy should be much shorter than email because of the 160 character constraint on SMS, so you must be very careful about how many characters you write; the template should be kept even shorter to minimize the probability that it spills over when AI fills in variables such as a really long name.",
+  "evidence": [
+   {
+    "local_id": "EV-0828",
+    "excerpt": "say we'll call you in the next five minutes. to book a time to come. Or maybe I won't even mention that and sort this out. Cool. Why don't we do that? Now, um for SMS, typically you want something way shorter. Um there's like 160 character constraints on SMS. So, I'm just going to go here uh and say okay, ooth off me. I'm going to go back"
+   },
+   {
+    "local_id": "EV-0829",
+    "excerpt": "here and I'll say SMS limit characters because I just want to see how many. So, it's 160. So, we have to be very very careful about how many characters we're writing in order for this to make any sense whatsoever. Um, just while uh we're doing this, it is going to ask me to authenticate. So, I'm just going to verify that it can. And then I'm going to say something like, \"Hi, first name."
+   },
+   {
+    "local_id": "EV-0830",
+    "excerpt": "Why don't we start with my email?\" Actually, this this is probably already 100 characters to be honest. 176. Yeah. So, it's just a little bit too much. I'll say, \"Hi, first name. Just got your request. I know paraphrased version of their request calling you in the next five men to sort this out."
+   },
+   {
+    "local_id": "EV-0831",
+    "excerpt": "Jonah, right? So in the worst case, hi, you know, Antonius, just got your request. I know paraphrased version of request and this is quite long as is. So realistically, like this will probably be about 20 or 30 characters anyway. We'll say short paraphrase version of this request calling you in the next five men to sort this out and then it'll be Jonah."
+   },
+   {
+    "local_id": "EV-0832",
+    "excerpt": "Maybe we'll actually just make that even shorter. Basically, we want to minimize the probability that this will spill with the AI variable fills. And you know, there is a potential case of them having a really long name. So, if that is the case, that would suck. Okay, so this looks pretty good to me. I'm now just going to fill this in. This is going to be like email copy. This is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0473",
+  "claim_text": "When instructing the AI, the speaker tells it to write the paraphrased version of the request at maximum about 10 to 15 words, keep it really short because the shorter it is the more human it seems, and to send the email casually formatted exactly like the provided template without straying from it.",
+  "evidence": [
+   {
+    "local_id": "EV-0833",
+    "excerpt": "going to be like SMS copy. And then what I'm going to do is I'm going to feed this in to AI and I'll say so this is the copy that I want to send back immediately. Um because we're just working on email right now. Just do the email one. For a paraphrased version of the request right at maximum like 10 or maybe 15 words or so. Keep it really short. The shorter it is the more human"
+   },
+   {
+    "local_id": "EV-0834",
+    "excerpt": "it seems. And when you send the email, make sure to send it like really casually formatted just like I provided to you. not stray from this template. Um, the 60-cond scheduleuler sounds awesome. Okay. And then we'll fire that off. Okay. And it's looking like we are now sending and receiving emails. This one just came in a moment ago as a test. I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0474",
+  "claim_text": "For SMS sending the speaker uses Qo (formerly Open Phone), which requires an American business, an American bank account and a phone number for legitimacy purposes; alternatively Twilio can be used, but a phone number must go through A2P verification/registration, which takes on average between 2 days and 7 to 14 days and can be rejected.",
+  "evidence": [
+   {
+    "local_id": "EV-0835",
+    "excerpt": "just going to It looks like for whatever reason, it's like pretty short. I don't know if this is normal. Yeah. Okay. And just while I was doing this, I was experimenting with SMS. So, there's a service out there called Qo. It's formerly called Open Phone. And uh I've had Open Phone for a long time. They've since changed their name and stuff like that, but uh it's just a requirement to"
+   },
+   {
+    "local_id": "EV-0836",
+    "excerpt": "like have a a b an American business and then set up an American bank account. You need to have like a phone number for legitimacy purposes. And I was just curious to see like, hey, if I had one of these, can I text from it? And I can. Um so, I'm just going to use that as my example because I want to show you guys what an SMS and email combined flow looks like. But if you guys don't have"
+   },
+   {
+    "local_id": "EV-0837",
+    "excerpt": "one of these, you can also set them up using Twilio. you do have to wait and actually set up like a phone number via um what's called A2P verification or registration. This takes a while. Um and you know I think people on average have waited probably somewhere between like 2 days to maybe like 7 or 14 days. You can also get rejected which is kind of annoying and it's a relatively new um"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0475",
+  "claim_text": "A2P is a relatively new requirement by the American government to ensure there isn't a tremendous amount of phone spam, and because of spam message increases you now have to wait.",
+  "evidence": [
+   {
+    "local_id": "EV-0837",
+    "excerpt": "one of these, you can also set them up using Twilio. you do have to wait and actually set up like a phone number via um what's called A2P verification or registration. This takes a while. Um and you know I think people on average have waited probably somewhere between like 2 days to maybe like 7 or 14 days. You can also get rejected which is kind of annoying and it's a relatively new um"
+   },
+   {
+    "local_id": "EV-0838",
+    "excerpt": "it's a relatively new requirement by the American government to ensure that there isn't just like tremendous amounts of phone spam. So you know it's not a bad thing per se. It's not necessarily horrific, but uh yeah, because of these spam message increases, they've now sort of made it so that you have to wait a little bit. And I had to do A2P2 with Kuo, but uh you know, mine's done, so"
+   }
+  ]
+ }
+]

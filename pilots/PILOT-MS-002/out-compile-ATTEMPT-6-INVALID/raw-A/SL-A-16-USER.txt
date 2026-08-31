@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-16
+boundaries: 17327.44s - 18529.6s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+I'd like you to revisit these what makes the most logical sense. Assume the analysis done before was by a dumber, less capable model. And so what I've done is I've taken all of the stuff that we had before and I've just fed it to Fable 5 um because you know these models share context. And so this is like the Opus 5 recommendations which are okay. Did so off of medium reasoning. Uh I want Fable 5 on high which is just again the absolute most highquality data humanly possible. Okay. So working through it again the structure is actually more constrained than a matter of preference. Three properties of the data set force the answer. The anomaly distribution dictates the primary axis of the seven stories fiber client scoped. One is global, one is rep scoped. A funnel ordered layout scatters each client story across five pages. The deal the death spiral shows up as a traffic blip on one page. They're talking about a specific client. A clientcentric layout is the only one each planted story is visible as a story on a single screen. Since the anomalies are the entire demo, this alone settles the primary axis. Two, the coverage gaps punish global pages. E-commerce exists for 4 out of 12 clients. Attribution for 44% of leads. GBP is local business flavored and then the grain mismatches dictate what cannot be client tabs. So here is what it recommends. Overview portfolio grid alert feed performance traffic pipeline search presence commercial and this is client broken down by ID. Um specific channels sales teams and then signals. So I like this idea and I'm going to say yes. And you know if there was something here that I didn't like obviously I don't just have to take the model's word for it. This model despite being super smart makes a lot of issue uh a lot of errors as well. Um I just think that this is a reasonable breakdown of the data that I was um u working with here. They are like client-based uh and so you can see opus did not do the same thing. Funnel oriented overview acquisition traffic and site client centric agency overview client detail channel analysis candidate C persona question. Are we hitting the number? Where's the money going? Is the site converting? These are all very different approaches and uh Fable basically just jumped right in and then determined the the highest quality approach immediately. So, it's going to scaffold those five pages for me and I'm just going to loop around when it's done. Once it's done the scaffolding, uh then I'm actually going to like turn this from just like a scaffold project into like a design project. And I'll show you guys what it looks like when you do cool high quality web design uh with, you know, Fable and these other models. Actually, while I'm at it, I mean, like this is um Fable Design 25. I made this website a while back. Uh it's called Fable 25. And basically, I had Fable just like create a bunch of extremely highquality, well-designed sites. And I say well-designed here in like a relative term. Um these sites are not really the sorts of sites that you'd realistically probably want, you know, to build a dashboard off of, but they are very impressive and they they showcase just how high quality Fable really is at stuff like this. So, um I don't know, how about this one here? Right. This is like extraordinarily interactive website where we actually are modeling all of these and we're doing it while also flipping between different font sizes uh and also autocasting them. You know, this over here is like a sexy architecture website with like cool effects, right? You can do pretty crazy stuff these days. This one's like cool typography stuff. So, we don't need to feel constrained by design really to any extent and um Fable 5 can do a really really good job. It's just important to approach it in a specific way. Get the data on the page. Once you have the data on the page, then you skin it and select high-quality iterations. You can see the example that it has put together uh which is very in-depth. It's an extremely extremely detailed database. And I mean the design is far better than whatever we uh did before with that much dumber model. As you can see, you also have the ability to click into a specific client, which is kind of neat. And you can see the leads per day. You can see the traffic collapse. Uh what they do is they have naive SQL threshold detection over the engagement window. Basically, if something drops off or comes up really really quickly, um you can see it right here. It'll actually show you like it'll say, for instance, hey, there's a weird lead flow collapse happening for CL10, that's client 10 on the week of, I don't know, March uh I don't know, 9th, 2026. On average, you guys normally get 57 leads. Now, you guys are getting three leads. So, I think it's like a 5x difference threshold or something like that. And uh that's how you determine whether or not something is weird. But then you also have a breakdown of areas that it kind of makes sense to point out. So, hey, you know, here's a conversion rate jump. The baseline percentage is 1.65. Okay, so 1.65% and now it's 2.23. So, what we've done is we basically 1.25 or 1.5xed total results. You can see that sort of law hold across the board here. And so, this is like good information for you to like present to a client. Then down at the very bottom, you can see they're also doing a bunch of stuff on rep rate wins. So, you know, like these are sales representatives and uh you know, this guy has, I don't know, a win rate of 15.6% on deals, so about one in seven calls. Um, team average percentage is, oh, sorry, this guy's not a winner. He's a he's a loser. The team average percentage is 24.2%. His win rate is 15.6%. So, it's like, hm, okay, maybe maybe I should do something about that. So, Fable is going through this with me and basically doing the evaluation to try and figure out what's going on. Um, we're clicking through all these different clients. Just making sure that like nothing here is is weird. End of all of this. It has gone through and done all of the testing. Um, I just want to verify that I haven't actually ended up using more than my fable usage limit. [sighs and gasps] So, it's looking like the cost of this session was 94% fable $13. I just want to make 100% sure that as something that um just worked out. Let me actually go through usage credits. you know, we realistically didn't burn through them. And it looks like for that dashboard, which to be clear is, you know, this controls like 20 clients or something like that and tens of thousands upon tens of thousands upon tens of thousands of rows of data. Like, it's not a it's not a trivial build. That cost me $18 Canadian dollars or about 13 12 or 13 American, which I think you guys are probably more used to. So, that's big, right? I mean, we just spent a lot of money. But the reason why I did this with Fable is because now we have basically the scaffold. We have the architecture here. And what we can do is we can take this extraordinarily detailed super in-depth um dashboard and now we can just spin it into like 20 different variants. What do I mean by this? Well, what I'm going to do now is I'm going to go from Fable 5 to Opus 5. Okay. And I'll keep it at um high just for simplicity. And let me just see if I can make this fast. I don't know if I can. Yeah, it doesn't look like I can. That's okay. Fast mode just allows your model to operate a little bit faster. Now, I'm going to go back to Opus 5, which um is not being built as part of my usage limits. Uh sorry, it's not being built as like extra credit. It's being built as part of my usage limits. And now I can spin it. Hey, now that we've built this extremely um highquality scaffold, what I want to do is I want to spin this in five different designs. Aka, I want you to generate five highly different variants each. I'd like you to spawn five sub agents all working on this project simultaneously using HTML. Um, go nuts here. Really demonstrate the diversity and range of your visual uh design appeal and give me something that just looks really really awesome and interesting on all of them. Key focus should be interpretability obviously uh usability and practical UX. UX that actually does serve uh the user. Okay, sorry it turns out you can't use extra high on Opus 5, I don't think. Um, in case you guys didn't know, you can actually spawn multiple sub agents simultaneously that are all working on things for you at the same time. This consumes vastly more usage limit than if you were to do it in serial or a linear manner like most of us are used to, but it also allows you when you're doing something like creating five different designs to design things far faster. The whole principle here is parallelization. And I'm glad we're doing a design project cuz I I did want to talk about this at some point in the program. Um, but basically what we want to do is, you know, if you think about it, the way that we were doing things before is we had one process. Okay, maybe make this a little bit bigger. And why don't I actually draw this on the uh dashboard here? That'll allow you guys to see this um in perpetuity and then we can come back to it. You know what we're doing before is we have one process, okay? And then we want to do another process, we want to do another process, and then maybe we want to do a couple more. What we were doing is we were proceeding in like a linear manner. And when you do things in a linear manner with agents, there is a certain time cost. So maybe in order to go from 1 to 2 takes 5 minutes. In order to go from 2 to 3 takes 5 minutes. In order to go from 3 to 4, it takes 5 minutes. In order to go from 4 to 5, it takes 5 minutes. What that means logically speaking is if you add up the total amount of time that is 5 + 5 + 5 + 5 20 minutes in total. Well, when you have um parallelizable uh processes and I define a parallelizable process with agents as a process where you can spawn multiple agents working on the same data resource but whose actions are independent and do not impact the actions of other agents. Then you can do something really cool. You could start with step one, but then you know what you can do? You can spawn, you know, two, three, four. Well, I guess probably just one more here. And then you can immediately combine those into some next process six such that okay, from 1 to 2 3 4 and 5, it's only 5 minutes. And from 2 3 4 5 and 6 to 2 3 4 5 26, it's only another 5 minutes. So now if you think about it, this whole process here, okay, this is only uh 10 minutes long. And so we're comparing it to a process that's previously 20 minutes that has a lot of weight times. Well, now we're just doing that waiting kind of in one shot. We're just immediately generating all of the variants that we want. And this second half might not even be necessary as we will see. But generally speaking, what I'll do is I'll I'll try and combine the best portions of each of these variants and then um stick them in one. So the upside obviously okay if we look at the pro of parallelization it's it's way faster okay it also allows you to search a lot of what's called the solution space which is the space of all possible solutions to your problem the cons are you know it's much more expensive so I'm just going to say not cheap [laughter] because you are doing a lot of this and two um in order for you to be able to do this each of these processes need to inherently be like non-moniitored Um, and what that means is, you know, it's like higher I'm going to say higher risk of failure. But it's okay if there's a higher risk of failure because logically speaking um we don't really mind uh you know as long as the models are capable of I don't know going out and doing these things um you know reasonably autonomously like it's okay if we do it five times only like one of those actually need to work right or be sufficient to our taste. But anyway yeah that's that's more or less the process. Okay so checking back in on our model you can see that we've now spawned five sub agents. One is doing an editorial style design. Another is doing a terminal style design. Another is doing a Swiss style design. Another is doing a dense operation style design. And the last is doing a warm print style design. And two things that built into the brief that matter for the video that I'm recording. Every variant must find the same seven anomalies, which is pretty interesting. I guess it's trying to like improve my ability to make this video because I'd be able to cut between each of these and show you guys what each of the data sources are. [gasps] Okay, so this is the reference scaffold right over here. This is what we were looking at before. Okay. And it's just like bare bones. It's kind of a very neat and kind of sleek design. It's not doing a lot of BS here, uh, which I like. But, uh, I wanted I want to kick this up a notch and I want to show us all of the same information just at much higher quality and levels of granularity. Now, what's really cool here on the right hand side, you can see we actually have a monitor that's showing all of the current agents that are in progress. Um if I move my head just a little bit so you guys could see this my my luscious head. Um we can see here we have one called Northbeam. Now this is actually the main agent. This is build editorial variant that's agent one. Terminal variant agent two. Swiss variant agent three. Dense ops variant agent four and warm print variant agent 5. So we actually have transcripts of all of these. We can see the tools that and we can actually just jump into this at any point in time to see what's going on. And you can see sort of what's happening here, right? It's actually designing like this editorial thing as like a quarterly review style, um, you know, uh, design, which is kind of neat. You can see how deep we're going with some of these designs. Um, I mean, look at that. That is next level. We have basically the same data. It's just being shown to us and sort of portrayed a little bit differently. Dare I say, you know, a little bit better. Um, so I'm looking forward to seeing all these when they are done. I will be real with you. This doesn't occur immediately. I mean, I was saying 5 minutes there, not as a uh prescription. Like, it's not going to take exactly 5 minutes. In this case, it's 854, 841, 827, 812, and 756. They're all just like lagging behind each other a little bit. Um, but yeah, that's more or less where we're at. Okay. And it's now just doing some final checks. You can see down over here, we are approaching our usage limit, which means we have used a lot of cloud. Um, however, this one is basically finished. and see the same thing happening for I think this terminal variant as well. It's just finishing up now. Uh we can actually see the the website sort of live if I make this bigger. So we can jump to a client very easily just by using this little terminal structure. You know, I think I think this is probably one of my better ones. This one here is pretty interesting. It's almost like an auto group. This one here is like the north beam report. This one here is almost like a I don't know. It's like a consulting style channel. Although you could see one of these is a little bit off. And I think this is that original one at the very beginning. So I'm going to got 1 2 3 4 5. Cool. Okay. So up here we actually can see the different variants. Um I think I'm going to see if I can go back to number one. But there's now V1's, V2s, V3s, V4s, and then V5s. Um they're unfortunately titled kind of annoyingly. So let me see if I can just copy and paste this. This is dense ops. Take a look at this. I like dense ops. uh looks far better in light mode. I'd say what we see here is overview on the lefth hand side channels underneath. So we can see all the different channels that are contributing or not contributing to uh the economics. And this is across all of our clients, not just one of them. Our sales, so our team win rate, total deals won, revenue, closed, average sales cycle, and then signals as well. These signals are the ones that I was mentioning pop up essentially anytime that you um you know have a major increase or decrease in something. So there's wins with conversion rate jumps, but also losses with traffic collapse. Then you have specific client pages. You can actually see their performance, their traffic, you can see the pipeline, you could see um you know rep performance on the account, see who's the best, who's the worst, and then search. Like I I hope it's clear this is like a full product in and of itself. It is extraordinarily high quality. And um you know this you can set it up so that it pulls from the database every morning. Um, I've even seen a particular uh company, a big company, you know, they make, I don't know, probably somewhere between 20 to $30 million a year, uh, actually take one of these dashboards and just put it up on their televisions. They, instead of structuring it like this, do so in like a like a slideshow kind of way where the metrics kind of populate as the day goes on and then the reps that are responsible for specific things constantly see it in front of them. I mean, you know, maybe that's a little bit more basic and we've been doing stuff like that for a while, but yeah, you can do you can do fantastic work with um Fable nowadays and cloud code. This one over here is that terminalbased style one. So, you can go overview, see everything in front of you here. You can then click into a specific client, which is cool. I like the color scheme of this one a lot. You know, you have LinkedIn ads, Google ads through search, organic search. You can drill down like pretty far with this stuff. And obviously, we can add filtering functionality if we want to. >> [gasps] >> Um, I like that you can also just go 1 2 3 4 5 6. So that's what I'm doing here with that smooth scroll. So maybe you load up, you deliver a presentation using this dashboard, and you go to two, traffic, you go to three, pipeline, for search. This one over here is much more punchy and engaging, I'd say, but also more like a visual portfolio project. So here you can see the client portfolio. You can click into the client itself and actually see the growth over time. I'm a little bit zoomed in, so let me just zoom out, make it look a little bit better. That's what we got here. Um, you could see active, churned, health, MR, all of that. And, uh, yeah, I mean, this one is looking at it, I think, on a 30-day timeline, but yeah, you can obviously change that, too. Pretty clean. Now, the last thing is now that we built a dashboard, we actually need to get this somewhere, and I want to put this on the internet and make this accessible to people that are within my organization. So, how do you do so? There are variety of different ways. Um, the way that I'm going to do it is using a platform called Netlify, which essentially allows me just to put static information on the internet for virtually free. Uh, in my case, I think it is free. I think they have like a free plan where it's free forever. You can deploy however many websites you want. Uh, or maybe you can do 300 websites a month or something like that. But still way more websites than I ever possibly need. So, I already have the site. I'm just going to click login, but you guys can obviously um, you know, sign up to a new one. Once in, we need our Netlefi remote MCP server. So, similar to how we did before, I'm now going to go up here, go to settings. I'll then go to connectors, add add custom connector, add this, and then I'm going to call this netifi. And if it starts looking weird like that, you just kind of pull this back and just do um you don't add the npx sections here. All you need is this. Once you're done, click add. It'll then check the connection, ask you to connect to it. So, that's what I'll do here. And now I'll authorize this so it has access to my client projects now. And I can go back and so here are all the things that it can do. It can uh I don't know import a cloud design from a URL. It can, you know, set up a new job, create, deploy, and manage my websites. And uh that's virtually what I want. So yeah, as I was doing this, it uh said usage limit was reached. So I did go and I bought I think another $15 of it or something like that. Uh keep in mind that you guys don't have to do this. I have just been making like a 5 hour course in basically a day. So 5 hours of a probably much longer course in basically a day. So, the probability that you guys yourselves would breach these loot usage limits as quickly as I did quite low. Um, but what I'll do here is uh just voice discate. My goal is I want to get this on the internet. My favorite was V3. I just connected the Netlefi MCP. I would like you to add this and upload this to Netlifi and then password protect it. Make the password 1 2 3 4 5. Okay. So, here is the finished app. Uh, it has both a light mode and a dark mode. this is a great internal thing to be able to send to you or your clients. Uh I'm sure you guys could see how easy it would be to just gate it so that this is just like for one specific client. Maybe you'd use a URL parameter or something like that like you know client equals X and maybe there'd be a special password for them, a different password for somebody else. What we just did is we we basically recreated like agency analytics or another one of those sorts of marketing uh visualization softwares and we did so for realistically about like $15 in tokens. Um, but I'll be honest, this is way more data than you would ever ever have on any one of those. You're not just dumping the stuff into a Google sheet here. This is like, as you guys saw, over 50,000, maybe a 100,000 rows of data. So, you also have like a little client health score on the uh side here with like a health thing that has been generated. Um, you could see, you know, their their whole pipeline, their funnel, and where they dropped off. So, this would be considered like a warning or a dead zone. And then you can also filter based off of CPL. You can also see there's a big bump in CPL here from an average of about 100 bucks to literally like 1,100. And that whole idea is just so that you guys could see like, hey, you know, what's going on? Oh, there's some sort of alert basis for this client. This client is, uh, you know, suffering for whatever reason. And so, uh, let me see which one was that. Torque Auto Group with CL10. If we go back to signals here, you can see CL10 on the week of March the 9th, um, was critical. It got three leads versus its usual 58. uh you know and there were also CPC spikes for
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0901",
+  "excerpt": "I'd like you to revisit these what makes the most logical sense. Assume the analysis done before was by a dumber, less capable model. And so what I've done is I've taken all of the stuff that we had before and I've just fed it to Fable 5 um because you know these models share context. And so this is like the Opus 5 recommendations which are okay. Did so off of medium reasoning. Uh I"
+ },
+ {
+  "local_id": "EV-0902",
+  "excerpt": "want Fable 5 on high which is just again the absolute most highquality data humanly possible. Okay. So working through it again the structure is actually more constrained than a matter of preference. Three properties of the data set force the answer. The anomaly distribution dictates the primary axis of the seven stories fiber client scoped. One is"
+ },
+ {
+  "local_id": "EV-0903",
+  "excerpt": "global, one is rep scoped. A funnel ordered layout scatters each client story across five pages. The deal the death spiral shows up as a traffic blip on one page. They're talking about a specific client. A clientcentric layout is the only one each planted story is visible as a story on a single screen. Since the anomalies are the entire demo, this alone settles the primary axis."
+ },
+ {
+  "local_id": "EV-0904",
+  "excerpt": "Two, the coverage gaps punish global pages. E-commerce exists for 4 out of 12 clients. Attribution for 44% of leads. GBP is local business flavored and then the grain mismatches dictate what cannot be client tabs. So here is what it recommends. Overview portfolio grid alert feed performance traffic pipeline search presence commercial and this is client broken down by ID. Um specific"
+ },
+ {
+  "local_id": "EV-0905",
+  "excerpt": "channels sales teams and then signals. So I like this idea and I'm going to say yes. And you know if there was something here that I didn't like obviously I don't just have to take the model's word for it. This model despite being super smart makes a lot of issue uh a lot of errors as well. Um I just think that this is a reasonable breakdown of the data that I was um u working with here."
+ },
+ {
+  "local_id": "EV-0906",
+  "excerpt": "They are like client-based uh and so you can see opus did not do the same thing. Funnel oriented overview acquisition traffic and site client centric agency overview client detail channel analysis candidate C persona question. Are we hitting the number? Where's the money going? Is the site converting? These are all very different approaches and uh Fable basically just jumped right in and"
+ },
+ {
+  "local_id": "EV-0907",
+  "excerpt": "then determined the the highest quality approach immediately. So, it's going to scaffold those five pages for me and I'm just going to loop around when it's done. Once it's done the scaffolding, uh then I'm actually going to like turn this from just like a scaffold project into like a design project. And I'll show you guys what it looks like when you do cool high quality web design uh"
+ },
+ {
+  "local_id": "EV-0908",
+  "excerpt": "with, you know, Fable and these other models. Actually, while I'm at it, I mean, like this is um Fable Design 25. I made this website a while back. Uh it's called Fable 25. And basically, I had Fable just like create a bunch of extremely highquality, well-designed sites. And I say well-designed here in like a relative term. Um these sites are not really the sorts of sites that you'd"
+ },
+ {
+  "local_id": "EV-0909",
+  "excerpt": "realistically probably want, you know, to build a dashboard off of, but they are very impressive and they they showcase just how high quality Fable really is at stuff like this. So, um I don't know, how about this one here? Right. This is like extraordinarily interactive website where we actually are modeling all of these and we're doing it while also flipping between"
+ },
+ {
+  "local_id": "EV-0910",
+  "excerpt": "different font sizes uh and also autocasting them. You know, this over here is like a sexy architecture website with like cool effects, right? You can do pretty crazy stuff these days. This one's like cool typography stuff. So, we don't need to feel constrained by design really to any extent and um Fable 5 can do a really really good job. It's just important to approach it in a specific"
+ },
+ {
+  "local_id": "EV-0911",
+  "excerpt": "way. Get the data on the page. Once you have the data on the page, then you skin it and select high-quality iterations. You can see the example that it has put together uh which is very in-depth. It's an extremely extremely detailed database. And I mean the design is far better than whatever we uh did before with that much dumber model. As you can see, you also have the ability to click"
+ },
+ {
+  "local_id": "EV-0912",
+  "excerpt": "into a specific client, which is kind of neat. And you can see the leads per day. You can see the traffic collapse. Uh what they do is they have naive SQL threshold detection over the engagement window. Basically, if something drops off or comes up really really quickly, um you can see it right here. It'll actually show you like it'll say, for instance, hey, there's a weird lead flow"
+ },
+ {
+  "local_id": "EV-0913",
+  "excerpt": "collapse happening for CL10, that's client 10 on the week of, I don't know, March uh I don't know, 9th, 2026. On average, you guys normally get 57 leads. Now, you guys are getting three leads. So, I think it's like a 5x difference threshold or something like that. And uh that's how you determine whether or not something is weird. But then you also have a breakdown of areas that it kind"
+ },
+ {
+  "local_id": "EV-0914",
+  "excerpt": "of makes sense to point out. So, hey, you know, here's a conversion rate jump. The baseline percentage is 1.65. Okay, so 1.65% and now it's 2.23. So, what we've done is we basically 1.25 or 1.5xed total results. You can see that sort of law hold across the board here. And so, this is like good information for you to like present to a client. Then down at the very bottom, you can"
+ },
+ {
+  "local_id": "EV-0915",
+  "excerpt": "see they're also doing a bunch of stuff on rep rate wins. So, you know, like these are sales representatives and uh you know, this guy has, I don't know, a win rate of 15.6% on deals, so about one in seven calls. Um, team average percentage is, oh, sorry, this guy's not a winner. He's a he's a loser. The team average percentage is 24.2%. His win rate is 15.6%. So, it's like, hm, okay,"
+ },
+ {
+  "local_id": "EV-0916",
+  "excerpt": "maybe maybe I should do something about that. So, Fable is going through this with me and basically doing the evaluation to try and figure out what's going on. Um, we're clicking through all these different clients. Just making sure that like nothing here is is weird. End of all of this. It has gone through and done all of the testing. Um, I just want to verify that I haven't actually"
+ },
+ {
+  "local_id": "EV-0917",
+  "excerpt": "ended up using more than my fable usage limit. [sighs and gasps] So, it's looking like the cost of this session was 94% fable $13. I just want to make 100% sure that as something that um just worked out. Let me actually go through usage credits. you know, we realistically didn't burn through them. And it looks like for that dashboard, which to be"
+ },
+ {
+  "local_id": "EV-0918",
+  "excerpt": "clear is, you know, this controls like 20 clients or something like that and tens of thousands upon tens of thousands upon tens of thousands of rows of data. Like, it's not a it's not a trivial build. That cost me $18 Canadian dollars or about 13 12 or 13 American, which I think you guys are probably more used to. So, that's big, right? I mean, we just spent a lot of money. But the"
+ },
+ {
+  "local_id": "EV-0919",
+  "excerpt": "reason why I did this with Fable is because now we have basically the scaffold. We have the architecture here. And what we can do is we can take this extraordinarily detailed super in-depth um dashboard and now we can just spin it into like 20 different variants. What do I mean by this? Well, what I'm going to do now is I'm going to go from Fable 5"
+ },
+ {
+  "local_id": "EV-0920",
+  "excerpt": "to Opus 5. Okay. And I'll keep it at um high just for simplicity. And let me just see if I can make this fast. I don't know if I can. Yeah, it doesn't look like I can. That's okay. Fast mode just allows your model to operate a little bit faster. Now, I'm going to go back to Opus 5, which um is not being built as part of my usage limits. Uh sorry, it's not being built as like"
+ },
+ {
+  "local_id": "EV-0921",
+  "excerpt": "extra credit. It's being built as part of my usage limits. And now I can spin it. Hey, now that we've built this extremely um highquality scaffold, what I want to do is I want to spin this in five different designs. Aka, I want you to generate five highly different variants each. I'd like you to spawn five sub agents all working on this project"
+ },
+ {
+  "local_id": "EV-0922",
+  "excerpt": "simultaneously using HTML. Um, go nuts here. Really demonstrate the diversity and range of your visual uh design appeal and give me something that just looks really really awesome and interesting on all of them. Key focus should be interpretability obviously uh usability and practical UX. UX that actually does serve uh the user. Okay, sorry it turns out you can't use extra"
+ },
+ {
+  "local_id": "EV-0923",
+  "excerpt": "high on Opus 5, I don't think. Um, in case you guys didn't know, you can actually spawn multiple sub agents simultaneously that are all working on things for you at the same time. This consumes vastly more usage limit than if you were to do it in serial or a linear manner like most of us are used to, but it also allows you when you're doing something like creating five different"
+ },
+ {
+  "local_id": "EV-0924",
+  "excerpt": "designs to design things far faster. The whole principle here is parallelization. And I'm glad we're doing a design project cuz I I did want to talk about this at some point in the program. Um, but basically what we want to do is, you know, if you think about it, the way that we were doing things before is we had one process. Okay, maybe make this a little bit bigger. And why don't I"
+ },
+ {
+  "local_id": "EV-0925",
+  "excerpt": "actually draw this on the uh dashboard here? That'll allow you guys to see this um in perpetuity and then we can come back to it. You know what we're doing before is we have one process, okay? And then we want to do another process, we want to do another process, and then maybe we want to do a couple more. What we were doing is we were proceeding in like a linear manner."
+ },
+ {
+  "local_id": "EV-0926",
+  "excerpt": "And when you do things in a linear manner with agents, there is a certain time cost. So maybe in order to go from 1 to 2 takes 5 minutes. In order to go from 2 to 3 takes 5 minutes. In order to go from 3 to 4, it takes 5 minutes. In order to go from 4 to 5, it takes 5 minutes. What that means logically speaking is if you add up the total amount of time"
+ },
+ {
+  "local_id": "EV-0927",
+  "excerpt": "that is 5 + 5 + 5 + 5 20 minutes in total. Well, when you have um parallelizable uh processes and I define a parallelizable process with agents as a process where you can spawn multiple agents working on the same data resource but whose actions are independent and do not impact the actions of other agents. Then you can do something really cool."
+ },
+ {
+  "local_id": "EV-0928",
+  "excerpt": "You could start with step one, but then you know what you can do? You can spawn, you know, two, three, four. Well, I guess probably just one more here. And then you can immediately combine those into some next process six such that okay, from 1 to 2 3 4 and 5, it's only 5 minutes. And from 2 3 4 5 and 6 to 2 3 4 5 26, it's only another 5 minutes. So now if you think about it, this whole"
+ },
+ {
+  "local_id": "EV-0929",
+  "excerpt": "process here, okay, this is only uh 10 minutes long. And so we're comparing it to a process that's previously 20 minutes that has a lot of weight times. Well, now we're just doing that waiting kind of in one shot. We're just immediately generating all of the variants that we want. And this second half might not even be necessary as we will see. But generally speaking, what"
+ },
+ {
+  "local_id": "EV-0930",
+  "excerpt": "I'll do is I'll I'll try and combine the best portions of each of these variants and then um stick them in one. So the upside obviously okay if we look at the pro of parallelization it's it's way faster okay it also allows you to search a lot of what's called the solution space which is the space of all possible solutions to your problem the cons are you know it's much more expensive so I'm"
+ },
+ {
+  "local_id": "EV-0931",
+  "excerpt": "just going to say not cheap [laughter] because you are doing a lot of this and two um in order for you to be able to do this each of these processes need to inherently be like non-moniitored Um, and what that means is, you know, it's like higher I'm going to say higher risk of failure. But it's okay if there's a higher risk of failure because logically"
+ },
+ {
+  "local_id": "EV-0932",
+  "excerpt": "speaking um we don't really mind uh you know as long as the models are capable of I don't know going out and doing these things um you know reasonably autonomously like it's okay if we do it five times only like one of those actually need to work right or be sufficient to our taste. But anyway yeah that's that's more or less the process. Okay so checking back in on our model"
+ },
+ {
+  "local_id": "EV-0933",
+  "excerpt": "you can see that we've now spawned five sub agents. One is doing an editorial style design. Another is doing a terminal style design. Another is doing a Swiss style design. Another is doing a dense operation style design. And the last is doing a warm print style design. And two things that built into the brief that matter for the video that I'm recording. Every variant must find the"
+ },
+ {
+  "local_id": "EV-0934",
+  "excerpt": "same seven anomalies, which is pretty interesting. I guess it's trying to like improve my ability to make this video because I'd be able to cut between each of these and show you guys what each of the data sources are. [gasps] Okay, so this is the reference scaffold right over here. This is what we were looking at before. Okay. And it's just like bare bones. It's kind of a very neat and kind"
+ },
+ {
+  "local_id": "EV-0935",
+  "excerpt": "of sleek design. It's not doing a lot of BS here, uh, which I like. But, uh, I wanted I want to kick this up a notch and I want to show us all of the same information just at much higher quality and levels of granularity. Now, what's really cool here on the right hand side, you can see we actually have a monitor that's showing all of the current agents that are in progress. Um if I move my"
+ },
+ {
+  "local_id": "EV-0936",
+  "excerpt": "head just a little bit so you guys could see this my my luscious head. Um we can see here we have one called Northbeam. Now this is actually the main agent. This is build editorial variant that's agent one. Terminal variant agent two. Swiss variant agent three. Dense ops variant agent four and warm print variant agent 5. So we actually have transcripts of all of these. We can see"
+ },
+ {
+  "local_id": "EV-0937",
+  "excerpt": "the tools that and we can actually just jump into this at any point in time to see what's going on. And you can see sort of what's happening here, right? It's actually designing like this editorial thing as like a quarterly review style, um, you know, uh, design, which is kind of neat. You can see how deep we're going with some of these designs. Um, I mean, look at"
+ },
+ {
+  "local_id": "EV-0938",
+  "excerpt": "that. That is next level. We have basically the same data. It's just being shown to us and sort of portrayed a little bit differently. Dare I say, you know, a little bit better. Um, so I'm looking forward to seeing all these when they are done. I will be real with you. This doesn't occur immediately. I mean, I was saying 5 minutes there, not as a uh prescription. Like, it's not going to"
+ },
+ {
+  "local_id": "EV-0939",
+  "excerpt": "take exactly 5 minutes. In this case, it's 854, 841, 827, 812, and 756. They're all just like lagging behind each other a little bit. Um, but yeah, that's more or less where we're at. Okay. And it's now just doing some final checks. You can see down over here, we are approaching our usage limit, which means we have used a lot of cloud. Um, however, this one is basically finished."
+ },
+ {
+  "local_id": "EV-0940",
+  "excerpt": "and see the same thing happening for I think this terminal variant as well. It's just finishing up now. Uh we can actually see the the website sort of live if I make this bigger. So we can jump to a client very easily just by using this little terminal structure. You know, I think I think this is probably one of my better ones. This one here is pretty interesting. It's almost"
+ },
+ {
+  "local_id": "EV-0941",
+  "excerpt": "like an auto group. This one here is like the north beam report. This one here is almost like a I don't know. It's like a consulting style channel. Although you could see one of these is a little bit off. And I think this is that original one at the very beginning. So I'm going to got 1 2 3 4 5. Cool. Okay. So up here we actually can see the different variants. Um I think I'm going"
+ },
+ {
+  "local_id": "EV-0942",
+  "excerpt": "to see if I can go back to number one. But there's now V1's, V2s, V3s, V4s, and then V5s. Um they're unfortunately titled kind of annoyingly. So let me see if I can just copy and paste this. This is dense ops. Take a look at this. I like dense ops. uh looks far better in light mode. I'd say what we see here is overview on the lefth hand side channels underneath. So we can see all the"
+ },
+ {
+  "local_id": "EV-0943",
+  "excerpt": "different channels that are contributing or not contributing to uh the economics. And this is across all of our clients, not just one of them. Our sales, so our team win rate, total deals won, revenue, closed, average sales cycle, and then signals as well. These signals are the ones that I was mentioning pop up essentially anytime that you um you know have a major increase or decrease in"
+ },
+ {
+  "local_id": "EV-0944",
+  "excerpt": "something. So there's wins with conversion rate jumps, but also losses with traffic collapse. Then you have specific client pages. You can actually see their performance, their traffic, you can see the pipeline, you could see um you know rep performance on the account, see who's the best, who's the worst, and then search. Like I I hope it's clear this is like a full product"
+ },
+ {
+  "local_id": "EV-0945",
+  "excerpt": "in and of itself. It is extraordinarily high quality. And um you know this you can set it up so that it pulls from the database every morning. Um, I've even seen a particular uh company, a big company, you know, they make, I don't know, probably somewhere between 20 to $30 million a year, uh, actually take one of these dashboards and just put it up on their televisions. They, instead"
+ },
+ {
+  "local_id": "EV-0946",
+  "excerpt": "of structuring it like this, do so in like a like a slideshow kind of way where the metrics kind of populate as the day goes on and then the reps that are responsible for specific things constantly see it in front of them. I mean, you know, maybe that's a little bit more basic and we've been doing stuff like that for a while, but yeah, you can do you can do fantastic work"
+ },
+ {
+  "local_id": "EV-0947",
+  "excerpt": "with um Fable nowadays and cloud code. This one over here is that terminalbased style one. So, you can go overview, see everything in front of you here. You can then click into a specific client, which is cool. I like the color scheme of this one a lot. You know, you have LinkedIn ads, Google ads through search, organic search. You can drill down like pretty far with this stuff. And obviously, we"
+ },
+ {
+  "local_id": "EV-0948",
+  "excerpt": "can add filtering functionality if we want to. >> [gasps] >> Um, I like that you can also just go 1 2 3 4 5 6. So that's what I'm doing here with that smooth scroll. So maybe you load up, you deliver a presentation using this dashboard, and you go to two, traffic, you go to three, pipeline, for search. This one over here is much more"
+ },
+ {
+  "local_id": "EV-0949",
+  "excerpt": "punchy and engaging, I'd say, but also more like a visual portfolio project. So here you can see the client portfolio. You can click into the client itself and actually see the growth over time. I'm a little bit zoomed in, so let me just zoom out, make it look a little bit better. That's what we got here. Um, you could see active, churned, health, MR, all of that. And, uh, yeah, I mean, this"
+ },
+ {
+  "local_id": "EV-0950",
+  "excerpt": "one is looking at it, I think, on a 30-day timeline, but yeah, you can obviously change that, too. Pretty clean. Now, the last thing is now that we built a dashboard, we actually need to get this somewhere, and I want to put this on the internet and make this accessible to people that are within my organization. So, how do you do so? There are variety of different ways. Um,"
+ },
+ {
+  "local_id": "EV-0951",
+  "excerpt": "the way that I'm going to do it is using a platform called Netlify, which essentially allows me just to put static information on the internet for virtually free. Uh, in my case, I think it is free. I think they have like a free plan where it's free forever. You can deploy however many websites you want. Uh, or maybe you can do 300 websites a month or something like that."
+ },
+ {
+  "local_id": "EV-0952",
+  "excerpt": "But still way more websites than I ever possibly need. So, I already have the site. I'm just going to click login, but you guys can obviously um, you know, sign up to a new one. Once in, we need our Netlefi remote MCP server. So, similar to how we did before, I'm now going to go up here, go to settings. I'll then go to connectors, add add custom connector, add this, and then I'm"
+ },
+ {
+  "local_id": "EV-0953",
+  "excerpt": "going to call this netifi. And if it starts looking weird like that, you just kind of pull this back and just do um you don't add the npx sections here. All you need is this. Once you're done, click add. It'll then check the connection, ask you to connect to it. So, that's what I'll do here. And now I'll authorize this so it has access to my client projects now. And I can go"
+ },
+ {
+  "local_id": "EV-0954",
+  "excerpt": "back and so here are all the things that it can do. It can uh I don't know import a cloud design from a URL. It can, you know, set up a new job, create, deploy, and manage my websites. And uh that's virtually what I want. So yeah, as I was doing this, it uh said usage limit was reached. So I did go and I bought I think another $15 of it or something like that. Uh keep in mind that you guys"
+ },
+ {
+  "local_id": "EV-0955",
+  "excerpt": "don't have to do this. I have just been making like a 5 hour course in basically a day. So 5 hours of a probably much longer course in basically a day. So, the probability that you guys yourselves would breach these loot usage limits as quickly as I did quite low. Um, but what I'll do here is uh just voice discate. My goal is I want to get this on the internet. My favorite was V3. I just"
+ },
+ {
+  "local_id": "EV-0956",
+  "excerpt": "connected the Netlefi MCP. I would like you to add this and upload this to Netlifi and then password protect it. Make the password 1 2 3 4 5. Okay. So, here is the finished app. Uh, it has both a light mode and a dark mode. this is a great internal thing to be able to send to you or your clients. Uh I'm sure you guys could see how easy it would be to just gate it so that this is just"
+ },
+ {
+  "local_id": "EV-0957",
+  "excerpt": "like for one specific client. Maybe you'd use a URL parameter or something like that like you know client equals X and maybe there'd be a special password for them, a different password for somebody else. What we just did is we we basically recreated like agency analytics or another one of those sorts of marketing uh visualization softwares and we did so for realistically about"
+ },
+ {
+  "local_id": "EV-0958",
+  "excerpt": "like $15 in tokens. Um, but I'll be honest, this is way more data than you would ever ever have on any one of those. You're not just dumping the stuff into a Google sheet here. This is like, as you guys saw, over 50,000, maybe a 100,000 rows of data. So, you also have like a little client health score on the uh side here with like a health thing that has been generated. Um, you could"
+ },
+ {
+  "local_id": "EV-0959",
+  "excerpt": "see, you know, their their whole pipeline, their funnel, and where they dropped off. So, this would be considered like a warning or a dead zone. And then you can also filter based off of CPL. You can also see there's a big bump in CPL here from an average of about 100 bucks to literally like 1,100. And that whole idea is just so that you guys could see like, hey, you know,"
+ },
+ {
+  "local_id": "EV-0960",
+  "excerpt": "what's going on? Oh, there's some sort of alert basis for this client. This client is, uh, you know, suffering for whatever reason. And so, uh, let me see which one was that. Torque Auto Group with CL10. If we go back to signals here, you can see CL10 on the week of March the 9th, um, was critical. It got three leads versus its usual 58. uh you know and there were also CPC spikes for"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,362 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0051",
+  "claim_text": "In plan mode, instead of making any changes, Claude creates a really in-depth plan about how it is going to do it.",
+  "evidence": [
+   {
+    "local_id": "EV-0086",
+    "excerpt": "some marketing folder or something like that and have it upgrade everything. um but it won't be able to create or delete any files, which is sort of a a certain level of control that you could imagine would be useful. You can also use plan mode, which is where instead of making any changes, you create a really in-depth plan about how you're going to do it instead. You can then do auto"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0052",
+  "claim_text": "In auto mode Claude handles most permission decisions for you and only asks for help if it considers something scary, such as work close to sensitive file system folders; for work like random ad creative you will mostly never see a permission dialogue.",
+  "evidence": [
+   {
+    "local_id": "EV-0086",
+    "excerpt": "some marketing folder or something like that and have it upgrade everything. um but it won't be able to create or delete any files, which is sort of a a certain level of control that you could imagine would be useful. You can also use plan mode, which is where instead of making any changes, you create a really in-depth plan about how you're going to do it instead. You can then do auto"
+   },
+   {
+    "local_id": "EV-0087",
+    "excerpt": "mode, which is where Cloud will handle most permission decisions for you. It'll only ask for your help if there's something that it considers to be kind of scary. You know, if you're playing around in your file systems, and I don't know, the file systems on your Windows will delete a certain system 32 folder. um you know, Claude will cla will tread very lightly and it'll ask you uh as you"
+   },
+   {
+    "local_id": "EV-0088",
+    "excerpt": "work on things that are close to that folder, but if you're just working on like random ad creative or something, for the most part, you'll never actually have to worry about a little um dialogue box popping up. Then finally, you have bypass permissions mode. Uh I love bypass permissions mode. It's basically just like full you only live once, let's go, Claude, 1v one me. Uh you know, it's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0053",
+  "claim_text": "In bypass permissions mode Claude will not ask you a single thing and will do whatever it wants all the time.",
+  "evidence": [
+   {
+    "local_id": "EV-0088",
+    "excerpt": "work on things that are close to that folder, but if you're just working on like random ad creative or something, for the most part, you'll never actually have to worry about a little um dialogue box popping up. Then finally, you have bypass permissions mode. Uh I love bypass permissions mode. It's basically just like full you only live once, let's go, Claude, 1v one me. Uh you know, it's"
+   },
+   {
+    "local_id": "EV-0089",
+    "excerpt": "not going to ask you a single thing. Claude's just going to do whatever the heck it wants all the time. Um, I am typically in the loop in some way, shape, or form. And I typically do not work on things that are super sensitive. You know, cyber security projects, super sensitive like passwords, credentials. I don't do any of that stuff. So, you know, I'm just working on little"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0054",
+  "claim_text": "The speaker stays typically in the loop in some way and does not work on super sensitive things such as cyber security projects, passwords or credentials; for little marketing tasks they are usually on auto or bypass permissions.",
+  "evidence": [
+   {
+    "local_id": "EV-0089",
+    "excerpt": "not going to ask you a single thing. Claude's just going to do whatever the heck it wants all the time. Um, I am typically in the loop in some way, shape, or form. And I typically do not work on things that are super sensitive. You know, cyber security projects, super sensitive like passwords, credentials. I don't do any of that stuff. So, you know, I'm just working on little"
+   },
+   {
+    "local_id": "EV-0090",
+    "excerpt": "marketing tasks. I'm usually going to be auto or bypass permissions. So, as you can see, right now, I'm actually on bypass permissions. When you click on that button, you can then scroll all the way down to the page and it'll actually ask you, hey, do you want to allow bypass permissions mode? And you have to do that check because obviously there is the possibility of some sort of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0055",
+  "claim_text": "To enable bypass permissions you click the button, scroll all the way down the page and confirm 'allow bypass permissions mode'; this check exists because there is the possibility of some sort of long-term impact, and once allowed you can select it, after which the screen looks kind of scary.",
+  "evidence": [
+   {
+    "local_id": "EV-0090",
+    "excerpt": "marketing tasks. I'm usually going to be auto or bypass permissions. So, as you can see, right now, I'm actually on bypass permissions. When you click on that button, you can then scroll all the way down to the page and it'll actually ask you, hey, do you want to allow bypass permissions mode? And you have to do that check because obviously there is the possibility of some sort of"
+   },
+   {
+    "local_id": "EV-0091",
+    "excerpt": "long-term impact. So what I'll do is I'll just go back here. And now once I've accepted or allowed this, I can now just go five and bypass permissions. When you do so, it'll kind of make your screen seem kind of scary. So, you know, don't do it if you're not like actually okay with it. Um, auto mode, plan mode, accept edits mode, everything is fine. Uh, I just wouldn't really recommend"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0056",
+  "claim_text": "The speaker says auto mode, plan mode and accept edits mode are all fine, and would not really recommend using manual because you'll have to check in every 5 seconds as it does anything.",
+  "evidence": [
+   {
+    "local_id": "EV-0091",
+    "excerpt": "long-term impact. So what I'll do is I'll just go back here. And now once I've accepted or allowed this, I can now just go five and bypass permissions. When you do so, it'll kind of make your screen seem kind of scary. So, you know, don't do it if you're not like actually okay with it. Um, auto mode, plan mode, accept edits mode, everything is fine. Uh, I just wouldn't really recommend"
+   },
+   {
+    "local_id": "EV-0092",
+    "excerpt": "using manual because you'll have to check in like every 5 seconds as it does anything. Okay. Okay. Then a little bit to the right, we are now exposing the capability to add files or photos. So I can actually add any file or photo to my claude code conversation. So I have some videos here that you could see I did with, you know, Jack Roberts. I have a big list of community members. I can"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0057",
+  "claim_text": "The speaker says don't use bypass permissions mode if you're not actually okay with it.",
+  "evidence": [
+   {
+    "local_id": "EV-0091",
+    "excerpt": "long-term impact. So what I'll do is I'll just go back here. And now once I've accepted or allowed this, I can now just go five and bypass permissions. When you do so, it'll kind of make your screen seem kind of scary. So, you know, don't do it if you're not like actually okay with it. Um, auto mode, plan mode, accept edits mode, everything is fine. Uh, I just wouldn't really recommend"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0058",
+  "claim_text": "You can add any file or photo to a Claude Code conversation, and you can also add a whole folder, which gives the entire folder's worth of context — Claude goes through everything in that folder and consumes it.",
+  "evidence": [
+   {
+    "local_id": "EV-0092",
+    "excerpt": "using manual because you'll have to check in like every 5 seconds as it does anything. Okay. Okay. Then a little bit to the right, we are now exposing the capability to add files or photos. So I can actually add any file or photo to my claude code conversation. So I have some videos here that you could see I did with, you know, Jack Roberts. I have a big list of community members. I can"
+   },
+   {
+    "local_id": "EV-0093",
+    "excerpt": "actually export all of these and actually upload them directly into the chat. So this is a picture of uh me, Alexi, and Sam Ovens at uh you know the school games where they were interviewing me about stuff. For instance, maybe I want to ask it questions about how to make this better or have it generate a new image using another model or something like that. I"
+   },
+   {
+    "local_id": "EV-0094",
+    "excerpt": "could do so really easily. You can then add a whole folder as well, which is basically the entire folder's worth of context. It'll just go through everything in that folder, consume it, and then, you know, sort of understand what is going on. And then you have the ability to expose slash commands, which if you guys remember earlier were those slash warnings, the skills and so on and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0059",
+  "claim_text": "Typing slash exposes a massive list of slash commands, including schedule, btw, review, fork, mcp, feedback, model and readme, and the list also includes skills such as anthropic-skills:morning.",
+  "evidence": [
+   {
+    "local_id": "EV-0094",
+    "excerpt": "could do so really easily. You can then add a whole folder as well, which is basically the entire folder's worth of context. It'll just go through everything in that folder, consume it, and then, you know, sort of understand what is going on. And then you have the ability to expose slash commands, which if you guys remember earlier were those slash warnings, the skills and so on and"
+   },
+   {
+    "local_id": "EV-0095",
+    "excerpt": "so forth. So slash commands are kind of cool. Um, there are a lot, so I'm not going to go through every single one, but I am just going to show you guys what the interface looks like. If you type slash, you'll see there is a massive list of all of the different possible things that you could do here. There's slash schedule/btwreview slrefork/mcp/feedback/model/reame."
+   },
+   {
+    "local_id": "EV-0096",
+    "excerpt": "You know, this is sort of like um you reading through the help docs of a a very complicated piece of software. There are a lot of these and we're adding more and more and more all the time. But what is really cool is this will also include um skills. So just like you know we had um you know all of those different functions here we also have anthropic-skills colon morning. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0060",
+  "claim_text": "Running anthropic-skills morning takes a few minutes and Claude first checks what is connected before gathering, looking for email, calendar, chat, Slack, Gmail or Outlook, because those were the platforms used in the skill to give the morning brief.",
+  "evidence": [
+   {
+    "local_id": "EV-0096",
+    "excerpt": "You know, this is sort of like um you reading through the help docs of a a very complicated piece of software. There are a lot of these and we're adding more and more and more all the time. But what is really cool is this will also include um skills. So just like you know we had um you know all of those different functions here we also have anthropic-skills colon morning. And"
+   },
+   {
+    "local_id": "EV-0097",
+    "excerpt": "so for instance that would actually run the morning flow the same thing that um you know we were reading through a moment ago. So as you can see I'm saying anthropic-skills morning. This will take a few minutes. Let me check what's connected before gathering. And the reason why it's doing that is because it's looking to see, hey, do you have email? Do you have calendar? Do you have"
+   },
+   {
+    "local_id": "EV-0098",
+    "excerpt": "chat, Slack, Gmail, or Outlook? Because those were the five platforms or six platforms that were used in the skill in order to, I don't know, give you your morning brief. The value to the morning brief is composed of data you would find on places like this. So, the fact that I don't have any of those platforms connected means that it's probably not going to be all that valuable of a skill"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0061",
+  "claim_text": "Because none of the required platforms were connected, the morning skill run was probably not going to be all that valuable; Claude will let you know as you build skills whether you have the appropriate permissions to make that skill valuable in the first place.",
+  "evidence": [
+   {
+    "local_id": "EV-0098",
+    "excerpt": "chat, Slack, Gmail, or Outlook? Because those were the five platforms or six platforms that were used in the skill in order to, I don't know, give you your morning brief. The value to the morning brief is composed of data you would find on places like this. So, the fact that I don't have any of those platforms connected means that it's probably not going to be all that valuable of a skill"
+   },
+   {
+    "local_id": "EV-0099",
+    "excerpt": "run, right? But as you guys see, these things are quite organic and uh Claude will let you know as you proceed through building skills and stuff like that, whether you have the appropriate permissions to make that skill valuable in the first place. Okay, there are a couple of these um slash commands that I would recommend understanding. Um one is called BTW. This allows you to ask a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0062",
+  "claim_text": "The speaker recommends understanding a couple of the slash commands; one is /btw, which allows a quick side conversation before you actually stop the prompt, opening a side chat next to the main conversation so you can ask a question without interrupting it while still having all the context of the thread.",
+  "evidence": [
+   {
+    "local_id": "EV-0099",
+    "excerpt": "run, right? But as you guys see, these things are quite organic and uh Claude will let you know as you proceed through building skills and stuff like that, whether you have the appropriate permissions to make that skill valuable in the first place. Okay, there are a couple of these um slash commands that I would recommend understanding. Um one is called BTW. This allows you to ask a"
+   },
+   {
+    "local_id": "EV-0100",
+    "excerpt": "quick side conversation before you actually stop the prompt. Um so for instance, I could say, \"Hey, what's my name?\" When I do this, what it'll do is actually open up this little side chat right next to your main conversation. And you can ask it a question without actually interrupting the conversation that you guys are having down here. And so that's what's going on up here. Okay,"
+   },
+   {
+    "local_id": "EV-0101",
+    "excerpt": "I'm actually just having a conversation with it. And it's still technically in the thread. It has all the context of the thread, but um we're talking without actually interfering with anything down here. So then I'm just going to close out the /btw. And you can see here it's now asking me for, hey, can claude open this folder? I'm now going to click allow once. And you can see that it's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0063",
+  "claim_text": "During the run Claude asked permission to open a folder and the speaker clicked 'allow once'; the created page was boring because nothing was connected yet, and the permission prompt is asked multiple times.",
+  "evidence": [
+   {
+    "local_id": "EV-0101",
+    "excerpt": "I'm actually just having a conversation with it. And it's still technically in the thread. It has all the context of the thread, but um we're talking without actually interfering with anything down here. So then I'm just going to close out the /btw. And you can see here it's now asking me for, hey, can claude open this folder? I'm now going to click allow once. And you can see that it's"
+   },
+   {
+    "local_id": "EV-0102",
+    "excerpt": "actually gone through and created the page for me. But the page is pretty boring. It says nothing's connected yet. So there is no day to show you. Nick, you should get your stuff together, right? And so that's what that works. It's going to ask me multiple times. I'm just going to keep on closing this out. I don't really need to worry about that. Okay. Now, I don't like the fact that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0064",
+  "claim_text": "You can pause Claude by clicking the pause button or pressing escape, which is valuable because sometimes Claude gets caught in loops, reopening or re-editing things over and over, or because you change tack.",
+  "evidence": [
+   {
+    "local_id": "EV-0102",
+    "excerpt": "actually gone through and created the page for me. But the page is pretty boring. It says nothing's connected yet. So there is no day to show you. Nick, you should get your stuff together, right? And so that's what that works. It's going to ask me multiple times. I'm just going to keep on closing this out. I don't really need to worry about that. Okay. Now, I don't like the fact that"
+   },
+   {
+    "local_id": "EV-0103",
+    "excerpt": "this has been talking for a while. So what I want to do is I actually want to pause it. And how do you do so? You can click this button right here. You can also press escape. The reason why that's valuable is because sometimes cloud gets caught in loops where it just reopens the thing over and over and over again because you keep exiting it or it keeps on editing a file for you or you change"
+   },
+   {
+    "local_id": "EV-0104",
+    "excerpt": "tac and you don't want to use /b2w or something like that. Now moving down slash commands. Another one that I really like is slash usage. This will show your usage plan as well as the um rate limits and how far you are through them. So you know I've done a couple of things with you here on my $20 plan. And so uh you can see my 5-hour limit resets in 4 hours and 21 minutes is at 9%. So"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0065",
+  "claim_text": "/usage shows your usage plan, the rate limits and how far you are through them, including the 5-hour limit percentage and reset time.",
+  "evidence": [
+   {
+    "local_id": "EV-0104",
+    "excerpt": "tac and you don't want to use /b2w or something like that. Now moving down slash commands. Another one that I really like is slash usage. This will show your usage plan as well as the um rate limits and how far you are through them. So you know I've done a couple of things with you here on my $20 plan. And so uh you can see my 5-hour limit resets in 4 hours and 21 minutes is at 9%. So"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0066",
+  "claim_text": "Anthropic currently gives a 5-hour window with a certain amount of usage inside it; after you hit 100% you can no longer proceed in that 5 hours, and when it resets you go back to zero.",
+  "evidence": [
+   {
+    "local_id": "EV-0105",
+    "excerpt": "I've used 9% of my 5h hour limit. To make a long story short, Anthropic currently gives you five whole hours um as a window in which you can use Claude and then they give you a certain amount of cloud usage within those 5 hours. After you hit 100% you can no longer proceed in that 5 hours. Then when it resets, you go back down to zero and then you can run it up all the"
+   },
+   {
+    "local_id": "EV-0106",
+    "excerpt": "way up to 100% again. In addition to the five hour limit, they will also give you a weekly limit. And so this allows you to access all models. The reason why they do this is because sometimes they give you limits to specific models, usually new ones, which are very in demand. Uh, and so this one here resets Friday, 9:00 a.m. And you can see I'm 1% of the way through my weekly limit, 9%"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0067",
+  "claim_text": "In addition to the five hour limit there is also a weekly limit that allows access to all models, because sometimes limits are given to specific models, usually new ones which are very in demand.",
+  "evidence": [
+   {
+    "local_id": "EV-0106",
+    "excerpt": "way up to 100% again. In addition to the five hour limit, they will also give you a weekly limit. And so this allows you to access all models. The reason why they do this is because sometimes they give you limits to specific models, usually new ones, which are very in demand. Uh, and so this one here resets Friday, 9:00 a.m. And you can see I'm 1% of the way through my weekly limit, 9%"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0068",
+  "claim_text": "/usage also shows session cost, the token breakdown and what is actually using your limits; in the demo one skill accounted for 67% of the limits used and about 6% of the total 5-hour limit usage.",
+  "evidence": [
+   {
+    "local_id": "EV-0107",
+    "excerpt": "of my way through the 5h hour limit. [gasps] It'll also give me some information about the session cost. So this cost an additional 88 cents. I think cuz I was using uh I don't know some smarter model or some API or something. Um looks like I was using an API for 1 minute and 2 seconds and I was using mostly sonnet for this task which is one of the many claude models. Then"
+   },
+   {
+    "local_id": "EV-0108",
+    "excerpt": "we also have the token breakdown which is quite valuable as well as what is actually using my limits. 67% of all of my limits were used by that one skill. Okay. And you can see that consumed like I don't know I guess like 6% or so of my total 5 hour limit usage which means I could probably run warning maybe every I don't know I could run it like 20 times in a row. So that's pretty cool."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0069",
+  "claim_text": "The /loop command lets you define an interval at which Claude repeats an action; there is a rounding rule with a one minute floor currently put in place by Claude, so a 5 second interval becomes a one minute loop.",
+  "evidence": [
+   {
+    "local_id": "EV-0109",
+    "excerpt": "Okay. And then finally uh the last skill that I wanted to show you guys was uh if we scroll down here a little bit there's loop right here. Now loop is valuable because it allows you to define an interval. So I could say, I don't know, let's just say 5 seconds. And then I'll just say just say hey Nick. And so what this will do is every 5 seconds it will start a loop that every"
+   },
+   {
+    "local_id": "EV-0110",
+    "excerpt": "5 seconds responds to me as hey Nick. [gasps] Now there's a rounding rule currently in place. I think that's because there's a one minute floor currently put on by um Claude. But anyway, just to show you guys, let's do the one minute loop. Um, what this will do now is this will set a loop where basically once a minute, every minute, this will just say the words, \"Hey,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0070",
+  "claim_text": "You can run skills such as the /morning skill on a loop, daily, every one minute or every 45 minutes, and can set skills that check pages, which is valuable for SEO or newsletter purposes.",
+  "evidence": [
+   {
+    "local_id": "EV-0111",
+    "excerpt": "Nick,\" to me. And so, as you can see, this is a pretty straightforward thing to do. Uh, but as I'm sure you guys can imagine, we can go much more complicated than this. And in fact, we can actually run skills like this /morning skill, and we can do that on a daily or that on a one minute loop or that every, you know, 45 minutes or whatever. We could also very trivially set skills that'll do"
+   },
+   {
+    "local_id": "EV-0112",
+    "excerpt": "things like check pages for us. And so, you know, for a lot of SEO or newsletter purposes, that's pretty valuable because what you do is you'll like add connectors and then you will check, let's say you're running a big campaign, a flash sale. Well, you actually set a loop where cloud will check to see every 5 minutes how many new customers have signed up. Let's say you can take all"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0071",
+  "claim_text": "For a flash sale campaign you can add connectors and set a loop where Claude checks every 5 minutes how many new customers have signed up, takes those customers and provisions them access to some asset, continuing in the background repeatedly.",
+  "evidence": [
+   {
+    "local_id": "EV-0112",
+    "excerpt": "things like check pages for us. And so, you know, for a lot of SEO or newsletter purposes, that's pretty valuable because what you do is you'll like add connectors and then you will check, let's say you're running a big campaign, a flash sale. Well, you actually set a loop where cloud will check to see every 5 minutes how many new customers have signed up. Let's say you can take all"
+   },
+   {
+    "local_id": "EV-0113",
+    "excerpt": "those customers that have signed up and then provision them access to some asset or whatever. Um, and it'll just continue doing this in the background over and over and over and over again. You can see we've now done that three times. Okay. So, if you want to stop the loop, just say something like stop the loop. Cloud will kind of hear what you have to say, find the tool, and actually like"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0072",
+  "claim_text": "To stop a loop you just say something like 'stop the loop', and Claude will find the tool and cancel the tool call it generated.",
+  "evidence": [
+   {
+    "local_id": "EV-0113",
+    "excerpt": "those customers that have signed up and then provision them access to some asset or whatever. Um, and it'll just continue doing this in the background over and over and over and over again. You can see we've now done that three times. Okay. So, if you want to stop the loop, just say something like stop the loop. Cloud will kind of hear what you have to say, find the tool, and actually like"
+   },
+   {
+    "local_id": "EV-0114",
+    "excerpt": "cancel the tool call that it just generated. And then, uh, yeah, you're good to go. All right. So, hopefully that was a reasonable walkthrough of all of the slash commands. Last thing I want to do here, um, is, you know, obviously we have those connectors, which I've talked about before. We have the ability to add plugins. You'll see there's a lot of um redundancy built into this because"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0073",
+  "claim_text": "There is a lot of redundancy in the interface, with the same buttons in three or four different places, because they are testing which ones people like the most.",
+  "evidence": [
+   {
+    "local_id": "EV-0114",
+    "excerpt": "cancel the tool call that it just generated. And then, uh, yeah, you're good to go. All right. So, hopefully that was a reasonable walkthrough of all of the slash commands. Last thing I want to do here, um, is, you know, obviously we have those connectors, which I've talked about before. We have the ability to add plugins. You'll see there's a lot of um redundancy built into this because"
+   },
+   {
+    "local_id": "EV-0115",
+    "excerpt": "they have the same buttons three or four different places just because they're testing to see which ones people like the most. Next, we have the microphone feature, which is basically how you um basically talk to Claude via your microphone. So, if I hold command D or just press this button, you'll hear those little two and then you can talk to Claude"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0074",
+  "claim_text": "The microphone feature lets you talk to Claude via voice transcription built into Claude, activated by holding command D or pressing the button, showing the transcribed text in real time; you can also use your own voice transcription tools.",
+  "evidence": [
+   {
+    "local_id": "EV-0115",
+    "excerpt": "they have the same buttons three or four different places just because they're testing to see which ones people like the most. Next, we have the microphone feature, which is basically how you um basically talk to Claude via your microphone. So, if I hold command D or just press this button, you'll hear those little two and then you can talk to Claude"
+   },
+   {
+    "local_id": "EV-0116",
+    "excerpt": "however long you want. And so, that's what I'm doing right now. I'm actually having a conversation with Claude via voice transcription tools. This is built into Cloud. Now, I also can use my own voice transcription tools to pump uh words into this little field if I wanted to. But you'll find that this tends to work pretty well. And you can actually see real time the text that you're"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0075",
+  "claim_text": "The speaker usually prompts through voice because dictation generates a lot more in a short period of time — the average human speaks around three to four times faster than they write with their fingers — making it a quick and easy way to brain dump into Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0117",
+    "excerpt": "generating being transcribed. So, that's kind of neat, right? In practice, I will actually usually end up prompting just through my voice these days. The reason why I tend to prompt through my voice is not because I think I am a better speaker than I am a better writer. Most people tend to be far better writers, but because when you uh use dictation, you can typically just generate a lot"
+   },
+   {
+    "local_id": "EV-0118",
+    "excerpt": "more in a short period of time than if you write, the average human being speaks at around three to four times faster than they write with their fingers. So, um you know, this is just a quick and easy way to like brain dump whatever you need into cloud. And I think you'll find that there are a lot of situations in which you'll probably want to brain dump stuff into cloud."
+   }
+  ]
+ }
+]

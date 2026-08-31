@@ -1,0 +1,352 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0626",
+  "claim_text": "After verifying the connector works, ask for all the info needed so you don't have to search the channel up again, and add that message to a routine's prompt verbatim.",
+  "evidence": [
+   {
+    "local_id": "EV-1083",
+    "excerpt": "count one occurrence. This is a test message to verify errors are alerting. Okay. So now that we've verified that this does work with the connector. All we have to do is I'm just going to say give me all the info to ensure you don't have to search this channel up again. I will add this to a routines prompt verbatim. Now we can actually just copy this whole message. Go to a routine. And"
+   },
+   {
+    "local_id": "EV-1084",
+    "excerpt": "why don't we do this first one here? Maker school daily ads batch. I'll just go up here and then um add my Slack notification. Then I'm going to paste this. And then I'll say for the sake of this demo, I want you to pretend there was an error in the flow. then report to Slack. Okay, I'm going to save this and then I'm just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0627",
+  "claim_text": "Routines can be run live/manually, and after running manually you can inspect the run log at the bottom to see what it did.",
+  "evidence": [
+   {
+    "local_id": "EV-1085",
+    "excerpt": "going to run this now. I don't know if you guys know, you guys can actually run these live like manually. So, that's what I'm doing here. Um, once you're done running it manually, you can actually go to the bottom here, go today at 10:30 a.m. And you'll see the very first thing it's going to do the second that it runs is it's going to clone the repository cuz that was part of our um"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0628",
+  "claim_text": "On a run, the first thing the routine does is clone the repository (because that was part of the action) and then initialize the session.",
+  "evidence": [
+   {
+    "local_id": "EV-1085",
+    "excerpt": "going to run this now. I don't know if you guys know, you guys can actually run these live like manually. So, that's what I'm doing here. Um, once you're done running it manually, you can actually go to the bottom here, go today at 10:30 a.m. And you'll see the very first thing it's going to do the second that it runs is it's going to clone the repository cuz that was part of our um"
+   },
+   {
+    "local_id": "EV-1086",
+    "excerpt": "our action. And then it's going to initialize the session. Uh you can also add a a setup script here if you want to that you know includes all the information in addition to the environment variables. So you can actually have like a script that runs every single time one of these things lo loads or launches which is kind of cool. We don't have to do that though. Um the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0629",
+  "claim_text": "You can optionally add a setup script that runs every time the routine loads or launches, which can include information in addition to the environment variables.",
+  "evidence": [
+   {
+    "local_id": "EV-1086",
+    "excerpt": "our action. And then it's going to initialize the session. Uh you can also add a a setup script here if you want to that you know includes all the information in addition to the environment variables. So you can actually have like a script that runs every single time one of these things lo loads or launches which is kind of cool. We don't have to do that though. Um the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0630",
+  "claim_text": "Remote/cloud routine execution works slower than a local Claude Code session running on your own computer.",
+  "evidence": [
+   {
+    "local_id": "EV-1087",
+    "excerpt": "thing that's worth noting is this will work slower than our uh physical cloud code session like the one that's local on our computer. And now it's saying I'm generating the ad batch uploading to drive first. Let me look at the structure. Okay, cool. So that's looking pretty good. It's going to install all the things it needs. Okay. And you can see we've just triggered an error here"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0631",
+  "claim_text": "Having an error flow gives observability and logability, which lets you stop many problems before they become problems by catching a failed early-morning routine in time to fix it before the outputs are needed.",
+  "evidence": [
+   {
+    "local_id": "EV-1088",
+    "excerpt": "from our flow. Drive upload blocked for maker school ad batch service maker school ad batch render environment scheduled task. And then we don't have a time. So now we're saying the bulk upload of the PGs plus contact sheet HTML stalled. The drive connector only accepts blah blah blah. So now now what I'm trying to say is we have uh we actually have an error flow. And what's"
+   },
+   {
+    "local_id": "EV-1089",
+    "excerpt": "cool is because we have this now we have observability and we have logability. Um you can stop a lot of problems before they actually become problems. I mean, you know, if we're running a routine at 5:59 every morning and it just screws up once and the average person gets into the office and we'll need the outputs of that routine at, I don't know, 8 a.m., you know, you have like a solid 2 hours"
+   },
+   {
+    "local_id": "EV-1090",
+    "excerpt": "and 1 minute to actually solve that problem. Um, so if you didn't have the logging, you wouldn't have known until somebody does come into the office. then you would have had to bug fix and actually fix and uh eventually implement some sort of production update and then maybe it still would have taken an extra hour and before you know it now you've lagged that core person's um key"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0632",
+  "claim_text": "Without logging you would not know a routine failed until someone comes into the office, delaying a core person's key deliverable by five or six hours.",
+  "evidence": [
+   {
+    "local_id": "EV-1090",
+    "excerpt": "and 1 minute to actually solve that problem. Um, so if you didn't have the logging, you wouldn't have known until somebody does come into the office. then you would have had to bug fix and actually fix and uh eventually implement some sort of production update and then maybe it still would have taken an extra hour and before you know it now you've lagged that core person's um key"
+   },
+   {
+    "local_id": "EV-1091",
+    "excerpt": "deliverable the thing that they require in order to move forward their job like five or six hours. So yeah, that's that's my debug flow and um that's how I personally deal with these sorts of systems. Um I basically treat them as highly autonomous agents, hence the name that have the ability to rewrite their own code if needed. Now, on the advanced tips side of things, just want to share"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0633",
+  "claim_text": "The speaker treats these systems as highly autonomous agents that have the ability to rewrite their own code if needed.",
+  "evidence": [
+   {
+    "local_id": "EV-1091",
+    "excerpt": "deliverable the thing that they require in order to move forward their job like five or six hours. So yeah, that's that's my debug flow and um that's how I personally deal with these sorts of systems. Um I basically treat them as highly autonomous agents, hence the name that have the ability to rewrite their own code if needed. Now, on the advanced tips side of things, just want to share"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0634",
+  "claim_text": "Effectiveness beats efficiency: efficiency is doing things fast and cheap, while effectiveness is doing the right things and allocating resources where they move the needle of the organization.",
+  "evidence": [
+   {
+    "local_id": "EV-1093",
+    "excerpt": "effectiveness beats efficiency. So I see a lot of people on the internet trying everything in their life to be as efficient as possible. You know, they'll shave off tiny percentage points here there in a process um by I don't know like readjusting how they work. They will try and save tiny little 100 millisecond latencies in some system because they think that you know the"
+   },
+   {
+    "local_id": "EV-1095",
+    "excerpt": "efficient now than it ever used to be.\" But then they check out their revenue and they're like, \"Wait a second, why is my revenue so low?\" The reason why is because what you guys are doing is you are automating processes that probably aren't all that beneficial to your business in the first place. Efficiency is just doing things fast and cheap. Effectiveness on the other hand is what"
+   },
+   {
+    "local_id": "EV-1096",
+    "excerpt": "you should really be going for and that's about just doing the right things allocating your resources in places that actually you know move the needle of your organization. So I just want to give you guys a brief example. Um you know we do a lot of automation projects for a variety of small to mid mid-sized all the way up to enterprise businesses and I had this one private equity firm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0635",
+  "claim_text": "Chasing efficiency (shaving percentage points, saving 100ms latencies, cutting margins) can make metrics look more efficient while revenue stays low, because the processes being automated aren't beneficial to the business in the first place.",
+  "evidence": [
+   {
+    "local_id": "EV-1093",
+    "excerpt": "effectiveness beats efficiency. So I see a lot of people on the internet trying everything in their life to be as efficient as possible. You know, they'll shave off tiny percentage points here there in a process um by I don't know like readjusting how they work. They will try and save tiny little 100 millisecond latencies in some system because they think that you know the"
+   },
+   {
+    "local_id": "EV-1094",
+    "excerpt": "more efficient this thing can work the better. They will reduce their margins as much as humanly possible for some core process because they're like well I'm saving more money. I'm spending less money in order to do it. And you know, at the end of the day, they look at their KPI metrics, whatever their logs are for marketing activities, and they're like, \"Wa, this is way more"
+   },
+   {
+    "local_id": "EV-1095",
+    "excerpt": "efficient now than it ever used to be.\" But then they check out their revenue and they're like, \"Wait a second, why is my revenue so low?\" The reason why is because what you guys are doing is you are automating processes that probably aren't all that beneficial to your business in the first place. Efficiency is just doing things fast and cheap. Effectiveness on the other hand is what"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0636",
+  "claim_text": "If you are automating the core thing that makes you money, you had better ensure you do an excellent job of it.",
+  "evidence": [
+   {
+    "local_id": "EV-1100",
+    "excerpt": "I don't know that old trade offer meme. I don't know if you guys have like seen the trade alert meme, but basically it's like new trade offer detected. You know, I receive one hour per week of time back and then you receive literal like devastation to your business. What I mean by this is if you're"
+   },
+   {
+    "local_id": "EV-1101",
+    "excerpt": "automating literally the core thing that makes you money like this private equity firm is, you better ensure you're going to do a goddamn great job. And the harsh reality is if the only way you make money is by jumping on calls with prospective bluecollar businesses to determine their eligibility and to feel them out. If that is the only way that you actually make money in your"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0637",
+  "claim_text": "It makes no sense to automate the only activity that makes you money for a small time savings gain of one hour a week, as in the private equity firm that wanted to replace an hour a week of due-diligence calls with a voice agent.",
+  "evidence": [
+   {
+    "local_id": "EV-1097",
+    "excerpt": "that had reached out a while back and for those of you guys that don't know you know in private equity a lot of the time what you're looking to do is you're looking to book meetings with qualified business owners that are either interested in investment or want to sell. And so this was a private equity company that works with um kind of bluecollar businesses and that just"
+   },
+   {
+    "local_id": "EV-1099",
+    "excerpt": "phones uh with prospective business owners trying to do due diligence on their business, meet them, and then build relationships with them. We want to automate that with a voice agent because we think it would save us a lot of money.\" And I remember thinking in my head about this and I was like, \"Brother, you're going to be automating a single hour of your week. It's like uh"
+   },
+   {
+    "local_id": "EV-1101",
+    "excerpt": "automating literally the core thing that makes you money like this private equity firm is, you better ensure you're going to do a goddamn great job. And the harsh reality is if the only way you make money is by jumping on calls with prospective bluecollar businesses to determine their eligibility and to feel them out. If that is the only way that you actually make money in your"
+   },
+   {
+    "local_id": "EV-1102",
+    "excerpt": "business, it makes no sense to automate that for a small time savings gain of one hour a week. It's like if you can't spend one hour a week doing the most important thing in your business, the only thing that makes you money, you know, uh because you want to save a few bucks, then do you even have a business? No, I don't think so. So, what's really interesting is just in my own business,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0638",
+  "claim_text": "The speaker keeps manual only the work that requires his full attention, such as recording videos and sales calls where his presence materially changes the probability of the call working out, rather than bookkeeping or scraping leads.",
+  "evidence": [
+   {
+    "local_id": "EV-1103",
+    "excerpt": "for instance, I do a lot of stuff manually. And people are always like, \"Nick, why are you doing so many things manually?\" And it's not that I'm doing everything manually. It's just the only work that I am actually doing is work that requires my full attention. It is recording videos like this for instance. It is going on sales calls with mid-market and enterprise businesses"
+   },
+   {
+    "local_id": "EV-1104",
+    "excerpt": "where my presence makes a material change to the probability of that sales call working out for us. Uh you know it's like applying my human meat brain, my stuffy sort of fluffy mind to real problems within my business. Uh and then thinking about those not thinking about how to do my bookkeeping or how to scrape the leads. sort of these wrote monotonous tasks but actually applying"
+   },
+   {
+    "local_id": "EV-1105",
+    "excerpt": "myself to things that are ultimately effective for my business. So if you're a business that is looking to integrate AI and automation, try to avoid efficiency. And I mean that seriously. Don't look for cost. Don't look for speed. Look for um hey, what can I automate that is currently pulling away from my time uh from being more effective. what can I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0639",
+  "claim_text": "Businesses looking to integrate AI and automation should avoid optimizing for efficiency — not cost, not speed — and instead ask what can be automated that is currently pulling time away from being more effective.",
+  "evidence": [
+   {
+    "local_id": "EV-1105",
+    "excerpt": "myself to things that are ultimately effective for my business. So if you're a business that is looking to integrate AI and automation, try to avoid efficiency. And I mean that seriously. Don't look for cost. Don't look for speed. Look for um hey, what can I automate that is currently pulling away from my time uh from being more effective. what can I"
+   },
+   {
+    "local_id": "EV-1106",
+    "excerpt": "automate away so that I have more time to actually spend on things that drive the the the top line of my business and ultimately the bottom line of my life. And on that vein, here are a bunch of things that usually fall under those camps. So things that you should automate, things like data entry, you know, think about it. We just automated a fair amount of my scraping flow,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0640",
+  "claim_text": "Data entry, such as the scraping flow that enriched personalized ice breakers, is a good thing to automate because it is routine and frees up 40 to 50 minutes a day for sales conversations and client relationships.",
+  "evidence": [
+   {
+    "local_id": "EV-1106",
+    "excerpt": "automate away so that I have more time to actually spend on things that drive the the the top line of my business and ultimately the bottom line of my life. And on that vein, here are a bunch of things that usually fall under those camps. So things that you should automate, things like data entry, you know, think about it. We just automated a fair amount of my scraping flow,"
+   },
+   {
+    "local_id": "EV-1107",
+    "excerpt": "right? We built um a flow that automated the process of enriching personalized ice breakers with things that we have in common and stuff like that. That's pretty routine data entry. I'm not exactly winning any awards there if I do it or if I pass that off to some team member. And it takes a fair amount of my time. So yeah, I'm happy to automate processes like that. Why? Because it"
+   },
+   {
+    "local_id": "EV-1108",
+    "excerpt": "frees up maybe 40 to 50 minutes of my day and then I can spend that time actually focused on, you know, things like um sales conversations and client relationships. You can automate things like your first draft copy. You know, we automated a lot of ad creative here. I showed you guys how you guys could do this at scale and automate tens if not thousands of images, videos, and pieces"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0641",
+  "claim_text": "First draft copy and ad creative can be automated at scale, but the production of the final asset itself should not be automated; AI should be used as an ideation and concept spec tool, after which you pick the concepts that make most sense, upgrade them, and push them live.",
+  "evidence": [
+   {
+    "local_id": "EV-1108",
+    "excerpt": "frees up maybe 40 to 50 minutes of my day and then I can spend that time actually focused on, you know, things like um sales conversations and client relationships. You can automate things like your first draft copy. You know, we automated a lot of ad creative here. I showed you guys how you guys could do this at scale and automate tens if not thousands of images, videos, and pieces"
+   },
+   {
+    "local_id": "EV-1109",
+    "excerpt": "of copy uh across the board. That's totally okay to have AI help you with. What you don't want to automate is you don't want to actually automate the production of the final asset itself. What you want to do is you want to use AI as an ideation and um sort of concept spec tool. Okay? And then you take those concepts and then ultimately you pick the ones that make the most sense. You"
+   },
+   {
+    "local_id": "EV-1110",
+    "excerpt": "know, upgrade them a little bit and then as mentioned push them live. So I would not automate client relationships, but I would automate first draft copy. How about reporting? As you guys have seen, you know, a lot of that reporting stuff that you guys typically previously had to do was pretty manual. was like logging into 5 million different platforms and then taking the data and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0642",
+  "claim_text": "Client relationships should not be automated, while first draft copy should be automated.",
+  "evidence": [
+   {
+    "local_id": "EV-1110",
+    "excerpt": "know, upgrade them a little bit and then as mentioned push them live. So I would not automate client relationships, but I would automate first draft copy. How about reporting? As you guys have seen, you know, a lot of that reporting stuff that you guys typically previously had to do was pretty manual. was like logging into 5 million different platforms and then taking the data and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0643",
+  "claim_text": "Reporting — manually logging into many platforms and copying data between sheets — should be handled by AI or a procedural automated system, but delivering bad news from those reports should not be automated; the human should be in charge and sit down with the client.",
+  "evidence": [
+   {
+    "local_id": "EV-1110",
+    "excerpt": "know, upgrade them a little bit and then as mentioned push them live. So I would not automate client relationships, but I would automate first draft copy. How about reporting? As you guys have seen, you know, a lot of that reporting stuff that you guys typically previously had to do was pretty manual. was like logging into 5 million different platforms and then taking the data and"
+   },
+   {
+    "local_id": "EV-1111",
+    "excerpt": "like copying and pasting stuff from one sheet over to the other over and over and over again. Well, you you shouldn't do that. What you should do is you should, you know, have AI or uh some sort of procedural automated system manage the automation of that. Okay? And that's fine. Um so you can automate reporting, but what you should not do is you should not automate, you know, bad"
+   },
+   {
+    "local_id": "EV-1112",
+    "excerpt": "news from those reports. A terrible thing to do would be use that signals feature that we developed in the dashboard and then have that automatically sent to the client. Hey, here are your signals for the month. It's like no, no, no. That's probably one of the core things that you as a human being make or lose money on. You should be in charge of that and you"
+   },
+   {
+    "local_id": "EV-1113",
+    "excerpt": "should actually go sit down and meet with the client. And then ultimately scheduling. You can absolutely automate scheduling. Although I don't actually automate that much of my scheduling. Um, but what you should not do is automate anything where a client, a prospect, somebody that pays you money must feel valued. And a lot of the time that's not just like here is my calendar. Go ahead"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0644",
+  "claim_text": "Scheduling can be automated, but anything where a client, prospect, or paying customer must feel valued should not be automated; a good appointment setting flow proposes specific times rather than just sending a calendar link.",
+  "evidence": [
+   {
+    "local_id": "EV-1113",
+    "excerpt": "should actually go sit down and meet with the client. And then ultimately scheduling. You can absolutely automate scheduling. Although I don't actually automate that much of my scheduling. Um, but what you should not do is automate anything where a client, a prospect, somebody that pays you money must feel valued. And a lot of the time that's not just like here is my calendar. Go ahead"
+   },
+   {
+    "local_id": "EV-1114",
+    "excerpt": "and book, you know, like a good appointment setting flow actually asks, \"Hey, yeah, I think we have time on Tuesday or Wednesday. Uh, does 2 p.m. work for you?\" Right? Cuz at least that that that makes you feel human. It's not disrespectful. It's not a robot answering uh, you know, and sort of weighing the costs of an interaction against what you stand to gain. The"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0645",
+  "claim_text": "Automation should buy you more time with people; it should not replace the time that you have with people.",
+  "evidence": [
+   {
+    "local_id": "EV-1115",
+    "excerpt": "whole idea really is that automation should buy you more time with people. It should not replace the time that you have with people. This is sort of I mean this is an AI generated graphic and I think this is a good example. These AI generated graphics that I've been creating throughout this entire course. You know there some of them are kind of funky and cute here. There they save me"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0646",
+  "claim_text": "A simple filter for deciding whether to automate a process is to ask whether the customer actually feels this process and whether a relationship is at risk; if the answer is no, it is usually fine to automate.",
+  "evidence": [
+   {
+    "local_id": "EV-1117",
+    "excerpt": "We value you. It's like no you don't really value me. And uh that's inherent in the medium and the way that you send me that message. You know, if you really did value me, you as a salesperson come down to the coffee shop and actually sit down and chat with me. A simple filter that you guys could use is just if you have a process you want to automate, ask yourself, does the customer actually"
+   },
+   {
+    "local_id": "EV-1118",
+    "excerpt": "feel this process? Is this like a firstline thing where we sit down and we like we we talk? Is is a relationship um at risk here? If the answer is no, you're usually good to automate it. Likewise, if it involves a real relationship like between you and your customer, then you should automate it, but you can QA it by hand. You know, you're happy I'm happy to have you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0647",
+  "claim_text": "If a process involves a real relationship between you and your customer, you can still automate it up to a final filter but must QA it by hand and keep a human element with your taste applied.",
+  "evidence": [
+   {
+    "local_id": "EV-1118",
+    "excerpt": "feel this process? Is this like a firstline thing where we sit down and we like we we talk? Is is a relationship um at risk here? If the answer is no, you're usually good to automate it. Likewise, if it involves a real relationship like between you and your customer, then you should automate it, but you can QA it by hand. You know, you're happy I'm happy to have you"
+   },
+   {
+    "local_id": "EV-1119",
+    "excerpt": "automate processes up until some final filter like with ads and stuff like that, but there should still be a human element. You should have your taste applied to it. You should have your ability to actually uh uh uh, you know, be there for your clients if needed. You know, is a slight little like, \"Hey, Pete, can you check in on the invoice?\" Is that like a relationship based thing?"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0648",
+  "claim_text": "A logistical message such as asking Pete to check in on an invoice is not relationship-based and the customer does not feel it, whereas a message asking to schedule a call about making a big bottom-line impact is worth keeping human.",
+  "evidence": [
+   {
+    "local_id": "EV-1119",
+    "excerpt": "automate processes up until some final filter like with ads and stuff like that, but there should still be a human element. You should have your taste applied to it. You should have your ability to actually uh uh uh, you know, be there for your clients if needed. You know, is a slight little like, \"Hey, Pete, can you check in on the invoice?\" Is that like a relationship based thing?"
+   },
+   {
+    "local_id": "EV-1120",
+    "excerpt": "Does the customer feel it? Probably not. That's more logistical. but a hey Pete I'd love to schedule a call with you to talk about X Y and Z I think I can really help you and really make a big deal you know big bottom line impact to your business that over there is something that's worth keeping human okay hopefully everything that I'm saying here makes sense um obviously I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0649",
+  "claim_text": "The speaker, despite being a big fan of automation, has realized that people overautomate tremendously and has seen a lot of downsides of that recently.",
+  "evidence": [
+   {
+    "local_id": "EV-1121",
+    "excerpt": "a big fan of automation that's kind of my whole business model right to be clear but as somebody that has done a lot of automation now I have realized that people will overmate tremendously and I've just seen a lot of downsides of that recently thank you guys so much for making it to the end of the course I really do hope that this was valuable and helpful. Uh, you know, I've worked"
+   }
+  ]
+ }
+]

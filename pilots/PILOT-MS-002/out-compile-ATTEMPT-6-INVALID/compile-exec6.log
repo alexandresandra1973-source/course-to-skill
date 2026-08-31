@@ -1,0 +1,22 @@
+MS-002 compile · fontes=['A', 'B', 'C'] · dry=False · cap=95
+  controle EC (extrator)...
+    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
+  controle JE (entailment)...
+    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
+  === fonte A ===
+    SL-A-01: 33 claims, 11 candidates
+    SL-A-02: 48 claims, 16 candidates
+    SL-A-03: 42 claims, 9 candidates
+    SL-A-04: 28 claims, 12 candidates
+    SL-A-05: 28 claims, 11 candidates
+      [ADDENDUM-03] extract/SL-A-06: 3 conjunto(s) vazio(s) inserido(s): extract/SL-A-06.raw_candidates[11].defects, extract/SL-A-06.raw_candidates[12].defects, extract/SL-A-06.raw_candidates[13].defects
+    SL-A-06: 34 claims, 15 candidates
+    SL-A-07: 26 claims, 12 candidates
+    SL-A-08: 39 claims, 14 candidates
+    SL-A-09: 40 claims, 10 candidates
+    SL-A-10: 31 claims, 14 candidates
+    SL-A-11: 26 claims, 8 candidates
+    SL-A-12: 38 claims, 15 candidates
+    SL-A-13: 23 claims, 18 candidates
+    SL-A-14: 27 claims, 17 candidates
+    SL-A-15: 33 claims, 17 candidates

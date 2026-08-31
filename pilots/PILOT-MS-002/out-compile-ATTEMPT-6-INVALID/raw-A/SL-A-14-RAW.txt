@@ -1,0 +1,792 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-14",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "In the speaker's own practice, they weave in flows that call leads immediately and build 'intelligent dispositions', which are outcomes that route a lead who did not pick up to the right places to maximize the probability of them picking up in the future.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0781", "EV-0782"],
+      "qualifiers": {
+        "scope": "the speaker's own agency practice ('the way that we do it'), described as a high-level explanation",
+        "condition": "when a called lead does not pick up",
+        "platform": null,
+        "stage": "post-lead outbound calling",
+        "audience": "people watching the session"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "The speaker also leaves voicemails intelligently and dials leads with good phone numbers that maximize the probability they'll pick up, because everyone gets random spam calls a day; they brand the numbers.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0782", "EV-0783"],
+      "qualifiers": {
+        "scope": "the speaker's own practice",
+        "condition": null,
+        "platform": null,
+        "stage": "outbound dialing",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "The speaker allows call centers visible monitoring so they can see what people are saying, what they're doing and why it's not working, and customizes the information on immediate post-ad form-fill calls such that AI can help coach people.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0783"],
+      "qualifiers": {
+        "scope": "the speaker's own practice",
+        "condition": null,
+        "platform": null,
+        "stage": "call handling / post-form-fill calls",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "A home services client's revenue went from $3 million a month to $9 million a month (300% revenue growth) simply by treating leads like gold: calling leads ASAP, calling them consistently and repeatedly, and dialing them with really good dial practices.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0784", "EV-0785"],
+      "qualifiers": {
+        "scope": "one home services company the speaker worked with, presented as the best example",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "A speed to lead system (referred to as S2L in the industry) allows you to squeeze significantly more juice out of leads; e.g. an average wait time of 10 minutes before someone dials the lead can become roughly 30 seconds after a speed to lead system.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0785", "EV-0786", "EV-0787"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "after a new lead fills out a form or an ad",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "If contacted quickly, the person who filled out the form will still be in the same mindset they were in when they did it; the longer they wait, the lower the likelihood they will actually want to engage in the offer.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0787", "EV-0788"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "delay between opt-in and outreach",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "The system demonstrated starts from an event the speaker calls 'intent demonstrated', which can be demonstrated in any way — a form fill, a phone call, an email to your brand, or an SMS.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0789", "EV-0790"],
+      "qualifiers": {
+        "scope": "the simple system being demonstrated in the session",
+        "condition": null,
+        "platform": null,
+        "stage": "trigger event",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Immediately after receiving the message, the system sends the lead a text/SMS and an email, both AI-customized based off the information in the form fill, such as their name, why they signed up, and their challenges.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0790", "EV-0791", "EV-0792"],
+      "qualifiers": {
+        "scope": "the demonstrated speed to lead system",
+        "condition": null,
+        "platform": null,
+        "stage": "immediately after the intent event",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "The flow can optionally be extended to a merged call, where somebody in a call center constantly gets merged into calls with people who just filled out a form, so the person on the other end doesn't have to wait; there are services that assist in call merging, which is what the speaker's company Clarabo does, but it is more intense software that would have to be built.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0792", "EV-0793", "EV-0794"],
+      "qualifiers": {
+        "scope": "optional extension; speaker says he may not get to that part today",
+        "condition": "if you want a full call merge, e.g. for a company doing phone based marketing",
+        "platform": "Clarabo or other call-merging services",
+        "stage": "after the SMS/email step",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "The speaker's former roommate Jonno had a website form promising a call within 30 to 60 seconds; he would text them immediately ('just saw you filled out the form, I'm going to give you a ring in a second'), send an email following up on the text, and then immediately call them using an automated phone merge thing.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0794", "EV-0795", "EV-0796", "EV-0797"],
+      "qualifiers": {
+        "scope": "anecdote about one individual roughly six years ago running a wedding videography/photography company",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "Leads are perishable: you should try to reach people in just a few minutes, definitely not wait an hour and definitely not wait the next day, because the amount of money the business makes is directly contingent on this.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0798", "EV-0799"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "after lead opt-in",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "Speed to lead flows crush for companies that tend to be home services, blue collar, and really boring businesses that you never would have considered, such as air conditioning installation companies running ads.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0802", "EV-0803"],
+      "qualifiers": {
+        "scope": "home services / blue collar / 'boring' businesses running ads",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "The speaker used Claude to build a hypothetical ad-based form fill demo as an HTML artifact that actually sends an email to his address, prompting Claude with the context that he would then build a speed to lead system monitoring that email address.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0799", "EV-0800", "EV-0804", "EV-0805"],
+      "qualifiers": {
+        "scope": "demo built during the session",
+        "condition": null,
+        "platform": "Claude (artifacts)",
+        "stage": "demo setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "You cannot set up a demo like this unless you have a form backend endpoint wired in; without something like this the page can't send an email directly. The speaker uses a service called Formscree (Form Scree), which is totally free and takes about two seconds to sign up.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0806", "EV-0807", "EV-0808"],
+      "qualifiers": {
+        "scope": "building this kind of form-fill demo",
+        "condition": "if you don't have a form backend service",
+        "platform": "Formscree",
+        "stage": "demo setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "The speaker made the 'anything else we should know' field mandatory so that AI could take that information and weave it into an email reply template.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0811", "EV-0812"],
+      "qualifiers": {
+        "scope": "the demo form",
+        "condition": null,
+        "platform": null,
+        "stage": "form design",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "The flow starts with the lead filling out the ad; immediately after, a polling system constantly checks the speaker's email to see if emails matching that form fill exist, and if they do, an email is sent to that address immediately and an SMS is personalized.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0813", "EV-0814"],
+      "qualifiers": {
+        "scope": "the demonstrated speed to lead system",
+        "condition": "if matching new emails exist",
+        "platform": null,
+        "stage": "polling and outreach",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "Although the outreach can be done in 5 seconds rather than 5 minutes, the speaker spreads it out a little, because if you do this too fast people will think it is fake; you have to stay within the bounds of reason, e.g. around 30 seconds.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0815", "EV-0816"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "when outreach is sent extremely fast",
+        "platform": null,
+        "stage": "timing of automated outreach",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "A lot of people insert a little spelling mistake or a human-sounding line (e.g. 'just coming back from the office, just driving into the garage right now, I just saw this and I will call you, can you give me like 3 minutes?') to make the message seem more realistic; it depends on how you want to do it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0816", "EV-0817"],
+      "qualifiers": {
+        "scope": "what a lot of people do; optional stylistic choice",
+        "condition": null,
+        "platform": null,
+        "stage": "message copy",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "The speaker recommends connecting the mailbox through a Gmail connector directly (connector > Gmail > continue > select all), granting the ability to read, compose, and send emails from Gmail, and then telling the model that the connector was added.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0820", "EV-0821"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude connectors / Gmail",
+        "stage": "mailbox access setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "The polling system must actively check the mailbox once every minute to see if there are new entries that aren't already part of the old list of entries; two things are needed: a way to verify entries are new, and a way to take that information and immediately send an email back to them asking questions and making it seem real human.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0823", "EV-0824"],
+      "qualifiers": {
+        "scope": "the demonstrated polling system",
+        "condition": null,
+        "platform": null,
+        "stage": "polling design",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "The speaker wrote the reply copy in Google Docs first: an email with subject 'Re: [first name] air conditioning' and a body like 'Hey [first name], just saw you filled out a form. I hear [paraphrased version of your request]. We'll happily help you with that. I or someone on my team will call you in the next five minutes to sort this out. — Jonah'.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0825", "EV-0826", "EV-0827", "EV-0828"],
+      "qualifiers": {
+        "scope": "the demo email copy",
+        "condition": null,
+        "platform": "Google Docs",
+        "stage": "copywriting",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "For SMS you typically want something way shorter because there is a 160 character constraint, so you have to be very careful about how many characters you write; a first draft at 176 characters was too much and had to be shortened.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0828", "EV-0829", "EV-0830"],
+      "qualifiers": {
+        "scope": "SMS copy",
+        "condition": null,
+        "platform": "SMS",
+        "stage": "copywriting",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "The SMS template should be made even shorter to minimize the probability that it will spill with the AI variable fills, since a lead could have a really long name.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0831", "EV-0832"],
+      "qualifiers": {
+        "scope": "SMS templates with AI-filled variables",
+        "condition": "when variables such as name or paraphrased request can be long",
+        "platform": "SMS",
+        "stage": "copywriting",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "The speaker fed the email and SMS copy into the AI and instructed it to write the paraphrased version of the request at maximum about 10 or 15 words, keep it really short because the shorter it is the more human it seems, send the email really casually formatted just as provided, and not stray from the template.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0833", "EV-0834"],
+      "qualifiers": {
+        "scope": "instructions given to the AI for the email step",
+        "condition": null,
+        "platform": null,
+        "stage": "prompting the model with copy",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "For SMS the speaker uses Qo (formerly Open Phone), which requires an American business and an American bank account and a phone number for legitimacy purposes; alternatively you can set it up using Twilio, which requires A2P verification/registration.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0835", "EV-0836", "EV-0837"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you don't have a Qo/Open Phone number",
+        "platform": "Qo (Open Phone) / Twilio",
+        "stage": "SMS sending setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "A2P registration takes a while — people have on average waited somewhere between 2 days and 7 or 14 days — and you can also get rejected; it is a relatively new requirement by the American government to ensure there isn't tremendous amounts of phone spam.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0837", "EV-0838"],
+      "qualifiers": {
+        "scope": "US A2P phone number registration",
+        "condition": null,
+        "platform": "Twilio / Qo",
+        "stage": "SMS number provisioning",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "Everything shown with Qo is the same with Twilio — only the interface looks different and the same core principles apply; whatever platform you use, you just grab the API key and give it to your model.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0839", "EV-0840"],
+      "qualifiers": {
+        "scope": "Qo, Twilio, or some other SMS platform",
+        "condition": null,
+        "platform": "Qo / Twilio / other",
+        "stage": "connecting SMS platform to the model",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0789", "EV-0790", "EV-0791", "EV-0792", "EV-0813", "EV-0814"],
+      "claim_temp_refs": ["TC-007", "TC-008", "TC-009", "TC-016"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Speed to lead flow (intent demonstrated -> immediate SMS + email -> optional merged call)",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Intent demonstrated",
+            "action": "Start from an event called 'intent demonstrated', which can be a form fill, a phone call, an email to your brand, or an SMS.",
+            "evidence_refs": ["EV-0789", "EV-0790"]
+          },
+          {
+            "order_key": 2,
+            "name": "Lead fills out the ad and polling detects it",
+            "action": "Lead fills out the ad; a polling system constantly checks the mailbox to see if emails that look like the form fill exist.",
+            "evidence_refs": ["EV-0813"]
+          },
+          {
+            "order_key": 3,
+            "name": "Send immediate email and personalized SMS",
+            "action": "Immediately after getting the message, send a text/SMS and an email to that address; both AI-customized based off the information in the form fill (name, why they signed up, their challenges).",
+            "required_inputs": ["form fill information: name, reason for signing up, challenges"],
+            "evidence_refs": ["EV-0790", "EV-0791", "EV-0792", "EV-0814"]
+          },
+          {
+            "order_key": 4,
+            "name": "Optional merged call",
+            "action": "Optionally extend to a merged call, where a call center person constantly gets merged into calls with people who just filled out a form so the lead doesn't have to wait; requires more intense software or a call-merging service.",
+            "evidence_refs": ["EV-0792", "EV-0793", "EV-0794"]
+          }
+        ],
+        "exceptions": ["Speaker says he doesn't think they'll actually do the full call merge today; the merge step is presented as an optional extension"],
+        "prerequisites": ["A form fill that collects information such as name, reason for signing up and challenges"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0799", "EV-0804", "EV-0805", "EV-0806", "EV-0807", "EV-0808", "EV-0811", "EV-0812", "EV-0818", "EV-0819"],
+      "claim_temp_refs": ["TC-013", "TC-014", "TC-015"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Building the hypothetical ad form-fill demo with Claude",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Open a new Claude chat and describe the demo",
+            "action": "Go back to Claude, start a new chat and say you're creating a demo to show how speed to lead works: a simple form fill for a hypothetical air conditioner installation service, pretending you're running an ad; when the form is filled you want to receive an email at your email address.",
+            "evidence_refs": ["EV-0799", "EV-0804"]
+          },
+          {
+            "order_key": 2,
+            "name": "Ask for an HTML artifact that actually sends an email",
+            "action": "Tell Claude you will build a speed to lead system that monitors that email address and emails and SMSes leads immediately after they fill out the form, and ask it to build the HTML artifact that actually sends you an email.",
+            "evidence_refs": ["EV-0805"]
+          },
+          {
+            "order_key": 3,
+            "name": "Set up the form backend",
+            "action": "Register on a form backend service (the speaker uses Formscree, which is free) and add a new form to get an endpoint that wires the page to your email; without this the page cannot send an email directly.",
+            "required_inputs": ["form backend account"],
+            "evidence_refs": ["EV-0806", "EV-0807", "EV-0808"]
+          },
+          {
+            "order_key": 4,
+            "name": "Make the free-text field mandatory",
+            "action": "Make the 'anything else we should know' field mandatory so AI can take that information and weave it into an email reply template, and feed that back in.",
+            "evidence_refs": ["EV-0811", "EV-0812"]
+          },
+          {
+            "order_key": 5,
+            "name": "Test the form end to end",
+            "action": "Load the demo file in a browser, fill out the form with name, email, service needed and the free-text note, submit it, and verify in your email that the submission was received.",
+            "evidence_refs": ["EV-0818", "EV-0819"]
+          }
+        ],
+        "prerequisites": ["A form backend service account (e.g. Formscree) to provide an email endpoint"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0819", "EV-0820", "EV-0821", "EV-0822", "EV-0823", "EV-0824", "EV-0833", "EV-0834"],
+      "claim_temp_refs": ["TC-019", "TC-020", "TC-024"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Building the mailbox polling + immediate email reply system",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Ask the model for a way to poll the mailbox",
+            "action": "Go back to Claude and say: 'Now that we have this system, I need a way to poll my mailbox for new form fills.'",
+            "evidence_refs": ["EV-0819", "EV-0820"]
+          },
+          {
+            "order_key": 2,
+            "name": "Connect Gmail via connector",
+            "action": "Instead of letting the model go on a wild goose chase, add the Gmail connector directly (connector > Gmail > continue > select all) so it can read, compose and send emails, then tell the model the connector was added.",
+            "evidence_refs": ["EV-0820", "EV-0821"]
+          },
+          {
+            "order_key": 3,
+            "name": "Let the model inspect message format and list leads",
+            "action": "Let the model connect to the mailbox, pull one full message to see the body format, parse it, and produce a list of the leads including the number of seconds since they were sent.",
+            "evidence_refs": ["EV-0822", "EV-0823"]
+          },
+          {
+            "order_key": 4,
+            "name": "Build the polling loop",
+            "action": "Build a polling system that actively checks the mailbox once every minute for new entries that aren't already in the old list of entries: (1) a way to verify entries are new, and (2) a way to take that information and immediately send an email back to them, asking questions and making it seem real human.",
+            "evidence_refs": ["EV-0823", "EV-0824"]
+          },
+          {
+            "order_key": 5,
+            "name": "Feed in the copy and constraints",
+            "action": "Feed the written copy into the AI, telling it this is the copy to send back immediately, to do just the email one for now, to write the paraphrased request at maximum ~10-15 words, keep it really short, format the email casually exactly as provided, and not stray from the template.",
+            "required_inputs": ["email copy template", "SMS copy template"],
+            "evidence_refs": ["EV-0833", "EV-0834"]
+          }
+        ],
+        "prerequisites": ["A working form fill that delivers submissions to the monitored mailbox", "Gmail connector authorized"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0825", "EV-0826", "EV-0827", "EV-0828", "EV-0829", "EV-0830", "EV-0831", "EV-0832"],
+      "claim_temp_refs": ["TC-021", "TC-022", "TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Writing the email and SMS reply copy",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Write the copy in Google Docs",
+            "action": "Go to Google Docs and write a couple of messages while the model works.",
+            "evidence_refs": ["EV-0825"]
+          },
+          {
+            "order_key": 2,
+            "name": "Write the email subject and body",
+            "action": "Use a subject line of 'Re: [first name] air conditioning' and a body like 'Hey [first name], just saw you filled out a form. I hear [paraphrased version of your request]. We'll happily help you with that. I or someone on my team will call you in the next five minutes to sort this out. — [sender name]'.",
+            "evidence_refs": ["EV-0825", "EV-0826", "EV-0827", "EV-0828"]
+          },
+          {
+            "order_key": 3,
+            "name": "Write the SMS shorter, under 160 characters",
+            "action": "Write the SMS way shorter because of the 160 character constraint; check the character count and cut it down if it exceeds the limit (a 176-character draft was too long).",
+            "evidence_refs": ["EV-0828", "EV-0829", "EV-0830"]
+          },
+          {
+            "order_key": 4,
+            "name": "Shorten further to leave room for AI variable fills",
+            "action": "Make the SMS even shorter to minimize the probability that it will spill with the AI variable fills, since a lead may have a really long name.",
+            "evidence_refs": ["EV-0831", "EV-0832"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0828", "EV-0829", "EV-0831", "EV-0832"],
+      "claim_temp_refs": ["TC-022", "TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Keep SMS copy well under the 160-character limit",
+        "trigger": "Writing SMS copy for the speed to lead flow",
+        "condition": "SMS has a 160 character constraint and the template contains AI-filled variables (first name, paraphrased request)",
+        "action": "Write the SMS way shorter than the email, check the character count, and shorten the template further so it doesn't spill when the AI fills in variables such as a really long name.",
+        "do_not": [
+          "Do not leave an SMS template at 176 characters or otherwise over the 160-character limit"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0815", "EV-0816", "EV-0817"],
+      "claim_temp_refs": ["TC-017", "TC-018"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Stay within the bounds of reason on outreach speed",
+        "trigger": "Configuring how fast the automated outreach fires after the intent event",
+        "condition": "The system is technically able to respond in 5 seconds",
+        "action": "Spread the response out a little (e.g. about 30 seconds) so it stays within the bounds of reason; optionally insert a little spelling mistake or a human-sounding line to make it seem more realistic.",
+        "do_not": [
+          "Do not send the outreach too fast, because people will think it is fake"
+        ],
+        "precedence": null,
+        "exceptions": ["The speaker notes it depends on how you want to do it"],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0798", "EV-0799", "EV-0787", "EV-0788"],
+      "claim_temp_refs": ["TC-006", "TC-011"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "No more perishable leads — reach out within minutes",
+        "trigger": "A new lead opts in / fills out a form",
+        "condition": null,
+        "action": "Try to reach the person in just a few minutes, so they are still in the same mindset they were in when they opted in.",
+        "do_not": [
+          "Do not wait an hour",
+          "Do not wait the next day"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0820", "EV-0821"],
+      "claim_temp_refs": ["TC-019"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Use the Gmail connector directly for mailbox access",
+        "trigger": "The model needs to read the mailbox for new form fills",
+        "condition": null,
+        "action": "Connect Gmail directly through the connector (connector > Gmail > continue > select all) so it can read, compose and send emails, then tell the model the connector was added.",
+        "do_not": [
+          "Do not let the model keep going on a wild goose chase trying to connect on its own — stop it and add the connector"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["A Gmail account"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0833", "EV-0834"],
+      "claim_temp_refs": ["TC-024"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Constrain the AI-generated reply copy",
+        "trigger": "Instructing the AI to send the immediate reply email",
+        "condition": null,
+        "action": "Tell the AI to write the paraphrased version of the request at maximum about 10 to 15 words, keep it really short (the shorter it is the more human it seems), and send the email really casually formatted exactly as provided.",
+        "do_not": [
+          "Do not stray from the provided template"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["Email and SMS copy templates written beforehand"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0823", "EV-0824"],
+      "claim_temp_refs": ["TC-020"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Poll the mailbox once a minute and deduplicate entries",
+        "trigger": "Building the polling system that watches for new form fills",
+        "condition": "New entries must not already be part of the old list of entries",
+        "action": "Actively check the mailbox once every minute; first verify the entries are new, then take that information and immediately send an email back to them asking questions and making it seem real human.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["Mailbox access (Gmail connector)"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-011",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0839", "EV-0840", "EV-0835", "EV-0836", "EV-0837"],
+      "claim_temp_refs": ["TC-025", "TC-027"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Connect the SMS platform by handing its API key to the model",
+        "trigger": "Adding SMS sending to the speed to lead flow",
+        "condition": "Whatever platform you use — Qo, Twilio (the main one most people use), or some other thing",
+        "action": "Grab the API key from the SMS platform and give it to your model; the same core principles apply across platforms, only the interface differs.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["Qo (formerly Open Phone) requires an American business, an American bank account and a phone number", "Twilio requires setting up a phone number via A2P verification/registration"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "PASSO_UNICO"]
+    },
+    {
+      "temporary_candidate_id": "TX-012",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0806", "EV-0807", "EV-0808"],
+      "claim_temp_refs": ["TC-014"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Wire a form backend endpoint before building the demo",
+        "trigger": "Building an HTML form-fill demo that must send an email",
+        "condition": "The page cannot send an email directly without a backend endpoint",
+        "action": "Sign up for a form backend service (the speaker uses Formscree, which is free and takes about two seconds) and add a new form to get the endpoint that connects the page to your email.",
+        "do_not": [
+          "Do not try to set up a demo like this without a form backend service set up"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-013",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0815", "EV-0816"],
+      "claim_temp_refs": ["TC-017"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not fire the automated follow-up so fast that it looks inhuman (e.g. in 5 seconds) without spreading it out"
+        ],
+        "why": "If you do this too fast people will think it is fake; you have to be within the bounds of reason.",
+        "conditions": ["Automated speed to lead outreach after a form fill"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-014",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0798", "EV-0799", "EV-0788"],
+      "claim_temp_refs": ["TC-006", "TC-011"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not wait an hour to contact a new lead",
+          "Do not wait until the next day to contact a new lead"
+        ],
+        "why": "Leads are perishable: the longer they wait, the lower the likelihood they will want to engage in the offer, and the amount of money the business makes is directly contingent on this.",
+        "conditions": ["After a lead demonstrates intent (form fill, opt-in)"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-015",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0831", "EV-0832", "EV-0829"],
+      "claim_temp_refs": ["TC-022", "TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not write SMS templates that leave no headroom for AI variable fills"
+        ],
+        "why": "The message can spill past the 160 character SMS constraint when the AI fills in variables, for example if the lead has a really long name.",
+        "conditions": ["SMS copy with AI-filled variables such as first name and paraphrased request"]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-016",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0781", "EV-0782"],
+      "claim_temp_refs": ["TC-001"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Intelligent dispositions for non-answered calls (speaker's own practice)",
+        "trigger": "A lead is called and does not pick up",
+        "condition": null,
+        "action": "Route them in the right ways to the right places to maximize the probability of them picking up in the future; also leave voicemails intelligently.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": ["Flows that call leads immediately"]
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"]
+    },
+    {
+      "temporary_candidate_id": "TX-017",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0782", "EV-0783"],
+      "claim_temp_refs": ["TC-002"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Dial with good, branded phone numbers",
+        "trigger": "Dialing leads",
+        "condition": null,
+        "action": "Dial leads with good phone numbers and brand them, to maximize the probability they'll pick up, since everyone gets random spam calls every day.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+source_id: MS002-SRC-B
+ITENS:
+[
+ {
+  "claim_id": "CL-9201",
+  "claim_text": "A requisicao exige autenticacao por token.",
+  "evidence": [
+   {
+    "local_id": "EV-9201",
+    "excerpt": "O sistema exige autenticacao por token antes de aceitar a requisicao."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-9202",
+  "claim_text": "A configuracao simples e suficiente para todos os usuarios.",
+  "evidence": [
+   {
+    "local_id": "EV-9202",
+    "excerpt": "Para quem esta comecando, a configuracao simples costuma ser suficiente."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-9203",
+  "claim_text": "A Evolution API exige autenticacao por chave global.",
+  "evidence": [
+   {
+    "local_id": "EV-9203",
+    "excerpt": "O Redis e configurado adicionando um novo servico no painel e definindo um nome e uma senha para a instancia."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-9204",
+  "claim_text": "O recurso X e obrigatorio neste cenario.",
+  "evidence": [
+   {
+    "local_id": "EV-9204",
+    "excerpt": "A fonte informa que nao esta definido se o recurso X e obrigatorio ou opcional neste cenario."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-9205",
+  "claim_text": "A Evolution API exige exatamente 4 GB de RAM.",
+  "evidence": [
+   {
+    "local_id": "EV-9205",
+    "excerpt": "A Evolution API pode ser executada em uma VPS."
+   }
+  ]
+ }
+]

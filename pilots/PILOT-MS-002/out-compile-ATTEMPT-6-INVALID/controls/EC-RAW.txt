@@ -1,0 +1,139 @@
+{
+  "source_id": "MS002-SRC-B",
+  "slice_id": "SL-B-01",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "O Evolution API precisa ser hospedado em uma VPS para ficar disponivel o tempo todo.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-9001"],
+      "qualifiers": {
+        "scope": "Evolution API",
+        "condition": "para ficar disponivel o tempo todo",
+        "platform": "VPS",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Para quem esta comecando, o instrutor recomenda criar os primeiros anuncios pelo painel.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-9002"],
+      "qualifiers": {
+        "scope": "primeiros anuncios",
+        "condition": null,
+        "platform": "painel",
+        "stage": "primeiros anuncios",
+        "audience": "quem esta comecando"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Primeiro voce cria a instancia, depois gera o QR Code, e por fim escaneia com o celular.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-9003"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Nao deixe a estrutura na conta pessoal: isso aumenta a chance de restricao.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-9005"],
+      "qualifiers": {
+        "scope": "estrutura",
+        "condition": null,
+        "platform": "conta pessoal",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-9001"],
+      "claim_temp_refs": ["TC-001"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Hospedar o Evolution API em VPS",
+        "trigger": null,
+        "condition": "para ficar disponivel o tempo todo",
+        "action": "Hospedar o Evolution API em uma VPS",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-9002"],
+      "claim_temp_refs": ["TC-002"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Criar os primeiros anuncios pelo painel (iniciantes)",
+        "trigger": null,
+        "condition": "para quem esta comecando",
+        "action": "Criar os primeiros anuncios pelo painel, conforme recomendacao do instrutor",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-9003"],
+      "claim_temp_refs": ["TC-003"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Criacao de instancia e conexao por QR Code",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Criar a instancia",
+            "action": "Criar a instancia",
+            "evidence_refs": ["EV-9003"]
+          },
+          {
+            "order_key": 2,
+            "name": "Gerar o QR Code",
+            "action": "Gerar o QR Code",
+            "evidence_refs": ["EV-9003"]
+          },
+          {
+            "order_key": 3,
+            "name": "Escanear com o celular",
+            "action": "Escanear o QR Code com o celular",
+            "evidence_refs": ["EV-9003"]
+          }
+        ]
+      },
+      "defects": ["SCOPE_UNSTATED"]
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-9005"],
+      "claim_temp_refs": ["TC-004"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": ["Deixar a estrutura na conta pessoal"],
+        "why": "Aumenta a chance de restricao"
+      },
+      "defects": ["SCOPE_UNSTATED"]
+    }
+  ]
+}

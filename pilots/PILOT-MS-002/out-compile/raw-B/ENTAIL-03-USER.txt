@@ -1,0 +1,140 @@
+source_id: MS002-SRC-B
+ITENS:
+[
+ {
+  "claim_id": "CL-0051",
+  "claim_text": "O autor forneceu outro número que possui para que o agente adicionasse essa pessoa nos grupos e já a colocasse como admin; o agente criou os grupos e colocou a outra conta como admin.",
+  "evidence": [
+   {
+    "local_id": "EV-0104",
+    "excerpt": "restrição, né? Até se eu for criar um grupo manualmente aqui, eu tenho que adicionar uma pessoa. Então, vou colocar aqui, ó, o número um outro número que eu"
+   },
+   {
+    "local_id": "EV-0105",
+    "excerpt": "tenho para ele adicionar essa pessoa nesses grupos e pode colocar de admin. Eu já vou dizer para ele já botar como admin essa pessoa também. Ele criou aqui"
+   },
+   {
+    "local_id": "EV-0106",
+    "excerpt": "os grupos, criou e já colocou a outra conta lá como admin também, então olha só, ela tá aqui como admin. Só teve um dois detalhes aqui que eu acredito que"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0052",
+  "claim_text": "Houve dois detalhes que o autor acredita serem por causa do Haiku: o grupo um e o grupo dois foram criados duas vezes, e em \"lançamento\" foi colocado um ponto de interrogação no lugar do c cedilha; com o Sonnet essas duas coisas seriam resolvidas.",
+  "evidence": [
+   {
+    "local_id": "EV-0106",
+    "excerpt": "os grupos, criou e já colocou a outra conta lá como admin também, então olha só, ela tá aqui como admin. Só teve um dois detalhes aqui que eu acredito que"
+   },
+   {
+    "local_id": "EV-0107",
+    "excerpt": "seja por causa do Haiku, né? Se for um Sonet isso aqui já não vai acontecer. Coisa simples. É, o grupo um e o grupo dois, ele criou duas vezes. Ou seja, ele"
+   },
+   {
+    "local_id": "EV-0108",
+    "excerpt": "fez uma e depois fez outra vez. E em lançamento, ao invés de c cedilha, ele colocou um ponto de interrogação porque deu algum problema na hora de fazer. Ou"
+   },
+   {
+    "local_id": "EV-0109",
+    "excerpt": "seja, essas duas coisas aqui com o Sonet seria resolvido. Inclusive eu fazer isso aqui. Eu já vou mudar aqui para o o Sonet e vou explicar esse problema. Você"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0053",
+  "claim_text": "O autor mudou para o Sonnet e explicou o problema ao agente (duplicação dos grupos e ponto de interrogação no lugar do cedilha no título), pedindo para corrigir; o agente corrigiu os nomes e removeu os duplicados.",
+  "evidence": [
+   {
+    "local_id": "EV-0109",
+    "excerpt": "seja, essas duas coisas aqui com o Sonet seria resolvido. Inclusive eu fazer isso aqui. Eu já vou mudar aqui para o o Sonet e vou explicar esse problema. Você"
+   },
+   {
+    "local_id": "EV-0110",
+    "excerpt": "acabou duplicando esses grupos que você criou. Tu criou duas vezes, tá? E o título do grupo contém um ponto de interrogação no lugar do cedilha."
+   },
+   {
+    "local_id": "EV-0111",
+    "excerpt": "Corrige isso aí. Aí aqui, ó, coloca aqui o c cedilha. Excelente. Ele já corrigiu aqui os nomes e também já removeu os duplicados."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0054",
+  "claim_text": "O agente gerou a planilha em CSV e também em XLSX, arquivo que o autor pode subir no Google Sheets para ver e fazer outras coisas a partir disso.",
+  "evidence": [
+   {
+    "local_id": "EV-0112",
+    "excerpt": "Então, perfeito. Já vindo aqui para a parte da planilha, olha só. Ele já gerou aqui também uma planilha Excel, tá? Então, não vou abrir aqui não, mas tá"
+   },
+   {
+    "local_id": "EV-0113",
+    "excerpt": "aqui o arquivo. Ele gerou aqui em CSV e gerou em XLSX também, que eu posso subir ele no Google Sheets e já ver e fazer outras coisas a partir disso aqui."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0055",
+  "claim_text": "É possível disparar mensagem em massa para os grupos marcando todo mundo, mas é preciso tomar cuidado para não fazer isso de uma só vez com vários grupos com muitas pessoas.",
+  "evidence": [
+   {
+    "local_id": "EV-0114",
+    "excerpt": "Outra coisa que eu posso estar fazendo também é disparar mensagem em massa para esses grupos marcando todo mundo. Aqui a gente tem que tomar cuidado, tá? Para"
+   },
+   {
+    "local_id": "EV-0115",
+    "excerpt": "também não fazer isso de uma só vez com vários grupos com muitas pessoas. Mas eu vou mostrar aqui que também é possível fazer. Eu quero que você envie uma"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0056",
+  "claim_text": "O autor pediu o envio de uma mensagem de teste apenas para esses três grupos, marcando todo mundo, e a mensagem foi enviada com sucesso.",
+  "evidence": [
+   {
+    "local_id": "EV-0115",
+    "excerpt": "também não fazer isso de uma só vez com vários grupos com muitas pessoas. Mas eu vou mostrar aqui que também é possível fazer. Eu quero que você envie uma"
+   },
+   {
+    "local_id": "EV-0116",
+    "excerpt": "mensagem para esses três grupos, apenas esses três grupos, mandando um teste e marcando todo mundo. E pronto, ó. Mensagem enviada com sucesso. Ele mandou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0057",
+  "claim_text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+  "evidence": [
+   {
+    "local_id": "EV-0118",
+    "excerpt": "pode ser tema também de um outro vídeo meu, né? Senão vou fazer aqui senão vai ficar muito longo. Que já é a parte é passiva, né? Aqui, já falando, ele"
+   },
+   {
+    "local_id": "EV-0119",
+    "excerpt": "está chamando via API. Então, eu dou um comando aqui no no Cloud Code e aí ele usa a API para fazer alguma ação. Mas a gente pode estar criando scripts que que"
+   },
+   {
+    "local_id": "EV-0120",
+    "excerpt": "online 24 horas por dia e que recebem webhooks, ou seja, ah, o cara entrou num grupo, aí tu vai lá e manda uma mensagem no privado da pessoa dando boas-vindas,"
+   },
+   {
+    "local_id": "EV-0121",
+    "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0058",
+  "claim_text": "O autor recomenda que os espectadores assistam também o vídeo em que ele ensina a criar um disparador de mensagens usando o Cloud Code.",
+  "evidence": [
+   {
+    "local_id": "EV-0121",
+    "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que"
+   },
+   {
+    "local_id": "EV-0122",
+    "excerpt": "vocês assistam também esse vídeo que eu ensino vocês a estarem criando um disparador de mensagens usando o Cloud Code."
+   }
+  ]
+ }
+]

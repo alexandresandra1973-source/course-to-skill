@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-05
+boundaries: 4623.12s - 5742.56s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+any means. I used to run a PPC company, but it wasn't super successful. I mean, the PPC company probably capped out at like 200,000 in a year. Um you know, I run ads for my own products now, my information products, and then my education products, but um I don't know. I mean, like 5 to maybe a 10x rowass was considered okay, but it's probably not considered the best. So, I just want to give you guys like a cookie cutter process that is probably above average in terms of performance, but I also want you guys to know that you guys all have your own internal and successful marketing mix. So, you guys should do whatever the heck you want there. Just map out the process ahead of time and follow the series of steps that I'm going to show you to convert this into, you know, something that is replicable because the first thing is we need to find a bunch of high performing ad formats and then save them as templates. And so, ideally, you know, in your company, you would already have high performing ad formats. Okay? Okay, so you'd actually already have a bunch of things that are very good. They've worked before. You have high rorowass, high uh I don't know, LTV to CAC ratios. You know, you'd already have a bunch of these. We don't. So, I'm just going to go and I'm going to find a bunch. And I don't know what the performance of these are, but you know, I need to basically show you guys the process of getting data into the system. So, bear with me. What I'll do is I'm just going to open up like Facebook ads library, and then I'm just going to look through a bunch of ads that people are running for a variety of products. So, I'm in Canada, which is why it says that I don't want to stay in Canada, so I'm just going to go all. And then I'm also going to go all over here. Uh, we don't really care about the political ads, so we're just going to avoid those. Uh, I don't know. Keyword. I'm just going to do um let's see. Looks like I searched out Stripe, Maker School, Maker School, Survive, Nick Surive. That's kind of funny. Um, I I I like Stripe. Why don't we take a look at how Stripe is running their ads? Maybe show you guys a cool pipeline to do some poaching. Um, okay, cool. And so you can see that they actually have a pretty solid format or a pretty solid template set up already. Uh looks like there's a variety of different languages that they're advertising in. They're doing things in French. They're doing things in a variety of different ones. But you can see that they have a pretty straightforward format. It looks like what they have is they have like a highquality almost like gradient image that fits their brand colors. They have like their logo and then they have text that's sort of placed just like this. Uh make your you know company in America or or whatever. my French ain't so good, but something like that. Um, they also have another format here where they have like a cool gradient sort of background and then they have simple text right over here with a start now button. Looks like they have some videos as well. If I just play this without the audio, looks like they have a very simple video. Offer your customers your preferred way to check out. Okay. And then they also have a bunch of other languages as well as well as people that are advertising with Stripe. And so I actually did a video with Stripe a while back. Um, I don't know where that is, but anyway, clearly it's not here. Uh but anyway, this is a pretty good I think like first step just to show you guys how to automate really simple like image creative like it's it's super straightforward to automate this stuff. So maybe we'll start with that and then uh we'll get progressively more complicated. That probably makes sense. Okay, so we you know obviously need to grab the ad itself. So how am I going to do that? Well, I'm going to try um you know opening this ad detail and just seeing if I can get it as big as possible and I can right here. Okay, and you can see the images. This is an image ad. That is basically I don't know if I open up my little drawing tool. It's basically this is the bounds of the image, right? Uh probably up to about here, then up here. And so this is sort of what we need to feed into our model. Um if I go to the next ad here, like we'll just do why don't we do three to start. Um it looks like this is actually opening this little JavaScript segment. So why don't we actually go to Finder and I'll just make a folder and I'll start dumping all of them in now. And I'm full screen, so I just got to unfull here. Okay, we'll go downloads. I'm just going to make a folder. And why don't I call it um why don't I call it add formats for claude. Okay. And what I'm going to do is I'm just going to zoom in because I want this creative to be as high quality as possible. Obviously, it can't get super perfectly high quality, but we can get pretty close. And then I'm just going to take a screenshot and bump down to maybe here or so. This is going to be an ad format that I'm going to attempt to replicate. It's not going to be perfect as mentioned, but uh we will attempt to replicate it and then spin it. Kind of do our own style. Okay. And then next up, I want to see the actual ads themselves. So, I'm just going to click on this one here. And then you can see, same idea. I'm going to zoom way in. And it looks like this one is specifically for mobile. So, it's a little bit taller, but that's okay. This should natively kind of figure out that I am attempting to run a little bit taller of an ad. Going to paste that in as well. Why don't we do just one more to start? and then we'll get more complicated later on. Uh, we need a good format. Yeah, there I am. We need a good format. Create a link. Sell anywhere. Okay, cool. I like this one. This is pretty solid. I mean, these guys obviously they crush it with ads. They're um and they're they're really really pretty, too, which I like. Then why don't I take this little photo? Okay. And then go back to my folder and then stick that in there. Cool. So, you would fill this with whatever your high quality ad formats are. Um, you know, in my case, I'm just I'm assuming that Stripe is performing well with these ads. I don't know for sure. Uh, obviously, you don't want to make a bunch of shitty ads, but the idea is fill this with like the best formats ever. And then we're just going to spin these formats as much as humanly possible. Uh, okay. So, once we're done with that, we can go back to draw. And I'm just going to pretend now that I'm done with this. The next thing we need to do is we need some sort of variable angle to feed in. So, here's where, you know, you need a bunch of information about your business. So in my case, you know, uh I'm running uh a couple of different products. I'm running like a um Claro, which is a software as a service product. Uh Clarvo is basically a dialer, which improves your ability to connect and then have people on the other end of the dial actually pick up. Also automates the process of dialing. So you can dial multiple people simultaneously, call 10 people, and then just have the one that actually picks up routed to an agent. All of these minor optimizations, it significantly improve the total number of people you can dial and the total number of connects you get. Um, I also run a product called Maker School. And Maker School is an AI automation program that basically guarantees you a customer in 90 days. And so these are things that I can market. And uh, you know, I always like making courses where I'm marketing like my own products because I know the most about my own products and I can, you know, actually talk about the benefits therein and stuff. So why don't we try doing some ads for Maker School? I like that idea. Pretty straightforward and pretty simple. Maybe I'll do Claro ads later. Claro obviously being a software as a service is going to be different from like an e-commerce product that people can hold in their hands, but that's okay. Um, so what I'm going to do next is I'm just going to voice dump a bunch of stuff into a cloud and then I'm going to have it come up with, you know, niches, offers, and angles. And actually, just to get ahead of things, I'm also going to take a screenshot of this picture right here. Okay. Then feed that directly into Claude. So what I'm going to do here is I'm going to see if I can clear this. So we're back to a base conversation. I'm going to paste this in. And then I'm going to press this little voice transcript button and then just talk. So I'm going to press and hold to record. [gasps] Hey, my goal is to create a creative pipeline skill. Before we create a skill, I'm going to prompt with you back and forth to determine how best to structure the skill and then uh you know eventually arrive at a set of highquality outputs that we like. So here's the situation. Um I have a bunch of ads in a folder called ad formats that I'm going to feed you. What I want you to do is I want you to apply a bunch of information about Maker School, which is my AI automation program that helps people get their first client in 90 days or their money back for a service that sells artificial intelligence or is enabled by artificial intelligence. You can think of this as like systems that help create ads, the very system that I'm getting you to make, uh, for instance. So, the way Maker School works is people will come in and then I will coach them day by day in order to help them get their first client. They also watch a bunch of videos on a daily basis, uh, usually three to four videos where I actually show people how to do the thing that they're supposed to do that day. So, I don't know, setting up their cold email boxes. I'll actually record a video walking them through that whole process and then it's their turn to do it. Uh, it's also a big community. We give a bunch of discounts and free resources, around $21,000 in discounts at the time of signing up. And uh yeah, if you need any more information from me to, you know, produce niches, offers, angles, and that sort of thing, just let me know. My goal is I want to recreate the ads that um are in the ad formats library. So, I'm just going to send all of that to you and then I'd like you to take that information and then use it to scaffold out virtually the exact same ads. Um I know that it's not going to be perfect to start because we're going to do so procedurally, but u we're going to go back and forth until we get like the highest quality um ad version or variant as possible. Um, last thing is we can't just use, you know, Stripe's logo or whatever company's logo that we're feeding in as an ad format inspo. So, uh, because this is a demo, I just went and I found like a random set of ads. I'm not using my own ads. Uh, so we're going to need to replace that with Maker School. But aside from that, I want very similar styled ads. I want them to look quite similar. Um, we just need to change sort of the image up at the top. Instead of the stripe gradient, I want something different. And then we'll turn this into a repeatable engine to generate dozens if not hundreds of these ads uh very quickly. Okay. And then what I'm going to do is I'm actually going to go and feed in this folder too. If you guys remember, you have the ability to feed in a folder. So now I've given it the folder. I've also given it a big prompt. And at the very end of it, I've also given it an image. And hopefully you guys can see I'm just talking to this thing. Right? So what it's doing is uh you know it just did some thinking. It's now found the screenshots. It's actually going to take a look at them. And uh we'll go through and see sort of where we land. Okay, so it's breaking down the pattern. Bright abstract gradient, wave graphic, bold short benefit driven headline, tiny wordmark logo, single CTA button or text, high contrast, very buildable. Answering my question for free, do you have an actual Maker School logo file or wordark I should use or should I type set Maker School in a clean senset here? And I'll say yes, type set for niches. Okay, what I'm going to do is continue answering these questions. Yeah, in general it's people that want to quit their nineto-5, freelancer agency owners that want to add AI services, uh, and a lot of marketers and ex-corporate professionals. So, just create a bunch of different niche sets based off of this this audience, and uh, we'll vary them. The whole idea is you're going to help me generate way more ad variants than I could ever possibly do myself, and then I'm just going to select the ones that work. uh for offers, 90-day money back guarantee to land a first client, $21,000 in bundle discounts and resources on sign up, and then also include the fact that I'm there. Like, I actually show up in the community every day and respond to almost 100% of every post. Cool. So, now I'm, you know, giving it a bunch of information about that. And now it's actually going through and building a template spec. Now, you guys should know that Claude does not have an inherent ability to generate images. So, what we're doing this time is we're actually just building out a a series of templates. Okay. And these templates are basically rules that allow Claude to generate um these things on demand using very cheap old school image processing platforms like image magic and stuff like that. So, these aren't going to be like the highest quality things right off the bat. We're going to have to massage them a little bit. But, the idea is at the end of it, we're going to have a pretty repeatable template and then anytime we want to come up with a different ad, boom, we're just going to like say, "Hey, you know, come up with 400 ads." And it'll do. So the benefit to that as well is it's very cheap. You know there are image generation platforms out there which I am going to show you guys how to do after this. Um but these image generation platforms also cost a fair amount of money. Uh if it costs me $2 let's say to generate an ad and I want to generate a 100 of those. That's $200 every time. And while $200 every time for something that is a top offunnel growth lever like ads might not make that much difference to like a $10,000 a day business. You know it's a fair amount I think for most people that are probably watching this. And yeah, I wanted to make sure that it was about as accessible as humanly possible. Okay, so what it's doing is it's actually generating an HTML template to show me what the ads are going to look like. Um, and then, you know, after this is done in presumably another 20 seconds or so, I'll show you guys the results. Okay. And so it's actually come up with an example here, and it's done so underneath test stacked.png. And you can see that it did an okay job. I mean, you know, it came up with its own gradient here, which I think we're going to have to significantly improve. Um, but you know, it did kind of space out the font. Well, it does have a little start now button. Um, I would say we're just losing a couple things on the spacing. Um, you can also see there's this little stacked overlay where we have a much smoother gradient down here with a similar sort of card. And, uh, yeah, you know, this isn't perfect, but it's going to be pretty clean. So, what I'm going to do next is I'm just going to give it a bunch of feedback on this and see how well it did. I'm also going to have it generate me a web page that I can very quickly use to uh, make changes and alter things. So, first thing I'm going to do is I'm just going to hold command D because that's how you record. Hey, this is an okay job. I thought we got maybe 70% of the way there, but we do need to significantly improve the design and make it much closer to the initial stripe one that I showed you guys. Um, so we do need to push the CSS further with a variety of different gradient styles. Um, we could actually generate high quality gradient background images as well. Uh, and then, you know, do a bunch of flips and stuff like that. I'll show you or I will use an image model later. For now, I want to do things entirely procedurally. I also think the text spacing is a little bit off and uh yeah, I just want to significantly improve the quality of this first. So, in order to do so, could you create me a web page that I could use to adjust various sliders to change things until the settings are exactly how I want them to be? Uh, think about it as like me placing something on a on a page, let's say. Uh, build me the ability to, I don't know, change the font width and the different styles and and and where they're placed on the page and so on and so forth. Um, after we're done, we'll save those and make those concrete. And then once they're concrete, then we can spin, you know, hundreds if not thousands of these um to, you know, generate a bunch of ads. You see it's now actually building an SVG filter pipeline to try and reproduce what we're seeing here, uh, which is some sort of smooth meshed design that obviously Stripe used their own internal image model or something like that to generate. So, we're going to try doing this procedurally and programmatically just to save a bunch of time and energy and money. Okay. And now we have a clawed browser, which it's going to open just to allow me to actually tune the ads. So, it just opened it over here on the right hand side as you guys could see. It doesn't look like I'm actually capable of seeing one of these ads just yet. So, I think it's probably going to have to do a little bit more work to tighten that up. Now, one thing you'll find when you just have Claude start a task and then, you know, give you the results is it'll self-manage a lot of errors and debugs. In the past, this didn't happen. In the past, you typically had to do a lot of this debugging yourself. But you'll see that it's just passing its own outputs back in as an input to the next step and then progressively getting closer and closer to what it is that you want. Um, we're also coming up on like 3 minutes here. Uh, there are a lot of prompts that I run that now genuinely take somewhere between 15 to 20 minutes. And so I will fire off a task by dumping in a bunch of my demands and want and then I'll just step away or, you know, I'll work on something else. Or what I'll do is I'll just spawn a bunch of these. And then eventually this little icon here will go from gray to yellow. And the second that it's yellow, I know that I, you know, it's done and I need to come back in and actually check in with it. I think sometimes that also turns green. We can actually see the filter debug right here. It's actually coming up with a variety of different filters. Um, I think what we could do is we could probably just apply noise to this, some sort of procedural noise. That would probably look even better. Uh, that's fairly easy to do. And yeah, as you can see, it's even figuring out like the streaks, which is neat. So, it'll just do this hundreds, maybe thousands of times until it comes up with something that looks pretty clean. And then once we're done, we'll actually be able to generate those demand uh those ads on demand. And keep in mind, um if anybody from Stripe is watching this, I'm more than happy to build you guys procedural ad generators in 5 minutes. But you could also ask literally anybody that's watched one of my courses, and I'm sure they'd be able to do the same. Not exactly rocket science. And as you can see, we're getting much closer to that. We now just have to deal with a couple of little spacing issues. So, I'm actually going to jump into the ad tuner and do that myself. Okay. And it just opened it for me. Um, looks like we can land your first AI client in 90 days. Looks like we can also change the angle of the gradient applied to this, which is kind of neat. Um, I don't actually need to do any of that cuz I'm I'm quite satisfied. While it's working, I'm just going to say add a bit of noise or the ability to add it so I can test. And the reason why I'm going to do that is because I think noise just makes it a lot cleaner. So, organic streak textures and stuff like that. We can come up with about as many of these as we want now, which is nice. Streak win. That's kind of cool. You know, it it looks like stripe. It looks like stripe. It's obviously pretty sexy. Okay. So, I'm just going to change the word mark a little bit. Um why don't we make the size bigger? And then what we need to do if think if you think about it is actually change the spacing of some of these because um it didn't it doesn't really look like you know as clean I would say. I don't know. I'm just playing around with this a couple of different ways but yeah I think we should also change the line height a little bit maybe. I don't know. Content pad X. I don't exactly know how all of this works but I'm just going to change this around a little bit. Block gap. Oh yeah. Yeah. I like that. I like that. Cool. Awesome. And then I think what we just need to do now is just I don't know, maybe find a way to make the font at Maker School just a tiny bit different. Then we can just rip this over and over and over again. Also allows you to use plain text or a pill button. That's kind of cool. CTA text is kind of neat. Maybe I'll say join now instead of start now. And then maybe we'll do something like maker school. Okay, great. So I really like this. I'm actually just going to export the settings which is right over here. This will allow me then to copy and paste it into Claude. Uh, and then I'm just going to give it one final piece of advice. I'll say, "Okay, let's find a way to make the Maker School logo more interesting." Right now, it's uh I don't know why I'm not using voice transcription here. Just a little too spread out, aka the letter spacing makes it look not as professional. Um, but the fact that we're using a default font also makes it sort of bleed into the rest of the design. So, come up with like 20 different fonts that I could use that are all very high-end, new, and clean. And you can see while I was doing that, and this is something that you guys should um do uh pretty often. While I was doing that, it also allowed me to adjust the grain. So, it came up with a new way basically of doing this. So, I can now change the grain. It's a little bit difficult to see here, but if I change some of the colors just to maybe I don't know, let's see here. Maybe instead of white, I want it to be kind of like reddish or something. Maybe pinkish. Um, you guys could see that I'm now adding a little bit of grain. I can also change the size of the grain. Maybe I'll make it a little bit smaller like this. Then I'll just make it just pop out a tad. And we can even change what's called the seed here. Maybe we'll do soft light. I don't know. Multiply. Multiply would look a little too strong,
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0241",
+  "excerpt": "any means. I used to run a PPC company, but it wasn't super successful. I mean, the PPC company probably capped out at like 200,000 in a year. Um you know, I run ads for my own products now, my information products, and then my education products, but um I don't know. I mean, like 5 to maybe a 10x rowass was considered okay, but it's probably not considered the best. So, I just want to"
+ },
+ {
+  "local_id": "EV-0242",
+  "excerpt": "give you guys like a cookie cutter process that is probably above average in terms of performance, but I also want you guys to know that you guys all have your own internal and successful marketing mix. So, you guys should do whatever the heck you want there. Just map out the process ahead of time and follow the series of steps that I'm going to show you to convert this into,"
+ },
+ {
+  "local_id": "EV-0243",
+  "excerpt": "you know, something that is replicable because the first thing is we need to find a bunch of high performing ad formats and then save them as templates. And so, ideally, you know, in your company, you would already have high performing ad formats. Okay? Okay, so you'd actually already have a bunch of things that are very good. They've worked before. You have high rorowass,"
+ },
+ {
+  "local_id": "EV-0244",
+  "excerpt": "high uh I don't know, LTV to CAC ratios. You know, you'd already have a bunch of these. We don't. So, I'm just going to go and I'm going to find a bunch. And I don't know what the performance of these are, but you know, I need to basically show you guys the process of getting data into the system. So, bear with me. What I'll do is I'm just going to open up like Facebook ads library, and then"
+ },
+ {
+  "local_id": "EV-0245",
+  "excerpt": "I'm just going to look through a bunch of ads that people are running for a variety of products. So, I'm in Canada, which is why it says that I don't want to stay in Canada, so I'm just going to go all. And then I'm also going to go all over here. Uh, we don't really care about the political ads, so we're just going to avoid those. Uh, I don't know. Keyword. I'm just going to do um let's"
+ },
+ {
+  "local_id": "EV-0246",
+  "excerpt": "see. Looks like I searched out Stripe, Maker School, Maker School, Survive, Nick Surive. That's kind of funny. Um, I I I like Stripe. Why don't we take a look at how Stripe is running their ads? Maybe show you guys a cool pipeline to do some poaching. Um, okay, cool. And so you can see that they actually have a pretty solid format or a pretty solid template set up already. Uh looks like"
+ },
+ {
+  "local_id": "EV-0247",
+  "excerpt": "there's a variety of different languages that they're advertising in. They're doing things in French. They're doing things in a variety of different ones. But you can see that they have a pretty straightforward format. It looks like what they have is they have like a highquality almost like gradient image that fits their brand colors. They have like their logo and then they have text"
+ },
+ {
+  "local_id": "EV-0248",
+  "excerpt": "that's sort of placed just like this. Uh make your you know company in America or or whatever. my French ain't so good, but something like that. Um, they also have another format here where they have like a cool gradient sort of background and then they have simple text right over here with a start now button. Looks like they have some videos as well. If I just play this without the audio, looks"
+ },
+ {
+  "local_id": "EV-0249",
+  "excerpt": "like they have a very simple video. Offer your customers your preferred way to check out. Okay. And then they also have a bunch of other languages as well as well as people that are advertising with Stripe. And so I actually did a video with Stripe a while back. Um, I don't know where that is, but anyway, clearly it's not here. Uh but anyway, this is a pretty good I think like first"
+ },
+ {
+  "local_id": "EV-0250",
+  "excerpt": "step just to show you guys how to automate really simple like image creative like it's it's super straightforward to automate this stuff. So maybe we'll start with that and then uh we'll get progressively more complicated. That probably makes sense. Okay, so we you know obviously need to grab the ad itself. So how am I going to do that? Well, I'm going to try um you"
+ },
+ {
+  "local_id": "EV-0251",
+  "excerpt": "know opening this ad detail and just seeing if I can get it as big as possible and I can right here. Okay, and you can see the images. This is an image ad. That is basically I don't know if I open up my little drawing tool. It's basically this is the bounds of the image, right? Uh probably up to about here, then up here. And so this is sort of what we need to feed into our model."
+ },
+ {
+  "local_id": "EV-0252",
+  "excerpt": "Um if I go to the next ad here, like we'll just do why don't we do three to start. Um it looks like this is actually opening this little JavaScript segment. So why don't we actually go to Finder and I'll just make a folder and I'll start dumping all of them in now. And I'm full screen, so I just got to unfull here. Okay, we'll go downloads. I'm just"
+ },
+ {
+  "local_id": "EV-0253",
+  "excerpt": "going to make a folder. And why don't I call it um why don't I call it add formats for claude. Okay. And what I'm going to do is I'm just going to zoom in because I want this creative to be as high quality as possible. Obviously, it can't get super perfectly high quality, but we can get pretty close. And then I'm just going to take a screenshot and bump down to maybe here or so. This is"
+ },
+ {
+  "local_id": "EV-0254",
+  "excerpt": "going to be an ad format that I'm going to attempt to replicate. It's not going to be perfect as mentioned, but uh we will attempt to replicate it and then spin it. Kind of do our own style. Okay. And then next up, I want to see the actual ads themselves. So, I'm just going to click on this one here. And then you can see, same idea. I'm going to zoom way in. And it looks like this"
+ },
+ {
+  "local_id": "EV-0255",
+  "excerpt": "one is specifically for mobile. So, it's a little bit taller, but that's okay. This should natively kind of figure out that I am attempting to run a little bit taller of an ad. Going to paste that in as well. Why don't we do just one more to start? and then we'll get more complicated later on. Uh, we need a good format. Yeah, there I am. We need a good format. Create a link. Sell anywhere."
+ },
+ {
+  "local_id": "EV-0256",
+  "excerpt": "Okay, cool. I like this one. This is pretty solid. I mean, these guys obviously they crush it with ads. They're um and they're they're really really pretty, too, which I like. Then why don't I take this little photo? Okay. And then go back to my folder and then stick that in there. Cool. So, you would fill this with whatever your high quality ad formats are. Um, you know, in"
+ },
+ {
+  "local_id": "EV-0257",
+  "excerpt": "my case, I'm just I'm assuming that Stripe is performing well with these ads. I don't know for sure. Uh, obviously, you don't want to make a bunch of shitty ads, but the idea is fill this with like the best formats ever. And then we're just going to spin these formats as much as humanly possible. Uh, okay. So, once we're done with that, we can go back to draw. And"
+ },
+ {
+  "local_id": "EV-0258",
+  "excerpt": "I'm just going to pretend now that I'm done with this. The next thing we need to do is we need some sort of variable angle to feed in. So, here's where, you know, you need a bunch of information about your business. So in my case, you know, uh I'm running uh a couple of different products. I'm running like a um Claro, which is a software as a service product. Uh Clarvo is basically"
+ },
+ {
+  "local_id": "EV-0259",
+  "excerpt": "a dialer, which improves your ability to connect and then have people on the other end of the dial actually pick up. Also automates the process of dialing. So you can dial multiple people simultaneously, call 10 people, and then just have the one that actually picks up routed to an agent. All of these minor optimizations, it significantly improve the total number of people you can dial"
+ },
+ {
+  "local_id": "EV-0260",
+  "excerpt": "and the total number of connects you get. Um, I also run a product called Maker School. And Maker School is an AI automation program that basically guarantees you a customer in 90 days. And so these are things that I can market. And uh, you know, I always like making courses where I'm marketing like my own products because I know the most about my own products and I can, you"
+ },
+ {
+  "local_id": "EV-0261",
+  "excerpt": "know, actually talk about the benefits therein and stuff. So why don't we try doing some ads for Maker School? I like that idea. Pretty straightforward and pretty simple. Maybe I'll do Claro ads later. Claro obviously being a software as a service is going to be different from like an e-commerce product that people can hold in their hands, but that's okay. Um, so what I'm going to do"
+ },
+ {
+  "local_id": "EV-0262",
+  "excerpt": "next is I'm just going to voice dump a bunch of stuff into a cloud and then I'm going to have it come up with, you know, niches, offers, and angles. And actually, just to get ahead of things, I'm also going to take a screenshot of this picture right here. Okay. Then feed that directly into Claude. So what I'm going to do here is I'm going to see if I can clear this. So we're back to a"
+ },
+ {
+  "local_id": "EV-0263",
+  "excerpt": "base conversation. I'm going to paste this in. And then I'm going to press this little voice transcript button and then just talk. So I'm going to press and hold to record. [gasps] Hey, my goal is to create a creative pipeline skill. Before we create a skill, I'm going to prompt with you back and forth to determine how best to"
+ },
+ {
+  "local_id": "EV-0264",
+  "excerpt": "structure the skill and then uh you know eventually arrive at a set of highquality outputs that we like. So here's the situation. Um I have a bunch of ads in a folder called ad formats that I'm going to feed you. What I want you to do is I want you to apply a bunch of information about Maker School, which is my AI automation program that helps people get their first client in 90 days"
+ },
+ {
+  "local_id": "EV-0265",
+  "excerpt": "or their money back for a service that sells artificial intelligence or is enabled by artificial intelligence. You can think of this as like systems that help create ads, the very system that I'm getting you to make, uh, for instance. So, the way Maker School works is people will come in and then I will coach them day by day in order to help them get their first client. They also"
+ },
+ {
+  "local_id": "EV-0266",
+  "excerpt": "watch a bunch of videos on a daily basis, uh, usually three to four videos where I actually show people how to do the thing that they're supposed to do that day. So, I don't know, setting up their cold email boxes. I'll actually record a video walking them through that whole process and then it's their turn to do it. Uh, it's also a big community. We give a bunch of discounts and free"
+ },
+ {
+  "local_id": "EV-0267",
+  "excerpt": "resources, around $21,000 in discounts at the time of signing up. And uh yeah, if you need any more information from me to, you know, produce niches, offers, angles, and that sort of thing, just let me know. My goal is I want to recreate the ads that um are in the ad formats library. So, I'm just going to send all of that to you and then I'd like you to take that information and then use it to"
+ },
+ {
+  "local_id": "EV-0268",
+  "excerpt": "scaffold out virtually the exact same ads. Um I know that it's not going to be perfect to start because we're going to do so procedurally, but u we're going to go back and forth until we get like the highest quality um ad version or variant as possible. Um, last thing is we can't just use, you know, Stripe's logo or whatever company's logo that we're feeding in as an ad format inspo. So,"
+ },
+ {
+  "local_id": "EV-0269",
+  "excerpt": "uh, because this is a demo, I just went and I found like a random set of ads. I'm not using my own ads. Uh, so we're going to need to replace that with Maker School. But aside from that, I want very similar styled ads. I want them to look quite similar. Um, we just need to change sort of the image up at the top. Instead of the stripe gradient, I want something different. And then we'll turn"
+ },
+ {
+  "local_id": "EV-0270",
+  "excerpt": "this into a repeatable engine to generate dozens if not hundreds of these ads uh very quickly. Okay. And then what I'm going to do is I'm actually going to go and feed in this folder too. If you guys remember, you have the ability to feed in a folder. So now I've given it the folder. I've also given it a big prompt. And at the very end of it, I've also given it an image. And hopefully"
+ },
+ {
+  "local_id": "EV-0271",
+  "excerpt": "you guys can see I'm just talking to this thing. Right? So what it's doing is uh you know it just did some thinking. It's now found the screenshots. It's actually going to take a look at them. And uh we'll go through and see sort of where we land. Okay, so it's breaking down the pattern. Bright abstract gradient, wave graphic, bold short benefit driven headline, tiny wordmark"
+ },
+ {
+  "local_id": "EV-0272",
+  "excerpt": "logo, single CTA button or text, high contrast, very buildable. Answering my question for free, do you have an actual Maker School logo file or wordark I should use or should I type set Maker School in a clean senset here? And I'll say yes, type set for niches. Okay, what I'm going to do is continue answering these questions. Yeah, in general it's people that want"
+ },
+ {
+  "local_id": "EV-0273",
+  "excerpt": "to quit their nineto-5, freelancer agency owners that want to add AI services, uh, and a lot of marketers and ex-corporate professionals. So, just create a bunch of different niche sets based off of this this audience, and uh, we'll vary them. The whole idea is you're going to help me generate way more ad variants than I could ever possibly do myself, and then I'm just"
+ },
+ {
+  "local_id": "EV-0274",
+  "excerpt": "going to select the ones that work. uh for offers, 90-day money back guarantee to land a first client, $21,000 in bundle discounts and resources on sign up, and then also include the fact that I'm there. Like, I actually show up in the community every day and respond to almost 100% of every post. Cool. So, now I'm, you know, giving it a bunch of information about that. And now it's"
+ },
+ {
+  "local_id": "EV-0275",
+  "excerpt": "actually going through and building a template spec. Now, you guys should know that Claude does not have an inherent ability to generate images. So, what we're doing this time is we're actually just building out a a series of templates. Okay. And these templates are basically rules that allow Claude to generate um these things on demand using very cheap old school image processing"
+ },
+ {
+  "local_id": "EV-0276",
+  "excerpt": "platforms like image magic and stuff like that. So, these aren't going to be like the highest quality things right off the bat. We're going to have to massage them a little bit. But, the idea is at the end of it, we're going to have a pretty repeatable template and then anytime we want to come up with a different ad, boom, we're just going to like say, \"Hey, you know, come up with"
+ },
+ {
+  "local_id": "EV-0277",
+  "excerpt": "400 ads.\" And it'll do. So the benefit to that as well is it's very cheap. You know there are image generation platforms out there which I am going to show you guys how to do after this. Um but these image generation platforms also cost a fair amount of money. Uh if it costs me $2 let's say to generate an ad and I want to generate a 100 of those. That's $200 every time. And while"
+ },
+ {
+  "local_id": "EV-0278",
+  "excerpt": "$200 every time for something that is a top offunnel growth lever like ads might not make that much difference to like a $10,000 a day business. You know it's a fair amount I think for most people that are probably watching this. And yeah, I wanted to make sure that it was about as accessible as humanly possible. Okay, so what it's doing is it's actually generating an HTML template to show me"
+ },
+ {
+  "local_id": "EV-0279",
+  "excerpt": "what the ads are going to look like. Um, and then, you know, after this is done in presumably another 20 seconds or so, I'll show you guys the results. Okay. And so it's actually come up with an example here, and it's done so underneath test stacked.png. And you can see that it did an okay job. I mean, you know, it came up with its own gradient here, which I think we're going to have"
+ },
+ {
+  "local_id": "EV-0280",
+  "excerpt": "to significantly improve. Um, but you know, it did kind of space out the font. Well, it does have a little start now button. Um, I would say we're just losing a couple things on the spacing. Um, you can also see there's this little stacked overlay where we have a much smoother gradient down here with a similar sort of card. And, uh, yeah, you know, this isn't perfect, but it's going"
+ },
+ {
+  "local_id": "EV-0281",
+  "excerpt": "to be pretty clean. So, what I'm going to do next is I'm just going to give it a bunch of feedback on this and see how well it did. I'm also going to have it generate me a web page that I can very quickly use to uh, make changes and alter things. So, first thing I'm going to do is I'm just going to hold command D because that's how you record. Hey, this is an okay job. I thought we"
+ },
+ {
+  "local_id": "EV-0282",
+  "excerpt": "got maybe 70% of the way there, but we do need to significantly improve the design and make it much closer to the initial stripe one that I showed you guys. Um, so we do need to push the CSS further with a variety of different gradient styles. Um, we could actually generate high quality gradient background images as well. Uh, and then, you know, do a bunch of flips and stuff"
+ },
+ {
+  "local_id": "EV-0283",
+  "excerpt": "like that. I'll show you or I will use an image model later. For now, I want to do things entirely procedurally. I also think the text spacing is a little bit off and uh yeah, I just want to significantly improve the quality of this first. So, in order to do so, could you create me a web page that I could use to adjust various sliders to change things until the settings are exactly"
+ },
+ {
+  "local_id": "EV-0284",
+  "excerpt": "how I want them to be? Uh, think about it as like me placing something on a on a page, let's say. Uh, build me the ability to, I don't know, change the font width and the different styles and and and where they're placed on the page and so on and so forth. Um, after we're done, we'll save those and make those concrete. And then once they're concrete, then we can spin, you know,"
+ },
+ {
+  "local_id": "EV-0285",
+  "excerpt": "hundreds if not thousands of these um to, you know, generate a bunch of ads. You see it's now actually building an SVG filter pipeline to try and reproduce what we're seeing here, uh, which is some sort of smooth meshed design that obviously Stripe used their own internal image model or something like that to generate. So, we're going to try doing this procedurally and programmatically"
+ },
+ {
+  "local_id": "EV-0286",
+  "excerpt": "just to save a bunch of time and energy and money. Okay. And now we have a clawed browser, which it's going to open just to allow me to actually tune the ads. So, it just opened it over here on the right hand side as you guys could see. It doesn't look like I'm actually capable of seeing one of these ads just yet. So, I think it's probably going to have to do a little bit more work to"
+ },
+ {
+  "local_id": "EV-0287",
+  "excerpt": "tighten that up. Now, one thing you'll find when you just have Claude start a task and then, you know, give you the results is it'll self-manage a lot of errors and debugs. In the past, this didn't happen. In the past, you typically had to do a lot of this debugging yourself. But you'll see that it's just passing its own outputs back in as an input to the next step and then"
+ },
+ {
+  "local_id": "EV-0288",
+  "excerpt": "progressively getting closer and closer to what it is that you want. Um, we're also coming up on like 3 minutes here. Uh, there are a lot of prompts that I run that now genuinely take somewhere between 15 to 20 minutes. And so I will fire off a task by dumping in a bunch of my demands and want and then I'll just step away or, you know, I'll work on something else. Or what I'll do is I'll"
+ },
+ {
+  "local_id": "EV-0289",
+  "excerpt": "just spawn a bunch of these. And then eventually this little icon here will go from gray to yellow. And the second that it's yellow, I know that I, you know, it's done and I need to come back in and actually check in with it. I think sometimes that also turns green. We can actually see the filter debug right here. It's actually coming up with a variety of different filters. Um, I"
+ },
+ {
+  "local_id": "EV-0290",
+  "excerpt": "think what we could do is we could probably just apply noise to this, some sort of procedural noise. That would probably look even better. Uh, that's fairly easy to do. And yeah, as you can see, it's even figuring out like the streaks, which is neat. So, it'll just do this hundreds, maybe thousands of times until it comes up with something that looks pretty clean. And then once"
+ },
+ {
+  "local_id": "EV-0291",
+  "excerpt": "we're done, we'll actually be able to generate those demand uh those ads on demand. And keep in mind, um if anybody from Stripe is watching this, I'm more than happy to build you guys procedural ad generators in 5 minutes. But you could also ask literally anybody that's watched one of my courses, and I'm sure they'd be able to do the same. Not exactly rocket science. And as you can"
+ },
+ {
+  "local_id": "EV-0292",
+  "excerpt": "see, we're getting much closer to that. We now just have to deal with a couple of little spacing issues. So, I'm actually going to jump into the ad tuner and do that myself. Okay. And it just opened it for me. Um, looks like we can land your first AI client in 90 days. Looks like we can also change the angle of the gradient applied to this, which is kind of neat. Um, I don't actually"
+ },
+ {
+  "local_id": "EV-0293",
+  "excerpt": "need to do any of that cuz I'm I'm quite satisfied. While it's working, I'm just going to say add a bit of noise or the ability to add it so I can test. And the reason why I'm going to do that is because I think noise just makes it a lot cleaner. So, organic streak textures and stuff like that. We can come up with about as many of these as we want now, which is nice. Streak win. That's kind"
+ },
+ {
+  "local_id": "EV-0294",
+  "excerpt": "of cool. You know, it it looks like stripe. It looks like stripe. It's obviously pretty sexy. Okay. So, I'm just going to change the word mark a little bit. Um why don't we make the size bigger? And then what we need to do if think if you think about it is actually change the spacing of some of these because um it didn't it doesn't really look like you know as clean I"
+ },
+ {
+  "local_id": "EV-0295",
+  "excerpt": "would say. I don't know. I'm just playing around with this a couple of different ways but yeah I think we should also change the line height a little bit maybe. I don't know. Content pad X. I don't exactly know how all of this works but I'm just going to change this around a little bit. Block gap. Oh yeah. Yeah. I like that. I like that. Cool. Awesome. And then I think what we"
+ },
+ {
+  "local_id": "EV-0296",
+  "excerpt": "just need to do now is just I don't know, maybe find a way to make the font at Maker School just a tiny bit different. Then we can just rip this over and over and over again. Also allows you to use plain text or a pill button. That's kind of cool. CTA text is kind of neat. Maybe I'll say join now instead of start now. And then maybe we'll do something like maker"
+ },
+ {
+  "local_id": "EV-0297",
+  "excerpt": "school. Okay, great. So I really like this. I'm actually just going to export the settings which is right over here. This will allow me then to copy and paste it into Claude. Uh, and then I'm just going to give it one final piece of advice. I'll say, \"Okay, let's find a way to make the Maker School logo more interesting.\" Right now, it's uh I don't know why I'm"
+ },
+ {
+  "local_id": "EV-0298",
+  "excerpt": "not using voice transcription here. Just a little too spread out, aka the letter spacing makes it look not as professional. Um, but the fact that we're using a default font also makes it sort of bleed into the rest of the design. So, come up with like 20 different fonts that I could use that are all very high-end, new, and clean. And you can see while I was doing that,"
+ },
+ {
+  "local_id": "EV-0299",
+  "excerpt": "and this is something that you guys should um do uh pretty often. While I was doing that, it also allowed me to adjust the grain. So, it came up with a new way basically of doing this. So, I can now change the grain. It's a little bit difficult to see here, but if I change some of the colors just to maybe I don't know, let's see here. Maybe instead of white, I want it to be kind"
+ },
+ {
+  "local_id": "EV-0300",
+  "excerpt": "of like reddish or something. Maybe pinkish. Um, you guys could see that I'm now adding a little bit of grain. I can also change the size of the grain. Maybe I'll make it a little bit smaller like this. Then I'll just make it just pop out a tad. And we can even change what's called the seed here. Maybe we'll do soft light. I don't know. Multiply. Multiply would look a little too strong,"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

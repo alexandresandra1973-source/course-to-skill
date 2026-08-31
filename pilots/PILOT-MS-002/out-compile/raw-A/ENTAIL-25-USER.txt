@@ -1,0 +1,374 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0601",
+  "claim_text": "If you are chasing people for more than 84 days and they still haven't got back to you, you probably have bigger issues, such as whether they will even sign the deal or pay the invoice.",
+  "evidence": [
+   {
+    "local_id": "EV-1031",
+    "excerpt": "same with the local uh script? Okay. And after all is said and done, we now have a routine set up for the daily invoice/proposal chase. I'm sure you guys could see how you could extend this virtually arbitrarily to whatever the heck you want. Um, I just did mine on that 1 2 3 74 218 56 and 84day schedule. Um, granted, if you are chasing people for more than 84 days and they still"
+   },
+   {
+    "local_id": "EV-1032",
+    "excerpt": "haven't got back to you, you probably got bigger issues like, are they even going to sign the deal? Are they even going to pay the invoice? Probably not. Anyway, we did all that with clawed code and we did it just a few minutes realistically. Um, so that's that. Some ways to make this better. We could absolutely do some sort of higher quality nudges. We could, you know, give"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0602",
+  "claim_text": "Ways to improve the follow-up flow include higher quality nudges, giving specific value like email sequences/newsletters with case studies and assets, insights, pre or post-meeting touches, customer stories, and gentle price objection check-ins.",
+  "evidence": [
+   {
+    "local_id": "EV-1032",
+    "excerpt": "haven't got back to you, you probably got bigger issues like, are they even going to sign the deal? Are they even going to pay the invoice? Probably not. Anyway, we did all that with clawed code and we did it just a few minutes realistically. Um, so that's that. Some ways to make this better. We could absolutely do some sort of higher quality nudges. We could, you know, give"
+   },
+   {
+    "local_id": "EV-1033",
+    "excerpt": "people specific types of value like email sequences in newsletters that drop like case studies and assets. Um, we could we could give them insights. You know, we could go pre or postmeating. I just did proposal here because I thought it was probably the easiest to to verify and see. We could do some sort of customer story. We could also just rip and rinse and repeat a bunch of these"
+   },
+   {
+    "local_id": "EV-1034",
+    "excerpt": "gentle price objection check-ins that I've been doing. Um, but yeah, I mean like this is fairly straightforward, which officially marks us as having finished the last demo of our course. So hopefully you've learned a lot. Just to give you guys a brief uh revisiting, we started with creative generation. So I showed you guys how to generate ads, organics, uh, images, and videos all"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0603",
+  "claim_text": "To add SMS to the follow-up flow, add the Klaviyo ('kuo/quo') connector, check for the phone number, and instruct the model to draft and send a message to their phone numbers, getting the phone numbers from the local ClickUp scrape.",
+  "evidence": [
+   {
+    "local_id": "EV-1039",
+    "excerpt": "your own business or you could sell to people. And then finally bottom of funnel automating high quality follow-ups via email. And I'm realizing now it actually I I said SMS. So, why don't I just round that out for SMS. Um, in order to do something like that, all you would have to do is basically add the Kuo connector, which I will jump on right over here, do some editing, and"
+   },
+   {
+    "local_id": "EV-1040",
+    "excerpt": "then um actually add that QUO connector. And then [snorts] over here, I'll also check for the phone number. So, I'm going to go here, hold this down. In addition to sending an email, I also want you to um draft and then send a message to their phone numbers using kuo quo. Awesome. You'll get the phone numbers from the local"
+   },
+   {
+    "local_id": "EV-1041",
+    "excerpt": "ClickUp scrape. Cool. I mean, that is really how easy it is to modify these sorts of flows to be clear. Um I will have to obviously test that if I did want to use that at scale. can't just assume that it's going to work perfectly. As you guys saw, a lot of bugs do crop up throughout the process. Okay, great. So, now that we've made it all the way to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0604",
+  "claim_text": "You must test a modified flow before using it at scale; you can't just assume it's going to work perfectly because a lot of bugs crop up throughout the process.",
+  "evidence": [
+   {
+    "local_id": "EV-1041",
+    "excerpt": "ClickUp scrape. Cool. I mean, that is really how easy it is to modify these sorts of flows to be clear. Um I will have to obviously test that if I did want to use that at scale. can't just assume that it's going to work perfectly. As you guys saw, a lot of bugs do crop up throughout the process. Okay, great. So, now that we've made it all the way to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0605",
+  "claim_text": "The first major piece of maintenance advice is to get all of your login and authentication upfront, because login and authentication end up being something like 70% of all maintenance requests and problems the presenter has ever had.",
+  "evidence": [
+   {
+    "local_id": "EV-1044",
+    "excerpt": "more or less everything right now. And I've arranged my little worksheet here to essentially work like this. So, my first major uh point of advice on maintenance is, you know, if you're doing this for a client or your own business, it's going to be a little bit different, but I'm assuming right now that you're maintaining these systems, let's just say for somebody else. Um,"
+   },
+   {
+    "local_id": "EV-1045",
+    "excerpt": "what you're going to want to do is you're going to want to get all of your login and authentication upfront. And the reason why is because u login and authentication in practice actually end up being something like 70% of all of the maintenance requests and and problems that I've ever had. Um typically a pro you know a problem will go like this. Uh let me not use one."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0606",
+  "claim_text": "A typical failure chain: a service upgrades, the connector breaks, the client gets angry or thinks the system doesn't work, calls in the middle of the night, and you have to do a last-second fix requiring getting them on a call to reauthenticate.",
+  "evidence": [
+   {
+    "local_id": "EV-1046",
+    "excerpt": "it'll be like service upgrades and you know when a service let's say some sort of Gmail or something upgrades you lose uh your connector after your connector breaks right then and I'm thinking about this in the context of a client client gets angry or client thinks system doesn't work that's not how you spell system so Then they call you in the middle of"
+   },
+   {
+    "local_id": "EV-1047",
+    "excerpt": "the night being like, \"Hey, this thing isn't working.\" You build something that is inherently broken or wrong. And then you have to sort of do a fix last second. And then in doing your fix last second, you kind of have to get them on the call. You have to get some sort of communication with them. Um meaning you have to reauthenticate. So number one, it's a it's a bad look for you, but"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0607",
+  "claim_text": "Despite it being far more secure not to have credentials for all your clients or team members, it is way easier to handle breakages on the fly if you actually have the core or root login.",
+  "evidence": [
+   {
+    "local_id": "EV-1048",
+    "excerpt": "obviously it's also a bad look because this whole maintenance and upgrade loop could have been handled assuming you actually had the core credential um that we're talking about. What I mean by that is despite the fact that it is far more secure not to have credentials for all of your clients or all of the team members within your team's um login and so on and so forth, it is way easier to"
+   },
+   {
+    "local_id": "EV-1049",
+    "excerpt": "handle stuff like this on the fly if you actually have the core or root login. So much so that you can actually do what's called a debug flow. So, I don't know if you guys remember inside of Claude, just going back here, um, there was a, if we go to new and then go down to our local environment, okay, there is a section where you can actually store keys. And one thing that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0608",
+  "claim_text": "In Claude's local environment there is a section where you can store keys, and you can also store usernames and passwords there, such as clickup_user and clickup_pw.",
+  "evidence": [
+   {
+    "local_id": "EV-1049",
+    "excerpt": "handle stuff like this on the fly if you actually have the core or root login. So much so that you can actually do what's called a debug flow. So, I don't know if you guys remember inside of Claude, just going back here, um, there was a, if we go to new and then go down to our local environment, okay, there is a section where you can actually store keys. And one thing that"
+   },
+   {
+    "local_id": "EV-1050",
+    "excerpt": "you could also do inside of this local environment is you could store usernames and passwords. So, what I mean by this is let's say, you know, we have some ClickUp fail that it just continues to occur. We could actually store clickup user equals, you know, nick at whatever.com. We could also store clickup_pw equals nick blah blah blah blah blah"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0609",
+  "claim_text": "You can store a line in your cloud routine or local environment that says: if there is an issue, log in via the stored credentials, navigate to the location where the stuff is, and regenerate the API key.",
+  "evidence": [
+   {
+    "local_id": "EV-1051",
+    "excerpt": "blah fan whatever you know 45 I don't know cuz nowadays they all require numbers and then what happens is you can actually store a line in your cloud routine or in you know your your your local environment because this isn't a local environment. So probably your loop in this case if you wanted to do in a cloud routine it would be the cloud environment. You could store a line that"
+   },
+   {
+    "local_id": "EV-1052",
+    "excerpt": "basically says um you know if o issue log in via whatever the creds are. Okay, navigate to you know location where all the stuff is and then ultimately regenerate API key. I don't know if you guys know, but these these models now have browsers, right? And so, as we saw with Claude, when it"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0610",
+  "claim_text": "The models now have browsers and can use them to log into services for you, enabling a debug flow where the model self-manages an issue; the only situation in which that is doable is if you already have all the login and authentication.",
+  "evidence": [
+   {
+    "local_id": "EV-1052",
+    "excerpt": "basically says um you know if o issue log in via whatever the creds are. Okay, navigate to you know location where all the stuff is and then ultimately regenerate API key. I don't know if you guys know, but these these models now have browsers, right? And so, as we saw with Claude, when it"
+   },
+   {
+    "local_id": "EV-1053",
+    "excerpt": "develops a website, it literally opens up a little browser on the right hand side. Well, it can legitimately use that to log into services for you. And so, what you can do is you can have like sort of a debug flow where if there is an issue, it can self-manage that issue. Um, but the only situation in which that is doable is if you already have all the login and authentication. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0611",
+  "claim_text": "If you want something to be long-standing business infrastructure, a lot of the time you have to let go and tell the client to hand over the login so the system can log into the service itself.",
+  "evidence": [
+   {
+    "local_id": "EV-1054",
+    "excerpt": "unfortunately, as mentioned, this is like 70% of all the problems with these sort of recurring loginins. And if you want something to be long-standing business infrastructure, a lot of the time you just sort of have to let go a little bit and say, \"Okay, like take the login, log into the service yourself and then do everything you need to do.\" Okay, so that's the first thing. The"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0612",
+  "claim_text": "Self-healing means giving the model basically total carte blanche autonomy to fix and then rerun on other issues; it is described as giving AI systems the ability to rewrite their own instructions — if a step keeps failing in the skill, update that skill's instructions and try again.",
+  "evidence": [
+   {
+    "local_id": "EV-1055",
+    "excerpt": "second thing is um called self-healing. And I'll show you guys an example of self-healing in a second. But if other issue you know my recommendation is you give the model basically total cart blanch autonomy to fix and then rerun."
+   },
+   {
+    "local_id": "EV-1056",
+    "excerpt": "This is called selfhealing and it's a really important part of like robust um skill loop or routine development. To make it much simpler for you guys to visualize, you can think of it as giving your AI systems the ability to rewrite their own instructions. If a step keeps failing in the skill, update that skills instructions and try again. So, for instance, you know, let's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0613",
+  "claim_text": "Add a line at the bottom of your skill or loop/routine saying that if you've tried doing this more than three times and it does not work, odds are there's an issue with the core service: figure out what the issue is, see if a route has changed, then update and add a log of everything done so future runs can work successfully.",
+  "evidence": [
+   {
+    "local_id": "EV-1058",
+    "excerpt": "than force the model to go through a bunch of the same attempts over and over and over again, if you just add a line somewhere at the very bottom of your skill or somewhere at the bottom of your looper routine that just says if you've tried doing this more than three times and it does not work, then odds are there's an issue with the actual core service, figure out what the issue is,"
+   },
+   {
+    "local_id": "EV-1059",
+    "excerpt": "see if maybe a route has changed or something like that, and then actually go through and update and add a log of everything that you've done in order to do it so future runs can work successfully. If you do that, um, the model will virtually never cause any problems for you again. So long as it has all the resources it needs to actually fix the problem, like maybe"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0614",
+  "claim_text": "If you do this, the model will virtually never cause problems again, so long as it has all the resources it needs to actually fix the problem, like a login.",
+  "evidence": [
+   {
+    "local_id": "EV-1059",
+    "excerpt": "see if maybe a route has changed or something like that, and then actually go through and update and add a log of everything that you've done in order to do it so future runs can work successfully. If you do that, um, the model will virtually never cause any problems for you again. So long as it has all the resources it needs to actually fix the problem, like maybe"
+   },
+   {
+    "local_id": "EV-1060",
+    "excerpt": "some login or something like that, it will heal itself. I've called this multiple things over the uh last year or so called a self annealing. That's a pretty cool term, but I think self-healing probably makes more sense. It's like kind of how Wolverine's body regenerates when somebody slashes him, right? Like that's that's sort of the idea here. Uh, and so typically what'll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0615",
+  "claim_text": "The recommended self-healing phrase, though the presenter says his phrasing is not perfect: if at any point you run into the same error more than three times, odds are something has materially changed in the systems you are interacting with; evaluate these changes, explore, and see if you can solve the problem, with full agency autonomy; after solving, report back and update your own skill/loop/routine with a change log of upgrades including the problem and your solution, update the actual skill itself, and append to this change log as you continue.",
+  "evidence": [
+   {
+    "local_id": "EV-1061",
+    "excerpt": "happen is you should have a phrase, and I'm not going to give you the exact phrase here because I don't think my phrase is perfect, and there are a variety of different things you could say, but basically if at any point you run into the same error more than three times, odds are something has materially changed in the systems that you are interacting with. Evaluate"
+   },
+   {
+    "local_id": "EV-1062",
+    "excerpt": "these changes, explore, and see if you can solve the problem. You have full agency autonomy. After you've solved the problem, report back and update your own skill or loop or routine, whatever it is that you're running, with a change log of upgrades, including the problem, your solution, and then update the actual skill itself."
+   },
+   {
+    "local_id": "EV-1063",
+    "excerpt": "Append to this change log as you continue doing this. So we always have a breakdown of what happened and why. Okay. So this is just something you know this is one of those things you can just copy and paste and stick into literally every single uh window virtually ever and you will have a significantly better and higher performing system as a result. U so this is in practice how you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0616",
+  "claim_text": "This self-healing phrase is something you can copy and paste into virtually every window and you will have a significantly better and higher performing system as a result.",
+  "evidence": [
+   {
+    "local_id": "EV-1063",
+    "excerpt": "Append to this change log as you continue doing this. So we always have a breakdown of what happened and why. Okay. So this is just something you know this is one of those things you can just copy and paste and stick into literally every single uh window virtually ever and you will have a significantly better and higher performing system as a result. U so this is in practice how you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0617",
+  "claim_text": "Self-healing is not 100% foolproof: with too much self-healing access, a spurious issue like a weird rate limit can cause the model to fundamentally change itself and screw up, though such cases are far less common than the model quitting due to a temporary rate limit.",
+  "evidence": [
+   {
+    "local_id": "EV-1064",
+    "excerpt": "sort of maintain the systems. You get ahead of the brakes by letting the model do more and more and more heavy lifting on its own. And I'm not going to say that this is like 100% foolproof. I've had some situations where I give them a little too much self-healing access and because of some spurious issue, maybe like a weird rate limit, it fundamentally changes itself and then it"
+   },
+   {
+    "local_id": "EV-1065",
+    "excerpt": "screws up. But those issues are far less common than um issues where, you know, the model just screws up due to some temporary rate limit and then ends up just calling it quits. The whole point of automation really is that it's hands-off, right? It's a system that just functions without humans. Obviously, we want to eliminate human labor completely where possible. We"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0618",
+  "claim_text": "The whole point of automation is that it is hands-off — a system that functions without humans; the goal is to eliminate human labor completely where possible, not merely minimize it, redirecting labor to more profitable areas of the business.",
+  "evidence": [
+   {
+    "local_id": "EV-1065",
+    "excerpt": "screws up. But those issues are far less common than um issues where, you know, the model just screws up due to some temporary rate limit and then ends up just calling it quits. The whole point of automation really is that it's hands-off, right? It's a system that just functions without humans. Obviously, we want to eliminate human labor completely where possible. We"
+   },
+   {
+    "local_id": "EV-1066",
+    "excerpt": "don't necessarily just want to minimize it. as such that we can redirect that human labor towards areas of the business that are more profitable and then ultimately probably better and more fulfilling for a human being. Like think about, I don't know, weaving a basket by hand 5,000 years ago. It's like, well, why would you weave a basket by hand uh and you know, try and make a livelihood"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0619",
+  "claim_text": "Old school drag-and-drop platforms like make.com and n8n give you automated error logging, full history logs, visible errors and incomplete executions on the diagram, and notifications by email or push, so you know when something screwed up and can fix it faster.",
+  "evidence": [
+   {
+    "local_id": "EV-1070",
+    "excerpt": "which I was using to to automate my own marketing. But if you guys are using an old school platform like you know make.com or something like that basically what you get with a tool like this is you get automated error logging. And so every time there's an error inside of like one of these flows that's drag and drop based like this. You'll actually have like a full history log."
+   },
+   {
+    "local_id": "EV-1071",
+    "excerpt": "You'll be able to see every change that has ever been made. And then you'll also be able to see all the errors, incomplete executions um physically literally on the diagram. You'll be able to see the errors and uh you'll also receive notifications. And you can set those notifications to send you emails. you can set those notifications to, I don't know, do push noteps or whatever."
+   },
+   {
+    "local_id": "EV-1072",
+    "excerpt": "Now, same thing with like N8 even if there are issues on this more kind of modern uh builder, you know, they they'd be able to see these things. You'd be able to see tickets, you'd be able to have error logging flows, you'd be able to get emails. What I'm trying to say is like you would know when something screwed up. And the whole idea is because you know that something screwed"
+   },
+   {
+    "local_id": "EV-1073",
+    "excerpt": "up, you'd be able to fix it significantly faster, right? It's much more like observable and transparent um than than most things that we're doing now. Unfortunately, because AI has just moved so quickly and because we're all building slightly different things nowadays, we don't have that same standardized observability, we don't actually have the ability to like log"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0620",
+  "claim_text": "Because AI moved so quickly and everyone builds slightly different things, there is no standardized observability and no built-in ability to log errors, leading to an 'erroring apocalypse' where things fail constantly unseen due to lack of notification routes.",
+  "evidence": [
+   {
+    "local_id": "EV-1068",
+    "excerpt": "here or there if it had its own hands. That's basically what we're doing. So that's one of the changes. The second major thing I want to talk about on the maintenance end is error logging. You know because we're moving away now in automating you know marketing stuff from the old school platforms like you know make.com nadn these sort of drag and drop tools. Um, we're currently in like"
+   },
+   {
+    "local_id": "EV-1069",
+    "excerpt": "an erroring apocalypse where these things are failing constantly and we're just not seeing them because we don't have simple like notification routes available to let you know when something is or is not working. So, what do I mean by this? If you guys were using an old school tool, it's funny that this is old school cuz it's kind of where I started on YouTube talking about this platform"
+   },
+   {
+    "local_id": "EV-1073",
+    "excerpt": "up, you'd be able to fix it significantly faster, right? It's much more like observable and transparent um than than most things that we're doing now. Unfortunately, because AI has just moved so quickly and because we're all building slightly different things nowadays, we don't have that same standardized observability, we don't actually have the ability to like log"
+   },
+   {
+    "local_id": "EV-1074",
+    "excerpt": "errors. And so, what I like to do as a minimum is I basically like to give all of my actual routines, the ones that are running my business, the ability to log errors to a uh de facto error channel inside of my workspace. And so, what do I mean by this? What does this actually look like in practice? Well, um I'll show you guys. I'm actually going to wire up one of our flows to to do this."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0621",
+  "claim_text": "As a minimum, give all routines that run your business the ability to log errors to a de facto error channel inside your workspace.",
+  "evidence": [
+   {
+    "local_id": "EV-1074",
+    "excerpt": "errors. And so, what I like to do as a minimum is I basically like to give all of my actual routines, the ones that are running my business, the ability to log errors to a uh de facto error channel inside of my workspace. And so, what do I mean by this? What does this actually look like in practice? Well, um I'll show you guys. I'm actually going to wire up one of our flows to to do this."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0622",
+  "claim_text": "The first and most important thing about error handling is to make it visible: dump errors where you work — WhatsApp if your business works in WhatsApp, Slack if Slack, Discord if Discord — in a place specifically for errors like an errors channel.",
+  "evidence": [
+   {
+    "local_id": "EV-1075",
+    "excerpt": "Um, but first of all, let's just call this error handling. And the very first kind of most important thing about error handling is you just have to make it visible. So, you know, you dump this stuff where you work. If your business works in WhatsApp, then dump it in WhatsApp. If your business works on Slack, dump it in Slack. If your business works on"
+   },
+   {
+    "local_id": "EV-1076",
+    "excerpt": "Discord, literally just dump it in Discord. Uh but basically every time that an error occurs, I recommend finding some place specifically for errors, like an errors channel, okay? And then wiring it up via um some logic, which I'll give you guys in a second, that just says like error with, you know, XYZ. And then what you can do is you actually weave in this self-healing,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0623",
+  "claim_text": "Weave self-healing into the error message: report 'error with XYZ, tried XYZ to fix, succeeded or failed'; for a failure that format is totally fine and more than enough, giving everyone in the organization full visibility into processes.",
+  "evidence": [
+   {
+    "local_id": "EV-1076",
+    "excerpt": "Discord, literally just dump it in Discord. Uh but basically every time that an error occurs, I recommend finding some place specifically for errors, like an errors channel, okay? And then wiring it up via um some logic, which I'll give you guys in a second, that just says like error with, you know, XYZ. And then what you can do is you actually weave in this self-healing,"
+   },
+   {
+    "local_id": "EV-1077",
+    "excerpt": "right? Air with XYZ tried XYZ to fix, you know, succeeded or failed, right? If you know it's a failure, something like this is totally fine and more than enough. Now every person in your organization will have basically full um top to bottom access and visibility into processes that you guys are doing. Okay. So how do you actually do this in something like you know um"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0624",
+  "claim_text": "In Claude, add the Slack connector (via settings, scroll down to connectors) and at the very bottom of the prompt say something like: if you have any errors, send the error notification to the # error Slack channel.",
+  "evidence": [
+   {
+    "local_id": "EV-1078",
+    "excerpt": "claude? It's actually fairly straightforward. What you do is you go down here and then right over here you see how you can add a connector. What you do is you just add slack and then at the very bottom you say something like if you have any errors send the error notification to the you know # error slack."
+   },
+   {
+    "local_id": "EV-1079",
+    "excerpt": "Let's do this um slack chat. Okay. And so once we have the connector it'll be very very easy to do. Let me show you guys a quick example. Um just go back here and then down to the bottom I'll go settings. Then I'll scroll all the way down to connectors. And what do we want? We want Slack, right? So you can see it's one of the most popular"
+   },
+   {
+    "local_id": "EV-1080",
+    "excerpt": "ones to connect to because we can then send error messages. I'm not going to connect to it. Okay, now we're back here. Okay, so what I've done is inside of my Slack, I actually have a errors channel. Okay, and I just set this up here as a demo. Um, my actual errors channel is private, but um we're just going to use this public one for the sake of uh discussion. And I'm just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0625",
+  "claim_text": "Before wiring error notifications into a real flow, send a sample error notification to the Slack errors channel to verify that alerting works with the connector.",
+  "evidence": [
+   {
+    "local_id": "EV-1081",
+    "excerpt": "going to go errors and we'll go public. The reason why we're doing that is because I just want to make sure I have the public version of that and I don't forget it. And then here, what I want to do is I basically want to say, \"Hey, I want you to send a sample error notification to and uh I'm going to do errors public in Slack.\" Okay. And then this will now have the"
+   },
+   {
+    "local_id": "EV-1082",
+    "excerpt": "ability to basically dump a brief little error message and log as it works. So, it's gone through the errors. Okay. I'm just going to say send it to show you guys what this looks like and then we can actually wire it into a real flow. So boom. Now we have error sample notification service invoice chase worker environment production time this cannot read properties of undefined"
+   },
+   {
+    "local_id": "EV-1083",
+    "excerpt": "count one occurrence. This is a test message to verify errors are alerting. Okay. So now that we've verified that this does work with the connector. All we have to do is I'm just going to say give me all the info to ensure you don't have to search this channel up again. I will add this to a routines prompt verbatim. Now we can actually just copy this whole message. Go to a routine. And"
+   }
+  ]
+ }
+]

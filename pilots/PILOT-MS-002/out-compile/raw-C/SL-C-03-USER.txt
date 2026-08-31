@@ -1,0 +1,407 @@
+source_id: MS002-SRC-C
+slice_id: SL-C-03
+boundaries: 680.8s - 825.68s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+foi colocado aquele set vazio ali no meio é porque é o seguinte no n8n quando você arrasta os dados de um node anterior por exemplo um node apenas antes ele traz dessa forma aqui json pon nome do campo quando nós evoluirmos esse workflow mais pra frente que eu vou utilizar ele como base pros próximos vídeos isso aqui iria dar bug a gente ia ter que fazer alteração aqui e algumas pessoas ficariam perdidas Então já pensando nisso eu inseri um node fake ali no meio para ele já trazer dessa forma indicando de qual node que vem o dado em vez de apenas json P message Então é isso esse é o nosso workflow Pronto agora a gente pode colocar ele pra produção vindo aqui no node do Web Hook mudando para product URL copiando ela vindo aqui na Evolution api events web Hook Cola essa URL nova vai lá embaixo clica em salvar volta no n8n e ativa o workflow agora ele vai est respondendo todo mundo que enviar mensagem utilizando essas ferramentas e lógicas que a gente criou ali e lembrando que o download desse fluxo que foi feito aqui no vídeo está na descrição e também vou deixar um docker compose aí na descrição para quem ainda não tem uma VPS e tá só querendo se aventurar e testar Você só vai precisar baixar essa pasta que o deixei abri ela abrir um terminal nela e digitar pon barst pps1 para quem tá no Windows aí você dá as respostas que o script vai pedir por exemplo a sua senha do postgress sua senha do Heads o seu e-mail de admin do PG admin espera ele baixar e subir os containers e pronto você tem uma Evolution com n8n instalado aí localmente quando eu fiz o script eu esqueci de configurar uma senha para Evolution mas a senha padrão vai est aí na descrição aí quando você quiser parar os contêiners É só abrir o aplicativo do docker e parar e para iniciar de novo a mesma coisa Abre o aplicativo do docker e clica para iniciar todos aquele script você só utiliza da primeira vez e no mais é isso muito obrigado aí pessoal quem que tá assistindo os vídeos ó já estamos com 525 inscritos e foi pouco tempo que eu comecei então agradeço e aqui os próximos vídeos que eu vou fazer eu já deixei anotado vai ser para juntar mensagens para evitar dele ficar respondendo é uma vez para cada sabe então ele vai ficar ali uns 10 segundinhos juntando para caso a pessoa Fale oi tudo bem como vai em três mensag é também vou fazer para ele parar de responder quando um humano enviar mensagem e quebrar uma mensagem Longa em várias menores para não ficar aquele textinho de ler mais beleza então se você gostou dá um like e comente aí a sua dúvida que eu vou responder todo mundo
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0081",
+  "excerpt": "foi colocado aquele set vazio ali no meio é porque é o seguinte no n8n quando você arrasta os dados de um node anterior por exemplo um node apenas"
+ },
+ {
+  "local_id": "EV-0082",
+  "excerpt": "antes ele traz dessa forma aqui json pon nome do campo quando nós evoluirmos esse workflow mais pra frente que eu vou utilizar ele como base pros próximos"
+ },
+ {
+  "local_id": "EV-0083",
+  "excerpt": "vídeos isso aqui iria dar bug a gente ia ter que fazer alteração aqui e algumas pessoas ficariam perdidas Então já pensando nisso eu inseri um node fake"
+ },
+ {
+  "local_id": "EV-0084",
+  "excerpt": "ali no meio para ele já trazer dessa forma indicando de qual node que vem o dado em vez de apenas json P message Então é isso esse é o nosso workflow"
+ },
+ {
+  "local_id": "EV-0085",
+  "excerpt": "Pronto agora a gente pode colocar ele pra produção vindo aqui no node do Web Hook mudando para product URL copiando ela vindo aqui na Evolution api events"
+ },
+ {
+  "local_id": "EV-0086",
+  "excerpt": "web Hook Cola essa URL nova vai lá embaixo clica em salvar volta no n8n e ativa o workflow agora ele vai est respondendo todo mundo que enviar"
+ },
+ {
+  "local_id": "EV-0087",
+  "excerpt": "mensagem utilizando essas ferramentas e lógicas que a gente criou ali e lembrando que o download desse fluxo que foi feito aqui no vídeo está na"
+ },
+ {
+  "local_id": "EV-0088",
+  "excerpt": "descrição e também vou deixar um docker compose aí na descrição para quem ainda não tem uma VPS e tá só querendo se aventurar e testar Você só vai precisar"
+ },
+ {
+  "local_id": "EV-0089",
+  "excerpt": "baixar essa pasta que o deixei abri ela abrir um terminal nela e digitar pon barst pps1 para quem tá no Windows aí você dá as respostas que o script vai"
+ },
+ {
+  "local_id": "EV-0090",
+  "excerpt": "pedir por exemplo a sua senha do postgress sua senha do Heads o seu e-mail de admin do PG admin espera ele baixar e subir os containers e pronto"
+ },
+ {
+  "local_id": "EV-0091",
+  "excerpt": "você tem uma Evolution com n8n instalado aí localmente quando eu fiz o script eu esqueci de configurar uma senha para Evolution mas a senha padrão vai est aí"
+ },
+ {
+  "local_id": "EV-0092",
+  "excerpt": "na descrição aí quando você quiser parar os contêiners É só abrir o aplicativo do docker e parar e para iniciar de novo a mesma coisa Abre o aplicativo do docker"
+ },
+ {
+  "local_id": "EV-0093",
+  "excerpt": "e clica para iniciar todos aquele script você só utiliza da primeira vez e no mais é isso muito obrigado aí pessoal quem que tá assistindo os vídeos ó já"
+ },
+ {
+  "local_id": "EV-0094",
+  "excerpt": "estamos com 525 inscritos e foi pouco tempo que eu comecei então agradeço e aqui os próximos vídeos que eu vou fazer eu já deixei anotado vai ser para juntar"
+ },
+ {
+  "local_id": "EV-0095",
+  "excerpt": "mensagens para evitar dele ficar respondendo é uma vez para cada sabe então ele vai ficar ali uns 10 segundinhos juntando para caso a pessoa"
+ },
+ {
+  "local_id": "EV-0096",
+  "excerpt": "Fale oi tudo bem como vai em três mensag é também vou fazer para ele parar de responder quando um humano enviar mensagem e quebrar uma mensagem Longa em"
+ },
+ {
+  "local_id": "EV-0097",
+  "excerpt": "várias menores para não ficar aquele textinho de ler mais beleza então se você gostou dá um like e comente aí a sua dúvida que eu vou responder todo"
+ },
+ {
+  "local_id": "EV-0098",
+  "excerpt": "mundo"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

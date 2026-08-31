@@ -1,0 +1,562 @@
+{
+  "source_id": "MS002-SRC-C",
+  "slice_id": "SL-C-02",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "O prompt do agente define que ele deve responder dúvidas dos clientes sobre locais em Foz do Iguaçu consultando a API.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0041"],
+      "qualifiers": {
+        "scope": "prompt do agente no exemplo demonstrado",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração do system prompt",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "É possível colocar dados dinâmicos no prompt; para inserir o nome do cliente basta arrastar o dado do nome para o prompt, o que insere a variável.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0042", "EV-0043", "EV-0044"],
+      "qualifiers": {
+        "scope": "campo de prompt do agente",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração do prompt",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Para inserir a data atual no prompt, digita-se 'data atual', abre-se duas chaves, coloca-se um cifrão e seleciona-se 'Now', uma variável do JavaScript que retorna a data e horário atual.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0044", "EV-0045"],
+      "qualifiers": {
+        "scope": "campo de prompt do agente",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração do prompt",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Além do prompt, são passados ao agente o nome do cliente e a data e horário atual.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0045", "EV-0046"],
+      "qualifiers": {
+        "scope": "exemplo demonstrado",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração do prompt",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "No Chat Model existem vários modelos de IA disponíveis; pode-se usar a chave de API do Grock (que é gratuito) ou da Open AI, ou de qualquer outro dos disponíveis.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0046", "EV-0047", "EV-0048"],
+      "qualifiers": {
+        "scope": "nó Chat Model do agente",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração do modelo",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "Nas configurações do Open AI Chat Model ou do Grock cria-se uma nova credencial colando a chave de API gerada no campo e salvando.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0048", "EV-0049"],
+      "qualifiers": {
+        "scope": "nó Chat Model (Open AI ou Grock)",
+        "condition": "se estiver usando o Grock, cria-se a credencial do Grock",
+        "platform": null,
+        "stage": "configuração de credencial do modelo",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Para a memória de chat do agente usa-se o banco do Redis, adicionando o node Redis Chat Memory e configurando a credencial.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0049", "EV-0050"],
+      "qualifiers": {
+        "scope": "memória de chat do agente no exemplo demonstrado",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração da memória",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Para quem está usando o Easy Panel, as credenciais do Redis ficam na página do serviço do Redis, em 'credentials'; copia-se user, senha e host para os campos user, password e host, e a porta não mudou.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0050", "EV-0051", "EV-0052", "EV-0053"],
+      "qualifiers": {
+        "scope": "credencial do Redis Chat Memory",
+        "condition": "para quem está usando o Easy Panel",
+        "platform": "Easy Panel",
+        "stage": "configuração de credencial do Redis",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "O session ID é a chave que vincula o histórico àquela pessoa e permite trazer as conversas de volta, e deve ser um valor único para cada pessoa.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0053", "EV-0054", "EV-0055"],
+      "qualifiers": {
+        "scope": "configuração do session ID no Redis Chat Memory",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração da memória",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "Usa-se o número da pessoa como chave do session ID porque é um valor único para cada pessoa, assim como o CPF, já que nunca haverá duas pessoas com número de telefone igual.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0055", "EV-0056"],
+      "qualifiers": {
+        "scope": "configuração do session ID no Redis Chat Memory",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração da memória",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "Session time to leave é um tempo em segundos que a chave/lista de mensagens vai durar; para durar para sempre deixa-se zero, e no exemplo foi colocado 3600 segundos para durar 1 hora.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0056", "EV-0057", "EV-0058"],
+      "qualifiers": {
+        "scope": "campo session time to leave do Redis Chat Memory",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração da memória",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "Context Window Length é o tanto de mensagens do histórico enviadas ao agente de IA como contexto da conversa; o padrão vem em cinco e no exemplo foi aumentado para 10.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0058", "EV-0059"],
+      "qualifiers": {
+        "scope": "campo context window length do Redis Chat Memory",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração da memória",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "Existem vários tipos de Tool; entre as pré-definidas o autor destaca as do Google Drive, Google Sheets e Google Docs.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0059", "EV-0060"],
+      "qualifiers": {
+        "scope": "tipos de Tool disponíveis",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração de Tools",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "Como Tools podem ser usados outros workflows, código JavaScript ou Python e requisições HTTP, ou seja, praticamente qualquer coisa.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0061", "EV-0062"],
+      "qualifiers": {
+        "scope": "tipos de Tool disponíveis",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração de Tools",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "Uma requisição HTTP nada mais é do que consultar uma página; no exemplo consulta-se a API do autor.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0062", "EV-0063"],
+      "qualifiers": {
+        "scope": "Tool de requisição HTTP",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração de Tools",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "Na Tool de requisição HTTP configura-se a descrição ('retorna dados sobre locais em Foz do Iguaçu'), o método (get, conforme configurado na API) e a URL, que basicamente é o link do site.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0063", "EV-0064"],
+      "qualifiers": {
+        "scope": "Tool de requisição HTTP no exemplo demonstrado",
+        "condition": null,
+        "platform": null,
+        "stage": "configuração de Tools",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "Para fazer um teste consultando uma página, basta colocar o link dessa página na URL; feita essa configuração pode-se clicar fora e salvar.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0064", "EV-0065"],
+      "qualifiers": {
+        "scope": "Tool de requisição HTTP",
+        "condition": "se quiser consultar uma página para fazer um teste",
+        "platform": null,
+        "stage": "configuração de Tools",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "Adiciona-se um nó da Evolution com recurso 'chat' e operação 'ler mensagem' para visualizar a mensagem que chegou, trazendo os dados anteriores.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0066", "EV-0067"],
+      "qualifiers": {
+        "scope": "nó Evolution de leitura de mensagem",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "No nó de ler mensagem, o nome da instância é o nome dado na Evolution ao criar a instância, o contato é o número de quem mandou e o ID da mensagem é o ID já colocado no set.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0067", "EV-0068", "EV-0069"],
+      "qualifiers": {
+        "scope": "nó Evolution de leitura de mensagem",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "Ao clicar para testar o nó de ler mensagem, ele visualiza a mensagem no WhatsApp.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0069"],
+      "qualifiers": {
+        "scope": "nó Evolution de leitura de mensagem",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "teste",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "Adiciona-se outro nó da Evolution para enviar a resposta, com recurso 'mensagem' e operação 'enviar texto'.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0069", "EV-0070"],
+      "qualifiers": {
+        "scope": "nó Evolution de envio de mensagem",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "No nó de enviar texto, o nome da instância vem do node de dados e o número vem do número de quem mandou a mensagem.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0070", "EV-0071"],
+      "qualifiers": {
+        "scope": "nó Evolution de envio de mensagem",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "No campo mensagem coloca-se o output do node do AI Agent, ou seja, a resposta que o agente de IA deu, para ser enviada direto ao WhatsApp.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0071", "EV-0072", "EV-0073"],
+      "qualifiers": {
+        "scope": "campo mensagem do nó Evolution de envio",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "Nas opções do nó de envio existe um delay, que é um tempo para ficar digitando; no exemplo foi configurado 3000 ms para digitar 3 segundos antes de enviar as mensagens.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0073", "EV-0074"],
+      "qualifiers": {
+        "scope": "opções do nó Evolution de envio",
+        "condition": null,
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "Existe a opção de preview de link, que faz aparecer a fotinha do site em cima quando se manda um link; o autor considera legal essa opção para quem envia bastante link.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0074", "EV-0075"],
+      "qualifiers": {
+        "scope": "opções do nó Evolution de envio",
+        "condition": "para quem for enviar bastante link",
+        "platform": "Evolution / WhatsApp",
+        "stage": "resposta ao usuário",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "Após o fluxo pronto, o autor clica para testar e manda uma mensagem no WhatsApp para o número configurado; a mensagem chegou e o processamento foi bem rápido.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0075", "EV-0076", "EV-0077"],
+      "qualifiers": {
+        "scope": "teste do fluxo demonstrado",
+        "condition": null,
+        "platform": "WhatsApp",
+        "stage": "teste",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "Ao perguntar quais pontos turísticos tem em Foz, o agente consultou a Tool e demorou um pouco no processamento porque a resposta da API é gigante, com mais de 3.000 linhas.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0077", "EV-0078", "EV-0079"],
+      "qualifiers": {
+        "scope": "teste do fluxo demonstrado",
+        "condition": null,
+        "platform": null,
+        "stage": "teste",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "O resultado foi uma resposta com vários locais em Foz do Iguaçu para visitar, funcionando como um agente de IA integrado no WhatsApp com ferramentas que consultam a API.",
+      "source_language": "pt",
+      "evidence_refs": ["EV-0079", "EV-0080"],
+      "qualifiers": {
+        "scope": "resultado do teste demonstrado",
+        "condition": null,
+        "platform": "WhatsApp",
+        "stage": "teste",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0053", "EV-0054", "EV-0055", "EV-0056"],
+      "claim_temp_refs": ["TC-009", "TC-010"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Session ID deve ser valor único por pessoa (usar o número)",
+        "trigger": "Ao configurar o session ID da memória de chat (Redis Chat Memory)",
+        "condition": "É preciso vincular o histórico à pessoa e conseguir trazer as conversas de volta",
+        "action": "Informar como chave um valor único para cada pessoa; usar o número da pessoa, pois é único para cada pessoa (assim como o CPF) e nunca haverá duas pessoas com número de telefone igual",
+        "do_not": [],
+        "precedence": null,
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0056", "EV-0057", "EV-0058"],
+      "claim_temp_refs": ["TC-011"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Configuração do session time to leave",
+        "trigger": "Ao configurar o campo session time to leave",
+        "condition": "Se quiser que a lista de mensagens dure para sempre",
+        "action": "Deixar zero para durar para sempre; no exemplo foi colocado 3600 segundos para durar 1 hora",
+        "do_not": [],
+        "precedence": null,
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0058", "EV-0059"],
+      "claim_temp_refs": ["TC-012"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Ajuste do context window length",
+        "trigger": "Ao configurar o context window length da memória de chat",
+        "condition": "O padrão vem em cinco",
+        "action": "Definir o número de mensagens do histórico enviadas ao agente como contexto; no exemplo foi aumentado de cinco para 10",
+        "do_not": [],
+        "precedence": null,
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0071", "EV-0072", "EV-0073"],
+      "claim_temp_refs": ["TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Preencher campo mensagem com o output do AI Agent",
+        "trigger": "Ao configurar o campo mensagem do nó Evolution de enviar texto",
+        "condition": null,
+        "action": "Colocar no campo mensagem o output do node do AI Agent (a resposta que o agente de IA deu) para ser enviado direto ao WhatsApp",
+        "do_not": [],
+        "precedence": null,
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0041", "EV-0042", "EV-0043", "EV-0044", "EV-0045", "EV-0046", "EV-0047", "EV-0048", "EV-0049", "EV-0050", "EV-0051", "EV-0052", "EV-0053", "EV-0054", "EV-0055", "EV-0056", "EV-0057", "EV-0058", "EV-0059", "EV-0060", "EV-0061", "EV-0062", "EV-0063", "EV-0064", "EV-0065", "EV-0066", "EV-0067", "EV-0068", "EV-0069", "EV-0070", "EV-0071", "EV-0072", "EV-0073", "EV-0074", "EV-0075", "EV-0076", "EV-0077", "EV-0078", "EV-0079", "EV-0080"],
+      "claim_temp_refs": ["TC-001", "TC-002", "TC-003", "TC-005", "TC-006", "TC-007", "TC-008", "TC-009", "TC-011", "TC-012", "TC-016", "TC-018", "TC-021", "TC-023", "TC-024", "TC-026", "TC-027"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Configuração e teste do agente de IA integrado ao WhatsApp com Tool de requisição HTTP",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Escrever o prompt do agente",
+            "action": "Escrever no prompt que o agente deve responder dúvidas dos clientes sobre locais em Foz do Iguaçu consultando a API",
+            "evidence_refs": ["EV-0041", "EV-0042"]
+          },
+          {
+            "order_key": 2,
+            "name": "Inserir dados dinâmicos no prompt",
+            "action": "Digitar 'nome do cliente:' e arrastar o dado do nome para o prompt, o que insere a variável; digitar 'data atual', abrir duas chaves, colocar um cifrão e selecionar 'Now', variável do JavaScript que retorna data e horário atual",
+            "evidence_refs": ["EV-0042", "EV-0043", "EV-0044", "EV-0045"]
+          },
+          {
+            "order_key": 3,
+            "name": "Configurar o Chat Model",
+            "action": "Em Chat Model escolher um dos modelos disponíveis (Grock, gratuito, ou Open AI); no exemplo usa-se o da Open AI",
+            "evidence_refs": ["EV-0046", "EV-0047", "EV-0048"]
+          },
+          {
+            "order_key": 4,
+            "name": "Criar credencial do modelo",
+            "action": "Nas configurações do Open AI Chat Model ou do Grock criar uma nova credencial, colar a chave de API gerada no campo e salvar",
+            "required_inputs": ["chave de api gerada"],
+            "evidence_refs": ["EV-0048", "EV-0049"]
+          },
+          {
+            "order_key": 5,
+            "name": "Adicionar memória de chat Redis",
+            "action": "Adicionar o Redis Chat Memory e configurar a credencial",
+            "evidence_refs": ["EV-0049", "EV-0050"]
+          },
+          {
+            "order_key": 6,
+            "name": "Preencher credenciais do Redis",
+            "action": "No Easy Panel, clicar no serviço do Redis, ir em credentials e copiar user, senha e host para os campos user, password e host; a porta não mudou; salvar",
+            "required_inputs": ["credenciais do Redis no Easy Panel"],
+            "evidence_refs": ["EV-0050", "EV-0051", "EV-0052", "EV-0053"]
+          },
+          {
+            "order_key": 7,
+            "name": "Configurar session ID",
+            "action": "Informar como chave do session ID um valor único para cada pessoa: o número da pessoa",
+            "evidence_refs": ["EV-0053", "EV-0054", "EV-0055", "EV-0056"]
+          },
+          {
+            "order_key": 8,
+            "name": "Configurar session time to leave e context window length",
+            "action": "Colocar 3600 segundos no session time to leave (1 hora; zero para durar para sempre) e aumentar o context window length de cinco para 10; clicar fora",
+            "evidence_refs": ["EV-0056", "EV-0057", "EV-0058", "EV-0059"]
+          },
+          {
+            "order_key": 9,
+            "name": "Adicionar e configurar a Tool de requisição HTTP",
+            "action": "Adicionar a requisição HTTP como Tool e configurar o node com a descrição 'retorna dados sobre locais em Foz do Iguaçu', o método get e a URL; clicar fora e salvar",
+            "evidence_refs": ["EV-0061", "EV-0062", "EV-0063", "EV-0064", "EV-0065"]
+          },
+          {
+            "order_key": 10,
+            "name": "Adicionar nó Evolution para ler a mensagem",
+            "action": "Adicionar nó da Evolution com recurso 'chat' e operação 'ler mensagem', trazer os dados anteriores e preencher nome da instância, contato (número de quem mandou) e ID da mensagem (vindo do set); clicar para testar",
+            "evidence_refs": ["EV-0066", "EV-0067", "EV-0068", "EV-0069"]
+          },
+          {
+            "order_key": 11,
+            "name": "Adicionar nó Evolution para enviar a resposta",
+            "action": "Adicionar outro nó da Evolution com recurso 'mensagem' e operação 'enviar texto', preencher nome da instância a partir do node de dados, número de quem mandou e, no campo mensagem, o output do node do AI Agent",
+            "evidence_refs": ["EV-0070", "EV-0071", "EV-0072", "EV-0073"]
+          },
+          {
+            "order_key": 12,
+            "name": "Configurar opções de envio",
+            "action": "Nas opções configurar o delay em 3000 ms (digitar 3 segundos antes de enviar) e, se desejado, a opção de preview de link",
+            "evidence_refs": ["EV-0073", "EV-0074", "EV-0075"]
+          },
+          {
+            "order_key": 13,
+            "name": "Testar o fluxo pelo WhatsApp",
+            "action": "Clicar para testar e mandar uma mensagem no WhatsApp para o número configurado; depois testar de novo perguntando quais pontos turísticos tem em Foz para verificar se o agente utiliza a ferramenta",
+            "evidence_refs": ["EV-0075", "EV-0076", "EV-0077", "EV-0078", "EV-0079", "EV-0080"]
+          }
+        ],
+        "prerequisites": []
+      }
+    }
+  ]
+}

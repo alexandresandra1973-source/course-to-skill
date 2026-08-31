@@ -1,0 +1,338 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0551",
+  "claim_text": "Signals pop up essentially anytime there is a major increase or decrease in something, covering wins such as conversion rate jumps and losses such as traffic collapse.",
+  "evidence": [
+   {
+    "local_id": "EV-0943",
+    "excerpt": "different channels that are contributing or not contributing to uh the economics. And this is across all of our clients, not just one of them. Our sales, so our team win rate, total deals won, revenue, closed, average sales cycle, and then signals as well. These signals are the ones that I was mentioning pop up essentially anytime that you um you know have a major increase or decrease in"
+   },
+   {
+    "local_id": "EV-0944",
+    "excerpt": "something. So there's wins with conversion rate jumps, but also losses with traffic collapse. Then you have specific client pages. You can actually see their performance, their traffic, you can see the pipeline, you could see um you know rep performance on the account, see who's the best, who's the worst, and then search. Like I I hope it's clear this is like a full product"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0552",
+  "claim_text": "The dashboard can be set up so that it pulls from the database every morning.",
+  "evidence": [
+   {
+    "local_id": "EV-0945",
+    "excerpt": "in and of itself. It is extraordinarily high quality. And um you know this you can set it up so that it pulls from the database every morning. Um, I've even seen a particular uh company, a big company, you know, they make, I don't know, probably somewhere between 20 to $30 million a year, uh, actually take one of these dashboards and just put it up on their televisions. They, instead"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0553",
+  "claim_text": "The speaker has seen a company making roughly 20 to 30 million dollars a year take one of these dashboards and put it on their televisions as a slideshow where metrics populate as the day goes on so reps constantly see them.",
+  "evidence": [
+   {
+    "local_id": "EV-0945",
+    "excerpt": "in and of itself. It is extraordinarily high quality. And um you know this you can set it up so that it pulls from the database every morning. Um, I've even seen a particular uh company, a big company, you know, they make, I don't know, probably somewhere between 20 to $30 million a year, uh, actually take one of these dashboards and just put it up on their televisions. They, instead"
+   },
+   {
+    "local_id": "EV-0946",
+    "excerpt": "of structuring it like this, do so in like a like a slideshow kind of way where the metrics kind of populate as the day goes on and then the reps that are responsible for specific things constantly see it in front of them. I mean, you know, maybe that's a little bit more basic and we've been doing stuff like that for a while, but yeah, you can do you can do fantastic work"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0554",
+  "claim_text": "The terminal-style variant allows an overview then clicking into a specific client and drilling down into channels such as LinkedIn ads, Google ads through search and organic search, and filtering functionality can be added if wanted.",
+  "evidence": [
+   {
+    "local_id": "EV-0947",
+    "excerpt": "with um Fable nowadays and cloud code. This one over here is that terminalbased style one. So, you can go overview, see everything in front of you here. You can then click into a specific client, which is cool. I like the color scheme of this one a lot. You know, you have LinkedIn ads, Google ads through search, organic search. You can drill down like pretty far with this stuff. And obviously, we"
+   },
+   {
+    "local_id": "EV-0948",
+    "excerpt": "can add filtering functionality if we want to. >> [gasps] >> Um, I like that you can also just go 1 2 3 4 5 6. So that's what I'm doing here with that smooth scroll. So maybe you load up, you deliver a presentation using this dashboard, and you go to two, traffic, you go to three, pipeline, for search. This one over here is much more"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0555",
+  "claim_text": "The numbered smooth-scroll navigation supports delivering a presentation with the dashboard by jumping to sections such as traffic, pipeline and search.",
+  "evidence": [
+   {
+    "local_id": "EV-0948",
+    "excerpt": "can add filtering functionality if we want to. >> [gasps] >> Um, I like that you can also just go 1 2 3 4 5 6. So that's what I'm doing here with that smooth scroll. So maybe you load up, you deliver a presentation using this dashboard, and you go to two, traffic, you go to three, pipeline, for search. This one over here is much more"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0556",
+  "claim_text": "Another variant is more punchy and engaging but more like a visual portfolio project, showing client portfolio, per-client growth over time, active, churned, health and MRR on a 30-day timeline that can be changed.",
+  "evidence": [
+   {
+    "local_id": "EV-0949",
+    "excerpt": "punchy and engaging, I'd say, but also more like a visual portfolio project. So here you can see the client portfolio. You can click into the client itself and actually see the growth over time. I'm a little bit zoomed in, so let me just zoom out, make it look a little bit better. That's what we got here. Um, you could see active, churned, health, MR, all of that. And, uh, yeah, I mean, this"
+   },
+   {
+    "local_id": "EV-0950",
+    "excerpt": "one is looking at it, I think, on a 30-day timeline, but yeah, you can obviously change that, too. Pretty clean. Now, the last thing is now that we built a dashboard, we actually need to get this somewhere, and I want to put this on the internet and make this accessible to people that are within my organization. So, how do you do so? There are variety of different ways. Um,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0557",
+  "claim_text": "After building the dashboard it still needs to be deployed somewhere accessible to people within the organization, and there are a variety of different ways to do so.",
+  "evidence": [
+   {
+    "local_id": "EV-0950",
+    "excerpt": "one is looking at it, I think, on a 30-day timeline, but yeah, you can obviously change that, too. Pretty clean. Now, the last thing is now that we built a dashboard, we actually need to get this somewhere, and I want to put this on the internet and make this accessible to people that are within my organization. So, how do you do so? There are variety of different ways. Um,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0558",
+  "claim_text": "The speaker deploys using Netlify, which allows putting static information on the internet for virtually free, with a free plan allowing many websites.",
+  "evidence": [
+   {
+    "local_id": "EV-0951",
+    "excerpt": "the way that I'm going to do it is using a platform called Netlify, which essentially allows me just to put static information on the internet for virtually free. Uh, in my case, I think it is free. I think they have like a free plan where it's free forever. You can deploy however many websites you want. Uh, or maybe you can do 300 websites a month or something like that."
+   },
+   {
+    "local_id": "EV-0952",
+    "excerpt": "But still way more websites than I ever possibly need. So, I already have the site. I'm just going to click login, but you guys can obviously um, you know, sign up to a new one. Once in, we need our Netlefi remote MCP server. So, similar to how we did before, I'm now going to go up here, go to settings. I'll then go to connectors, add add custom connector, add this, and then I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0559",
+  "claim_text": "To connect the Netlify remote MCP server you go to settings, then connectors, add custom connector, paste the URL, name it, click add, then check the connection and authorize it so it has access to client projects.",
+  "evidence": [
+   {
+    "local_id": "EV-0952",
+    "excerpt": "But still way more websites than I ever possibly need. So, I already have the site. I'm just going to click login, but you guys can obviously um, you know, sign up to a new one. Once in, we need our Netlefi remote MCP server. So, similar to how we did before, I'm now going to go up here, go to settings. I'll then go to connectors, add add custom connector, add this, and then I'm"
+   },
+   {
+    "local_id": "EV-0953",
+    "excerpt": "going to call this netifi. And if it starts looking weird like that, you just kind of pull this back and just do um you don't add the npx sections here. All you need is this. Once you're done, click add. It'll then check the connection, ask you to connect to it. So, that's what I'll do here. And now I'll authorize this so it has access to my client projects now. And I can go"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0560",
+  "claim_text": "When adding the custom connector you do not add the npx sections; all that is needed is the URL itself.",
+  "evidence": [
+   {
+    "local_id": "EV-0953",
+    "excerpt": "going to call this netifi. And if it starts looking weird like that, you just kind of pull this back and just do um you don't add the npx sections here. All you need is this. Once you're done, click add. It'll then check the connection, ask you to connect to it. So, that's what I'll do here. And now I'll authorize this so it has access to my client projects now. And I can go"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0561",
+  "claim_text": "The Netlify MCP server exposes capabilities such as importing a cloud design from a URL, setting up a new job, and creating, deploying and managing websites.",
+  "evidence": [
+   {
+    "local_id": "EV-0954",
+    "excerpt": "back and so here are all the things that it can do. It can uh I don't know import a cloud design from a URL. It can, you know, set up a new job, create, deploy, and manage my websites. And uh that's virtually what I want. So yeah, as I was doing this, it uh said usage limit was reached. So I did go and I bought I think another $15 of it or something like that. Uh keep in mind that you guys"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0562",
+  "claim_text": "The speaker hit the usage limit and bought about another $15 of credit, but notes viewers do not have to do this because the probability they would breach usage limits as quickly is quite low, given the speaker made a 5-hour course in basically a day.",
+  "evidence": [
+   {
+    "local_id": "EV-0954",
+    "excerpt": "back and so here are all the things that it can do. It can uh I don't know import a cloud design from a URL. It can, you know, set up a new job, create, deploy, and manage my websites. And uh that's virtually what I want. So yeah, as I was doing this, it uh said usage limit was reached. So I did go and I bought I think another $15 of it or something like that. Uh keep in mind that you guys"
+   },
+   {
+    "local_id": "EV-0955",
+    "excerpt": "don't have to do this. I have just been making like a 5 hour course in basically a day. So 5 hours of a probably much longer course in basically a day. So, the probability that you guys yourselves would breach these loot usage limits as quickly as I did quite low. Um, but what I'll do here is uh just voice discate. My goal is I want to get this on the internet. My favorite was V3. I just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0563",
+  "claim_text": "The deployment instruction given by voice was to add and upload the favorite variant V3 to Netlify and password protect it with the password 12345.",
+  "evidence": [
+   {
+    "local_id": "EV-0955",
+    "excerpt": "don't have to do this. I have just been making like a 5 hour course in basically a day. So 5 hours of a probably much longer course in basically a day. So, the probability that you guys yourselves would breach these loot usage limits as quickly as I did quite low. Um, but what I'll do here is uh just voice discate. My goal is I want to get this on the internet. My favorite was V3. I just"
+   },
+   {
+    "local_id": "EV-0956",
+    "excerpt": "connected the Netlefi MCP. I would like you to add this and upload this to Netlifi and then password protect it. Make the password 1 2 3 4 5. Okay. So, here is the finished app. Uh, it has both a light mode and a dark mode. this is a great internal thing to be able to send to you or your clients. Uh I'm sure you guys could see how easy it would be to just gate it so that this is just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0564",
+  "claim_text": "The finished app has both a light mode and a dark mode and is a great internal thing to send to you or your clients.",
+  "evidence": [
+   {
+    "local_id": "EV-0956",
+    "excerpt": "connected the Netlefi MCP. I would like you to add this and upload this to Netlifi and then password protect it. Make the password 1 2 3 4 5. Okay. So, here is the finished app. Uh, it has both a light mode and a dark mode. this is a great internal thing to be able to send to you or your clients. Uh I'm sure you guys could see how easy it would be to just gate it so that this is just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0565",
+  "claim_text": "It would be easy to gate the dashboard for one specific client, for example using a URL parameter such as client equals X with a special password per client.",
+  "evidence": [
+   {
+    "local_id": "EV-0956",
+    "excerpt": "connected the Netlefi MCP. I would like you to add this and upload this to Netlifi and then password protect it. Make the password 1 2 3 4 5. Okay. So, here is the finished app. Uh, it has both a light mode and a dark mode. this is a great internal thing to be able to send to you or your clients. Uh I'm sure you guys could see how easy it would be to just gate it so that this is just"
+   },
+   {
+    "local_id": "EV-0957",
+    "excerpt": "like for one specific client. Maybe you'd use a URL parameter or something like that like you know client equals X and maybe there'd be a special password for them, a different password for somebody else. What we just did is we we basically recreated like agency analytics or another one of those sorts of marketing uh visualization softwares and we did so for realistically about"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0566",
+  "claim_text": "The build essentially recreated marketing visualization software like agency analytics for realistically about $15 in tokens, with far more data than those tools would hold, over 50,000 to maybe 100,000 rows.",
+  "evidence": [
+   {
+    "local_id": "EV-0957",
+    "excerpt": "like for one specific client. Maybe you'd use a URL parameter or something like that like you know client equals X and maybe there'd be a special password for them, a different password for somebody else. What we just did is we we basically recreated like agency analytics or another one of those sorts of marketing uh visualization softwares and we did so for realistically about"
+   },
+   {
+    "local_id": "EV-0958",
+    "excerpt": "like $15 in tokens. Um, but I'll be honest, this is way more data than you would ever ever have on any one of those. You're not just dumping the stuff into a Google sheet here. This is like, as you guys saw, over 50,000, maybe a 100,000 rows of data. So, you also have like a little client health score on the uh side here with like a health thing that has been generated. Um, you could"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0567",
+  "claim_text": "The final dashboard includes a generated client health score, the client's pipeline and funnel with drop-off points flagged as warning or dead zone, and CPL filtering showing a bump from about $100 average to about $1,100.",
+  "evidence": [
+   {
+    "local_id": "EV-0958",
+    "excerpt": "like $15 in tokens. Um, but I'll be honest, this is way more data than you would ever ever have on any one of those. You're not just dumping the stuff into a Google sheet here. This is like, as you guys saw, over 50,000, maybe a 100,000 rows of data. So, you also have like a little client health score on the uh side here with like a health thing that has been generated. Um, you could"
+   },
+   {
+    "local_id": "EV-0959",
+    "excerpt": "see, you know, their their whole pipeline, their funnel, and where they dropped off. So, this would be considered like a warning or a dead zone. And then you can also filter based off of CPL. You can also see there's a big bump in CPL here from an average of about 100 bucks to literally like 1,100. And that whole idea is just so that you guys could see like, hey, you know,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0568",
+  "claim_text": "The signals page shows Torque Auto Group / CL10 as critical on the week of March 9th, with three leads versus its usual 58, alongside CPC spikes.",
+  "evidence": [
+   {
+    "local_id": "EV-0959",
+    "excerpt": "see, you know, their their whole pipeline, their funnel, and where they dropped off. So, this would be considered like a warning or a dead zone. And then you can also filter based off of CPL. You can also see there's a big bump in CPL here from an average of about 100 bucks to literally like 1,100. And that whole idea is just so that you guys could see like, hey, you know,"
+   },
+   {
+    "local_id": "EV-0960",
+    "excerpt": "what's going on? Oh, there's some sort of alert basis for this client. This client is, uh, you know, suffering for whatever reason. And so, uh, let me see which one was that. Torque Auto Group with CL10. If we go back to signals here, you can see CL10 on the week of March the 9th, um, was critical. It got three leads versus its usual 58. uh you know and there were also CPC spikes for"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0569",
+  "claim_text": "The follow-up automation is schedule driven rather than event driven, using the same tools used for speed to lead, with the cadence decided by the builder.",
+  "evidence": [
+   {
+    "local_id": "EV-0964",
+    "excerpt": "because I want you to understand and be able to learn. Um, we still got something extraordinarily economically valuable done in just half an hour. And that takes me to that middle of funnel data collection and tracking item now done. All we really have left on the project side is a automation of highquality follow-ups again via email and SMS. We'll use the same um tools"
+   },
+   {
+    "local_id": "EV-0965",
+    "excerpt": "that we used back here to do our speed delete. It's just now instead of it being event driven, it's going to be schedule driven. We're basically going to come up with the cadence by which we are following up entirely on our own. And I'm going to show you guys that tomorrow. Okay, so today we're going to take everything that we learned in the previous set of builds and then apply it"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0570",
+  "claim_text": "Most people are not following up on their invoices anywhere near as robustly as they should, and following up more will usually make significantly more money; the speaker claims you can genuinely add 20 to 30% of the revenue of your organization simply by solidifying your follow-ups.",
+  "evidence": [
+   {
+    "local_id": "EV-0974",
+    "excerpt": "reality is most people are not following up on their invoices anywhere near as robustly as they should. Also, people aren't checking in with prospects for any uh part of the marketing stack, whether it is beginning the business relationship or it's even just like, \"Hey, are you making it to the to the meeting that we booked last week?\" Um, so if you guys just follow up more,"
+   },
+   {
+    "local_id": "EV-0975",
+    "excerpt": "you'll usually make significantly more money. And I don't mean to say that you're going to like, you know, make 100 times the money or anything like that, but you can genuinely add 20 to 30% of the revenue of your organization um, simply by solidifying your follow-ups. And you can kind of think about this similarly to how we were thinking about speed to lead before. The whole promise"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0571",
+  "claim_text": "The high-level flow is: query the CRM, read all historical conversations with the prospect in email, check trigger conditions, pick a draft from a pre-created template library, then send, repeating the process.",
+  "evidence": [
+   {
+    "local_id": "EV-0981",
+    "excerpt": "tremendous uh things for companies. Okay. Anyway, so yeah, how does this work? We query the the CRM and basically we'll read through all the conversations between me and the prospect historically within my um um email. Then we'll check trigger conditions. So trigger conditions are just a set of things that we're going to put up like, you know, does this person actually need a nudge?"
+   },
+   {
+    "local_id": "EV-0982",
+    "excerpt": "Have they given us all the information that uh we need in order to determine that they're going to pay or they're not going to pay? What is outstanding? Then we'll just pick and choose a draft from a template library that we've created ahead of time. And then we'll send. And so we're just going to repeat this process over and over and over and over again. Um on my case, I like doing it on"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0572",
+  "claim_text": "The speaker likes running the follow-up system on a daily schedule, once a day, using a loop that checks who still needs a nudge.",
+  "evidence": [
+   {
+    "local_id": "EV-0982",
+    "excerpt": "Have they given us all the information that uh we need in order to determine that they're going to pay or they're not going to pay? What is outstanding? Then we'll just pick and choose a draft from a template library that we've created ahead of time. And then we'll send. And so we're just going to repeat this process over and over and over and over again. Um on my case, I like doing it on"
+   },
+   {
+    "local_id": "EV-0983",
+    "excerpt": "a daily schedule. So once a day, we're going to run a system that just loops this over. And as I'm sure you guys can imagine, we are literally going to use a loop for this. And in that way, we'll just check to see, you know, hey, who still needs a nudge? Who still needs a nudge? Who still needs a nudge? Because we're using a template library instead of just raw dogging it like most people"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0573",
+  "claim_text": "Using a template library instead of raw-dogging it with AI tends to produce higher-quality follow-ups closer to your tone of voice and far fewer catastrophic screw-ups.",
+  "evidence": [
+   {
+    "local_id": "EV-0983",
+    "excerpt": "a daily schedule. So once a day, we're going to run a system that just loops this over. And as I'm sure you guys can imagine, we are literally going to use a loop for this. And in that way, we'll just check to see, you know, hey, who still needs a nudge? Who still needs a nudge? Who still needs a nudge? Because we're using a template library instead of just raw dogging it like most people"
+   },
+   {
+    "local_id": "EV-0984",
+    "excerpt": "will do with AI. The quality of the follow-ups tend to be a lot higher and they're closer to your tone of voice, too. So you'll find there are way fewer catastrophic screw-ups because you know the AI is just pulling from like your TVO all the time. And then you also get to send the cadence of how often you want. So for instance, let's say um I don't know if they've gone quiet and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0574",
+  "claim_text": "Example cadence conditions: if no reply 7 days after the proposal, send a brief nudge picked from the nudge pool; if they ghosted a question, send a different nudge; if they asked for later and it is now that time, follow up then; if there is a warm signal such as opening the last email many times, send a nudge.",
+  "evidence": [
+   {
+    "local_id": "EV-0984",
+    "excerpt": "will do with AI. The quality of the follow-ups tend to be a lot higher and they're closer to your tone of voice, too. So you'll find there are way fewer catastrophic screw-ups because you know the AI is just pulling from like your TVO all the time. And then you also get to send the cadence of how often you want. So for instance, let's say um I don't know if they've gone quiet and"
+   },
+   {
+    "local_id": "EV-0985",
+    "excerpt": "there's no reply 7 days after the proposal, you can actually check and see, okay, have they replied in the last 7 days? If they haven't, you know, sent any emails or something, then and only then I will send a brief nudge and I'm going to pick from my nudge pool. Um if they ghosted the question, we asked them and they didn't answer, then I'll send a nudge. the nudge will be a little bit"
+   },
+   {
+    "local_id": "EV-0986",
+    "excerpt": "different because now it's, you know, to do with them ghosting the question. Hey Pete, let me know if there's anything more I can clarify on this. Thank you. If they ask for later, okay, they said follow up next month and it is next month, then we will actually catch that and then we'll follow up then. Then if there's a warm signal, they open the last email a bunch of times, we can send"
+   },
+   {
+    "local_id": "EV-0987",
+    "excerpt": "them a nudge, too. These are all just ideas for how detailed you can make the system. Um, and yeah, I think I've just more or less given you guys everything that you need in order to make it work. Um, you can make the template libraries as complicated as you want. Um, so yeah, I'm going to do pretty simple ones to start, but hopefully you guys see just how you could evolve a system like this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0575",
+  "claim_text": "ClickUp is used as the CRM but it is one of many CRMs; the process is quite similar on Notion, Asana or Pipedrive, and you either connect to the MCP or to the API, with MCP being preferential.",
+  "evidence": [
+   {
+    "local_id": "EV-0988",
+    "excerpt": "and turn it into somewhere really cool. Okay, so what do we actually do? Well, the first thing we need to do is we actually need to connect this CRM to Claude. And as mentioned, I'm using ClickUp, which is one of many CRM that you could use. Uh, you guys might be doing this in Notion, might be doing this in ASA, you might be doing this in Pipe Drive, you know, whatever it is"
+   },
+   {
+    "local_id": "EV-0989",
+    "excerpt": "that you're using. I want you to know that's okay. Um, processes are going to be quite similar. either you're going to connect to the MCP or you're going to connect to the API. And I'm going to try connecting to the MCP since obviously that's preferential. So, first thing I'm going to do, and uh this is just what I've gotten in the habit of doing with all my automations, is I'm going to go"
+   }
+  ]
+ }
+]

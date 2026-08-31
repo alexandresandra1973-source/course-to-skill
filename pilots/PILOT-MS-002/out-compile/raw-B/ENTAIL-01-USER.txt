@@ -1,0 +1,366 @@
+source_id: MS002-SRC-B
+ITENS:
+[
+ {
+  "claim_id": "CL-0001",
+  "claim_text": "O Cloud Code atua como orquestrador: é com ele que se conversa e a quem se pede para fazer determinadas ações.",
+  "evidence": [
+   {
+    "local_id": "EV-0005",
+    "excerpt": "de grupos, né? Como que vai funcionar. Então, primeiro de tudo, Cloud Code, né? Ele que vai ser o orquestrador, é com ele que eu vou estar conversando, eu vou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0002",
+  "claim_text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp.",
+  "evidence": [
+   {
+    "local_id": "EV-0006",
+    "excerpt": "pedir para ele fazer determinadas ações. A partir disso, o Cloud Code ele vai se conectar via API com o Evolution API, que é o API não oficial do WhatsApp, ou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0003",
+  "claim_text": "Através do Evolution API conecta-se o número do WhatsApp como se fosse um WhatsApp Web; por ser API não oficial, não se paga pela API oficial.",
+  "evidence": [
+   {
+    "local_id": "EV-0007",
+    "excerpt": "seja, através dele, a gente vai conseguir estar conectando o nosso número do WhatsApp como se fosse um WhatsApp Web, tá? Então, é API não"
+   },
+   {
+    "local_id": "EV-0008",
+    "excerpt": "oficial, ou seja, tu não vai pagar por API oficial. E após escanear lá, o Cloud Code vai ter acesso ao nosso WhatsApp de acordo com as coisas que a gente for"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0004",
+  "claim_text": "Após escanear, o Cloud Code passa a ter acesso ao WhatsApp de acordo com as permissões dadas e o que for pedido.",
+  "evidence": [
+   {
+    "local_id": "EV-0008",
+    "excerpt": "oficial, ou seja, tu não vai pagar por API oficial. E após escanear lá, o Cloud Code vai ter acesso ao nosso WhatsApp de acordo com as coisas que a gente for"
+   },
+   {
+    "local_id": "EV-0009",
+    "excerpt": "dando permissão e pedindo para que ele faça. O Evolution API, ele precisa ser hospedado em algum lugar. Ele é gratuito, tá? Tu não paga por nada,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0005",
+  "claim_text": "O Evolution API é gratuito e open source, mas precisa ser hospedado em uma VPS para ficar funcionando 24 horas por dia.",
+  "evidence": [
+   {
+    "local_id": "EV-0009",
+    "excerpt": "dando permissão e pedindo para que ele faça. O Evolution API, ele precisa ser hospedado em algum lugar. Ele é gratuito, tá? Tu não paga por nada,"
+   },
+   {
+    "local_id": "EV-0010",
+    "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0006",
+  "claim_text": "A VPS utilizada é a da HostGator, que já possui a função de pré-instalar o Evolution API: ao contratar escolhendo a opção Evolution API, ele já vem instalado, sem necessidade de configuração.",
+  "evidence": [
+   {
+    "local_id": "EV-0010",
+    "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da"
+   },
+   {
+    "local_id": "EV-0011",
+    "excerpt": "HostGator. Já tem lá a função de pré-instalar, tá? Então, quando você for contratar, já pode ir na opção de Evolution API e automaticamente, assim"
+   },
+   {
+    "local_id": "EV-0012",
+    "excerpt": "que você contratar, já vai ter instalada, é só acessar e pronto, não tem que ficar fazendo configuração, mexendo com outras coisas não, tá? A"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0007",
+  "claim_text": "O vídeo trabalha em quatro etapas, seguidas passo a passo, para funcionar sem problema.",
+  "evidence": [
+   {
+    "local_id": "EV-0015",
+    "excerpt": "relatórios, coisas do tipo. E aqui no vídeo vamos estar trabalhando em quatro etapas, tá? Vamos seguir aqui esses quatro pontos aqui passo a passo, que é"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0008",
+  "claim_text": "O primeiro passo é instalar e contratar a VPS com Evolution API.",
+  "evidence": [
+   {
+    "local_id": "EV-0016",
+    "excerpt": "para estar funcionando sem problema. E o primeiro passo é instalar e contratar a VPS com Evolution API. Então, bora lá. Você vai acessar o link que eu vou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0009",
+  "claim_text": "O plano anunciado indica Evolution pré-instalada e cabe até 20 números de WhatsApp, dependendo da forma de utilização.",
+  "evidence": [
+   {
+    "local_id": "EV-0020",
+    "excerpt": "observar aqui, ó, aqui ele já fala, ó: \"Evolution pré-instalada e cabe até 20 números de WhatsApp\". Então, você consegue estar conectando até 20 números"
+   },
+   {
+    "local_id": "EV-0021",
+    "excerpt": "de WhatsApp sem problema, tá? Claro, depende também da forma que tu vai estar utilizando. Se você usa vai usar muito, muito, muito, já é legal tu pegar um um"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0010",
+  "claim_text": "Se o uso for muito intenso, é recomendável pegar uma peça melhor, por exemplo a NVMe quatro, que para esse tipo de caso é o padrão.",
+  "evidence": [
+   {
+    "local_id": "EV-0021",
+    "excerpt": "de WhatsApp sem problema, tá? Claro, depende também da forma que tu vai estar utilizando. Se você usa vai usar muito, muito, muito, já é legal tu pegar um um"
+   },
+   {
+    "local_id": "EV-0022",
+    "excerpt": "peça melhor, por exemplo, a NVMe quatro para esse tipo de caso é o ali o o padrão, certo? Enfim, tu vai escolher aqui o plano, por exemplo, pega aqui o"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0011",
+  "claim_text": "O servidor deve ser mantido em São Paulo, que é o mais próximo no Brasil; quem estiver fora do Brasil deve verificar se o do México é mais próximo.",
+  "evidence": [
+   {
+    "local_id": "EV-0026",
+    "excerpt": "tá? O servidor tu você mantém aqui São Paulo, que é o mais próximo, tem no Brasil, né? Se tu tiver fora do Brasil, tu vê aqui se o do México aqui ele chega"
+   },
+   {
+    "local_id": "EV-0027",
+    "excerpt": "a ser mais mais próximo. Então, conferiu, vem aqui para continuar para verificação, aí aqui tu vai colocar aqui sua conta aqui da HostGator, né? Pode"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0012",
+  "claim_text": "Antes de continuar para verificação, deve-se conferir no carrinho se o plano está correto e se consta Evolution API.",
+  "evidence": [
+   {
+    "local_id": "EV-0025",
+    "excerpt": "em continuar para carrinho, aqui primeiro você vai só conferir se tá tudo certo, né? Se realmente tá o plano correto, se tá aqui, ó, Evolution API,"
+   },
+   {
+    "local_id": "EV-0027",
+    "excerpt": "a ser mais mais próximo. Então, conferiu, vem aqui para continuar para verificação, aí aqui tu vai colocar aqui sua conta aqui da HostGator, né? Pode"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0013",
+  "claim_text": "Após o pagamento, chega um e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution.",
+  "evidence": [
+   {
+    "local_id": "EV-0030",
+    "excerpt": "clica em realizar pagamento. E aí, depois que realizar o pagamento, você vai acessar lá o painel. Você recebe um e-mail dessa forma aqui,"
+   },
+   {
+    "local_id": "EV-0031",
+    "excerpt": "tá? Da HostGator, com aparecendo aqui dados de acesso ao seu VPS. Pode clicar aqui, já vai direto pro portal e tem aqui o token do seu Evolution, tá? Cara,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0014",
+  "claim_text": "O token do Evolution deve ser copiado e salvo em algum local, porque será necessário depois.",
+  "evidence": [
+   {
+    "local_id": "EV-0031",
+    "excerpt": "tá? Da HostGator, com aparecendo aqui dados de acesso ao seu VPS. Pode clicar aqui, já vai direto pro portal e tem aqui o token do seu Evolution, tá? Cara,"
+   },
+   {
+    "local_id": "EV-0032",
+    "excerpt": "copia isso aqui, ó, e salva em algum local, beleza? Você vai precisar dele. Vocês vão entender. Aí você vem aqui, ó, em VPS e dedicados, né? Que já entrou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0015",
+  "claim_text": "No portal, em VPS e dedicados, aparece o servidor e o acesso rápido permite abrir o console ou clicar direto no Evolution API; em gerenciar veem-se mais detalhes da VPS.",
+  "evidence": [
+   {
+    "local_id": "EV-0032",
+    "excerpt": "copia isso aqui, ó, e salva em algum local, beleza? Você vai precisar dele. Vocês vão entender. Aí você vem aqui, ó, em VPS e dedicados, né? Que já entrou"
+   },
+   {
+    "local_id": "EV-0033",
+    "excerpt": "aqui no portal. E aqui você vai ver o seu servidor. No caso, eu tenho esse daqui, né? Ele tá online. E aqui em acesso rápido, ó, observe que aqui você"
+   },
+   {
+    "local_id": "EV-0034",
+    "excerpt": "consegue abrir o console ou clicar aqui no Evolution API direto. Se você vem aqui em gerenciar,"
+   },
+   {
+    "local_id": "EV-0035",
+    "excerpt": "você consegue ver mais detalhes da sua VPS aqui, tá? Mas aqui nesse caso, você vai clicar aqui em Evolution API. Daí ele vai abrir essa página aqui, tá? Vai"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0016",
+  "claim_text": "A página que aparece ao abrir o Evolution API parece um erro, mas não é: é preciso digitar barra manager no final para acessar de fato.",
+  "evidence": [
+   {
+    "local_id": "EV-0035",
+    "excerpt": "você consegue ver mais detalhes da sua VPS aqui, tá? Mas aqui nesse caso, você vai clicar aqui em Evolution API. Daí ele vai abrir essa página aqui, tá? Vai"
+   },
+   {
+    "local_id": "EV-0036",
+    "excerpt": "aparecer esse, como se fosse um erro, mas isso aqui não é erro, tá? Isso aqui é porque você deve, ó, digitar barra manager no final. Aí você vai, de fato,"
+   },
+   {
+    "local_id": "EV-0037",
+    "excerpt": "acessar aqui, tá? No meu caso aqui, tá conectado as instâncias aqui porque eu tava gravando um vídeo pro YouTube, acabou dando um problema aqui com o"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0017",
+  "claim_text": "No primeiro acesso ao manager, deve-se colar a chave de API global que está no e-mail (Gmail) e clicar em conectar.",
+  "evidence": [
+   {
+    "local_id": "EV-0038",
+    "excerpt": "áudio, tive que regravar. Então, no caso de vocês vai aparecer assim, ó, dessa forma. Seu primeiro acesso. E aqui tu vai colocar aquela chave de API global"
+   },
+   {
+    "local_id": "EV-0039",
+    "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0018",
+  "claim_text": "A próxima etapa (segundo passo) é criar uma instância e conectar o número do WhatsApp.",
+  "evidence": [
+   {
+    "local_id": "EV-0039",
+    "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu"
+   },
+   {
+    "local_id": "EV-0040",
+    "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0019",
+  "claim_text": "Para criar a instância, clica-se em instância, coloca-se um nome e salva; ela aparece como desconectada.",
+  "evidence": [
+   {
+    "local_id": "EV-0040",
+    "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância."
+   },
+   {
+    "local_id": "EV-0041",
+    "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0020",
+  "claim_text": "Com a instância desconectada, vai-se em configurações e gerar QR Code para escanear pelo celular como se fosse um WhatsApp Web.",
+  "evidence": [
+   {
+    "local_id": "EV-0041",
+    "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,"
+   },
+   {
+    "local_id": "EV-0042",
+    "excerpt": "vocês vão vir aqui em configurações e gerar QR Code. Vai aparecer o QR Code aqui para que vocês possam tá escaneando pelo seu celular como se fosse um"
+   },
+   {
+    "local_id": "EV-0043",
+    "excerpt": "WhatsApp Web. Ó, se for iPhone, você vem aqui em configurações, aí vem aqui em dispositivos conectados,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0021",
+  "claim_text": "No iPhone, vai-se em configurações, dispositivos conectados, conectar dispositivo e escaneia-se o QR Code; no Android é apresentado como provavelmente o mesmo procedimento.",
+  "evidence": [
+   {
+    "local_id": "EV-0043",
+    "excerpt": "WhatsApp Web. Ó, se for iPhone, você vem aqui em configurações, aí vem aqui em dispositivos conectados,"
+   },
+   {
+    "local_id": "EV-0044",
+    "excerpt": "eu acho que no Android é a mesma coisa. E aí você clica em conectar dispositivo e escaneia aqui. Tá aqui conectando, vamos esperar aqui pelo celular, tá? Tem"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0022",
+  "claim_text": "Após conectar, aparecem nome, foto de perfil e número de telefone, indicando que o segundo passo está completo.",
+  "evidence": [
+   {
+    "local_id": "EV-0045",
+    "excerpt": "que tá conectado no celular aqui. Pronto, ele perguntou aqui o nome, vou colocar aqui só YouTube aqui mesmo no celular. Se eu sair daqui, ó, fechar,"
+   },
+   {
+    "local_id": "EV-0046",
+    "excerpt": "pronto, já apareceu ali o meu nome, foto de perfil e o número de telefone. Pronto, então tá conectado já, beleza? Segundo passo tá completo. O próximo"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0023",
+  "claim_text": "O próximo passo é ir para o VS Code e configurar o Cloud Code, dando acesso do Evolution para o Cloud Code e passando documentações para ele entender como funciona a API do Evolution.",
+  "evidence": [
+   {
+    "local_id": "EV-0047",
+    "excerpt": "passo aqui é ir para o VS Code e configurar o Cloud Code, tá? Porque agora a gente já tá com a VPS Evolution e o número lá tudo conectado,"
+   },
+   {
+    "local_id": "EV-0048",
+    "excerpt": "funcionando show de bola. Agora a gente quer dar acesso desse local, né, do Evolution para o Cloud Code, além de passar para ele algumas documentações"
+   },
+   {
+    "local_id": "EV-0049",
+    "excerpt": "para ele entender exatamente como que funciona a API do Evolution. Vou mostrar para vocês. Pausa rápida. Se esse vídeo está te ajudando, então presta atenção."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0024",
+  "claim_text": "Com o Cloud Code tendo acesso ao WhatsApp, é possível acessar grupos, verificar membros, editar o grupo, enviar mensagens e fazer relatórios.",
+  "evidence": [
+   {
+    "local_id": "EV-0013",
+    "excerpt": "ideia aqui é ser ser simplificado. E a partir disso, seu Cloud Code vai ter acesso ao WhatsApp, tá? Então, ele vai conseguir acessar grupos, enviar"
+   },
+   {
+    "local_id": "EV-0014",
+    "excerpt": "mensagens, coisas do tipo, né? Aí aqui tá o final, que seria realmente acessar os grupos, verificar membros, é editar o grupo, enviar mensagens, fazer"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0025",
+  "claim_text": "Com o método ensinado é possível criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros.",
+  "evidence": [
+   {
+    "local_id": "EV-0001",
+    "excerpt": "Nesse vídeo, eu vou mostrar para vocês como vocês podem estar gerenciando seus vários grupos de WhatsApp utilizando o Cloud Code. Seja criar vários grupos em"
+   },
+   {
+    "local_id": "EV-0002",
+    "excerpt": "massa, é mudar foto de perfil, botar mudando a descrição desse grupo, adicionando pessoas, enviando uma mensagem para os grupos, dando"
+   },
+   {
+    "local_id": "EV-0003",
+    "excerpt": "relatórios de membros desse grupo também. Então, tudo isso você consegue estar fazendo com esse método que eu vou te ensinar nesse vídeo. Então, fica até"
+   }
+  ]
+ }
+]

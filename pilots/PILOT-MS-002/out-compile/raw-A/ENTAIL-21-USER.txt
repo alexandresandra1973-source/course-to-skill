@@ -1,0 +1,342 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0501",
+  "claim_text": "Instead of a monthly report day where data is manually imported from many places into spreadsheets and reports, the approach is a dynamic dashboard that does the ingestion automatically and shows data constantly.",
+  "evidence": [
+   {
+    "local_id": "EV-0870",
+    "excerpt": "going to get out of like the super disconnected dashboards and build like a single source of truth. Um what's really cool is you know back in the old days and I say this as somebody that used to run a marketing agency. It was our primary deliverable. Um you know we'd have like a report day once a month and uh the whole idea was you know at the end of the month we'd go through all our"
+   },
+   {
+    "local_id": "EV-0871",
+    "excerpt": "spreadsheets and stuff like that and put together really nice reports send those reports to the clients and the reports are almost like sales mechanisms. You know we we we try and tune them so that they look as sexy as possible. try and get the client to, you know, review it and be like, \"Wow, I'm really getting good return on investment and stuff like that.\" Um, it was a massive pain in the"
+   },
+   {
+    "local_id": "EV-0872",
+    "excerpt": "butt to import data from all these different places. But now the idea is we're not necessarily going to have like a report day. It's just going to be a dynamic dashboard that does the ingestion automatically and then, you know, shows the data um pretty constantly. And I think you guys realistically have everything that you need in order to do that, right? Like"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0502",
+  "claim_text": "The dashboard can be extended with AI questionnaire functionality so that the user or a client can query an AI locally on the dashboard about the data.",
+  "evidence": [
+   {
+    "local_id": "EV-0873",
+    "excerpt": "we've now built loops. We know how to build routines. We know how to build systems that can essentially log into services and grab data without us. So, how far of like a leap is it realistically to like have an online asset that is automatically updated? It's really not that big of a leap at all. Um, in addition, I think would be really cool, at least for us, is to take"
+   },
+   {
+    "local_id": "EV-0874",
+    "excerpt": "the dashboard that we're building and then provide some sort of like AI questionnaire functionality where not only can we like, you know, talk to our AI about it, but maybe, you know, a client or something can come in on a dashboard and then query an AI maybe locally on the dashboard to tell us stuff about it. So, uh, I'm going to extend our own little marketing"
+   },
+   {
+    "local_id": "EV-0875",
+    "excerpt": "dashboard, which is going to look much, much better, into something like that. Make it a little bit more dynamic in that way. We'll have basically like an like an like an AI assistant. I'm capable of analyzing stuff. The actual flow itself up here is going to be fairly straightforward. Um, we're just going to build dashboards for a client based off of the information that, uh,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0503",
+  "claim_text": "The flow is: build dashboards for a client based on the KPIs of interest being tracked, then read all the API docs on all the platforms, write the tests and the queries, and then generate a dashboard page which is refreshed by a cloud routine.",
+  "evidence": [
+   {
+    "local_id": "EV-0875",
+    "excerpt": "dashboard, which is going to look much, much better, into something like that. Make it a little bit more dynamic in that way. We'll have basically like an like an like an AI assistant. I'm capable of analyzing stuff. The actual flow itself up here is going to be fairly straightforward. Um, we're just going to build dashboards for a client based off of the information that, uh,"
+   },
+   {
+    "local_id": "EV-0876",
+    "excerpt": "we're tracking for them. So, all the KPIs of interest, you know, like meta ads, uh, total number of sessions of their website and stuff like that. It'll then read all the API docs on all the platforms, write the tests and the queries and then generate a dashboard page which is refreshed by a cloud routine. And yeah, I mean I don't want to make the whole basis of you know this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0504",
+  "claim_text": "Step one is assembling your data, from a variety of sources such as Facebook ads, website visits, sales data, salesperson logs and email stats, combined into Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0877",
+    "excerpt": "part just a bunch of AI generated visuals. Hopefully you guys understand we are going to go from super sad frustrated guy over here on the left to super cool chill guy over here drinking his coffee uh with a cute little robot pointing at it. Okay, so that's the idea. How do we actually do so? Well, step one realistically is like assembling your data. Okay. So, um let"
+   },
+   {
+    "local_id": "EV-0878",
+    "excerpt": "me just move this a little bit over here otherwise it starts getting kind of laggy. Step one is assembling your data. So, I am going to use default sort of templated data here. Um our data is going to include a variety of sources. We're going to have like hypothetical Facebook ads. We're going to have hypothetical like website visits. Um we're going to have hypothetical sales"
+   },
+   {
+    "local_id": "EV-0879",
+    "excerpt": "data as well. Um, I know it's not marketing data necessarily, but we're going to have like logs from salespeople. I think we'll even have like email stats and we're going to combine all of this into um, you know, claude as mentioned. Worth noting mine is not going to exist on the cloud. Mine is going to exist in basically like a big CSV. CSV just stands for"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0505",
+  "claim_text": "The speaker uses fake/templated data dumped into CSV files pretending to be databases, because his real stats are proprietary and private.",
+  "evidence": [
+   {
+    "local_id": "EV-0879",
+    "excerpt": "data as well. Um, I know it's not marketing data necessarily, but we're going to have like logs from salespeople. I think we'll even have like email stats and we're going to combine all of this into um, you know, claude as mentioned. Worth noting mine is not going to exist on the cloud. Mine is going to exist in basically like a big CSV. CSV just stands for"
+   },
+   {
+    "local_id": "EV-0880",
+    "excerpt": "commaepparated value. It's basically like a Google sheet. And the reason why is because I I just don't want to actually pull all of my stats for you guys because a lot of that stuff uh as we saw with the kit marketing emails is sort of proprietary and it's also sort of private. So what I've done is I've just dumped in a bunch of fake data to you know a bunch of files that will just"
+   },
+   {
+    "local_id": "EV-0881",
+    "excerpt": "pretend to be our databases. Um now and then once we've assembled the data we're then going to visualize it. Um and what's really cool is we're actually going to generate like I don't know five or six different variants. Uh, and so, you know, I think the way most people do this is they'll just try and oneshot it and then they end up with like a really ugly design like this,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0506",
+  "claim_text": "Instead of one-shotting the design (which ends up with an ugly, inefficient layout), generate five or six different variants, pick one you like, have that variant generate further variants, pick again, and repeat for about three iteration periods to find the best dashboard.",
+  "evidence": [
+   {
+    "local_id": "EV-0881",
+    "excerpt": "pretend to be our databases. Um now and then once we've assembled the data we're then going to visualize it. Um and what's really cool is we're actually going to generate like I don't know five or six different variants. Uh, and so, you know, I think the way most people do this is they'll just try and oneshot it and then they end up with like a really ugly design like this,"
+   },
+   {
+    "local_id": "EV-0882",
+    "excerpt": "right? Um, I don't know. I just I don't think this is a very efficient layout. I don't think this is very good for a client. I think you can do way better than that. So, what I'm going to do is I'm going to take that idea and then I'm actually just going to generate a variety of different variants. And then we're going to pick a variant that we really like, like B. And then what B is"
+   },
+   {
+    "local_id": "EV-0883",
+    "excerpt": "going to do is it's going to make a bunch of other variants. Maybe A, B, C, D. And then maybe we'll pick C. Then C will do a couple variants like A and then B. And then maybe we'll pick A. So now what we've done is we've basically gone through, you know, three different iteration periods to find like the best dashboard ever. And what's cool too is you can just repeat this process anytime"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0507",
+  "claim_text": "This variant iteration process can be repeated anytime you want to visualize different data.",
+  "evidence": [
+   {
+    "local_id": "EV-0883",
+    "excerpt": "going to do is it's going to make a bunch of other variants. Maybe A, B, C, D. And then maybe we'll pick C. Then C will do a couple variants like A and then B. And then maybe we'll pick A. So now what we've done is we've basically gone through, you know, three different iteration periods to find like the best dashboard ever. And what's cool too is you can just repeat this process anytime"
+   },
+   {
+    "local_id": "EV-0884",
+    "excerpt": "if you wanted to visualize different data. Um, so that's going to be sort of my web design process. And then third, we're going to add some sort of like AI assistant functionality. [gasps] So why don't we start with the first, which is fairly straightforward, just assembling all of our data. Okay, so this is all of the data in uh my quote unquote database. And as you guys"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0508",
+  "claim_text": "The third step is to add AI assistant functionality to the dashboard.",
+  "evidence": [
+   {
+    "local_id": "EV-0884",
+    "excerpt": "if you wanted to visualize different data. Um, so that's going to be sort of my web design process. And then third, we're going to add some sort of like AI assistant functionality. [gasps] So why don't we start with the first, which is fairly straightforward, just assembling all of our data. Okay, so this is all of the data in uh my quote unquote database. And as you guys"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0509",
+  "claim_text": "To start visualizing, the speaker opens Claude in a new chat and feeds it a brief description of all of the data as well as the data folder itself.",
+  "evidence": [
+   {
+    "local_id": "EV-0893",
+    "excerpt": "so where do we go from here? Um, first things first, if I want to visualize stuff, I'm going to open um up Claude. And then what I'm going to do is in a new chat, okay, I'm going to go and find all of this data, which is in marketing dashboard data. Okay, and then I'm going to hold this button here, and I'm actually just going to feed it a brief description of all of the data, as well"
+   },
+   {
+    "local_id": "EV-0894",
+    "excerpt": "as the data folder itself. So now I'm going to say, hey, this is a super detailed um database that contains all of the information on a hypothetical set of companies that I am using to develop a dashboard for for a YouTube video that I'm recording. I want you to go through all of the data and for every bit of data, I want you to see if there are ways to combine the databases logically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0510",
+  "claim_text": "The prompt asks the model to go through all of the data, see if there are ways to combine the databases logically or if they discuss things naturally linked together, create a high-level structure to be used for the pages, scaffold them simply, and provide a few candidate structures to choose from.",
+  "evidence": [
+   {
+    "local_id": "EV-0894",
+    "excerpt": "as the data folder itself. So now I'm going to say, hey, this is a super detailed um database that contains all of the information on a hypothetical set of companies that I am using to develop a dashboard for for a YouTube video that I'm recording. I want you to go through all of the data and for every bit of data, I want you to see if there are ways to combine the databases logically"
+   },
+   {
+    "local_id": "EV-0895",
+    "excerpt": "or if the databases are discussing, you know, things that are naturally linked together. Uh then create a highle structure using this. We're going to use this to create the pages of our database. For now, we'll scaffold them really simply. Just provide me a few candidate structures that I can look at and then determine, you know, how to how to lay it out. Okay. And just before I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0511",
+  "claim_text": "The smarter your needs get, and the more intense your design needs get, typically the more intelligent the model you have to use.",
+  "evidence": [
+   {
+    "local_id": "EV-0896",
+    "excerpt": "do that, um I want to talk a little bit about model intelligence. For most of the course, I've actually been using Sonnet 5, which is like a last generation model. It's not a very intelligent model whatsoever. Um the smarter that you know your needs get, the more intense like your design needs and stuff like that get typically the more intelligent the model you have to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0512",
+  "claim_text": "For high quality design purposes the speaker recommends using the best models possible, as they save a tremendous amount of time and energy.",
+  "evidence": [
+   {
+    "local_id": "EV-0897",
+    "excerpt": "use. So I think like last video or maybe the module before I went from Sonnet 5 to Opus 5 just because I was I was wanting to see how much of the errors that the model was making was due to just like its model intelligence and it really wasn't all that much. However, for high quality design purposes, I really do recommend using the best models possible and they'll just save"
+   },
+   {
+    "local_id": "EV-0898",
+    "excerpt": "you a tremendous amount of time and energy. And so that's what I'm going to do with Fable 5. I'm just going to run it on usage credits. You can see that it's asking me to buy a certain number of credits over here. So, I don't know. I'm just going to buy, let's just say, $20 in credits. Uh, make my life a little easy. It'll initiate the purchase and go through. Uh, and you don't need"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0513",
+  "claim_text": "The speaker runs the higher model on usage credits, buying $20 in credits, and states you only need to do this if you're on a pro plan, not if you have a max plan.",
+  "evidence": [
+   {
+    "local_id": "EV-0898",
+    "excerpt": "you a tremendous amount of time and energy. And so that's what I'm going to do with Fable 5. I'm just going to run it on usage credits. You can see that it's asking me to buy a certain number of credits over here. So, I don't know. I'm just going to buy, let's just say, $20 in credits. Uh, make my life a little easy. It'll initiate the purchase and go through. Uh, and you don't need"
+   },
+   {
+    "local_id": "EV-0899",
+    "excerpt": "to do this if you have, I think, um, like a max plan. You only need to do this if you're on a pro plan. I actually have like a max pro plan. It's just I've decided not to use it today cuz I want you guys to have the same experience that I do. And I presume most of you guys are probably going to be on, you know, the smaller plan, not like the super major plan. So, this is what that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0514",
+  "claim_text": "The speaker reruns the prompt with the higher model and switches the reasoning/effort setting from medium to high.",
+  "evidence": [
+   {
+    "local_id": "EV-0900",
+    "excerpt": "UX looks like if you actually buy one. Um, okay, cool. So, we have that. And I don't know, my monthly credit usage limits probably going to be 20 bucks. I'm not going to turn on auto reload. And then what I'll do is I'm just going to um basically rerun this with Fable 5. And then instead of medium, I'm going to go to high. Okay, which tends to be like reasonable. I just swapped to Fable 5."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0515",
+  "claim_text": "With time-logged activity data you can filter by activity date and by rep and add up their total time (e.g. 2,940 seconds = 49 minutes) to make a determination about their productivity.",
+  "evidence": [
+   {
+    "local_id": "EV-0887",
+    "excerpt": "this is fact activities which is going to show a bunch of activities um that include different reps that are doing things. This is total number of calls, emails replied and so on and so forth. This is basically like a time log. And so in this way, you know, I'm sure you guys can imagine if you guys have some sort of time logged data within your company. You could figure out, okay,"
+   },
+   {
+    "local_id": "EV-0888",
+    "excerpt": "like, you know, how much time has rep four spent, let's say, in the last 24 hours. Well, what I can do is I can sort or filter by activity date. I could clear all the values except for uh well, I guess this is about a year ago, but let's just hypothetically say it's today, which is um August the 6th, right? And then we can filter by, I don't know, rep one. And then we can"
+   },
+   {
+    "local_id": "EV-0889",
+    "excerpt": "actually add up their total time here. 2,940 seconds to determine how long they've actually spent. 2940 divided by 60 means they've actually only really logged 49 minutes of activities. Maybe then we can make some determination as to their productivity, right? Okay. So, this is the sort of data that we have. Uh a lot of other data as well, like um let me show you just one more that I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0516",
+  "claim_text": "The speaker took all of the prior analysis and fed it to Fable 5 because these models share context, treating the earlier analysis as having been done by a dumber, less capable model.",
+  "evidence": [
+   {
+    "local_id": "EV-0901",
+    "excerpt": "I'd like you to revisit these what makes the most logical sense. Assume the analysis done before was by a dumber, less capable model. And so what I've done is I've taken all of the stuff that we had before and I've just fed it to Fable 5 um because you know these models share context. And so this is like the Opus 5 recommendations which are okay. Did so off of medium reasoning. Uh I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0517",
+  "claim_text": "The earlier Opus 5 recommendations were produced on medium reasoning; the speaker wants Fable 5 on high for the absolute highest-quality output.",
+  "evidence": [
+   {
+    "local_id": "EV-0901",
+    "excerpt": "I'd like you to revisit these what makes the most logical sense. Assume the analysis done before was by a dumber, less capable model. And so what I've done is I've taken all of the stuff that we had before and I've just fed it to Fable 5 um because you know these models share context. And so this is like the Opus 5 recommendations which are okay. Did so off of medium reasoning. Uh I"
+   },
+   {
+    "local_id": "EV-0902",
+    "excerpt": "want Fable 5 on high which is just again the absolute most highquality data humanly possible. Okay. So working through it again the structure is actually more constrained than a matter of preference. Three properties of the data set force the answer. The anomaly distribution dictates the primary axis of the seven stories fiber client scoped. One is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0518",
+  "claim_text": "The model argues the dashboard structure is more constrained than a matter of preference, because three properties of the data set force the answer.",
+  "evidence": [
+   {
+    "local_id": "EV-0902",
+    "excerpt": "want Fable 5 on high which is just again the absolute most highquality data humanly possible. Okay. So working through it again the structure is actually more constrained than a matter of preference. Three properties of the data set force the answer. The anomaly distribution dictates the primary axis of the seven stories fiber client scoped. One is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0519",
+  "claim_text": "The anomaly distribution dictates the primary axis: of the seven stories, five are client scoped, one is global, one is rep scoped.",
+  "evidence": [
+   {
+    "local_id": "EV-0902",
+    "excerpt": "want Fable 5 on high which is just again the absolute most highquality data humanly possible. Okay. So working through it again the structure is actually more constrained than a matter of preference. Three properties of the data set force the answer. The anomaly distribution dictates the primary axis of the seven stories fiber client scoped. One is"
+   },
+   {
+    "local_id": "EV-0903",
+    "excerpt": "global, one is rep scoped. A funnel ordered layout scatters each client story across five pages. The deal the death spiral shows up as a traffic blip on one page. They're talking about a specific client. A clientcentric layout is the only one each planted story is visible as a story on a single screen. Since the anomalies are the entire demo, this alone settles the primary axis."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0520",
+  "claim_text": "A funnel-ordered layout scatters each client story across five pages, whereas a client-centric layout is the only one where each planted story is visible as a story on a single screen; since the anomalies are the entire demo, this alone settles the primary axis.",
+  "evidence": [
+   {
+    "local_id": "EV-0903",
+    "excerpt": "global, one is rep scoped. A funnel ordered layout scatters each client story across five pages. The deal the death spiral shows up as a traffic blip on one page. They're talking about a specific client. A clientcentric layout is the only one each planted story is visible as a story on a single screen. Since the anomalies are the entire demo, this alone settles the primary axis."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0521",
+  "claim_text": "Coverage gaps punish global pages: e-commerce exists for 4 out of 12 clients, attribution for 44% of leads, and GBP is local-business flavored; grain mismatches dictate what cannot be client tabs.",
+  "evidence": [
+   {
+    "local_id": "EV-0904",
+    "excerpt": "Two, the coverage gaps punish global pages. E-commerce exists for 4 out of 12 clients. Attribution for 44% of leads. GBP is local business flavored and then the grain mismatches dictate what cannot be client tabs. So here is what it recommends. Overview portfolio grid alert feed performance traffic pipeline search presence commercial and this is client broken down by ID. Um specific"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0522",
+  "claim_text": "The recommended structure is: overview (portfolio grid, alert feed), performance, traffic, pipeline, search presence, commercial, with client broken down by ID, plus specific channels, sales teams and signals.",
+  "evidence": [
+   {
+    "local_id": "EV-0904",
+    "excerpt": "Two, the coverage gaps punish global pages. E-commerce exists for 4 out of 12 clients. Attribution for 44% of leads. GBP is local business flavored and then the grain mismatches dictate what cannot be client tabs. So here is what it recommends. Overview portfolio grid alert feed performance traffic pipeline search presence commercial and this is client broken down by ID. Um specific"
+   },
+   {
+    "local_id": "EV-0905",
+    "excerpt": "channels sales teams and then signals. So I like this idea and I'm going to say yes. And you know if there was something here that I didn't like obviously I don't just have to take the model's word for it. This model despite being super smart makes a lot of issue uh a lot of errors as well. Um I just think that this is a reasonable breakdown of the data that I was um u working with here."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0523",
+  "claim_text": "The speaker does not have to take the model's word for it; despite being super smart, this model makes a lot of errors as well.",
+  "evidence": [
+   {
+    "local_id": "EV-0905",
+    "excerpt": "channels sales teams and then signals. So I like this idea and I'm going to say yes. And you know if there was something here that I didn't like obviously I don't just have to take the model's word for it. This model despite being super smart makes a lot of issue uh a lot of errors as well. Um I just think that this is a reasonable breakdown of the data that I was um u working with here."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0524",
+  "claim_text": "Opus produced a different, funnel-oriented set of candidates (overview, acquisition, traffic, site; client-centric agency overview, client detail, channel analysis; a persona-question candidate), while Fable jumped right in and determined the highest quality approach immediately.",
+  "evidence": [
+   {
+    "local_id": "EV-0906",
+    "excerpt": "They are like client-based uh and so you can see opus did not do the same thing. Funnel oriented overview acquisition traffic and site client centric agency overview client detail channel analysis candidate C persona question. Are we hitting the number? Where's the money going? Is the site converting? These are all very different approaches and uh Fable basically just jumped right in and"
+   },
+   {
+    "local_id": "EV-0907",
+    "excerpt": "then determined the the highest quality approach immediately. So, it's going to scaffold those five pages for me and I'm just going to loop around when it's done. Once it's done the scaffolding, uh then I'm actually going to like turn this from just like a scaffold project into like a design project. And I'll show you guys what it looks like when you do cool high quality web design uh"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0525",
+  "claim_text": "After the model scaffolds the five pages, the speaker will turn the scaffold project into a design project.",
+  "evidence": [
+   {
+    "local_id": "EV-0907",
+    "excerpt": "then determined the the highest quality approach immediately. So, it's going to scaffold those five pages for me and I'm just going to loop around when it's done. Once it's done the scaffolding, uh then I'm actually going to like turn this from just like a scaffold project into like a design project. And I'll show you guys what it looks like when you do cool high quality web design uh"
+   }
+  ]
+ }
+]

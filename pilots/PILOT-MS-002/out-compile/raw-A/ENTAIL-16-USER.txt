@@ -1,0 +1,374 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0376",
+  "claim_text": "The current welcome email is a mass email with nothing personalized or customized about it, sent identically every time.",
+  "evidence": [
+   {
+    "local_id": "EV-0620",
+    "excerpt": "just through content and marketing like I'm showing you guys how to do right now with cloud code and stuff like that optimizing it. Okay, so what are we actually going to do today? Do you guys see this email here? Hi-ash, welcome to Maker School. Extremely excited to have you with us. Is there anything personalized or customized about this email? No, there's nothing personalized"
+   },
+   {
+    "local_id": "EV-0621",
+    "excerpt": "or customized about this email. This is essentially just a mass email that we are sending people. It's the same goddamn thing every time. And you know, somebody that is at the forefront of the AI revolution, um that's kind of annoying because with AI, we don't need to suffer, you know, crappy templated emails anymore. We actually collect a fair amount of information about the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0377",
+  "claim_text": "Hard variables are fields like first name, company, city copied straight from the data, and they are a byproduct of how logistically difficult it is to make high quality personalized emails at scale.",
+  "evidence": [
+   {
+    "local_id": "EV-0627",
+    "excerpt": "So if I go back to my little draw app here, um the whole idea is, you know, if you guys use hard variables, it's stuff like first name, company, city. These are usually copied straight from the data. And you know, this is stuff that you already see in a lot of like email campaigns and stuff like that. That's fine, but we don't have to suffer that anymore because hard variables are just"
+   },
+   {
+    "local_id": "EV-0628",
+    "excerpt": "sort of like they're they're like a byproduct of just how difficult it is logistically to make high quality personalized emails to scale. We have a solution for that. So what we do is we're just going to pass all these hard variables through AI basically. And then in doing so can actually just use my damn pen tool. We're going to pass this through AI. And in doing so, it'll turn"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0378",
+  "claim_text": "Rather than inserting variables verbatim, hard variables are passed through AI to become fuzzy variables — enriched values that make sense in the context of the mail campaign — which are then inserted in the email.",
+  "evidence": [
+   {
+    "local_id": "EV-0625",
+    "excerpt": "because especially because you mention um tech stuff being a bottleneck right now. I will solve that for you, right? Like Maker School will deal with that. We're like, \"Hey, you know, no, you use HubSpot. Want to make sure you have XYZ cool asset for HubSpot.\" So this is like basic email segmentation, which most marketers will know, but then we go one level up because rather than just"
+   },
+   {
+    "local_id": "EV-0626",
+    "excerpt": "inserting the variables verbatim like most people will do, we're going to use AI to customize the variables so that it makes sense in the context of our mail campaign. >> [sighs] >> And so this is essentially what I am showing you guys how to do today. I'm showing you guys how to use fuzzy variables. That is sort of the the term."
+   },
+   {
+    "local_id": "EV-0628",
+    "excerpt": "sort of like they're they're like a byproduct of just how difficult it is logistically to make high quality personalized emails to scale. We have a solution for that. So what we do is we're just going to pass all these hard variables through AI basically. And then in doing so can actually just use my damn pen tool. We're going to pass this through AI. And in doing so, it'll turn"
+   },
+   {
+    "local_id": "EV-0629",
+    "excerpt": "into I mean that probably wouldn't actually because it's just first name, but it'll turn into a much more enriched variable like why their company is interesting, right? So rather than like taking the verbatim hobbies, Pottery and Indie films, it it'll be like, \"Hey Pete, saw you love snowboarding and drone flying. I live uh in X location a couple of minutes away from like a"
+   },
+   {
+    "local_id": "EV-0630",
+    "excerpt": "massive mountain and I go snowboarding really often.\" So warmed my heart to see that. Anyway, wanted to talk to you about X today. like you can actually do stuff like that um at scale and that sort of personalization is leverage. So yeah, that's what we're going to be doing. We're going to be turning all these hard variables into fuzzy variables and then inserting them in an"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0379",
+  "claim_text": "Fuzzy variable names are written in camel case, are typically pretty long and quite descriptive, and the descriptive name is for the AI agent, not for the human.",
+  "evidence": [
+   {
+    "local_id": "EV-0632",
+    "excerpt": "to be like hey Nick. Uh second, I'm going to remove the n dash because it's kind of AIE and I don't want anything that that's even remotely AI here. So now it'll say hi Nick, welcome to Maker School. Extremely excited to have you with us, especially because short plausible reason why they signed up. What this is is a fuzzy variable. You'll see that I use what's called uh camel"
+   },
+   {
+    "local_id": "EV-0633",
+    "excerpt": "case where the first letter is lower, right? And then eventually all the other ones are high. It's kind of like a camel in that the head is low and then the there's a bunch of humps underneath after that. Kind of interesting. It's a programming convention. Um and then I typically make them pretty long and they're also quite descriptive. So short plausible reason why they signed up."
+   },
+   {
+    "local_id": "EV-0634",
+    "excerpt": "That's actually for the AI agent. That's not for me. Anyway, so extremely excited to have you with us, especially because I know you struggled with client uh or like lead genen in the past or especially because you mentioned you struggled with lead genen in the past. Boom. Now it's like, whoa, whoa, hold on a second. What? You guys are reading all these customized like whoa. Obviously,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0380",
+  "claim_text": "The n dash was removed from the email because it reads as AI-generated and the speaker doesn't want anything remotely AI-looking in the email.",
+  "evidence": [
+   {
+    "local_id": "EV-0632",
+    "excerpt": "to be like hey Nick. Uh second, I'm going to remove the n dash because it's kind of AIE and I don't want anything that that's even remotely AI here. So now it'll say hi Nick, welcome to Maker School. Extremely excited to have you with us, especially because short plausible reason why they signed up. What this is is a fuzzy variable. You'll see that I use what's called uh camel"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0381",
+  "claim_text": "Signup forms should collect only a small number of fields (e.g. why you signed up and first name/last name, or biggest challenge) to minimize friction, since people won't add 10 questions.",
+  "evidence": [
+   {
+    "local_id": "EV-0636",
+    "excerpt": "reason why the onboarding guide will be useful to you. Uh what we're going to do is we're going to take those variables that I just showed you earlier. Okay, pretend that this is just all the data we're getting from people. You know, it's a little much. We're probably not actually going to get that much data, but I could see you get like why you signed up and first name, last name"
+   },
+   {
+    "local_id": "EV-0637",
+    "excerpt": "probably or maybe biggest challenge, one of the two to minimize friction. They're probably not going to add like 10 questions to your thing. And then down over here, paraphrase challenge. I know a big challenge for you is paraphrase challenge. It's like, whoa, damn. Is that Nick speaking to me seriously? Hm. They got their AI stuff unlock, right? So, yeah, this is more or less what"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0382",
+  "claim_text": "Step one is to get an email template, make it really high quality, and customize it with variables you could realistically fill based on whatever you are currently collecting in your email flow.",
+  "evidence": [
+   {
+    "local_id": "EV-0638",
+    "excerpt": "we're going to be doing. The question is, how do you do it? Um, so first things first, you know, get an email template and then make the email template really high quality like this. Customize it with variables that you could realistically fill based off of whatever you are currently collecting as part of your email flow. That's sort of step one. Okay. But I'm assuming that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0383",
+  "claim_text": "The personalization prompt pastes the email template at the top, then describes the sheet columns, the merge variables, the product/community context, and the desired tone (casual, direct, no fluff, first person).",
+  "evidence": [
+   {
+    "local_id": "EV-0639",
+    "excerpt": "you guys are with me here and we've already done this. So what's step two? So I'm going to copy this and I'm going to paste this up over here at the top of a prompt. And then let me read out the rest of this prompt to you. I'm not going to read out the entire thing, but I'm going to read out like a fair chunk of it so you see how I'm going to do this. First, I need you to personalize a"
+   },
+   {
+    "local_id": "EV-0640",
+    "excerpt": "Google sheet of leads for an email campaign. Here it is. The sheet has six The sheet has columns. first name, last name, email, company name, job title, city, hobbies, why signed up, favorite tool, and biggest challenge. This is context for an email template that uses these merge variables. That's just another way to say what this is. Short plausible reason why they signed up,"
+   },
+   {
+    "local_id": "EV-0641",
+    "excerpt": "short custom reason why it's useful, and paraphrased challenge. This email is a welcome email for Maker School, Nixar's AI automation coaching community, which is school-based. It teaches people how to get their first AI automation agency client. Their email's tone is casual, direct, no fluff, and first person from neck. Task. Do this in one step without pausing to ask clarifying questions."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0384",
+  "claim_text": "The prompt instructs the model to do the task in one step without pausing to ask clarifying questions.",
+  "evidence": [
+   {
+    "local_id": "EV-0641",
+    "excerpt": "short custom reason why it's useful, and paraphrased challenge. This email is a welcome email for Maker School, Nixar's AI automation coaching community, which is school-based. It teaches people how to get their first AI automation agency client. Their email's tone is casual, direct, no fluff, and first person from neck. Task. Do this in one step without pausing to ask clarifying questions."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0385",
+  "claim_text": "The prompt instructs the model to read every row of the source Google sheet using whatever drive or sheets read tool it has, and not to guess or sample.",
+  "evidence": [
+   {
+    "local_id": "EV-0642",
+    "excerpt": "First, read every row of the source Google sheet. Use whatever drive or sheets read tool you have to pull the full row data. Do not guess or sample. Second, for each row individually, write three new column values that are custom to that specific person, not pulled from a shared lookup table or, you know, keyed on some sort of repeated thing. Even when two rows share the same text,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0386",
+  "claim_text": "The prompt instructs the model to write three new column values per row that are custom to that specific person, not pulled from a shared lookup table, varying sentence structure and word choice row to row and avoiding a small set of repeated template sentences.",
+  "evidence": [
+   {
+    "local_id": "EV-0642",
+    "excerpt": "First, read every row of the source Google sheet. Use whatever drive or sheets read tool you have to pull the full row data. Do not guess or sample. Second, for each row individually, write three new column values that are custom to that specific person, not pulled from a shared lookup table or, you know, keyed on some sort of repeated thing. Even when two rows share the same text,"
+   },
+   {
+    "local_id": "EV-0643",
+    "excerpt": "the generated copy should read differently because you're allowed to draw on their other fields to make each one feel individually written. Vary sentence structure and word choice row to row. Avoid falling into a small set of repeated template sentences. Then it actually talks about the uh variables. So short custom reason, short plausible reason, paraphrase challenge. Do not"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0387",
+  "claim_text": "The prompt instructs the model not to modify the original sheet, to instead create a new Google sheet uploaded via drive, not to attempt to write directly, to include all original columns plus the three new ones appended at the end in an exact order, to validate everything before uploading, and to return the link.",
+  "evidence": [
+   {
+    "local_id": "EV-0644",
+    "excerpt": "modify the original sheet. Instead, create a new Google sheet. Upload via drive. Do not attempt to write directly. Title it this. include all original columns plus the three new ones appended at the end in this exact order. So this is highly specific. I don't know if you guys could tell but obviously AI helped me write this and then before uploading validate everything and then give me the"
+   },
+   {
+    "local_id": "EV-0645",
+    "excerpt": "link to the sheet. Cool. So what I'm going to do is I'm just going to give this to the model. And if you guys remember in a previous module we um actually gave AI a Google Drive and so it has access to our Google Drive and it can do all of that stuff. It does not have the ability to um you know create new Google Sheets I don't think but what it can do is it can use drive and drive"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0388",
+  "claim_text": "With Google Drive access, a new Google sheet can be created via drive even though the setup does not have the ability to edit an existing Google sheet, which avoids having to authorize Google Sheets.",
+  "evidence": [
+   {
+    "local_id": "EV-0645",
+    "excerpt": "link to the sheet. Cool. So what I'm going to do is I'm just going to give this to the model. And if you guys remember in a previous module we um actually gave AI a Google Drive and so it has access to our Google Drive and it can do all of that stuff. It does not have the ability to um you know create new Google Sheets I don't think but what it can do is it can use drive and drive"
+   },
+   {
+    "local_id": "EV-0646",
+    "excerpt": "is you know a way that drive essentially allows you to communicate with Google sheets. Um so what we can do is we can actually like we can spin up a Google sheet despite not having access to edit a Google sheet if that makes sense. Yeah. To make a long story short the Google API is highly confusing but um we have the ability to make a new one. We just can't edit it. And that's fine. So,"
+   },
+   {
+    "local_id": "EV-0647",
+    "excerpt": "I picked this specific example and I'm doing in this specific way so that I don't have to walk you guys through authorizing Google Sheets, which can also be kind of a pain in the ass. Anyway, what's kind of going on under here? Well, it's writing the full data set with handcrafted per row copy. Given 100 rows and three fields, it's going to build this in a Python file as a list of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0389",
+  "claim_text": "Given 100 rows and three fields, the model builds the dataset in a Python file as a list of dicts, writing distinct copy per row using job title, city, hobbies and favorite tool context, rather than doing 100 separate generations one at a time.",
+  "evidence": [
+   {
+    "local_id": "EV-0647",
+    "excerpt": "I picked this specific example and I'm doing in this specific way so that I don't have to walk you guys through authorizing Google Sheets, which can also be kind of a pain in the ass. Anyway, what's kind of going on under here? Well, it's writing the full data set with handcrafted per row copy. Given 100 rows and three fields, it's going to build this in a Python file as a list of"
+   },
+   {
+    "local_id": "EV-0648",
+    "excerpt": "dict writing genuinely distinct copy for each row using their specific job title, city, hobbies, favorite tool, context. So, whatever that means, uh, basically what it's going to do is it's not going to like do 100 sets. let's say um one at a time. It's just going to rate like a big huge database um just like regular text by reading the job title, the city, the hobbies, the favor tool, and then"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0390",
+  "claim_text": "Doing the personalization in a session takes a fair amount of time because no skill has been built for it yet and it is the first time; the first time would take way longer than any other time.",
+  "evidence": [
+   {
+    "local_id": "EV-0649",
+    "excerpt": "just like doing it as a as a little variable. So, yeah, this is probably going to take a couple minutes. I'm not going to waste your guys time. So, let me cut when it's done. Okay. And it's looking like it's now done all of the rows that we need. Um just going to build and validate the CSV itself. And now it's doing a Google Drive create a file. So, I want you guys to see this is"
+   },
+   {
+    "local_id": "EV-0650",
+    "excerpt": "taking a fair amount of time. It's taking a fair amount of time because I'm doing this in in a session. Um, we haven't actually built a skill for this yet. What we're doing is we're just doing this like the first time. And you can imagine the first time would take way way longer than any other time. Eventually, the idea is uh we would just run daily based off of the data that's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0391",
+  "claim_text": "The eventual intended design is a daily cloud routine that looks at new signups in Kit, generates the new variables for them, and sends the batch blast, so it doesn't have to be done in a session.",
+  "evidence": [
+   {
+    "local_id": "EV-0650",
+    "excerpt": "taking a fair amount of time. It's taking a fair amount of time because I'm doing this in in a session. Um, we haven't actually built a skill for this yet. What we're doing is we're just doing this like the first time. And you can imagine the first time would take way way longer than any other time. Eventually, the idea is uh we would just run daily based off of the data that's"
+   },
+   {
+    "local_id": "EV-0651",
+    "excerpt": "in our kit. And so, you know, people fill things out, they're in our kit once a day. You know, AI would look through, see all the new signups in the kit, you know, generate all these new variables for them, and then send the send the batch blast. That's a much simpler and easier way of doing it. And then what's cool is we don't actually have to wait and do it in a session because it's"
+   },
+   {
+    "local_id": "EV-0652",
+    "excerpt": "happening via a cloud routine. Um, we'll get to that soon. But what's really important, and I figure I'll take a second just to talk about this, is you should verify that you can actually do the thing you want to do first. Like always, like don't just trust that you'll be able to do the thing that you want to do. Like actually start at the end, do the thing, and then work your"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0392",
+  "claim_text": "You should verify that you can actually do the thing you want to do first: start at the end, do the thing, then work your way backwards and systematize it after.",
+  "evidence": [
+   {
+    "local_id": "EV-0652",
+    "excerpt": "happening via a cloud routine. Um, we'll get to that soon. But what's really important, and I figure I'll take a second just to talk about this, is you should verify that you can actually do the thing you want to do first. Like always, like don't just trust that you'll be able to do the thing that you want to do. Like actually start at the end, do the thing, and then work your"
+   },
+   {
+    "local_id": "EV-0653",
+    "excerpt": "way backwards and systematize it after. I don't know if you guys have noticed, but in this course, that's basically what we've done every time. We start with the prompt, then we do the skill, then we do the loop, then we finally do the routine. And every time we verify, is this thing actually doing what we want it to do. And the reason why is so that we don't end up in the shitty"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0393",
+  "claim_text": "The course sequence used every time is: start with the prompt, then the skill, then the loop, then finally the routine, verifying at each stage that the thing does what you want.",
+  "evidence": [
+   {
+    "local_id": "EV-0653",
+    "excerpt": "way backwards and systematize it after. I don't know if you guys have noticed, but in this course, that's basically what we've done every time. We start with the prompt, then we do the skill, then we do the loop, then we finally do the routine. And every time we verify, is this thing actually doing what we want it to do. And the reason why is so that we don't end up in the shitty"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0394",
+  "claim_text": "If you can't get the output you want, there is no point automating in the first place, since you'd be automating a process that sucks.",
+  "evidence": [
+   {
+    "local_id": "EV-0655",
+    "excerpt": "your way backwards after you've verified that you can get the sort of output that you want. like with our ad generator and then worry about automating it. If you can't get the output that you want, then there's actually no point to automate in the first place since you're automating a process that sucks. So, you can see we actually have the Google sheet right over here or the the CSV rather not a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0395",
+  "claim_text": "On reviewing the generated output, the speaker found the variables were okay but too long and that the paraphrase challenge text didn't fit the email copy, so he asked for shorter values (~10 words, ~5 words for paraphrase challenge) and for the paraphrase challenge to be written so it can be inserted into the email copy rather than naming the person.",
+  "evidence": [
+   {
+    "local_id": "EV-0656",
+    "excerpt": "Google sheet. So, Marcus Hayes at marcus northparters.com. If we go to short plausible reason why they signed up, you're trying to push north partners past that 20k ceiling and you're betting a automation is the lever. Short custom reason why it's useful. We spend a lot of time in repeatable atband systems, which is exactly what fixes lead flow that drives up between projects."
+   },
+   {
+    "local_id": "EV-0657",
+    "excerpt": "Paraphrase challenge. Marcus' biggest challenge is that leads show up in burst instead of a steady monthly rhythm. Okay. And I think that actually probably doesn't work. Blake's biggest challenge. Blake's biggest challenge. Um, let me just go through and read the thing. I know a big challenge for you is paraphrase. Yeah, that doesn't actually make sense. So, clearly there was"
+   },
+   {
+    "local_id": "EV-0658",
+    "excerpt": "something lost in translation. I'll have to edit that. Um, I would say these are okay variables right now. They're not the best. They're a little too long. I think um realistically we would we would have written this like 1 2 3 4 5 6 7 8 9 10. Probably 10 words or so. So I think I'm just going to like double back. Hey, these look fantastic. Um we just need to make them shorter. So short plausible"
+   },
+   {
+    "local_id": "EV-0659",
+    "excerpt": "reason why they signed up should be closer to 10 words. Short custom reason why it's useful should also be closer to 10 words. And paraphrase challenge should be maybe five words or so. >> [sighs] >> However, in paraphrase challenge, instead of saying the person's name, you need to write it in such a way that I'll be able to insert it into the email copy"
+   },
+   {
+    "local_id": "EV-0660",
+    "excerpt": "itself. As a reminder, here is the actual email section that that text will be inserted into. I'm just going to go and copy this. Then I will go back to pasting this. I'm just going to add a slash here and then paste it. So now it'll just redo that last gen part and make it a lot shorter. So I'll circle back when that's done, too. What's cool too is this allows you to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0396",
+  "claim_text": "When asking for the revision, the speaker re-pasted the actual email section that the text will be inserted into as a reminder for the model.",
+  "evidence": [
+   {
+    "local_id": "EV-0659",
+    "excerpt": "reason why they signed up should be closer to 10 words. Short custom reason why it's useful should also be closer to 10 words. And paraphrase challenge should be maybe five words or so. >> [sighs] >> However, in paraphrase challenge, instead of saying the person's name, you need to write it in such a way that I'll be able to insert it into the email copy"
+   },
+   {
+    "local_id": "EV-0660",
+    "excerpt": "itself. As a reminder, here is the actual email section that that text will be inserted into. I'm just going to go and copy this. Then I will go back to pasting this. I'm just going to add a slash here and then paste it. So now it'll just redo that last gen part and make it a lot shorter. So I'll circle back when that's done, too. What's cool too is this allows you to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0397",
+  "claim_text": "The method lets you send a single template and turn it into a thousand private letters, where only a small portion of text changes per recipient.",
+  "evidence": [
+   {
+    "local_id": "EV-0661",
+    "excerpt": "essentially send a single template and then turn it into a thousand private letters. [sighs] So for instance, hi Sarah, some templated stuff up here. Saw you finished the cold email module. This week's issue builds right on top of that. Hi Mike, some templated message right over here. I know you mentioned on your call you wanted to leave your day job by June. This one is for you."
+   },
+   {
+    "local_id": "EV-0662",
+    "excerpt": "Imagine if you had quality like that. only this text is ultimately what's going to change too, which allows you to um build the rest of the template out such that it's very high converting. It's like a high quality offer. And this is different from just having AI write your entire email, right? AI writing your entire email usually sucks. So instead of that, what we're doing is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0398",
+  "claim_text": "Having AI write your entire email usually sucks; instead a human being writes the entire email using practices that work and only a couple of variables are inserted here or there.",
+  "evidence": [
+   {
+    "local_id": "EV-0662",
+    "excerpt": "Imagine if you had quality like that. only this text is ultimately what's going to change too, which allows you to um build the rest of the template out such that it's very high converting. It's like a high quality offer. And this is different from just having AI write your entire email, right? AI writing your entire email usually sucks. So instead of that, what we're doing is"
+   },
+   {
+    "local_id": "EV-0663",
+    "excerpt": "we're having a human being write the entire email using practices that work. Then we're just inserting a couple of these variables here or there. So this is a pretty solid strategy and it doesn't really matter where you get your data from. Like for instance, um I'm going to show you guys how to do this in cold outreach in a second. But basically, like the only difference"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0399",
+  "claim_text": "The strategy does not depend on where you get your data from; the only difference between a newsletter flow and a cold outreach flow is the first step of data acquisition (newsletter signup form vs. data scraped usually on LinkedIn Sales Navigator or an alternative).",
+  "evidence": [
+   {
+    "local_id": "EV-0663",
+    "excerpt": "we're having a human being write the entire email using practices that work. Then we're just inserting a couple of these variables here or there. So this is a pretty solid strategy and it doesn't really matter where you get your data from. Like for instance, um I'm going to show you guys how to do this in cold outreach in a second. But basically, like the only difference"
+   },
+   {
+    "local_id": "EV-0664",
+    "excerpt": "between a newsletter and then cold outreach is, you know, our first step is not data collected by a newsletter signup form. It's data collected or scraped by usually on LinkedIn Sales Navigator or an alternative. So, wherever way you're getting your data, um you guys can do quite a lot with this method and uh hopefully you guys will see it as valuably as I do. Okay, so"
+   },
+   {
+    "local_id": "EV-0697",
+    "excerpt": "But that's newsletter based. How about cold outreachbased? Well, as mentioned, the only major difference in the pipelines that I built here between uh warm newsletter and cold outreach is it just changes where we're getting the data. So, you know, over here in our newsletter example, we got the data through just people signing up on our website, right? Or, you know, me sending"
+   },
+   {
+    "local_id": "EV-0698",
+    "excerpt": "them a many chat link and them opting into an offer. Well, over here on our cold outreachbased flow, which is another form of marketing, um what we do is we just scrape their data from services like LinkedIn Sales Navigator. Then, you know, we connect them to a bunch of these different services. Vein is one of them. Air scale is another one. Amplify is another one. You get a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0400",
+  "claim_text": "Typically the fewer AI generated words you have in your email as a proportion of total words, the lower the probability that anybody would notice the email was AI written.",
+  "evidence": [
+   {
+    "local_id": "EV-0666",
+    "excerpt": "far better. They're also way shorter. And typically the fewer AI generated words you have in your email as a proportion of total words, the lower the probability is. Anybody would be like, \"Wait a second, did AI write that?\" Like your biggest challenge is keeping up with how fast AI changes. That's really cool, right? If you consider that in the context of our U template, it's like, I"
+   }
+  ]
+ }
+]

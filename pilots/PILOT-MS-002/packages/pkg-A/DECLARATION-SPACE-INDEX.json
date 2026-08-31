@@ -1,0 +1,29 @@
+{
+ "bounded_to": "MS002-SRC-A",
+ "nota": "enumera SO o proprio pacote. filesystem scan != corpus audit.",
+ "referenced": [
+  "DR-MS-002-INDEP-001",
+  "OPENING-RECORD-MS-002-COMPILE"
+ ],
+ "slices": [
+  "SL-A-01",
+  "SL-A-02",
+  "SL-A-03",
+  "SL-A-04",
+  "SL-A-05",
+  "SL-A-06",
+  "SL-A-07",
+  "SL-A-08",
+  "SL-A-09",
+  "SL-A-10",
+  "SL-A-11",
+  "SL-A-12",
+  "SL-A-13",
+  "SL-A-14",
+  "SL-A-15",
+  "SL-A-16",
+  "SL-A-17",
+  "SL-A-18",
+  "SL-A-19"
+ ]
+}

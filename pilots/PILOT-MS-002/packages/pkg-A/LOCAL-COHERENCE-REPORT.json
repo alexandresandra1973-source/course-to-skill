@@ -1,0 +1,21 @@
+{
+ "INVALID_PROVENANCE": 0,
+ "all_claims_have_evidence": true,
+ "all_sealed_are_entailed": true,
+ "candidates_by_kind": {
+  "anti_pattern_candidates": 42,
+  "rule_candidates": 136,
+  "workflow_candidates": 59
+ },
+ "candidates_eligible": 229,
+ "candidates_total": 237,
+ "claims_sealed": 642,
+ "claims_total": 649,
+ "duplicate_semantic_keys": 0,
+ "entailment_distribution": {
+  "CONTRACT_VIOLATION": 1,
+  "ENTAILED": 642,
+  "NOT_ENTAILED": 6
+ },
+ "source_id": "MS002-SRC-A"
+}

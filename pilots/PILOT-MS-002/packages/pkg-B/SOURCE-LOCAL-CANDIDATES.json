@@ -1,0 +1,1605 @@
+{
+ "anti_pattern_candidates": [
+  {
+   "claim_dependencies": [
+    "CL-0055"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "anti_pattern_candidate",
+   "evidence_refs": [
+    "EV-0114",
+    "EV-0115"
+   ],
+   "local_id": "AP-0001",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-03",
+     "temporary_candidate_id": "TX-003"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-003"
+   },
+   "sealed_claim_refs": [
+    "CL-0055"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "c6700347518a542aa6f57da2eac2e88b4af6c416e3a891282d585505b28ff844",
+   "structure": {
+    "conditions": [
+     "Disparo em massa para grupos marcando todo mundo"
+    ],
+    "do_not": [
+     "Disparar mensagem em massa de uma só vez com vários grupos com muitas pessoas"
+    ],
+    "why": "O autor diz que é preciso tomar cuidado ao disparar mensagem em massa para os grupos marcando todo mundo"
+   },
+   "unsealed_claim_dependencies": []
+  }
+ ],
+ "rule_candidates": [
+  {
+   "claim_dependencies": [
+    "CL-0005"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "local_id": "R-0001",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-004"
+   },
+   "sealed_claim_refs": [
+    "CL-0005"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "4061e1fef7f3b64c3ed0f63e1cc140175b4cbb88a4acd83458eac30642c43a1c",
+   "structure": {
+    "action": "Hospedar o Evolution API em uma VPS",
+    "condition": "Para ele ficar 24 horas por dia funcionando",
+    "do_not": [],
+    "name": "Hospedar o Evolution API em uma VPS",
+    "precedence": null,
+    "trigger": "Ao usar o Evolution API"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0014"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0031",
+    "EV-0032"
+   ],
+   "local_id": "R-0002",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-005"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-005"
+   },
+   "sealed_claim_refs": [
+    "CL-0014"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "d3b16ad9c0b86dd8686c7956b788f1b9e43b154b13b9be8bf9af82562490d85c",
+   "structure": {
+    "action": "Copiar o token do Evolution e salvá-lo em algum local, pois será necessário depois",
+    "condition": null,
+    "do_not": [],
+    "name": "Salvar o token do Evolution",
+    "precedence": null,
+    "trigger": "Ao receber o e-mail da HostGator com os dados de acesso ao VPS"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0016"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0035",
+    "EV-0036"
+   ],
+   "local_id": "R-0003",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-006"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-006"
+   },
+   "sealed_claim_refs": [
+    "CL-0016"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "257f70b40c3303ade800468f1c017b8e5bc97681be08a252a89b1f1f585387be",
+   "structure": {
+    "action": "Digitar barra manager no final para acessar de fato",
+    "condition": "A página não é de fato um erro",
+    "do_not": [],
+    "name": "Digitar barra manager no final",
+    "precedence": null,
+    "trigger": "Quando ao abrir o Evolution API aparece uma página que parece um erro"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0017"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0038",
+    "EV-0039"
+   ],
+   "local_id": "R-0004",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-007"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-007"
+   },
+   "sealed_claim_refs": [
+    "CL-0017"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "0007192764ef983cc6e414940cf7411bdad4da84affabd1202d03bff76f71336",
+   "structure": {
+    "action": "Colar a chave de API global que está no e-mail (Gmail) e clicar em conectar",
+    "condition": null,
+    "do_not": [],
+    "name": "Colar a chave de API global no primeiro acesso",
+    "precedence": null,
+    "prerequisites": [
+     "Ter a chave de API global recebida por e-mail"
+    ],
+    "trigger": "No primeiro acesso ao manager do Evolution API"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0011"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "local_id": "R-0005",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-008"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-008"
+   },
+   "sealed_claim_refs": [
+    "CL-0011"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "b9f6cbe527f814951fd2fb5577508ef568d02d13e18545281cb278713047b8bd",
+   "structure": {
+    "action": "Manter o servidor em São Paulo, que é o mais próximo no Brasil",
+    "condition": "Estando no Brasil",
+    "do_not": [],
+    "exceptions": [
+     "Se estiver fora do Brasil, verificar se o do México é mais próximo"
+    ],
+    "name": "Escolher a localização do servidor",
+    "precedence": null,
+    "trigger": "Na conferência do carrinho da HostGator"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0010"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "local_id": "R-0006",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-009"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-009"
+   },
+   "sealed_claim_refs": [
+    "CL-0010"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "555fb8a5df9ea150c5f03a10e3efaa498827263cc9e9a251d16ac0d1d690531d",
+   "structure": {
+    "action": "Pegar uma peça melhor, por exemplo a NVMe quatro, que para esse tipo de caso é o padrão",
+    "condition": "Se for usar muito, muito, muito",
+    "do_not": [],
+    "name": "Escolher plano maior para uso intenso",
+    "precedence": null,
+    "trigger": "Ao escolher o plano da VPS"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0006"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0011",
+    "EV-0012"
+   ],
+   "local_id": "R-0007",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-010"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-010"
+   },
+   "sealed_claim_refs": [
+    "CL-0006"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "77f96340110c6962adb9da80694da948d8895601a972f0ed1fe0d2d7e557abdb",
+   "structure": {
+    "action": "Escolher a opção de Evolution API para que ele já venha instalado, sem necessidade de configuração",
+    "condition": null,
+    "do_not": [],
+    "name": "Contratar com a opção Evolution API pré-instalada",
+    "precedence": null,
+    "trigger": "Ao contratar a VPS da HostGator"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0012"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0025",
+    "EV-0027"
+   ],
+   "local_id": "R-0008",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-011"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-011"
+   },
+   "sealed_claim_refs": [
+    "CL-0012"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "3ac0234d0a83f9ce8d66b7fa8cb692fec27873428c9d1095c1d4efc9d366c3bd",
+   "structure": {
+    "action": "Conferir se o plano está correto e se consta Evolution API antes de continuar para verificação",
+    "condition": null,
+    "do_not": [],
+    "name": "Conferir o pedido no carrinho antes da verificação",
+    "precedence": null,
+    "trigger": "Ao continuar para o carrinho"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0031"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0068",
+    "EV-0069"
+   ],
+   "local_id": "R-0009",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-002"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-002"
+   },
+   "sealed_claim_refs": [
+    "CL-0031"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "f91dc6640f3141b68cd8c22e73059c43cf513a54f6a0ac9eb7ffb40e704c41ae",
+   "structure": {
+    "action": "Tirar a barra do final da URL e salvar com Ctrl S",
+    "condition": "URL formada por https e o número IP",
+    "do_not": [
+     "deixar a barra no final da URL"
+    ],
+    "name": "Remover a barra final da URL do Evolution",
+    "precedence": null,
+    "trigger": "Ao colar a URL do Evolution no arquivo env"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0029",
+    "CL-0030"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0066",
+    "EV-0067",
+    "EV-0068"
+   ],
+   "local_id": "R-0010",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-003"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-003"
+   },
+   "sealed_claim_refs": [
+    "CL-0029",
+    "CL-0030"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "405328eb1a75099dbbcc1a0575ed7e7ccfbaf4e85ee98542106310f95c026ab4",
+   "structure": {
+    "action": "Manter o gitignore para não passar o arquivo {ponto} env no repositório",
+    "condition": "uso de repositório no GitHub",
+    "do_not": [
+     "passar o arquivo {ponto} env no repositório"
+    ],
+    "exceptions": [
+     "Se for rodar só no computador, pode seguir sem se preocupar, mas mantendo os arquivos por padrão"
+    ],
+    "name": "Usar gitignore para não subir o {ponto} env ao GitHub",
+    "precedence": null,
+    "trigger": "Caso você vá subir o repositório no GitHub"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0030"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0067",
+    "EV-0068"
+   ],
+   "local_id": "R-0011",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-004"
+   },
+   "sealed_claim_refs": [
+    "CL-0030"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "3878df954ae07c9598c35231136571dbfc16abd5032f05f8bc0d2e8f7bced4b9",
+   "structure": {
+    "action": "Manter esses arquivos por padrão no projeto",
+    "condition": null,
+    "do_not": [
+     "remover os arquivos do projeto"
+    ],
+    "name": "Manter os arquivos do projeto por padrão",
+    "precedence": null,
+    "trigger": "Ao montar o projeto localmente"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0027",
+    "CL-0037",
+    "CL-0038"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0064",
+    "EV-0078",
+    "EV-0079",
+    "EV-0080"
+   ],
+   "local_id": "R-0012",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-005"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-005"
+   },
+   "sealed_claim_refs": [
+    "CL-0027",
+    "CL-0037",
+    "CL-0038"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "e73e94b181c453b07c1d590422c4d6b603e9b33aac8f71b29b010e6a6d837974",
+   "structure": {
+    "action": "Ter um cloud.md com o contexto geral, para que o Cloud já saiba usar o Evolution e consultar a documentação sem precisar explicar em cada pergunta",
+    "condition": "o contexto inicial (uso do Evolution) já estar colocado no cloud.md",
+    "do_not": [
+     "precisar explicar em cada pergunta que ele deve usar o Evolution"
+    ],
+    "name": "Colocar o contexto inicial no cloud.md em vez de repetir na pergunta",
+    "precedence": null,
+    "trigger": "Ao fazer perguntas ao Cloud relacionadas a grupos"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0045"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED",
+    "PASSO_UNICO"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0099"
+   ],
+   "local_id": "R-0013",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-010"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-010"
+   },
+   "sealed_claim_refs": [
+    "CL-0045"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "09706b98ab6ab4e51f5a535b105962dffcf504490cfab980d1c4f9f6cd359fc8",
+   "structure": {
+    "action": "Abrir outro chat e fazer outra função simultaneamente",
+    "condition": null,
+    "do_not": [],
+    "name": "Abrir outro chat para executar funções simultaneamente",
+    "precedence": null,
+    "trigger": "Enquanto o Cloud está gerando um resultado"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0050",
+    "CL-0051"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0103",
+    "EV-0104",
+    "EV-0105"
+   ],
+   "local_id": "R-0014",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-03",
+     "temporary_candidate_id": "TX-001"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-001"
+   },
+   "sealed_claim_refs": [
+    "CL-0050",
+    "CL-0051"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "572125e53169949a339cc7d92c8d88853fff6627432cf76fbcd04cc335db9611",
+   "structure": {
+    "action": "Informar um outro número para que essa pessoa seja adicionada nos grupos, podendo indicar que seja colocada como admin",
+    "condition": "É preciso pelo menos uma outra pessoa para criar o grupo (restrição também na criação manual)",
+    "do_not": [],
+    "name": "Fornecer pelo menos outra pessoa ao criar grupo",
+    "precedence": null,
+    "prerequisites": [
+     "Ter um outro número disponível"
+    ],
+    "trigger": "Ao pedir a criação de grupos"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0052",
+    "CL-0053"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0107",
+    "EV-0108",
+    "EV-0109",
+    "EV-0110",
+    "EV-0111"
+   ],
+   "local_id": "R-0015",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-03",
+     "temporary_candidate_id": "TX-002"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-002"
+   },
+   "sealed_claim_refs": [
+    "CL-0052",
+    "CL-0053"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "afbd39d705a2f36b70ecfafdd5421d8579342749599d98c9b1e3d67b7ff50dde",
+   "structure": {
+    "action": "Mudar para o Sonnet, descrever o problema ao agente e pedir para corrigir (nomes e remoção dos duplicados)",
+    "condition": "Erros atribuídos ao uso do Haiku",
+    "do_not": [],
+    "name": "Corrigir erros de execução apontando o problema ao agente",
+    "precedence": null,
+    "trigger": "Quando o agente duplica grupos criados ou coloca ponto de interrogação no lugar do cedilha no título"
+   },
+   "unsealed_claim_dependencies": []
+  }
+ ],
+ "workflow_candidates": [
+  {
+   "claim_dependencies": [
+    "CL-0007",
+    "CL-0008",
+    "CL-0018",
+    "CL-0023"
+   ],
+   "claim_dependency_status": "UNSATISFIED_BY_ENTAILMENT",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0015",
+    "EV-0016",
+    "EV-0040",
+    "EV-0047"
+   ],
+   "local_id": "WF-0001",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-001"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-001"
+   },
+   "sealed_claim_refs": [
+    "CL-0008",
+    "CL-0023"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "67ad686d74415c7b4187814ab97b0e8a1f27b7c948b5eb0b6a22724e22656da2",
+   "structure": {
+    "name": "Quatro etapas do gerenciador de grupos de WhatsApp com Cloud Code (etapas descritas neste trecho)",
+    "prerequisites": [
+     "Seguir os quatro pontos passo a passo para estar funcionando sem problema"
+    ],
+    "steps": [
+     {
+      "action": "Contratar a VPS com Evolution API pré-instalada acessando o link da descrição/comentário fixado, que leva à seção do Evolution API dentro da HostGator",
+      "evidence_refs": [
+       "EV-0016",
+       "EV-0017"
+      ],
+      "missing_input_action": null,
+      "name": "Instalar e contratar a VPS com Evolution API",
+      "order_key": 1,
+      "required_inputs": [
+       "link da descrição ou comentário fixado"
+      ]
+     },
+     {
+      "action": "Criar a instância no Evolution API e conectar o número do WhatsApp via QR Code",
+      "evidence_refs": [
+       "EV-0039",
+       "EV-0040",
+       "EV-0042"
+      ],
+      "missing_input_action": null,
+      "name": "Criar uma instância e conectar o número do WhatsApp",
+      "order_key": 2,
+      "required_inputs": [
+       "acesso ao manager do Evolution API",
+       "celular com WhatsApp"
+      ]
+     },
+     {
+      "action": "Dar ao Cloud Code acesso ao local do Evolution e passar documentações para ele entender como funciona a API do Evolution",
+      "evidence_refs": [
+       "EV-0047",
+       "EV-0048",
+       "EV-0049"
+      ],
+      "missing_input_action": null,
+      "name": "Ir para o VS Code e configurar o Cloud Code",
+      "order_key": 3,
+      "required_inputs": [
+       "VPS Evolution e número conectados",
+       "documentações da API do Evolution"
+      ]
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": [
+    "CL-0007",
+    "CL-0018"
+   ]
+  },
+  {
+   "claim_dependencies": [
+    "CL-0008",
+    "CL-0011",
+    "CL-0012",
+    "CL-0013",
+    "CL-0014"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0016",
+    "EV-0017",
+    "EV-0025",
+    "EV-0027",
+    "EV-0030",
+    "EV-0031",
+    "EV-0032"
+   ],
+   "local_id": "WF-0002",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-002"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-002"
+   },
+   "sealed_claim_refs": [
+    "CL-0008",
+    "CL-0011",
+    "CL-0012",
+    "CL-0013",
+    "CL-0014"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "589deba1a85ae741ee753517613d683b4aef35e231fdd44aaf89731f3d33467f",
+   "structure": {
+    "name": "Contratação da VPS HostGator com Evolution API pré-instalada",
+    "steps": [
+     {
+      "action": "Acessar o link da descrição/comentário fixado que leva à seção do Evolution API dentro da HostGator",
+      "evidence_refs": [
+       "EV-0016",
+       "EV-0017"
+      ],
+      "missing_input_action": null,
+      "name": "Acessar a página do Evolution API na HostGator",
+      "order_key": 1,
+      "required_inputs": [
+       "link da descrição ou comentário fixado"
+      ]
+     },
+     {
+      "action": "Escolher o plano entre os tipos de servidores exibidos (dois, quatro, oito nos padrões, ou de alto desempenho); se for usar muito, pegar peça melhor como a NVMe quatro",
+      "evidence_refs": [
+       "EV-0019",
+       "EV-0021",
+       "EV-0022",
+       "EV-0023"
+      ],
+      "missing_input_action": null,
+      "name": "Escolher o plano",
+      "order_key": 2,
+      "required_inputs": []
+     },
+     {
+      "action": "Continuar para carrinho e conferir se o plano está correto e se consta Evolution API; manter o servidor em São Paulo, ou verificar o do México se estiver fora do Brasil",
+      "evidence_refs": [
+       "EV-0024",
+       "EV-0025",
+       "EV-0026"
+      ],
+      "missing_input_action": null,
+      "name": "Conferir no carrinho",
+      "order_key": 3,
+      "required_inputs": []
+     },
+     {
+      "action": "Continuar para verificação, colocar a conta da HostGator (podendo criar a conta com o Google) e preencher os dados pedidos",
+      "evidence_refs": [
+       "EV-0027",
+       "EV-0028"
+      ],
+      "missing_input_action": null,
+      "name": "Continuar para verificação e fazer login",
+      "order_key": 4,
+      "required_inputs": [
+       "conta HostGator ou conta Google"
+      ]
+     },
+     {
+      "action": "Selecionar a forma de pagamento (cartão de crédito, boleto, PayPal, Pix), parcelar se preferir, e clicar em realizar pagamento",
+      "evidence_refs": [
+       "EV-0029",
+       "EV-0030"
+      ],
+      "missing_input_action": null,
+      "name": "Realizar pagamento",
+      "order_key": 5,
+      "required_inputs": []
+     },
+     {
+      "action": "Acessar o e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution; copiar e salvar o token em algum local",
+      "evidence_refs": [
+       "EV-0030",
+       "EV-0031",
+       "EV-0032"
+      ],
+      "missing_input_action": null,
+      "name": "Receber e-mail e salvar o token",
+      "order_key": 6,
+      "required_inputs": [
+       "e-mail da HostGator"
+      ]
+     },
+     {
+      "action": "No portal, ir em VPS e dedicados, ver o servidor e, no acesso rápido, clicar em Evolution API",
+      "evidence_refs": [
+       "EV-0032",
+       "EV-0033",
+       "EV-0034",
+       "EV-0035"
+      ],
+      "missing_input_action": null,
+      "name": "Acessar o painel e abrir o Evolution API",
+      "order_key": 7,
+      "required_inputs": [
+       "acesso ao portal HostGator"
+      ]
+     },
+     {
+      "action": "Digitar barra manager no final da URL quando aparecer a tela que parece um erro, e colar a chave de API global do e-mail para conectar",
+      "evidence_refs": [
+       "EV-0036",
+       "EV-0038",
+       "EV-0039"
+      ],
+      "missing_input_action": null,
+      "name": "Acessar o manager",
+      "order_key": 8,
+      "required_inputs": [
+       "chave de API global recebida no e-mail"
+      ]
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0018",
+    "CL-0019",
+    "CL-0020",
+    "CL-0021",
+    "CL-0022"
+   ],
+   "claim_dependency_status": "UNSATISFIED_BY_ENTAILMENT",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0040",
+    "EV-0041",
+    "EV-0042",
+    "EV-0043",
+    "EV-0044",
+    "EV-0045",
+    "EV-0046"
+   ],
+   "local_id": "WF-0003",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-01",
+     "temporary_candidate_id": "TX-003"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-01",
+    "temporary_candidate_id": "TX-003"
+   },
+   "sealed_claim_refs": [
+    "CL-0019",
+    "CL-0020",
+    "CL-0021",
+    "CL-0022"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "b01a3fc5022cf90f5f1cbdf751b2d15034012a67907e556db4f890498a8b36f9",
+   "structure": {
+    "name": "Criar instância e conectar o número do WhatsApp no Evolution API",
+    "prerequisites": [
+     "Ter acessado o manager do Evolution API com a chave de API global"
+    ],
+    "steps": [
+     {
+      "action": "Clicar em instância, colocar um nome (ex.: YouTube teste) e salvar; ela aparece como desconectada",
+      "evidence_refs": [
+       "EV-0040",
+       "EV-0041"
+      ],
+      "missing_input_action": null,
+      "name": "Criar a instância",
+      "order_key": 1,
+      "required_inputs": [
+       "nome da instância"
+      ]
+     },
+     {
+      "action": "Ir em configurações e gerar QR Code para escanear pelo celular como se fosse um WhatsApp Web",
+      "evidence_refs": [
+       "EV-0042",
+       "EV-0043"
+      ],
+      "missing_input_action": null,
+      "name": "Gerar QR Code",
+      "order_key": 2,
+      "required_inputs": []
+     },
+     {
+      "action": "No iPhone, ir em configurações, dispositivos conectados, clicar em conectar dispositivo e escanear o QR Code (no Android, apresentado como provavelmente a mesma coisa)",
+      "evidence_refs": [
+       "EV-0043",
+       "EV-0044",
+       "EV-0045"
+      ],
+      "missing_input_action": null,
+      "name": "Escanear pelo celular",
+      "order_key": 3,
+      "required_inputs": [
+       "celular conectado com WhatsApp"
+      ]
+     },
+     {
+      "action": "Verificar que aparecem nome, foto de perfil e número de telefone, indicando que está conectado e o segundo passo completo",
+      "evidence_refs": [
+       "EV-0045",
+       "EV-0046"
+      ],
+      "missing_input_action": null,
+      "name": "Confirmar conexão",
+      "order_key": 4,
+      "required_inputs": []
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": [
+    "CL-0018"
+   ]
+  },
+  {
+   "claim_dependencies": [
+    "CL-0028",
+    "CL-0031",
+    "CL-0032",
+    "CL-0033",
+    "CL-0034"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0063",
+    "EV-0064",
+    "EV-0065",
+    "EV-0068",
+    "EV-0069",
+    "EV-0070",
+    "EV-0071",
+    "EV-0072",
+    "EV-0073",
+    "EV-0074"
+   ],
+   "local_id": "WF-0004",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-001"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-001"
+   },
+   "sealed_claim_refs": [
+    "CL-0028",
+    "CL-0031",
+    "CL-0032",
+    "CL-0033",
+    "CL-0034"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "de8fc6932233b1416cd61bd1f7421cbbc0e7bd3bc16d4dc43d1eb994f8224968",
+   "structure": {
+    "name": "Configurar credenciais do Evolution no projeto e testar a conexão",
+    "prerequisites": [
+     "ter o Cloud Code no VS Code",
+     "ter a URL, a chave API e o nome da instância do Evolution"
+    ],
+    "steps": [
+     {
+      "action": "Baixar o material, descompactar e colocar os arquivos no projeto",
+      "evidence_refs": [
+       "EV-0063"
+      ],
+      "name": "Baixar e descompactar o material",
+      "order_key": 1
+     },
+     {
+      "action": "Abrir o arquivo {ponto} env, onde se colocam as credenciais do Evolution: URL, chave API global e nome da instância",
+      "evidence_refs": [
+       "EV-0065"
+      ],
+      "name": "Abrir o arquivo {ponto} env",
+      "order_key": 2
+     },
+     {
+      "action": "Colar a URL (https e o número IP), tirar a barra do final e dar Ctrl S para salvar",
+      "evidence_refs": [
+       "EV-0068",
+       "EV-0069"
+      ],
+      "name": "Configurar a URL",
+      "order_key": 3,
+      "required_inputs": [
+       "URL do Evolution (https e número IP)"
+      ]
+     },
+     {
+      "action": "Colocar a chave API recebida por e-mail e salvar com Ctrl S",
+      "evidence_refs": [
+       "EV-0069",
+       "EV-0070"
+      ],
+      "name": "Configurar a chave API",
+      "order_key": 4,
+      "required_inputs": [
+       "chave API recebida no e-mail"
+      ]
+     },
+     {
+      "action": "Colar o nome da instância do Evolution (Ctrl V) e salvar (Ctrl S)",
+      "evidence_refs": [
+       "EV-0070",
+       "EV-0071"
+      ],
+      "name": "Configurar a instância",
+      "order_key": 5,
+      "required_inputs": [
+       "nome da instância do Evolution"
+      ]
+     },
+     {
+      "action": "Perguntar ao Cloud Code 'Quais instâncias tenho conectado no Evolution?'; se ele mostrar o nome da instância, a conexão está funcionando",
+      "evidence_refs": [
+       "EV-0071",
+       "EV-0072",
+       "EV-0073",
+       "EV-0074"
+      ],
+      "name": "Testar a conexão",
+      "order_key": 6
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0036"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0075",
+    "EV-0076"
+   ],
+   "local_id": "WF-0005",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-006"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-006"
+   },
+   "sealed_claim_refs": [
+    "CL-0036"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "c5853c59ad344c2dd43733552728b7bebf21ed31e1738180bff02424d115eb7b",
+   "structure": {
+    "name": "Sequência geral de montagem do ambiente até as requisições ao Cloud Code",
+    "steps": [
+     {
+      "action": "Contratar a VPS",
+      "evidence_refs": [
+       "EV-0075"
+      ],
+      "name": "Contratar a VPS",
+      "order_key": 1
+     },
+     {
+      "action": "Colocar o Evolution",
+      "evidence_refs": [
+       "EV-0075"
+      ],
+      "name": "Colocar o Evolution",
+      "order_key": 2
+     },
+     {
+      "action": "Conectar o WhatsApp",
+      "evidence_refs": [
+       "EV-0075"
+      ],
+      "name": "Conectar o WhatsApp",
+      "order_key": 3
+     },
+     {
+      "action": "Configurar o VS Code",
+      "evidence_refs": [
+       "EV-0075"
+      ],
+      "name": "Configurar o VS Code",
+      "order_key": 4
+     },
+     {
+      "action": "Fazer as requisições para o Cloud Code",
+      "evidence_refs": [
+       "EV-0075",
+       "EV-0076"
+      ],
+      "name": "Fazer as requisições para o Cloud Code",
+      "order_key": 5
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0040",
+    "CL-0041",
+    "CL-0042"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0083",
+    "EV-0084",
+    "EV-0085",
+    "EV-0086",
+    "EV-0087"
+   ],
+   "local_id": "WF-0006",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-007"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-007"
+   },
+   "sealed_claim_refs": [
+    "CL-0040",
+    "CL-0041",
+    "CL-0042"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "23b6d547f3471c886a130fe69bbf572ce1833c3462b2c76a9becebee6c20d0b1",
+   "structure": {
+    "name": "Gerar dashboard HTML de estatísticas dos membros de um grupo",
+    "steps": [
+     {
+      "action": "Pedir ao Cloud um relatório em HTML com estatísticas dos membros do grupo, com gráfico das pessoas de acordo com o estado, deixando-o livre para incluir outras informações interessantes",
+      "evidence_refs": [
+       "EV-0083",
+       "EV-0084",
+       "EV-0085",
+       "EV-0086"
+      ],
+      "name": "Pedir o relatório",
+      "order_key": 1,
+      "required_inputs": [
+       "nome do grupo"
+      ]
+     },
+     {
+      "action": "Aguardar a geração; o Cloud traz o painel HTML e abre o navegador automaticamente",
+      "evidence_refs": [
+       "EV-0086",
+       "EV-0087"
+      ],
+      "name": "Aguardar e visualizar o resultado",
+      "order_key": 2
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0039"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0076",
+    "EV-0077",
+    "EV-0078",
+    "EV-0081",
+    "EV-0082"
+   ],
+   "local_id": "WF-0007",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-008"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-008"
+   },
+   "sealed_claim_refs": [
+    "CL-0039"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "c4cba904ab439b0bcc84ebadb4da8dd7236c65a82f772da217dcee16f318fd53",
+   "structure": {
+    "name": "Listar grupos dos quais faz parte e nos quais é admin",
+    "steps": [
+     {
+      "action": "Pedir ao Cloud uma lista de todos os grupos dos quais você faz parte e também dos grupos em que você é admin",
+      "evidence_refs": [
+       "EV-0077",
+       "EV-0078"
+      ],
+      "name": "Pedir a lista",
+      "order_key": 1
+     },
+     {
+      "action": "Aguardar o resultado; o Cloud retorna nome do grupo, quantidade de membros e se você é admin ou não",
+      "evidence_refs": [
+       "EV-0078",
+       "EV-0081",
+       "EV-0082"
+      ],
+      "name": "Aguardar o resultado",
+      "order_key": 2
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0043"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0096",
+    "EV-0097",
+    "EV-0098"
+   ],
+   "local_id": "WF-0008",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-02",
+     "temporary_candidate_id": "TX-009"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-02",
+    "temporary_candidate_id": "TX-009"
+   },
+   "sealed_claim_refs": [
+    "CL-0043"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "77831cfda67f5d44d6f5f3fee820e45eb78be5e4cad0595a6d564b34af0a232a",
+   "structure": {
+    "name": "Gerar planilha Excel com nome e contato dos membros do grupo",
+    "steps": [
+     {
+      "action": "Pedir ao Cloud que crie uma planilha para o Excel contendo nome e contato de todos os membros do grupo",
+      "evidence_refs": [
+       "EV-0096",
+       "EV-0097"
+      ],
+      "name": "Pedir a planilha",
+      "order_key": 1,
+      "required_inputs": [
+       "grupo alvo"
+      ]
+     },
+     {
+      "action": "A partir da planilha, fazer alguma campanha ou algo do tipo",
+      "evidence_refs": [
+       "EV-0097",
+       "EV-0098"
+      ],
+      "name": "Usar a planilha",
+      "order_key": 2
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0050",
+    "CL-0051",
+    "CL-0053",
+    "CL-0054",
+    "CL-0056"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "SCOPE_UNSTATED"
+   ],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0101",
+    "EV-0102",
+    "EV-0103",
+    "EV-0104",
+    "EV-0105",
+    "EV-0110",
+    "EV-0111",
+    "EV-0112",
+    "EV-0113",
+    "EV-0115",
+    "EV-0116"
+   ],
+   "local_id": "WF-0009",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-B-03",
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-B-03",
+    "temporary_candidate_id": "TX-004"
+   },
+   "sealed_claim_refs": [
+    "CL-0050",
+    "CL-0051",
+    "CL-0053",
+    "CL-0054",
+    "CL-0056"
+   ],
+   "source_id": "MS002-SRC-B",
+   "structural_key": "865ecb6a227a3083d666789d88877b4ada83f22a1016536a8774d9215b23553b",
+   "structure": {
+    "exceptions": [],
+    "name": "Criar grupos para lançamento, corrigir erros, gerar planilha e disparar mensagem",
+    "prerequisites": [
+     "Outro número/conta para ser adicionada ao grupo"
+    ],
+    "steps": [
+     {
+      "action": "Pedir ao agente que crie três grupos para um lançamento, com nome \"Lançamento teste YouTube #\" mais o número do grupo",
+      "evidence_refs": [
+       "EV-0101",
+       "EV-0102"
+      ],
+      "missing_input_action": null,
+      "name": "Pedir criação dos grupos",
+      "order_key": 1,
+      "required_inputs": [
+       "Nome padrão do grupo",
+       "Quantidade de grupos"
+      ]
+     },
+     {
+      "action": "Ao aparecer o problema de que é preciso pelo menos uma outra pessoa, informar um outro número para ser adicionado nos grupos e pedir para colocá-lo como admin",
+      "evidence_refs": [
+       "EV-0103",
+       "EV-0104",
+       "EV-0105"
+      ],
+      "missing_input_action": null,
+      "name": "Fornecer outra pessoa exigida pela restrição",
+      "order_key": 2,
+      "required_inputs": [
+       "Outro número de telefone"
+      ]
+     },
+     {
+      "action": "Informar ao agente que ele duplicou os grupos e que o título contém ponto de interrogação no lugar do cedilha, e pedir para corrigir",
+      "evidence_refs": [
+       "EV-0110",
+       "EV-0111"
+      ],
+      "missing_input_action": null,
+      "name": "Corrigir duplicados e caracteres",
+      "order_key": 3,
+      "required_inputs": []
+     },
+     {
+      "action": "Verificar o arquivo de planilha gerado em CSV e XLSX, que pode ser subido no Google Sheets",
+      "evidence_refs": [
+       "EV-0112",
+       "EV-0113"
+      ],
+      "missing_input_action": null,
+      "name": "Conferir a planilha gerada",
+      "order_key": 4,
+      "required_inputs": []
+     },
+     {
+      "action": "Pedir o envio de uma mensagem de teste apenas para esses três grupos, marcando todo mundo",
+      "evidence_refs": [
+       "EV-0115",
+       "EV-0116"
+      ],
+      "missing_input_action": null,
+      "name": "Enviar mensagem aos grupos",
+      "order_key": 5,
+      "required_inputs": [
+       "Lista dos grupos alvo"
+      ]
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  }
+ ]
+}

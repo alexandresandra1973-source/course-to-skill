@@ -2,7 +2,7 @@
  "anti_pattern_candidates": [
   {
    "claim_dependencies": [
-    "CL-0017"
+    "CL-0015"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -18,27 +18,27 @@
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-002"
+     "temporary_candidate_id": "TX-007"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-002"
+    "temporary_candidate_id": "TX-007"
    },
    "sealed_claim_refs": [
-    "CL-0017"
+    "CL-0015"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "2ba76008e90948cbcc5ecc6bf08057f98d7056f070a163e061fa7d475cdff7c1",
+   "structural_key": "a25cc67eca16a6de7d213c5d957ece0de53b3998954703bf8a918f7983768c2b",
    "structure": {
     "conditions": [
      "Workflow no n8n que recebe dados via Webhook"
     ],
     "do_not": [
-     "Usar diretamente os dados que vêm no node Webhook"
+     "Usar diretamente os dados que vêm no webhook"
     ],
-    "why": "A fonte diz que sempre se adiciona um node Set depois do Webhook para organizar os dados de uma forma melhor"
+    "why": "Segundo a fonte, nunca se usa diretamente os dados do webhook; sempre se adiciona um node Set depois do Webhook para organizá-los de uma forma melhor"
    },
    "unsealed_claim_dependencies": []
   }
@@ -46,7 +46,7 @@
  "rule_candidates": [
   {
    "claim_dependencies": [
-    "CL-0017"
+    "CL-0015"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -64,183 +64,6 @@
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-001"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-001"
-   },
-   "sealed_claim_refs": [
-    "CL-0017"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "99911355996a3bea3737c0c0fa846f512ca8bc963fc814dfba5de9766cac207d",
-   "structure": {
-    "action": "Adicionar um node Set depois do Webhook para organizar os dados de uma forma melhor",
-    "condition": "Sempre (a fonte afirma 'nós nunca usamos diretamente os dados que vem no web Hook')",
-    "do_not": [
-     "Usar diretamente os dados que vêm no Webhook"
-    ],
-    "name": "Sempre adicionar um node Set depois do Webhook",
-    "precedence": null,
-    "trigger": "Quando os dados chegam de um node Webhook no n8n"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0010"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0013",
-    "EV-0014",
-    "EV-0016"
-   ],
-   "local_id": "R-0002",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-003"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-003"
-   },
-   "sealed_claim_refs": [
-    "CL-0010"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "9bef8b798f29b2099fd6f573f9843a5924f8d88e1cce3e76743a1f16c7edab0b",
-   "structure": {
-    "action": "Copiar a chave e colar/salvar num bloco de notas imediatamente",
-    "condition": "A chave só pode ser vista nessa tela",
-    "do_not": [
-     "Sair da tela sem copiar a chave"
-    ],
-    "name": "Copiar e salvar a chave de API no momento em que ela é exibida",
-    "precedence": null,
-    "trigger": "Ao criar uma nova chave de API no Groq ou na OpenAI e a chave ser exibida"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0015"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0021",
-    "EV-0022"
-   ],
-   "local_id": "R-0003",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-004"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-004"
-   },
-   "sealed_claim_refs": [
-    "CL-0015"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "7e7f00cca64e9e39c52355546f3db91a34e0c49ce79d83ab95e525397ee0cd74",
-   "structure": {
-    "action": "Verificar que enabled, base 64 e o evento messages upsert estejam ativos e clicar em salvar",
-    "condition": "Após colar a URL do webhook",
-    "do_not": [],
-    "name": "Ativar as três opções do webhook na Evolution",
-    "precedence": null,
-    "trigger": "Ao configurar o webhook na sessão da Evolution"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0012"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0017",
-    "EV-0018"
-   ],
-   "local_id": "R-0004",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-005"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-005"
-   },
-   "sealed_claim_refs": [
-    "CL-0012"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "40aff0faa05f0d9ccce86361670a68677164ade9ccbd473eb925ebde6542046c",
-   "structure": {
-    "action": "Ir em settings > community nodes, clicar em Install, digitar 'n8n nodes Evolution api' e clicar em instalar",
-    "condition": "Se os nodes da Evolution API não estiverem instalados",
-    "do_not": [],
-    "name": "Verificar/instalar os community nodes da Evolution API antes de criar o workflow",
-    "precedence": null,
-    "trigger": "Antes de criar o workflow no n8n"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0021"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0029",
-    "EV-0030"
-   ],
-   "local_id": "R-0005",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
      "temporary_candidate_id": "TX-006"
     }
    ],
@@ -250,115 +73,25 @@
     "temporary_candidate_id": "TX-006"
    },
    "sealed_claim_refs": [
-    "CL-0021"
+    "CL-0015"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "f7efe7eae1e52450ee6f5f04d42a0f20393b5b35de59aee1e252924ca16710b3",
+   "structural_key": "011b247caecd4ccd00174c4e294432f5c550a34f2fcde0b1f1edb5ab32a3b0a8",
    "structure": {
-    "action": "Colocar um node Set vazio e, depois dele, colocar o AI Agent",
-    "condition": "A fonte justifica apenas como 'vai ser melhor pra gente no futuro'",
-    "do_not": [],
-    "name": "Inserir um Set vazio antes do AI Agent",
-    "precedence": null,
-    "trigger": "Antes de adicionar o node AI Agent no workflow"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0024"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED",
-    "SCOPE_UNSTATED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0036",
-    "EV-0037"
-   ],
-   "local_id": "R-0006",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-007"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-007"
-   },
-   "sealed_claim_refs": [
-    "CL-0024"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "f29e1328f1821b555be964b9bfe4cb0bb59543dc2b99ef8eb5b2e66f8c54a1db",
-   "structure": {
-    "action": "Deixar o tipo de agente em Tools Agent",
-    "condition": "A fonte indica que Tools Agent é o mais avançado e tem acesso a ferramentas",
-    "do_not": [],
-    "name": "Usar Tools Agent como tipo de agente",
-    "precedence": null,
-    "trigger": "Ao configurar o node AI Agent no n8n"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0025",
-    "CL-0026"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0037",
-    "EV-0038",
-    "EV-0039"
-   ],
-   "local_id": "R-0007",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-008"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-008"
-   },
-   "sealed_claim_refs": [
-    "CL-0025",
-    "CL-0026"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "c264b86cee6d291dc4764f908ee0ad0aa95c588bf5fc041f2eeedebb758183cc",
-   "structure": {
-    "action": "Tirar a opção 'connected chat trigger', mudar para 'definir abaixo' e arrastar o campo mensagem dos dados anteriores para o campo text do AI Agent",
-    "condition": "O workflow não usa um chat trigger conectado, e sim dados vindos do Webhook",
+    "action": "Adicionar um node Set depois do Webhook para organizar os dados de uma forma melhor",
+    "condition": null,
     "do_not": [
-     "Manter a opção 'connected chat trigger'"
+     "Usar diretamente os dados que vêm no Webhook"
     ],
-    "name": "Definir a fonte do prompt manualmente e mapear a mensagem",
+    "name": "Sempre adicionar um node Set depois do Webhook",
     "precedence": null,
-    "trigger": "Ao configurar o AI Agent em 'source for prompt'"
+    "trigger": "Dados chegam pelo node Webhook"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0027"
+    "CL-0019"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -368,10 +101,9 @@
    ],
    "entity_kind": "rule_candidate",
    "evidence_refs": [
-    "EV-0039",
-    "EV-0040"
+    "EV-0030"
    ],
-   "local_id": "R-0008",
+   "local_id": "R-0002",
    "markers": [],
    "merged_from": [
     {
@@ -385,68 +117,24 @@
     "temporary_candidate_id": "TX-009"
    },
    "sealed_claim_refs": [
-    "CL-0027"
+    "CL-0019"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "b9f93aea121cc6f79c970a3ef70539cf3cc252924a0ad4c7395013a823766449",
+   "structural_key": "1be062f4fa3366cf4570aacccc654b8221c8babfd7fd4986197225faf90cff3e",
    "structure": {
-    "action": "Em add option, adicionar a opção System message e escrever ali o prompt do agente",
-    "condition": "Quando é preciso dizer ao agente o que ele deve fazer",
+    "action": "Colocar um node Set vazio e, depois dele, colocar o AI Agent",
+    "condition": null,
     "do_not": [],
-    "name": "Adicionar System message para passar o prompt ao agente",
+    "name": "Colocar um Set vazio antes do AI Agent",
     "precedence": null,
-    "trigger": "Ao configurar o AI Agent no n8n"
+    "trigger": "Antes de criar o agente de IA no workflow"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0006"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [
-    "PRECEDENCE_UNDEFINED"
-   ],
-   "entity_kind": "rule_candidate",
-   "evidence_refs": [
-    "EV-0008",
-    "EV-0009",
-    "EV-0010"
-   ],
-   "local_id": "R-0009",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-010"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-010"
-   },
-   "sealed_claim_refs": [
-    "CL-0006"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "56e753e2de7f4feb8e0527d98971db524a729396a13ce3e5e420f23b895bfe3c",
-   "structure": {
-    "action": "Ativar a opção do Redis Commander, painel de gerenciamento que permite visualizar, editar ou apagar dados pelo navegador",
-    "condition": "Contexto de desenvolvimento",
-    "do_not": [],
-    "name": "Ativar o Redis Commander para desenvolvimento",
-    "precedence": null,
-    "trigger": "Após instalar o Redis no EasyPanel"
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0034",
-    "CL-0035"
+    "CL-0035",
+    "CL-0036"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -461,7 +149,7 @@
     "EV-0055",
     "EV-0056"
    ],
-   "local_id": "R-0010",
+   "local_id": "R-0003",
    "markers": [],
    "merged_from": [
     {
@@ -475,28 +163,25 @@
     "temporary_candidate_id": "TX-001"
    },
    "sealed_claim_refs": [
-    "CL-0034",
-    "CL-0035"
+    "CL-0035",
+    "CL-0036"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "b9d096ecf522c8625e907c363bb4f00f473182338751be685b4f55eb115ef786",
+   "structural_key": "3dcd2ddd89a63b37c113ca313215e0e35fcdcabd825532c6bcfeb726505f9c18",
    "structure": {
-    "action": "Usar um valor único para cada pessoa como chave; o número da pessoa é usado por ser único, assim como o CPF",
-    "condition": "É preciso informar uma chave que vincule a conversa àquela pessoa e permita trazer as conversas de volta",
+    "action": "Informar como chave um valor único para cada pessoa; usar o número da pessoa, pois é único para cada pessoa (assim como o CPF) e nunca haverá duas pessoas com número de telefone igual",
+    "condition": "É preciso vincular o histórico à pessoa e conseguir trazer as conversas de volta",
     "do_not": [],
-    "exceptions": [],
-    "name": "Session ID deve ser valor único por pessoa (número de telefone)",
+    "name": "Session ID deve ser valor único por pessoa (usar o número)",
     "precedence": null,
-    "prerequisites": [
-     "Node Redis Chat Memory adicionado e credencial configurada"
-    ],
+    "prerequisites": [],
     "trigger": "Ao configurar o session ID da memória de chat (Redis Chat Memory)"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0036"
+    "CL-0037"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -510,7 +195,7 @@
     "EV-0057",
     "EV-0058"
    ],
-   "local_id": "R-0011",
+   "local_id": "R-0004",
    "markers": [],
    "merged_from": [
     {
@@ -524,25 +209,24 @@
     "temporary_candidate_id": "TX-002"
    },
    "sealed_claim_refs": [
-    "CL-0036"
+    "CL-0037"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "8ff6434adc58f3035c488134da58a5f5234e51209dd97e88683365e204045acf",
+   "structural_key": "f6d39b2408c8fd6b17cfd17b44620c7e4763cea92eec362210d86111a823a31b",
    "structure": {
-    "action": "Deixar zero para durar para sempre; colocar 3600 segundos para durar 1 hora",
-    "condition": "Se quiser que a lista de mensagens dure para sempre; se quiser que dure apenas 1 hora",
+    "action": "Deixar zero para durar para sempre; no exemplo foi colocado 3600 segundos para durar 1 hora",
+    "condition": "Se quiser que a lista de mensagens dure para sempre",
     "do_not": [],
-    "exceptions": [],
     "name": "Configuração do session time to leave",
     "precedence": null,
     "prerequisites": [],
-    "trigger": "Ao configurar o session time to leave da memória de chat"
+    "trigger": "Ao configurar o campo session time to leave"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0044"
+    "CL-0038"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -552,11 +236,10 @@
    ],
    "entity_kind": "rule_candidate",
    "evidence_refs": [
-    "EV-0071",
-    "EV-0072",
-    "EV-0073"
+    "EV-0058",
+    "EV-0059"
    ],
-   "local_id": "R-0012",
+   "local_id": "R-0005",
    "markers": [],
    "merged_from": [
     {
@@ -570,29 +253,71 @@
     "temporary_candidate_id": "TX-003"
    },
    "sealed_claim_refs": [
-    "CL-0044"
+    "CL-0038"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "51800316f371e5def47626dabdb4fd8c7f4cf547cc2cd63d67a85325b7c99705",
+   "structural_key": "22d1ed2607e97218c7f4c95e8b888cc7c9013bd50cda37a14c17f22ff7059d26",
    "structure": {
-    "action": "Colocar no campo mensagem o output do node do AI Agent (a resposta que o agente de IA deu)",
-    "condition": "Quando se quer enviar a resposta gerada pela IA ao WhatsApp",
+    "action": "Definir o número de mensagens do histórico enviadas ao agente como contexto; no exemplo foi aumentado de cinco para 10",
+    "condition": "O padrão vem em cinco",
     "do_not": [],
-    "exceptions": [],
-    "name": "Usar o output do node AI Agent no campo mensagem do envio",
+    "name": "Ajuste do context window length",
     "precedence": null,
-    "prerequisites": [
-     "Node do AI Agent no fluxo"
-    ],
-    "trigger": "Ao configurar o campo mensagem do node da Evolution de enviar texto"
+    "prerequisites": [],
+    "trigger": "Ao configurar o context window length da memória de chat"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0050",
-    "CL-0051",
-    "CL-0052"
+    "CL-0049"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [
+    "PRECEDENCE_UNDEFINED"
+   ],
+   "entity_kind": "rule_candidate",
+   "evidence_refs": [
+    "EV-0071",
+    "EV-0072",
+    "EV-0073"
+   ],
+   "local_id": "R-0006",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-C-02",
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-C-02",
+    "temporary_candidate_id": "TX-004"
+   },
+   "sealed_claim_refs": [
+    "CL-0049"
+   ],
+   "source_id": "MS002-SRC-C",
+   "structural_key": "7b3dadc8a81339fc5d5871fbf8b5559c8b375d9022d90710ca7328ce1b261931",
+   "structure": {
+    "action": "Colocar no campo mensagem o output do node do AI Agent (a resposta que o agente de IA deu) para ser enviado direto ao WhatsApp",
+    "condition": null,
+    "do_not": [],
+    "name": "Preencher campo mensagem com o output do AI Agent",
+    "precedence": null,
+    "prerequisites": [],
+    "trigger": "Ao configurar o campo mensagem do nó Evolution de enviar texto"
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0055",
+    "CL-0056",
+    "CL-0057"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -607,7 +332,7 @@
     "EV-0083",
     "EV-0084"
    ],
-   "local_id": "R-0013",
+   "local_id": "R-0007",
    "markers": [],
    "merged_from": [
     {
@@ -621,30 +346,30 @@
     "temporary_candidate_id": "TX-001"
    },
    "sealed_claim_refs": [
-    "CL-0050",
-    "CL-0051",
-    "CL-0052"
+    "CL-0055",
+    "CL-0056",
+    "CL-0057"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "6949a17438948426742618971468a4c999113009658891e6daa63e038325a0a0",
+   "structural_key": "8ef557c39871a941656fe588d659b0bc2f8adc81ed9acb297dd4bd116289f694",
    "structure": {
-    "action": "Inserir um node set vazio (node fake) no meio do fluxo para que a referência já venha indicando de qual node vem o dado, em vez de apenas json.message",
-    "condition": "Quando os dados são arrastados de um node imediatamente anterior, a referência vem como json.nome_do_campo",
+    "action": "Inserir um node fake (set vazio) no meio do fluxo para que a referência já traga a indicação de qual node vem o dado, em vez de apenas json.message",
+    "condition": "Quando o dado vem de apenas um node antes, o n8n traz a referência como json.nome do campo",
     "do_not": [
-     "Deixar a referência apenas como json.message quando o workflow for evoluído mais pra frente"
+     "Deixar a referência apenas como json.message quando o workflow for evoluído depois"
     ],
     "exceptions": [],
-    "name": "Inserir node set vazio (node fake) para referenciar o node de origem do dado",
+    "name": "Inserir node fake (set vazio) para referência de dado qualificada por node",
     "precedence": null,
     "prerequisites": [],
-    "trigger": "Ao montar um workflow no n8n que será evoluído mais pra frente como base para próximos vídeos"
+    "trigger": "Ao montar um workflow no n8n que será evoluído/usado como base depois"
    },
    "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0059",
-    "CL-0060"
+    "CL-0064",
+    "CL-0065"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -657,7 +382,7 @@
     "EV-0092",
     "EV-0093"
    ],
-   "local_id": "R-0014",
+   "local_id": "R-0008",
    "markers": [],
    "merged_from": [
     {
@@ -671,24 +396,24 @@
     "temporary_candidate_id": "TX-004"
    },
    "sealed_claim_refs": [
-    "CL-0059",
-    "CL-0060"
+    "CL-0064",
+    "CL-0065"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "75aa8fa0fa15a667192439727addce49cedba35ea9b74745b722090cb3ff078c",
+   "structural_key": "c32e21cfa66bf2bc68c6c1c8c85c63c3ccfebcc71f57d2d5ebb5e337a48ff1bc",
    "structure": {
-    "action": "Abrir o aplicativo do Docker e parar; para iniciar de novo, abrir o aplicativo do Docker e clicar para iniciar todos",
-    "condition": "O ambiente já foi criado pelo script na primeira vez",
+    "action": "Abrir o aplicativo do docker e parar; para iniciar de novo, abrir o aplicativo do docker e clicar para iniciar todos",
+    "condition": null,
     "do_not": [
-     "Utilizar aquele script novamente; ele só se utiliza da primeira vez"
+     "Executar o script novamente após a primeira vez"
     ],
     "exceptions": [],
     "name": "Parar e iniciar os contêineres pelo aplicativo do Docker",
     "precedence": null,
     "prerequisites": [
-     "Ter rodado o script de instalação na primeira vez"
+     "Instalação local já realizada com o script na primeira vez"
     ],
-    "trigger": "Quando quiser parar ou iniciar novamente os contêineres do ambiente local"
+    "trigger": "Quando quiser parar ou iniciar novamente os contêineres"
    },
    "unsealed_claim_dependencies": []
   }
@@ -697,8 +422,7 @@
   {
    "claim_dependencies": [
     "CL-0003",
-    "CL-0005",
-    "CL-0006"
+    "CL-0004"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -716,25 +440,24 @@
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-011"
+     "temporary_candidate_id": "TX-001"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-011"
+    "temporary_candidate_id": "TX-001"
    },
    "sealed_claim_refs": [
     "CL-0003",
-    "CL-0005",
-    "CL-0006"
+    "CL-0004"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "b2e5767ab8da069d33f87d49ffaf91f60fd5e002c2522b710e057bd1dd3bda79",
+   "structural_key": "64809209e2ac575006252c9b412a57c59781cae825e4270b7133b0ff34a13123",
    "structure": {
-    "name": "Instalar o Redis na VPS pelo EasyPanel",
+    "name": "Instalar o Redis no EasyPanel",
     "prerequisites": [
-     "Ter uma VPS com EasyPanel"
+     "Ter uma VPS"
     ],
     "steps": [
      {
@@ -751,24 +474,33 @@
        "EV-0006",
        "EV-0007"
       ],
-      "name": "Escolher a opção redis",
+      "name": "Selecionar Redis",
       "order_key": 2
      },
      {
-      "action": "Colocar um nome para o serviço (no exemplo, 'n8n redis') e deixar a senha em branco para gerar uma aleatória",
+      "action": "Colocar um nome pro serviço (no exemplo, n8n redis)",
       "evidence_refs": [
        "EV-0007"
       ],
-      "name": "Nomear o serviço e definir senha",
+      "name": "Nomear o serviço",
       "order_key": 3
      },
      {
-      "action": "Não mexer na versão e clicar em criar",
+      "action": "Deixar a senha em branco para gerar uma aleatória e não mexer na versão",
+      "evidence_refs": [
+       "EV-0007",
+       "EV-0008"
+      ],
+      "name": "Definir senha e versão",
+      "order_key": 4
+     },
+     {
+      "action": "Clicar em criar; o Redis fica instalado no EasyPanel",
       "evidence_refs": [
        "EV-0008"
       ],
-      "name": "Manter versão e criar",
-      "order_key": 4
+      "name": "Criar",
+      "order_key": 5
      },
      {
       "action": "Ativar a opção do Redis Commander, painel de gerenciamento para visualizar, editar ou apagar dados pelo navegador",
@@ -778,7 +510,7 @@
        "EV-0010"
       ],
       "name": "Ativar Redis Commander",
-      "order_key": 5
+      "order_key": 6
      }
     ]
    },
@@ -786,8 +518,8 @@
   },
   {
    "claim_dependencies": [
-    "CL-0009",
-    "CL-0010"
+    "CL-0007",
+    "CL-0008"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -804,25 +536,25 @@
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-012"
+     "temporary_candidate_id": "TX-002"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-012"
+    "temporary_candidate_id": "TX-002"
    },
    "sealed_claim_refs": [
-    "CL-0009",
-    "CL-0010"
+    "CL-0007",
+    "CL-0008"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "e4be53a950d4d542916578e057c0481837dfa516d7b6c4d8bfd7260857e27fa9",
+   "structural_key": "b0877f24eeb634df4228764b17b2c8e26aaa9ca08b4dd5985a3513812faf8c0f",
    "structure": {
     "name": "Obter chave de API no Groq",
     "steps": [
      {
-      "action": "No site do Groq, ir em Dev Console no canto",
+      "action": "No site do Groq, ir em Dev Console no cantinho",
       "evidence_refs": [
        "EV-0012"
       ],
@@ -834,26 +566,34 @@
       "evidence_refs": [
        "EV-0012"
       ],
-      "name": "Fazer login",
+      "name": "Login",
       "order_key": 2
      },
      {
-      "action": "No lado esquerdo, ir em API Keys, clicar para criar uma nova, dar um nome, marcar a caixinha e clicar em submit",
+      "action": "No lado esquerdo, ir em API Keys",
       "evidence_refs": [
        "EV-0012",
        "EV-0013"
       ],
-      "name": "Criar nova API Key",
+      "name": "Abrir API Keys",
       "order_key": 3
      },
      {
-      "action": "Copiar a chave imediatamente e colar num bloco de notas, pois depois de sair da tela não há mais como vê-la",
+      "action": "Clicar para criar uma nova, dar um nome, marcar a caixinha e clicar em submit",
+      "evidence_refs": [
+       "EV-0013"
+      ],
+      "name": "Criar chave",
+      "order_key": 4
+     },
+     {
+      "action": "Copiar a chave imediatamente e colar num bloco de notas, porque depois de sair da tela não tem mais como ver",
       "evidence_refs": [
        "EV-0013",
        "EV-0014"
       ],
       "name": "Copiar e salvar a chave",
-      "order_key": 4
+      "order_key": 5
      }
     ]
    },
@@ -861,12 +601,12 @@
   },
   {
    "claim_dependencies": [
-    "CL-0010",
-    "CL-0011"
+    "CL-0009",
+    "CL-0010"
    ],
-   "claim_dependency_status": "UNSATISFIED_BY_ENTAILMENT",
+   "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "NOT_ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
    "defects": [],
    "entity_kind": "workflow_candidate",
    "evidence_refs": [
@@ -879,24 +619,25 @@
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-013"
+     "temporary_candidate_id": "TX-003"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-013"
+    "temporary_candidate_id": "TX-003"
    },
    "sealed_claim_refs": [
+    "CL-0009",
     "CL-0010"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "26e3a907d154e63977cf0fce49eb43ed4a77a5ecef29292d7ae574f7ebb096c2",
+   "structural_key": "ff90e30620bec21ccff2dc9fcd53a192afb5c85ed2258ccfc4c769d6ea2b3b39",
    "structure": {
     "name": "Obter chave de API na OpenAI",
     "steps": [
      {
-      "action": "Colocar 5 na conta OpenAI para poder gerar uma chave",
+      "action": "Colocar 5 para poder gerar uma chave",
       "evidence_refs": [
        "EV-0014",
        "EV-0015"
@@ -905,33 +646,104 @@
       "order_key": 1
      },
      {
-      "action": "Ir nas configurações, API Keys, clicar para criar uma nova, dar um nome, selecionar de qual projeto ela faz parte e clicar em criar",
+      "action": "Ir nas configurações, em API Keys",
+      "evidence_refs": [
+       "EV-0015"
+      ],
+      "name": "Abrir API Keys",
+      "order_key": 2
+     },
+     {
+      "action": "Clicar para criar uma nova, dar um nome, selecionar de qual projeto ela faz parte e clicar em criar",
       "evidence_refs": [
        "EV-0015",
        "EV-0016"
       ],
-      "name": "Criar nova chave",
-      "order_key": 2
+      "name": "Criar chave",
+      "order_key": 3
      },
      {
-      "action": "Copiar a chave agora e salvar num bloco de notas, porque ao sair da tela não há mais como vê-la",
+      "action": "Copiar a chave agora e salvar num bloco de notas, porque quando sair dessa tela não tem mais como ver",
       "evidence_refs": [
        "EV-0016"
       ],
       "name": "Copiar e salvar a chave",
+      "order_key": 4
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0011"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "local_id": "WF-0004",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-C-01",
+     "temporary_candidate_id": "TX-004"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-C-01",
+    "temporary_candidate_id": "TX-004"
+   },
+   "sealed_claim_refs": [
+    "CL-0011"
+   ],
+   "source_id": "MS002-SRC-C",
+   "structural_key": "771d154d48f5ce1fcaa49adcb30f1a54762a4a7d63ba7a0b7d95514b2db9db59",
+   "structure": {
+    "name": "Verificar/instalar os community nodes da Evolution API no n8n",
+    "prerequisites": [
+     "Fazer isso antes de criar o workflow"
+    ],
+    "steps": [
+     {
+      "action": "Ir em settings > community nodes",
+      "evidence_refs": [
+       "EV-0017"
+      ],
+      "name": "Abrir community nodes",
+      "order_key": 1
+     },
+     {
+      "action": "Ver se os nodes da Evolution API estão instalados",
+      "evidence_refs": [
+       "EV-0017"
+      ],
+      "name": "Verificar instalação",
+      "order_key": 2
+     },
+     {
+      "action": "Se não tiver, clicar em Install, digitar 'n8n nodes Evolution api' e clicar em instalar",
+      "evidence_refs": [
+       "EV-0018"
+      ],
+      "name": "Instalar se necessário",
       "order_key": 3
      }
     ]
    },
-   "unsealed_claim_dependencies": [
-    "CL-0011"
-   ]
+   "unsealed_claim_dependencies": []
   },
   {
    "claim_dependencies": [
-    "CL-0014",
-    "CL-0015",
-    "CL-0016"
+    "CL-0012",
+    "CL-0013",
+    "CL-0014"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -944,31 +756,31 @@
     "EV-0022",
     "EV-0023"
    ],
-   "local_id": "WF-0004",
+   "local_id": "WF-0005",
    "markers": [],
    "merged_from": [
     {
      "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-014"
+     "temporary_candidate_id": "TX-005"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-014"
+    "temporary_candidate_id": "TX-005"
    },
    "sealed_claim_refs": [
-    "CL-0014",
-    "CL-0015",
-    "CL-0016"
+    "CL-0012",
+    "CL-0013",
+    "CL-0014"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "6f671df05ebb657867b115b8f5c1fd5f4f896bbaa6f6eb5ca5968528e45b6f0b",
+   "structural_key": "5929ced36070be33cc3421a23d117d4194b33911b948afaf0f0c8890862901e8",
    "structure": {
     "name": "Configurar o Webhook do n8n com a Evolution API e testar",
     "steps": [
      {
-      "action": "No n8n, adicionar um node de Webhook, configurar o método como POST e copiar a URL de teste",
+      "action": "Adicionar um node de Webhook e configurar o método como POST",
       "evidence_refs": [
        "EV-0020"
       ],
@@ -976,224 +788,46 @@
       "order_key": 1
      },
      {
-      "action": "Na Evolution, clicar na sua sessão, ir em events webhook e colar a URL",
+      "action": "Copiar o URL de teste do webhook",
+      "evidence_refs": [
+       "EV-0020"
+      ],
+      "name": "Copiar URL de teste",
+      "order_key": 2
+     },
+     {
+      "action": "Na Evolution, clicar na sua sessão, ir em events webhook e colar o URL",
       "evidence_refs": [
        "EV-0020",
        "EV-0021"
       ],
       "name": "Colar URL na Evolution",
-      "order_key": 2
+      "order_key": 3
      },
      {
-      "action": "Verificar que enabled, base 64 e o evento messages upsert estejam ativos e clicar em salvar",
+      "action": "Deixar ativas as três opções: enabled, base 64 e o evento messages upsert; clicar em salvar",
       "evidence_refs": [
        "EV-0021",
        "EV-0022"
       ],
-      "name": "Ativar as três opções",
-      "order_key": 3
+      "name": "Ativar opções",
+      "order_key": 4
      },
      {
-      "action": "Voltar ao n8n e clicar para ouvir um evento de teste",
+      "action": "Voltar pro n8n e clicar para ouvir um evento de teste",
       "evidence_refs": [
        "EV-0022"
       ],
       "name": "Ouvir evento de teste",
-      "order_key": 4
+      "order_key": 5
      },
      {
-      "action": "Mandar uma mensagem para você mesmo no seu WhatsApp para os dados chegarem no webhook",
+      "action": "Mandar uma mensagem para você mesmo no WhatsApp e verificar a chegada dos dados",
       "evidence_refs": [
        "EV-0022",
        "EV-0023"
       ],
       "name": "Enviar mensagem de teste",
-      "order_key": 5
-     }
-    ]
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0017",
-    "CL-0018",
-    "CL-0019",
-    "CL-0020"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [],
-   "entity_kind": "workflow_candidate",
-   "evidence_refs": [
-    "EV-0024",
-    "EV-0025",
-    "EV-0026",
-    "EV-0027",
-    "EV-0028",
-    "EV-0029"
-   ],
-   "local_id": "WF-0005",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-015"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-015"
-   },
-   "sealed_claim_refs": [
-    "CL-0017",
-    "CL-0018",
-    "CL-0019",
-    "CL-0020"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "b5055f07d7fe9a951d6807315a97efe4f92548727ed7b2988ee1338aad4b9244",
-   "structure": {
-    "name": "Organizar os dados do Webhook em um node Set chamado 'dados'",
-    "steps": [
-     {
-      "action": "Adicionar um node Set depois do Webhook para organizar os dados",
-      "evidence_refs": [
-       "EV-0024"
-      ],
-      "name": "Adicionar node Set",
-      "order_key": 1
-     },
-     {
-      "action": "Pegar apenas cinco campos: quem mandou (número da pessoa), a instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa",
-      "evidence_refs": [
-       "EV-0025",
-       "EV-0026"
-      ],
-      "name": "Selecionar cinco campos",
-      "order_key": 2
-     },
-     {
-      "action": "Mapear quem mandou em body.data.key.remoteJid, a instância em body.instance, a mensagem em body.data.message.conversation, o ID em body.data.key.id e o nome em body.data.pushName",
-      "evidence_refs": [
-       "EV-0027",
-       "EV-0028"
-      ],
-      "name": "Mapear os caminhos dos campos",
-      "order_key": 3
-     },
-     {
-      "action": "Clicar em teste para ver os cinco campos e renomear o node para 'dados'",
-      "evidence_refs": [
-       "EV-0028",
-       "EV-0029"
-      ],
-      "name": "Testar e renomear",
-      "order_key": 4
-     }
-    ]
-   },
-   "unsealed_claim_dependencies": []
-  },
-  {
-   "claim_dependencies": [
-    "CL-0021",
-    "CL-0024",
-    "CL-0025",
-    "CL-0026",
-    "CL-0027"
-   ],
-   "claim_dependency_status": "SATISFIED",
-   "claim_refs_applicability": "APPLICABLE",
-   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
-   "defects": [],
-   "entity_kind": "workflow_candidate",
-   "evidence_refs": [
-    "EV-0030",
-    "EV-0036",
-    "EV-0037",
-    "EV-0038",
-    "EV-0039",
-    "EV-0040"
-   ],
-   "local_id": "WF-0006",
-   "markers": [],
-   "merged_from": [
-    {
-     "slice_id": "SL-C-01",
-     "temporary_candidate_id": "TX-016"
-    }
-   ],
-   "provenance_detail": {
-    "provenance_state": "DIRECT_EVIDENCE",
-    "slice_id": "SL-C-01",
-    "temporary_candidate_id": "TX-016"
-   },
-   "sealed_claim_refs": [
-    "CL-0021",
-    "CL-0024",
-    "CL-0025",
-    "CL-0026",
-    "CL-0027"
-   ],
-   "source_id": "MS002-SRC-C",
-   "structural_key": "c727f56b808fa77f467cbdc61643b2642e7ed18d651e218183b93f4ae2244ffc",
-   "structure": {
-    "name": "Adicionar e configurar o AI Agent no n8n",
-    "steps": [
-     {
-      "action": "Antes do agente, colocar um node Set vazio",
-      "evidence_refs": [
-       "EV-0030"
-      ],
-      "name": "Adicionar set vazio",
-      "order_key": 1
-     },
-     {
-      "action": "Depois do set vazio, colocar o node AI Agent",
-      "evidence_refs": [
-       "EV-0030",
-       "EV-0031"
-      ],
-      "name": "Adicionar AI Agent",
-      "order_key": 2
-     },
-     {
-      "action": "Deixar o tipo de agente em Tools Agent, o mais avançado e com acesso a ferramentas",
-      "evidence_refs": [
-       "EV-0036",
-       "EV-0037"
-      ],
-      "name": "Definir tipo do agente",
-      "order_key": 3
-     },
-     {
-      "action": "Em source for prompt, tirar 'connected chat trigger' e mudar para 'definir abaixo', informando a mensagem que a pessoa mandou",
-      "evidence_refs": [
-       "EV-0037",
-       "EV-0038"
-      ],
-      "name": "Definir source for prompt",
-      "order_key": 4
-     },
-     {
-      "action": "Clicar ao lado para trazer os dados anteriores e arrastar o campo mensagem para o campo text do AI Agent",
-      "evidence_refs": [
-       "EV-0038",
-       "EV-0039"
-      ],
-      "name": "Mapear campo mensagem",
-      "order_key": 5
-     },
-     {
-      "action": "Em add option, adicionar a opção System message e digitar o prompt com o que o agente deve fazer",
-      "evidence_refs": [
-       "EV-0039",
-       "EV-0040"
-      ],
-      "name": "Adicionar System message",
       "order_key": 6
      }
     ]
@@ -1202,24 +836,185 @@
   },
   {
    "claim_dependencies": [
+    "CL-0016",
+    "CL-0017",
+    "CL-0018"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0025",
+    "EV-0026",
+    "EV-0027",
+    "EV-0028",
+    "EV-0029"
+   ],
+   "local_id": "WF-0006",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-C-01",
+     "temporary_candidate_id": "TX-008"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-C-01",
+    "temporary_candidate_id": "TX-008"
+   },
+   "sealed_claim_refs": [
+    "CL-0016",
+    "CL-0017",
+    "CL-0018"
+   ],
+   "source_id": "MS002-SRC-C",
+   "structural_key": "452d06233aaeb261b22fc9dfd0a750398375c6e029c422f08c98c56779acebbc",
+   "structure": {
+    "name": "Organizar os dados do webhook em cinco campos com um node Set",
+    "steps": [
+     {
+      "action": "De todos os dados do webhook, pegar apenas cinco: quem mandou (número da pessoa), a instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa",
+      "evidence_refs": [
+       "EV-0025",
+       "EV-0026"
+      ],
+      "name": "Selecionar cinco campos",
+      "order_key": 1
+     },
+     {
+      "action": "Mapear: quem mandou em body data key remoteJid; a instância em body instance; a mensagem em body data message conversation; o ID da mensagem em body data key id; o nome da pessoa em body data pushName",
+      "evidence_refs": [
+       "EV-0027",
+       "EV-0028"
+      ],
+      "name": "Mapear caminhos",
+      "order_key": 2
+     },
+     {
+      "action": "Clicar em teste e verificar que os dados viraram apenas esses cinco campos",
+      "evidence_refs": [
+       "EV-0028",
+       "EV-0029"
+      ],
+      "name": "Testar",
+      "order_key": 3
+     },
+     {
+      "action": "Renomear esse node para 'dados'",
+      "evidence_refs": [
+       "EV-0029"
+      ],
+      "name": "Renomear node",
+      "order_key": 4
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0022",
+    "CL-0023",
+    "CL-0024",
+    "CL-0025"
+   ],
+   "claim_dependency_status": "SATISFIED",
+   "claim_refs_applicability": "APPLICABLE",
+   "cross_source_eligibility": "ELIGIBLE_FOR_CROSS_SOURCE_DECISION",
+   "defects": [],
+   "entity_kind": "workflow_candidate",
+   "evidence_refs": [
+    "EV-0036",
+    "EV-0037",
+    "EV-0038",
+    "EV-0039",
+    "EV-0040"
+   ],
+   "local_id": "WF-0007",
+   "markers": [],
+   "merged_from": [
+    {
+     "slice_id": "SL-C-01",
+     "temporary_candidate_id": "TX-010"
+    }
+   ],
+   "provenance_detail": {
+    "provenance_state": "DIRECT_EVIDENCE",
+    "slice_id": "SL-C-01",
+    "temporary_candidate_id": "TX-010"
+   },
+   "sealed_claim_refs": [
+    "CL-0022",
+    "CL-0023",
+    "CL-0024",
+    "CL-0025"
+   ],
+   "source_id": "MS002-SRC-C",
+   "structural_key": "dc4617f3fd66e35a839a5e8b3c43461f4109c8e4903344a093e26df66a3d0b68",
+   "structure": {
+    "name": "Configurar o node AI Agent no n8n",
+    "steps": [
+     {
+      "action": "Deixar o tipo de agente em Tools Agent, o mais avançado e com acesso a ferramentas",
+      "evidence_refs": [
+       "EV-0036",
+       "EV-0037"
+      ],
+      "name": "Definir tipo de agente",
+      "order_key": 1
+     },
+     {
+      "action": "Em Source for Prompt, tirar a opção 'Connected Chat Trigger' e mudar para definir abaixo",
+      "evidence_refs": [
+       "EV-0037"
+      ],
+      "name": "Definir source for prompt",
+      "order_key": 2
+     },
+     {
+      "action": "Clicar ao lado para trazer os dados anteriores e arrastar o campo mensagem para o campo text do AI Agent",
+      "evidence_refs": [
+       "EV-0038",
+       "EV-0039"
+      ],
+      "name": "Informar a mensagem",
+      "order_key": 3
+     },
+     {
+      "action": "Em Add Option, adicionar a opção System Message e passar ali o prompt dizendo ao agente o que ele deve fazer",
+      "evidence_refs": [
+       "EV-0039",
+       "EV-0040"
+      ],
+      "name": "Adicionar System Message",
+      "order_key": 4
+     }
+    ]
+   },
+   "unsealed_claim_dependencies": []
+  },
+  {
+   "claim_dependencies": [
+    "CL-0027",
     "CL-0028",
     "CL-0029",
-    "CL-0030",
     "CL-0031",
     "CL-0032",
     "CL-0033",
     "CL-0034",
     "CL-0035",
-    "CL-0036",
     "CL-0037",
-    "CL-0040",
+    "CL-0038",
     "CL-0042",
-    "CL-0043",
     "CL-0044",
-    "CL-0045",
     "CL-0047",
-    "CL-0048",
-    "CL-0049"
+    "CL-0049",
+    "CL-0050",
+    "CL-0052",
+    "CL-0053"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -1240,10 +1035,14 @@
     "EV-0051",
     "EV-0052",
     "EV-0053",
+    "EV-0054",
     "EV-0055",
+    "EV-0056",
     "EV-0057",
     "EV-0058",
     "EV-0059",
+    "EV-0060",
+    "EV-0061",
     "EV-0062",
     "EV-0063",
     "EV-0064",
@@ -1257,237 +1056,194 @@
     "EV-0072",
     "EV-0073",
     "EV-0074",
+    "EV-0075",
     "EV-0076",
     "EV-0077",
-    "EV-0078"
+    "EV-0078",
+    "EV-0079",
+    "EV-0080"
    ],
-   "local_id": "WF-0007",
+   "local_id": "WF-0008",
    "markers": [],
    "merged_from": [
     {
      "slice_id": "SL-C-02",
-     "temporary_candidate_id": "TX-004"
+     "temporary_candidate_id": "TX-005"
     }
    ],
    "provenance_detail": {
     "provenance_state": "DIRECT_EVIDENCE",
     "slice_id": "SL-C-02",
-    "temporary_candidate_id": "TX-004"
+    "temporary_candidate_id": "TX-005"
    },
    "sealed_claim_refs": [
+    "CL-0027",
     "CL-0028",
     "CL-0029",
-    "CL-0030",
     "CL-0031",
     "CL-0032",
     "CL-0033",
     "CL-0034",
     "CL-0035",
-    "CL-0036",
     "CL-0037",
-    "CL-0040",
+    "CL-0038",
     "CL-0042",
-    "CL-0043",
     "CL-0044",
-    "CL-0045",
     "CL-0047",
-    "CL-0048",
-    "CL-0049"
+    "CL-0049",
+    "CL-0050",
+    "CL-0052",
+    "CL-0053"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "71f7c994ac420ac3de169840c8a01aec05218c7fbac387af97fe7c37678475bd",
+   "structural_key": "0ece05a52275ef9a83632b3ff158d5b6a4ed10c8c7d8fef861c6d1c5d9a94b93",
    "structure": {
-    "exceptions": [],
-    "name": "Configuração do agente de IA no n8n integrado ao WhatsApp com Tool de API",
-    "prerequisites": [
-     "Instância da Evolution criada com nome",
-     "API própria com endpoint e método GET",
-     "Chave de API de um modelo de IA (OpenAI ou Groq)",
-     "Serviço Redis disponível"
-    ],
+    "name": "Configuração e teste do agente de IA integrado ao WhatsApp com Tool de requisição HTTP",
+    "prerequisites": [],
     "steps": [
      {
-      "action": "Informar no prompt que o agente deve responder dúvidas dos clientes sobre locais em Foz do Iguaçu consultando a API",
+      "action": "Escrever no prompt que o agente deve responder dúvidas dos clientes sobre locais em Foz do Iguaçu consultando a API",
       "evidence_refs": [
        "EV-0041",
        "EV-0042"
       ],
-      "missing_input_action": null,
       "name": "Escrever o prompt do agente",
-      "order_key": 1,
-      "required_inputs": [
-       "descrição da tarefa do agente"
-      ]
+      "order_key": 1
      },
      {
-      "action": "Digitar 'nome do cliente:' e arrastar o dado do nome para o prompt, inserindo a variável",
+      "action": "Digitar 'nome do cliente:' e arrastar o dado do nome para o prompt, o que insere a variável; digitar 'data atual', abrir duas chaves, colocar um cifrão e selecionar 'Now', variável do JavaScript que retorna data e horário atual",
       "evidence_refs": [
        "EV-0042",
        "EV-0043",
-       "EV-0044"
-      ],
-      "missing_input_action": null,
-      "name": "Adicionar dados dinâmicos ao prompt",
-      "order_key": 2,
-      "required_inputs": [
-       "dado do nome vindo dos nodes anteriores"
-      ]
-     },
-     {
-      "action": "Digitar 'data atual', abrir duas chaves, colocar um cifrão e selecionar 'Now', variável do JavaScript que retorna data e horário atual",
-      "evidence_refs": [
        "EV-0044",
        "EV-0045"
       ],
-      "missing_input_action": null,
-      "name": "Adicionar a variável de data atual",
-      "order_key": 3,
-      "required_inputs": []
+      "name": "Inserir dados dinâmicos no prompt",
+      "order_key": 2
      },
      {
-      "action": "Escolher o modelo em Chat Model (ex.: OpenAI ou Groq), criar uma nova credencial colando a chave de API gerada no campo e salvar",
+      "action": "Em Chat Model escolher um dos modelos disponíveis (Grock, gratuito, ou Open AI); no exemplo usa-se o da Open AI",
       "evidence_refs": [
        "EV-0046",
        "EV-0047",
+       "EV-0048"
+      ],
+      "name": "Configurar o Chat Model",
+      "order_key": 3
+     },
+     {
+      "action": "Nas configurações do Open AI Chat Model ou do Grock criar uma nova credencial, colar a chave de API gerada no campo e salvar",
+      "evidence_refs": [
        "EV-0048",
        "EV-0049"
       ],
-      "missing_input_action": null,
-      "name": "Configurar o chat model (cérebro do agente)",
+      "name": "Criar credencial do modelo",
       "order_key": 4,
       "required_inputs": [
-       "chave de API do OpenAI ou do Groq"
+       "chave de api gerada"
       ]
      },
      {
-      "action": "Adicionar o node Redis Chat Memory e configurar a credencial",
+      "action": "Adicionar o Redis Chat Memory e configurar a credencial",
       "evidence_refs": [
        "EV-0049",
        "EV-0050"
       ],
-      "missing_input_action": null,
-      "name": "Adicionar a memória de chat Redis",
-      "order_key": 5,
-      "required_inputs": []
+      "name": "Adicionar memória de chat Redis",
+      "order_key": 5
      },
      {
-      "action": "Para quem usa o Easy Panel, ir no serviço do Redis em credentials e copiar user, password e host para os campos correspondentes; a porta não mudou; salvar",
+      "action": "No Easy Panel, clicar no serviço do Redis, ir em credentials e copiar user, senha e host para os campos user, password e host; a porta não mudou; salvar",
       "evidence_refs": [
        "EV-0050",
        "EV-0051",
        "EV-0052",
        "EV-0053"
       ],
-      "missing_input_action": null,
       "name": "Preencher credenciais do Redis",
       "order_key": 6,
       "required_inputs": [
-       "credenciais do Redis (user, password, host)"
+       "credenciais do Redis no Easy Panel"
       ]
      },
      {
-      "action": "Informar como chave o número da pessoa, valor único para cada pessoa",
+      "action": "Informar como chave do session ID um valor único para cada pessoa: o número da pessoa",
       "evidence_refs": [
        "EV-0053",
        "EV-0054",
        "EV-0055",
        "EV-0056"
       ],
-      "missing_input_action": null,
       "name": "Configurar session ID",
-      "order_key": 7,
-      "required_inputs": [
-       "número da pessoa"
-      ]
+      "order_key": 7
      },
      {
-      "action": "Colocar 3600 segundos para durar 1 hora (zero para durar para sempre) e aumentar o context Window Length de 5 (padrão) para 10",
+      "action": "Colocar 3600 segundos no session time to leave (1 hora; zero para durar para sempre) e aumentar o context window length de cinco para 10; clicar fora",
       "evidence_refs": [
+       "EV-0056",
        "EV-0057",
        "EV-0058",
        "EV-0059"
       ],
-      "missing_input_action": null,
       "name": "Configurar session time to leave e context window length",
-      "order_key": 8,
-      "required_inputs": []
+      "order_key": 8
      },
      {
-      "action": "Adicionar a requisição HTTP como Tool, preencher a descrição ('retorna dados sobre locais em Foz do Iguaçu'), o método GET e a URL; clicar fora e salvar",
+      "action": "Adicionar a requisição HTTP como Tool e configurar o node com a descrição 'retorna dados sobre locais em Foz do Iguaçu', o método get e a URL; clicar fora e salvar",
       "evidence_refs": [
+       "EV-0061",
        "EV-0062",
        "EV-0063",
        "EV-0064",
        "EV-0065"
       ],
-      "missing_input_action": null,
       "name": "Adicionar e configurar a Tool de requisição HTTP",
-      "order_key": 9,
-      "required_inputs": [
-       "URL da API",
-       "método da API"
-      ]
+      "order_key": 9
      },
      {
-      "action": "Adicionar node da Evolution com recurso 'chat' e operação 'ler mensagem', trazer os dados anteriores e informar nome da instância, contato (número de quem mandou) e ID da mensagem do node set; testar",
+      "action": "Adicionar nó da Evolution com recurso 'chat' e operação 'ler mensagem', trazer os dados anteriores e preencher nome da instância, contato (número de quem mandou) e ID da mensagem (vindo do set); clicar para testar",
       "evidence_refs": [
        "EV-0066",
        "EV-0067",
        "EV-0068",
        "EV-0069"
       ],
-      "missing_input_action": null,
-      "name": "Adicionar node da Evolution para visualizar a mensagem",
-      "order_key": 10,
-      "required_inputs": [
-       "nome da instância",
-       "número de quem mandou",
-       "ID da mensagem"
-      ]
+      "name": "Adicionar nó Evolution para ler a mensagem",
+      "order_key": 10
      },
      {
-      "action": "Adicionar node da Evolution com recurso 'mensagem' e operação 'enviar texto', informando nome da instância, número de quem mandou e, no campo mensagem, o output do node do AI Agent",
+      "action": "Adicionar outro nó da Evolution com recurso 'mensagem' e operação 'enviar texto', preencher nome da instância a partir do node de dados, número de quem mandou e, no campo mensagem, o output do node do AI Agent",
       "evidence_refs": [
        "EV-0070",
        "EV-0071",
        "EV-0072",
        "EV-0073"
       ],
-      "missing_input_action": null,
-      "name": "Adicionar node da Evolution para enviar a resposta",
-      "order_key": 11,
-      "required_inputs": [
-       "nome da instância",
-       "número de quem mandou",
-       "output do node AI Agent"
-      ]
+      "name": "Adicionar nó Evolution para enviar a resposta",
+      "order_key": 11
      },
      {
-      "action": "Nas opções, configurar o delay em 3000 ms para digitar 3 segundos antes de enviar; há também a opção de preview de link",
+      "action": "Nas opções configurar o delay em 3000 ms (digitar 3 segundos antes de enviar) e, se desejado, a opção de preview de link",
       "evidence_refs": [
        "EV-0073",
        "EV-0074",
        "EV-0075"
       ],
-      "missing_input_action": null,
       "name": "Configurar opções de envio",
-      "order_key": 12,
-      "required_inputs": []
+      "order_key": 12
      },
      {
-      "action": "Clicar para testar e mandar uma mensagem no WhatsApp para o número configurado; depois fazer uma pergunta sobre Foz do Iguaçu para verificar se o agente utiliza a ferramenta",
+      "action": "Clicar para testar e mandar uma mensagem no WhatsApp para o número configurado; depois testar de novo perguntando quais pontos turísticos tem em Foz para verificar se o agente utiliza a ferramenta",
       "evidence_refs": [
        "EV-0075",
        "EV-0076",
        "EV-0077",
-       "EV-0078"
+       "EV-0078",
+       "EV-0079",
+       "EV-0080"
       ],
-      "missing_input_action": null,
-      "name": "Testar o fluxo",
-      "order_key": 13,
-      "required_inputs": [
-       "número de WhatsApp configurado"
-      ]
+      "name": "Testar o fluxo pelo WhatsApp",
+      "order_key": 13
      }
     ]
    },
@@ -1495,8 +1251,8 @@
   },
   {
    "claim_dependencies": [
-    "CL-0053",
-    "CL-0054"
+    "CL-0058",
+    "CL-0059"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -1507,7 +1263,7 @@
     "EV-0085",
     "EV-0086"
    ],
-   "local_id": "WF-0008",
+   "local_id": "WF-0009",
    "markers": [],
    "merged_from": [
     {
@@ -1521,14 +1277,14 @@
     "temporary_candidate_id": "TX-002"
    },
    "sealed_claim_refs": [
-    "CL-0053",
-    "CL-0054"
+    "CL-0058",
+    "CL-0059"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "8e0d229dd73645fa6acc3d494df63c7d1b4a98adec8c3979d79eda58e7e35103",
+   "structural_key": "8a2e2b079de55b11b8f766a6488274475c56b242b4342adc9616f7e2e6a78a53",
    "structure": {
     "exceptions": [],
-    "name": "Colocar o workflow em produção (Webhook n8n + Evolution API)",
+    "name": "Colocar o workflow em produção (n8n + Evolution API)",
     "prerequisites": [],
     "steps": [
      {
@@ -1536,16 +1292,22 @@
       "evidence_refs": [
        "EV-0085"
       ],
-      "name": "Mudar o Webhook para production URL",
-      "order_key": 1
+      "missing_input_action": null,
+      "name": "Mudar para production URL",
+      "order_key": 1,
+      "required_inputs": [
+       "node do Web Hook"
+      ]
      },
      {
       "action": "Copiar a production URL",
       "evidence_refs": [
        "EV-0085"
       ],
+      "missing_input_action": null,
       "name": "Copiar a URL",
-      "order_key": 2
+      "order_key": 2,
+      "required_inputs": []
      },
      {
       "action": "Vir na Evolution API em events webhook e colar essa URL nova",
@@ -1553,24 +1315,32 @@
        "EV-0085",
        "EV-0086"
       ],
+      "missing_input_action": null,
       "name": "Colar na Evolution API",
-      "order_key": 3
+      "order_key": 3,
+      "required_inputs": [
+       "production URL copiada"
+      ]
      },
      {
       "action": "Ir lá embaixo e clicar em salvar",
       "evidence_refs": [
        "EV-0086"
       ],
+      "missing_input_action": null,
       "name": "Salvar",
-      "order_key": 4
+      "order_key": 4,
+      "required_inputs": []
      },
      {
       "action": "Voltar no n8n e ativar o workflow",
       "evidence_refs": [
        "EV-0086"
       ],
+      "missing_input_action": null,
       "name": "Ativar o workflow",
-      "order_key": 5
+      "order_key": 5,
+      "required_inputs": []
      }
     ]
    },
@@ -1578,9 +1348,8 @@
   },
   {
    "claim_dependencies": [
-    "CL-0055",
-    "CL-0056",
-    "CL-0057"
+    "CL-0061",
+    "CL-0062"
    ],
    "claim_dependency_status": "SATISFIED",
    "claim_refs_applicability": "APPLICABLE",
@@ -1593,7 +1362,7 @@
     "EV-0090",
     "EV-0091"
    ],
-   "local_id": "WF-0009",
+   "local_id": "WF-0010",
    "markers": [],
    "merged_from": [
     {
@@ -1607,49 +1376,65 @@
     "temporary_candidate_id": "TX-003"
    },
    "sealed_claim_refs": [
-    "CL-0055",
-    "CL-0056",
-    "CL-0057"
+    "CL-0061",
+    "CL-0062"
    ],
    "source_id": "MS002-SRC-C",
-   "structural_key": "9c16c6edcf423a7d56dc43de053e69c1dd46a5a00fcea275e604934fb7149ad8",
+   "structural_key": "2210bf7180d6d50075fde3f47345146d89e37e4478030cbb595f9f22300e4e11",
    "structure": {
     "exceptions": [],
-    "name": "Subir Evolution + n8n localmente com o docker compose da descrição (Windows)",
+    "name": "Instalar Evolution com n8n localmente via docker compose (Windows)",
     "prerequisites": [
-     "Ser destinado a quem ainda não tem uma VPS e está só querendo testar"
+     "Não ter VPS e querer apenas testar localmente",
+     "Docker instalado"
     ],
     "steps": [
      {
-      "action": "Baixar a pasta deixada na descrição e abri-la",
+      "action": "Baixar a pasta do docker compose deixada na descrição",
       "evidence_refs": [
        "EV-0088",
        "EV-0089"
       ],
+      "missing_input_action": null,
       "name": "Baixar a pasta",
-      "order_key": 1
+      "order_key": 1,
+      "required_inputs": [
+       "link na descrição do vídeo"
+      ]
      },
      {
-      "action": "Abrir um terminal na pasta e digitar ./start.ps1 (para quem está no Windows)",
+      "action": "Abrir a pasta e abrir um terminal nela",
       "evidence_refs": [
        "EV-0089"
       ],
-      "name": "Abrir terminal e rodar o script",
-      "order_key": 2
+      "missing_input_action": null,
+      "name": "Abrir terminal na pasta",
+      "order_key": 2,
+      "required_inputs": []
      },
      {
-      "action": "Dar as respostas que o script vai pedir, por exemplo senha do postgres, senha do Redis e e-mail de admin do PGAdmin",
+      "action": "Digitar pon barst pps1 (para quem está no Windows)",
+      "evidence_refs": [
+       "EV-0089"
+      ],
+      "missing_input_action": null,
+      "name": "Executar o script",
+      "order_key": 3,
+      "required_inputs": []
+     },
+     {
+      "action": "Dar as respostas que o script pedir, por exemplo a senha do postgres, a senha do Redis e o e-mail de admin do PG Admin",
       "evidence_refs": [
        "EV-0089",
        "EV-0090"
       ],
       "missing_input_action": null,
-      "name": "Responder as perguntas do script",
-      "order_key": 3,
+      "name": "Responder o script",
+      "order_key": 4,
       "required_inputs": [
        "senha do postgres",
        "senha do Redis",
-       "e-mail de admin do PGAdmin"
+       "e-mail de admin do PG Admin"
       ]
      },
      {
@@ -1658,8 +1443,10 @@
        "EV-0090",
        "EV-0091"
       ],
-      "name": "Esperar baixar e subir os containers",
-      "order_key": 4
+      "missing_input_action": null,
+      "name": "Aguardar containers",
+      "order_key": 5,
+      "required_inputs": []
      }
     ]
    },

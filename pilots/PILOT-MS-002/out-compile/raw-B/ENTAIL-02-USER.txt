@@ -1,0 +1,414 @@
+source_id: MS002-SRC-B
+ITENS:
+[
+ {
+  "claim_id": "CL-0026",
+  "claim_text": "Dentro do projeto gestor de grupos existe uma pasta chamada docs com dois arquivos: Evolution API (documentação completa do Evolution em markdown) e gerenciar grupos com Cloud Code (explicação geral do que dá para ser feito de gerenciamento de grupos com Cloud Code).",
+  "evidence": [
+   {
+    "local_id": "EV-0055",
+    "excerpt": "parte básica do Cloud Code, tá? Deixando aqui no card para você dar uma acessada lá, dar uma olhada, e tu volta aqui. Enfim, eu tenho aqui uma pasta chamada"
+   },
+   {
+    "local_id": "EV-0056",
+    "excerpt": "docs dentro do meu projeto gestor de grupos. Em docs eu tenho aqui dois arquivos: Evolution API e gerenciar grupos com Cloud Code. Esse Evolution"
+   },
+   {
+    "local_id": "EV-0057",
+    "excerpt": "API aqui, ele é a documentação todinha aqui em markdown do Evolution, tá? E aqui é ele explicando de uma maneira mais geral o que que dá para ser feito"
+   },
+   {
+    "local_id": "EV-0058",
+    "excerpt": "de gerenciamento de grupos com Cloud Code. Ele já tem uma noção de como é que funciona de maneira mais fácil. Todos esses arquivos aqui, ó, a pasta docs e"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0027",
+  "claim_text": "O arquivo cloud.md é o prompt do Cloud que explica de maneira simples o que ele faz, o contexto geral.",
+  "evidence": [
+   {
+    "local_id": "EV-0064",
+    "excerpt": "aqui, OK. Aqui no cloud.md é o prompt do Cloud para explicar de uma maneira simples o que que ele faz aqui, o contexto geral. E aqui eu tenho o"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0028",
+  "claim_text": "O arquivo {ponto} env é onde se colocam as credenciais do Evolution: a URL, a chave API global e o nome da instância.",
+  "evidence": [
+   {
+    "local_id": "EV-0065",
+    "excerpt": "arquivo {ponto} env, que é onde você vai colocar suas credenciais do Evolution, tá? A URL, chave API global e o nome da instância."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0029",
+  "claim_text": "O gitignore serve para o caso de você subir o repositório no GitHub, para não passar o arquivo {ponto} env no repositório.",
+  "evidence": [
+   {
+    "local_id": "EV-0066",
+    "excerpt": "E o gitignore é para caso você for acabar subindo o repositório no GitHub, é, você acabar não passando ali o o {ponto} env no repositório. Ah, não sei"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0030",
+  "claim_text": "Se você for rodar só no computador, pode seguir sem se preocupar com repositório/GitHub, mas mantenha esses arquivos por padrão.",
+  "evidence": [
+   {
+    "local_id": "EV-0067",
+    "excerpt": "o que é repositório, não não sei o que é GitHub, tranquilo. Se tu for rodar só no computador aqui tranquilamente, pode ir sem se preocupar. Mas mantenha esses"
+   },
+   {
+    "local_id": "EV-0068",
+    "excerpt": "arquivos aqui por padrão. Então bora configurar aqui agora as credenciais do Evolution. A URL é essa daqui, ó, https e o número IP. Aí eu venho aqui, colo"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0031",
+  "claim_text": "Ao configurar a URL do Evolution (https e o número IP), deve-se tirar a barra do final e salvar com Ctrl S.",
+  "evidence": [
+   {
+    "local_id": "EV-0068",
+    "excerpt": "arquivos aqui por padrão. Então bora configurar aqui agora as credenciais do Evolution. A URL é essa daqui, ó, https e o número IP. Aí eu venho aqui, colo"
+   },
+   {
+    "local_id": "EV-0069",
+    "excerpt": "aqui, eu tiro essa barra do final, tá? Dou um Ctrl S para salvar. Show. A chave API é aquela que você recebeu no seu e-mail. Pronto, eu coloquei ela aqui,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0032",
+  "claim_text": "A chave API a ser colocada é aquela que foi recebida por e-mail.",
+  "evidence": [
+   {
+    "local_id": "EV-0069",
+    "excerpt": "aqui, eu tiro essa barra do final, tá? Dou um Ctrl S para salvar. Show. A chave API é aquela que você recebeu no seu e-mail. Pronto, eu coloquei ela aqui,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0033",
+  "claim_text": "O nome da instância do Evolution é próprio de cada usuário: no exemplo é 'YouTube teste', e a de outras pessoas será diferente.",
+  "evidence": [
+   {
+    "local_id": "EV-0070",
+    "excerpt": "Ctrl S. Tudo de bola. E agora, a instância do Evolution. A instância está aqui, ó, YouTube teste, que é a minha que eu coloquei. A de vocês vai estar"
+   },
+   {
+    "local_id": "EV-0071",
+    "excerpt": "diferente. Aí, você vem aqui, ó, Ctrl V, Ctrl S e pronto. Já colocou as credenciais. E agora, vamos fazer um teste, só para ver se está funcionando."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0034",
+  "claim_text": "Depois de colocar as credenciais, faz-se um teste perguntando ao Cloud Code 'Quais instâncias tenho conectado no Evolution?'; se ele mostrar o nome da instância, a configuração/conexão está funcionando.",
+  "evidence": [
+   {
+    "local_id": "EV-0071",
+    "excerpt": "diferente. Aí, você vem aqui, ó, Ctrl V, Ctrl S e pronto. Já colocou as credenciais. E agora, vamos fazer um teste, só para ver se está funcionando."
+   },
+   {
+    "local_id": "EV-0072",
+    "excerpt": "Vou colocar aqui, ó, bypass e vou deixar aqui o Sonnet mesmo, o reforço no médio mesmo. Beleza. Vou fazer a seguinte pergunta aqui, ó: \"Quais instâncias"
+   },
+   {
+    "local_id": "EV-0073",
+    "excerpt": "tenho conectado no Evolution?\" Se ele mostrar aqui um e falar o nome da instância, é porque já está conectado com sucesso, né? Deu certo a parte de"
+   },
+   {
+    "local_id": "EV-0074",
+    "excerpt": "configuração, né, de conexão. Pronto, ele passou aqui, ó, número, nome do perfil, nome. Ou seja, está funcionando com sucesso. Perfeito, então. Então, já"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0035",
+  "claim_text": "No teste o apresentador colocou 'bypass' e deixou o modelo Sonnet, com o reforço no médio.",
+  "evidence": [
+   {
+    "local_id": "EV-0072",
+    "excerpt": "Vou colocar aqui, ó, bypass e vou deixar aqui o Sonnet mesmo, o reforço no médio mesmo. Beleza. Vou fazer a seguinte pergunta aqui, ó: \"Quais instâncias"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0036",
+  "claim_text": "A sequência realizada até este ponto foi: contratar a VPS, colocar o Evolution, conectar o WhatsApp e configurar o VS Code; depois resta fazer as requisições para o Cloud Code.",
+  "evidence": [
+   {
+    "local_id": "EV-0075",
+    "excerpt": "já contratamos a VPS, colocamos o Evolution, conectamos o WhatsApp, configuramos o VS Code. Agora, nos resta fazer, de fato agora, as requisições"
+   },
+   {
+    "local_id": "EV-0076",
+    "excerpt": "para o Cloud Code. Vou te mostrar aqui alguns casos de uso, alguns exemplos que vocês podem estar utilizando. Beleza? Vamos começar pedindo para que o Cloud"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0037",
+  "claim_text": "Não é preciso explicar ao Cloud que ele deve usar o Evolution porque esse contexto inicial já foi colocado no cloud.md; por isso é bom ter um cloud.md.",
+  "evidence": [
+   {
+    "local_id": "EV-0078",
+    "excerpt": "eu faço parte e também me lista ali os grupos que eu sou admin. E bora aguardar aqui o resultado. Então, olha só, nem preciso explicar para ele que eu quero"
+   },
+   {
+    "local_id": "EV-0079",
+    "excerpt": "que ele use o Evolution, que não sei o quê. Não, porque eu já coloquei no cloud.md essa parte, esse contexto inicial, tá? Por isso que é legal ter um"
+   },
+   {
+    "local_id": "EV-0080",
+    "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0038",
+  "claim_text": "Com o contexto no cloud.md, tudo que for perguntado relacionado a grupo faz o Cloud saber que deve usar o Evolution, e ele consulta a documentação para ver como usar.",
+  "evidence": [
+   {
+    "local_id": "EV-0080",
+    "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0039",
+  "claim_text": "Pedindo ao Cloud uma lista de todos os grupos dos quais o usuário faz parte e dos grupos em que é admin, ele retorna nome do grupo, quantidade de membros e se o usuário é admin ou não.",
+  "evidence": [
+   {
+    "local_id": "EV-0076",
+    "excerpt": "para o Cloud Code. Vou te mostrar aqui alguns casos de uso, alguns exemplos que vocês podem estar utilizando. Beleza? Vamos começar pedindo para que o Cloud"
+   },
+   {
+    "local_id": "EV-0077",
+    "excerpt": "me forneça uma lista com todos os grupos do qual eu faço parte e os grupos que eu sou admin. Cloud, eu quero que você me passe uma lista de todos os grupos que"
+   },
+   {
+    "local_id": "EV-0078",
+    "excerpt": "eu faço parte e também me lista ali os grupos que eu sou admin. E bora aguardar aqui o resultado. Então, olha só, nem preciso explicar para ele que eu quero"
+   },
+   {
+    "local_id": "EV-0081",
+    "excerpt": "é que usa e pronto. E pronto, ele me passou aqui, ó, a lista aqui dos grupos, né? O nome do grupo, quantidade de membros e se eu sou admin ou não."
+   },
+   {
+    "local_id": "EV-0082",
+    "excerpt": "Beleza? Então aqui, ó, 10 grupos como admin. Então, primeira coisa, tá funcionando essa questão de requisição de grupos. Eu vou pedir agora para que"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0040",
+  "claim_text": "Pedindo ao Cloud um relatório em HTML com estatísticas dos membros de um grupo e um gráfico por estado, ele gera um painel HTML e abre o navegador automaticamente.",
+  "evidence": [
+   {
+    "local_id": "EV-0083",
+    "excerpt": "ele faça um dashboard em HTML para mim dos membros do meu grupo gratuito Cloud Code de acordo com o estado. É para ter noção lá quais são os estados que mais"
+   },
+   {
+    "local_id": "EV-0084",
+    "excerpt": "tem pessoas no meu grupo. Cloud, eu quero que você faça um relatório, aí você me traga aqui em HTML estatísticas dos membros do meu grupo Cloud Code"
+   },
+   {
+    "local_id": "EV-0085",
+    "excerpt": "Anderson Adelino. Eu quero um gráfico lá informando as pessoas de acordo com o estado delas. Beleza? E se tiver alguma outra"
+   },
+   {
+    "local_id": "EV-0086",
+    "excerpt": "informação que você acha interessante mostrar também, fica à vontade para fazer. Ele veio aqui e vamos aguardar para ver como que ele vai fazer esse"
+   },
+   {
+    "local_id": "EV-0087",
+    "excerpt": "dashboard. E aqui está o resultado, né? Ele me trouxe aqui esse painel HTML e já abriu o navegador aqui automaticamente. E tá aqui, Cloud Code Anderson Adelino,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0041",
+  "claim_text": "O dashboard gerado mostrou data de geração, instância, ID do grupo, 432 total de membros, quantidade de brasileiros, quantos estão em outro país, quantidade de admins, estados presentes, gráfico de top cinco estados, porcentagem de membros por estado, quantitativo e distribuição por região.",
+  "evidence": [
+   {
+    "local_id": "EV-0087",
+    "excerpt": "dashboard. E aqui está o resultado, né? Ele me trouxe aqui esse painel HTML e já abriu o navegador aqui automaticamente. E tá aqui, Cloud Code Anderson Adelino,"
+   },
+   {
+    "local_id": "EV-0088",
+    "excerpt": "data de geração, a instância, o ID do grupo e aqui, ó, 432 total de membros, a quantidade de brasileiros, quantos eh que estão em"
+   },
+   {
+    "local_id": "EV-0089",
+    "excerpt": "outro país, a quantidade de admins e estados presentes. Aqui um gráfico, ó, top cinco estados. Aqui a gente tem eh um gráfico mostrando a porcentagem de"
+   },
+   {
+    "local_id": "EV-0090",
+    "excerpt": "membros por estado e aqui a questão de quantitativo mesmo, ó. Legal. Temos duas visualizações aqui diferentes. São Paulo predomina, que é do meu estado aqui, ó,"
+   },
+   {
+    "local_id": "EV-0091",
+    "excerpt": "RN, tem nove pessoas. Legal. E aqui distribuição por região, tá? Então o sudeste predomina e nordeste vem em segundo lugar. Pronto, então aqui eu"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0042",
+  "claim_text": "O apresentador deixou a critério do Cloud incluir outras informações que ele achasse interessante mostrar no relatório.",
+  "evidence": [
+   {
+    "local_id": "EV-0085",
+    "excerpt": "Anderson Adelino. Eu quero um gráfico lá informando as pessoas de acordo com o estado delas. Beleza? E se tiver alguma outra"
+   },
+   {
+    "local_id": "EV-0086",
+    "excerpt": "informação que você acha interessante mostrar também, fica à vontade para fazer. Ele veio aqui e vamos aguardar para ver como que ele vai fazer esse"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0043",
+  "claim_text": "Pode-se pedir ao Cloud para criar uma planilha para o Excel contendo nome e contato de todos os membros de um grupo, e a partir disso fazer alguma campanha.",
+  "evidence": [
+   {
+    "local_id": "EV-0096",
+    "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você"
+   },
+   {
+    "local_id": "EV-0097",
+    "excerpt": "agora crie para mim uma planilha para o Excel contendo nome e contato de todos os membros desse mesmo grupo, ou seja, eu agora consigo pegar ali, transformar"
+   },
+   {
+    "local_id": "EV-0098",
+    "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0044",
+  "claim_text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+  "evidence": [
+   {
+    "local_id": "EV-0093",
+    "excerpt": "Você e outras pessoas vai sempre aumentando aí essa quantidade de pessoas. Então, beleza, isso aqui é uma função muito interessante, porque eu tô"
+   },
+   {
+    "local_id": "EV-0094",
+    "excerpt": "falando aqui de um grupo, mas imagina que você tenha aí um 20 grupos, por exemplo, um lançamento que você faz, onde é que tu tem eh vários grupos de"
+   },
+   {
+    "local_id": "EV-0095",
+    "excerpt": "clientes e você quer puxar esses dados, então já é uma coisa interessante a se fazer, tá? Até mesmo se você quiser buscar tem vários grupos ali presentes,"
+   },
+   {
+    "local_id": "EV-0096",
+    "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você"
+   },
+   {
+    "local_id": "EV-0098",
+    "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em"
+   },
+   {
+    "local_id": "EV-0099",
+    "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0045",
+  "claim_text": "Enquanto uma tarefa está sendo gerada, é possível abrir outro chat e executar outra função simultaneamente.",
+  "evidence": [
+   {
+    "local_id": "EV-0099",
+    "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0046",
+  "claim_text": "O apresentador usou o Haiku no segundo chat, descrevendo-o como um modelo mais fraco, para testar se ele conseguiria realizar a tarefa.",
+  "evidence": [
+   {
+    "local_id": "EV-0100",
+    "excerpt": "aqui simultaneamente. Inclusive, vou até usar aqui o Haiku, eu quero testar se mesmo usando o Haiku, que é um modelo mais fraco, se ele vai conseguir"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0047",
+  "claim_text": "Os arquivos do projeto (pasta docs e os demais) serão compactados em um arquivo zip e disponibilizados no hub de templates gratuito do apresentador, com o link do hub na descrição do grupo gratuito de Cloud Code.",
+  "evidence": [
+   {
+    "local_id": "EV-0058",
+    "excerpt": "de gerenciamento de grupos com Cloud Code. Ele já tem uma noção de como é que funciona de maneira mais fácil. Todos esses arquivos aqui, ó, a pasta docs e"
+   },
+   {
+    "local_id": "EV-0059",
+    "excerpt": "esses outros aqui, vou já mostrar para vocês o que que é, eu vou compactar em um arquivo zip e vou disponibilizar para vocês no meu hub de templates gratuito,"
+   },
+   {
+    "local_id": "EV-0060",
+    "excerpt": "certo? Esse aqui é o meu hub de templates, beleza? Tu vem aqui embaixo, aí aqui, ó, vai estar o material desse vídeo aqui, tá? Agora não tá porque eu"
+   },
+   {
+    "local_id": "EV-0062",
+    "excerpt": "URL do vídeo aqui que aparece, tá bom? Aí você baixa o material. Para acessar esse link, vou deixar aqui na descrição, aqui no comentário fixado também, o link"
+   },
+   {
+    "local_id": "EV-0063",
+    "excerpt": "do meu grupo gratuito de Cloud Code. O link para o hub vai estar lá na descrição desse grupo, beleza? Enfim, aí tu baixou, descompactou, enfim, colocou"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0048",
+  "claim_text": "Se o material não for encontrado no hub, basta colocar a URL do vídeo para que ele apareça, e então baixar o material.",
+  "evidence": [
+   {
+    "local_id": "EV-0061",
+    "excerpt": "ainda não coloquei, mas quando eu finalizar esse vídeo eu vou subir, então quando você for acessar já vai ter aqui. Se você não tiver achando, só colocar o"
+   },
+   {
+    "local_id": "EV-0062",
+    "excerpt": "URL do vídeo aqui que aparece, tá bom? Aí você baixa o material. Para acessar esse link, vou deixar aqui na descrição, aqui no comentário fixado também, o link"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0049",
+  "claim_text": "Para quem não sabe colocar o Cloud Code no VS Code, existe um vídeo do autor ensinando a parte básica do Cloud Code, deixado no card.",
+  "evidence": [
+   {
+    "local_id": "EV-0053",
+    "excerpt": "aqui no primeiro comentário e também está na descrição. Enfim, bora de volta para o vídeo. Pronto, tô aqui no VS Code, eh, já tô"
+   },
+   {
+    "local_id": "EV-0054",
+    "excerpt": "aqui com o chat do Cloud Code aqui do lado também. Se você não sabe colocar o Cloud Code aqui no VS Code e tudo mais, eu tenho um vídeo que ensino, eh, a"
+   },
+   {
+    "local_id": "EV-0055",
+    "excerpt": "parte básica do Cloud Code, tá? Deixando aqui no card para você dar uma acessada lá, dar uma olhada, e tu volta aqui. Enfim, eu tenho aqui uma pasta chamada"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0050",
+  "claim_text": "Ao pedir a criação de grupos, ocorreu um problema porque é preciso pelo menos uma outra pessoa para criar o grupo; isso é uma restrição, pois até criando um grupo manualmente é necessário adicionar uma pessoa.",
+  "evidence": [
+   {
+    "local_id": "EV-0103",
+    "excerpt": "Aqui, ó, deu um um um problema aqui ao criar os grupos, que ele falou que ah eu preciso pelo menos de uma outra pessoa para criar o grupo. Isso realmente é uma"
+   },
+   {
+    "local_id": "EV-0104",
+    "excerpt": "restrição, né? Até se eu for criar um grupo manualmente aqui, eu tenho que adicionar uma pessoa. Então, vou colocar aqui, ó, o número um outro número que eu"
+   }
+  ]
+ }
+]

@@ -1,0 +1,314 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0476",
+  "claim_text": "Everything shown with Qo is the same with Twilio, only the interface looks different; the same core principles apply, and whatever platform you use you just grab the API key and give it to your model.",
+  "evidence": [
+   {
+    "local_id": "EV-0839",
+    "excerpt": "I'm just going to use that as example. Anyway, everything I'm about to show you with Qo is the exact same thing with Twilio. It's just the interface is going to look a little bit different. The same core principles apply. just um you know, whatever platform you use, whether it is Qo or Twilio, which is the main one that most people use, or some other thing, you're just going to go by the API key"
+   },
+   {
+    "local_id": "EV-0840",
+    "excerpt": "and just give it to your model. Anyway, just running through the test here, you could see that we just got a new form submission from Dana Whitfield. It includes my email address despite the fact that it is Dana cuz I'm I'm sending it back um to me and I obviously want to make sure that email is going to be fine. The upstairs bedrooms never cool down no matter what we set the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0477",
+  "claim_text": "To integrate a phone number flow, the speaker checks whether the service has an API or an MCP that can be plugged into.",
+  "evidence": [
+   {
+    "local_id": "EV-0842",
+    "excerpt": "Jonah.\" Again, you know, keep in mind, Jonah, Dana, Nicholas, we're all blending together into one formless entity. Um, I'm just using my own email. Ideally, this would be something different. One more thing. Now, I want to integrate that phone number flow. So, how am I going to do that? Um, I'm going to go and check to see if they have an API or an MCP that I can plug into. Just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0478",
+  "claim_text": "After typing the service name under settings > connectors and not finding it among connected ones, the speaker goes back to connectors and uses 'browse' to search the default/provided connector list instead.",
+  "evidence": [
+   {
+    "local_id": "EV-0843",
+    "excerpt": "looking up MCP. Looks like they do have integrations with Claude and Chat GPT. So, let's see. Do we have an MCP here? It looks like we do. Just looking up the service. Um, oh, and it looks like they're actually part of Claude now. So, that's good. I can go back here and then go to settings. Go down to connectors. I'm actually going to type Qo. And it doesn't look like it has my connected"
+   },
+   {
+    "local_id": "EV-0844",
+    "excerpt": "one. And so I think that's cuz I need to search through their default ones instead. So I'm going to go back to connectors. Then what I want is browse. So I'm looking at theirs. I'm typing qo. I'm seeing this one. I'm connecting now. And this should allow the firing of SMS messages even without me. So there we go. Qo cloud connector"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0479",
+  "claim_text": "Connecting the Qo cloud connector (which requests permission to access the business workspace) should allow the firing of SMS messages without the user.",
+  "evidence": [
+   {
+    "local_id": "EV-0844",
+    "excerpt": "one. And so I think that's cuz I need to search through their default ones instead. So I'm going to go back to connectors. Then what I want is browse. So I'm looking at theirs. I'm typing qo. I'm seeing this one. I'm connecting now. And this should allow the firing of SMS messages even without me. So there we go. Qo cloud connector"
+   },
+   {
+    "local_id": "EV-0845",
+    "excerpt": "is requesting permission to access my business workspace. It's now connected which looks great. Okay. And if I go back to this conversation, I'll also say, could you check to see if you have Kuo access? And if so, can you send a number, a text to my number? Okay. And I don't know if you guys could see this, but I just got a message from this number. U basically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0480",
+  "claim_text": "The speaker verifies the integration by asking in the conversation whether it has Kuo access and, if so, to send a text to his number, then confirms the SMS arrived.",
+  "evidence": [
+   {
+    "local_id": "EV-0845",
+    "excerpt": "is requesting permission to access my business workspace. It's now connected which looks great. Okay. And if I go back to this conversation, I'll also say, could you check to see if you have Kuo access? And if so, can you send a number, a text to my number? Okay. And I don't know if you guys could see this, but I just got a message from this number. U basically"
+   },
+   {
+    "local_id": "EV-0846",
+    "excerpt": "pretending that I was Dana. Um, hey Dana, just got your request. I know the AC house needs a look. Calling you in the next 5 minutes, Jonah. So, uh, this works, right? We just actually sent the SMS and it only really took me a few seconds. That's how easy it is to integrate different platforms if they are available in the Claude MCP sort of connector list. So, I'm going to go"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0481",
+  "claim_text": "Integrating different platforms is easy and takes only a few seconds if they are available in the Claude MCP connector list.",
+  "evidence": [
+   {
+    "local_id": "EV-0846",
+    "excerpt": "pretending that I was Dana. Um, hey Dana, just got your request. I know the AC house needs a look. Calling you in the next 5 minutes, Jonah. So, uh, this works, right? We just actually sent the SMS and it only really took me a few seconds. That's how easy it is to integrate different platforms if they are available in the Claude MCP sort of connector list. So, I'm going to go"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0482",
+  "claim_text": "The speaker turns the series of prompts into a dedicated skill and then loops it, either locally or via routine since connector integrations (cloud connection) are present.",
+  "evidence": [
+   {
+    "local_id": "EV-0847",
+    "excerpt": "ahead and turn that from a series of prompts into a dedicated skill and then I'm going to show you guys how to loop this. Um, you guys can loop this locally. You can also do it via routine since we're cloud connected uh aka we have connector integrations. All of this stuff is capable of occurring entirely autonomously without any of us now. Cool, cool, cool. It's now doing one"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0483",
+  "claim_text": "The speaker had to reroute the model away from building a script, because the model usually wants to do that as it is more computationally efficient, whereas the intent is to run it in a loop via routines.",
+  "evidence": [
+   {
+    "local_id": "EV-0848",
+    "excerpt": "final test. I just had to reroute it away from building like a script. Uh it just usually wants to do this because it's more computationally efficient. But if you think about it, the whole idea here is we are going to run this like in a loop. We're just going to do it via routines. And speaking of routines, um we are going to set one up here. It's going to be cloud-based. As you can see,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0484",
+  "claim_text": "When configuring the cloud routine, the speaker removes unneeded connectors (Google Drive, Gmail app, Higsfield) and keeps only Gmail and Quo.",
+  "evidence": [
+   {
+    "local_id": "EV-0849",
+    "excerpt": "we have a Gmail connector. Uh we also have a Google Drive connector. We have a Gmail app. I'm going to take that out. A Higsfield. Going to take that out. And I think that's it. We just need Gmail. We need kuo. So with all that in mind, um I'm not going to set this up entirely just yet. I want to see the results of that last test, but I'm just going to have it generate copy for the routine"
+   },
+   {
+    "local_id": "EV-0852",
+    "excerpt": "we are now actually generating the routine.md, which is right over here. I'm then going to paste this in. Just don't want to scroll too far down so I don't leak my damn phone number for the 4 days time. We'll call this speed to lead SMS and email. And then yeah, the connectors I want are um Gmail and Quo. And here we're going to want to do a couple different things um in addition."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0485",
+  "claim_text": "The outbound email and SMS replies should ideally be delivered immediately and written in a humanized way: a short snippet, not overly long, but still written like a human being would write it.",
+  "evidence": [
+   {
+    "local_id": "EV-0850",
+    "excerpt": "and then run it. We just tested this on a new lead called Priya. Hey Priya, just saw you filled out a form. I hear upstairs is stuck at 80 even with the AC running. We'll happily help you with that. We'll call you in the next 5 minutes and sort this out. I also just got a text message saying, \"Hi Priya, just got your request right over here.\" So both of these were basically done"
+   },
+   {
+    "local_id": "EV-0851",
+    "excerpt": "immediately, right? And ideally they are done in like a humanized way like this. Some snippet that is short, you know, not super overly long, but still written like a human being would write it. And now what it's also doing is creating me a routine. Um, I asked it to upgrade this and basically turn it into a clawed thing. So all of this is good. Everything looked basically perfect. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0486",
+  "claim_text": "The routine is generated as a routine.md which is then pasted in, named 'speed to lead SMS and email', with Gmail and Quo as the connectors.",
+  "evidence": [
+   {
+    "local_id": "EV-0852",
+    "excerpt": "we are now actually generating the routine.md, which is right over here. I'm then going to paste this in. Just don't want to scroll too far down so I don't leak my damn phone number for the 4 days time. We'll call this speed to lead SMS and email. And then yeah, the connectors I want are um Gmail and Quo. And here we're going to want to do a couple different things um in addition."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0487",
+  "claim_text": "Routines can be run via API, which means waiting for a trigger and only responding when a request is received, instead of running on a schedule that polls every time.",
+  "evidence": [
+   {
+    "local_id": "EV-0853",
+    "excerpt": "So I mean like we could do it scheduled where like every single time it'll pull, but routines are a little bit different. Like routines um they are capable of getting run via API. What that means is we can basically wait for a trigger and then only respond when we get a request. So if you think about it, what we really could do is we could trigger every time somebody fills"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0488",
+  "claim_text": "Triggering the routine every time somebody fills out the form, waiting a few seconds for it to land in the inbox and firing the routine only then, is more efficient than polling.",
+  "evidence": [
+   {
+    "local_id": "EV-0853",
+    "excerpt": "So I mean like we could do it scheduled where like every single time it'll pull, but routines are a little bit different. Like routines um they are capable of getting run via API. What that means is we can basically wait for a trigger and then only respond when we get a request. So if you think about it, what we really could do is we could trigger every time somebody fills"
+   },
+   {
+    "local_id": "EV-0854",
+    "excerpt": "out that form. Okay, wait a few seconds. That'll land in our inbox and then we'll fire the routine only then. And it's a lot more efficient uh to do it that way. So that's what I'm going to do. I'll go call via API. You could still run the polling approach like I was showing you guys how to do uh locally on your computer. Uh but I think this is probably like a much simpler way. can't"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0489",
+  "claim_text": "The polling approach can still be run locally on your computer, but the API trigger approach is described as a much simpler way and cannot be done locally, which is why it is a routine-based thing.",
+  "evidence": [
+   {
+    "local_id": "EV-0854",
+    "excerpt": "out that form. Okay, wait a few seconds. That'll land in our inbox and then we'll fire the routine only then. And it's a lot more efficient uh to do it that way. So that's what I'm going to do. I'll go call via API. You could still run the polling approach like I was showing you guys how to do uh locally on your computer. Uh but I think this is probably like a much simpler way. can't"
+   },
+   {
+    "local_id": "EV-0855",
+    "excerpt": "really do this API thing if it's local, which is why it's more of a routine based thing. Yeah, this looks pretty solid to me. I'm just going to click create. Now, we have a token that'll allow us to fire the routine via post. So, just going to copy it here. I'm going to say here's the token. Please set this up. Cool. And you can actually see these runs working right now. Um,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0490",
+  "claim_text": "After clicking create, a token is provided that allows firing the routine via POST; the speaker copies the token and gives it to the model to set up.",
+  "evidence": [
+   {
+    "local_id": "EV-0855",
+    "excerpt": "really do this API thing if it's local, which is why it's more of a routine based thing. Yeah, this looks pretty solid to me. I'm just going to click create. Now, we have a token that'll allow us to fire the routine via post. So, just going to copy it here. I'm going to say here's the token. Please set this up. Cool. And you can actually see these runs working right now. Um,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0491",
+  "claim_text": "During the run the system double checks that the connectors are responsive and searches for the send and label tools, confirming Gmail, before firing them off.",
+  "evidence": [
+   {
+    "local_id": "EV-0856",
+    "excerpt": "this is actually like literally firing off and being sent. So, initializing the session, starting Cloud Code. Here's a bunch of the the data and the information. And no, I did not leak my phone number. Thank goodness. Um, so it's just going to double check the connectors responsive and actually go ahead and fire them off. Searching for the send and label tools, confirming"
+   },
+   {
+    "local_id": "EV-0857",
+    "excerpt": "Gmail. Looks like it does have Gmail. And uh, yeah, I mean now we have our little speed delete system set up as a cloud routine and it runs um, via some remote trigger um, sort of API as opposed to something different. So that's that. I mean like we just built a speed delete system. You can obviously take this further if you want to by doing things like automatic call"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0492",
+  "claim_text": "The speed to lead system runs as a cloud routine fired via a remote API trigger.",
+  "evidence": [
+   {
+    "local_id": "EV-0857",
+    "excerpt": "Gmail. Looks like it does have Gmail. And uh, yeah, I mean now we have our little speed delete system set up as a cloud routine and it runs um, via some remote trigger um, sort of API as opposed to something different. So that's that. I mean like we just built a speed delete system. You can obviously take this further if you want to by doing things like automatic call"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0493",
+  "claim_text": "Automatic call merging works by having a third phone number call both parties simultaneously; it is trigger based and the first person to pick up is in the call, which avoids latency from the other person joining later.",
+  "evidence": [
+   {
+    "local_id": "EV-0858",
+    "excerpt": "merging. The way that automatic call merging works um just for your convenience is it'll call both of us simultaneously. So there'll be some third phone number that'll call me and it'll call them at the same time and so we're both going to get rings on our phones. So ideally you would pick up fast, right? It's trigger based and the first person to pick up is going to be"
+   },
+   {
+    "local_id": "EV-0859",
+    "excerpt": "in the call. Um that way there won't be latency like when the other person comes onto the call. But yeah, you could do this with like big setting teams and stuff. And uh the presence of this versus not having the presence of like a call merge system for something that like makes sense to be dealt with over the phone and you know a lot of mid to high ticket offers do makes a real big"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0494",
+  "claim_text": "Having a call merge system versus not having one makes a real big difference for offers that make sense to be dealt with over the phone, which a lot of mid to high ticket offers do.",
+  "evidence": [
+   {
+    "local_id": "EV-0859",
+    "excerpt": "in the call. Um that way there won't be latency like when the other person comes onto the call. But yeah, you could do this with like big setting teams and stuff. And uh the presence of this versus not having the presence of like a call merge system for something that like makes sense to be dealt with over the phone and you know a lot of mid to high ticket offers do makes a real big"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0495",
+  "claim_text": "The missing pieces after email, SMS and phone call outreach are tracking dispositions and doing follow-ups, e.g. pumping into a CRM and scheduling follow-up calls, which is more sales based and not covered in this course.",
+  "evidence": [
+   {
+    "local_id": "EV-0860",
+    "excerpt": "difference. But think about it. You're now slapping them with an email. You're slapping them with an SMS. You're slapping them with a phone call. Really the only missing piece here before you get something that is kind of like Clarvo is just like tracking dispositions and then doing follow-ups. So, pump pumping this into some sort of CRM um you know, scheduling follow-up"
+   },
+   {
+    "local_id": "EV-0861",
+    "excerpt": "calls by people on your team and so on. That is more sales based. So, I'm not going to talk about that in today's course, probably in a future course. Um but yeah, I just wanted to make sure that we all knew how to squeeze the juice out of the leads to the biggest and best extent possible. And if you think about it, that now takes us to our next task, which you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0496",
+  "claim_text": "The purpose of a dashboard is to visualize data, in this case marketing data.",
+  "evidence": [
+   {
+    "local_id": "EV-0863",
+    "excerpt": "dashboards. What the hell is the purpose of a dashboard? It's obviously to visualize [clears throat] a data. in our case, marketing data. And you know, a big question is how do we make dashboards that both showcase marketing data in like an effective and simple way while also making use of all of the really cool features of cloud code and uh AI agents in general um to,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0497",
+  "claim_text": "The naive approach most people take is to pump a bunch of marketing data into cloud code and say 'visualize it', which yields a low quality result.",
+  "evidence": [
+   {
+    "local_id": "EV-0864",
+    "excerpt": "you know, make them not absolutely ask to look at. So, you know, this is like a naive approach that I think most people would probably do. They'd basically just pump in a bunch of their marketing data to cloud code, say visualize it, and then end up with something like this. We're going to make something that is far far better and far higher quality. And we're going to do so in a couple of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0498",
+  "claim_text": "When people visualize dashboards they are not treating it as what it really is, which is a web design project; dashboards nowadays are just HTML, and you go a lot further if you treat what you are building as a glorified website rather than a data showcase tool.",
+  "evidence": [
+   {
+    "local_id": "EV-0865",
+    "excerpt": "ways. Um, you know, this is for a hypothetical company called North Beam Digital. If I zoom in here so you guys can maybe see a little bit better. It tracks uh the total ad spend, the sessions, the leads, the blended CPL, closed one deals, one. Um, but the problem is, you know, like when people visualize stuff like this, they're not really treating it like what it really"
+   },
+   {
+    "local_id": "EV-0866",
+    "excerpt": "is, which is a web design project. Uh, you know, dashboards nowadays are just like HTML. And HTML is hypertext markup language. It's essentially the language of websites and you go a lot further if you treat you know what you are building as uh like literally just like a glorified website um than you know is like necessarily a data showcase tool. So yeah, I'm going to show you guys how"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0499",
+  "claim_text": "Marketing data sources (meta ads spend and clicks, Google Analytics G4, Stripe revenue, CRM, email platforms) tend to be spread between multiple platforms and live in different places.",
+  "evidence": [
+   {
+    "local_id": "EV-0867",
+    "excerpt": "to make stuff like this way way better and I'm also going to show you guys how to visualize data in ways that allow you to share them with virtually everybody in your organization. If I scroll way down here to my little marketing um section, like you have access to virtually everything that you could possibly need already. You know, meta ads, your spend and clicks, Google"
+   },
+   {
+    "local_id": "EV-0868",
+    "excerpt": "Analytics, G4, Stripe, your revenue, CRM, email platforms, stuff like that. Your issue is they all tend to be spread between multiple platforms. And so, you know, like all of these realistically will live in different places. The whole idea of like a unified cloud code build dashboard is we get to create a bunch of connectors that connect to these platforms which hopefully you've already"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0500",
+  "claim_text": "The idea of a unified cloud-code-built dashboard is to create connectors to these platforms (via MCP) and then build an ingestion pipeline that runs on a daily, weekly or monthly sequence to pump into a dashboard, producing a single source of truth instead of disconnected dashboards.",
+  "evidence": [
+   {
+    "local_id": "EV-0868",
+    "excerpt": "Analytics, G4, Stripe, your revenue, CRM, email platforms, stuff like that. Your issue is they all tend to be spread between multiple platforms. And so, you know, like all of these realistically will live in different places. The whole idea of like a unified cloud code build dashboard is we get to create a bunch of connectors that connect to these platforms which hopefully you've already"
+   },
+   {
+    "local_id": "EV-0869",
+    "excerpt": "seen is fairly straightforward, right? You just get an MCP or something and go for it and then build what is technically referred to as an ingestion pipeline. Um, and then your ingestion pipeline just runs on like a daily, weekly or monthly sequence to pump into some sort of dashboard. So that you know that's sort of the idea here. U we're just"
+   },
+   {
+    "local_id": "EV-0870",
+    "excerpt": "going to get out of like the super disconnected dashboards and build like a single source of truth. Um what's really cool is you know back in the old days and I say this as somebody that used to run a marketing agency. It was our primary deliverable. Um you know we'd have like a report day once a month and uh the whole idea was you know at the end of the month we'd go through all our"
+   }
+  ]
+ }
+]

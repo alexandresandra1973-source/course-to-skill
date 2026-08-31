@@ -1,0 +1,2105 @@
+[
+ {
+  "source_id": "MS002-SRC-B",
+  "slice_id": "SL-B-01",
+  "raw_claims": [
+   {
+    "temporary_claim_id": "TC-001",
+    "text": "O Cloud Code atua como orquestrador: é com ele que se conversa e a quem se pede para fazer determinadas ações.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0005"
+    ],
+    "qualifiers": {
+     "scope": "gerenciador de grupos de WhatsApp",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-002",
+    "text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0006"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API / WhatsApp",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-003",
+    "text": "Através do Evolution API conecta-se o número do WhatsApp como se fosse um WhatsApp Web; por ser API não oficial, não se paga pela API oficial.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API / WhatsApp",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-004",
+    "text": "Após escanear, o Cloud Code passa a ter acesso ao WhatsApp de acordo com as permissões dadas e o que for pedido.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0008",
+     "EV-0009"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "após escanear e conforme permissão concedida",
+     "platform": "Cloud Code / WhatsApp",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-005",
+    "text": "O Evolution API é gratuito e open source, mas precisa ser hospedado em uma VPS para ficar funcionando 24 horas por dia.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "para ficar 24 horas por dia funcionando",
+     "platform": "Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-006",
+    "text": "A VPS utilizada é a da HostGator, que já possui a função de pré-instalar o Evolution API: ao contratar escolhendo a opção Evolution API, ele já vem instalado, sem necessidade de configuração.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0010",
+     "EV-0011",
+     "EV-0012"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "ao contratar escolhendo a opção Evolution API",
+     "platform": "HostGator VPS",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-007",
+    "text": "O vídeo trabalha em quatro etapas, seguidas passo a passo, para funcionar sem problema.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0015"
+    ],
+    "qualifiers": {
+     "scope": "o processo ensinado no vídeo",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-008",
+    "text": "O primeiro passo é instalar e contratar a VPS com Evolution API.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0016"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "HostGator VPS",
+     "stage": "passo 1",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-009",
+    "text": "O plano anunciado indica Evolution pré-instalada e cabe até 20 números de WhatsApp, dependendo da forma de utilização.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "qualifiers": {
+     "scope": "planos padrão exibidos na página",
+     "condition": "depende da forma de utilização",
+     "platform": "HostGator VPS",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-010",
+    "text": "Se o uso for muito intenso, é recomendável pegar uma peça melhor, por exemplo a NVMe quatro, que para esse tipo de caso é o padrão.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "se for usar muito, muito, muito",
+     "platform": "HostGator VPS",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-011",
+    "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo no Brasil; quem estiver fora do Brasil deve verificar se o do México é mais próximo.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "se estiver fora do Brasil, verificar o do México",
+     "platform": "HostGator VPS",
+     "stage": "conferência no carrinho",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-012",
+    "text": "Antes de continuar para verificação, deve-se conferir no carrinho se o plano está correto e se consta Evolution API.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0025",
+     "EV-0027"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "HostGator",
+     "stage": "carrinho",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-013",
+    "text": "Após o pagamento, chega um e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "depois de realizar o pagamento",
+     "platform": "HostGator",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-014",
+    "text": "O token do Evolution deve ser copiado e salvo em algum local, porque será necessário depois.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0031",
+     "EV-0032"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-015",
+    "text": "No portal, em VPS e dedicados, aparece o servidor e o acesso rápido permite abrir o console ou clicar direto no Evolution API; em gerenciar veem-se mais detalhes da VPS.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0032",
+     "EV-0033",
+     "EV-0034",
+     "EV-0035"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "HostGator portal",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-016",
+    "text": "A página que aparece ao abrir o Evolution API parece um erro, mas não é: é preciso digitar barra manager no final para acessar de fato.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0035",
+     "EV-0036",
+     "EV-0037"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "quando aparece a tela que parece erro",
+     "platform": "Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-017",
+    "text": "No primeiro acesso ao manager, deve-se colar a chave de API global que está no e-mail (Gmail) e clicar em conectar.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0038",
+     "EV-0039"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "no primeiro acesso",
+     "platform": "Evolution API manager",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-018",
+    "text": "A próxima etapa (segundo passo) é criar uma instância e conectar o número do WhatsApp.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0039",
+     "EV-0040"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": "passo 2",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-019",
+    "text": "Para criar a instância, clica-se em instância, coloca-se um nome e salva; ela aparece como desconectada.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0040",
+     "EV-0041"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API manager",
+     "stage": "passo 2",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-020",
+    "text": "Com a instância desconectada, vai-se em configurações e gerar QR Code para escanear pelo celular como se fosse um WhatsApp Web.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0041",
+     "EV-0042",
+     "EV-0043"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "quando a instância aparece como desconectada",
+     "platform": "Evolution API manager",
+     "stage": "passo 2",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-021",
+    "text": "No iPhone, vai-se em configurações, dispositivos conectados, conectar dispositivo e escaneia-se o QR Code; no Android é apresentado como provavelmente o mesmo procedimento.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0043",
+     "EV-0044"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "se for iPhone",
+     "platform": "WhatsApp iPhone/Android",
+     "stage": "passo 2",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-022",
+    "text": "Após conectar, aparecem nome, foto de perfil e número de telefone, indicando que o segundo passo está completo.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0045",
+     "EV-0046"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API manager",
+     "stage": "passo 2",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-023",
+    "text": "O próximo passo é ir para o VS Code e configurar o Cloud Code, dando acesso do Evolution para o Cloud Code e passando documentações para ele entender como funciona a API do Evolution.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0047",
+     "EV-0048",
+     "EV-0049"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "depois de VPS Evolution e número conectados",
+     "platform": "VS Code / Cloud Code",
+     "stage": "passo 3",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-024",
+    "text": "Com o Cloud Code tendo acesso ao WhatsApp, é possível acessar grupos, verificar membros, editar o grupo, enviar mensagens e fazer relatórios.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "qualifiers": {
+     "scope": "gerenciamento de grupos de WhatsApp",
+     "condition": null,
+     "platform": "Cloud Code / WhatsApp",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-025",
+    "text": "Com o método ensinado é possível criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "qualifiers": {
+     "scope": "gerenciamento de grupos de WhatsApp com Cloud Code",
+     "condition": null,
+     "platform": "Cloud Code / WhatsApp",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   }
+  ],
+  "raw_candidates": [
+   {
+    "temporary_candidate_id": "TX-001",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0015",
+     "EV-0016",
+     "EV-0040",
+     "EV-0047"
+    ],
+    "claim_temp_refs": [
+     "TC-007",
+     "TC-008",
+     "TC-018",
+     "TC-023"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Quatro etapas do gerenciador de grupos de WhatsApp com Cloud Code (etapas descritas neste trecho)",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Instalar e contratar a VPS com Evolution API",
+       "action": "Contratar a VPS com Evolution API pré-instalada acessando o link da descrição/comentário fixado, que leva à seção do Evolution API dentro da HostGator",
+       "required_inputs": [
+        "link da descrição ou comentário fixado"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0016",
+        "EV-0017"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Criar uma instância e conectar o número do WhatsApp",
+       "action": "Criar a instância no Evolution API e conectar o número do WhatsApp via QR Code",
+       "required_inputs": [
+        "acesso ao manager do Evolution API",
+        "celular com WhatsApp"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0039",
+        "EV-0040",
+        "EV-0042"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Ir para o VS Code e configurar o Cloud Code",
+       "action": "Dar ao Cloud Code acesso ao local do Evolution e passar documentações para ele entender como funciona a API do Evolution",
+       "required_inputs": [
+        "VPS Evolution e número conectados",
+        "documentações da API do Evolution"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0047",
+        "EV-0048",
+        "EV-0049"
+       ]
+      }
+     ],
+     "prerequisites": [
+      "Seguir os quatro pontos passo a passo para estar funcionando sem problema"
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-002",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0016",
+     "EV-0017",
+     "EV-0025",
+     "EV-0027",
+     "EV-0030",
+     "EV-0031",
+     "EV-0032"
+    ],
+    "claim_temp_refs": [
+     "TC-008",
+     "TC-011",
+     "TC-012",
+     "TC-013",
+     "TC-014"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Contratação da VPS HostGator com Evolution API pré-instalada",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Acessar a página do Evolution API na HostGator",
+       "action": "Acessar o link da descrição/comentário fixado que leva à seção do Evolution API dentro da HostGator",
+       "required_inputs": [
+        "link da descrição ou comentário fixado"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0016",
+        "EV-0017"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Escolher o plano",
+       "action": "Escolher o plano entre os tipos de servidores exibidos (dois, quatro, oito nos padrões, ou de alto desempenho); se for usar muito, pegar peça melhor como a NVMe quatro",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0019",
+        "EV-0021",
+        "EV-0022",
+        "EV-0023"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Conferir no carrinho",
+       "action": "Continuar para carrinho e conferir se o plano está correto e se consta Evolution API; manter o servidor em São Paulo, ou verificar o do México se estiver fora do Brasil",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0024",
+        "EV-0025",
+        "EV-0026"
+       ]
+      },
+      {
+       "order_key": 4,
+       "name": "Continuar para verificação e fazer login",
+       "action": "Continuar para verificação, colocar a conta da HostGator (podendo criar a conta com o Google) e preencher os dados pedidos",
+       "required_inputs": [
+        "conta HostGator ou conta Google"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0027",
+        "EV-0028"
+       ]
+      },
+      {
+       "order_key": 5,
+       "name": "Realizar pagamento",
+       "action": "Selecionar a forma de pagamento (cartão de crédito, boleto, PayPal, Pix), parcelar se preferir, e clicar em realizar pagamento",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0029",
+        "EV-0030"
+       ]
+      },
+      {
+       "order_key": 6,
+       "name": "Receber e-mail e salvar o token",
+       "action": "Acessar o e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution; copiar e salvar o token em algum local",
+       "required_inputs": [
+        "e-mail da HostGator"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0030",
+        "EV-0031",
+        "EV-0032"
+       ]
+      },
+      {
+       "order_key": 7,
+       "name": "Acessar o painel e abrir o Evolution API",
+       "action": "No portal, ir em VPS e dedicados, ver o servidor e, no acesso rápido, clicar em Evolution API",
+       "required_inputs": [
+        "acesso ao portal HostGator"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0032",
+        "EV-0033",
+        "EV-0034",
+        "EV-0035"
+       ]
+      },
+      {
+       "order_key": 8,
+       "name": "Acessar o manager",
+       "action": "Digitar barra manager no final da URL quando aparecer a tela que parece um erro, e colar a chave de API global do e-mail para conectar",
+       "required_inputs": [
+        "chave de API global recebida no e-mail"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0036",
+        "EV-0038",
+        "EV-0039"
+       ]
+      }
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-003",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0040",
+     "EV-0041",
+     "EV-0042",
+     "EV-0043",
+     "EV-0044",
+     "EV-0045",
+     "EV-0046"
+    ],
+    "claim_temp_refs": [
+     "TC-018",
+     "TC-019",
+     "TC-020",
+     "TC-021",
+     "TC-022"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Criar instância e conectar o número do WhatsApp no Evolution API",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Criar a instância",
+       "action": "Clicar em instância, colocar um nome (ex.: YouTube teste) e salvar; ela aparece como desconectada",
+       "required_inputs": [
+        "nome da instância"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0040",
+        "EV-0041"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Gerar QR Code",
+       "action": "Ir em configurações e gerar QR Code para escanear pelo celular como se fosse um WhatsApp Web",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0042",
+        "EV-0043"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Escanear pelo celular",
+       "action": "No iPhone, ir em configurações, dispositivos conectados, clicar em conectar dispositivo e escanear o QR Code (no Android, apresentado como provavelmente a mesma coisa)",
+       "required_inputs": [
+        "celular conectado com WhatsApp"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0043",
+        "EV-0044",
+        "EV-0045"
+       ]
+      },
+      {
+       "order_key": 4,
+       "name": "Confirmar conexão",
+       "action": "Verificar que aparecem nome, foto de perfil e número de telefone, indicando que está conectado e o segundo passo completo",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0045",
+        "EV-0046"
+       ]
+      }
+     ],
+     "prerequisites": [
+      "Ter acessado o manager do Evolution API com a chave de API global"
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-004",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "claim_temp_refs": [
+     "TC-005"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Hospedar o Evolution API em uma VPS",
+     "trigger": "Ao usar o Evolution API",
+     "condition": "Para ele ficar 24 horas por dia funcionando",
+     "action": "Hospedar o Evolution API em uma VPS",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-005",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0031",
+     "EV-0032"
+    ],
+    "claim_temp_refs": [
+     "TC-014"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Salvar o token do Evolution",
+     "trigger": "Ao receber o e-mail da HostGator com os dados de acesso ao VPS",
+     "condition": null,
+     "action": "Copiar o token do Evolution e salvá-lo em algum local, pois será necessário depois",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-006",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0035",
+     "EV-0036"
+    ],
+    "claim_temp_refs": [
+     "TC-016"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Digitar barra manager no final",
+     "trigger": "Quando ao abrir o Evolution API aparece uma página que parece um erro",
+     "condition": "A página não é de fato um erro",
+     "action": "Digitar barra manager no final para acessar de fato",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-007",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0038",
+     "EV-0039"
+    ],
+    "claim_temp_refs": [
+     "TC-017"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Colar a chave de API global no primeiro acesso",
+     "trigger": "No primeiro acesso ao manager do Evolution API",
+     "condition": null,
+     "action": "Colar a chave de API global que está no e-mail (Gmail) e clicar em conectar",
+     "do_not": [],
+     "precedence": null,
+     "prerequisites": [
+      "Ter a chave de API global recebida por e-mail"
+     ]
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-008",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0026",
+     "EV-0027"
+    ],
+    "claim_temp_refs": [
+     "TC-011"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Escolher a localização do servidor",
+     "trigger": "Na conferência do carrinho da HostGator",
+     "condition": "Estando no Brasil",
+     "action": "Manter o servidor em São Paulo, que é o mais próximo no Brasil",
+     "do_not": [],
+     "precedence": null,
+     "exceptions": [
+      "Se estiver fora do Brasil, verificar se o do México é mais próximo"
+     ]
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-009",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0021",
+     "EV-0022"
+    ],
+    "claim_temp_refs": [
+     "TC-010"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Escolher plano maior para uso intenso",
+     "trigger": "Ao escolher o plano da VPS",
+     "condition": "Se for usar muito, muito, muito",
+     "action": "Pegar uma peça melhor, por exemplo a NVMe quatro, que para esse tipo de caso é o padrão",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-010",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0011",
+     "EV-0012"
+    ],
+    "claim_temp_refs": [
+     "TC-006"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Contratar com a opção Evolution API pré-instalada",
+     "trigger": "Ao contratar a VPS da HostGator",
+     "condition": null,
+     "action": "Escolher a opção de Evolution API para que ele já venha instalado, sem necessidade de configuração",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-011",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0025",
+     "EV-0027"
+    ],
+    "claim_temp_refs": [
+     "TC-012"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Conferir o pedido no carrinho antes da verificação",
+     "trigger": "Ao continuar para o carrinho",
+     "condition": null,
+     "action": "Conferir se o plano está correto e se consta Evolution API antes de continuar para verificação",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   }
+  ]
+ },
+ {
+  "source_id": "MS002-SRC-B",
+  "slice_id": "SL-B-02",
+  "raw_claims": [
+   {
+    "temporary_claim_id": "TC-001",
+    "text": "Dentro do projeto gestor de grupos existe uma pasta chamada docs com dois arquivos: Evolution API (documentação completa do Evolution em markdown) e gerenciar grupos com Cloud Code (explicação geral do que dá para ser feito de gerenciamento de grupos com Cloud Code).",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0055",
+     "EV-0056",
+     "EV-0057",
+     "EV-0058"
+    ],
+    "qualifiers": {
+     "scope": "projeto gestor de grupos do apresentador",
+     "condition": null,
+     "platform": "Cloud Code / Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-002",
+    "text": "O arquivo cloud.md é o prompt do Cloud que explica de maneira simples o que ele faz, o contexto geral.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0064"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-003",
+    "text": "O arquivo {ponto} env é onde se colocam as credenciais do Evolution: a URL, a chave API global e o nome da instância.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0065"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": "configuração",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-004",
+    "text": "O gitignore serve para o caso de você subir o repositório no GitHub, para não passar o arquivo {ponto} env no repositório.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0066"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "caso o repositório seja subido no GitHub",
+     "platform": "GitHub",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-005",
+    "text": "Se você for rodar só no computador, pode seguir sem se preocupar com repositório/GitHub, mas mantenha esses arquivos por padrão.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0067",
+     "EV-0068"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "se for rodar apenas localmente no computador",
+     "platform": null,
+     "stage": null,
+     "audience": "quem não sabe o que é repositório/GitHub"
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-006",
+    "text": "Ao configurar a URL do Evolution (https e o número IP), deve-se tirar a barra do final e salvar com Ctrl S.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0068",
+     "EV-0069"
+    ],
+    "qualifiers": {
+     "scope": "credenciais do Evolution no arquivo env",
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": "configuração de credenciais",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-007",
+    "text": "A chave API a ser colocada é aquela que foi recebida por e-mail.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0069"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": "configuração de credenciais",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-008",
+    "text": "O nome da instância do Evolution é próprio de cada usuário: no exemplo é 'YouTube teste', e a de outras pessoas será diferente.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0070",
+     "EV-0071"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Evolution API",
+     "stage": "configuração de credenciais",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-009",
+    "text": "Depois de colocar as credenciais, faz-se um teste perguntando ao Cloud Code 'Quais instâncias tenho conectado no Evolution?'; se ele mostrar o nome da instância, a configuração/conexão está funcionando.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0071",
+     "EV-0072",
+     "EV-0073",
+     "EV-0074"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "Cloud Code / Evolution API",
+     "stage": "teste de conexão",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-010",
+    "text": "No teste o apresentador colocou 'bypass' e deixou o modelo Sonnet, com o reforço no médio.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0072"
+    ],
+    "qualifiers": {
+     "scope": "exemplo demonstrado pelo apresentador",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": "teste de conexão",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-011",
+    "text": "A sequência realizada até este ponto foi: contratar a VPS, colocar o Evolution, conectar o WhatsApp e configurar o VS Code; depois resta fazer as requisições para o Cloud Code.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0075",
+     "EV-0076"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": null,
+     "platform": "VPS / Evolution / WhatsApp / VS Code / Cloud Code",
+     "stage": "visão geral do processo",
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-012",
+    "text": "Não é preciso explicar ao Cloud que ele deve usar o Evolution porque esse contexto inicial já foi colocado no cloud.md; por isso é bom ter um cloud.md.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0078",
+     "EV-0079",
+     "EV-0080"
+    ],
+    "qualifiers": {
+     "scope": "perguntas relacionadas a grupos",
+     "condition": "desde que o contexto esteja no cloud.md",
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-013",
+    "text": "Com o contexto no cloud.md, tudo que for perguntado relacionado a grupo faz o Cloud saber que deve usar o Evolution, e ele consulta a documentação para ver como usar.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0080"
+    ],
+    "qualifiers": {
+     "scope": "perguntas relacionadas a grupo",
+     "condition": null,
+     "platform": "Cloud Code / Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-014",
+    "text": "Pedindo ao Cloud uma lista de todos os grupos dos quais o usuário faz parte e dos grupos em que é admin, ele retorna nome do grupo, quantidade de membros e se o usuário é admin ou não.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0076",
+     "EV-0077",
+     "EV-0078",
+     "EV-0081",
+     "EV-0082"
+    ],
+    "qualifiers": {
+     "scope": "caso de uso demonstrado",
+     "condition": null,
+     "platform": "Cloud Code / Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-015",
+    "text": "Pedindo ao Cloud um relatório em HTML com estatísticas dos membros de um grupo e um gráfico por estado, ele gera um painel HTML e abre o navegador automaticamente.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0083",
+     "EV-0084",
+     "EV-0085",
+     "EV-0086",
+     "EV-0087"
+    ],
+    "qualifiers": {
+     "scope": "caso de uso demonstrado",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-016",
+    "text": "O dashboard gerado mostrou data de geração, instância, ID do grupo, 432 total de membros, quantidade de brasileiros, quantos estão em outro país, quantidade de admins, estados presentes, gráfico de top cinco estados, porcentagem de membros por estado, quantitativo e distribuição por região.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0087",
+     "EV-0088",
+     "EV-0089",
+     "EV-0090",
+     "EV-0091"
+    ],
+    "qualifiers": {
+     "scope": "resultado do exemplo demonstrado",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-017",
+    "text": "O apresentador deixou a critério do Cloud incluir outras informações que ele achasse interessante mostrar no relatório.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0085",
+     "EV-0086"
+    ],
+    "qualifiers": {
+     "scope": "prompt do exemplo",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-018",
+    "text": "Pode-se pedir ao Cloud para criar uma planilha para o Excel contendo nome e contato de todos os membros de um grupo, e a partir disso fazer alguma campanha.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0096",
+     "EV-0097",
+     "EV-0098"
+    ],
+    "qualifiers": {
+     "scope": "caso de uso demonstrado",
+     "condition": null,
+     "platform": "Cloud Code / Excel",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-019",
+    "text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0093",
+     "EV-0094",
+     "EV-0095",
+     "EV-0096",
+     "EV-0098",
+     "EV-0099"
+    ],
+    "qualifiers": {
+     "scope": "quem participa de vários grupos",
+     "condition": null,
+     "platform": "Cloud Code / Evolution API",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-020",
+    "text": "Enquanto uma tarefa está sendo gerada, é possível abrir outro chat e executar outra função simultaneamente.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0099"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "enquanto a primeira tarefa ainda está processando",
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-021",
+    "text": "O apresentador usou o Haiku no segundo chat, descrevendo-o como um modelo mais fraco, para testar se ele conseguiria realizar a tarefa.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0100"
+    ],
+    "qualifiers": {
+     "scope": "teste do apresentador",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-022",
+    "text": "Os arquivos do projeto (pasta docs e os demais) serão compactados em um arquivo zip e disponibilizados no hub de templates gratuito do apresentador, com o link do hub na descrição do grupo gratuito de Cloud Code.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0058",
+     "EV-0059",
+     "EV-0060",
+     "EV-0062",
+     "EV-0063"
+    ],
+    "qualifiers": {
+     "scope": "material deste vídeo",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-023",
+    "text": "Se o material não for encontrado no hub, basta colocar a URL do vídeo para que ele apareça, e então baixar o material.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0061",
+     "EV-0062"
+    ],
+    "qualifiers": {
+     "scope": "hub de templates",
+     "condition": "caso não esteja encontrando o material",
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-024",
+    "text": "Para quem não sabe colocar o Cloud Code no VS Code, existe um vídeo do autor ensinando a parte básica do Cloud Code, deixado no card.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0053",
+     "EV-0054",
+     "EV-0055"
+    ],
+    "qualifiers": {
+     "scope": null,
+     "condition": "se você não sabe colocar o Cloud Code no VS Code",
+     "platform": "VS Code / Cloud Code",
+     "stage": null,
+     "audience": "quem não sabe configurar o Cloud Code no VS Code"
+    },
+    "status": "SOURCE_EXPLICIT"
+   }
+  ],
+  "raw_candidates": [
+   {
+    "temporary_candidate_id": "TX-001",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0063",
+     "EV-0064",
+     "EV-0065",
+     "EV-0068",
+     "EV-0069",
+     "EV-0070",
+     "EV-0071",
+     "EV-0072",
+     "EV-0073",
+     "EV-0074"
+    ],
+    "claim_temp_refs": [
+     "TC-003",
+     "TC-006",
+     "TC-007",
+     "TC-008",
+     "TC-009"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Configurar credenciais do Evolution no projeto e testar a conexão",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Baixar e descompactar o material",
+       "action": "Baixar o material, descompactar e colocar os arquivos no projeto",
+       "evidence_refs": [
+        "EV-0063"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Abrir o arquivo {ponto} env",
+       "action": "Abrir o arquivo {ponto} env, onde se colocam as credenciais do Evolution: URL, chave API global e nome da instância",
+       "evidence_refs": [
+        "EV-0065"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Configurar a URL",
+       "action": "Colar a URL (https e o número IP), tirar a barra do final e dar Ctrl S para salvar",
+       "required_inputs": [
+        "URL do Evolution (https e número IP)"
+       ],
+       "evidence_refs": [
+        "EV-0068",
+        "EV-0069"
+       ]
+      },
+      {
+       "order_key": 4,
+       "name": "Configurar a chave API",
+       "action": "Colocar a chave API recebida por e-mail e salvar com Ctrl S",
+       "required_inputs": [
+        "chave API recebida no e-mail"
+       ],
+       "evidence_refs": [
+        "EV-0069",
+        "EV-0070"
+       ]
+      },
+      {
+       "order_key": 5,
+       "name": "Configurar a instância",
+       "action": "Colar o nome da instância do Evolution (Ctrl V) e salvar (Ctrl S)",
+       "required_inputs": [
+        "nome da instância do Evolution"
+       ],
+       "evidence_refs": [
+        "EV-0070",
+        "EV-0071"
+       ]
+      },
+      {
+       "order_key": 6,
+       "name": "Testar a conexão",
+       "action": "Perguntar ao Cloud Code 'Quais instâncias tenho conectado no Evolution?'; se ele mostrar o nome da instância, a conexão está funcionando",
+       "evidence_refs": [
+        "EV-0071",
+        "EV-0072",
+        "EV-0073",
+        "EV-0074"
+       ]
+      }
+     ],
+     "prerequisites": [
+      "ter o Cloud Code no VS Code",
+      "ter a URL, a chave API e o nome da instância do Evolution"
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-002",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0068",
+     "EV-0069"
+    ],
+    "claim_temp_refs": [
+     "TC-006"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Remover a barra final da URL do Evolution",
+     "trigger": "Ao colar a URL do Evolution no arquivo env",
+     "condition": "URL formada por https e o número IP",
+     "action": "Tirar a barra do final da URL e salvar com Ctrl S",
+     "do_not": [
+      "deixar a barra no final da URL"
+     ],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-003",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0066",
+     "EV-0067",
+     "EV-0068"
+    ],
+    "claim_temp_refs": [
+     "TC-004",
+     "TC-005"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Usar gitignore para não subir o {ponto} env ao GitHub",
+     "trigger": "Caso você vá subir o repositório no GitHub",
+     "condition": "uso de repositório no GitHub",
+     "action": "Manter o gitignore para não passar o arquivo {ponto} env no repositório",
+     "do_not": [
+      "passar o arquivo {ponto} env no repositório"
+     ],
+     "precedence": null,
+     "exceptions": [
+      "Se for rodar só no computador, pode seguir sem se preocupar, mas mantendo os arquivos por padrão"
+     ]
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-004",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0067",
+     "EV-0068"
+    ],
+    "claim_temp_refs": [
+     "TC-005"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Manter os arquivos do projeto por padrão",
+     "trigger": "Ao montar o projeto localmente",
+     "condition": null,
+     "action": "Manter esses arquivos por padrão no projeto",
+     "do_not": [
+      "remover os arquivos do projeto"
+     ],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-005",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0064",
+     "EV-0078",
+     "EV-0079",
+     "EV-0080"
+    ],
+    "claim_temp_refs": [
+     "TC-002",
+     "TC-012",
+     "TC-013"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Colocar o contexto inicial no cloud.md em vez de repetir na pergunta",
+     "trigger": "Ao fazer perguntas ao Cloud relacionadas a grupos",
+     "condition": "o contexto inicial (uso do Evolution) já estar colocado no cloud.md",
+     "action": "Ter um cloud.md com o contexto geral, para que o Cloud já saiba usar o Evolution e consultar a documentação sem precisar explicar em cada pergunta",
+     "do_not": [
+      "precisar explicar em cada pergunta que ele deve usar o Evolution"
+     ],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-006",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0075",
+     "EV-0076"
+    ],
+    "claim_temp_refs": [
+     "TC-011"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Sequência geral de montagem do ambiente até as requisições ao Cloud Code",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Contratar a VPS",
+       "action": "Contratar a VPS",
+       "evidence_refs": [
+        "EV-0075"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Colocar o Evolution",
+       "action": "Colocar o Evolution",
+       "evidence_refs": [
+        "EV-0075"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Conectar o WhatsApp",
+       "action": "Conectar o WhatsApp",
+       "evidence_refs": [
+        "EV-0075"
+       ]
+      },
+      {
+       "order_key": 4,
+       "name": "Configurar o VS Code",
+       "action": "Configurar o VS Code",
+       "evidence_refs": [
+        "EV-0075"
+       ]
+      },
+      {
+       "order_key": 5,
+       "name": "Fazer as requisições para o Cloud Code",
+       "action": "Fazer as requisições para o Cloud Code",
+       "evidence_refs": [
+        "EV-0075",
+        "EV-0076"
+       ]
+      }
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-007",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0083",
+     "EV-0084",
+     "EV-0085",
+     "EV-0086",
+     "EV-0087"
+    ],
+    "claim_temp_refs": [
+     "TC-015",
+     "TC-016",
+     "TC-017"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Gerar dashboard HTML de estatísticas dos membros de um grupo",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Pedir o relatório",
+       "action": "Pedir ao Cloud um relatório em HTML com estatísticas dos membros do grupo, com gráfico das pessoas de acordo com o estado, deixando-o livre para incluir outras informações interessantes",
+       "required_inputs": [
+        "nome do grupo"
+       ],
+       "evidence_refs": [
+        "EV-0083",
+        "EV-0084",
+        "EV-0085",
+        "EV-0086"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Aguardar e visualizar o resultado",
+       "action": "Aguardar a geração; o Cloud traz o painel HTML e abre o navegador automaticamente",
+       "evidence_refs": [
+        "EV-0086",
+        "EV-0087"
+       ]
+      }
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-008",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0076",
+     "EV-0077",
+     "EV-0078",
+     "EV-0081",
+     "EV-0082"
+    ],
+    "claim_temp_refs": [
+     "TC-014"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Listar grupos dos quais faz parte e nos quais é admin",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Pedir a lista",
+       "action": "Pedir ao Cloud uma lista de todos os grupos dos quais você faz parte e também dos grupos em que você é admin",
+       "evidence_refs": [
+        "EV-0077",
+        "EV-0078"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Aguardar o resultado",
+       "action": "Aguardar o resultado; o Cloud retorna nome do grupo, quantidade de membros e se você é admin ou não",
+       "evidence_refs": [
+        "EV-0078",
+        "EV-0081",
+        "EV-0082"
+       ]
+      }
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-009",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0096",
+     "EV-0097",
+     "EV-0098"
+    ],
+    "claim_temp_refs": [
+     "TC-018"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Gerar planilha Excel com nome e contato dos membros do grupo",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Pedir a planilha",
+       "action": "Pedir ao Cloud que crie uma planilha para o Excel contendo nome e contato de todos os membros do grupo",
+       "required_inputs": [
+        "grupo alvo"
+       ],
+       "evidence_refs": [
+        "EV-0096",
+        "EV-0097"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Usar a planilha",
+       "action": "A partir da planilha, fazer alguma campanha ou algo do tipo",
+       "evidence_refs": [
+        "EV-0097",
+        "EV-0098"
+       ]
+      }
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-010",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0099"
+    ],
+    "claim_temp_refs": [
+     "TC-020"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Abrir outro chat para executar funções simultaneamente",
+     "trigger": "Enquanto o Cloud está gerando um resultado",
+     "condition": null,
+     "action": "Abrir outro chat e fazer outra função simultaneamente",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED",
+     "PASSO_UNICO"
+    ]
+   }
+  ]
+ },
+ {
+  "source_id": "MS002-SRC-B",
+  "slice_id": "SL-B-03",
+  "raw_claims": [
+   {
+    "temporary_claim_id": "TC-001",
+    "text": "Ao pedir a criação de grupos, ocorreu um problema porque é preciso pelo menos uma outra pessoa para criar o grupo; isso é uma restrição, pois até criando um grupo manualmente é necessário adicionar uma pessoa.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0103",
+     "EV-0104"
+    ],
+    "qualifiers": {
+     "scope": "criação de grupos",
+     "condition": "ao criar o grupo",
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-002",
+    "text": "O autor forneceu outro número que possui para que o agente adicionasse essa pessoa nos grupos e já a colocasse como admin; o agente criou os grupos e colocou a outra conta como admin.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0104",
+     "EV-0105",
+     "EV-0106"
+    ],
+    "qualifiers": {
+     "scope": "criação de grupos",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-003",
+    "text": "Houve dois detalhes que o autor acredita serem por causa do Haiku: o grupo um e o grupo dois foram criados duas vezes, e em \"lançamento\" foi colocado um ponto de interrogação no lugar do c cedilha; com o Sonnet essas duas coisas seriam resolvidas.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0106",
+     "EV-0107",
+     "EV-0108",
+     "EV-0109"
+    ],
+    "qualifiers": {
+     "scope": "modelo usado no agente",
+     "condition": "quando se usa Haiku",
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-004",
+    "text": "O autor mudou para o Sonnet e explicou o problema ao agente (duplicação dos grupos e ponto de interrogação no lugar do cedilha no título), pedindo para corrigir; o agente corrigiu os nomes e removeu os duplicados.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0109",
+     "EV-0110",
+     "EV-0111"
+    ],
+    "qualifiers": {
+     "scope": "correção de erros de execução",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-005",
+    "text": "O agente gerou a planilha em CSV e também em XLSX, arquivo que o autor pode subir no Google Sheets para ver e fazer outras coisas a partir disso.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0112",
+     "EV-0113"
+    ],
+    "qualifiers": {
+     "scope": "geração de planilha",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-006",
+    "text": "É possível disparar mensagem em massa para os grupos marcando todo mundo, mas é preciso tomar cuidado para não fazer isso de uma só vez com vários grupos com muitas pessoas.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0114",
+     "EV-0115"
+    ],
+    "qualifiers": {
+     "scope": "disparo de mensagem em massa para grupos",
+     "condition": "de uma só vez com vários grupos com muitas pessoas",
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-007",
+    "text": "O autor pediu o envio de uma mensagem de teste apenas para esses três grupos, marcando todo mundo, e a mensagem foi enviada com sucesso.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0115",
+     "EV-0116"
+    ],
+    "qualifiers": {
+     "scope": "demonstração de envio",
+     "condition": null,
+     "platform": null,
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-008",
+    "text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0118",
+     "EV-0119",
+     "EV-0120",
+     "EV-0121"
+    ],
+    "qualifiers": {
+     "scope": "integração via API vs. webhooks",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": null
+    },
+    "status": "SOURCE_EXPLICIT"
+   },
+   {
+    "temporary_claim_id": "TC-009",
+    "text": "O autor recomenda que os espectadores assistam também o vídeo em que ele ensina a criar um disparador de mensagens usando o Cloud Code.",
+    "source_language": "pt",
+    "evidence_refs": [
+     "EV-0121",
+     "EV-0122"
+    ],
+    "qualifiers": {
+     "scope": "recomendação de conteúdo",
+     "condition": null,
+     "platform": "Cloud Code",
+     "stage": null,
+     "audience": "espectadores do vídeo"
+    },
+    "status": "SOURCE_EXPLICIT"
+   }
+  ],
+  "raw_candidates": [
+   {
+    "temporary_candidate_id": "TX-001",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0103",
+     "EV-0104",
+     "EV-0105"
+    ],
+    "claim_temp_refs": [
+     "TC-001",
+     "TC-002"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Fornecer pelo menos outra pessoa ao criar grupo",
+     "trigger": "Ao pedir a criação de grupos",
+     "condition": "É preciso pelo menos uma outra pessoa para criar o grupo (restrição também na criação manual)",
+     "action": "Informar um outro número para que essa pessoa seja adicionada nos grupos, podendo indicar que seja colocada como admin",
+     "do_not": [],
+     "precedence": null,
+     "prerequisites": [
+      "Ter um outro número disponível"
+     ]
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-002",
+    "entity_kind": "rule_candidate",
+    "evidence_refs": [
+     "EV-0107",
+     "EV-0108",
+     "EV-0109",
+     "EV-0110",
+     "EV-0111"
+    ],
+    "claim_temp_refs": [
+     "TC-003",
+     "TC-004"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Corrigir erros de execução apontando o problema ao agente",
+     "trigger": "Quando o agente duplica grupos criados ou coloca ponto de interrogação no lugar do cedilha no título",
+     "condition": "Erros atribuídos ao uso do Haiku",
+     "action": "Mudar para o Sonnet, descrever o problema ao agente e pedir para corrigir (nomes e remoção dos duplicados)",
+     "do_not": [],
+     "precedence": null
+    },
+    "defects": [
+     "PRECEDENCE_UNDEFINED"
+    ]
+   },
+   {
+    "temporary_candidate_id": "TX-003",
+    "entity_kind": "anti_pattern_candidate",
+    "evidence_refs": [
+     "EV-0114",
+     "EV-0115"
+    ],
+    "claim_temp_refs": [
+     "TC-006"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "do_not": [
+      "Disparar mensagem em massa de uma só vez com vários grupos com muitas pessoas"
+     ],
+     "why": "O autor diz que é preciso tomar cuidado ao disparar mensagem em massa para os grupos marcando todo mundo",
+     "conditions": [
+      "Disparo em massa para grupos marcando todo mundo"
+     ]
+    },
+    "defects": []
+   },
+   {
+    "temporary_candidate_id": "TX-004",
+    "entity_kind": "workflow_candidate",
+    "evidence_refs": [
+     "EV-0101",
+     "EV-0102",
+     "EV-0103",
+     "EV-0104",
+     "EV-0105",
+     "EV-0110",
+     "EV-0111",
+     "EV-0112",
+     "EV-0113",
+     "EV-0115",
+     "EV-0116"
+    ],
+    "claim_temp_refs": [
+     "TC-001",
+     "TC-002",
+     "TC-004",
+     "TC-005",
+     "TC-007"
+    ],
+    "claim_refs_applicability": "APPLICABLE",
+    "structure": {
+     "name": "Criar grupos para lançamento, corrigir erros, gerar planilha e disparar mensagem",
+     "steps": [
+      {
+       "order_key": 1,
+       "name": "Pedir criação dos grupos",
+       "action": "Pedir ao agente que crie três grupos para um lançamento, com nome \"Lançamento teste YouTube #\" mais o número do grupo",
+       "required_inputs": [
+        "Nome padrão do grupo",
+        "Quantidade de grupos"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0101",
+        "EV-0102"
+       ]
+      },
+      {
+       "order_key": 2,
+       "name": "Fornecer outra pessoa exigida pela restrição",
+       "action": "Ao aparecer o problema de que é preciso pelo menos uma outra pessoa, informar um outro número para ser adicionado nos grupos e pedir para colocá-lo como admin",
+       "required_inputs": [
+        "Outro número de telefone"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0103",
+        "EV-0104",
+        "EV-0105"
+       ]
+      },
+      {
+       "order_key": 3,
+       "name": "Corrigir duplicados e caracteres",
+       "action": "Informar ao agente que ele duplicou os grupos e que o título contém ponto de interrogação no lugar do cedilha, e pedir para corrigir",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0110",
+        "EV-0111"
+       ]
+      },
+      {
+       "order_key": 4,
+       "name": "Conferir a planilha gerada",
+       "action": "Verificar o arquivo de planilha gerado em CSV e XLSX, que pode ser subido no Google Sheets",
+       "required_inputs": [],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0112",
+        "EV-0113"
+       ]
+      },
+      {
+       "order_key": 5,
+       "name": "Enviar mensagem aos grupos",
+       "action": "Pedir o envio de uma mensagem de teste apenas para esses três grupos, marcando todo mundo",
+       "required_inputs": [
+        "Lista dos grupos alvo"
+       ],
+       "missing_input_action": null,
+       "evidence_refs": [
+        "EV-0115",
+        "EV-0116"
+       ]
+      }
+     ],
+     "exceptions": [],
+     "prerequisites": [
+      "Outro número/conta para ser adicionada ao grupo"
+     ]
+    },
+    "defects": [
+     "SCOPE_UNSTATED"
+    ]
+   }
+  ]
+ }
+]

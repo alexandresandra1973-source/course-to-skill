@@ -1,0 +1,354 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0026",
+  "claim_text": "A skill can be set on a loop, for example once a day, to automatically pull data from different sources such as a Google Analytics API, a Google sheet, and agency analytics software, and use it to populate a dashboard.",
+  "evidence": [
+   {
+    "local_id": "EV-0056",
+    "excerpt": "ad variants that we can test for marketing. You know, if you create a uh uh I'm not sure a dashboard skill or something. What you can do is I don't know once a day you can quickly set that on a loop to automatically pull all of the different data sources. Let's say Google Analytics API, a big Google sheet that contains data, a bunch of I don't know s you know agency analytics"
+   },
+   {
+    "local_id": "EV-0057",
+    "excerpt": "software and stuff like that and then just pull all that in and use it to populate a dashboard. You can do all that stuff just using skills. So, it's very important to understand um sort of what they are and how they work and we're going to go a lot into detail about that later. But that's not the only way you can customize your cloud code instance in the app. You can also"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0027",
+  "claim_text": "Connectors are ways to hook up apps to Claude, such as Gmail, Google Drive, Slack and Spotify, and are used to integrate different data sources into Claude Code.",
+  "evidence": [
+   {
+    "local_id": "EV-0058",
+    "excerpt": "do so with connectors. Now, connectors, those you guys that don't know, are basically just uh ways to hook up apps to cla. And so what we have here is we have the ability to connect our Gmail. We have the ability to connect Google Drive. We have the ability to connect Slack. And so as I create these automations with you guys, we'll be using connectors to integrate a variety"
+   },
+   {
+    "local_id": "EV-0059",
+    "excerpt": "of different data sources into cloud code like emails, like you know, Slack channels and so on and so forth. And you can automate virtually whatever the heck you want. I mean, as you guys see, we're even doing this with Spotify, right? Spotify is connected right now and has access to get the current track, get the player state, get the volume, get the position, get the repeat, get the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0028",
+  "claim_text": "A connector exposes functions (for Spotify: get current track, player state, volume, position, repeat, shuffle) and Claude can act through those connections; connectors can be connected and disconnected.",
+  "evidence": [
+   {
+    "local_id": "EV-0059",
+    "excerpt": "of different data sources into cloud code like emails, like you know, Slack channels and so on and so forth. And you can automate virtually whatever the heck you want. I mean, as you guys see, we're even doing this with Spotify, right? Spotify is connected right now and has access to get the current track, get the player state, get the volume, get the position, get the repeat, get the"
+   },
+   {
+    "local_id": "EV-0060",
+    "excerpt": "shuffle. These are all functions inside of this connector. And so, you know, you could actually ask uh Claude to do something for you, like, hey, you know, I want you to turn up the volume of Spotify and it and it can do so via connections. So, you can connect things, disconnect things, and so on and so forth. A lot of really cool stuff to play around with there. Finally, you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0029",
+  "claim_text": "The course covers five marketing functions: top-of-funnel creative generation (ads, organic, image, video, audio), personalization of copy (newsletters, cold emails from templates with fuzzy variables found on the internet), middle-of-funnel speed-to-lead appointment booking systems, data collection/tracking/dashboards, and bottom-of-funnel automated high-quality follow-ups.",
+  "evidence": [
+   {
+    "local_id": "EV-0005",
+    "excerpt": "install, and set up Claude Code. I've uninstalled it from my computer and I'll actually walk you guys through every step including signing up, creating an account, and then what every button in the interface means. So it'll be very simple. Then I'll cover the five marketing functions that we'll be automating today using Claude code. I'll also show you guys a framework I'm going"
+   },
+   {
+    "local_id": "EV-0007",
+    "excerpt": "you working on your computer whereas cloud routines effect effectively is a loop that is scheduled that runs in the cloud without you. Then we'll actually go and build stuff. So I'm first going to show you guys top of funnel how to automate the generation of creative. You guys will be able to automate ads, creative for organic. We'll be doing this via images, video, even some audio."
+   },
+   {
+    "local_id": "EV-0008",
+    "excerpt": "Then I'll show you guys the next function which is the personalization of copy. And so we'll be doing newsletters, we'll be doing pulled emails, we'll basically be taking a template, and then I'll show you guys how to use Claude to automatically um automate the process of filling really fuzzy variables that it goes out and finds on the internet and so on. In the middle of funnel sense,"
+   },
+   {
+    "local_id": "EV-0009",
+    "excerpt": "I'll then show you guys how to make speed tole systems for appointment booking. These are systems that allow you to squeeze way more juice out of ad spend and then organic growth. Then I'll show you guys how to set up data collection, tracking, dashboards, and so on and so forth. Actually building your own proprietary analytics platform, uh, interpreting the data through cloud, and"
+   },
+   {
+    "local_id": "EV-0010",
+    "excerpt": "then ultimately scanning that up somewhere on a dashboard so that you or your clients can see what that looks like. And then finally, at the end, I'll show you guys bottom of funnel, which is how to automate highquality follow-ups. Now, this is basically nurturing. It's starting to verge onto sales, and I don't want this to be a sales course. Um, but I'll show you guys how to"
+   },
+   {
+    "local_id": "EV-0011",
+    "excerpt": "automate the process of sending emails, SMS, notifications, and so on and so forth, and doing so in a way that seems very human despite being entirely automated. Finally, I'll show you guys how to maintain and then upgrade these systems over time before giving you guys some advanced tips that I have hard learned, I sort of learned the hard way after working with a lot of large"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0030",
+  "claim_text": "Plugins depend on exactly what you want to do with Claude, and the plugin interface shows a source, version and an author when you click on a plugin.",
+  "evidence": [
+   {
+    "local_id": "EV-0061",
+    "excerpt": "have plugins. Now, plugins sort of depend on exactly what you want to do with Claude. And as you guys can see, I have a couple set up right here. One's called Claude Mem, another Superbase, another's clanged LSP. You don't need to know what any of these three mean, but I just wanted to show you guys what this looks like in an interface. So, when you click on it, okay, you'll see that there"
+   },
+   {
+    "local_id": "EV-0062",
+    "excerpt": "is a source version, and an author. And this source is pretty interesting because if you go on, if you click that button, you'll see there's actually a variety of plugins that have been created by Anthropic and Anthropic's partners to allow Claude to do things easier. So for instance there is a finance plugin which automates the process of creating journal entries,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0031",
+  "claim_text": "There is a variety of plugins created by Anthropic and Anthropic's partners to allow Claude to do things easier, including finance, legal, bio research and code modernization plugins.",
+  "evidence": [
+   {
+    "local_id": "EV-0062",
+    "excerpt": "is a source version, and an author. And this source is pretty interesting because if you go on, if you click that button, you'll see there's actually a variety of plugins that have been created by Anthropic and Anthropic's partners to allow Claude to do things easier. So for instance there is a finance plugin which automates the process of creating journal entries,"
+   },
+   {
+    "local_id": "EV-0063",
+    "excerpt": "financial statement reconciliation, streamlining your accounting workflows and so on. Legal which speeds up contract review, NDA triage, compliance workflows for in-house legal teams and so on. There is bio research which connects to pre-clinical research tools and databases. There's code modernization which is a plugin used to modernize really old code. There's a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0032",
+  "claim_text": "Plugins do everything from changing how Claude looks (e.g. the output style) to doing structured actions that are similar to skills but not exactly skills, like code review.",
+  "evidence": [
+   {
+    "local_id": "EV-0064",
+    "excerpt": "variety of different plugins here and they do everything from changing how Claude looks. So actually changing I don't know in this case the output style or I don't know doing structured actions for you that are similar to skills but not exactly skills like code review. Okay. So we're going to show you guys how to do all of that in this course which I think is going to be quite"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0033",
+  "claim_text": "Memory is what Claude knows about you; telling Claude a personal fact makes it create a memory profile with basic identity facts about the user, and you can put in weight, career, income, marketing channel and business priority information.",
+  "evidence": [
+   {
+    "local_id": "EV-0065",
+    "excerpt": "valuable. Then finally at the very bottom you have memory. Memory is just sort of what Claude knows about you. And so I don't know, remember I'm, you know, we talked about height, you know, a couple days ago with Claude and I remember asking it to do some BMI stuff for me and it was like, I don't know how tall you are, so how tall are you? So what I said now was, hey, you know, I'm"
+   },
+   {
+    "local_id": "EV-0066",
+    "excerpt": "6'2. So what it's done is it's created a memory profile with basic identity facts about the user details is 6'2 tall. You know, you could put in weight information. My dog's name is beans. you know, you could put in uh information about your career, about how much money you make, about, you know, your marketing channel, about uh the priorities of your business and so on"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0034",
+  "claim_text": "The 'more' tab exposes routines, which are templated skills that are kicked off on a schedule, by API or by web hook.",
+  "evidence": [
+   {
+    "local_id": "EV-0067",
+    "excerpt": "and so forth. And so that is what the customiz tab is for. Next, you also have this more tab, which exposes routines, which is going to be quite an important part of our work um as we get on a little bit later. What this allows you to do is basically create templated skills. They call them routines, but they're templated skills that are kicked off on schedule by API or web hook. Now,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0035",
+  "claim_text": "You can build a skill and then run it on a schedule, for example at 5:30 a.m. every morning; this is the last step of automation, where the work is scheduled to run on the cloud outside of your computer rather than talking to Claude, running skills manually, or looping skills at a regular interval.",
+  "evidence": [
+   {
+    "local_id": "EV-0068",
+    "excerpt": "you don't need to know what API or web hooks mean, but obviously a schedule is just when you want it to. So, what you can do, for instance, is you can build a skill, which is a program like I talked about earlier. And then you can just run that at, I don't know, 5:30 a.m. every morning. And so, this is the last step of automation. This is like the max automation where we're not actually"
+   },
+   {
+    "local_id": "EV-0069",
+    "excerpt": "talking to Claude anymore, nor are we even running skills, nor are we looping those skills at a regular interval. We're actually scheduling these to run on the cloud outside of our computer. And this is where you really unlock like fully automated business stuff, which is typically what people work with me for. Um, the full sort of endto-end pipeline automation of a aspect of their"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0036",
+  "claim_text": "Scheduling skills on the cloud is where you unlock fully automated business stuff, i.e. full end-to-end pipeline automation of an aspect of a business.",
+  "evidence": [
+   {
+    "local_id": "EV-0069",
+    "excerpt": "talking to Claude anymore, nor are we even running skills, nor are we looping those skills at a regular interval. We're actually scheduling these to run on the cloud outside of our computer. And this is where you really unlock like fully automated business stuff, which is typically what people work with me for. Um, the full sort of endto-end pipeline automation of a aspect of their"
+   },
+   {
+    "local_id": "EV-0070",
+    "excerpt": "business. So, it's actually quite easy to do and I'll show you guys how to do that soon. Finally, you have the ability to customize the sidebar here. So, I'm actually going to open that routines tab so we can also see that underneath you have the various conversations and folders that you're working in. So, I'm actually working in a folder called for YouTube right now, which is why it says"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0037",
+  "claim_text": "The sidebar can be customized and shows the conversations and folders you are working in; new conversations are created by clicking the plus button, and you can change the status of your conversation and the environment you are working on.",
+  "evidence": [
+   {
+    "local_id": "EV-0070",
+    "excerpt": "business. So, it's actually quite easy to do and I'll show you guys how to do that soon. Finally, you have the ability to customize the sidebar here. So, I'm actually going to open that routines tab so we can also see that underneath you have the various conversations and folders that you're working in. So, I'm actually working in a folder called for YouTube right now, which is why it says"
+   },
+   {
+    "local_id": "EV-0071",
+    "excerpt": "for YouTube here. If I just zoom in on this just a tad, you also have the ability to create new conversations by clicking this plus button. Then you can change a bunch of information about these the status of your conversation, the environment that you're working on. um you know all of the stuff is a little bit more technical and not going to be super relevant to us immediately. So I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0038",
+  "claim_text": "When there are no sessions in play, the chat window shows a dashboard with number of sessions, number of messages, total tokens consumed, and model-specific usage broken down.",
+  "evidence": [
+   {
+    "local_id": "EV-0072",
+    "excerpt": "just going to leave that for now. Okay. And then that takes us to the actual chat window itself. Now as you guys can see here when you don't have any sessions in play you have this big um sort of like dashboard with all the information about how many tokens you consumed and stuff like that. So the number of sessions, the number of messages, the number of total tokens and"
+   },
+   {
+    "local_id": "EV-0073",
+    "excerpt": "stuff like that. You also have the ability to check model specific usage and break that down. Well, I think they just included this information so that you wouldn't have to look at a blank screen and because this looks way sexier than a blank screen. The parts that are important for us are first of all this button which is how you switch between running stuff locally on your own"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0039",
+  "claim_text": "There is a button to switch between running stuff locally on your own computer, in the cloud (Anthropic's computer), using remote control (another computer that you own), and SSH (secure shell, a protocol used to communicate with computers in a secure way).",
+  "evidence": [
+   {
+    "local_id": "EV-0073",
+    "excerpt": "stuff like that. You also have the ability to check model specific usage and break that down. Well, I think they just included this information so that you wouldn't have to look at a blank screen and because this looks way sexier than a blank screen. The parts that are important for us are first of all this button which is how you switch between running stuff locally on your own"
+   },
+   {
+    "local_id": "EV-0074",
+    "excerpt": "computer running stuff in the cloud K which is Anthropic computer using remote control which is running it on another computer that you own and SSH which stands for secure shell which is uh just a protocol used back in the good old days to communicate with computers in a secure way using passwords and stuff like that. So we're probably not going to touch on the SSH stuff. I'm going to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0040",
+  "claim_text": "The speaker states the two environments they will use most are local and cloud, will show remote control so viewers know how to run marketing workflows on another computer, and probably will not touch SSH.",
+  "evidence": [
+   {
+    "local_id": "EV-0074",
+    "excerpt": "computer running stuff in the cloud K which is Anthropic computer using remote control which is running it on another computer that you own and SSH which stands for secure shell which is uh just a protocol used back in the good old days to communicate with computers in a secure way using passwords and stuff like that. So we're probably not going to touch on the SSH stuff. I'm going to"
+   },
+   {
+    "local_id": "EV-0075",
+    "excerpt": "show you guys remote control just sort of so we all know how to run marketing workflows um on another computer. But really the two we're going to be using the most are local and cloud. And local, as I'm sure you guys can guess, is actually quite easy. Um basically what it is is it's my local computer. And when you click on that little settings gear icon, you can actually update that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0041",
+  "claim_text": "Clicking the settings gear icon on the local environment lets you update that local environment with usernames and passwords (credentials such as NODE_ENV=production), which are stored and partially hidden after saving.",
+  "evidence": [
+   {
+    "local_id": "EV-0075",
+    "excerpt": "show you guys remote control just sort of so we all know how to run marketing workflows um on another computer. But really the two we're going to be using the most are local and cloud. And local, as I'm sure you guys can guess, is actually quite easy. Um basically what it is is it's my local computer. And when you click on that little settings gear icon, you can actually update that"
+   },
+   {
+    "local_id": "EV-0076",
+    "excerpt": "local environment with a bunch of usernames and passwords. Now the usernames and passwords are written in kind of intimidating ways. Nodeenv equals production. But what these are, these are just usernames and passwords. You know, you can imagine it be like user nick atclairvo.io, I don't know, password, hey bros, I love claude code for marketing, whatever."
+   },
+   {
+    "local_id": "EV-0077",
+    "excerpt": "Well, now we've actually stored like a credential called user, which equals nicer.io, and a credential called password, which equals that. So, we can save that. Now, my my local environment actually has that information. You can see it's even sort of hidden some of that from me. Um, so I'm just going to save the changes back here so that we don't have anything that confuses"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0042",
+  "claim_text": "Stored environment credentials can be used to log into apps and various APIs, such as the meta ads API, which typically require env keys.",
+  "evidence": [
+   {
+    "local_id": "EV-0078",
+    "excerpt": "Claude, but you can use that to log into apps and various APIs like the meta ads API and whatnot will typically require you to have like env keys and stuff like that. Okay, then we also have the cloud button here. I can click add cloud environment that'll take me to a panel here which basically allows me to do the same thing. Cloud is speaking loosely here. What this is is this is on"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0043",
+  "claim_text": "The speaker saved the changes back to remove the demo credentials so that nothing confuses Claude.",
+  "evidence": [
+   {
+    "local_id": "EV-0077",
+    "excerpt": "Well, now we've actually stored like a credential called user, which equals nicer.io, and a credential called password, which equals that. So, we can save that. Now, my my local environment actually has that information. You can see it's even sort of hidden some of that from me. Um, so I'm just going to save the changes back here so that we don't have anything that confuses"
+   },
+   {
+    "local_id": "EV-0078",
+    "excerpt": "Claude, but you can use that to log into apps and various APIs like the meta ads API and whatnot will typically require you to have like env keys and stuff like that. Okay, then we also have the cloud button here. I can click add cloud environment that'll take me to a panel here which basically allows me to do the same thing. Cloud is speaking loosely here. What this is is this is on"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0044",
+  "claim_text": "A cloud environment runs on Anthropic's own computer and you pay Anthropic instead of paying a computer or server company to host.",
+  "evidence": [
+   {
+    "local_id": "EV-0078",
+    "excerpt": "Claude, but you can use that to log into apps and various APIs like the meta ads API and whatnot will typically require you to have like env keys and stuff like that. Okay, then we also have the cloud button here. I can click add cloud environment that'll take me to a panel here which basically allows me to do the same thing. Cloud is speaking loosely here. What this is is this is on"
+   },
+   {
+    "local_id": "EV-0079",
+    "excerpt": "Anthropic's own computer. So, Anthropic is running this for you and you just pay Anthropic instead of paying, you know, a computer company or a server company to host. Um, I won't get super deep into the pricing here because we're probably not going to use cloud environments for most stuff. We may use them a little bit later, but this is valuable in larger teams. And the reason why is because if"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0045",
+  "claim_text": "Cloud environments are valuable in larger teams because they standardize the setup — same server, environment variables, usernames and passwords, setup scripts — so what you create works the same on anyone's computer; the speaker says they probably won't use cloud environments for most stuff in this course.",
+  "evidence": [
+   {
+    "local_id": "EV-0079",
+    "excerpt": "Anthropic's own computer. So, Anthropic is running this for you and you just pay Anthropic instead of paying, you know, a computer company or a server company to host. Um, I won't get super deep into the pricing here because we're probably not going to use cloud environments for most stuff. We may use them a little bit later, but this is valuable in larger teams. And the reason why is because if"
+   },
+   {
+    "local_id": "EV-0080",
+    "excerpt": "you think about it, right now I'm running stuff on my computer specifically, but my computer works a little bit differently than other people's computers, right? And so because of that, sometimes you'll create something that works on my computer uh but it won't work on somebody else's computer. And so the benefit to using cloud environments a lot of the time is"
+   },
+   {
+    "local_id": "EV-0081",
+    "excerpt": "you're standardizing it. Everybody uses the same cloud environment. It's the same server with the same environment variables, same usernames and passwords, same setup scripts, same everything. And then as a result, you just know that like the app that you're creating for your cloud code for marketing course is going to work the same whether it's on my computer or yours. Down over here,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0046",
+  "claim_text": "You can select the folder you want to work in and add a new folder at any time.",
+  "evidence": [
+   {
+    "local_id": "EV-0082",
+    "excerpt": "you can actually select the folder that you want to play in. And so I'm just going to do um for YouTube. I'll keep that. You can also just add a new folder here anytime that you want. So I have a couple more. Clarbo backend, Fable 25, and so on and so forth. U over here on the right, you actually have this little claude widget. And if you just kind of move your mouse around, it'll do some"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0047",
+  "claim_text": "The mode shown in the bottom left-hand corner is very important, and the speaker's recommendation is to run most things in auto mode.",
+  "evidence": [
+   {
+    "local_id": "EV-0083",
+    "excerpt": "cute fun stuff. Uh kind of funny cuz this thing is actually galaxy sized brain, but the company made it look super cute. It's breaking out of your shell. Uh and then on the bottom lefthand corner, you'll see the mode, which is very important. My recommendation is to run most things in auto mode. Basically what modes are is you guys remember when um I just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0048",
+  "claim_text": "Manual mode will always ask you before it does anything remotely considered autonomy on your computer, which is good if you're working on something really secure but eventually becomes a pain.",
+  "evidence": [
+   {
+    "local_id": "EV-0084",
+    "excerpt": "launched Nixrive webpage before and asked me hey do you want to allow the ability to run XYZ command? Well a manual will always ask you before it does anything that is even remotely considered like you know autonomy in your computer. And that's good if you're working on like something really secure, but obviously eventually it becomes a pain in the butt, right? Because I don't"
+   },
+   {
+    "local_id": "EV-0085",
+    "excerpt": "want to have to like wait, you know, around to see what it needs me for. So, what I typically do is I'll typically use um accept edits, plan, auto, or bypass permissions. Now, what accept edits is is it won't be able to create new files, but it will be able to edit pre-existing old files. And so, that's pretty useful, right? You can run it a mock in like a codebase or I don't know,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0049",
+  "claim_text": "The speaker typically uses accept edits, plan, auto, or bypass permissions modes.",
+  "evidence": [
+   {
+    "local_id": "EV-0085",
+    "excerpt": "want to have to like wait, you know, around to see what it needs me for. So, what I typically do is I'll typically use um accept edits, plan, auto, or bypass permissions. Now, what accept edits is is it won't be able to create new files, but it will be able to edit pre-existing old files. And so, that's pretty useful, right? You can run it a mock in like a codebase or I don't know,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0050",
+  "claim_text": "In accept edits mode Claude can edit pre-existing files but cannot create or delete files, which is useful to let it run amok in a codebase or marketing folder and upgrade everything with a certain level of control.",
+  "evidence": [
+   {
+    "local_id": "EV-0085",
+    "excerpt": "want to have to like wait, you know, around to see what it needs me for. So, what I typically do is I'll typically use um accept edits, plan, auto, or bypass permissions. Now, what accept edits is is it won't be able to create new files, but it will be able to edit pre-existing old files. And so, that's pretty useful, right? You can run it a mock in like a codebase or I don't know,"
+   },
+   {
+    "local_id": "EV-0086",
+    "excerpt": "some marketing folder or something like that and have it upgrade everything. um but it won't be able to create or delete any files, which is sort of a a certain level of control that you could imagine would be useful. You can also use plan mode, which is where instead of making any changes, you create a really in-depth plan about how you're going to do it instead. You can then do auto"
+   }
+  ]
+ }
+]
