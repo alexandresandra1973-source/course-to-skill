@@ -1,0 +1,298 @@
+batch_id: BATCH-1
+expected_unit_count: 6
+expected_unit_ids:
+[
+ "MS002-SRC-A|R-9001",
+ "MS002-SRC-A|WF-9002",
+ "MS002-SRC-A|R-9003",
+ "MS002-SRC-B|R-9004",
+ "MS002-SRC-C|R-9005",
+ "MS002-SRC-B|AP-9006"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|R-9001",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "name": "Publicar video vertical no Instagram Reels",
+   "trigger": "quando houver um video pronto de ate 90 segundos",
+   "condition": "o video esta em formato vertical 9:16",
+   "action": "publicar como Reels no Instagram com legenda e chamada para acao",
+   "do_not": [
+    "nao publicar horizontal como Reels"
+   ],
+   "precedence": null
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-9001"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|WF-9002",
+  "entity_kind": "workflow_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "name": "Sequencia de nutricao por email em cinco toques",
+   "steps": [
+    {
+     "order_key": 1,
+     "name": "captura",
+     "action": "capturar o email do lead num formulario",
+     "evidence_refs": [
+      "EV-9002"
+     ]
+    },
+    {
+     "order_key": 2,
+     "name": "envio",
+     "action": "enviar cinco emails ao longo de duas semanas",
+     "evidence_refs": [
+      "EV-9002"
+     ]
+    }
+   ]
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-9002"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-9003",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "name": "Discagem automatica por voz para leads frios",
+   "trigger": "quando um lead frio entra na base",
+   "condition": "sem necessidade especifica declarada",
+   "action": "disparar uma ligacao automatica de voz",
+   "do_not": [],
+   "precedence": null
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-9003"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-B|R-9004",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-B",
+  "structure": {
+   "name": "Comprar seguidores para inflar prova social",
+   "trigger": "quando o perfil tem poucos seguidores",
+   "condition": "antes de um lancamento",
+   "action": "contratar servico de compra de seguidores",
+   "do_not": [],
+   "precedence": null
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-9004"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-C|R-9005",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-C",
+  "structure": {
+   "name": "Ajustar o parametro",
+   "trigger": "quando necessario",
+   "condition": "depende",
+   "action": "mudar o valor para o recomendado",
+   "do_not": [],
+   "precedence": null
+  },
+  "defects": [
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-9005"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-B|AP-9006",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-B",
+  "structure": {
+   "do_not": [
+    "nao usar a conta pessoal de WhatsApp para automacao de atendimento"
+   ],
+   "why": "aumenta a chance de restricao da conta",
+   "conditions": [
+    "quando o volume de mensagens e alto"
+   ]
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-9006"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
