@@ -1,0 +1,663 @@
+batch_id: BATCH-7
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|R-0081",
+ "MS002-SRC-A|R-0082",
+ "MS002-SRC-A|R-0083",
+ "MS002-SRC-A|R-0084",
+ "MS002-SRC-A|R-0085",
+ "MS002-SRC-A|R-0086",
+ "MS002-SRC-A|R-0087",
+ "MS002-SRC-A|R-0088",
+ "MS002-SRC-A|R-0089",
+ "MS002-SRC-A|R-0090",
+ "MS002-SRC-A|R-0091",
+ "MS002-SRC-A|R-0092",
+ "MS002-SRC-A|R-0093",
+ "MS002-SRC-A|R-0094",
+ "MS002-SRC-A|R-0095",
+ "MS002-SRC-A|R-0096",
+ "MS002-SRC-A|R-0097",
+ "MS002-SRC-A|R-0098",
+ "MS002-SRC-A|R-0099",
+ "MS002-SRC-A|R-0100"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|R-0081",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Disconnect the Kit API integration and make sure it is not part of your flow",
+   "condition": "You want to use the API key route",
+   "do_not": [
+    "Do not leave the Kit API integration connected as part of your flow when using the API key route"
+   ],
+   "name": "API key route requires disconnecting the integration",
+   "precedence": null,
+   "trigger": "Choosing the API key route for Kit"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0684",
+   "EV-0685"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0082",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Change/resend the API key immediately after the video",
+   "condition": "The key was exposed in the video",
+   "do_not": [],
+   "name": "Rotate an API key shown on camera",
+   "precedence": null,
+   "trigger": "An API key was created and displayed for a recording"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0684",
+   "EV-0711"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0083",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Hammer the process out manually over and over until you get what you want, then turn it into a repeatable process; start locally and eventually move it to the cloud",
+   "condition": null,
+   "do_not": [],
+   "name": "Hammer it out manually before automating; start local then cloud",
+   "precedence": null,
+   "trigger": "Building an automated system"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0695",
+   "EV-0696"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0084",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Have AI take that information and write a short punchy icebreaker (e.g. 'Hey, loved your post on hiring hygienists' or 'Congrats on the second crew') that leads directly into the rest of your copy",
+   "condition": "Scraped social posts or bios are available",
+   "do_not": [],
+   "name": "Generate a short punchy icebreaker from prospect posts",
+   "precedence": null,
+   "trigger": "Writing a cold email to a prospect with scraped bios or posts"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0705",
+   "EV-0706",
+   "EV-0707"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0085",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Open with 'hey/yo [first name], saw [thing in common], I'm [thing in common] too', then go into what you do",
+   "condition": null,
+   "do_not": [],
+   "name": "Cold email opener template",
+   "precedence": null,
+   "trigger": "Writing the opening of a cold email"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0719",
+   "EV-0720"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0086",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Write in lowercase, very casual language that is not perfectly polished, so recipients read it as written by a person rather than AI spam",
+   "condition": "Current trend at time of recording; speaker notes trends may change again",
+   "do_not": [
+    "Do not use the perfect wording, terminology, vocabulary, M dashes and perfect grammar characteristic of AI spam"
+   ],
+   "exceptions": [],
+   "name": "Use lowercase, casual, imperfect language in cold email",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Writing cold email copy"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0723",
+   "EV-0724",
+   "EV-0725"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0087",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Give the AI a big blurb of information about yourself (life experiences, LinkedIn profile, other data) plus the lead data and let it find the similarities; make the commonality relevant and real",
+   "condition": null,
+   "do_not": [
+    "Do not use commonalities that are not relevant or not real"
+   ],
+   "exceptions": [],
+   "name": "Feed AI a blurb about yourself and let it match commonalities",
+   "precedence": null,
+   "prerequisites": [
+    "A lead list containing data about the prospects"
+   ],
+   "trigger": "Generating 'my thing in common / their thing in common' personalization"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0725",
+   "EV-0726",
+   "EV-0735",
+   "EV-0736"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0088",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Tell the model the prospects are hypothetical demo prospects and that no amount of research on them will yield benefit, while allowing it to research you if needed",
+   "condition": "The leads used are hypothetical demo prospects",
+   "do_not": [
+    "Do not let the model spend effort doing additional research on demo prospects"
+   ],
+   "exceptions": [],
+   "name": "Declare demo prospects as hypothetical to prevent wasted research",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Asking the model to test fuzzy variables on sample leads"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0730",
+   "EV-0731"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0089",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Require that each generated column can be inserted directly into the email via merge variables and be 100% readable and contextually relevant",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Enriched variables must be merge-ready and contextually relevant",
+   "precedence": null,
+   "prerequisites": [
+    "A Google Sheet with the lead rows"
+   ],
+   "trigger": "Adding AI-generated variable columns to the Google Sheet"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0738"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0090",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Ask the model to cut the CSV down to the four customization fields plus first name, last name, email address, company name, company size and so on",
+   "condition": null,
+   "do_not": [
+    "Do not keep superfluous fields in the lead list"
+   ],
+   "exceptions": [],
+   "name": "Trim the CSV to only needed fields",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "The lead CSV has too many fields making it a pain to upload"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0741",
+   "EV-0742",
+   "EV-0743"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0091",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Think about how you typically do the task yourself, explain that SOP and workflow to Claude, then turn it into the skill",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Articulate your own manual SOP before building the skill",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Structuring an automation/skill for a task you already do manually"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0754",
+   "EV-0755",
+   "EV-0757",
+   "EV-0758"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0092",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "If more than 15 out of 20 sampled leads are in the ICP, accept the list; if less than 15 out of 20, go back and redo the scrape",
+   "condition": "Sample of 20 out of the 100 leads evaluated for ICP match",
+   "do_not": [
+    "Do not accept a list where fewer than 15 of 20 sampled leads match the ICP"
+   ],
+   "exceptions": [],
+   "name": "ICP sampling quality gate on scraped lead lists",
+   "precedence": null,
+   "prerequisites": [
+    "A defined ICP (ideal customer persona)",
+    "Filters set for the scrape"
+   ],
+   "trigger": "A list of 100 leads has been scraped"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0757"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0093",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Evaluate whether the task is actually a recurring bottleneck; if not, run the skill on demand instead of scheduling it",
+   "condition": "Only makes sense if you know every single day you will make a new campaign and need leads available daily",
+   "do_not": [
+    "Do not turn something into a routine just because you can, when you don't actually need it all the time"
+   ],
+   "exceptions": [],
+   "name": "Only convert a skill into a loop/routine when there is a real recurring need (bottleneck thinking)",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Considering turning a working skill into a scheduled loop or routine"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0766",
+   "EV-0767",
+   "EV-0768"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0094",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Check in with them immediately, call them ASAP within a few seconds of the form fill, send text messages and follow up",
+   "condition": null,
+   "do_not": [
+    "Do not leave a paid lead unattended after they fill out the form"
+   ],
+   "exceptions": [],
+   "name": "Respond to a paid lead immediately",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "A lead fills out your form / lands in your calendar after you paid a cost per meeting"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0779",
+   "EV-0780"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0095",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Try to reach the person within just a few minutes; call leads ASAP, consistently and repeatedly.",
+   "condition": null,
+   "do_not": [
+    "Do not wait an hour to reach out",
+    "Do not wait until the next day"
+   ],
+   "exceptions": [],
+   "name": "Reach out to a new lead within minutes, never hours or the next day",
+   "precedence": null,
+   "trigger": "A new lead comes in (form fill, opt-in)"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0798",
+   "EV-0799",
+   "EV-0785",
+   "EV-0787",
+   "EV-0788"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0096",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Spread the response out a little so it stays within the bounds of reason (e.g. around 30 seconds); optionally insert a small spelling mistake or a human-sounding message to make it seem more realistic.",
+   "condition": "The system is technically capable of responding in about 5 seconds",
+   "do_not": [
+    "Do not respond so fast that people will think it is fake"
+   ],
+   "exceptions": [
+    "It depends on how you want to do it"
+   ],
+   "name": "Keep automated response timing within the bounds of reason",
+   "precedence": null,
+   "trigger": "Configuring how fast the automated speed-to-lead response fires"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0815",
+   "EV-0816",
+   "EV-0817"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0097",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Write SMS copy much shorter than the email copy, be very careful about character count, and shorten the template further to minimize the probability that it spills over when AI fills in variables.",
+   "condition": "SMS has a 160 character constraint and AI variable fills (e.g. a really long first name) can lengthen the message",
+   "do_not": [
+    "Do not write SMS copy that exceeds 160 characters (the speaker's first draft at 176 characters was too much)"
+   ],
+   "name": "Keep SMS copy well under the 160 character limit",
+   "precedence": null,
+   "trigger": "Writing SMS copy for the speed to lead flow"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0828",
+   "EV-0829",
+   "EV-0830",
+   "EV-0831",
+   "EV-0832"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0098",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Instruct the AI to write the paraphrased version of the request at a maximum of about 10 to 15 words, keep it really short (the shorter it is the more human it seems), and send the email casually formatted exactly like the provided template.",
+   "condition": "Working on the email portion first",
+   "do_not": [
+    "Do not stray from the provided template"
+   ],
+   "name": "Constrain the AI-generated paraphrase and template adherence",
+   "precedence": null,
+   "trigger": "Feeding the copy templates to the AI that will send the messages"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0833",
+   "EV-0834"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0099",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Route them in the right ways to the right places to maximize the probability of them picking up in the future; leave voicemails intelligently.",
+   "condition": null,
+   "do_not": [],
+   "name": "Route non-answering leads via intelligent dispositions",
+   "precedence": null,
+   "trigger": "A lead is called and does not pick up"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0782"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0100",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Dial leads with good phone numbers and brand the numbers to maximize the probability they will pick up.",
+   "condition": "People receive random spam calls every day, so unbranded numbers are ignored (the speaker himself declines a call because the number is not branded)",
+   "do_not": [],
+   "name": "Dial with good, branded phone numbers",
+   "precedence": null,
+   "trigger": "Dialing leads outbound"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0782",
+   "EV-0783",
+   "EV-0789"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

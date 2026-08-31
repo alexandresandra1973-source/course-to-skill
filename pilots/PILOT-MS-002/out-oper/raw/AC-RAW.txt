@@ -1,0 +1,121 @@
+{
+  "batch_id": "BATCH-1",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|R-9001",
+      "applicability": "DIRECT_USE",
+      "rationale": "A unidade descreve publicacao de video vertical 9:16 como Reels no Instagram com legenda e CTA, e proibe horizontal como Reels. Canal, superficie e procedimento correspondem exatamente ao canal de rank 1 da MTX (instagram, superficie reels, video). Nenhuma adaptacao material e necessaria.",
+      "scope": "Publicacao de video vertical de ate 90 segundos em Instagram Reels na operacao MTX.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao cobre videos horizontais nem videos acima de 90 segundos",
+        "A unidade nao especifica conteudo da legenda nem da chamada para acao"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|WF-9002",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "O workflow opera integralmente sobre email (captura de email em formulario e envio de cinco emails em duas semanas). Email e canal secundario na politica MTX, com tratamento padrao REFERENCE_ONLY, e a unidade nao declara nenhuma necessidade especifica que acione a excecao.",
+      "scope": "Referencia conceitual sobre nutricao sequenciada; nao entra em workflow operacional da MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Nao entra em workflow operacional enquanto nao houver necessidade especifica declarada e rastreada para email",
+        "A unidade nao descreve conteudo dos cinco toques nem criterios de saida da sequencia"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-9003",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra opera em canal de voz (ligacao automatica). Voz e canal secundario na politica MTX com tratamento padrao REFERENCE_ONLY, e a propria unidade declara explicitamente na condition 'sem necessidade especifica declarada', o que impede acionar a excecao que permitiria DIRECT_USE ou ADAPT_TO_MTX.",
+      "scope": "Referencia sobre acionamento de leads frios; nao entra em workflow operacional da MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Sem necessidade especifica declarada e rastreada, nao pode ser promovida a uso operacional",
+        "A unidade nao contem restricoes de consentimento, horario ou volume"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "voz"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-B|R-9004",
+      "applicability": "REJECT",
+      "rationale": "A acao e contratar servico de compra de seguidores para inflar prova social. Trata-se de manipulacao artificial de metricas do canal principal da MTX (Instagram), incompativel com uma operacao de marketing baseada em prova social real e sujeita a penalizacao de plataforma. Nao ha forma de adaptacao que preserve a substancia sem preservar a fraude de metrica.",
+      "scope": "Nao aplicavel em nenhuma superficie da operacao MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Rejeitada integralmente; nao deve ser usada nem como referencia operacional"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-C|R-9005",
+      "applicability": "NOT_YET_CLASSIFIED",
+      "rationale": "A unidade carrega o defeito SCOPE_UNSTATED e e integralmente indeterminada: 'Ajustar o parametro', trigger 'quando necessario', condition 'depende', action 'mudar o valor para o recomendado'. Nao ha canal, ferramenta, parametro nem valor identificavel. Decidir aplicabilidade exigiria inventar contexto ausente, portanto aplica-se o estado fail-closed.",
+      "scope": "Indeterminado: a unidade nao declara canal, superficie nem objeto de aplicacao.",
+      "adaptations": [],
+      "limitations": [
+        "Defeito SCOPE_UNSTATED registrado na unidade",
+        "Parametro, valor recomendado e ferramenta nao identificados",
+        "Nao pode ser promovida automaticamente a nenhuma outra classe"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-B|AP-9006",
+      "applicability": "DIRECT_USE",
+      "rationale": "O anti-padrao proibe usar conta pessoal de WhatsApp para automacao de atendimento sob alto volume, justificando pelo risco de restricao da conta. Canal (whatsapp, rank 2) e superficie (atendimento) correspondem diretamente ao que a MTX opera, e a proibicao se aplica como esta, sem adaptacao material.",
+      "scope": "Automacao de atendimento em WhatsApp na operacao MTX, sob condicao de alto volume de mensagens.",
+      "adaptations": [],
+      "limitations": [
+        "A condicao declarada e alto volume de mensagens; a unidade nao define limiar numerico de volume",
+        "A unidade nao indica qual alternativa usar no lugar da conta pessoal"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "whatsapp"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-9007",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia (cadencia de uma dica diaria em dia util, no maximo uma por dia, com a dica escrita como pre-requisito) e aplicavel ao Instagram, canal de rank 1. Porem a acao especifica um post de texto corrido sem imagem e sem video no feed, o que colide com o papel declarado do Instagram na MTX como ferramenta principal especialmente de video e imagem, e com as superficies previstas. Aplica-se apos adaptacao declarada de formato.",
+      "scope": "Cadencia diaria de dica no Instagram na operacao MTX, em superficies de video/imagem em vez de texto puro no feed.",
+      "adaptations": [
+        "Converter o post de texto corrido para uma superficie de imagem ou video prevista na politica MTX (feed_image, carousel, reels, feed_video ou stories), mantendo a dica escrita como conteudo",
+        "Manter o trigger diario em dia util pela manha e o limite de uma dica por dia"
+      ],
+      "limitations": [
+        "A adaptacao de formato e decisao operacional MTX e nao pode ser apresentada como afirmacao da fonte",
+        "A unidade nao especifica qual superficie de imagem ou video usar",
+        "A unidade nao define tratamento para dias nao uteis"
+      ],
+      "mtx_derived": true,
+      "derivation": "A escolha de substituir texto puro no feed por uma superficie de imagem ou video nao consta da unidade; deriva da politica MTX que define o Instagram como ferramenta principal especialmente de video e imagem e enumera as superficies reels, feed_video, feed_image, carousel e stories. Artefato operacional derivado (MTX_DERIVED_OPERATIONAL_ARTIFACT).",
+      "channels": [
+        "instagram"
+      ]
+    }
+  ]
+}

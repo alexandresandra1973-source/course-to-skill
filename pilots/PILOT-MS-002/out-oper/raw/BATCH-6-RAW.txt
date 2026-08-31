@@ -1,0 +1,340 @@
+{
+  "batch_id": "BATCH-6",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|R-0060",
+      "applicability": "DIRECT_USE",
+      "rationale": "A regra e um procedimento de validacao em duas etapas (manual, depois via Claude) antes de escalar um pipeline de geracao; nao depende de canal e aplica-se como esta a qualquer pipeline de producao de conteudo da MTX.",
+      "scope": "Qualquer automacao de geracao de conteudo da MTX antes de ser escalada.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao define criterio de 'funciona'; a verificacao permanece qualitativa.",
+        "precedence indefinida na unidade"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0061",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Preferir a opcao CLI e uma heuristica de ferramental tecnico, sem escopo declarado (defeito SCOPE_UNSTATED) e sem vinculo com nenhum workflow de canal da MTX; serve como principio de montagem de ambiente, nao como passo operacional de marketing.",
+      "scope": "Contexto de configuracao tecnica de ferramentas usadas por agentes.",
+      "adaptations": [],
+      "limitations": [
+        "SCOPE_UNSTATED: nao define para quais ferramentas vale",
+        "Nao entra em workflow de Instagram, WhatsApp ou Google Ads"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0062",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Trata de autenticacao via login CLI em vez de API key no ambiente; e detalhe de setup tecnico de ferramenta, util como referencia de boa pratica, mas nao constitui passo de um workflow operacional de marketing da MTX.",
+      "scope": "Setup e autenticacao de CLIs disponibilizadas a agentes.",
+      "adaptations": [],
+      "limitations": [
+        "Depende de a ferramenta oferecer CLI com login, o que a unidade nao garante",
+        "Sem vinculo com canal da MTX"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0063",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Gerar tres opcoes candidatas por requisicao de geracao de video e diretamente util para a producao de video da MTX (canal 1: Instagram video), mas a unidade fala de 'the video generation' de um pipeline especifico; para a MTX e preciso declarar a qual pipeline e superficie se aplica.",
+      "scope": "Producao de video para Instagram (reels/feed_video) na MTX.",
+      "adaptations": [
+        "Declarar explicitamente que o pipeline de geracao alvo e o de video para Instagram da MTX",
+        "Definir onde as tres opcoes sao entregues e quem seleciona"
+      ],
+      "limitations": [
+        "A unidade nao define criterio de escolha entre as tres opcoes",
+        "precedence indefinida"
+      ],
+      "mtx_derived": true,
+      "derivation": "A vinculacao ao canal Instagram/video vem da prioridade de canal da politica MTX, nao da unidade, que apenas diz 'video generation'.",
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0064",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Regra parametrica concreta (8s se roteiro <22 palavras, 10s se >22) aplicavel a producao de video curto da MTX; exige adaptacao porque os numeros vem da ferramenta/plataforma da fonte e a unidade nao declara para qual gerador valem.",
+      "scope": "Definicao de duracao em geracao de video curto para Instagram na MTX.",
+      "adaptations": [
+        "Declarar a qual ferramenta de geracao de video da MTX o limiar de 22 palavras se aplica",
+        "Validar empiricamente o limiar antes de fixa-lo no workflow"
+      ],
+      "limitations": [
+        "O caso de exatamente 22 palavras nao e coberto pela unidade",
+        "Duracoes 8s/10s podem nao existir em outra ferramenta"
+      ],
+      "mtx_derived": true,
+      "derivation": "A necessidade de revalidar o limiar e a associacao ao canal Instagram sao derivadas da politica MTX; a fonte apenas enuncia a regra numerica.",
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0065",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Proibe duracao fixa de 8s e manda adaptar a duracao ao comprimento do roteiro, alem de remover a auto-selecao do vencedor pelo modelo; substancia aplicavel a producao de video da MTX, mas formulada como ajuste a uma 'skill' especifica da fonte.",
+      "scope": "Configuracao do gerador de video e da etapa de selecao na MTX.",
+      "adaptations": [
+        "Traduzir 'the skill' para o artefato equivalente da MTX",
+        "Definir quem faz a selecao humana ja que a auto-selecao pelo modelo e excluida"
+      ],
+      "limitations": [
+        "A unidade nao quantifica 'um pouco mais longo' / 'um pouco mais curto' isoladamente (depende de R-0064)",
+        "precedence indefinida"
+      ],
+      "mtx_derived": true,
+      "derivation": "O mapeamento do termo 'skill' para o artefato correspondente da MTX e derivado operacional; a fonte nao descreve a estrutura da MTX.",
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0066",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Descreve cruzamento influencer x produto com geracao autonoma, entrega em pasta e supervisao humana apenas no ultimo passo; e um padrao de producao em lote util para conteudo de Instagram da MTX, mas pressupoe um pipeline de video com multiplos influenciadores que a unidade nao amarra a MTX.",
+      "scope": "Producao em lote de criativos de video (influencer x produto) para Instagram.",
+      "adaptations": [
+        "Definir o conjunto de influenciadores e produtos da MTX que entram no cruzamento",
+        "Declarar a pasta/destino de entrega e o ponto exato de revisao humana final"
+      ],
+      "limitations": [
+        "Ausencia de supervisao intermediaria exige controle de qualidade final robusto",
+        "A unidade nao trata de direitos de imagem dos influenciadores"
+      ],
+      "mtx_derived": true,
+      "derivation": "A escolha de aplicar o cruzamento ao catalogo de produtos e influenciadores da MTX e decisao operacional local, nao afirmada pela fonte.",
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0067",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Regra de concorrencia (paralelizar com teto de tres simultaneos, retry serial) ancorada num limite de plataforma especifico (~8 jobs) que a MTX pode nao ter; a substancia — respeitar o teto de concorrencia da plataforma — se aplica, o numero nao.",
+      "scope": "Submissao paralela de jobs de geracao no pipeline de video da MTX.",
+      "adaptations": [
+        "Substituir o teto de 3/limite de ~8 pelo limite real da plataforma usada pela MTX",
+        "Implementar retry serial para pares que falharem"
+      ],
+      "limitations": [
+        "A unidade nao explica a origem do numero 3 face ao limite de 8",
+        "Nao trata de custo por job"
+      ],
+      "mtx_derived": true,
+      "derivation": "A substituicao dos numeros pelo limite da plataforma da MTX e derivacao operacional; a fonte declara apenas os valores do seu proprio contexto.",
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0068",
+      "applicability": "DIRECT_USE",
+      "rationale": "Principio de metodo de automacao ('comece pelo fim': execute manualmente, verifique o output, so entao sistematize) descrito com trigger, acao e do_not claros; e agnostico de canal e ferramenta e aplica-se como esta a qualquer automacao de marketing da MTX.",
+      "scope": "Todo projeto de automacao de conteudo ou processo na MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Nao define criterio objetivo de 'output bom'",
+        "precedence indefinida"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0069",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra e explicitamente sobre personalizacao de campanha de email (variaveis duras transformadas em variaveis fuzzy por IA). Email e canal secundario na politica MTX e nenhuma necessidade especifica de email foi declarada, portanto tratamento padrao REFERENCE_ONLY.",
+      "scope": "Referencia de tecnica de personalizacao; sem entrada em workflow operacional MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Canal email e secundario e sem necessidade declarada na MTX",
+        "Transposicao para WhatsApp nao e afirmada pela fonte e nao foi decidida aqui"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0070",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Convencao de nomeacao de variaveis fuzzy em camel case descritivo dentro de template de email; e detalhe de tecnica de prompt para canal secundario (email), sem necessidade especifica declarada pela MTX.",
+      "scope": "Referencia de convencao de nomeacao de variaveis para prompts.",
+      "adaptations": [],
+      "limitations": [
+        "Vinculada a template de email (canal secundario)",
+        "PASSO_UNICO: nao forma workflow sozinha"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0071",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Trata do desenho de formulario de signup e do fluxo de coleta de dados de email, minimizando atrito; e canal secundario (email) e a MTX nao declarou necessidade especifica de formulario de signup.",
+      "scope": "Referencia sobre coleta minima de dados em formularios.",
+      "adaptations": [],
+      "limitations": [
+        "Canal email secundario sem necessidade declarada",
+        "Nao especifica quais campos servem ao contexto da MTX"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0072",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Primeiro passo da automacao de customizacao de newsletter: template de email de alta qualidade com variaveis realisticamente preenchiveis. Newsletter/email e canal secundario na politica MTX, sem necessidade especifica declarada.",
+      "scope": "Referencia de metodo para construcao de template personalizavel.",
+      "adaptations": [],
+      "limitations": [
+        "PASSO_UNICO: fragmento de um fluxo maior de email",
+        "Canal secundario sem necessidade declarada"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0073",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Regra de edicao de copy de email (remover travessao/n dash por parecer gerado por IA). O trigger declarado e explicitamente copy de email, canal secundario, e a unidade nao autoriza generalizacao para legendas de Instagram ou WhatsApp.",
+      "scope": "Referencia de revisao de copy assistida por IA.",
+      "adaptations": [],
+      "limitations": [
+        "Escopo declarado limitado a email",
+        "PASSO_UNICO"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0074",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Instrucao de prompt para personalizar uma planilha de leads linha a linha; o objeto e uma campanha de leads/email com Google Sheets, canal secundario na MTX, e nenhuma necessidade especifica de outbound por email foi declarada.",
+      "scope": "Referencia de tecnica de prompt para personalizacao em lote.",
+      "adaptations": [],
+      "limitations": [
+        "Pressupoe planilha de leads e ferramenta de leitura de Sheets nao declaradas na MTX",
+        "Canal secundario sem necessidade declarada"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0075",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Regra de saida (gravar em nova planilha, nunca na original, validar antes de subir e devolver link) inserida no mesmo fluxo de personalizacao de leads por email; util como principio de seguranca de dados, mas ligada a canal secundario e a stack Google Drive nao declarada pela MTX.",
+      "scope": "Referencia de manuseio seguro de artefatos de saida gerados por agente.",
+      "adaptations": [],
+      "limitations": [
+        "Depende de acesso ao Google Drive, nao declarado na MTX",
+        "Fragmento de fluxo de email"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0076",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Instrucao de prompt para o modelo executar em um passo sem perguntas de esclarecimento; e um fragmento (PASSO_UNICO) da secao de task do prompt de personalizacao de email, sem constituir workflow operacional proprio na MTX.",
+      "scope": "Referencia de redacao de prompts autonomos.",
+      "adaptations": [],
+      "limitations": [
+        "PASSO_UNICO",
+        "Contexto original e o prompt de personalizacao de email"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0077",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Regra de divisao de trabalho humano/IA na producao de email (humano escreve o email inteiro, IA preenche apenas algumas variaveis). O trigger declarado e copy de outbound ou newsletter, canal secundario na MTX sem necessidade especifica declarada.",
+      "scope": "Referencia de principio sobre proporcao humano/IA em copy.",
+      "adaptations": [],
+      "limitations": [
+        "Escopo declarado e email; extensao a outros canais nao e afirmada pela fonte",
+        "precedence indefinida"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0078",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Heuristica de manter baixa a proporcao de palavras geradas por IA e curtas as variaveis, no contexto de personalizacao de email; escopo nao declarado (SCOPE_UNSTATED) e canal secundario, portanto apenas referencia.",
+      "scope": "Referencia de heuristica de naturalidade em copy assistida por IA.",
+      "adaptations": [],
+      "limitations": [
+        "SCOPE_UNSTATED: nao define proporcao nem tamanho maximo",
+        "Canal email secundario"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0079",
+      "applicability": "REJECT",
+      "rationale": "A regra e um procedimento de interface especifico de uma ferramenta de email marketing (Kit, com possivel extensao a Mailchimp): adicionar custom fields na aba de subscribers. Depende integralmente de uma plataforma que nao consta na operacao da MTX e nao tem equivalente nos canais prioritarios, alem de ser canal secundario sem necessidade declarada.",
+      "scope": "Nao aplicavel na MTX; procedimento preso a plataforma Kit.",
+      "adaptations": [],
+      "limitations": [
+        "Ferramenta Kit nao faz parte da operacao declarada da MTX",
+        "Caso a MTX venha a adotar plataforma de email, a unidade deve ser reclassificada"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "batch_id": "BATCH-1",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|AP-0001",
+      "applicability": "DIRECT_USE",
+      "rationale": "A unidade descreve o uso da ferramenta Claude Code (autocomplete de sugestao) e adverte contra aceitar automaticamente a sugestao, com justificativa de acerto de apenas 30-40%. A MTX opera com Claude Code como ferramenta de trabalho, entao a advertencia se aplica como esta, sem adaptacao material.",
+      "scope": "Operacao de qualquer agente/operador MTX dentro do Claude Code, independente do canal de publicacao.",
+      "adaptations": [],
+      "limitations": [
+        "Nao trata de canal de publicacao; e uma disciplina de uso de ferramenta, nao de marketing de canal.",
+        "O percentual 30-40% e afirmacao da fonte, nao medicao MTX."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0002",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "O anti-padrao e sobre a forma de consumir o curso-fonte (nao pular partes), nao sobre uma operacao de marketing da MTX. E contexto pedagogico sobre o proprio material, sem procedimento operacional executavel em canal.",
+      "scope": "Apenas como orientacao de estudo/ingestao do material MS002 pela equipe MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Nao entra em nenhum workflow operacional de Instagram, WhatsApp ou Google Ads."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0003",
+      "applicability": "DIRECT_USE",
+      "rationale": "A unidade da uma condicao clara (trabalho ordinario vs trabalho realmente sensivel) e um do_not concreto sobre o modo de permissao manual, com justificativa de custo operacional (checar a cada 5 segundos). Aplica-se como esta a operacao MTX que usa Claude Code.",
+      "scope": "Configuracao de modo de permissao do Claude Code em tarefas rotineiras de marketing da MTX.",
+      "adaptations": [],
+      "limitations": [
+        "A fronteira entre 'trabalho realmente seguro' e 'trabalho ordinario' nao e definida pela fonte; fica a criterio do operador.",
+        "Nao vincula a canal especifico."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0004",
+      "applicability": "DIRECT_USE",
+      "rationale": "Advertencia direta e autocontida sobre nao habilitar o modo bypass permissions sem aceitar suas consequencias, com condicao explicita (aplica-se apenas a bypass; auto, plan e accept edits sao descritos como aceitaveis). Aplica-se sem adaptacao a operacao MTX com Claude Code.",
+      "scope": "Governanca de configuracao de permissoes de agentes Claude Code na MTX.",
+      "adaptations": [],
+      "limitations": [
+        "A fonte nao especifica quais impactos de longo prazo concretos podem ocorrer.",
+        "Nao vincula a canal especifico."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0005",
+      "applicability": "DIRECT_USE",
+      "rationale": "Limite operacional quantificado (sweet spot 0 a ~500k tokens por thread) com justificativa de degradacao de desempenho. E uma disciplina de uso de contexto aplicavel como esta a qualquer operacao MTX conduzida por LLM, sem depender de canal.",
+      "scope": "Gestao de tamanho de thread/contexto em sessoes de trabalho com o modelo na MTX.",
+      "adaptations": [],
+      "limitations": [
+        "O valor ~500k e o sweet spot declarado pelo palestrante para o setup dele, nao uma medicao MTX.",
+        "Pode variar conforme modelo e janela de contexto vigente."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0006",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao de priorizacao (automatizar tudo em vez de atacar o gargalo) com justificativa explicita de restricao pelo passo mais estreito. E um principio de decisao operacional aplicavel como esta ao planejamento de automacao de marketing da MTX, sem exigir troca de canal ou ferramenta.",
+      "scope": "Selecao e priorizacao de quais etapas do funil de marketing MTX serao automatizadas.",
+      "adaptations": [],
+      "limitations": [
+        "A fonte nao fornece metodo para identificar o gargalo, apenas a advertencia de nao ignora-lo.",
+        "Aplicavel ao planejamento, nao a execucao de um canal especifico."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0007",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao de prompting para geracao de criativos/anuncios: prompt vago do tipo 'faca uns bons anuncios' leva a perguntas de afunilamento e a resultado inutil. A MTX gera criativos para Instagram e Google Ads, entao a advertencia vale como esta.",
+      "scope": "Prompting para geracao de criativos de anuncio na MTX (Instagram video/imagem e Google Ads).",
+      "adaptations": [],
+      "limitations": [
+        "A unidade diz o que nao fazer, mas nao especifica o formato de prompt substituto.",
+        "Nao quantifica o grau de especificidade necessario."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0008",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia (nao popular a biblioteca de formatos de anuncio com material ruim, pois os formatos serao multiplicados em variantes) se aplica a MTX, mas a unidade pressupoe a estrutura de pasta 'ad formats' do setup da fonte; na MTX o repositorio de formatos precisa ser declarado e os formatos-referencia precisam ser os de Instagram (video/imagem/carrossel) e Google Ads.",
+      "scope": "Curadoria da biblioteca de formatos de anuncio usada como base para geracao de variantes na MTX.",
+      "adaptations": [
+        "Mapear a 'ad formats folder' da fonte para o repositorio de formatos de referencia da MTX.",
+        "Restringir os formatos-referencia aos formatos de Instagram (reels, feed video, feed imagem, carrossel) e Google Ads, conforme prioridade de canal MTX."
+      ],
+      "limitations": [
+        "A fonte nao define criterio objetivo de 'melhor formato'; a curadoria fica qualitativa.",
+        "Nao cobre formatos de WhatsApp Status."
+      ],
+      "mtx_derived": true,
+      "derivation": "A escolha de quais superficies de formato povoam a biblioteca (Instagram e Google Ads) vem da prioridade de canal da politica MTX, nao da unidade fonte, que fala genericamente de 'ad formats folder'.",
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0009",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A regra substantiva (nao deixar o logo da empresa usada como inspiracao aparecer no anuncio gerado; trocar pelo proprio logo mantendo o estilo) aplica-se diretamente a MTX, mas a unidade cita marcas do contexto da fonte (Stripe, Maker School) que precisam ser substituidas pela marca MTX.",
+      "scope": "Geracao de criativos de anuncio na MTX a partir de anuncios de terceiros usados como inspiracao de formato.",
+      "adaptations": [
+        "Substituir 'Maker School' pela identidade de marca da MTX como logo de destino.",
+        "Tratar 'Stripe' como exemplo generico de qualquer marca-fonte de inspiracao usada pela MTX."
+      ],
+      "limitations": [
+        "A unidade trata apenas do logo; nao cobre outros elementos de marca de terceiros (tipografia proprietaria, mascotes, slogans).",
+        "Nao constitui parecer juridico sobre uso de material de terceiros."
+      ],
+      "mtx_derived": true,
+      "derivation": "A troca do brand alvo de 'Maker School' para MTX e uma adaptacao operacional da MTX; a fonte nomeia apenas a propria marca dela.",
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0010",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao claro de arquitetura de gerador de anuncios: nao construir sistemas que copiam templates de terceiros e apenas duplicam; a alternativa declarada e partir dos proprios criativos vencedores. Aplica-se como esta a MTX, que pode usar seus proprios anuncios de melhor desempenho como base de variantes.",
+      "scope": "Desenho do gerador de variantes de criativo da MTX e escolha da base de inspiracao.",
+      "adaptations": [],
+      "limitations": [
+        "Pressupoe que a MTX ja possua historico de criativos proprios com desempenho conhecido; se nao houver, a alternativa recomendada nao esta disponivel de imediato.",
+        "A fonte nao define o criterio de 'winning performer'."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0011",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao de investir tempo e energia na opiniao propria sobre o que performa melhor quando o custo de producao ja e baixo; a justificativa declarada e produzir volume e deixar o mercado selecionar. Aplica-se como esta a operacao de teste de criativos da MTX em Instagram e Google Ads.",
+      "scope": "Estrategia de teste de criativos da MTX: producao em volume e selecao por desempenho real de mercado.",
+      "adaptations": [],
+      "limitations": [
+        "Pressupoe capacidade de medir desempenho para que o mercado possa de fato selecionar; a unidade nao descreve o mecanismo de medicao.",
+        "A premissa de 'custo de producao muito barato' precisa valer no setup da MTX."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0012",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A unidade e uma calibragem de expectativa sobre demonstracoes de 'one-shot gen' feitas por criadores de conteudo. E util como contexto para nao superestimar a geracao em uma tentativa, mas nao contem procedimento operacional nem condicoes de aplicacao que entrem num workflow MTX.",
+      "scope": "Calibragem de expectativa da equipe MTX ao avaliar demonstracoes publicas de geracao por IA.",
+      "adaptations": [],
+      "limitations": [
+        "Sem condicoes declaradas e sem passo executavel.",
+        "Nao especifica quantas iteracoes seriam realistas."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0013",
+      "applicability": "DIRECT_USE",
+      "rationale": "Regra de seguranca explicita: nao dar ao modelo acesso a segredos como API key, com justificativa de risco de vazamento e prompt injection. Aplica-se como esta a qualquer automacao de marketing da MTX que use agentes com acesso a internet ou ferramentas.",
+      "scope": "Seguranca de credenciais em todas as automacoes com agentes/LLM da MTX, incluindo integracoes com APIs de Instagram, WhatsApp e Google Ads.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade adverte contra o acesso mas nao descreve o mecanismo alternativo de gestao de segredos.",
+        "Nao enumera todas as classes de segredo alem de API key."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0014",
+      "applicability": "DIRECT_USE",
+      "rationale": "Delimitacao explicita de alcance da abordagem procedural/compositing hardcoded: nao serve para muito alem de anuncios simples, porque a saida e procedural e de qualidade nem sempre boa. Aplica-se como esta ao escopo de uso dessa tecnica na MTX.",
+      "scope": "Limite de escopo do gerador procedural de criativos da MTX: anuncios simples apenas.",
+      "adaptations": [],
+      "limitations": [
+        "A fonte nao define onde exatamente termina 'anuncio simples'.",
+        "Nao indica qual abordagem substitui a procedural fora desse limite nesta unidade."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0015",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao tecnico de geracao de imagem: nao misturar compositing procedural (modelo + overlay) com geracao pixel a pixel por IA; a alternativa declarada e usar um template de prompt puro. Aplica-se como esta a producao de criativos de imagem da MTX para Instagram e Google Ads.",
+      "scope": "Pipeline de geracao de imagem de criativos da MTX (feed, carrossel, display).",
+      "adaptations": [],
+      "limitations": [
+        "A condicao declarada e 'generally speaking'; a fonte nao enumera excecoes.",
+        "Aplica-se a geracao de imagem, nao a video."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0016",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao de controle de variancia: dar liberdade total ao modelo produz saidas pixel-wise muito variantes, incompativel com a necessidade de processos repetiveis e consistentes em uso de negocio. A MTX opera criativos de marca em escala, entao a restricao vale como esta.",
+      "scope": "Definicao do grau de liberdade nos prompts de geracao de imagem para criativos de marca da MTX.",
+      "adaptations": [],
+      "limitations": [
+        "A condicao declarada restringe a 'uso de negocio'; nao se pretende regra para exploracao criativa livre.",
+        "A fonte nao quantifica o nivel aceitavel de variancia."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0017",
+      "applicability": "DIRECT_USE",
+      "rationale": "Anti-padrao especifico de video UGC de produto: nao tentar gerar em uma unica tomada, pois e necessario variar e ter multiplos planos. Aplica-se como esta a producao de video da MTX, que tem video como ferramenta principal no Instagram.",
+      "scope": "Producao de video UGC de produto na MTX (reels, feed video, stories, e criativos de video para midia paga).",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao especifica quantos planos ou qual estrutura de variacao adotar.",
+        "Limitada a video de pessoa falando sobre produto com midia UGC."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0018",
+      "applicability": "DIRECT_USE",
+      "rationale": "Regra de sequenciamento clara: nao automatizar um fluxo com Claude Code antes de saber executa-lo manualmente, porque sem isso o operador nao entende as features e opcoes disponiveis. Aplica-se como esta ao processo de automacao de marketing da MTX.",
+      "scope": "Pre-requisito para qualquer automacao de fluxo de marketing da MTX via Claude Code.",
+      "adaptations": [],
+      "limitations": [
+        "A fonte nao define o criterio de 'saber fazer manualmente' nem o nivel de dominio exigido.",
+        "Nao vinculado a canal especifico."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0019",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia (nao pular o upload da midia do produto como elemento na geracao do video, sob pena de o produto nao ficar no lugar correto) aplica-se a MTX, mas a unidade esta ancorada no produto exemplo da fonte ('midnight clay mask'); na MTX o produto e o ativo de midia precisam ser os da propria operacao.",
+      "scope": "Geracao de video de produto na MTX em que o produto deve aparecer corretamente (reels, feed video, criativos de video).",
+      "adaptations": [
+        "Substituir o produto exemplo da fonte pelo produto real da campanha MTX.",
+        "Definir na MTX qual ativo de midia do produto e carregado como elemento na ferramenta de geracao de video usada."
+      ],
+      "limitations": [
+        "A unidade diz 'sometimes it will not keep in the right place'; nao garante que o upload elimine o problema.",
+        "A ferramenta de geracao especifica nao esta declarada na unidade."
+      ],
+      "mtx_derived": true,
+      "derivation": "A substituicao do produto exemplo e a definicao do ativo de midia correspondente sao escolhas operacionais da MTX; a unidade so nomeia o produto do caso da fonte.",
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0020",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia (instruir no prompt que o influenciador seja entusiasmado sem exagerar na venda) aplica-se a geracao de criativos com figura humana na MTX, mas a unidade e um fragmento de prompt de um caso especifico da fonte ('ela', segurando o produto do exemplo) e precisa ser reescrito para o contexto, persona e produto da MTX.",
+      "scope": "Prompting de geracao de imagem/video com influenciador segurando produto em criativos MTX.",
+      "adaptations": [
+        "Generalizar o pronome e a persona do caso da fonte para a persona definida pela MTX.",
+        "Substituir o produto do exemplo pelo produto da campanha MTX.",
+        "Incorporar a diretriz 'entusiasmado sem oversell' ao template de prompt da MTX em vez de usar a frase literal do caso fonte."
+      ],
+      "limitations": [
+        "A unidade nao define o limiar entre entusiasmo e oversell.",
+        "Aplica-se ao prompt de geracao, nao a copy do anuncio publicado."
+      ],
+      "mtx_derived": true,
+      "derivation": "A generalizacao da persona e do produto para o contexto MTX nao esta na unidade, que expressa apenas a instrucao de prompt do caso especifico da fonte.",
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    }
+  ]
+}

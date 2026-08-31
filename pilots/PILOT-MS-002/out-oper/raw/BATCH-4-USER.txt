@@ -1,0 +1,671 @@
+batch_id: BATCH-4
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|R-0020",
+ "MS002-SRC-A|R-0021",
+ "MS002-SRC-A|R-0022",
+ "MS002-SRC-A|R-0023",
+ "MS002-SRC-A|R-0024",
+ "MS002-SRC-A|R-0025",
+ "MS002-SRC-A|R-0026",
+ "MS002-SRC-A|R-0027",
+ "MS002-SRC-A|R-0028",
+ "MS002-SRC-A|R-0029",
+ "MS002-SRC-A|R-0030",
+ "MS002-SRC-A|R-0031",
+ "MS002-SRC-A|R-0032",
+ "MS002-SRC-A|R-0033",
+ "MS002-SRC-A|R-0034",
+ "MS002-SRC-A|R-0035",
+ "MS002-SRC-A|R-0036",
+ "MS002-SRC-A|R-0037",
+ "MS002-SRC-A|R-0038",
+ "MS002-SRC-A|R-0039"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|R-0020",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Break the form down from 10 questions to three or four questions to see a significant improvement in booking percentage, and have Claude Code do research on the prospect autonomously to compensate.",
+   "condition": "Typically when a form has around 10 questions",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Shorten opt-in forms and let Claude research the prospect",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Optimizing booking percentage on an opt-in form"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0177",
+   "EV-0178",
+   "EV-0179"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0021",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Build systems that allow Claude to orchestrate a conversation within 30 seconds of somebody filling out a form; the speaker states this can make companies 300 to 400%.",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Respond to leads within 30 seconds (speed to lead)",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Somebody fills out a form demonstrating interest"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0175"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0022",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use Claude Code to customize the copy so it references something the recipient talked about recently (e.g. on LinkedIn) before presenting what the offer does, instead of only stating what your offer does.",
+   "condition": null,
+   "do_not": [
+    "Do not just say 'Hey, my offer does X, Y, and Z'"
+   ],
+   "exceptions": [],
+   "name": "Customize newsletter copy per recipient",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Writing newsletter copy in the marketing mix"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0169",
+   "EV-0170"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0023",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Spend a little bit of time figuring out what the bottleneck is, then build systems that alleviate that bottleneck; treat all presented systems as solutions to bottlenecks.",
+   "condition": "The targeted step must be the current constraining step of the pipeline",
+   "do_not": [
+    "Do not rush to automate literally everything in a business",
+    "Do not just throw these systems at companies when the targeted step is not the current constraining step"
+   ],
+   "exceptions": [],
+   "name": "Automate the bottleneck first",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Before deciding what to automate in a business or client"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0194",
+   "EV-0195",
+   "EV-0196",
+   "EV-0197"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0024",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Expend a tiny bit of time to test whether the repeated ask is turnable into a skill, and if it passes the autonomy threshold, save it as a skill you simply run.",
+   "condition": "The task must pass the totally autonomous threshold to become a skill; some things require a human being in the driver's seat",
+   "do_not": [
+    "Do not keep re-typing the same instruction over and over as a prompt"
+   ],
+   "exceptions": [
+    "Not all things are turnable into skills; some require a human being in the driver's seat, in which case you stay in the driver's seat"
+   ],
+   "name": "Promote repeated asks from prompt to skill",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "The moment you find yourself saying the same thing / asking AI virtually the exact same thing more than once"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0218",
+   "EV-0219",
+   "EV-0220",
+   "EV-0221"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0025",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Create master skills that run the individual skills in sequence, chaining small tasks into big ones and eventually replacing entire roles.",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Chain granular skills into master/meta skills",
+   "precedence": null,
+   "prerequisites": [
+    "Granular individual skills must be built first"
+   ],
+   "trigger": "Once you have a big set of granular individual skills"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0203",
+   "EV-0205",
+   "EV-0206"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0026",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Sit down and whiteboard the pre-existing process yourself, define the process and judge the quality of the outputs yourself, and let AI only carry out the process in the middle; minimize the total number of steps in the prompt, skill or process.",
+   "condition": null,
+   "do_not": [
+    "Don't come to AI without a process",
+    "Don't have AI come up with the process for you",
+    "Don't have AI judge the quality of the outputs for you"
+   ],
+   "exceptions": [],
+   "name": "Bring your own process; let AI only execute the middle",
+   "precedence": null,
+   "prerequisites": [
+    "A pre-existing process; sometimes shifting a few steps and providing input data to make it amenable to automation"
+   ],
+   "trigger": "Before automating a process with AI"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0227",
+   "EV-0228",
+   "EV-0229",
+   "EV-0232",
+   "EV-0233"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0027",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Apply the creative generation system only in that situation, where it can meaningfully improve the business significantly.",
+   "condition": "The company has lots of ideas and lots of distribution but not a lot of creative (i.e. it is bottlenecked on designing/making ads)",
+   "do_not": [
+    "Do not apply it if you already have the ability to make a bunch of ads",
+    "Do not apply it if you are short on ideas or short on distribution"
+   ],
+   "exceptions": [],
+   "name": "Apply the creative system only when creative is the bottleneck",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Deciding whether to apply the ad/creative generator to a business"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0237",
+   "EV-0238",
+   "EV-0239"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0028",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Take the automation out of your computer and run it as a routine in a cloud environment.",
+   "condition": "Loops only run on your computer, are hard to share and are brittle to computer changes (login, plugins, skills, MCP servers)",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Move automations to the cloud when they must be institutional",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When you want to expand things, make them institutional and add them to the organization rather than only your own workspace"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0211",
+   "EV-0212",
+   "EV-0213"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0029",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Map out the process ahead of time and follow the series of steps shown to make it replicable",
+   "condition": "You have your own internal and successful marketing mix",
+   "do_not": [],
+   "exceptions": [
+    "Viewers with their own successful marketing mix should do whatever they want with the mix itself"
+   ],
+   "name": "Map out the process ahead of time before executing",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Converting your marketing mix into a replicable ad pipeline"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0242"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0030",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Zoom in before screenshotting so the creative is as high quality as possible",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Capture reference creatives at maximum quality",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Taking a screenshot of an ad format to use as a template reference"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0253",
+   "EV-0254"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0031",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Build a series of templates (rules) that let Claude generate images on demand with cheap old-school image processing like ImageMagick, accepting that outputs will need to be massaged",
+   "condition": "Cost matters (e.g. $2 per ad x 100 ads = $200 every time) and you are not a $10,000 a day business",
+   "do_not": [],
+   "exceptions": [
+    "Image generation platforms will be shown after this and may be used later"
+   ],
+   "name": "Use procedural templates instead of paid image generation for volume",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Needing to generate large volumes of ad creative"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0275",
+   "EV-0276",
+   "EV-0277",
+   "EV-0278"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0032",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Dump in your demands, fire off the task, then step away, work on something else, or spawn a bunch of tasks; come back when the icon turns from gray to yellow",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Fire off long tasks and step away",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Running prompts that take 15 to 20 minutes"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0288",
+   "EV-0289"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0033",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Continue adjusting settings (e.g. grain) in the tuner while the model works; viewers should do this pretty often",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Keep working in the tuner while Claude is working",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Claude is processing a request"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0298",
+   "EV-0299"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0034",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Save the tuned settings and make them concrete; only once concrete, spin hundreds if not thousands of ads",
+   "condition": "Settings must be saved and made concrete",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Lock settings before scaling volume",
+   "precedence": null,
+   "prerequisites": [
+    "A tuner page with adjustable settings"
+   ],
+   "trigger": "Finishing the tuning of the ad template"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0284",
+   "EV-0285"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0035",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Instruct it to first generate the batch (e.g. 50) so you can look through and pick, and to work on generating the artifact afterwards.",
+   "condition": "You want to pick the best ones yourself",
+   "do_not": [],
+   "name": "Generate and pick the batch before building the artifact",
+   "precedence": "Batch generation is explicitly ordered before artifact generation",
+   "trigger": "Asking the model to both generate a batch of ads and turn the process into a reusable artifact"
+  },
+  "defects": [
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0307",
+   "EV-0308"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0036",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Change the design so that instead of iterating fixed pieces of copy through a script, it passes prior generated ads through itself each run and produces something new and time-based, so output varies day to day.",
+   "condition": "You are not around at run time to answer its questions or guide it",
+   "do_not": [
+    "Rely on it asking you questions about how to generate the ads while it runs unattended"
+   ],
+   "name": "Give an unattended loop more autonomy than the skill had",
+   "precedence": null,
+   "trigger": "Converting a skill into a loop that runs unattended"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0337",
+   "EV-0338",
+   "EV-0339"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0037",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Do a real batch render to show how it works before actually instituting it on the computer via cron.",
+   "condition": null,
+   "do_not": [],
+   "name": "Real batch render before installing the schedule",
+   "precedence": "Testing/render precedes installation",
+   "trigger": "About to institute the loop on your computer"
+  },
+  "defects": [
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0339"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0038",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Open the folder, go to share, and change it to anyone with the link can view; then tell the model it is good to go.",
+   "condition": "The connector says it can't change sharing settings",
+   "do_not": [
+    "Expect the connector to change sharing settings for you"
+   ],
+   "exceptions": [
+    "You might have to do this only once"
+   ],
+   "name": "Set Drive folder sharing manually",
+   "precedence": null,
+   "trigger": "The routine's Google Drive output folder has been created"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0352",
+   "EV-0353"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0039",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Connect the Google Drive connector in the cloud routine itself; once done, the routine is created.",
+   "condition": "Google Drive was already connected locally but not in the routine",
+   "do_not": [
+    "Assume the local Google Drive connection is enough for the cloud routine"
+   ],
+   "name": "Connect Google Drive inside the cloud routine as well",
+   "precedence": null,
+   "trigger": "Building a cloud routine that must deliver into Google Drive"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0354",
+   "EV-0355"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

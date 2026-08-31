@@ -1,0 +1,585 @@
+batch_id: BATCH-2
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|AP-0022",
+ "MS002-SRC-A|AP-0023",
+ "MS002-SRC-A|AP-0024",
+ "MS002-SRC-A|AP-0025",
+ "MS002-SRC-A|AP-0026",
+ "MS002-SRC-A|AP-0027",
+ "MS002-SRC-A|AP-0028",
+ "MS002-SRC-A|AP-0029",
+ "MS002-SRC-A|AP-0030",
+ "MS002-SRC-A|AP-0031",
+ "MS002-SRC-A|AP-0032",
+ "MS002-SRC-A|AP-0033",
+ "MS002-SRC-A|AP-0034",
+ "MS002-SRC-A|AP-0035",
+ "MS002-SRC-A|AP-0036",
+ "MS002-SRC-A|AP-0037",
+ "MS002-SRC-A|AP-0038",
+ "MS002-SRC-A|AP-0039",
+ "MS002-SRC-A|AP-0040",
+ "MS002-SRC-A|AP-0041"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|AP-0022",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "generated UGC-style product videos"
+   ],
+   "do_not": [
+    "Do not ship generated videos without some sort of Q&A check"
+   ],
+   "why": "The product physically vanished from the shot mid-video, which the speaker says is the sort of thing you don't want to happen, which is why you're going to need some sort of Q&A"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0557",
+   "EV-0558"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0023",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "AI video ad generation"
+   ],
+   "do_not": [
+    "Do not rely on generating a single video candidate"
+   ],
+   "why": "You need to generate multiple, otherwise you're not going to get good shots"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0579"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0024",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When starting to automate something"
+   ],
+   "do_not": [
+    "Do not start at the beginning with a grandiose idea and build all the systems before verifying the output",
+    "Do not automate a process whose output isn't very good"
+   ],
+   "why": "You end up building great systems whose output just isn't very good, because you didn't start at the end; if you can't get the output you want there's no point automating since you're automating a process that sucks"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0653",
+   "EV-0654",
+   "EV-0655"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0025",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When you collect a fair amount of information about the people on your list"
+   ],
+   "do_not": [
+    "Do not send the same mass, non-personalized templated email to everyone",
+    "Do not just insert the variables verbatim like most people do"
+   ],
+   "why": "It's the same thing every time with nothing personalized, and with AI we don't need to suffer crappy templated emails anymore — AI can customize the variables so they make sense in the context of the mail campaign"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0620",
+   "EV-0621",
+   "EV-0625",
+   "EV-0626"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0026",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Reaching out to businesses at scale"
+   ],
+   "do_not": [
+    "Do not send generic outreach that just says 'Hello, I would like to sell you something'"
+   ],
+   "why": "Personalized outreach that references the specific business, a problem you can solve and how you'd solve it does better"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0608",
+   "EV-0609"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0027",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Fake/test emails were added to the list in order to build the system"
+   ],
+   "do_not": [
+    "Do not blast a bunch of fake emails that you added to the list for testing"
+   ],
+   "why": "That is how you hurt your deliverability"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0690",
+   "EV-0691"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0028",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "do_not": [
+    "Do not have AI write your entire email"
+   ],
+   "why": "AI writing your entire email usually sucks; instead a human writes the email using practices that work and only a couple of variables are inserted"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0662",
+   "EV-0663"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0029",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Cold outreach via emails and DMs"
+   ],
+   "do_not": [
+    "Do not send totally templated cold DMs or emails with nothing personalized"
+   ],
+   "why": "In the speaker's experience totally templated messages got maybe 1 to 2% reply rate while personalized ones got around 5%, roughly 200 to 250% of the revenue"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0701",
+   "EV-0702",
+   "EV-0703"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0030",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Applies when the underlying numbers aren't real or substantiated",
+    "You need to actually have case studies and proven growth to back the claims"
+   ],
+   "do_not": [
+    "Do not put numeric performance claims in outbound email copy when the underlying numbers are not real or substantiated",
+    "Do not pull numbers out of thin air"
+   ],
+   "why": "Those numeric claims are the kind of thing that gets outbound accounts suspended and can cross into deceptive claims territory"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0731",
+   "EV-0732"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0031",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Applies to companies running advertisements of any kind, including organic brand-based advertising"
+   ],
+   "do_not": [
+    "Do not spend heavily on leads and then fail to treat them with the time, energy and respect they need"
+   ],
+   "why": "Most companies running ads do this and only get a small fraction of their lead spend back, e.g. $10,000 spent producing $20,000, a 2x ROAS which is quite poor and means acquisition cost is about 50% of what you make"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0774",
+   "EV-0776",
+   "EV-0777"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0032",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [],
+   "do_not": [
+    "Do not leave form fills and opt-ins unanswered for an hour or until the next day",
+    "Do not skip immediate follow-up the way most companies do"
+   ],
+   "why": "It is very low hanging fruit; companies that don't do it make e.g. $30,000 a month when they could be making $100,000 a month, and the amount of money the business makes is directly contingent on reaching out."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0797",
+   "EV-0798",
+   "EV-0799"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0033",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "The system can technically respond in about 5 seconds"
+   ],
+   "do_not": [
+    "Do not fire the automated response too fast"
+   ],
+   "why": "If you do this too fast people will think it is fake, so you have to stay within the bounds of reason."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0816"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0034",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When the intended execution is a looped routine"
+   ],
+   "do_not": [
+    "Do not let the model build a script when the intent is to run the flow in a loop via routines"
+   ],
+   "why": "The model usually wants to build a script because it is more computationally efficient, but the whole idea is to run this in a loop via routines, so the speaker had to reroute it away from building a script."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0848"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0035",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When building marketing dashboards"
+   ],
+   "do_not": [
+    "Do not just pump a bunch of marketing data into cloud code and say 'visualize it'",
+    "Do not treat the dashboard as merely a data showcase tool instead of a web design project"
+   ],
+   "why": "That naive approach ends up with a low quality result; dashboards nowadays are just HTML and you go a lot further if you treat what you are building as literally a glorified website."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0864",
+   "EV-0865",
+   "EV-0866"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0036",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When designing a dashboard for a client"
+   ],
+   "do_not": [
+    "Do not try to one-shot the dashboard design"
+   ],
+   "why": "The way most people do this is to one-shot it and they end up with a really ugly design with an inefficient layout that is not very good for a client; you can do way better by generating and iterating on variants."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0881",
+   "EV-0882"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0037",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Automated AI follow-ups"
+   ],
+   "do_not": [
+    "Raw dog the follow-ups with AI instead of using a template library, like most people do"
+   ],
+   "why": "Using a template library makes the quality of the follow-ups a lot higher and closer to your tone of voice, and there are way fewer catastrophic screw-ups because the AI is pulling from your tone of voice all the time"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0983",
+   "EV-0984"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0038",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Templates that run automatically on a loop"
+   ],
+   "do_not": [
+    "Write pushy or super crazy harsh follow-up templates",
+    "Use m dashes in the templates",
+    "Mention the invoice number in the templates"
+   ],
+   "why": "The system runs completely automatically on a loop, so you might as well be nicer as opposed to super crazy harsh; the speaker had the model remove m dashes and the invoice number and sign off with 'thanks - Nick'"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-1005",
+   "EV-1006",
+   "EV-1007"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0039",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When granting autonomy to fix and rerun"
+   ],
+   "do_not": [
+    "Give the model too much self-healing access"
+   ],
+   "why": "The presenter has had situations where too much self-healing access, combined with a spurious issue like a weird rate limit, caused the model to fundamentally change itself and screw up — though such cases are far less common than the model quitting due to a temporary rate limit."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-1064",
+   "EV-1065"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0040",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When the activity is the core / only way the business makes money",
+    "When the time savings are small (about one hour a week)"
+   ],
+   "do_not": [
+    "Automate the only activity that makes you money (e.g. replacing an hour a week of due-diligence calls with prospective business owners with a voice agent) for a small time savings gain"
+   ],
+   "why": "You trade one hour per week of time back for potential devastation to your business; if you're automating the core thing that makes you money you'd better do a great job, and it makes no sense to give up the most important, only revenue-generating activity to save a few bucks."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-1097",
+   "EV-1099",
+   "EV-1100",
+   "EV-1101",
+   "EV-1102"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0041",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When the report contains bad news for the client"
+   ],
+   "do_not": [
+    "Automate the delivery of bad news from reports, e.g. using the signals feature built in the dashboard to automatically send monthly signals to the client"
+   ],
+   "why": "That is one of the core things you as a human being make or lose money on; you should be in charge of it and go sit down and meet with the client."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-1111",
+   "EV-1112",
+   "EV-1113"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

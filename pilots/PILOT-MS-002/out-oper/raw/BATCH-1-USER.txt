@@ -1,0 +1,565 @@
+batch_id: BATCH-1
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|AP-0001",
+ "MS002-SRC-A|AP-0002",
+ "MS002-SRC-A|AP-0003",
+ "MS002-SRC-A|AP-0004",
+ "MS002-SRC-A|AP-0005",
+ "MS002-SRC-A|AP-0006",
+ "MS002-SRC-A|AP-0007",
+ "MS002-SRC-A|AP-0008",
+ "MS002-SRC-A|AP-0009",
+ "MS002-SRC-A|AP-0010",
+ "MS002-SRC-A|AP-0011",
+ "MS002-SRC-A|AP-0012",
+ "MS002-SRC-A|AP-0013",
+ "MS002-SRC-A|AP-0014",
+ "MS002-SRC-A|AP-0015",
+ "MS002-SRC-A|AP-0016",
+ "MS002-SRC-A|AP-0017",
+ "MS002-SRC-A|AP-0018",
+ "MS002-SRC-A|AP-0019",
+ "MS002-SRC-A|AP-0020"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|AP-0001",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When an autocomplete suggestion pops up at the bottom of the input"
+   ],
+   "do_not": [
+    "Always press tab to accept Claude's autocomplete suggestion and let Claude drive your conversation"
+   ],
+   "why": "It is not always the best thing to do; it knows what you want to do next maybe 30-40% of the time."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0035",
+   "EV-0036"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0002",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "While taking this course"
+   ],
+   "do_not": [
+    "Jump around the course"
+   ],
+   "why": "Following the course as laid out end to end is what gets you to knowing everything you need in order to automate your marketing."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0004"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0003",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Speaker notes manual is good if you're working on something really secure"
+   ],
+   "do_not": [
+    "Use manual mode for ordinary work"
+   ],
+   "why": "With manual mode you'll have to check in like every 5 seconds as it does anything, since it always asks before doing anything remotely autonomous"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0091",
+   "EV-0092"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0004",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Applies to bypass permissions mode specifically; auto, plan and accept edits modes are described as fine"
+   ],
+   "do_not": [
+    "Enable bypass permissions mode if you're not actually okay with it"
+   ],
+   "why": "There is the possibility of some sort of long-term impact, which is why Claude requires an explicit allow check"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0090",
+   "EV-0091"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0005",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Speaker's stated performance sweet spot is 0 to maybe 500k tokens"
+   ],
+   "do_not": [
+    "Do not add more information to a thread than roughly 500k tokens"
+   ],
+   "why": "Cloud starts to perform a little poorer because it gets confused, it doesn't fully know what it is doing, and it has a lot of instructions to juggle around in its memory."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0128",
+   "EV-0129"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0006",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Applies when you are already really good across the stack and the targeted step is not the constraining step"
+   ],
+   "do_not": [
+    "Rushing to automate literally everything you can in a business",
+    "Trying to do everything everywhere all at once instead of identifying the bottleneck",
+    "Process-automating steps that are already not the bottleneck"
+   ],
+   "why": "The entire operation is constrained by the narrowest step, so improving non-bottleneck steps changes nothing and you won't see much monetary return."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0194",
+   "EV-0195",
+   "EV-0197"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0007",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Applies to creative/ad generation prompts"
+   ],
+   "do_not": [
+    "Telling the model 'Make me some great ads' and expecting it to automatically work"
+   ],
+   "why": "The model will instinctively ask a bunch of narrowing questions, and even if you answer them it takes you on a wild goose chase and probably wouldn't get anywhere despite sounding like it knows what it's doing."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0225",
+   "EV-0226",
+   "EV-0227"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0008",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When populating the ad format library that will be spun into variants"
+   ],
+   "do_not": [
+    "Fill the ad formats folder with a bunch of shitty ads"
+   ],
+   "why": "The idea is to fill it with the best formats ever and then spin those formats as much as humanly possible"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0256",
+   "EV-0257"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0009",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When using another company's ads as format inspiration"
+   ],
+   "do_not": [
+    "Use Stripe's logo or whatever company's logo you fed in as ad format inspiration in your own generated ads"
+   ],
+   "why": "The source ads are someone else's; the logo must be replaced with your own brand (Maker School) while keeping a very similar style"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0268",
+   "EV-0269"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0010",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Building a procedural ad generator off a scooped template"
+   ],
+   "do_not": [
+    "Build systems that scoop other people's templates and just duplicate the hell out of them"
+   ],
+   "why": "The stated idea is instead to get inspired by winning performers your own team created or that you ran in the past that do quite well, scoop your own work, and generate variants of that really quickly."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0315",
+   "EV-0316"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0011",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Creative testing where production cost is cheap"
+   ],
+   "do_not": [
+    "Spend a bunch of time and energy on your opinionated idea about what performs the best"
+   ],
+   "why": "The cost of production is now so cheap that it makes sense to build systems to produce a lot and then have the market actually select things for you."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0319",
+   "EV-0320"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0012",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [],
+   "do_not": [
+    "Expect one-shot perfect generations the way many creators present them"
+   ],
+   "why": "A lot of creators show one-shot gens claiming the model is perfect and changes everything, but it does not really do that; it is good to dial expectations back and be more realistic"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0384"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0013",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [],
+   "do_not": [
+    "Give the model access to your secrets such as your API key"
+   ],
+   "why": "It must not have the ability to leak your secrets; if it came across a section of the internet asking for your API key that is called prompt injection and there are a variety of big security concerns to do with that"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0418",
+   "EV-0419"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0014",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [],
+   "do_not": [
+    "Rely on the hardcoded procedural/compositing approach to extend far past simple ads"
+   ],
+   "why": "You cannot really extend far past that; the outputs are procedurally generated and not always of the best quality"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0368"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0015",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Generally speaking, in AI image generation flows"
+   ],
+   "do_not": [
+    "Combine a model plus an overlay (procedural compositing) with an AI pixel-by-pixel generation approach"
+   ],
+   "why": "You are adding a procedural compositing approach to an AI based generating pixel by pixel approach, which is generally a bad idea; instead use a pure prompt template basically every time"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0437",
+   "EV-0438"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0016",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "At least for business use"
+   ],
+   "do_not": [
+    "Give the model total freedom so that outputs become wildly variant pixel-wise (e.g. linen cloth vs hanging in the air)"
+   ],
+   "why": "The more freedom and flexibility you give a model, the more rope you're giving it to hang itself; business needs very repeatable consistent processes, which is hard with total crazy pixel variants"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0428",
+   "EV-0429",
+   "EV-0430",
+   "EV-0431"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0017",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Creating a video of somebody talking about a product using UGC media"
+   ],
+   "do_not": [
+    "Do not try to create the UGC product video in one shot and expect it to work really well"
+   ],
+   "why": "A lot of people don't understand that you can't just do this in one shot; you actually need to vary it and have multiple different shots"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0492"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0018",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [],
+   "do_not": [
+    "Do not move to fully automating the flow with Claude Code without first knowing how to do the process manually"
+   ],
+   "why": "If you don't know how to do the process manually, a lot of the time you're just misunderstanding the different features and the different options that are available"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0500",
+   "EV-0501"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0019",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Generating a product video where the product must appear correctly"
+   ],
+   "do_not": [
+    "Do not skip uploading the product media as an element when generating the video"
+   ],
+   "why": "If you don't upload media, sometimes it will not actually keep the midnight clay mask in the right place"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0516",
+   "EV-0517"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|AP-0020",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "Prompting the image generation of the influencer holding the product"
+   ],
+   "do_not": [
+    "Don't have the influencer oversell the product"
+   ],
+   "why": "The prompt specifies she should be enthusiastic about using the product, 'but don't like oversell it'"
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-0506"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

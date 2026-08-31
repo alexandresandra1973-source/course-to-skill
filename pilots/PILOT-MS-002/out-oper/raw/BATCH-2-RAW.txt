@@ -1,0 +1,344 @@
+{
+  "batch_id": "BATCH-2",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|AP-0022",
+      "applicability": "DIRECT_USE",
+      "rationale": "A unidade proibe publicar videos UGC gerados sem checagem de QA, citando falha visual (produto sumiu da cena). MTX opera video como ferramenta principal no Instagram, entao a proibicao se aplica como esta ao fluxo de producao de video gerado.",
+      "scope": "Producao e publicacao de video gerado por IA para Instagram (reels, feed_video, stories).",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao define o formato nem o criterio do check de QA, apenas exige que exista algum."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0023",
+      "applicability": "DIRECT_USE",
+      "rationale": "Proibe depender de um unico candidato de video gerado por IA, exigindo geracao multipla para obter boas tomadas. Isso corresponde diretamente a producao de video de anuncio/criativo que a MTX opera no canal prioritario.",
+      "scope": "Geracao de criativos de video por IA para Instagram e para video ads.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao especifica quantos candidatos gerar nem o criterio de selecao."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0024",
+      "applicability": "DIRECT_USE",
+      "rationale": "Proibicao de construir sistemas de automacao antes de verificar a qualidade do output, e de automatizar processo cujo output e ruim. E um principio de metodo de automacao aplicavel a qualquer canal operado pela MTX sem adaptacao material.",
+      "scope": "Qualquer iniciativa de automacao de marketing na MTX, transversal a canais.",
+      "adaptations": [],
+      "limitations": [
+        "Nao define como medir se o output e 'bom o suficiente' para autorizar a automacao."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0025",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A unidade trata especificamente de campanhas de email em massa e da insercao literal de variaveis em templates de email. Email e canal secundario na politica MTX e nenhuma necessidade especifica de email foi declarada nesta unidade.",
+      "scope": "Referencia de principio sobre personalizacao contextual de variaveis em mensagens em massa.",
+      "adaptations": [],
+      "limitations": [
+        "Nao entra em workflow operacional da MTX enquanto nao houver necessidade declarada de email."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0026",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia — nao enviar outreach generico do tipo 'quero te vender algo' e sim referenciar o negocio especifico, o problema e a solucao — se aplica a prospeccao. A unidade fala de outreach em escala sem fixar canal; na MTX o canal de conversacao e o WhatsApp e o DM do Instagram, o que exige adaptacao declarada.",
+      "scope": "Prospeccao ativa 1a1 via WhatsApp e DM de Instagram.",
+      "adaptations": [
+        "Transpor o outreach de canal de email/generico para WhatsApp (conversa 1a1) e DM do Instagram.",
+        "Ajustar o formato da mensagem ao comprimento e ao tom de mensageria instantanea."
+      ],
+      "limitations": [
+        "A unidade nao fornece o texto nem a estrutura da mensagem personalizada."
+      ],
+      "mtx_derived": true,
+      "derivation": "A escolha de WhatsApp e DM de Instagram como superficie do outreach nao esta na unidade; deriva da prioridade de canal da MTX.",
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0027",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A proibicao trata de disparar emails falsos de teste presentes na lista e do dano a deliverability de email. E especifica de infraestrutura de email, canal secundario sem necessidade declarada na MTX.",
+      "scope": "Referencia sobre higiene de lista e separacao entre dados de teste e producao.",
+      "adaptations": [],
+      "limitations": [
+        "Deliverability de email nao e uma metrica operada nos canais prioritarios da MTX."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0028",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia e a divisao de trabalho: humano escreve a mensagem com praticas que funcionam e a IA preenche apenas algumas variaveis, em vez de a IA escrever tudo. Isso se aplica a mensageria da MTX, mas a unidade fala de email, exigindo transposicao declarada de canal.",
+      "scope": "Redacao de mensagens de prospeccao e atendimento em WhatsApp e DM de Instagram.",
+      "adaptations": [
+        "Aplicar a regra a mensagens de WhatsApp/DM em vez de email.",
+        "Definir na MTX quais variaveis ficam a cargo da IA."
+      ],
+      "limitations": [
+        "A unidade nao lista quais sao as 'praticas que funcionam' nem quais variaveis usar."
+      ],
+      "mtx_derived": true,
+      "derivation": "A transposicao do artefato 'email' para mensagens de WhatsApp/DM e escolha operacional da MTX, nao afirmacao da fonte.",
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0029",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A unidade cobre cold outreach por email E por DM, com numeros comparativos de reply rate entre mensagem totalmente templada e personalizada. A parte de DM toca canal prioritario da MTX (Instagram/WhatsApp), mas a parte de email precisa ser separada, o que caracteriza adaptacao de escopo.",
+      "scope": "Cold outreach por DM de Instagram e mensagem de WhatsApp.",
+      "adaptations": [
+        "Restringir a aplicacao ao componente de DM/mensagem, tratando o componente de email como referencia.",
+        "Os percentuais citados sao da experiencia do palestrante e nao devem ser assumidos como baseline da MTX."
+      ],
+      "limitations": [
+        "Os numeros de 1-2% versus ~5% sao experiencia relatada da fonte, sem metodologia declarada."
+      ],
+      "mtx_derived": true,
+      "derivation": "A priorizacao do componente DM sobre o componente email deriva da prioridade de canal da MTX.",
+      "channels": [
+        "instagram",
+        "whatsapp",
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0030",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A proibicao de usar numeros de performance nao substanciados em copy se aplica integralmente ao conteudo da MTX, mas a unidade fixa o contexto em copy de email outbound e o risco em suspensao de conta de outbound. Na MTX o risco analogo esta em politicas de Instagram e Google Ads, o que exige adaptacao declarada.",
+      "scope": "Copy de posts e anuncios (Instagram, Google Ads) e mensagens de prospeccao que citem numeros de resultado.",
+      "adaptations": [
+        "Transpor o contexto de 'email outbound' para copy de Instagram, Google Ads e WhatsApp.",
+        "O mecanismo de risco citado (suspensao de conta de outbound) deve ser lido como risco de politica de plataforma no canal correspondente."
+      ],
+      "limitations": [
+        "A unidade nao define o que conta como substanciacao suficiente de um numero."
+      ],
+      "mtx_derived": true,
+      "derivation": "A extensao do risco de 'conta de outbound suspensa' para politicas de anuncio de Instagram/Google Ads nao esta na unidade; e derivacao operacional da MTX.",
+      "channels": [
+        "instagram",
+        "google_ads",
+        "whatsapp",
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0031",
+      "applicability": "DIRECT_USE",
+      "rationale": "A unidade se declara aplicavel a empresas que rodam anuncios de qualquer tipo, incluindo divulgacao organica de marca, e proibe gastar com leads sem tratar os leads com tempo e atencao. Isso corresponde diretamente a operacao da MTX em Google Ads e Instagram somada ao atendimento por WhatsApp.",
+      "scope": "Gestao de leads gerados por midia paga e conteudo organico, com tratamento no WhatsApp.",
+      "adaptations": [],
+      "limitations": [
+        "Os valores de exemplo (10k produzindo 20k, ROAS 2x) sao ilustrativos da fonte e nao metas da MTX."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "google_ads",
+        "instagram",
+        "whatsapp"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0032",
+      "applicability": "DIRECT_USE",
+      "rationale": "Proibe deixar preenchimentos de formulario e opt-ins sem resposta por uma hora ou ate o dia seguinte, exigindo follow-up imediato. A MTX capta leads por Google Ads e Instagram e responde por WhatsApp, entao a regra se aplica como esta.",
+      "scope": "Follow-up imediato de leads de formulario e opt-in, respondidos via WhatsApp.",
+      "adaptations": [],
+      "limitations": [
+        "Os valores de 30k versus 100k por mes sao exemplo da fonte, nao projecao para a MTX.",
+        "A unidade nao fixa um SLA numerico de resposta, apenas veta a demora de uma hora ou mais."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "whatsapp",
+        "google_ads",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0033",
+      "applicability": "DIRECT_USE",
+      "rationale": "Proibe disparar a resposta automatica rapido demais (o sistema conseguiria em ~5 segundos) porque a pessoa percebe como falso, exigindo manter-se dentro do razoavel. Aplica-se sem adaptacao material ao atendimento automatizado por WhatsApp da MTX.",
+      "scope": "Configuracao de latencia de resposta automatica no atendimento por WhatsApp e DM.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao define o intervalo aceitavel, apenas veta o disparo quase instantaneo."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0034",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A unidade trata de conduzir o modelo durante a construcao de uma automacao, impedindo que ele gere um script quando a intencao e rodar em loop via routines. E detalhe de implementacao de uma ferramenta especifica, sem vinculo com canal de marketing da MTX.",
+      "scope": "Referencia tecnica para quem constroi automacoes com assistentes de codigo.",
+      "adaptations": [],
+      "limitations": [
+        "Depende da ferramenta e do conceito de 'routines' citados pela fonte, nao declarados como parte do stack da MTX."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0035",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Trata de construcao de dashboards de marketing, proibindo jogar dados em uma ferramenta e pedir 'visualize'. E util como principio de qualidade de entregavel, mas nao e um workflow de canal de marketing da MTX nem foi declarada necessidade de dashboard.",
+      "scope": "Referencia para eventual construcao de dashboards de reporte de marketing.",
+      "adaptations": [],
+      "limitations": [
+        "A MTX nao tem, nesta unidade, necessidade declarada de dashboard operacional."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0036",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Proibe tentar one-shot o design de dashboard para cliente, recomendando gerar e iterar variantes. Assim como AP-0035, e material sobre entregavel de dashboard, fora dos workflows de canal da MTX.",
+      "scope": "Referencia sobre iteracao de variantes em design de entregaveis visuais.",
+      "adaptations": [],
+      "limitations": [
+        "O principio de gerar variantes so entraria em workflow da MTX se transposto para criativos, o que a unidade nao afirma."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0037",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A proibicao de deixar a IA escrever follow-ups livremente sem biblioteca de templates, para garantir tom de voz e evitar erros catastroficos, se aplica ao follow-up automatizado da MTX. A unidade nao fixa canal, entao a instanciacao em WhatsApp/DM precisa ser declarada.",
+      "scope": "Follow-up automatizado de leads e clientes via WhatsApp e DM de Instagram.",
+      "adaptations": [
+        "Instanciar a biblioteca de templates no canal WhatsApp e DM de Instagram.",
+        "Construir a biblioteca com o tom de voz proprio da MTX."
+      ],
+      "limitations": [
+        "A unidade nao especifica o tamanho nem a estrutura da biblioteca de templates."
+      ],
+      "mtx_derived": true,
+      "derivation": "A escolha de WhatsApp/DM como superficie do follow-up e derivacao da prioridade de canal da MTX, nao afirmacao da fonte.",
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0038",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A parte generalizavel — nao escrever templates de follow-up automatico agressivos ou duros, dado que rodam em loop sem supervisao — se aplica a MTX. As demais proibicoes (m dashes, numero de fatura, assinatura 'thanks - Nick') sao especificas do contexto de cobranca do palestrante e precisam ser excluidas ou substituidas.",
+      "scope": "Redacao de templates de follow-up automatico em loop no WhatsApp e DM.",
+      "adaptations": [
+        "Reter apenas a proibicao de tom pushy/harsh em templates que rodam automaticamente.",
+        "Descartar a proibicao de mencionar numero de fatura, que pertence a um fluxo de cobranca nao declarado na MTX.",
+        "Substituir a assinatura 'thanks - Nick' pela assinatura da MTX."
+      ],
+      "limitations": [
+        "A instrucao sobre m dashes e uma preferencia de estilo da fonte, nao um requisito operacional da MTX."
+      ],
+      "mtx_derived": true,
+      "derivation": "A separacao entre a parte generalizavel (tom) e a parte idiossincratica (fatura, assinatura pessoal, m dashes) e decisao operacional da MTX.",
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0039",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Trata de limitar o acesso de auto-correcao (self-healing) concedido a um modelo em automacoes, por risco de o modelo se alterar diante de erros espurios. E um principio de engenharia de automacao, nao um workflow de canal de marketing da MTX.",
+      "scope": "Referencia de governanca tecnica para automacoes com agentes.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao define quanto acesso de self-healing seria 'demais'."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0040",
+      "applicability": "DIRECT_USE",
+      "rationale": "Proibe automatizar a unica atividade que gera receita quando o ganho de tempo e pequeno, por desproporcao entre beneficio e risco. E um criterio de decisao sobre o que automatizar, aplicavel como esta as decisoes de automacao da MTX em qualquer canal.",
+      "scope": "Criterio de triagem sobre quais atividades da MTX podem ou nao ser automatizadas.",
+      "adaptations": [],
+      "limitations": [
+        "O exemplo de agente de voz substituindo calls de due diligence e ilustrativo da fonte.",
+        "A unidade nao define o limiar de ganho de tempo que justificaria automatizar."
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|AP-0041",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A substancia — nao automatizar a entrega de ma noticia ao cliente, mantendo o humano responsavel e a conversa presencial — se aplica a relacao da MTX com clientes. A instanciacao citada (feature de signals do dashboard enviando relatorio mensal) nao existe declarada na MTX e precisa ser transposta.",
+      "scope": "Comunicacao de resultados negativos de campanha ao cliente, feita por humano.",
+      "adaptations": [
+        "Transpor de 'signals automaticos de dashboard' para qualquer envio automatizado de reporte da MTX.",
+        "Definir o canal humano de entrega (reuniao ou conversa direta) em vez de mensagem automatica."
+      ],
+      "limitations": [
+        "A unidade nao define o que qualifica um resultado como 'ma noticia'."
+      ],
+      "mtx_derived": true,
+      "derivation": "A generalizacao do caso especifico do dashboard signals para qualquer reporte automatizado da MTX e derivacao operacional, nao afirmacao da fonte.",
+      "channels": [
+        "none"
+      ]
+    }
+  ]
+}

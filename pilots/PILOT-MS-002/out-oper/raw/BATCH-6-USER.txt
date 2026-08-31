@@ -1,0 +1,675 @@
+batch_id: BATCH-6
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|R-0060",
+ "MS002-SRC-A|R-0061",
+ "MS002-SRC-A|R-0062",
+ "MS002-SRC-A|R-0063",
+ "MS002-SRC-A|R-0064",
+ "MS002-SRC-A|R-0065",
+ "MS002-SRC-A|R-0066",
+ "MS002-SRC-A|R-0067",
+ "MS002-SRC-A|R-0068",
+ "MS002-SRC-A|R-0069",
+ "MS002-SRC-A|R-0070",
+ "MS002-SRC-A|R-0071",
+ "MS002-SRC-A|R-0072",
+ "MS002-SRC-A|R-0073",
+ "MS002-SRC-A|R-0074",
+ "MS002-SRC-A|R-0075",
+ "MS002-SRC-A|R-0076",
+ "MS002-SRC-A|R-0077",
+ "MS002-SRC-A|R-0078",
+ "MS002-SRC-A|R-0079"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|R-0060",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "After verifying the process works through manual usage, verify that it also works through Claude, and only then scale it",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Verify manually, then verify through Claude, before scaling",
+   "precedence": null,
+   "prerequisites": [
+    "Process already verified manually"
+   ],
+   "trigger": "Before scaling the generation pipeline"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0532",
+   "EV-0533"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0061",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use the CLI option; it saves a tremendous amount of time and is easy and straightforward",
+   "condition": "a CLI option is available",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Prefer the CLI option when one exists",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Anytime there is a CLI option for a tool"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0545"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0062",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Log in through the CLI to authenticate, instead of fetching an API key directly and adding it to the environment",
+   "condition": "the CLI has been installed globally",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Log in after installing a CLI to authenticate",
+   "precedence": null,
+   "prerequisites": [
+    "CLI installed globally"
+   ],
+   "trigger": "After installing a command line interface and making it accessible to Claude Code"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0543",
+   "EV-0544"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0063",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Generate three candidate options",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Generate three candidate options per request",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Every time the video generation is requested"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0548"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0064",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use 8 seconds if the script is less than 22 words; use 10 seconds if more than 22 words",
+   "condition": "script word count relative to a 22-word threshold",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Word-count duration rule",
+   "precedence": null,
+   "prerequisites": [
+    "script word count known"
+   ],
+   "trigger": "When determining video duration for a script"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0565"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0065",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Do not fix the duration at 8 seconds; use 10 seconds when the script is a little longer and 8 seconds when it is a little shorter",
+   "condition": null,
+   "do_not": [
+    "Do not use a fixed 8-second duration",
+    "Do not include the step where the model self-selects the winner scripts"
+   ],
+   "exceptions": [],
+   "name": "No fixed duration; adapt to script length",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When configuring the video generation duration in the skill"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0562",
+   "EV-0563"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0066",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Cross them (each influencer on each product), generate autonomously, deliver to a folder, with no human oversight until the last step, parallelizing where possible",
+   "condition": "more than one influencer and more than one product supplied",
+   "do_not": [
+    "Do not require human oversight before the last step"
+   ],
+   "exceptions": [],
+   "name": "Cross multiple influencers with multiple products",
+   "precedence": null,
+   "prerequisites": [
+    "a folder with multiple influencers and multiple products"
+   ],
+   "trigger": "When multiple influencers in a folder plus multiple products are supplied"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0563",
+   "EV-0564"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0067",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Have candidates within a script submit and wait in parallel for speed, capped at three concurrent; retry failed pairings one at a time to avoid the concurrency cap",
+   "condition": "the platform allows only about eight jobs at the same time",
+   "do_not": [
+    "Do not fire more jobs at once than the platform concurrency limit allows"
+   ],
+   "exceptions": [],
+   "name": "Cap concurrent generation jobs",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When submitting multiple generation jobs in parallel"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0571",
+   "EV-0572"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0068",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Start at the end: actually do the thing manually/in-session and verify you can get the output you want, then work backwards and systematize it after",
+   "condition": "Before building the system",
+   "do_not": [
+    "Do not just trust that you'll be able to do the thing you want to do",
+    "Do not start at the beginning by building systems before verifying the output",
+    "Do not automate a process whose output isn't good"
+   ],
+   "exceptions": [],
+   "name": "Start at the end and verify output before systematizing",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When you want to build an automation"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0652",
+   "EV-0653",
+   "EV-0654",
+   "EV-0655"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0069",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Pass the hard variables (first name, company, city, hobbies, etc.) through AI to turn them into enriched fuzzy variables that make sense in the context of the mail campaign, then insert those into the email",
+   "condition": null,
+   "do_not": [
+    "Do not insert the variables verbatim like most people do"
+   ],
+   "exceptions": [],
+   "name": "Pass hard variables through AI to create fuzzy variables",
+   "precedence": null,
+   "prerequisites": [
+    "Data collected about the subscriber/lead"
+   ],
+   "trigger": "When personalizing an email campaign that has per-person data fields"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0625",
+   "EV-0626",
+   "EV-0627",
+   "EV-0628",
+   "EV-0629",
+   "EV-0630"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0070",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Write the variable name in camel case, typically pretty long and quite descriptive (e.g. shortPlausibleReasonWhyTheySignedUp), because the descriptive name is instruction for the AI agent, not for you",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Name fuzzy variables in long descriptive camel case for the AI",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When writing a fuzzy variable into an email template"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0632",
+   "EV-0633",
+   "EV-0634"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0071",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Collect only a few realistic fields, such as why you signed up and first/last name, or biggest challenge — one of the two",
+   "condition": "To minimize friction",
+   "do_not": [
+    "Do not add like 10 questions to your form"
+   ],
+   "exceptions": [],
+   "name": "Keep signup data collection minimal to reduce friction",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When designing the signup form / email flow data collection"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0636",
+   "EV-0637"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0072",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Get an email template, make it really high quality, and customize it with variables you could realistically fill based on whatever you are currently collecting as part of your email flow",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Build a high-quality template with realistically fillable variables first",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Step one of automating newsletter customization"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0638"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0073",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Remove the n dash because it reads as AI-generated",
+   "condition": null,
+   "do_not": [
+    "Do not leave anything that's even remotely AI-looking in the email"
+   ],
+   "exceptions": [],
+   "name": "Remove n dashes from email copy",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When editing email copy that will be AI-assisted"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0632"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0074",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Instruct it to read every row of the source sheet using whatever drive or sheets read tool it has, and for each row individually write the new column values custom to that specific person, varying sentence structure and word choice row to row",
+   "condition": null,
+   "do_not": [
+    "Do not guess or sample the rows",
+    "Do not pull values from a shared lookup table or key them on a repeated field",
+    "Do not fall into a small set of repeated template sentences"
+   ],
+   "exceptions": [],
+   "name": "Instruct the model to read all rows and write genuinely distinct per-row copy",
+   "precedence": null,
+   "prerequisites": [
+    "A source Google sheet of leads"
+   ],
+   "trigger": "When prompting the model to personalize a sheet of leads"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0642",
+   "EV-0643"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0075",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Create a new Google sheet uploaded via drive, with a specified title, including all original columns plus the three new ones appended at the end in an exact order; validate everything before uploading and then return the link to the sheet",
+   "condition": null,
+   "do_not": [
+    "Do not modify the original sheet",
+    "Do not attempt to write directly"
+   ],
+   "exceptions": [],
+   "name": "Write output to a new sheet, never the original",
+   "precedence": null,
+   "prerequisites": [
+    "Google Drive access"
+   ],
+   "trigger": "When the model produces the personalized output"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0644",
+   "EV-0645"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0076",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "State: do this in one step without pausing to ask clarifying questions",
+   "condition": null,
+   "do_not": [
+    "Do not let the model pause to ask clarifying questions"
+   ],
+   "exceptions": [],
+   "name": "Tell the model to complete the task in one step",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "In the task section of the personalization prompt"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0641"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0077",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Have a human being write the entire email using practices that work, then insert only a couple of AI-generated variables here or there",
+   "condition": null,
+   "do_not": [
+    "Do not have AI write your entire email"
+   ],
+   "name": "Human writes the email, AI only fills variables",
+   "precedence": null,
+   "trigger": "Producing personalized outbound or newsletter email copy"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0662",
+   "EV-0663"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0078",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Keep the AI generated words as a small proportion of total words and keep the generated variables short, which lowers the probability that anybody notices AI wrote it",
+   "condition": null,
+   "do_not": [],
+   "name": "Minimize proportion of AI-generated words",
+   "precedence": null,
+   "trigger": "Generating personalization variables for an email"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0666"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0079",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Go to the subscribers tab and add custom fields for short plausible reason why they signed up, short custom reason why it's useful, and paraphrase challenge",
+   "condition": "Working in Kit (speaker thinks the same might be true for Mailchimp)",
+   "do_not": [],
+   "name": "Add custom fields in Kit for expanded personalization variables",
+   "precedence": null,
+   "trigger": "Wanting to use expanded personalization variables in Kit"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0668",
+   "EV-0669",
+   "EV-0670"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

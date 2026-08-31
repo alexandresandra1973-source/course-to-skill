@@ -1,0 +1,658 @@
+batch_id: BATCH-5
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|R-0040",
+ "MS002-SRC-A|R-0041",
+ "MS002-SRC-A|R-0042",
+ "MS002-SRC-A|R-0043",
+ "MS002-SRC-A|R-0044",
+ "MS002-SRC-A|R-0045",
+ "MS002-SRC-A|R-0046",
+ "MS002-SRC-A|R-0047",
+ "MS002-SRC-A|R-0048",
+ "MS002-SRC-A|R-0049",
+ "MS002-SRC-A|R-0050",
+ "MS002-SRC-A|R-0051",
+ "MS002-SRC-A|R-0052",
+ "MS002-SRC-A|R-0053",
+ "MS002-SRC-A|R-0054",
+ "MS002-SRC-A|R-0055",
+ "MS002-SRC-A|R-0056",
+ "MS002-SRC-A|R-0057",
+ "MS002-SRC-A|R-0058",
+ "MS002-SRC-A|R-0059"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|R-0040",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Zoom out and make everything a tad bigger, because one of the biggest problems with ads is people just can't see them.",
+   "condition": "Considering that people look at it on their phones",
+   "do_not": [],
+   "name": "Make the ad big enough to be seen",
+   "precedence": null,
+   "trigger": "Finalizing an ad format"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0305",
+   "EV-0306"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0041",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Change the font (e.g. to Red Hat display) and tighten the letter spacing so the ad looks different and stands out from the rest.",
+   "condition": "The default/common font (inter) is what everyone else uses",
+   "do_not": [],
+   "name": "Change the font away from the default so the ad stands out",
+   "precedence": null,
+   "trigger": "Choosing typography for the ad format"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0303",
+   "EV-0304"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0042",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use compositing tools for simple stuff and use direct gen tools for more complicated stuff",
+   "condition": "Because of the comparative differences between compositing tools and direct gen tools",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Choose compositing vs direct gen tools by task complexity",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When deciding which tool to use to produce creative assets"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0381"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0043",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Generate around four times the number of images you want, and keep in mind this will not be free",
+   "condition": "Because it takes an average of about four gens before you get a good one and a lot of outputs will not make sense",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Overgenerate roughly 4x with direct gen tools",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When generating images with direct gen tools"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0383",
+   "EV-0382"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0044",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Go to the image generator directly and verify it can do the sorts of things you want; if it can, move on; if it cannot, do not pursue it, because even with Claude prompting the model itself would be insufficient for the task",
+   "condition": null,
+   "do_not": [
+    "Pursue the approach when the direct test shows the model cannot do what you want"
+   ],
+   "exceptions": [],
+   "name": "Verify the model directly before building the pipeline",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Before building the Claude-steered generation pipeline"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0398",
+   "EV-0399",
+   "EV-0400"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0045",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Have a product that is very visually distinct to use as the variable",
+   "condition": "If you want to advertise something",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Have a visually distinct product as the variable",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When feeding in the variable for the creative pipeline"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0397"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0046",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Skip it and keep looking for a nice ad to use as the template",
+   "condition": "When the ad provides no text or does not seem like a very good ad",
+   "do_not": [
+    "Use an ad that does not seem like a very good ad as your template"
+   ],
+   "exceptions": [],
+   "name": "Do not use weak or text-less ads as templates",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When browsing the ad library for templates"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0389",
+   "EV-0390"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0047",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Get a paid plan, at least the Go plan or the plus plan, because the free plan does not allow uploading more than one image and interferes with API communication",
+   "condition": "As of the time of this recording",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Use a paid ChatGPT plan for multi-image upload and API",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When you need to upload more than one image or communicate via API"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0404",
+   "EV-0405",
+   "EV-0406"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0048",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Create the variable inside your local environment (your ENV / credential storage) by clicking the environment variables button in Claude's 'local' section, naming the variable (it can be called anything) and pasting in the key",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Store the API key in the local environment variables",
+   "precedence": null,
+   "prerequisites": [
+    "An OpenAI secret key created in the playground"
+   ],
+   "trigger": "When giving Claude access to the GPT image 2 / OpenAI API key"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0415",
+   "EV-0416"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0049",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Stop it and correct the mistake now rather than later",
+   "condition": "While the model is still running",
+   "do_not": [
+    "Let the mistake go and correct it later"
+   ],
+   "exceptions": [],
+   "name": "Correct model mistakes immediately",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "You see the model make a mistake (e.g. it references GPT image one when you asked for GPT image 2)"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0423",
+   "EV-0424"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0050",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Feed an unrolled photo of the product so the model can get the curves and the folds",
+   "condition": "If you want a lot more product adherence",
+   "do_not": [
+    "Feed only a rolled up version of the product when you want high product adherence"
+   ],
+   "exceptions": [],
+   "name": "Feed an unrolled product photo for adherence",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Preparing the product input image"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0427",
+   "EV-0428"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0051",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Stay in the prompting stage and go back and forth with the model until you get something reasonable before automating",
+   "condition": "The process is not yet in place; you are still in the prompting stage",
+   "do_not": [
+    "Build a skill / automate while the process is not in place"
+   ],
+   "exceptions": [],
+   "name": "Do not automate before the process exists",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Considering building a skill / automating the flow"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0435"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0052",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Have each template generate at least five variants (three templates = 15 total) and feed very different instructions into each, using variation pools per template (warm/cool, inside/outside), so a creative director can select the winners",
+   "condition": null,
+   "do_not": [
+    "Generate only three variants total"
+   ],
+   "exceptions": [],
+   "name": "At least five variants per template with differentiated instructions",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Generating a batch of ad variants"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0447",
+   "EV-0448"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0053",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Explicitly tell it that the API key has been added in the same format as the original skill, in the default environment under OpenAI API key",
+   "condition": "The model will not have access to the API key inside the cloud environment for security reasons",
+   "do_not": [
+    "Assume the model can see the API key in the cloud environment"
+   ],
+   "exceptions": [],
+   "name": "Be 100% clear about API key location",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Instructing a cloud routine that needs an API key"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0466",
+   "EV-0467"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0054",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Decrease adherence, e.g. change the fixed top right hand corner placement or experiment with triple collages instead of quadruples",
+   "condition": "If you want to add diversity",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Tune template adherence for diversity",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Outputs are all adhering to the same look"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0455",
+   "EV-0454"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0055",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Accept that what you generate is not going to be perfect, and generally use UGC style flows such as testimonials or product reviews, which tend to work really well",
+   "condition": "Video has a lot more frames and therefore a lot more opportunity to screw up",
+   "do_not": [
+    "Rely on text in video generations, since text tends to perform kind of poorly"
+   ],
+   "exceptions": [],
+   "name": "Expect imperfection in video generation and prefer UGC style",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Working with video models"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0474",
+   "EV-0475",
+   "EV-0476"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0056",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Run the process manually at least once so you understand how it works, the different features and the different options available",
+   "condition": null,
+   "do_not": [
+    "Do not move to fully automating it with Claude Code without knowing how to do the process manually"
+   ],
+   "exceptions": [],
+   "name": "Do the process manually at least once before automating with Claude Code",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Before fully automating a generation process with Claude Code"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0500",
+   "EV-0501"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0057",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Generate at a high 2K rather than 1K (1024 pixels)",
+   "condition": "if you want really high quality input images",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Generate input images at high 2K when they will feed video",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When generating input images that will be used for the purposes of video"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0501"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0058",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Upload the product media and add it as a named element with a description (e.g. 'Midnight clay mask. This is a clay mask used for product videography') so the generation has access to the product and it is added to the prompt box as a prop",
+   "condition": null,
+   "do_not": [
+    "Do not generate without uploading media, because sometimes it will not actually keep the product in the right place"
+   ],
+   "exceptions": [],
+   "name": "Upload the product as a reusable element before generating the video",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When generating a product video where the product must stay consistent"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0516",
+   "EV-0517",
+   "EV-0518"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0059",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Shorten the script to fit the time limit; the presenter measures the working script at about 146 characters and settles on about 170 characters, i.e. 27 to about 30 words",
+   "condition": "given video models cap duration (max around 15 seconds; Gemini Omni Flash only 10 seconds)",
+   "do_not": [
+    "Do not use a script that is too long for the generated clip to make it through the entire script"
+   ],
+   "exceptions": [],
+   "name": "Keep the ad script short enough to fit the model's video duration limit",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "When writing the script for a generated UGC video ad"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0522",
+   "EV-0523",
+   "EV-0528",
+   "EV-0529"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+MS-002 operationalization · unidades ELIGIBLE=271 · cap=25 · dry=False
+  controle AC (aplicabilidade)...
+    {'AC1': 'OK', 'AC2': 'OK', 'AC3': 'OK', 'AC4': 'OK', 'AC5': 'OK', 'AC6': 'OK', 'AC7': 'OK'}
+  BATCH-1: 20 decisoes OK
+  BATCH-2: 20 decisoes OK
+  BATCH-3: 20 decisoes OK
+  BATCH-4: 20 decisoes OK
+  BATCH-5: 20 decisoes OK
+  BATCH-6: 20 decisoes OK

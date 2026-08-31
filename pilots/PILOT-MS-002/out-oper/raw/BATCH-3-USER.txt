@@ -1,0 +1,666 @@
+batch_id: BATCH-3
+expected_unit_count: 20
+expected_unit_ids:
+[
+ "MS002-SRC-A|AP-0042",
+ "MS002-SRC-A|R-0001",
+ "MS002-SRC-A|R-0002",
+ "MS002-SRC-A|R-0003",
+ "MS002-SRC-A|R-0004",
+ "MS002-SRC-A|R-0005",
+ "MS002-SRC-A|R-0006",
+ "MS002-SRC-A|R-0007",
+ "MS002-SRC-A|R-0008",
+ "MS002-SRC-A|R-0009",
+ "MS002-SRC-A|R-0010",
+ "MS002-SRC-A|R-0011",
+ "MS002-SRC-A|R-0012",
+ "MS002-SRC-A|R-0013",
+ "MS002-SRC-A|R-0014",
+ "MS002-SRC-A|R-0015",
+ "MS002-SRC-A|R-0016",
+ "MS002-SRC-A|R-0017",
+ "MS002-SRC-A|R-0018",
+ "MS002-SRC-A|R-0019"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UMA decisao para CADA unit_id recebido, sem omitir e sem duplicar.
+Se nao conseguir decidir uma unidade, emita NOT_YET_CLASSIFIED — mas NUNCA a omita.
+
+POLITICA MTX:
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}
+
+
+UNIDADES OPERACIONAIS:
+[
+ {
+  "unit_id": "MS002-SRC-A|AP-0042",
+  "entity_kind": "anti_pattern_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "conditions": [
+    "When the message is meant to convey that a customer is valued"
+   ],
+   "do_not": [
+    "Overautomate relationship touchpoints, e.g. sending a customer an automated 'We value you' text message from a robot that cost two cents in tokens"
+   ],
+   "why": "The medium and the way the message is sent make the sentiment ring false — if you really valued the person you would come down to the coffee shop and sit down and chat; people overautomate tremendously and there are a lot of downsides."
+  },
+  "defects": [],
+  "evidence_refs": [
+   "EV-1115",
+   "EV-1116",
+   "EV-1117",
+   "EV-1121"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0001",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Jump over to the code product rather than the home product.",
+   "condition": null,
+   "do_not": [
+    "Use the home product"
+   ],
+   "name": "Use the code product, not the home product",
+   "precedence": null,
+   "trigger": "Choosing between the home tab and the code tab in the Claude app"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0028",
+   "EV-0029"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0002",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Click personal use.",
+   "condition": "If it's just you for now (not a team/enterprise)",
+   "do_not": [],
+   "name": "Select personal use during onboarding",
+   "precedence": null,
+   "trigger": "Onboarding question asking about usage type"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0015",
+   "EV-0016"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0003",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Go to 'download unverified file' in the top right hand corner to access the file.",
+   "condition": null,
+   "do_not": [],
+   "name": "Bypass Chrome download block",
+   "precedence": null,
+   "trigger": "Chrome automatically blocks the Claude download"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0021"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0004",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Render the user's morning brief as a styled HTML artifact or set it up as a recurring weekday task.",
+   "condition": "Only when the user explicitly asks to run, see, or set up their morning brief, or invokes /morning by name",
+   "do_not": [
+    "Treat a question about their day, schedule, or calendar as a request for the brief"
+   ],
+   "exceptions": [
+    "A question about their day, schedule, or calendar is not by itself a request for the brief — answer it directly instead."
+   ],
+   "name": "Morning brief skill invocation rule",
+   "precedence": null,
+   "trigger": "User mentions their day, schedule or calendar, or asks for the morning brief"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0051",
+   "EV-0052"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0005",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Set the mode to auto mode",
+   "condition": "for most things",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Run most things in auto mode",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Choosing the permission mode in the bottom left-hand corner"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0083"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0006",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "For little marketing tasks, use auto or bypass permissions while staying in the loop in some way, shape or form",
+   "condition": "Speaker does not work on super sensitive things such as cyber security projects, passwords or credentials; for little marketing tasks they are usually on auto or bypass permissions",
+   "do_not": [
+    "Work on super sensitive projects (cyber security, passwords, credentials) in this manner"
+   ],
+   "exceptions": [],
+   "name": "Speaker's practice: avoid highly permissive modes on sensitive work",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Deciding permission mode for a task"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0089",
+   "EV-0090"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0007",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Click the pause button or press escape to pause it",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Pause Claude when it loops or you change tack",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Claude has been talking/working for a while, is caught in a loop reopening or re-editing the same thing, or you change tack"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0102",
+   "EV-0103",
+   "EV-0104"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0008",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Say something like 'stop the loop'; Claude will find the tool and cancel the tool call it just generated",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Stop a running loop",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "You want to stop the loop"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0113",
+   "EV-0114"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0009",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use the /btw slash command, which opens a side chat next to the main conversation that retains the thread context; close it out when done",
+   "condition": null,
+   "do_not": [
+    "Interrupt the main conversation to ask the question"
+   ],
+   "exceptions": [],
+   "name": "Use /btw for a side question without interrupting the main conversation",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "You want to ask a quick side question before actually stopping the prompt"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0099",
+   "EV-0100",
+   "EV-0101"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0010",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Run the /usage slash command to see the plan, 5-hour and weekly limit progress and reset times, session cost, token breakdown and which skill consumed the limits",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Check usage and limits with /usage",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "You want to know your usage plan, rate limits, session cost or what is consuming your limits"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0104",
+   "EV-0105",
+   "EV-0106",
+   "EV-0107",
+   "EV-0108"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0011",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use a cloud environment so everybody uses the same server with the same environment variables, usernames and passwords, setup scripts and setup",
+   "condition": "Valuable in larger teams; speaker says they probably won't use cloud environments for most stuff in this course",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Use cloud environments to standardize setup in larger teams",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Work must run the same way across different people's computers"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0079",
+   "EV-0080",
+   "EV-0081"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0012",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Build a skill and create a routine (a templated skill) kicked off on a schedule, by API or by web hook, running on the cloud outside of your computer (e.g. at 5:30 a.m. every morning)",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Schedule skills as routines for maximum automation",
+   "precedence": null,
+   "prerequisites": [
+    "A built skill"
+   ],
+   "trigger": "You want automation beyond talking to Claude, running skills manually, or looping skills at a regular interval"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0067",
+   "EV-0068",
+   "EV-0069"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0013",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use dictation/voice prompting, since the average human speaks around three to four times faster than they write with their fingers",
+   "condition": null,
+   "do_not": [],
+   "exceptions": [],
+   "name": "Prompt by voice to brain dump",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "You need to get a lot of input into Claude quickly"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO",
+   "SCOPE_UNSTATED"
+  ],
+  "evidence_refs": [
+   "EV-0117",
+   "EV-0118"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0014",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Use Sonnet 5, which is pretty smart and does most of what the speaker wants",
+   "condition": "When you're not worried about extremely hard problems ('solving the mathematical formulas of the galaxy')",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Speaker's default model choice",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Selecting the model for a task"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0119",
+   "EV-0120"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0015",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Recognize the skill run will probably not be all that valuable; Claude checks what is connected before gathering and will let you know whether you have the appropriate permissions to make the skill valuable",
+   "condition": "If none of those platforms are connected",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Connect the required platforms before running a connector-dependent skill",
+   "precedence": null,
+   "prerequisites": [
+    "Connected platforms (email, calendar, chat, Slack, Gmail or Outlook)"
+   ],
+   "trigger": "Running a skill such as anthropic-skills morning that gathers data from email, calendar, chat, Slack, Gmail or Outlook"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED",
+   "PASSO_UNICO"
+  ],
+  "evidence_refs": [
+   "EV-0097",
+   "EV-0098",
+   "EV-0099"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0016",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Operate somewhere in the middle of the effort range; default to medium or high. Sonnet high tends to work pretty quick while also delivering pretty good results.",
+   "condition": "For the most part / general use, per the speaker's own preference",
+   "do_not": [],
+   "exceptions": [],
+   "name": "Default to middle effort levels (medium or high)",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Choosing an effort setting for a Claude Code task"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0122",
+   "EV-0123"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0017",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Try not to keep a thread running all the 967,000 available tokens; work somewhere between 0 and maybe 500k, which the speaker finds is his performance sweet spot.",
+   "condition": "Model context window of 967,000 tokens (Sonnet 5)",
+   "do_not": [
+    "Do not keep a thread running all the way to the full 967,000 tokens available"
+   ],
+   "exceptions": [],
+   "name": "Keep thread context between 0 and ~500k tokens",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Running a conversation thread with Claude"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0127",
+   "EV-0128",
+   "EV-0129"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0018",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Pick the interface that is simpler and easier for you; the speaker prefers the desktop app for simplicity sake wherever possible, while personally preferring the terminal due to development habits.",
+   "condition": "It's really just about what is simpler and easier for you",
+   "do_not": [],
+   "exceptions": [
+    "There are some situations in which the speaker does like just diving into the terminal"
+   ],
+   "name": "Choose the Claude Code interface by simplicity and personal preference",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "Deciding how to access Claude Code (desktop app, terminal/CLI, VS Code)"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0143",
+   "EV-0149",
+   "EV-0150"
+  ]
+ },
+ {
+  "unit_id": "MS002-SRC-A|R-0019",
+  "entity_kind": "rule_candidate",
+  "source_id": "MS002-SRC-A",
+  "structure": {
+   "action": "Start with RACE — reach, acquire, close and expand — and worry about the admin/backend automation later; race to implement automations that help with reach, acquisition, close and expansion to allocate time more effectively.",
+   "condition": "Speaker's practice at his AI automation agency, Leftclick",
+   "do_not": [
+    "Do not start with the crazy admin automation or backend thing"
+   ],
+   "exceptions": [],
+   "name": "Start with RACE before admin/backend automations",
+   "precedence": null,
+   "prerequisites": [],
+   "trigger": "A client or user wants to build an automation (e.g. a crazy admin automation or backend thing)"
+  },
+  "defects": [
+   "PRECEDENCE_UNDEFINED"
+  ],
+  "evidence_refs": [
+   "EV-0162",
+   "EV-0163"
+  ]
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MTX APPLICABILITY DECISION v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "decisions"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit_id",
+          "applicability",
+          "rationale",
+          "scope",
+          "adaptations",
+          "limitations",
+          "mtx_derived",
+          "channels"
+        ],
+        "properties": {
+          "unit_id": {
+            "type": "string",
+            "pattern": "^MS002-SRC-[ABC]\\|(R|WF|AP)-[0-9]{4}$"
+          },
+          "applicability": {
+            "enum": [
+              "DIRECT_USE",
+              "ADAPT_TO_MTX",
+              "REFERENCE_ONLY",
+              "REJECT",
+              "NOT_YET_CLASSIFIED"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 5
+          },
+          "adaptations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mtx_derived": {
+            "type": "boolean"
+          },
+          "derivation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "instagram",
+                "whatsapp",
+                "google_ads",
+                "email",
+                "sms",
+                "voz",
+                "none"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

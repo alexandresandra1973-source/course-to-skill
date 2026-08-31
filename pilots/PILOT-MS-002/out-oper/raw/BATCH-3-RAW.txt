@@ -1,0 +1,344 @@
+{
+  "batch_id": "BATCH-3",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|AP-0042",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "O anti-padrao adverte contra sobreautomatizar pontos de contato de relacionamento (ex.: mensagem automatica de 'nos valorizamos voce'), o que se aplica diretamente ao atendimento e conversa 1a1 da MTX no WhatsApp; a adaptacao necessaria e traduzir o exemplo original (SMS/texto automatizado) para os canais conversacionais da MTX.",
+      "scope": "Comunicacao de relacionamento com clientes no WhatsApp (conversa 1a1, atendimento) e respostas a DMs/comentarios no Instagram.",
+      "adaptations": [
+        "Substituir o exemplo de 'automated text message' por mensagens automatizadas de WhatsApp e respostas automaticas de DM no Instagram",
+        "Delimitar quais toques de relacionamento exigem intervencao humana, ja que a unidade nao lista esses toques"
+      ],
+      "limitations": [
+        "A unidade nao define limiar de quanto automatizar e aceitavel",
+        "Nao trata de automacao operacional nao-relacional (ex.: confirmacoes transacionais)"
+      ],
+      "mtx_derived": true,
+      "derivation": "A unidade fala de 'text message' generico; o mapeamento para WhatsApp/Instagram DM como canais de relacionamento da MTX e derivado da politica de prioridade de canal, nao afirmado pela fonte.",
+      "channels": [
+        "whatsapp",
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0001",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra e uma escolha de interface dentro do app Claude (aba code vs home). E util como orientacao de ferramenta para quem opera a MTX, mas nao constitui um passo de workflow de marketing em Instagram, WhatsApp ou Google Ads.",
+      "scope": "Configuracao de ferramenta de trabalho do operador MTX ao usar o Claude.",
+      "adaptations": [],
+      "limitations": [
+        "Nao produz saida de marketing por si so",
+        "Passo unico, sem precedencia declarada"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0002",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Trata-se de uma escolha de onboarding da conta Claude ('personal use'). E contexto de setup de ferramenta, sem impacto direto em nenhum workflow operacional de canal da MTX.",
+      "scope": "Setup inicial de conta da ferramenta usada pelo operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao informa se a MTX opera como individuo ou equipe, o que muda a resposta correta"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0003",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra resolve um bloqueio de download do Chrome durante a instalacao da ferramenta. E troubleshooting de instalacao, nao um procedimento de marketing.",
+      "scope": "Instalacao da ferramenta no ambiente do operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Aplica-se apenas ao navegador Chrome",
+        "Nao ha conteudo de marketing envolvido"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0004",
+      "applicability": "NOT_YET_CLASSIFIED",
+      "rationale": "A regra define quando invocar uma skill especifica de 'morning brief'. A unidade nao informa se a MTX possui essa skill nem se um briefing matinal faz parte de sua operacao, e decidir exigiria inventar esse contexto.",
+      "scope": "Indeterminado — depende de a MTX operar uma skill de morning brief.",
+      "adaptations": [],
+      "limitations": [
+        "Existencia da skill morning brief na MTX nao declarada",
+        "Nenhum canal de marketing mencionado na unidade"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0005",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra e uma preferencia de configuracao de modo de permissao da ferramenta ('auto mode' para a maioria das coisas). Serve como referencia de operacao da ferramenta, sem entrar como passo de workflow de canal.",
+      "scope": "Configuracao de permissao da ferramenta durante trabalho do operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "'for most things' nao delimita quais tarefas",
+        "Passo unico, precedencia indefinida"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0006",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A unidade declara explicitamente 'for little marketing tasks, use auto or bypass permissions while staying in the loop', o que endereca diretamente tarefas de marketing como as da MTX, com a ressalva de nao usar esses modos em trabalho sensivel (credenciais, seguranca).",
+      "scope": "Execucao de tarefas pequenas de marketing pela MTX com assistencia da ferramenta, mantendo revisao humana.",
+      "adaptations": [
+        "Definir o que conta como 'little marketing task' no contexto MTX (ex.: rascunho de legenda de Instagram, variacao de copy de anuncio)",
+        "Definir explicitamente o mecanismo de 'staying in the loop' (revisao humana antes de publicar)",
+        "Classificar credenciais de contas Instagram/WhatsApp/Google Ads como trabalho sensivel, excluido de bypass"
+      ],
+      "limitations": [
+        "A unidade e uma pratica pessoal do palestrante, nao um padrao validado",
+        "Nao especifica o formato da revisao humana"
+      ],
+      "mtx_derived": true,
+      "derivation": "O enquadramento de credenciais de contas de canal da MTX como 'super sensitive' e a lista de exemplos de tarefas pequenas sao extrapolacoes operacionais; a fonte cita apenas cyber security, passwords e credentials de forma generica.",
+      "channels": [
+        "instagram",
+        "whatsapp",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0007",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Pausar a execucao quando o assistente entra em loop ou quando se muda de rumo e uma tecnica de controle da ferramenta. Util como referencia de operacao, mas nao e um procedimento de marketing por canal.",
+      "scope": "Controle de execucao da ferramenta pelo operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Passo unico, sem criterio objetivo de 'has been talking for a while'"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0008",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Dizer 'stop the loop' para cancelar uma chamada de ferramenta e uma tecnica de controle de execucao. Relevante como referencia de uso da ferramenta, sem constituir workflow operacional de marketing.",
+      "scope": "Controle de execucao da ferramenta pelo operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Passo unico, sem contexto de canal ou de conteudo"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0009",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "O uso de /btw para abrir um chat lateral preservando o contexto do thread principal e uma tecnica de ergonomia da ferramenta. Nao produz nem distribui conteudo em nenhum canal da MTX.",
+      "scope": "Ergonomia de trabalho do operador MTX dentro da ferramenta.",
+      "adaptations": [],
+      "limitations": [
+        "Depende da disponibilidade do comando /btw na versao usada pela MTX, nao declarada na unidade"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0010",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Rodar /usage para consultar plano, limites, custo de sessao e consumo por skill e uma pratica de monitoramento de custo da ferramenta. E contexto util de gestao, nao um passo de workflow de marketing.",
+      "scope": "Monitoramento de consumo e custo da ferramenta pela MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Nao se conecta a nenhuma metrica de canal (Instagram, WhatsApp, Google Ads)"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0011",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra condiciona o uso de ambientes de nuvem a 'larger teams' e o proprio palestrante declara que nao os usara na maior parte do curso. A unidade nao informa o tamanho da equipe da MTX, entao permanece como referencia de contexto.",
+      "scope": "Padronizacao de ambiente tecnico, caso a MTX venha a operar com equipe distribuida.",
+      "adaptations": [],
+      "limitations": [
+        "Condicao 'larger teams' nao verificavel a partir da unidade",
+        "A propria fonte relativiza a aplicacao"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0012",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Construir uma skill e transforma-la em rotina agendada (por schedule, API ou webhook, rodando na nuvem) e um padrao de automacao aplicavel a tarefas recorrentes de marketing da MTX, desde que se declare qual tarefa de canal sera automatizada.",
+      "scope": "Automacao de tarefas recorrentes de producao/monitoramento de conteudo da MTX.",
+      "adaptations": [
+        "Definir qual tarefa MTX vira rotina (a unidade so da o exemplo generico de '5:30 a.m. every morning')",
+        "Definir o gatilho concreto (schedule, API ou webhook) para o caso MTX",
+        "Amarrar a saida da rotina a um canal prioritario (Instagram, WhatsApp ou Google Ads)"
+      ],
+      "limitations": [
+        "Requer uma skill previamente construida, que a unidade nao especifica",
+        "Nenhum canal de marketing e citado pela fonte"
+      ],
+      "mtx_derived": true,
+      "derivation": "A vinculacao da rotina agendada a tarefas de marketing e a canais prioritarios da MTX e derivada da politica; a fonte descreve apenas o mecanismo generico de agendamento.",
+      "channels": [
+        "instagram",
+        "whatsapp",
+        "google_ads"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0013",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "Usar ditado/voz para injetar muito input rapidamente (por a fala ser 3-4x mais rapida que a digitacao) e aplicavel ao briefing de conteudo da MTX. A unidade tem SCOPE_UNSTATED, entao o escopo de uso precisa ser declarado pela MTX.",
+      "scope": "Entrada de briefing e brain dump de ideias de conteudo pelo operador MTX ao instruir a ferramenta.",
+      "adaptations": [
+        "Declarar o escopo de uso: briefing de conteudo, nao publicacao direta",
+        "Definir revisao do texto transcrito antes de virar copy publicada"
+      ],
+      "limitations": [
+        "SCOPE_UNSTATED na unidade original",
+        "Voz aqui e input para a ferramenta, nao o canal 'voz' de marketing"
+      ],
+      "mtx_derived": true,
+      "derivation": "A aplicacao a briefing de conteudo MTX e uma delimitacao operacional adicionada; a fonte afirma apenas a vantagem de velocidade do ditado.",
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0014",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A escolha de modelo padrao (Sonnet 5 para tarefas nao extremamente dificeis) e declarada como preferencia pessoal do palestrante e depende de versoes de modelo. Serve como referencia de configuracao, nao como regra de workflow de marketing.",
+      "scope": "Configuracao de modelo na ferramenta usada pela MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Pratica pessoal do palestrante, nao padrao validado",
+        "Amarrada a uma versao de modelo especifica que pode mudar"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0015",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A regra trata de conectar plataformas (email, calendario, Slack, Gmail, Outlook) antes de rodar uma skill dependente de conector. As plataformas citadas sao de produtividade e canais secundarios, sem necessidade especifica declarada pela MTX.",
+      "scope": "Pre-requisito de conectores para skills que dependem de dados externos.",
+      "adaptations": [],
+      "limitations": [
+        "As plataformas citadas nao incluem Instagram, WhatsApp ou Google Ads",
+        "Email/calendario sao canais secundarios por politica"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0016",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Definir o nivel de effort em medio ou alto e uma preferencia de configuracao declarada pelo proprio palestrante ('per the speaker's own preference'). E referencia de ajuste da ferramenta, sem passo operacional de marketing.",
+      "scope": "Ajuste de effort na ferramenta durante tarefas do operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Preferencia pessoal, nao regra validada",
+        "Nao define criterio objetivo para escolher entre medium e high"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0017",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "Manter o thread abaixo de ~500k tokens dentro de uma janela de 967k e uma heuristica de performance da ferramenta, apresentada como o 'sweet spot' pessoal do palestrante e atrelada a uma versao de modelo. E referencia de higiene de contexto.",
+      "scope": "Gestao de contexto de conversa do operador MTX com a ferramenta.",
+      "adaptations": [],
+      "limitations": [
+        "Numeros atrelados a um modelo e versao especificos",
+        "Heuristica pessoal, sem medicao declarada"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0018",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A escolha de interface (desktop, terminal, VS Code) e explicitamente reduzida a preferencia pessoal e simplicidade pela propria unidade. Nao ha conteudo operacional de marketing a ser incorporado num workflow MTX.",
+      "scope": "Escolha de interface de trabalho do operador MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Criterio declaradamente subjetivo ('what is simpler and easier for you')"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-0019",
+      "applicability": "ADAPT_TO_MTX",
+      "rationale": "A regra de priorizacao RACE (reach, acquire, close, expand) antes de automacoes de admin/backend e uma heuristica de sequenciamento diretamente relevante para decidir o que a MTX automatiza primeiro em marketing, mas a unidade nao mapeia RACE aos canais da MTX.",
+      "scope": "Priorizacao da fila de automacoes de marketing da MTX.",
+      "adaptations": [
+        "Mapear 'reach' e 'acquire' aos canais prioritarios: Instagram (reels, feed, stories) e Google Ads",
+        "Mapear 'close' e 'expand' ao WhatsApp (conversa 1a1, atendimento, Status)",
+        "Traduzir o contexto de agencia (Leftclick, clientes) para a operacao propria da MTX"
+      ],
+      "limitations": [
+        "A unidade e a pratica declarada de uma agencia especifica, nao um padrao geral",
+        "Nao define como medir se uma automacao pertence a reach, acquire, close ou expand"
+      ],
+      "mtx_derived": true,
+      "derivation": "O mapeamento de cada etapa do RACE para Instagram, Google Ads e WhatsApp e derivado da prioridade de canal da politica MTX; a fonte enuncia RACE sem citar canais.",
+      "channels": [
+        "instagram",
+        "whatsapp",
+        "google_ads"
+      ]
+    }
+  ]
+}
