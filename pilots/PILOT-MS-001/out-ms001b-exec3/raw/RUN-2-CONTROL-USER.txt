@@ -1,0 +1,534 @@
+batch_id: BATCH-1
+expected_pair_count: 10
+expected_pair_ids:
+[
+ "ed7a77a58f7b57354e52d48bf774bda8e8b87faf1698a50d30f623c09fed0cf7",
+ "5786fb558e5ca41da46d8f28f46a2c0baa1a7e0ddd7ac6f7103136fdee33057c",
+ "cab2bc0948b79751565a3a910684bdc4cd396947bfeb5a9a880c42a5e20c0e8a",
+ "792c313233d1e909fec5dc5eebde9405fb0eeae48d30a7a9216263cdf53a8d2d",
+ "6045548a9857313841f93179b3266d16406814d4a9ac0c5c87780af04d84a721",
+ "6555d7ac938a6544f5de669aadae396ea13d236d5d7e966faa78bb344161aa7e",
+ "f7211b79d193513e64cfa00d7bfe9429484eadabf35e725677e2f5f5205ddad9",
+ "0dc31dd17cad0282270facc05d28d389a075ca821a8fa8ea378f4b47d55e77a2",
+ "8d22bc3a1e425007ed587faa548c757186b5d8c9786dd883da0a688478370069",
+ "20bc565fff1980359278343ec46cbaafdb29228e83531247f51ebc46e9ca634d"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UM resultado para CADA pair_id recebido, sem omitir e sem duplicar.
+ANTES de finalizar a resposta, verifique que o numero de objetos em "judgments" e igual a
+expected_pair_count e que o conjunto de pair_id emitidos e IGUAL a expected_pair_ids.
+Se voce nao conseguir classificar um par, emita INDETERMINATE para ele — mas NUNCA o omita.
+
+PARES:
+[
+ {
+  "pair_id": "ed7a77a58f7b57354e52d48bf774bda8e8b87faf1698a50d30f623c09fed0cf7",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "O acesso ao painel exige autenticacao por token.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9301",
+     "excerpt": "O painel so aceita a requisicao apos autenticacao por token.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "Para entrar no painel e necessario um token de autenticacao.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9302",
+     "excerpt": "Nao se entra no painel sem apresentar um token de autenticacao.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "5786fb558e5ca41da46d8f28f46a2c0baa1a7e0ddd7ac6f7103136fdee33057c",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "Hospedar o servico em servidor proprio mantem o servico disponivel continuamente.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9303",
+     "excerpt": "Em servidor proprio o servico fica no ar o tempo todo.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "Rodar o servico apenas na maquina local faz o servico cair quando a maquina desliga.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9304",
+     "excerpt": "Rodando local, quando voce desliga a maquina o servico para.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "cab2bc0948b79751565a3a910684bdc4cd396947bfeb5a9a880c42a5e20c0e8a",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "E preciso configurar um webhook para receber eventos.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9305",
+     "excerpt": "Sem webhook configurado nenhum evento chega.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "E preciso configurar um webhook com metodo POST e ativar o evento de mensagem recebida.",
+   "language": "pt",
+   "qualifiers": {
+    "scope": "eventos de mensagem"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9306",
+     "excerpt": "Configure o webhook como POST e ative o evento de mensagem recebida.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "792c313233d1e909fec5dc5eebde9405fb0eeae48d30a7a9216263cdf53a8d2d",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "O limite maximo de instancias por conta e dez.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9307",
+     "excerpt": "Cada conta suporta no maximo dez instancias.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "O limite maximo de instancias por conta e tres.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9308",
+     "excerpt": "Cada conta suporta no maximo tres instancias.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "6045548a9857313841f93179b3266d16406814d4a9ac0c5c87780af04d84a721",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "Na versao 1 a autenticacao usa senha simples.",
+   "language": "pt",
+   "qualifiers": {
+    "scope": "versao 1"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9309",
+     "excerpt": "Na versao 1 a autenticacao era por senha simples.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "A versao 2 substitui a senha simples por token e a versao 1 deixa de ser suportada.",
+   "language": "pt",
+   "qualifiers": {
+    "scope": "versao 2"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9310",
+     "excerpt": "A versao 2 substitui a senha simples por token; a versao 1 nao e mais suportada.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "6555d7ac938a6544f5de669aadae396ea13d236d5d7e966faa78bb344161aa7e",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "O plano de servidor de oito gigabytes custa mais que o de dois.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9311",
+     "excerpt": "O plano de oito gigabytes e mais caro que o de dois.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "O campo que identifica quem enviou a mensagem fica dentro do corpo do evento.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9312",
+     "excerpt": "Quem enviou fica no corpo do evento.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f7211b79d193513e64cfa00d7bfe9429484eadabf35e725677e2f5f5205ddad9",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "O recurso X e obrigatorio neste cenario.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9313",
+     "excerpt": "A fonte informa que nao esta definido se o recurso X e obrigatorio ou opcional neste cenario.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "O recurso X pode ser dispensado neste cenario.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9314",
+     "excerpt": "Tambem nao esta definido se o recurso X pode ser dispensado.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "0dc31dd17cad0282270facc05d28d389a075ca821a8fa8ea378f4b47d55e77a2",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "A chave de API global do painel fica no e-mail de boas-vindas.",
+   "language": "pt",
+   "qualifiers": {
+    "platform": "painel de instancias"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9315",
+     "excerpt": "A chave de API global do painel chega no e-mail de boas-vindas.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "A chave de API do provedor de modelo e criada no console do provedor.",
+   "language": "pt",
+   "qualifiers": {
+    "platform": "provedor de modelo"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9316",
+     "excerpt": "No console do provedor de modelo voce cria a chave de API.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "8d22bc3a1e425007ed587faa548c757186b5d8c9786dd883da0a688478370069",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "Para quem esta comecando, recomenda-se criar pelo painel simplificado.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": "iniciantes"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9317",
+     "excerpt": "Para quem esta comecando, o painel simplificado e o recomendado.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "Para operacoes em escala, recomenda-se criar pelo gerenciador avancado.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": "operacao em escala"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-9318",
+     "excerpt": "Em escala, use o gerenciador avancado.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "20bc565fff1980359278343ec46cbaafdb29228e83531247f51ebc46e9ca634d",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entity_kind": "claim",
+    "local_id": "CL-9000"
+   },
+   "text": "Nao e possivel enviar mensagem sem antes vincular o numero.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9319",
+     "excerpt": "Sem vincular o numero, o envio de mensagem nao funciona.",
+     "anchor": {
+      "local_id": "AN-9000",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "entity_kind": "claim",
+    "local_id": "CL-9100"
+   },
+   "text": "O vinculo do numero e pre-requisito para qualquer disparo de mensagem.",
+   "language": "pt",
+   "qualifiers": {},
+   "evidence": [
+    {
+     "evidence_id": "EV-9320",
+     "excerpt": "Qualquer disparo de mensagem depende de o numero estar vinculado.",
+     "anchor": {
+      "local_id": "AN-9100",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MS-001B RELATION JUDGMENT v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["batch_id", "judgments"],
+  "properties": {
+    "batch_id": {"type": "string", "pattern": "^BATCH-[1-4]$"},
+    "judgments": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["pair_id", "relation", "direction", "scope_state", "relation_why",
+                     "left_evidence_refs_checked", "right_evidence_refs_checked"],
+        "properties": {
+          "pair_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "relation": {"enum": ["IDENTICAL","CORROBORATES","SPECIALIZES","CONTRADICTS",
+                                "SUPERSEDES","UNRELATED","INDETERMINATE"]},
+          "direction": {"enum": ["NONE","LEFT_TO_RIGHT","RIGHT_TO_LEFT"]},
+          "scope_state": {"enum": ["EQUIVALENT_SCOPE","NESTED_COMPATIBLE_SCOPE",
+                                   "DIFFERENT_SCOPE","AMBIGUOUS_SCOPE"]},
+          "relation_why": {"type": "string", "minLength": 15},
+          "left_evidence_refs_checked": {"type":"array","minItems":1,
+            "items":{"type":"string","pattern":"^EV-[0-9]{4}$"}},
+          "right_evidence_refs_checked": {"type":"array","minItems":1,
+            "items":{"type":"string","pattern":"^EV-[0-9]{4}$"}}
+        }
+      }
+    }
+  },
+  "direction_compatibility_MECANICA": {
+    "IDENTICAL": ["NONE"], "CORROBORATES": ["NONE"], "CONTRADICTS": ["NONE"],
+    "UNRELATED": ["NONE"], "INDETERMINATE": ["NONE"],
+    "SPECIALIZES": ["LEFT_TO_RIGHT","RIGHT_TO_LEFT"],
+    "SUPERSEDES": ["LEFT_TO_RIGHT","RIGHT_TO_LEFT"]
+  },
+  "scope_compatibility_MECANICA": {
+    "IDENTICAL": ["EQUIVALENT_SCOPE"],
+    "SPECIALIZES": ["NESTED_COMPATIBLE_SCOPE","EQUIVALENT_SCOPE"],
+    "CONTRADICTS": ["EQUIVALENT_SCOPE","NESTED_COMPATIBLE_SCOPE"],
+    "outros": "qualquer"
+  },
+  "evidence_equality": "set(left_evidence_refs_checked) == set(refs fornecidas do lado LEFT); idem RIGHT. Acrescimo, omissao ou estrangeira = INVALID."
+}

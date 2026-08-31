@@ -1,0 +1,159 @@
+{
+ "pilot": "PILOT-MS-001B",
+ "execution": "EXEC-3",
+ "transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+ "claude_code_version": "2.1.251",
+ "payg_api_used": 0,
+ "hard_cap": 18,
+ "executed_calls": 6,
+ "classification": "MS_001B_HARD_STOP_INSTRUMENT_DEFECT",
+ "runs": {
+  "RUN-1": {
+   "control": "10/10 OK",
+   "batches": {
+    "BATCH-1": 25,
+    "BATCH-2": 25,
+    "BATCH-3": 25,
+    "BATCH-4A": "R03_BATCH_ID_MISMATCH",
+    "BATCH-4B": "nao executado"
+   },
+   "status": "INVALID",
+   "judgments_validated": 75
+  },
+  "RUN-2": {
+   "control": "10/10 OK",
+   "batches": {},
+   "status": "INTERROMPIDA"
+  },
+  "RUN-3": {
+   "status": "NAO INICIADA"
+  }
+ },
+ "defects": [
+  {
+   "id": "DEF-1",
+   "artifact": "ms001b/RELATION-SCHEMA-v1.json",
+   "detail": "pattern ^BATCH-[1-4]$ proibe os rotulos BATCH-4A/BATCH-4B da particao v2",
+   "effect": "R03_BATCH_ID_MISMATCH deterministico em BATCH-4A e BATCH-4B"
+  },
+  {
+   "id": "DEF-2",
+   "artifact": "blocker/control-mappings-v03.json",
+   "detail": "BC1-BC5 sao produtos cartesianos puros |B|x|C|, nao pares curados",
+   "effect": "ground truth invalido; 97/97 pares julgados UNRELATED nos dois transportes"
+  }
+ ],
+ "calls": [
+  {
+   "call": "RUN-1-BATCH-1",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 28862,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 5191,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "abcff43b8acc812a1c226a21219cead6df94e097e3fa8389a31d526fc2b7a758",
+   "output_sha256": "191ea51af04a659c3b4689b94bdadd30dca7719a8a2cd6afb9f2330eadf40a18",
+   "cost_estimate_usd_list_price": 0.419282
+  },
+  {
+   "call": "RUN-1-BATCH-2",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 28581,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 5350,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "62c769aa691f57489d3ef3c6b19b60ae684acf5b82c9a10a8fb3a9ac75b979dd",
+   "output_sha256": "2cf557d5cebf35466fd3d9c1be1d459feed891f258b17cb0e7c1e7293e2df236",
+   "cost_estimate_usd_list_price": 0.420447
+  },
+  {
+   "call": "RUN-1-BATCH-3",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 29450,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 5320,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "49e7c99e0805f379a4f75d5f3682a7e2126e39daaecf670faba77f414f071a95",
+   "output_sha256": "75b362e96bebe5df4a659e294896a7f7851d538fc74c81cf5ed0d72a1f6bb019",
+   "cost_estimate_usd_list_price": 0.42838699999999996
+  },
+  {
+   "call": "RUN-1-BATCH-4A",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 13605,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 2768,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "4409f06241a8c40d0a27c66880a3ca49a6cd8c06842cbdc63cd32c5f0bac6deb",
+   "output_sha256": "21c7c52f94d3348adcb6e1ebcd6b88b71975f9b55b7b0cb4848c1bc3f71c6574",
+   "cost_estimate_usd_list_price": 0.20613700000000001
+  },
+  {
+   "call": "RUN-1-CONTROL",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 9447,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2942,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "8c60eb350b21b081603704f473e59d8628972624e466b479f230828b25f21b90",
+   "output_sha256": "6ad7905680d8fe36463bb93ceab51e01abbd6510eafbc7d109c207e958509a57",
+   "cost_estimate_usd_list_price": 0.16803
+  },
+  {
+   "call": "RUN-2-CONTROL",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 9447,
+    "output_tokens": 3026,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "8c60eb350b21b081603704f473e59d8628972624e466b479f230828b25f21b90",
+   "output_sha256": "ed893cfc9527e380d52504c39f4afed3aa4c13c51d176ba01b8e6c4e5fb5cf9d",
+   "cost_estimate_usd_list_price": 0.0803835
+  }
+ ],
+ "fusion_created": false,
+ "fusion_id": null,
+ "sealed_instruments_modified": false
+}
