@@ -1,7 +1,0 @@
-MS-002 compile · fontes=['A', 'B', 'C'] · dry=False · cap=95
-  controle EC (extrator)...
-    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
-  controle JE (entailment)...
-    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
-  === fonte A ===
-    SL-A-01: 29 claims, 8 candidates

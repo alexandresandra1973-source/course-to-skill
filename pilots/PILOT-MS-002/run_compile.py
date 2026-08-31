@@ -20,7 +20,7 @@ shaf  = lambda p: hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
 
 EX_SYS, EX_USR = T.split_prompt((H / "instruments/EXTRACTION-PROMPT-v3.txt").read_text(encoding="utf-8"))
 EN_SYS, EN_USR = T.split_prompt((H / "instruments/ENTAILMENT-PROMPT-v3.txt").read_text(encoding="utf-8"))
-EX_SCHEMA = (H / "instruments/EXTRACTION-SCHEMA-v3.json").read_text(encoding="utf-8")
+EX_SCHEMA = (H / "instruments/EXTRACTION-SCHEMA-v4.json").read_text(encoding="utf-8")
 EN_SCHEMA = (H / "instruments/ENTAILMENT-SCHEMA-v3.json").read_text(encoding="utf-8")
 EX_SCH = json.loads(EX_SCHEMA); EN_SCH = json.loads(EN_SCHEMA)
 
@@ -301,7 +301,7 @@ def finalize(src, claims, tcmap, bundles, verdicts):
         {"compiler": "run_compile.py", "compiler_sha256": shaf(H / "run_compile.py"),
          "l0_builder_sha256": shaf(H / "build_l0.py"), "transport_sha256": shaf(H / "lib/transport.py"),
          "extraction_prompt_sha256": shaf(H / "instruments/EXTRACTION-PROMPT-v3.txt"),
-         "extraction_schema_sha256": shaf(H / "instruments/EXTRACTION-SCHEMA-v3.json"),
+         "extraction_schema_sha256": shaf(H / "instruments/EXTRACTION-SCHEMA-v4.json"),
          "entailment_prompt_sha256": shaf(H / "instruments/ENTAILMENT-PROMPT-v3.txt"),
          "entailment_schema_sha256": shaf(H / "instruments/ENTAILMENT-SCHEMA-v3.json"),
          "model_transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE", "model": T.MODEL,

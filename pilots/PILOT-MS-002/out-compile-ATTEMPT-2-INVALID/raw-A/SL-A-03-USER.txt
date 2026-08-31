@@ -1,0 +1,569 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-03
+boundaries: 2284.56s - 3425.92s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+"Hey, like is this work that I'm doing today super important? If not, I don't want you to think too hard. I just kind of want you to go with your best guess. Whereas, you know, if you go all the way to the right, it's like, hey, I don't want you to try guessing at anything. I actually want you to triple, quadruple, sex tuple check everything that you tell me." And in doing so, um, cloud will consume a lot more tokens, but the probability of a high quality answer goes up way more. It's also note also worth noting that the speed changes quite a bit here. Um, when something is at effort low, it usually works much much faster than when something is at effort smarter. So, keep that in mind. If you're going ultra code, it'll take, I don't know, like way way longer than if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools, skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit different. Uh right now, you know, sonnet 5, which is the model that I'm using, can host 967,000 of those tokens. We've consumed 112,000, which puts us as 12% of the way to the entirety of Sonnet 5's context window. When you hit the context window, usually what'll happen is Claude will compact your context, meaning it will just like try rewriting it so that it's way shorter and then stick all that information up at the very top. The reason why that's valuable is now you can continue the conversation, but a lot of the BS words are sort of taken out of your context and you'll usually get build less for it, too. And that does take me to the sort of billing and usage aspect. The longer your context window is while you talk with Claude, the faster you will burn through your usage limit. So, my recommendation is try not to keep a thread running all the 967,000 tokens uh that are available. I'd like working somewhere between 0 to maybe 500k or so. I find that's also my performance sweet spot. If you add more information than that, cloud starts to perform a little poorer. That's just because it gets confused. It doesn't fully know what it is it's doing. You've given it a lot of instructions at that point that it needs to juggle around in its memory and obviously that can be pretty tough. Okay, so that context window can be consumed of messages. As mentioned, system tools are just different things that it internally has access to. System prompt is uh basically a little snippet of text that you can define that will be prepunded at the beginning of every conversation. MCP tools is another sort of thing like a skill. It's just skills that other people host for you. So what you can do is you can load basically external skills via MCP tools that other people have created very easily. And then memory files are the things that I showed you guys earlier that basically define I don't know like in my my case my height earlier 6'2 and stuff, right? The rest of the stuff not super valuable. Obviously that's free space. We're just going to skip out of that and you have your plan usage limits. Okay, so I told you this would be comprehensive, didn't I? Yeah, we've covered uh probably 90% of the entire interface. There's just one more thing. At the top right hand corner, you have the ability to spawn a terminal. You're probably not going to do this, but for those of you guys that don't know, a terminal is just um kind of the way that we used to interact with computers back in the day. We had a variety of different commands that you could, you know, access cdls, print working directory and stuff like that. You could see all the files that are in this directory and so on. Um, but anyway, sometimes cloud actually needs to use this terminal in order to do things. We also have the ability to check your diff, which is just the changes to the code that you have made. If you're developing an application, that can be quite valuable. You also then have a browser. So we now have a browser built into cloud that can do things like access web pages for you. That's pretty valuable as I'm sure you can imagine because you can use that to automate browser activities. And then finally at the top right hand corner you also have a couple of things that are pretty cool. One is an iOS simulator. So you can actually set up like apps in cloud code. Now um these are iPhone apps and they're fairly cool. Um you can like download you know Xcode which is how you do it. Open up the Mac app store and so on and so forth. I won't do that just for uh my own sanity. I don't like looking at the app store any more than I have to. Uh but anyway, you can you can create like iPhone apps now, which is pretty badass. Uh and then you can also open in whatever you want. You can open in a new window, VS Code Finder. You can rename your transcript. You see this Nyx Drive web page right over here. Well, if I go to the top rightand corner and I click rename, I'll say Nyx demo. You can see we've actually fundamentally and foundationally changed that. Uh you can also see the transcripts. you can actually like see all of the thinking that Claude has done if you just expand this transcript view. So, in my case, I'm just going to do summary. And what it'll do is it'll just summarize everything that we have done, our whole conversation back and forth. I'm now going to get a summary, which is pretty cool. Uh, as well as a full transcript of the conversation at any time. So, transcripts over here, summaries over here. This is going to take a fair amount of time to spawn, unfortunately, so probably won't happen entirely real time. Okay. And yeah, now you can see it's giving me a summary of this conversation. First, I wanted to build a self-contained publish artifact page profiling Nixx as a personal bio portfolio page. And then uh I don't know there's a bunch of things like the outcome, you know, what had what ended up happening in the session. Well, the next drive artifact is now done and sharable, right? Then you can fork a conversation where you just start another conversation at the same place. So that's me forking the conversation right now. And then you can also archive a conversation if you don't want to look at it anymore. So that's what I just did to that Nyx demo fork. And then uh you can also delete a conversation if you want to. That's what I just did to Nick's demo. Okay, we are now done. Virtually every button in this godforsaken interface. Just kidding. Uh there's a lot and that's because the Anthropic team has added a tremendous amount of value to their app in just uh I don't know maybe 3 or 4 months. So the app was not always like this. The app is very high quality now. The app will probably look a little bit different from what you guys see just because they are consistently and constantly updating it. But now that you guys know how to use the app, you have no excuses. we know every little literal button on this entire interface. Um it'll be very very easy for you to navigate and do virtually everything that you need in order to make something cool happen. Which takes us to learning the interface right here which is now check. We have an optional task here called set up the CLI. CLI in case you didn't know stands for command line interface which is just a different way of communicating with cloud code. As mentioned, you know, they've given us many different ways to talk to Claude and and work with Claude. Um, so what I'm going to do here is I'm going to I'm going to set up another one just as a demonstration. And I may use the CLI. I may end up using the cloud desktop app. Um, it's really just about what is simpler and easier for you. Before I show you guys that, it's worth a brief uh kind of piece of education here. Uh, just like we have different websites on the internet, okay, that are accessible through different browsers. Like in this case, this website Google can be accessed through Chrome, Safari, Firefox or something else. We also have the same concept of clawed code which is accessible through I don't know your desktop app, your terminal VS code or something else. And so there are variety of different ways basically to get to the same resource. And so what I just showed you here was I actually just showed you the desktop app, right? And so that's what we just looked at, but you can also use a terminal to do the same thing. You can also use VS Code. And so what I'm going to do now is I'm just going to show you guys what it looks like in terminal version. And it's very very straightforward and easy. All I'm going to do is I'm going to go to Ghost TTY. When I open up ghost tty, you'll see I have a terminal. Same thing that we had before. It's inside of a folder called business. That's just sort of the layout. And in order to access Claude, all I need to do is type cla-verbose. I like verbose because it allows me to see what it's thinking. And if I scroll and zoom way in, you'll see that, you know, our interface looks a little bit different. You know, our cloud is up here. And I don't know what what is it doing? It's looking up. It's going down a couple times, but it says Claude Code Fable 5 with medium effort in business. So, what's going on? So maybe I'll say, "Hey, um, what you'll notice is this is the exact same product. It's just I'm accessing the product now in a different way. Instead of me using that app that we saw earlier, I'm using my own app and I'm talking to it through a channel. If I type slash, you'll see that there are a variety of different skills that I could use as well. And so in my case, this is actually my preferred way of communicating with cloud code. And the reason why is because I just, you know, uh, uh, I I've done a lot more development stuff over the last 6 or 12 months. I'm just more used to communicating with it in like a terminal style interface. That said, it's not the only way to do so. And hopefully you guys see now that uh the cloud desktop app is a very very strong and viable candidate. And just for simplicity sake, I'll prefer that wherever possible. But there are some situations in which I I do like just diving into the terminal. Again, it's almost like a different car, right? Different browser, different car. Everybody has slightly different preferences about how they drive it. you could have the exact same horsepower, but obviously if you're accessing cloud code or if you're accessing the the same horsepower of the engine through a different model, um it'll react differently, handle differently and stuff like that. And that now takes us to the end of the first step, which was to download, install, and set up cloud code. Next, I want to cover the five marketing functions that we'll be automating today and the framework I'm going to use to show you guys how. So I want to talk a little bit about business because obviously you're doing this not for the sake of you know building up just a cool personal portfolio but ultimately we want to we want to build our marketing skills here with cloud code to do something some sort of economically valuable outcome and so the way that I see most businesses and it's a service business up here but uh really the more I think about it I think it's all businesses is as the following pipeline. All businesses will start with some form of marketing. Okay, that is just to get strangers to notice you and that is basically to get eyeballs on the business itself or the brand. Then you will have some sort of sales transformation event which is what turns these eyeballs and this interest into some form of money. Afterwards you have fulfillment which is where you deliver what you promised and then finally at the end you have some sort of administrative wheel that is what keeps the machine running. Now the whole idea here is basically you know during this process as you go from top to bottom you convert somebody who is a total stranger into some form of profit and you can imagine the same thing applies across a variety of different business stacks. You can do this with ecom. You know in ecom you have strangers that notice a product. You sell that product. they receive delivery of the product and you have some sort of admin to keep uh I don't know the purchasing and the inventory in line with like uh expectations and forecasts. You have hiring, you have vendor relationships, logistics managed with your your manufacturers and stuff like that. Uh and then you know ultimately these four working in perfect concert is what makes you profit. So you know this isn't like an MBA or anything like that. Certainly I don't think I could hope to do uh you know an MBA in this this this time period that I've allotted for this course. But you know I want to talk mostly about this marketing and then this sales aspect. Um and so this is really going to be like our focus. This is what we're going to spend most of our time working through in this course. Um but I think it's also important to understand that marketing and sales they work in tandem, right? It's not just one or the other. Realistically there's there's there's back and forth here. So a lot of the stuff that we are going to build for marketing today with cloud code um we will also sort of build with uh or build for our sales department at least to like understand and and know what's going on. And so this is kind of secondary and I'm going to have future courses that are focused specifically on sales. So you don't need to worry too much about that. Now the framework we're going to be using to really crush these cloud code automations is called race. race stands for reach, acquire, close and expand. And the differentiator or sort of the delineator between sales and marketing in my view occurs right here. So everything to the left of this is technically marketing and everything to the right of this is technically sales. Which means our course today is going to be focused on these two which is how do I get seen which you know if you think about the key performance indicators of getting seen how do I get impressions how do I get views so how do I get my brand in front of more eyeballs and then how do I turn these impressions and views into some form of intent so how do I acquire you know so how do I I don't know book meetings or get form fills get people to sign up to my newsletter get people to opt built in to some offer and so on. And so all of the automations we're going to be developing are really going to focus on uh these levers. Okay, it's all going to be about reach and acquire. And if you think about business in this framework and if you you know race to implement automations that help you with reach, acquisition, close, and expansion, typically uh you'll allocate your time a lot more effectively than otherwise. So, I'm going to come back to race pretty often. Uh, when, you know, somebody wants to work with Leftclick, my AI automation agency. Um, you know, typically they're like, "Oh, like I want to do this crazy admin automation. I want to do this backend thing." And I'm like, "Well, why don't we start with race? Why don't we start with reach, acquire, close, and expand, and then we can worry about that later." I find results are are through the roof. Uh, people focus on revenue and growth uh way less than they realistically should. Race is how I tie them back to, you know, revenue and growth levers constantly. And on the right hand side here we have close and expand. So you and if you think about it, this is like a sales transformation threshold. Um, you know, once we've booked the meeting or gotten some sort of intent or something like that for our product, it's not really a marketer's job to close them and expand them. Obviously, we can tee them up for, you know, the greatest spike of all time. Um, but that's sort of out of our hands at this point. So, we're going to work on optimizing reach and acquisition. And then later on I'll have courses on sales that'll also allow you guys to implement systems that improve your ability to close and your ability to grow the lifetime value of your deals. Okay. So if we think about this now a little more simply what does that mean for us? Well under reach there really three major places that I'm going to uh help you guys build cloud automations with today. The first is creative. Now this is the generation using artificial intelligence and orchestrated by claude of images, videos, audio and so on and so forth typically for the purpose of advertising although also for organic uh kind of brand reach and brand growth. So the cool thing is with claude if you think about this as like one of these analog dials on like a control panel we can pump this puppy all the way up to the top super easy. you can significantly reduce any bottlenecks at the creative stage just by throwing, you know, tons of uh a couple of different creative models to Claude and then giving Claude the ability to to press buttons and arrange prompts um you know, in its own way. I'll show you guys how to do a define system for this. This is the same system I've used at uh over a company that does over a billion dollars a year in revenue to massively increase their top of funnel and then ultimately the total number of pieces of content and ads that they can get out. After that, you also have copy which is sort of in tandem with creative for advertising. Um, but we can also use, you know, cloud code to customize a lot of the copy in our marketing mix. So, we could do the customization of newsletter copy for instance, which I think is a big lever not a lot of people are pulling realistically. You know, your newsletters don't have to say, "Hey, my offer does X, Y, and Z." You know what you can do is you can actually customize it to say, "Hey, Nick, just wanted to send you this because I know you talked about X, Y, and Z last month in your LinkedIn. You know, my offer does X, Y, and Z and I think it can help you." That sort of stuff does really, really well. And it also starts blurring the line between direct outreach, too. A lot of the time people think marketing and then they go, "Okay, this is all inbound. So, I make a brand, I make some sort of ad campaign and then people come to me." Um, well, you know, marketing can also be done outbound, which is where, you know, I have a product or service and I'm I'm actually actively looking for customers for it. And so, this is where a lot of my own experience comes in because I used to do door-to-d dooror marketing. So, I would literally acquire my leads by walking up to a business, opening the door, shaking the business owner's hand, and just giving them a big pitch. So, I'm sure you can imagine it didn't work well super often, but uh when it did, it did. And so, I have a lot of experience around applying AI, cloud code, specifically to the outreach stack. And I think it would be remiss of me if I did not show you guys how to do that as well. It's a very high opportunity lever for outbound growth. Okay, so all of these improve your reach. Okay, so that's sort of the R in race. Now on the right hand side here, um we also have a couple of, you know, ways to improve the total fraction of people that opt in or book an offer. And so the first one is speed to lead. Now what is this? This is basically just capitalizing on interest. you know, presumably between the reach and the acquisition stage, if you think about it here, there's some sort of like um opt-in, which is where somebody will fill out a form or something like that to to demonstrate interest. You would be surprised at how many hundreds of millions of dollars are lost between these two stages. Um if you just, you know, respond to leads really quickly, which is what speed to lead means. If you build systems that allow Claude, let's say, to orchestrate a conversation within 30 seconds of somebody filling out a form, you can make companies 300 to 400%. And um that's what the hat that I'm wearing uh right now represents. I run a company that actually just does speed to lead all day. And we've produced crazy outcomes like taking a home services company that was previously doing around $3 million a month in sales. Um literally just by implementing the greatest speed to lead system ever. We took them to $9 million a month. That's 300% increase in total revenue simply by optimizing one of these, you know, six levers here. Okay. Another is booking percentage. So we can actually improve booking percentage through speed to lead, but also through economizing um you know a lot of the form fills and a lot of the systems that people use right now to to gain interest. So we can have Claude, for instance, do a lot of research on the prospect to eliminate the total number of fields we need in an opt-in form. Typically, if you have, let's say, 10 questions in an opt-in form, you break that down to three or four questions, you'll see a significant improvement in booking percentage. You do so at the cost of qualification, but Claude Code can now do research on the prospect for you sort of autonomously. um which means you don't actually need all that much information. Then also following up. So this is like nurturing. Um what we can do is we can use cloud code to orchestrate autonomous follow-ups and then do so in like really customized ways that people seem and feel like they're are being treated like as people not as dollar signs which is kind of funny if you think about it because like you know we're using AI for this stuff but the end result is our prospects that people are marketing to are a lot more likely to feel like we're talking to them directly. If you think about it, one of the reasons why many companies have been forced to treat people like dollar signs, you know, not personalize their outreach, not even personalize their their billing or their communications or the templates of their
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0121",
+  "excerpt": "\"Hey, like is this work that I'm doing today super important? If not, I don't want you to think too hard. I just kind of want you to go with your best guess. Whereas, you know, if you go all the way to the right, it's like, hey, I don't want you to try guessing at anything. I actually want you to triple, quadruple, sex tuple check everything that you tell me.\" And in doing so, um, cloud will"
+ },
+ {
+  "local_id": "EV-0122",
+  "excerpt": "consume a lot more tokens, but the probability of a high quality answer goes up way more. It's also note also worth noting that the speed changes quite a bit here. Um, when something is at effort low, it usually works much much faster than when something is at effort smarter. So, keep that in mind. If you're going ultra code, it'll take, I don't know, like way way longer than"
+ },
+ {
+  "local_id": "EV-0123",
+  "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand"
+ },
+ {
+  "local_id": "EV-0124",
+  "excerpt": "corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools,"
+ },
+ {
+  "local_id": "EV-0125",
+  "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit"
+ },
+ {
+  "local_id": "EV-0126",
+  "excerpt": "different. Uh right now, you know, sonnet 5, which is the model that I'm using, can host 967,000 of those tokens. We've consumed 112,000, which puts us as 12% of the way to the entirety of Sonnet 5's context window. When you hit the context window, usually what'll happen is Claude will compact your context, meaning it will just like try rewriting it so that it's way shorter and then"
+ },
+ {
+  "local_id": "EV-0127",
+  "excerpt": "stick all that information up at the very top. The reason why that's valuable is now you can continue the conversation, but a lot of the BS words are sort of taken out of your context and you'll usually get build less for it, too. And that does take me to the sort of billing and usage aspect. The longer your context window is while you talk with Claude, the faster you will"
+ },
+ {
+  "local_id": "EV-0128",
+  "excerpt": "burn through your usage limit. So, my recommendation is try not to keep a thread running all the 967,000 tokens uh that are available. I'd like working somewhere between 0 to maybe 500k or so. I find that's also my performance sweet spot. If you add more information than that, cloud starts to perform a little poorer. That's just because it gets confused. It doesn't"
+ },
+ {
+  "local_id": "EV-0129",
+  "excerpt": "fully know what it is it's doing. You've given it a lot of instructions at that point that it needs to juggle around in its memory and obviously that can be pretty tough. Okay, so that context window can be consumed of messages. As mentioned, system tools are just different things that it internally has access to. System prompt is uh basically a little snippet of text that you can"
+ },
+ {
+  "local_id": "EV-0130",
+  "excerpt": "define that will be prepunded at the beginning of every conversation. MCP tools is another sort of thing like a skill. It's just skills that other people host for you. So what you can do is you can load basically external skills via MCP tools that other people have created very easily. And then memory files are the things that I showed you guys earlier that basically"
+ },
+ {
+  "local_id": "EV-0131",
+  "excerpt": "define I don't know like in my my case my height earlier 6'2 and stuff, right? The rest of the stuff not super valuable. Obviously that's free space. We're just going to skip out of that and you have your plan usage limits. Okay, so I told you this would be comprehensive, didn't I? Yeah, we've covered uh probably 90% of the entire interface. There's just one more thing."
+ },
+ {
+  "local_id": "EV-0132",
+  "excerpt": "At the top right hand corner, you have the ability to spawn a terminal. You're probably not going to do this, but for those of you guys that don't know, a terminal is just um kind of the way that we used to interact with computers back in the day. We had a variety of different commands that you could, you know, access cdls, print working directory and stuff like that. You could"
+ },
+ {
+  "local_id": "EV-0133",
+  "excerpt": "see all the files that are in this directory and so on. Um, but anyway, sometimes cloud actually needs to use this terminal in order to do things. We also have the ability to check your diff, which is just the changes to the code that you have made. If you're developing an application, that can be quite valuable. You also then have a browser. So we now have a browser built"
+ },
+ {
+  "local_id": "EV-0134",
+  "excerpt": "into cloud that can do things like access web pages for you. That's pretty valuable as I'm sure you can imagine because you can use that to automate browser activities. And then finally at the top right hand corner you also have a couple of things that are pretty cool. One is an iOS simulator. So you can actually set up like apps in cloud code. Now um these are iPhone apps and they're"
+ },
+ {
+  "local_id": "EV-0135",
+  "excerpt": "fairly cool. Um you can like download you know Xcode which is how you do it. Open up the Mac app store and so on and so forth. I won't do that just for uh my own sanity. I don't like looking at the app store any more than I have to. Uh but anyway, you can you can create like iPhone apps now, which is pretty badass. Uh and then you can also open in whatever you want. You can open in a new"
+ },
+ {
+  "local_id": "EV-0136",
+  "excerpt": "window, VS Code Finder. You can rename your transcript. You see this Nyx Drive web page right over here. Well, if I go to the top rightand corner and I click rename, I'll say Nyx demo. You can see we've actually fundamentally and foundationally changed that. Uh you can also see the transcripts. you can actually like see all of the thinking that Claude has done if you just expand"
+ },
+ {
+  "local_id": "EV-0137",
+  "excerpt": "this transcript view. So, in my case, I'm just going to do summary. And what it'll do is it'll just summarize everything that we have done, our whole conversation back and forth. I'm now going to get a summary, which is pretty cool. Uh, as well as a full transcript of the conversation at any time. So, transcripts over here, summaries over here. This is going to take a fair"
+ },
+ {
+  "local_id": "EV-0138",
+  "excerpt": "amount of time to spawn, unfortunately, so probably won't happen entirely real time. Okay. And yeah, now you can see it's giving me a summary of this conversation. First, I wanted to build a self-contained publish artifact page profiling Nixx as a personal bio portfolio page. And then uh I don't know there's a bunch of things like the outcome, you know, what had what ended"
+ },
+ {
+  "local_id": "EV-0139",
+  "excerpt": "up happening in the session. Well, the next drive artifact is now done and sharable, right? Then you can fork a conversation where you just start another conversation at the same place. So that's me forking the conversation right now. And then you can also archive a conversation if you don't want to look at it anymore. So that's what I just did to that Nyx demo fork. And then uh you"
+ },
+ {
+  "local_id": "EV-0140",
+  "excerpt": "can also delete a conversation if you want to. That's what I just did to Nick's demo. Okay, we are now done. Virtually every button in this godforsaken interface. Just kidding. Uh there's a lot and that's because the Anthropic team has added a tremendous amount of value to their app in just uh I don't know maybe 3 or 4 months. So the app was not always"
+ },
+ {
+  "local_id": "EV-0141",
+  "excerpt": "like this. The app is very high quality now. The app will probably look a little bit different from what you guys see just because they are consistently and constantly updating it. But now that you guys know how to use the app, you have no excuses. we know every little literal button on this entire interface. Um it'll be very very easy for you to navigate and do virtually everything"
+ },
+ {
+  "local_id": "EV-0142",
+  "excerpt": "that you need in order to make something cool happen. Which takes us to learning the interface right here which is now check. We have an optional task here called set up the CLI. CLI in case you didn't know stands for command line interface which is just a different way of communicating with cloud code. As"
+ },
+ {
+  "local_id": "EV-0143",
+  "excerpt": "mentioned, you know, they've given us many different ways to talk to Claude and and work with Claude. Um, so what I'm going to do here is I'm going to I'm going to set up another one just as a demonstration. And I may use the CLI. I may end up using the cloud desktop app. Um, it's really just about what is simpler and easier for you. Before I show you guys that, it's worth a brief"
+ },
+ {
+  "local_id": "EV-0144",
+  "excerpt": "uh kind of piece of education here. Uh, just like we have different websites on the internet, okay, that are accessible through different browsers. Like in this case, this website Google can be accessed through Chrome, Safari, Firefox or something else. We also have the same concept of clawed code which is accessible through I don't know your desktop app, your terminal VS code or"
+ },
+ {
+  "local_id": "EV-0145",
+  "excerpt": "something else. And so there are variety of different ways basically to get to the same resource. And so what I just showed you here was I actually just showed you the desktop app, right? And so that's what we just looked at, but you can also use a terminal to do the same thing. You can also use VS Code. And so what I'm going to do now is I'm just going to show you guys what it"
+ },
+ {
+  "local_id": "EV-0146",
+  "excerpt": "looks like in terminal version. And it's very very straightforward and easy. All I'm going to do is I'm going to go to Ghost TTY. When I open up ghost tty, you'll see I have a terminal. Same thing that we had before. It's inside of a folder called business. That's just sort of the layout. And in order to access Claude, all I need to do is type cla-verbose. I like verbose because it"
+ },
+ {
+  "local_id": "EV-0147",
+  "excerpt": "allows me to see what it's thinking. And if I scroll and zoom way in, you'll see that, you know, our interface looks a little bit different. You know, our cloud is up here. And I don't know what what is it doing? It's looking up. It's going down a couple times, but it says Claude Code Fable 5 with medium effort in business. So, what's going on? So maybe I'll say, \"Hey,"
+ },
+ {
+  "local_id": "EV-0148",
+  "excerpt": "um, what you'll notice is this is the exact same product. It's just I'm accessing the product now in a different way. Instead of me using that app that we saw earlier, I'm using my own app and I'm talking to it through a channel. If I type slash, you'll see that there are a variety of different skills that I could use as well. And so in my case, this is actually my preferred way of"
+ },
+ {
+  "local_id": "EV-0149",
+  "excerpt": "communicating with cloud code. And the reason why is because I just, you know, uh, uh, I I've done a lot more development stuff over the last 6 or 12 months. I'm just more used to communicating with it in like a terminal style interface. That said, it's not the only way to do so. And hopefully you guys see now that uh the cloud desktop app is a very very strong and viable"
+ },
+ {
+  "local_id": "EV-0150",
+  "excerpt": "candidate. And just for simplicity sake, I'll prefer that wherever possible. But there are some situations in which I I do like just diving into the terminal. Again, it's almost like a different car, right? Different browser, different car. Everybody has slightly different preferences about how they drive it. you could have the exact same horsepower, but obviously if you're accessing cloud"
+ },
+ {
+  "local_id": "EV-0151",
+  "excerpt": "code or if you're accessing the the same horsepower of the engine through a different model, um it'll react differently, handle differently and stuff like that. And that now takes us to the end of the first step, which was to download, install, and set up cloud code. Next, I want to cover the five marketing functions that we'll be automating today and the framework I'm"
+ },
+ {
+  "local_id": "EV-0152",
+  "excerpt": "going to use to show you guys how. So I want to talk a little bit about business because obviously you're doing this not for the sake of you know building up just a cool personal portfolio but ultimately we want to we want to build our marketing skills here with cloud code to do something some sort of economically valuable outcome and so the way that I see most businesses and it's"
+ },
+ {
+  "local_id": "EV-0153",
+  "excerpt": "a service business up here but uh really the more I think about it I think it's all businesses is as the following pipeline. All businesses will start with some form of marketing. Okay, that is just to get strangers to notice you and that is basically to get eyeballs on the business itself or the brand. Then you will have some sort of sales transformation event which is what turns"
+ },
+ {
+  "local_id": "EV-0154",
+  "excerpt": "these eyeballs and this interest into some form of money. Afterwards you have fulfillment which is where you deliver what you promised and then finally at the end you have some sort of administrative wheel that is what keeps the machine running. Now the whole idea here is basically you know during this process as you go from top to bottom you convert somebody who is a total stranger"
+ },
+ {
+  "local_id": "EV-0155",
+  "excerpt": "into some form of profit and you can imagine the same thing applies across a variety of different business stacks. You can do this with ecom. You know in ecom you have strangers that notice a product. You sell that product. they receive delivery of the product and you have some sort of admin to keep uh I don't know the purchasing and the inventory in line with like uh"
+ },
+ {
+  "local_id": "EV-0156",
+  "excerpt": "expectations and forecasts. You have hiring, you have vendor relationships, logistics managed with your your manufacturers and stuff like that. Uh and then you know ultimately these four working in perfect concert is what makes you profit. So you know this isn't like an MBA or anything like that. Certainly I don't think I could hope to do uh you know an MBA in this this this time"
+ },
+ {
+  "local_id": "EV-0157",
+  "excerpt": "period that I've allotted for this course. But you know I want to talk mostly about this marketing and then this sales aspect. Um and so this is really going to be like our focus. This is what we're going to spend most of our time working through in this course. Um but I think it's also important to understand that marketing and sales they work in tandem, right? It's not just one"
+ },
+ {
+  "local_id": "EV-0158",
+  "excerpt": "or the other. Realistically there's there's there's back and forth here. So a lot of the stuff that we are going to build for marketing today with cloud code um we will also sort of build with uh or build for our sales department at least to like understand and and know what's going on. And so this is kind of secondary and I'm going to have future courses that are focused specifically on"
+ },
+ {
+  "local_id": "EV-0159",
+  "excerpt": "sales. So you don't need to worry too much about that. Now the framework we're going to be using to really crush these cloud code automations is called race. race stands for reach, acquire, close and expand. And the differentiator or sort of the delineator between sales and marketing in my view occurs right here. So everything to the left of this is technically marketing and everything to"
+ },
+ {
+  "local_id": "EV-0160",
+  "excerpt": "the right of this is technically sales. Which means our course today is going to be focused on these two which is how do I get seen which you know if you think about the key performance indicators of getting seen how do I get impressions how do I get views so how do I get my brand in front of more eyeballs and then how do I turn these impressions and views into some form of intent so how do"
+ },
+ {
+  "local_id": "EV-0161",
+  "excerpt": "I acquire you know so how do I I don't know book meetings or get form fills get people to sign up to my newsletter get people to opt built in to some offer and so on. And so all of the automations we're going to be developing are really going to focus on uh these levers. Okay, it's all going to be about reach and acquire. And if you think about business in this framework and if you you know"
+ },
+ {
+  "local_id": "EV-0162",
+  "excerpt": "race to implement automations that help you with reach, acquisition, close, and expansion, typically uh you'll allocate your time a lot more effectively than otherwise. So, I'm going to come back to race pretty often. Uh, when, you know, somebody wants to work with Leftclick, my AI automation agency. Um, you know, typically they're like, \"Oh, like I want to do this crazy admin automation. I"
+ },
+ {
+  "local_id": "EV-0163",
+  "excerpt": "want to do this backend thing.\" And I'm like, \"Well, why don't we start with race? Why don't we start with reach, acquire, close, and expand, and then we can worry about that later.\" I find results are are through the roof. Uh, people focus on revenue and growth uh way less than they realistically should. Race is how I tie them back to, you know, revenue and growth levers"
+ },
+ {
+  "local_id": "EV-0164",
+  "excerpt": "constantly. And on the right hand side here we have close and expand. So you and if you think about it, this is like a sales transformation threshold. Um, you know, once we've booked the meeting or gotten some sort of intent or something like that for our product, it's not really a marketer's job to close them and expand them. Obviously, we can tee them up for, you know, the"
+ },
+ {
+  "local_id": "EV-0165",
+  "excerpt": "greatest spike of all time. Um, but that's sort of out of our hands at this point. So, we're going to work on optimizing reach and acquisition. And then later on I'll have courses on sales that'll also allow you guys to implement systems that improve your ability to close and your ability to grow the lifetime value of your deals. Okay. So if we think about this now a little more"
+ },
+ {
+  "local_id": "EV-0166",
+  "excerpt": "simply what does that mean for us? Well under reach there really three major places that I'm going to uh help you guys build cloud automations with today. The first is creative. Now this is the generation using artificial intelligence and orchestrated by claude of images, videos, audio and so on and so forth typically for the purpose of advertising although also for organic uh kind of"
+ },
+ {
+  "local_id": "EV-0167",
+  "excerpt": "brand reach and brand growth. So the cool thing is with claude if you think about this as like one of these analog dials on like a control panel we can pump this puppy all the way up to the top super easy. you can significantly reduce any bottlenecks at the creative stage just by throwing, you know, tons of uh a couple of different creative models to Claude and then giving Claude"
+ },
+ {
+  "local_id": "EV-0168",
+  "excerpt": "the ability to to press buttons and arrange prompts um you know, in its own way. I'll show you guys how to do a define system for this. This is the same system I've used at uh over a company that does over a billion dollars a year in revenue to massively increase their top of funnel and then ultimately the total number of pieces of content and ads that they can get out. After that,"
+ },
+ {
+  "local_id": "EV-0169",
+  "excerpt": "you also have copy which is sort of in tandem with creative for advertising. Um, but we can also use, you know, cloud code to customize a lot of the copy in our marketing mix. So, we could do the customization of newsletter copy for instance, which I think is a big lever not a lot of people are pulling realistically. You know, your newsletters don't have to say, \"Hey, my"
+ },
+ {
+  "local_id": "EV-0170",
+  "excerpt": "offer does X, Y, and Z.\" You know what you can do is you can actually customize it to say, \"Hey, Nick, just wanted to send you this because I know you talked about X, Y, and Z last month in your LinkedIn. You know, my offer does X, Y, and Z and I think it can help you.\" That sort of stuff does really, really well. And it also starts blurring the line between direct outreach, too. A lot of"
+ },
+ {
+  "local_id": "EV-0171",
+  "excerpt": "the time people think marketing and then they go, \"Okay, this is all inbound. So, I make a brand, I make some sort of ad campaign and then people come to me.\" Um, well, you know, marketing can also be done outbound, which is where, you know, I have a product or service and I'm I'm actually actively looking for customers for it. And so, this is where a lot of my own experience comes in"
+ },
+ {
+  "local_id": "EV-0172",
+  "excerpt": "because I used to do door-to-d dooror marketing. So, I would literally acquire my leads by walking up to a business, opening the door, shaking the business owner's hand, and just giving them a big pitch. So, I'm sure you can imagine it didn't work well super often, but uh when it did, it did. And so, I have a lot of experience around applying AI, cloud code, specifically to the outreach"
+ },
+ {
+  "local_id": "EV-0173",
+  "excerpt": "stack. And I think it would be remiss of me if I did not show you guys how to do that as well. It's a very high opportunity lever for outbound growth. Okay, so all of these improve your reach. Okay, so that's sort of the R in race. Now on the right hand side here, um we also have a couple of, you know, ways to improve the total fraction of people that opt in or book an offer. And"
+ },
+ {
+  "local_id": "EV-0174",
+  "excerpt": "so the first one is speed to lead. Now what is this? This is basically just capitalizing on interest. you know, presumably between the reach and the acquisition stage, if you think about it here, there's some sort of like um opt-in, which is where somebody will fill out a form or something like that to to demonstrate interest. You would be surprised at how many hundreds of"
+ },
+ {
+  "local_id": "EV-0175",
+  "excerpt": "millions of dollars are lost between these two stages. Um if you just, you know, respond to leads really quickly, which is what speed to lead means. If you build systems that allow Claude, let's say, to orchestrate a conversation within 30 seconds of somebody filling out a form, you can make companies 300 to 400%. And um that's what the hat that I'm wearing uh right now represents. I"
+ },
+ {
+  "local_id": "EV-0176",
+  "excerpt": "run a company that actually just does speed to lead all day. And we've produced crazy outcomes like taking a home services company that was previously doing around $3 million a month in sales. Um literally just by implementing the greatest speed to lead system ever. We took them to $9 million a month. That's 300% increase in total revenue simply by optimizing one of"
+ },
+ {
+  "local_id": "EV-0177",
+  "excerpt": "these, you know, six levers here. Okay. Another is booking percentage. So we can actually improve booking percentage through speed to lead, but also through economizing um you know a lot of the form fills and a lot of the systems that people use right now to to gain interest. So we can have Claude, for instance, do a lot of research on the prospect to eliminate the total number"
+ },
+ {
+  "local_id": "EV-0178",
+  "excerpt": "of fields we need in an opt-in form. Typically, if you have, let's say, 10 questions in an opt-in form, you break that down to three or four questions, you'll see a significant improvement in booking percentage. You do so at the cost of qualification, but Claude Code can now do research on the prospect for you sort of autonomously. um which means you don't actually need all that much"
+ },
+ {
+  "local_id": "EV-0179",
+  "excerpt": "information. Then also following up. So this is like nurturing. Um what we can do is we can use cloud code to orchestrate autonomous follow-ups and then do so in like really customized ways that people seem and feel like they're are being treated like as people not as dollar signs which is kind of funny if you think about it because like you know we're using AI for this stuff"
+ },
+ {
+  "local_id": "EV-0180",
+  "excerpt": "but the end result is our prospects that people are marketing to are a lot more likely to feel like we're talking to them directly. If you think about it, one of the reasons why many companies have been forced to treat people like dollar signs, you know, not personalize their outreach, not even personalize their their billing or their communications or the templates of their"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": "string"
+                  },
+                  "condition": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

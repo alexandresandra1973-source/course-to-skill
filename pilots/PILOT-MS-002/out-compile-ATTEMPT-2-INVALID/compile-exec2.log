@@ -1,0 +1,28 @@
+MS-002 compile · fontes=['A', 'B', 'C'] · dry=False · cap=95
+  controle EC (extrator)...
+    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
+  controle JE (entailment)...
+    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
+  === fonte A ===
+    SL-A-01: 29 claims, 8 candidates
+    SL-A-02: 45 claims, 15 candidates
+Traceback (most recent call last):
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 375, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 351, in main
+    bundles, trace = extract_source(src)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 157, in extract_source
+    validate_strict(d, EX_SCH, f"extract/{sl['slice_id']}")
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 61, in validate_strict
+    jsonschema.validate(doc, schema)
+  File "/usr/lib/python3/dist-packages/jsonschema/validators.py", line 1080, in validate
+    raise error
+jsonschema.exceptions.ValidationError: [] is too short
+
+Failed validating 'minItems' in schema[2]['properties']['do_not']:
+    {'items': {'type': 'string'}, 'minItems': 1, 'type': 'array'}
+
+On instance['do_not']:
+    []
