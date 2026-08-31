@@ -1,0 +1,55 @@
+[
+ {
+  "canary": "BATCH-C1",
+  "desc": "split 11+11 do antigo BATCH-4",
+  "expected": "uniao == 22 originais, intersecao vazia",
+  "got": "uniao=22 igual=True intersecao=0",
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C2",
+  "desc": "cinco batches cobrem 97",
+  "expected": "97 distintos, zero duplicata, zero faltante",
+  "got": "total=97 distintos=97 == pairset=True",
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C3",
+  "desc": "PAIRSET_DRIFT por remocao e por troca",
+  "expected": "hash muda nos dois casos",
+  "got": "remocao=True troca=True original_confere=True",
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C0",
+  "desc": "11/11 completo",
+  "expected": "sem erro",
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C4",
+  "desc": "output 10 de 11",
+  "expected": "R15_PAIR_MISSING",
+  "got": [
+   "R15_PAIR_MISSING"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C5",
+  "desc": "output 12 de 11 com duplicata",
+  "expected": "R06_DUPLICATE_PAIR",
+  "got": [
+   "R06_DUPLICATE_PAIR"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "BATCH-C6",
+  "desc": "o par omitido na exec-1 agora esta em batch menor",
+  "expected": "em ['BATCH-4B'] posicao [6] de 11",
+  "got": "['BATCH-4B'] pos=[6]",
+  "ok": true
+ }
+]
