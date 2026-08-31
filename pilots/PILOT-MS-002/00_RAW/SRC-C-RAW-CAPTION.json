@@ -1,0 +1,1947 @@
+[
+ {
+  "start": 0.04,
+  "duration": 3.48,
+  "text": "quer aprender a responder as mensagens"
+ },
+ {
+  "start": 1.76,
+  "duration": 3.68,
+  "text": "que chegam no seu WhatsApp utilizando"
+ },
+ {
+  "start": 3.52,
+  "duration": 3.319,
+  "text": "Inteligência Artificial assiste até o"
+ },
+ {
+  "start": 5.44,
+  "duration": 4.079,
+  "text": "final desse vídeo que eu vou te mostrar"
+ },
+ {
+  "start": 6.839,
+  "duration": 5.241,
+  "text": "como que faz usando a ferramenta n8n o"
+ },
+ {
+  "start": 9.519,
+  "duration": 4.681,
+  "text": "banco de dados Reds e a api Evolution"
+ },
+ {
+  "start": 12.08,
+  "duration": 4.4,
+  "text": "pro WhatsApp se você ainda não tem a"
+ },
+ {
+  "start": 14.2,
+  "duration": 4.2,
+  "text": "Evolution e o n8n configurados na sua"
+ },
+ {
+  "start": 16.48,
+  "duration": 3.559,
+  "text": "VPS Vê o vídeo anterior que eu ensinei"
+ },
+ {
+  "start": 18.4,
+  "duration": 3.56,
+  "text": "passo a passo de uma forma muito fácil"
+ },
+ {
+  "start": 20.039,
+  "duration": 3.961,
+  "text": "como que faz isso tudo ou baixe aí na"
+ },
+ {
+  "start": 21.96,
+  "duration": 4.159,
+  "text": "descrição o meu script para rodar"
+ },
+ {
+  "start": 24.0,
+  "duration": 3.92,
+  "text": "localmente no final do vídeo eu dou mais"
+ },
+ {
+  "start": 26.119,
+  "duration": 4.281,
+  "text": "detalhes de como que executa ele o"
+ },
+ {
+  "start": 27.92,
+  "duration": 4.88,
+  "text": "primeiro passo é instalar o Red na sua"
+ },
+ {
+  "start": 30.4,
+  "duration": 4.44,
+  "text": "VPS o Reds é um banco de dados não"
+ },
+ {
+  "start": 32.8,
+  "duration": 3.8,
+  "text": "relacional que utiliza Chaves e valores"
+ },
+ {
+  "start": 34.84,
+  "duration": 3.64,
+  "text": "para guardar os dados nele a gente pode"
+ },
+ {
+  "start": 36.6,
+  "duration": 3.52,
+  "text": "configurar dados que vão ter um tempo de"
+ },
+ {
+  "start": 38.48,
+  "duration": 3.2,
+  "text": "vida então ele é ideal para essas"
+ },
+ {
+  "start": 40.12,
+  "duration": 3.599,
+  "text": "operações que nós vamos fazer para"
+ },
+ {
+  "start": 41.68,
+  "duration": 3.64,
+  "text": "instalar Você vai no eas panel e clica"
+ },
+ {
+  "start": 43.719,
+  "duration": 3.921,
+  "text": "nesse maizinho para adicionar um novo"
+ },
+ {
+  "start": 45.32,
+  "duration": 5.079,
+  "text": "serviço no seu projeto o ris fica aqui"
+ },
+ {
+  "start": 47.64,
+  "duration": 4.36,
+  "text": "em cima nessa opção redis clica aqui e"
+ },
+ {
+  "start": 50.399,
+  "duration": 4.441,
+  "text": "coloca um nome pro serviço eu vou"
+ },
+ {
+  "start": 52.0,
+  "duration": 4.44,
+  "text": "colocar n8n redis vou deixar a senha em"
+ },
+ {
+  "start": 54.84,
+  "duration": 3.719,
+  "text": "branco para ele gerar uma aleatória para"
+ },
+ {
+  "start": 56.44,
+  "duration": 4.119,
+  "text": "mim e também não vou mexer na versão"
+ },
+ {
+  "start": 58.559,
+  "duration": 3.68,
+  "text": "Então pode clicar em criar"
+ },
+ {
+  "start": 60.559,
+  "duration": 3.64,
+  "text": "Pronto já temos aqui o nosso Reds"
+ },
+ {
+  "start": 62.239,
+  "duration": 3.56,
+  "text": "instalado no eas panel ativa essa opção"
+ },
+ {
+  "start": 64.199,
+  "duration": 3.24,
+  "text": "do Reds Commander porque ele é muito"
+ },
+ {
+  "start": 65.799,
+  "duration": 3.761,
+  "text": "útil pro desenvolvimento Esse é um"
+ },
+ {
+  "start": 67.439,
+  "duration": 4.04,
+  "text": "painel de gerenciamento do Reds que você"
+ },
+ {
+  "start": 69.56,
+  "duration": 4.48,
+  "text": "pode visualizar os dados que tem lá"
+ },
+ {
+  "start": 71.479,
+  "duration": 4.68,
+  "text": "dentro e editar ou apagar através do"
+ },
+ {
+  "start": 74.04,
+  "duration": 4.079,
+  "text": "navegador então agora o próximo passo"
+ },
+ {
+  "start": 76.159,
+  "duration": 3.841,
+  "text": "vai ser pegar uma chave de api do grock"
+ },
+ {
+  "start": 78.119,
+  "duration": 3.521,
+  "text": "ou da Open a ou de qualquer outro que"
+ },
+ {
+  "start": 80.0,
+  "duration": 3.6,
+  "text": "você tiver eu vou mostrar como que pega"
+ },
+ {
+  "start": 81.64,
+  "duration": 4.2,
+  "text": "no grock e Como que pega no open a que é"
+ },
+ {
+  "start": 83.6,
+  "duration": 3.96,
+  "text": "o chat GPT eu estou apresentando o grock"
+ },
+ {
+  "start": 85.84,
+  "duration": 3.8,
+  "text": "aqui como uma opção porque o grock é"
+ },
+ {
+  "start": 87.56,
+  "duration": 4.04,
+  "text": "gratuito então aqui no site do grock"
+ },
+ {
+  "start": 89.64,
+  "duration": 3.799,
+  "text": "você Você vai vir em Dev console aqui no"
+ },
+ {
+  "start": 91.6,
+  "duration": 3.799,
+  "text": "cantinho vai fazer seu login com o"
+ },
+ {
+  "start": 93.439,
+  "duration": 4.521,
+  "text": "Google e aqui do lado esquerdo Você vai"
+ },
+ {
+  "start": 95.399,
+  "duration": 4.601,
+  "text": "vir em API Case clica para criar uma"
+ },
+ {
+  "start": 97.96,
+  "duration": 4.519,
+  "text": "nova e dá um nome para ela marca essa"
+ },
+ {
+  "start": 100.0,
+  "duration": 4.64,
+  "text": "caixinha clica em submit e agora ele vai"
+ },
+ {
+  "start": 102.479,
+  "duration": 4.081,
+  "text": "te dar a chave você precisa copiar ela"
+ },
+ {
+  "start": 104.64,
+  "duration": 4.119,
+  "text": "agora porque depois que você sair dessa"
+ },
+ {
+  "start": 106.56,
+  "duration": 3.72,
+  "text": "tela não tem mais como ver então copia e"
+ },
+ {
+  "start": 108.759,
+  "duration": 4.601,
+  "text": "cola num bloco de notas para não"
+ },
+ {
+  "start": 110.28,
+  "duration": 4.64,
+  "text": "esquecer na Open ai precisa colocar 5"
+ },
+ {
+  "start": 113.36,
+  "duration": 4.119,
+  "text": "para poder gerar uma chave então você"
+ },
+ {
+  "start": 114.92,
+  "duration": 4.4,
+  "text": "vai vir aqui nas configurações api Keys"
+ },
+ {
+  "start": 117.479,
+  "duration": 4.0,
+  "text": "e clicar para criar uma nova dá um nome"
+ },
+ {
+  "start": 119.32,
+  "duration": 4.439,
+  "text": "para ela seleciona de qual projeto ela"
+ },
+ {
+  "start": 121.479,
+  "duration": 4.0,
+  "text": "faz parte e clica em criar aqui é a"
+ },
+ {
+  "start": 123.759,
+  "duration": 3.4,
+  "text": "mesma coisa você precisa copiar ela"
+ },
+ {
+  "start": 125.479,
+  "duration": 3.64,
+  "text": "agora e salvar num bloco de notas porque"
+ },
+ {
+  "start": 127.159,
+  "duration": 4.121,
+  "text": "quando sair dessa tela não tem mais como"
+ },
+ {
+  "start": 129.119,
+  "duration": 4.48,
+  "text": "ver agora nós vamos criar o workflow"
+ },
+ {
+  "start": 131.28,
+  "duration": 4.84,
+  "text": "aqui no n8n mas antes vem aqui em"
+ },
+ {
+  "start": 133.599,
+  "duration": 5.081,
+  "text": "settings community nodes e veja se você"
+ },
+ {
+  "start": 136.12,
+  "duration": 4.68,
+  "text": "tem os nodes da Evolution api instalados"
+ },
+ {
+  "start": 138.68,
+  "duration": 5.88,
+  "text": "se você não tiver é só clicar em Install"
+ },
+ {
+  "start": 140.8,
+  "duration": 5.84,
+  "text": "e digitar n8n nodes Evolution api e"
+ },
+ {
+  "start": 144.56,
+  "duration": 4.44,
+  "text": "depois clicar em instalar Beleza então"
+ },
+ {
+  "start": 146.64,
+  "duration": 4.8,
+  "text": "vamos aqui no menu principal criar um"
+ },
+ {
+  "start": 149.0,
+  "duration": 4.879,
+  "text": "novo workflow e vou dar o nome dele aqui"
+ },
+ {
+  "start": 151.44,
+  "duration": 4.48,
+  "text": "a minha ideia é fazer um chatbot que vai"
+ },
+ {
+  "start": 153.879,
+  "duration": 4.281,
+  "text": "consultar a minha api sobre pontos"
+ },
+ {
+  "start": 155.92,
+  "duration": 4.72,
+  "text": "turísticos em Foz de Iguaçu e responder"
+ },
+ {
+  "start": 158.16,
+  "duration": 4.439,
+  "text": "à pessoa isso tudo através do WhatsApp"
+ },
+ {
+  "start": 160.64,
+  "duration": 4.2,
+  "text": "então para começar adiciona um node de"
+ },
+ {
+  "start": 162.599,
+  "duration": 5.64,
+  "text": "web Hook configura o método dele como"
+ },
+ {
+  "start": 164.84,
+  "duration": 6.72,
+  "text": "post e copia o URL de teste vamos lá na"
+ },
+ {
+  "start": 168.239,
+  "duration": 6.92,
+  "text": "Evolution clica na sua sessão vem events"
+ },
+ {
+  "start": 171.56,
+  "duration": 6.319,
+  "text": "web Hook e cola o URL aqui aqui veja se"
+ },
+ {
+  "start": 175.159,
+  "duration": 6.0,
+  "text": "a opção enabled está ligada a opção de"
+ },
+ {
+  "start": 177.879,
+  "duration": 6.08,
+  "text": "base 64 também e lá embaixo o evento"
+ },
+ {
+  "start": 181.159,
+  "duration": 5.041,
+  "text": "chamado messages up search essas três"
+ },
+ {
+  "start": 183.959,
+  "duration": 5.721,
+  "text": "opções têm que estar ativas clique em"
+ },
+ {
+  "start": 186.2,
+  "duration": 6.0,
+  "text": "salvar e pode voltar pro n8n clica para"
+ },
+ {
+  "start": 189.68,
+  "duration": 4.36,
+  "text": "ouvir um evento de teste agora e pode"
+ },
+ {
+  "start": 192.2,
+  "duration": 4.24,
+  "text": "mandar uma mensagem para você no seu"
+ },
+ {
+  "start": 194.04,
+  "duration": 4.68,
+  "text": "WhatsApp mandei aqui já chegaram os"
+ },
+ {
+  "start": 196.44,
+  "duration": 4.04,
+  "text": "dados e agora vamos trabalhar com eles"
+ },
+ {
+  "start": 198.72,
+  "duration": 3.36,
+  "text": "nós nunca usamos diretamente os dados"
+ },
+ {
+  "start": 200.48,
+  "duration": 3.92,
+  "text": "que vem no web Hook a gente sempre"
+ },
+ {
+  "start": 202.08,
+  "duration": 4.4,
+  "text": "adiciona um node set depois do Web Hook"
+ },
+ {
+  "start": 204.4,
+  "duration": 3.919,
+  "text": "para organizar eles de uma forma melhor"
+ },
+ {
+  "start": 206.48,
+  "duration": 3.64,
+  "text": "então de todos esses dados que vieram"
+ },
+ {
+  "start": 208.319,
+  "duration": 4.241,
+  "text": "aqui no web Hook nós vamos pegar apenas"
+ },
+ {
+  "start": 210.12,
+  "duration": 4.399,
+  "text": "cinco que são os campos quem mandou que"
+ },
+ {
+  "start": 212.56,
+  "duration": 3.8,
+  "text": "vai ser o número da pessoa o outro Campo"
+ },
+ {
+  "start": 214.519,
+  "duration": 3.521,
+  "text": "vai ser a Instância que recebeu a"
+ },
+ {
+  "start": 216.36,
+  "duration": 4.439,
+  "text": "mensagem o outro Campo vai ser a"
+ },
+ {
+  "start": 218.04,
+  "duration": 4.96,
+  "text": "mensagem depois o ID da mensagem e por"
+ },
+ {
+  "start": 220.799,
+  "duration": 3.761,
+  "text": "último o nome da pessoa o campo quem"
+ },
+ {
+  "start": 223.0,
+  "duration": 3.319,
+  "text": "mandou que é onde a gente vai salvar o"
+ },
+ {
+  "start": 224.56,
+  "duration": 6.36,
+  "text": "número da pessoa que mandou a mensagem"
+ },
+ {
+  "start": 226.319,
+  "duration": 7.041,
+  "text": "fica dentro de body data Key remote JD a"
+ },
+ {
+  "start": 230.92,
+  "duration": 6.039,
+  "text": "Instância fica em Body instance a"
+ },
+ {
+  "start": 233.36,
+  "duration": 7.079,
+  "text": "mensagem fica em Body data message"
+ },
+ {
+  "start": 236.959,
+  "duration": 7.601,
+  "text": "conversation o ID da mensagem Fica em B"
+ },
+ {
+  "start": 240.439,
+  "duration": 7.44,
+  "text": "data Key id e o nome da pessoa fica em"
+ },
+ {
+  "start": 244.56,
+  "duration": 5.64,
+  "text": "Body data push name Esses são os dados"
+ },
+ {
+  "start": 247.879,
+  "duration": 4.36,
+  "text": "que nós vamos precisar clique em teste e"
+ },
+ {
+  "start": 250.2,
+  "duration": 4.28,
+  "text": "agora veja que aquele monte de coisa"
+ },
+ {
+  "start": 252.239,
+  "duration": 3.921,
+  "text": "virou só esse cinco aqui renome esse"
+ },
+ {
+  "start": 254.48,
+  "duration": 5.039,
+  "text": "node para"
+ },
+ {
+  "start": 256.16,
+  "duration": 5.68,
+  "text": "dados e vamos continuar agora a gente já"
+ },
+ {
+  "start": 259.519,
+  "duration": 4.68,
+  "text": "vai criar o nosso agente de a mas antes"
+ },
+ {
+  "start": 261.84,
+  "duration": 4.2,
+  "text": "coloca aqui um set vazio mesmo que isso"
+ },
+ {
+  "start": 264.199,
+  "duration": 4.0,
+  "text": "vai ser melhor pra gente no futuro pode"
+ },
+ {
+  "start": 266.04,
+  "duration": 3.8,
+  "text": "depois desse set vazio colocar o ai"
+ },
+ {
+  "start": 268.199,
+  "duration": 3.401,
+  "text": "Agent e aqui vamos fazer as as"
+ },
+ {
+  "start": 269.84,
+  "duration": 3.639,
+  "text": "configurações dele o agente de a é"
+ },
+ {
+  "start": 271.6,
+  "duration": 3.56,
+  "text": "composto por quatro peças a primeira"
+ },
+ {
+  "start": 273.479,
+  "duration": 3.44,
+  "text": "delas é o modelo de Inteligência"
+ },
+ {
+  "start": 275.16,
+  "duration": 3.759,
+  "text": "Artificial que ele usa o modelo é como"
+ },
+ {
+  "start": 276.919,
+  "duration": 4.401,
+  "text": "se fosse o cérebro do nosso agente a"
+ },
+ {
+  "start": 278.919,
+  "duration": 4.081,
+  "text": "segunda peça é a memória de chat dele é"
+ },
+ {
+  "start": 281.32,
+  "duration": 3.48,
+  "text": "nessa memória que ele vai guardar um"
+ },
+ {
+  "start": 283.0,
+  "duration": 3.96,
+  "text": "histórico de mensagens que ele teve com"
+ },
+ {
+  "start": 284.8,
+  "duration": 3.88,
+  "text": "alguma pessoa a terceira peça é uma"
+ },
+ {
+  "start": 286.96,
+  "duration": 3.36,
+  "text": "muito legal que são as ferramentas que o"
+ },
+ {
+  "start": 288.68,
+  "duration": 3.68,
+  "text": "agente pode utilizar por exemplo"
+ },
+ {
+  "start": 290.32,
+  "duration": 4.159,
+  "text": "pesquisar na internet alterar planilhas"
+ },
+ {
+  "start": 292.36,
+  "duration": 4.399,
+  "text": "buscar em um banco de dados e a quarta"
+ },
+ {
+  "start": 294.479,
+  "duration": 4.28,
+  "text": "peça é o agente em si é aqui que você"
+ },
+ {
+  "start": 296.759,
+  "duration": 4.481,
+  "text": "coloca as instruções do que ele deve"
+ },
+ {
+  "start": 298.759,
+  "duration": 4.241,
+  "text": "fazer e com base nessas instruções ele"
+ },
+ {
+  "start": 301.24,
+  "duration": 3.519,
+  "text": "vai chamar as ferramentas que ele tem à"
+ },
+ {
+  "start": 303.0,
+  "duration": 3.84,
+  "text": "disposição para que ele responda o"
+ },
+ {
+  "start": 304.759,
+  "duration": 4.28,
+  "text": "usuário no caso de uma pergunta aí ele"
+ },
+ {
+  "start": 306.84,
+  "duration": 4.44,
+  "text": "vai buscar no banco de dados ou que ele"
+ },
+ {
+  "start": 309.039,
+  "duration": 3.88,
+  "text": "realize uma ação no caso de uma ordem o"
+ },
+ {
+  "start": 311.28,
+  "duration": 3.28,
+  "text": "tipo de agente vamos deixar em Tools"
+ },
+ {
+  "start": 312.919,
+  "duration": 3.641,
+  "text": "Agent que é o mais avançado que tem"
+ },
+ {
+  "start": 314.56,
+  "duration": 4.28,
+  "text": "acesso a ferramentas em source for"
+ },
+ {
+  "start": 316.56,
+  "duration": 4.639,
+  "text": "prompt nós vamos tirar essa opção de"
+ },
+ {
+  "start": 318.84,
+  "duration": 4.199,
+  "text": "connected chat Trigger e mudar pra outra"
+ },
+ {
+  "start": 321.199,
+  "duration": 3.921,
+  "text": "que é definir abaixo aqui nós vamos"
+ },
+ {
+  "start": 323.039,
+  "duration": 3.841,
+  "text": "informar a mensagem que a pessoa mandou"
+ },
+ {
+  "start": 325.12,
+  "duration": 4.04,
+  "text": "é isso que vai ser passado pro nosso"
+ },
+ {
+  "start": 326.88,
+  "duration": 3.96,
+  "text": "agente gerar uma resposta então clica"
+ },
+ {
+  "start": 329.16,
+  "duration": 4.0,
+  "text": "aqui do lado para trazer os dados"
+ },
+ {
+  "start": 330.84,
+  "duration": 5.04,
+  "text": "anteriores e vamos arrastar aqui o campo"
+ },
+ {
+  "start": 333.16,
+  "duration": 5.4,
+  "text": "mensagem para o campo text do nosso ai"
+ },
+ {
+  "start": 335.88,
+  "duration": 4.72,
+  "text": "Agent aqui embaixo em add option"
+ },
+ {
+  "start": 338.56,
+  "duration": 3.72,
+  "text": "adiciona essa opção do System message"
+ },
+ {
+  "start": 340.6,
+  "duration": 3.68,
+  "text": "que é onde nós vamos passar o prompt"
+ },
+ {
+  "start": 342.28,
+  "duration": 4.359,
+  "text": "para o nosso agente dizer a ele o que"
+ },
+ {
+  "start": 344.28,
+  "duration": 4.32,
+  "text": "ele deve fazer então eu vou digitar aqui"
+ },
+ {
+  "start": 346.639,
+  "duration": 4.321,
+  "text": "no meu caso eu quero que ele consulte os"
+ },
+ {
+  "start": 348.6,
+  "duration": 4.159,
+  "text": "dados da minha api sobre Foz do Iguaçu"
+ },
+ {
+  "start": 350.96,
+  "duration": 3.72,
+  "text": "então vou falar você deve responder"
+ },
+ {
+  "start": 352.759,
+  "duration": 4.401,
+  "text": "dúvidas dos clientes sobre locais em fo"
+ },
+ {
+  "start": 354.68,
+  "duration": 4.519,
+  "text": "do Iguaçu consultando a nossa api ponto"
+ },
+ {
+  "start": 357.16,
+  "duration": 3.72,
+  "text": "é isso que ele deve fazer aqui ó uma"
+ },
+ {
+  "start": 359.199,
+  "duration": 4.161,
+  "text": "coisa legal é que nós podemos colocar"
+ },
+ {
+  "start": 360.88,
+  "duration": 4.319,
+  "text": "dados dinâmicos então se eu digitar aqui"
+ },
+ {
+  "start": 363.36,
+  "duration": 3.48,
+  "text": "por exemplo nome do cliente dois pontos"
+ },
+ {
+  "start": 365.199,
+  "duration": 3.601,
+  "text": "e quiser colocar o nome aqui direto no"
+ },
+ {
+  "start": 366.84,
+  "duration": 3.84,
+  "text": "prompt pro nosso agente saber quem é"
+ },
+ {
+  "start": 368.8,
+  "duration": 3.92,
+  "text": "essa pessoa a gente só pega o dado aqui"
+ },
+ {
+  "start": 370.68,
+  "duration": 3.72,
+  "text": "do nome e arrasta pro prompt também que"
+ },
+ {
+  "start": 372.72,
+  "duration": 3.96,
+  "text": "ele vai inserir essa variável outra"
+ },
+ {
+  "start": 374.4,
+  "duration": 4.72,
+  "text": "variável legal é a de data atual então"
+ },
+ {
+  "start": 376.68,
+  "duration": 4.56,
+  "text": "você pode digitar data atual Abrir duas"
+ },
+ {
+  "start": 379.12,
+  "duration": 4.24,
+  "text": "Chaves colocar um cifrão e selecionar"
+ },
+ {
+  "start": 381.24,
+  "duration": 4.28,
+  "text": "esse aqui ó Now essa é uma variável do"
+ },
+ {
+  "start": 383.36,
+  "duration": 4.239,
+  "text": "jav script que retorna a data e horário"
+ },
+ {
+  "start": 385.52,
+  "duration": 4.56,
+  "text": "atual então nós estamos passando aí além"
+ },
+ {
+  "start": 387.599,
+  "duration": 4.201,
+  "text": "do prompt o nome do cliente e a data e"
+ },
+ {
+  "start": 390.08,
+  "duration": 3.32,
+  "text": "horário atual pro nosso agente agora"
+ },
+ {
+  "start": 391.8,
+  "duration": 3.6,
+  "text": "vamos configurar o cérebro do nosso"
+ },
+ {
+  "start": 393.4,
+  "duration": 3.88,
+  "text": "agente Temos vários modelos de a vindo"
+ },
+ {
+  "start": 395.4,
+  "duration": 3.519,
+  "text": "aqui em chat Model eu mostrei Como que"
+ },
+ {
+  "start": 397.28,
+  "duration": 3.96,
+  "text": "você pode pegar uma chave de api do"
+ },
+ {
+  "start": 398.919,
+  "duration": 4.161,
+  "text": "grock que é gratuito e também da Open ai"
+ },
+ {
+  "start": 401.24,
+  "duration": 3.44,
+  "text": "eu vou usar o da Open ai mas se você"
+ },
+ {
+  "start": 403.08,
+  "duration": 3.239,
+  "text": "tiver de algum outro você pode usar de"
+ },
+ {
+  "start": 404.68,
+  "duration": 3.919,
+  "text": "qualquer um desses aqui aqui nas"
+ },
+ {
+  "start": 406.319,
+  "duration": 4.081,
+  "text": "configurações do Open ai chat Model ou"
+ },
+ {
+  "start": 408.599,
+  "duration": 3.481,
+  "text": "do grock se você tiver usando o grock"
+ },
+ {
+  "start": 410.4,
+  "duration": 3.68,
+  "text": "você vai criar uma nova credencial aqui"
+ },
+ {
+  "start": 412.08,
+  "duration": 3.76,
+  "text": "em cima e é muito fácil é só você pegar"
+ },
+ {
+  "start": 414.08,
+  "duration": 4.08,
+  "text": "aquela chave de api que foi gerada e"
+ },
+ {
+  "start": 415.84,
+  "duration": 4.799,
+  "text": "colar nesse Campo pode salvar e já deu"
+ },
+ {
+  "start": 418.16,
+  "duration": 5.56,
+  "text": "sucesso agora vamos Configurar a memória"
+ },
+ {
+  "start": 420.639,
+  "duration": 5.441,
+  "text": "de chat dele vamos usar o banco do redis"
+ },
+ {
+  "start": 423.72,
+  "duration": 4.24,
+  "text": "então adiciona aqui o redis chat Memory"
+ },
+ {
+  "start": 426.08,
+  "duration": 3.88,
+  "text": "e vamos configurar a credencial para"
+ },
+ {
+  "start": 427.96,
+  "duration": 4.12,
+  "text": "quem está usando o Easy panel como eu"
+ },
+ {
+  "start": 429.96,
+  "duration": 4.44,
+  "text": "ensinei as credenciais do Reds ficam"
+ },
+ {
+  "start": 432.08,
+  "duration": 4.239,
+  "text": "nessa página aqui vai no easy panel"
+ },
+ {
+  "start": 434.4,
+  "duration": 3.799,
+  "text": "clica no serviço do Reds e vai em"
+ },
+ {
+  "start": 436.319,
+  "duration": 3.481,
+  "text": "credentials e aqui estão todas as"
+ },
+ {
+  "start": 438.199,
+  "duration": 4.12,
+  "text": "credenciais que a gente precisa colocar"
+ },
+ {
+  "start": 439.8,
+  "duration": 5.04,
+  "text": "lá então aqui a user vou copiar e colar"
+ },
+ {
+  "start": 442.319,
+  "duration": 5.0,
+  "text": "aqui no user a minha senha vou copiar e"
+ },
+ {
+  "start": 444.84,
+  "duration": 5.079,
+  "text": "colar aqui no password o meu host vou"
+ },
+ {
+  "start": 447.319,
+  "duration": 5.201,
+  "text": "copiar colar aqui no HOST a porta não"
+ },
+ {
+  "start": 449.919,
+  "duration": 5.12,
+  "text": "mudou então só vou clicar para salvar e"
+ },
+ {
+  "start": 452.52,
+  "duration": 5.16,
+  "text": "já deu sucesso a próxima configuração é"
+ },
+ {
+  "start": 455.039,
+  "duration": 4.761,
+  "text": "o session ID a gente precisa informar"
+ },
+ {
+  "start": 457.68,
+  "duration": 4.079,
+  "text": "uma chave para ele vincular com aquela"
+ },
+ {
+  "start": 459.8,
+  "duration": 3.64,
+  "text": "pessoa e conseguir trazer as conversas"
+ },
+ {
+  "start": 461.759,
+  "duration": 4.081,
+  "text": "de volta o que que é importante você"
+ },
+ {
+  "start": 463.44,
+  "duration": 4.4,
+  "text": "saber esse deve ser um valor único para"
+ },
+ {
+  "start": 465.84,
+  "duration": 4.079,
+  "text": "cada pessoa O que que é único que não"
+ },
+ {
+  "start": 467.84,
+  "duration": 3.88,
+  "text": "vai mudar de nenhuma pessoa para outra o"
+ },
+ {
+  "start": 469.919,
+  "duration": 3.84,
+  "text": "número então a gente vai colocar como"
+ },
+ {
+  "start": 471.72,
+  "duration": 4.12,
+  "text": "chave o número da pessoa pois é um valor"
+ },
+ {
+  "start": 473.759,
+  "duration": 4.44,
+  "text": "que é único para cada pessoa assim como"
+ },
+ {
+  "start": 475.84,
+  "duration": 4.359,
+  "text": "o CPF nunca vão haver duas pessoas que"
+ },
+ {
+  "start": 478.199,
+  "duration": 3.84,
+  "text": "tem um número de telefone igual aqui em"
+ },
+ {
+  "start": 480.199,
+  "duration": 4.041,
+  "text": "session time to leave é um tempo em"
+ },
+ {
+  "start": 482.039,
+  "duration": 4.081,
+  "text": "segundos que essa chave que essa lista"
+ },
+ {
+  "start": 484.24,
+  "duration": 3.44,
+  "text": "de mensagens vai durar se você quiser"
+ },
+ {
+  "start": 486.12,
+  "duration": 3.359,
+  "text": "que ela dure para sempre pode deixar"
+ },
+ {
+  "start": 487.68,
+  "duration": 4.199,
+  "text": "zero eu quero que dure apenas 1 hora"
+ },
+ {
+  "start": 489.479,
+  "duration": 4.801,
+  "text": "então eu vou colocar 3600 segundos e"
+ },
+ {
+  "start": 491.879,
+  "duration": 4.0,
+  "text": "context Window Len é o tanto de"
+ },
+ {
+  "start": 494.28,
+  "duration": 3.68,
+  "text": "mensagens do histórico que vão ser"
+ },
+ {
+  "start": 495.879,
+  "duration": 4.121,
+  "text": "enviadas pro agente de a como contexto"
+ },
+ {
+  "start": 497.96,
+  "duration": 4.12,
+  "text": "da conversa o padrão vem em cinco eu vou"
+ },
+ {
+  "start": 500.0,
+  "duration": 4.159,
+  "text": "aumentar para 10 pronto a configuração"
+ },
+ {
+  "start": 502.08,
+  "duration": 4.28,
+  "text": "tá feita pode clicar fora e vamos agora"
+ },
+ {
+  "start": 504.159,
+  "duration": 3.88,
+  "text": "configurar uma Tool existem vários tipos"
+ },
+ {
+  "start": 506.36,
+  "duration": 3.72,
+  "text": "de Tool as que eu acho mais legais"
+ },
+ {
+  "start": 508.039,
+  "duration": 4.601,
+  "text": "dessas que já vem pré-definida são as do"
+ },
+ {
+  "start": 510.08,
+  "duration": 4.12,
+  "text": "Google Drive Google sheets Google Docs"
+ },
+ {
+  "start": 512.64,
+  "duration": 3.519,
+  "text": "eu vou fazer outro vídeo mostrando como"
+ },
+ {
+  "start": 514.2,
+  "duration": 4.399,
+  "text": "que integra elas nesse exemplo eu vou"
+ },
+ {
+  "start": 516.159,
+  "duration": 4.521,
+  "text": "usar uma requisição http mas olha só que"
+ },
+ {
+  "start": 518.599,
+  "duration": 3.88,
+  "text": "legal você pode usar outros workflows"
+ },
+ {
+  "start": 520.68,
+  "duration": 4.48,
+  "text": "como Tools você pode usar código"
+ },
+ {
+  "start": 522.479,
+  "duration": 4.681,
+  "text": "JavaScript ou Python e requisições http"
+ },
+ {
+  "start": 525.16,
+  "duration": 3.56,
+  "text": "ou seja praticamente qualquer coisa"
+ },
+ {
+  "start": 527.16,
+  "duration": 4.119,
+  "text": "então eu vou adicionar aqui a requisição"
+ },
+ {
+  "start": 528.72,
+  "duration": 4.48,
+  "text": "e configurar o node uma requisição http"
+ },
+ {
+  "start": 531.279,
+  "duration": 3.921,
+  "text": "nada mais é do que consultar uma página"
+ },
+ {
+  "start": 533.2,
+  "duration": 3.4,
+  "text": "no caso eu vou consultar a minha api"
+ },
+ {
+  "start": 535.2,
+  "duration": 4.24,
+  "text": "então eu vou colocar aqui na descrição"
+ },
+ {
+  "start": 536.6,
+  "duration": 4.679,
+  "text": "dessa Tool que é retorna dados sobre loc"
+ },
+ {
+  "start": 539.44,
+  "duration": 4.519,
+  "text": "kais in Foz do Iguaçu o método que eu"
+ },
+ {
+  "start": 541.279,
+  "duration": 4.921,
+  "text": "configurei lá na minha api é get e a URL"
+ },
+ {
+  "start": 543.959,
+  "duration": 4.161,
+  "text": "eu vou digitar aqui a URL basicamente é"
+ },
+ {
+  "start": 546.2,
+  "duration": 4.28,
+  "text": "o link do site se você quiser consultar"
+ },
+ {
+  "start": 548.12,
+  "duration": 4.399,
+  "text": "uma página também para fazer um um teste"
+ },
+ {
+  "start": 550.48,
+  "duration": 4.28,
+  "text": "é só você colocar o link dessa página"
+ },
+ {
+  "start": 552.519,
+  "duration": 4.521,
+  "text": "aqui na URL feita essa configuração"
+ },
+ {
+  "start": 554.76,
+  "duration": 4.44,
+  "text": "simples pode clicar fora e salvar agora"
+ },
+ {
+  "start": 557.04,
+  "duration": 4.52,
+  "text": "vamos responder a pessoa com a resposta"
+ },
+ {
+  "start": 559.2,
+  "duration": 4.44,
+  "text": "gerada pela ia adiciona mais um nó aqui"
+ },
+ {
+  "start": 561.56,
+  "duration": 4.2,
+  "text": "da Evolution agora Primeiro vou"
+ },
+ {
+  "start": 563.64,
+  "duration": 4.28,
+  "text": "visualizar a mensagem que chegou então"
+ },
+ {
+  "start": 565.76,
+  "duration": 4.16,
+  "text": "aqui no recurso eu vou colocar chat a"
+ },
+ {
+  "start": 567.92,
+  "duration": 3.4,
+  "text": "operação vai ser ler mensag"
+ },
+ {
+  "start": 569.92,
+  "duration": 3.44,
+  "text": "vou clicar aqui para trazer os dados"
+ },
+ {
+  "start": 571.32,
+  "duration": 4.48,
+  "text": "anteriores e vamos lá o nome da"
+ },
+ {
+  "start": 573.36,
+  "duration": 4.32,
+  "text": "instância vai ser a Instância que é o"
+ },
+ {
+  "start": 575.8,
+  "duration": 4.0,
+  "text": "nome que a gente dá lá na Evolution"
+ },
+ {
+  "start": 577.68,
+  "duration": 4.279,
+  "text": "quando cria ela o contato vai ser o"
+ },
+ {
+  "start": 579.8,
+  "duration": 3.96,
+  "text": "número de quem mandou e o ID da mensagem"
+ },
+ {
+  "start": 581.959,
+  "duration": 3.641,
+  "text": "vai ser o ID da mensagem que a gente já"
+ },
+ {
+  "start": 583.76,
+  "duration": 3.56,
+  "text": "colocou aqui no set pode clicar para"
+ },
+ {
+  "start": 585.6,
+  "duration": 3.52,
+  "text": "testar que ele vai visualizar lá no"
+ },
+ {
+  "start": 587.32,
+  "duration": 3.48,
+  "text": "WhatsApp se você for lá conferir vamos"
+ },
+ {
+  "start": 589.12,
+  "duration": 3.6,
+  "text": "adicionar mais um agora da Evolution de"
+ },
+ {
+  "start": 590.8,
+  "duration": 3.88,
+  "text": "novo e dessa vez vai ser para enviar a"
+ },
+ {
+  "start": 592.72,
+  "duration": 4.4,
+  "text": "resposta então vai ser aqui o recurso"
+ },
+ {
+  "start": 594.68,
+  "duration": 4.719,
+  "text": "mensagem enviar texto na operação e o"
+ },
+ {
+  "start": 597.12,
+  "duration": 4.48,
+  "text": "nome da instância a mesma coisa pega lá"
+ },
+ {
+  "start": 599.399,
+  "duration": 4.241,
+  "text": "do node dados um número pega aqui o quem"
+ },
+ {
+  "start": 601.6,
+  "duration": 3.679,
+  "text": "mandou o número da pessoa que mandou e a"
+ },
+ {
+  "start": 603.64,
+  "duration": 2.92,
+  "text": "mensagem é aqui que muita gente estava"
+ },
+ {
+  "start": 605.279,
+  "duration": 3.161,
+  "text": "com dúvida me perguntando nos"
+ },
+ {
+  "start": 606.56,
+  "duration": 4.519,
+  "text": "comentários dos outros vídeos aqui a"
+ },
+ {
+  "start": 608.44,
+  "duration": 4.72,
+  "text": "gente coloca o output do node do ai"
+ },
+ {
+  "start": 611.079,
+  "duration": 3.76,
+  "text": "Agent a resposta que o agente de a nos"
+ },
+ {
+  "start": 613.16,
+  "duration": 3.76,
+  "text": "deu nós vamos colocar aqui no campo"
+ },
+ {
+  "start": 614.839,
+  "duration": 4.081,
+  "text": "mensagem para ser enviado direto lá pro"
+ },
+ {
+  "start": 616.92,
+  "duration": 3.68,
+  "text": "WhatsApp por último aqui nas opções tem"
+ },
+ {
+  "start": 618.92,
+  "duration": 3.96,
+  "text": "esse delay que é um tempo para ficar"
+ },
+ {
+  "start": 620.6,
+  "duration": 4.76,
+  "text": "digitando eu vou configurar aqui 3000"
+ },
+ {
+  "start": 622.88,
+  "duration": 4.399,
+  "text": "msos para ele digitar 3 segundos antes"
+ },
+ {
+  "start": 625.36,
+  "duration": 4.08,
+  "text": "de enviar as mensagens também tem essa"
+ },
+ {
+  "start": 627.279,
+  "duration": 4.161,
+  "text": "outra opção aqui ó legal preview de link"
+ },
+ {
+  "start": 629.44,
+  "duration": 4.16,
+  "text": "que é quando você manda um link aparecer"
+ },
+ {
+  "start": 631.44,
+  "duration": 3.88,
+  "text": "aquela fotinha do site em cima para quem"
+ },
+ {
+  "start": 633.6,
+  "duration": 4.2,
+  "text": "for enviar bastante link eu acho legal"
+ },
+ {
+  "start": 635.32,
+  "duration": 4.56,
+  "text": "essa opção e tá pronto o fluxo do agente"
+ },
+ {
+  "start": 637.8,
+  "duration": 3.839,
+  "text": "vou clicar aqui agora para testar e me"
+ },
+ {
+  "start": 639.88,
+  "duration": 4.0,
+  "text": "mandar uma mensagem no WhatsApp nesse"
+ },
+ {
+  "start": 641.639,
+  "duration": 3.921,
+  "text": "número que eu configurei aqui ó mandei a"
+ },
+ {
+  "start": 643.88,
+  "duration": 3.84,
+  "text": "mensagem chegou ele fez aqui o"
+ },
+ {
+  "start": 645.56,
+  "duration": 4.56,
+  "text": "processamento bem"
+ },
+ {
+  "start": 647.72,
+  "duration": 4.359,
+  "text": "rápido agora eu vou fazer uma pergunta"
+ },
+ {
+  "start": 650.12,
+  "duration": 3.48,
+  "text": "sobre Foz de Iguaçu para ver se ele vai"
+ },
+ {
+  "start": 652.079,
+  "duration": 3.481,
+  "text": "utilizar a ferramenta que eu dei para"
+ },
+ {
+  "start": 653.6,
+  "duration": 5.12,
+  "text": "ele então eu vou testar de novo e vou"
+ },
+ {
+  "start": 655.56,
+  "duration": 5.519,
+  "text": "perguntar quais pontos turísticos tem em"
+ },
+ {
+  "start": 658.72,
+  "duration": 3.76,
+  "text": "fo ele consultou ali a Tool ele tá"
+ },
+ {
+  "start": 661.079,
+  "duration": 3.081,
+  "text": "demorando agora um pouquinho para fazer"
+ },
+ {
+  "start": 662.48,
+  "duration": 5.68,
+  "text": "o processamento né porque a resposta"
+ },
+ {
+  "start": 664.16,
+  "duration": 6.32,
+  "text": "dessa pi aí é gigante tem mais de 3.000"
+ },
+ {
+  "start": 668.16,
+  "duration": 4.08,
+  "text": "linhas e pronto ele me deu aqui a"
+ },
+ {
+  "start": 670.48,
+  "duration": 3.76,
+  "text": "resposta com vários locais em Foz de"
+ },
+ {
+  "start": 672.24,
+  "duration": 4.32,
+  "text": "Iguaçu para visitar funcionou então um"
+ },
+ {
+  "start": 674.24,
+  "duration": 4.68,
+  "text": "agente de a integrado no WhatsApp com"
+ },
+ {
+  "start": 676.56,
+  "duration": 4.24,
+  "text": "ferramentas que consulta a minha api"
+ },
+ {
+  "start": 678.92,
+  "duration": 3.56,
+  "text": "agora eu vou fazer o adendo de Por que"
+ },
+ {
+  "start": 680.8,
+  "duration": 4.36,
+  "text": "foi colocado aquele set vazio ali no"
+ },
+ {
+  "start": 682.48,
+  "duration": 4.56,
+  "text": "meio é porque é o seguinte no n8n quando"
+ },
+ {
+  "start": 685.16,
+  "duration": 4.16,
+  "text": "você arrasta os dados de um node"
+ },
+ {
+  "start": 687.04,
+  "duration": 5.08,
+  "text": "anterior por exemplo um node apenas"
+ },
+ {
+  "start": 689.32,
+  "duration": 5.0,
+  "text": "antes ele traz dessa forma aqui json pon"
+ },
+ {
+  "start": 692.12,
+  "duration": 4.08,
+  "text": "nome do campo quando nós evoluirmos esse"
+ },
+ {
+  "start": 694.32,
+  "duration": 3.759,
+  "text": "workflow mais pra frente que eu vou"
+ },
+ {
+  "start": 696.2,
+  "duration": 4.319,
+  "text": "utilizar ele como base pros próximos"
+ },
+ {
+  "start": 698.079,
+  "duration": 4.121,
+  "text": "vídeos isso aqui iria dar bug a gente ia"
+ },
+ {
+  "start": 700.519,
+  "duration": 3.401,
+  "text": "ter que fazer alteração aqui e algumas"
+ },
+ {
+  "start": 702.2,
+  "duration": 3.96,
+  "text": "pessoas ficariam perdidas Então já"
+ },
+ {
+  "start": 703.92,
+  "duration": 3.919,
+  "text": "pensando nisso eu inseri um node fake"
+ },
+ {
+  "start": 706.16,
+  "duration": 3.479,
+  "text": "ali no meio para ele já trazer dessa"
+ },
+ {
+  "start": 707.839,
+  "duration": 4.161,
+  "text": "forma indicando de qual node que vem o"
+ },
+ {
+  "start": 709.639,
+  "duration": 4.161,
+  "text": "dado em vez de apenas json P message"
+ },
+ {
+  "start": 712.0,
+  "duration": 3.48,
+  "text": "Então é isso esse é o nosso workflow"
+ },
+ {
+  "start": 713.8,
+  "duration": 3.76,
+  "text": "Pronto agora a gente pode colocar ele"
+ },
+ {
+  "start": 715.48,
+  "duration": 5.24,
+  "text": "pra produção vindo aqui no node do Web"
+ },
+ {
+  "start": 717.56,
+  "duration": 6.2,
+  "text": "Hook mudando para product URL copiando"
+ },
+ {
+  "start": 720.72,
+  "duration": 6.0,
+  "text": "ela vindo aqui na Evolution api events"
+ },
+ {
+  "start": 723.76,
+  "duration": 6.04,
+  "text": "web Hook Cola essa URL nova vai lá"
+ },
+ {
+  "start": 726.72,
+  "duration": 4.88,
+  "text": "embaixo clica em salvar volta no n8n e"
+ },
+ {
+  "start": 729.8,
+  "duration": 3.52,
+  "text": "ativa o workflow agora ele vai est"
+ },
+ {
+  "start": 731.6,
+  "duration": 3.799,
+  "text": "respondendo todo mundo que enviar"
+ },
+ {
+  "start": 733.32,
+  "duration": 3.48,
+  "text": "mensagem utilizando essas ferramentas e"
+ },
+ {
+  "start": 735.399,
+  "duration": 3.281,
+  "text": "lógicas que a gente criou ali e"
+ },
+ {
+  "start": 736.8,
+  "duration": 3.24,
+  "text": "lembrando que o download desse fluxo que"
+ },
+ {
+  "start": 738.68,
+  "duration": 3.32,
+  "text": "foi feito aqui no vídeo está na"
+ },
+ {
+  "start": 740.04,
+  "duration": 3.88,
+  "text": "descrição e também vou deixar um docker"
+ },
+ {
+  "start": 742.0,
+  "duration": 3.88,
+  "text": "compose aí na descrição para quem ainda"
+ },
+ {
+  "start": 743.92,
+  "duration": 4.159,
+  "text": "não tem uma VPS e tá só querendo se"
+ },
+ {
+  "start": 745.88,
+  "duration": 4.28,
+  "text": "aventurar e testar Você só vai precisar"
+ },
+ {
+  "start": 748.079,
+  "duration": 4.44,
+  "text": "baixar essa pasta que o deixei abri ela"
+ },
+ {
+  "start": 750.16,
+  "duration": 5.479,
+  "text": "abrir um terminal nela e digitar pon"
+ },
+ {
+  "start": 752.519,
+  "duration": 5.12,
+  "text": "barst pps1 para quem tá no Windows aí"
+ },
+ {
+  "start": 755.639,
+  "duration": 3.521,
+  "text": "você dá as respostas que o script vai"
+ },
+ {
+  "start": 757.639,
+  "duration": 3.521,
+  "text": "pedir por exemplo a sua senha do"
+ },
+ {
+  "start": 759.16,
+  "duration": 4.32,
+  "text": "postgress sua senha do Heads o seu"
+ },
+ {
+  "start": 761.16,
+  "duration": 4.56,
+  "text": "e-mail de admin do PG admin espera ele"
+ },
+ {
+  "start": 763.48,
+  "duration": 4.799,
+  "text": "baixar e subir os containers e pronto"
+ },
+ {
+  "start": 765.72,
+  "duration": 4.72,
+  "text": "você tem uma Evolution com n8n instalado"
+ },
+ {
+  "start": 768.279,
+  "duration": 3.721,
+  "text": "aí localmente quando eu fiz o script eu"
+ },
+ {
+  "start": 770.44,
+  "duration": 3.519,
+  "text": "esqueci de configurar uma senha para"
+ },
+ {
+  "start": 772.0,
+  "duration": 3.92,
+  "text": "Evolution mas a senha padrão vai est aí"
+ },
+ {
+  "start": 773.959,
+  "duration": 3.841,
+  "text": "na descrição aí quando você quiser parar"
+ },
+ {
+  "start": 775.92,
+  "duration": 4.12,
+  "text": "os contêiners É só abrir o aplicativo do"
+ },
+ {
+  "start": 777.8,
+  "duration": 4.32,
+  "text": "docker e parar e para iniciar de novo a"
+ },
+ {
+  "start": 780.04,
+  "duration": 4.599,
+  "text": "mesma coisa Abre o aplicativo do docker"
+ },
+ {
+  "start": 782.12,
+  "duration": 4.64,
+  "text": "e clica para iniciar todos aquele script"
+ },
+ {
+  "start": 784.639,
+  "duration": 3.921,
+  "text": "você só utiliza da primeira vez e no"
+ },
+ {
+  "start": 786.76,
+  "duration": 3.36,
+  "text": "mais é isso muito obrigado aí pessoal"
+ },
+ {
+  "start": 788.56,
+  "duration": 5.279,
+  "text": "quem que tá assistindo os vídeos ó já"
+ },
+ {
+  "start": 790.12,
+  "duration": 5.76,
+  "text": "estamos com 525 inscritos e foi pouco"
+ },
+ {
+  "start": 793.839,
+  "duration": 3.68,
+  "text": "tempo que eu comecei então agradeço e"
+ },
+ {
+  "start": 795.88,
+  "duration": 3.88,
+  "text": "aqui os próximos vídeos que eu vou fazer"
+ },
+ {
+  "start": 797.519,
+  "duration": 3.841,
+  "text": "eu já deixei anotado vai ser para juntar"
+ },
+ {
+  "start": 799.76,
+  "duration": 4.04,
+  "text": "mensagens para evitar dele ficar"
+ },
+ {
+  "start": 801.36,
+  "duration": 3.68,
+  "text": "respondendo é uma vez para cada sabe"
+ },
+ {
+  "start": 803.8,
+  "duration": 3.12,
+  "text": "então ele vai ficar ali uns 10"
+ },
+ {
+  "start": 805.04,
+  "duration": 4.44,
+  "text": "segundinhos juntando para caso a pessoa"
+ },
+ {
+  "start": 806.92,
+  "duration": 4.24,
+  "text": "Fale oi tudo bem como vai em três mensag"
+ },
+ {
+  "start": 809.48,
+  "duration": 3.56,
+  "text": "é também vou fazer para ele parar de"
+ },
+ {
+  "start": 811.16,
+  "duration": 4.08,
+  "text": "responder quando um humano enviar"
+ },
+ {
+  "start": 813.04,
+  "duration": 4.08,
+  "text": "mensagem e quebrar uma mensagem Longa em"
+ },
+ {
+  "start": 815.24,
+  "duration": 4.08,
+  "text": "várias menores para não ficar aquele"
+ },
+ {
+  "start": 817.12,
+  "duration": 4.48,
+  "text": "textinho de ler mais beleza então se"
+ },
+ {
+  "start": 819.32,
+  "duration": 3.8,
+  "text": "você gostou dá um like e comente aí a"
+ },
+ {
+  "start": 821.6,
+  "duration": 4.08,
+  "text": "sua dúvida que eu vou responder todo"
+ },
+ {
+  "start": 823.12,
+  "duration": 2.56,
+  "text": "mundo"
+ }
+]
