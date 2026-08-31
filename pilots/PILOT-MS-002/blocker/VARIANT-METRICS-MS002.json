@@ -1,0 +1,87 @@
+{
+ "design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+ "population": 82020,
+ "capacity": 300,
+ "order": [
+  "V1",
+  "V3",
+  "V4",
+  "V2",
+  "V5",
+  "V6",
+  "V7"
+ ],
+ "metrics": {
+  "V1": {
+   "retained": 20292,
+   "retention_rate": 0.247403,
+   "per_combo": {
+    "A-B": 7055,
+    "A-C": 11472,
+    "B-C": 1765
+   },
+   "fits_capacity": false
+  },
+  "V3": {
+   "retained": 24261,
+   "retention_rate": 0.295794,
+   "per_combo": {
+    "A-B": 10975,
+    "A-C": 11521,
+    "B-C": 1765
+   },
+   "fits_capacity": false
+  },
+  "V4": {
+   "retained": 8545,
+   "retention_rate": 0.104182,
+   "per_combo": {
+    "A-B": 6049,
+    "A-C": 1858,
+    "B-C": 638
+   },
+   "fits_capacity": false
+  },
+  "V2": {
+   "retained": 6174,
+   "retention_rate": 0.075274,
+   "per_combo": {
+    "A-B": 5552,
+    "A-C": 135,
+    "B-C": 487
+   },
+   "fits_capacity": false
+  },
+  "V5": {
+   "retained": 518,
+   "retention_rate": 0.006316,
+   "per_combo": {
+    "A-B": 223,
+    "A-C": 32,
+    "B-C": 263
+   },
+   "fits_capacity": false
+  },
+  "V6": {
+   "retained": 51,
+   "retention_rate": 0.000622,
+   "per_combo": {
+    "A-B": 12,
+    "B-C": 39
+   },
+   "fits_capacity": true
+  },
+  "V7": {
+   "retained": 50,
+   "retention_rate": 0.00061,
+   "per_combo": {
+    "A-B": 11,
+    "B-C": 39
+   },
+   "fits_capacity": true
+  }
+ },
+ "selected": "V6",
+ "capacity_limited_sample": false,
+ "cross_language_note": "V1..V7 medidos por combo; A-B e A-C atravessam a fronteira ingles/portugues"
+}

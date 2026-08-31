@@ -1,0 +1,8 @@
+{
+ "population": 82020,
+ "retained": 51,
+ "blocked": 81969,
+ "variant": "V6",
+ "reason_code": "BELOW_VARIANT_THRESHOLD",
+ "note": "traco agregado; o traco por par retido esta em PAIRSET-MS002.json/feature_trace"
+}

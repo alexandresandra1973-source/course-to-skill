@@ -1,0 +1,1349 @@
+{
+ "blocker_version": "v1.0",
+ "blocker_variant": "V6",
+ "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+ "selection_rule": "selecionar a variante MENOS ESTRITA cuja contagem de pares retidos seja <= MAX_PAIRS_FOR_JUDGE, na ordem V1,V3,V4,V2,V5,V6,V7",
+ "capacity_limited_sample": false,
+ "source_package_hash_A": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+ "source_package_hash_B": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+ "source_package_hash_C": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+ "population": 82020,
+ "n_pairs": 51,
+ "pairs": [
+  {
+   "pair_id": "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "credential_auth",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0052"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "test_validate",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0009"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "instance_session",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "instance_session",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0003"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0003"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0009"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "evolution_api",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "evolution_api",
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0034"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0492"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "hosting",
+     "lead_customer"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0290"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "hosting"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0041"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "dashboard_data",
+     "group_contact",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0598"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0034"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "hosting",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "group_contact"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "message",
+     "test_validate",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0032"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "credential_auth",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "hosting"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0052"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0033"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0001"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "conversation",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0084"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0041"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "hosting",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0034"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "group_contact"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "credential_auth",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "group_contact",
+     "message"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0492"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "hosting",
+     "webhook_event"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0033"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0290"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "hosting"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "hosting"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "credential_auth",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "credential_auth",
+     "database_memory",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0046"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "message",
+     "test_validate",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "group_contact"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0037"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "group_contact"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0037"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "hosting"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0001"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "conversation",
+     "group_contact",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "evolution_api"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 3
+   }
+  },
+  {
+   "pair_id": "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "group_contact",
+     "message",
+     "whatsapp"
+    ],
+    "shared_objects": [
+     "whatsapp"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "database_memory",
+     "evolution_api",
+     "hosting"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "database_memory",
+     "group_contact"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+   "left": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "right": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "evolution_api",
+     "instance_session"
+    ],
+    "shared_objects": [
+     "evolution_api"
+    ],
+    "n_shared_content_tokens": 1
+   }
+  },
+  {
+   "pair_id": "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0281"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "hosting",
+     "webhook_event"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 2
+   }
+  },
+  {
+   "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+   "left": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0480"
+   },
+   "right": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "blocker_variant": "V6",
+   "blocker_design_hash": "7b8b7fd954c13997c16066c41aae091630ded25f5dd9abf5323d70849c0a8d45",
+   "feature_trace": {
+    "shared_concepts": [
+     "api_tool",
+     "group_contact",
+     "message"
+    ],
+    "shared_objects": [
+     "claude_code"
+    ],
+    "n_shared_content_tokens": 0
+   }
+  }
+ ],
+ "PAIRSET_HASH": "62293fb3544c313cb7aee8c13b34a7d4ba2dfcc2598b9ace9472e8883121c159"
+}
