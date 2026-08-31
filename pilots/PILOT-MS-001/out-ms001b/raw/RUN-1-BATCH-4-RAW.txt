@@ -1,0 +1,194 @@
+{
+  "batch_id": "BATCH-4",
+  "judgments": [
+    {
+      "pair_id": "cbacf98d38b5461066673aa6f49182b5171c24123c23d786c04d3d1d1bd82def",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A esquerda trata de conferir plano e produto na tela de carrinho de contratacao; a direita trata de instalar community nodes da Evolution api dentro do n8n. Objetos, plataformas e etapas materialmente distintos; apenas o termo 'Evolution API' e compartilhado.",
+      "left_evidence_refs_checked": ["EV-0018", "EV-0019"],
+      "right_evidence_refs_checked": ["EV-0014"]
+    },
+    {
+      "pair_id": "d4ce7eba9b469402c796a0d1f2922c0154867ef5c335abf34342ce67495b50c0",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A esquerda descreve gerar QR Code para conectar o numero do WhatsApp a uma instancia desconectada; a direita indica em qual campo do payload (Body instance) a instancia se encontra. A palavra 'instancia' e compartilhada, mas os objetos materiais sao distintos.",
+      "left_evidence_refs_checked": ["EV-0031", "EV-0032", "EV-0033"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "d5c1356fdba6232ce338a49b420d0b69d4b64374a2096ca5e6e176a321eeba80",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Criacao de instancia na interface do Evolution API versus localizacao do campo instancia no corpo do payload. Substancias diferentes; sobreposicao apenas lexical no termo 'instancia'.",
+      "left_evidence_refs_checked": ["EV-0030", "EV-0031"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "db1935a05138fbd71280bf75eb4e3e8753943a041a2f149a5b5c47ea2faa714e",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Hospedagem e gratuidade do Evolution API nao tem relacao material com o procedimento de criar uma chave de API na OpenAI. Plataformas e objetos completamente distintos.",
+      "left_evidence_refs_checked": ["EV-0009", "EV-0010"],
+      "right_evidence_refs_checked": ["EV-0010"]
+    },
+    {
+      "pair_id": "dbfecbcf92f8d66f5ce1d7e7a8256709884d5a15640f43b33d38c56e4ac50885",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Requisito de hospedar o Evolution API em VPS nao guarda relacao material com a descricao das pecas de um agente (ferramentas). Objetos e escopos distintos.",
+      "left_evidence_refs_checked": ["EV-0010"],
+      "right_evidence_refs_checked": ["EV-0029", "EV-0030"]
+    },
+    {
+      "pair_id": "e13558771db4c23ba9382b756b8d37e8fcffbcc5140fb8cfbae5fce30c0b69f5",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Papel do Cloud Code como orquestrador da stack de gerenciamento de grupos versus descricao da memoria de chat como segunda peca de um agente. Nao ha objeto material comum.",
+      "left_evidence_refs_checked": ["EV-0004", "EV-0005", "EV-0006"],
+      "right_evidence_refs_checked": ["EV-0028", "EV-0029"]
+    },
+    {
+      "pair_id": "e199d662177c5867c3db1bef8d694181435fe6b04858942ad34be15a03b2c93f",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Custo de API nao oficial do WhatsApp versus procedimento de criacao de chave de API na Groq. Apenas o termo 'API' e compartilhado; objetos e plataformas distintos.",
+      "left_evidence_refs_checked": ["EV-0007", "EV-0008"],
+      "right_evidence_refs_checked": ["EV-0008", "EV-0009"]
+    },
+    {
+      "pair_id": "e35c2c973e3acca85c641c54862ff31105809830691a24479d87486660069372",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Conexao do numero de WhatsApp via Evolution API nao tem relacao material com o procedimento de criar chave de API no painel da Groq. Plataformas e objetos diferentes.",
+      "left_evidence_refs_checked": ["EV-0007"],
+      "right_evidence_refs_checked": ["EV-0008", "EV-0009"]
+    },
+    {
+      "pair_id": "e3a4265b587a1d080db47c0c82bfb041b34eb8a4c924fd259c1560d6940e91a0",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Acesso ao manager do Evolution API pela URL versus criacao de chave de API na OpenAI. Nenhuma sobreposicao material de objeto ou condicao.",
+      "left_evidence_refs_checked": ["EV-0025", "EV-0026"],
+      "right_evidence_refs_checked": ["EV-0010"]
+    },
+    {
+      "pair_id": "e6eafc32dc7c64a25373fd9f2ed8412914427f397aa26d299b84cf99cc6b5211",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Criacao de instancia na interface do Evolution API versus enumeracao de cinco campos de dados a serem extraidos de mensagens. Coincidencia lexical em 'Instancia' nao estabelece relacao material.",
+      "left_evidence_refs_checked": ["EV-0030", "EV-0031"],
+      "right_evidence_refs_checked": ["EV-0021", "EV-0022"]
+    },
+    {
+      "pair_id": "e74173ee58c74a2cf1c56d69a39b49eda097ebae2bbc0955cdded1c41e05c62d",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Hospedagem e custo do Evolution API versus verificacao de community nodes da Evolution api no n8n. Objetos e plataformas distintos; apenas o nome do produto e compartilhado.",
+      "left_evidence_refs_checked": ["EV-0009", "EV-0010"],
+      "right_evidence_refs_checked": ["EV-0013"]
+    },
+    {
+      "pair_id": "ec0f3b3643ee1d532fc281f6f7a07c29ec057f462df6a2430885ce629585aa84",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Conferencia do carrinho de contratacao do Evolution API versus criacao de chave de API na Groq. Etapas, plataformas e objetos materialmente distintos.",
+      "left_evidence_refs_checked": ["EV-0018", "EV-0019"],
+      "right_evidence_refs_checked": ["EV-0008", "EV-0009"]
+    },
+    {
+      "pair_id": "f033e675db9cb8f6d953033a1688c560c75c7253e21a68fabb825161ae16b24b",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Etapa de criar instancia e conectar o numero do WhatsApp versus localizacao do campo instancia no payload (Body instance). Objetos materiais diferentes apesar do termo comum.",
+      "left_evidence_refs_checked": ["EV-0029", "EV-0030"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "f04188bbc8be111143331feabdb7b5d98f9571064969c7f4893011c4783bafa9",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Escolha da localidade do servidor no carrinho versus instalacao do Redis pelo EasyPanel. Nenhuma sobreposicao material de objeto, etapa ou condicao.",
+      "left_evidence_refs_checked": ["EV-0019", "EV-0020"],
+      "right_evidence_refs_checked": ["EV-0002", "EV-0003"]
+    },
+    {
+      "pair_id": "f058b53383c0f56216415571941eb3e763578fff748829ebb3f06747552e3653",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Lista de acoes de gerenciamento de grupos de WhatsApp versus descricao da memoria de chat como segunda peca de um agente. Objetos e escopos materialmente distintos.",
+      "left_evidence_refs_checked": ["EV-0001", "EV-0002", "EV-0003"],
+      "right_evidence_refs_checked": ["EV-0028", "EV-0029"]
+    },
+    {
+      "pair_id": "f41d01863f32035940237c5c6dd1fba5be189cd719865420ad7cf5066501b1c8",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Requisito de hospedagem em VPS do Evolution API versus passos iniciais de construcao de workflow no n8n com node de webhook. Sem objeto material comum.",
+      "left_evidence_refs_checked": ["EV-0010"],
+      "right_evidence_refs_checked": ["EV-0016"]
+    },
+    {
+      "pair_id": "f8cfcbf4de2a2ca6167cbb62fcfddcf68e88c899b011d36686ddf21b25e7310f",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Criacao de instancia no Evolution API versus adicao de node de webhook no inicio do workflow do n8n. Plataformas, etapas e objetos distintos.",
+      "left_evidence_refs_checked": ["EV-0030", "EV-0031"],
+      "right_evidence_refs_checked": ["EV-0016"]
+    },
+    {
+      "pair_id": "f90bc6da7597ce4195d293755d127329d4ea71d873c65b5ee8fb1ad9336764b0",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Etapa de criar instancia e conectar numero de WhatsApp versus enumeracao dos cinco campos de dados de mensagem. Coincidencia do termo 'Instancia' nao configura relacao material.",
+      "left_evidence_refs_checked": ["EV-0029", "EV-0030"],
+      "right_evidence_refs_checked": ["EV-0021", "EV-0022"]
+    },
+    {
+      "pair_id": "f9b19a103d851e5412e1bf875d628bdfa6d50ef145dd2a3bd3c5cbd51ad0f148",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Diferenca entre a tela do apresentador e a tela de primeiro acesso do espectador versus localizacao do campo instancia no payload. Objetos materialmente distintos.",
+      "left_evidence_refs_checked": ["EV-0027", "EV-0028"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "fa48b553b7abac9c253785ff186968ad852f3be400e950459c6c6419dea2d136",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Necessidade de hospedar o Evolution API em VPS versus procedimento de instalar o Redis pelo EasyPanel. Servicos e escopos diferentes; nenhuma proposicao comum.",
+      "left_evidence_refs_checked": ["EV-0010"],
+      "right_evidence_refs_checked": ["EV-0002", "EV-0003"]
+    },
+    {
+      "pair_id": "fa899ac75958c770c2962905af9a910c67ccb5748c92f5c71488837c5aaca7a3",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Etapa de criar instancia e conectar o numero do WhatsApp versus configuracao do events webhook colando a URL na sessao da Evolution. Ambas na mesma plataforma, mas tratam de objetos e etapas materialmente distintos, sem convergencia nem conflito sobre a mesma substancia.",
+      "left_evidence_refs_checked": ["EV-0029", "EV-0030"],
+      "right_evidence_refs_checked": ["EV-0016", "EV-0017"]
+    }
+  ]
+}

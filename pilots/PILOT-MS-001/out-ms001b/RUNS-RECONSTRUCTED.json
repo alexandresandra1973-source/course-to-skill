@@ -1,0 +1,3262 @@
+{
+ "RUN-1": {
+  "control": {
+   "detail": [
+    {
+     "id": "J1",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J2",
+     "got": {
+      "relation": "CORROBORATES",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J3",
+     "got": {
+      "relation": "SPECIALIZES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J4",
+     "got": {
+      "relation": "CONTRADICTS",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J5",
+     "got": {
+      "relation": "SUPERSEDES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J6",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J7",
+     "got": {
+      "relation": "INDETERMINATE",
+      "direction": "NONE",
+      "scope_state": "AMBIGUOUS_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J8",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J9",
+     "got": {
+      "relation": "CORROBORATES",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J10",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    }
+   ],
+   "ok": true,
+   "schema_errors": []
+  },
+  "batches": {
+   "BATCH-1": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-2": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-3": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-4": {
+    "status": "INVALID",
+    "errors": [
+     "R15_PAIR_MISSING"
+    ],
+    "recebidos": 21,
+    "faltando": [
+     "f5fa1fbc0bbb6b892845b967b2179364ba0a0642995c6755bb83c09bcb5dad76"
+    ],
+    "n_faltando": 1
+   }
+  },
+  "judgments": {
+   "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359": {
+    "pair_id": "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de etapa de verificacao/criacao de conta na HostGator; a direita trata de instalar o servico Redis via EasyPanel. Objetos, plataformas e etapas materialmente distintos; nao ha substancia comum alem de serem passos de interface.",
+    "left_evidence_refs_checked": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8": {
+    "pair_id": "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve conferencia do plano na tela de carrinho de contratacao; a direita descreve obter chave de API de provedores de LLM. Objetos e etapas totalmente distintos, sem substancia comparavel.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a": {
+    "pair_id": "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda afirma capacidade do Evolution API de conectar numero de WhatsApp como WhatsApp Web; a direita descreve verificar nodes da Evolution api instalados no n8n antes de criar workflow. Compartilham apenas o nome 'Evolution API', mas os objetos e escopos sao distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1": {
+    "pair_id": "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve o portal da VPS com acesso rapido ao Evolution API; a direita descreve criar chave de API no console do Groq. Plataformas e objetos distintos; a mencao a 'API' nao estabelece relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d": {
+    "pair_id": "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve o papel do Cloud Code como orquestrador da stack; a direita indica a localizacao de um campo de mensagem em um payload (Body data message conversation). Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0004",
+     "EV-0005",
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f": {
+    "pair_id": "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda identifica a VPS usada pelo autor (HostGator, com pre-instalacao); a direita descreve instalar Redis pelo EasyPanel. Plataformas e objetos distintos, sem sobreposicao material.",
+    "left_evidence_refs_checked": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b": {
+    "pair_id": "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve criacao de instancia no Evolution API; a direita descreve reducao dos dados exibidos a cinco campos apos clicar em teste em um node. Objetos e contextos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c": {
+    "pair_id": "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a conexao do Cloud Code com o Evolution API; a direita descreve criar chave de API nas configuracoes da OpenAI. Plataformas e objetos distintos; apenas o termo 'API' e compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e": {
+    "pair_id": "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de custo por usar API nao oficial do WhatsApp; a direita enumera ferramentas que um agente pode utilizar. Objetos e escopos completamente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25": {
+    "pair_id": "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve gerar e escanear QR Code para conectar a instancia; a direita lista cinco campos de dados de mensagem necessarios no workflow. Compartilham a palavra 'Instancia' mas tratam de objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1": {
+    "pair_id": "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de acessar o manager do Evolution API acrescentando /manager na URL; a direita trata de criar chave de API no Groq. Objetos, plataformas e etapas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6": {
+    "pair_id": "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda explica por que as instancias do apresentador ja aparecem conectadas versus a tela de primeiro acesso do espectador; a direita lista os cinco campos de dados de mensagem. Sem substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0": {
+    "pair_id": "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a conexao via API entre Cloud Code e Evolution API; a direita descreve criar chave de API no Groq. Objetos e plataformas materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e": {
+    "pair_id": "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve tipos/planos de servidores na tela de escolha; a direita descreve instalar Redis pelo EasyPanel. Objetos e etapas distintos, sem sobreposicao material.",
+    "left_evidence_refs_checked": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c": {
+    "pair_id": "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da conexao do Cloud Code com o Evolution API (API nao oficial do WhatsApp); a direita trata de obter chave de API de provedores de LLM. Objetos distintos apesar do termo 'API'.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051": {
+    "pair_id": "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da necessidade de hospedar o Evolution API em VPS; a direita trata de criar chave de API na OpenAI. Nenhuma substancia comum entre hospedagem e emissao de credencial.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3": {
+    "pair_id": "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a conexao tecnica entre Cloud Code e Evolution API; a direita descreve a terceira peca de um agente (ferramentas disponiveis). Objetos e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f": {
+    "pair_id": "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve o portal da VPS e seus atalhos; a direita descreve verificacao de community nodes no n8n. Plataformas e objetos distintos; apenas o nome 'Evolution API' aparece nos dois.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed": {
+    "pair_id": "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de hospedagem do Evolution API em VPS; a direita trata de criacao de chave de API no Groq. Objetos, plataformas e etapas materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3": {
+    "pair_id": "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve conferencia do plano na tela de carrinho; a direita descreve verificacao de nodes da Evolution api no n8n antes de criar o workflow. Escopos e objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557": {
+    "pair_id": "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da necessidade de hospedar o Evolution API em VPS; a direita descreve configurar o webhook na sessao da Evolution colando o URL. Ambas mencionam Evolution, mas tratam de objetos e etapas materialmente diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb": {
+    "pair_id": "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de hospedagem em VPS; a direita trata do resultado de clicar em teste reduzindo os dados a cinco campos. Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06": {
+    "pair_id": "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de acessar o manager do Evolution API via URL com /manager; a direita trata de verificar community nodes da Evolution api no n8n. Objetos e plataformas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d": {
+    "pair_id": "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de hospedagem e gratuidade/open source do Evolution API; a direita trata do procedimento de criar chave de API no Groq. A mencao de gratuidade na evidencia da direita refere-se ao Groq, objeto diferente, sem convergencia sobre a mesma substancia.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c": {
+    "pair_id": "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve o primeiro acesso ao Evolution API com a chave de API global; a direita descreve verificar community nodes no n8n. Plataformas, objetos e etapas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad": {
+    "pair_id": "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de custo de API não oficial de WhatsApp; a direita descreve o procedimento de criação de chave de API na OpenAI. Objetos, plataformas e propósitos materialmente distintos; apenas a palavra 'API' é compartilhada, o que não estabelece relação.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0": {
+    "pair_id": "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: colar a chave de API global no primeiro acesso do Evolution API. Direita: criar uma nova chave nas configurações da OpenAI. São plataformas diferentes e chaves diferentes; a sobreposição é apenas o termo 'chave de API'.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc": {
+    "pair_id": "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda trata de hospedagem e gratuidade do Evolution API; direita trata da instalação de community nodes da Evolution api dentro do n8n. Objetos e escopos materialmente distintos, apenas o nome 'Evolution api' é compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854": {
+    "pair_id": "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e custo do Evolution API. Direita: passo de obter chave de API de Groq/OpenAI. Nenhuma substância comum; plataformas e etapas distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078": {
+    "pair_id": "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexão de número de WhatsApp via Evolution API como WhatsApp Web. Direita: criação de chave de API na OpenAI. Objetos e plataformas materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c": {
+    "pair_id": "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda enumera ações de gerenciamento de grupos de WhatsApp; direita indica a localização de um campo de mensagem em um payload (Body data message conversation). Não há substância comum nem qualificadores sobrepostos.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436": {
+    "pair_id": "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve a interface do portal de VPS (servidor, acesso rápido, console, Evolution API); direita descreve a 'terceira peça' conceitual de um agente e suas ferramentas. Nenhuma sobreposição material de objeto.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5": {
+    "pair_id": "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda trata de hospedagem e custo do Evolution API; direita descreve passos de configuração de webhook dentro da interface da Evolution. Substâncias distintas, sem convergência nem incompatibilidade.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64": {
+    "pair_id": "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade anunciada de um plano com Evolution pré-instalada (até 20 números). Direita: instalação de nodes da Evolution api no n8n. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645": {
+    "pair_id": "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: tela de primeiro acesso do Evolution API com chave global. Direita: instalação de community nodes no n8n. Plataformas e etapas materialmente distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5": {
+    "pair_id": "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve o portal de VPS e o atalho para o Evolution API; direita descreve instalação de nodes da Evolution api no n8n. Interfaces e objetos diferentes; só o nome 'Evolution API' é compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a": {
+    "pair_id": "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e gratuidade do Evolution API. Direita: descrição conceitual das ferramentas de um agente. Não há objeto comum nem convergência material.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad": {
+    "pair_id": "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade de até 20 números de WhatsApp em plano com Evolution pré-instalada. Direita: passos de configuração de webhook na Evolution. Escopos materialmente distintos e não aninháveis.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7": {
+    "pair_id": "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: opção 'gerenciar' no portal de VPS para ver detalhes. Direita: instalação de Redis via EasyPanel. Plataformas e objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef": {
+    "pair_id": "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve a conexão do Cloud Code com o Evolution API (API não oficial do WhatsApp); direita descreve passos de UI para configurar webhook na Evolution. Substâncias distintas: arquitetura de conexão versus procedimento de configuração, sem convergência nem conflito.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8": {
+    "pair_id": "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: escolha de plano NVMe dois na demonstração por usar só uma instância. Direita: configuração de webhook na Evolution. O termo 'instância' aparece só de um lado e os objetos são distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496": {
+    "pair_id": "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal de VPS com acesso rápido ao console ou ao Evolution API. Direita: passos internos da Evolution para colar URL de webhook. Interfaces e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38": {
+    "pair_id": "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda explica por que a tela do apresentador difere da do espectador no primeiro acesso ao Evolution API; direita descreve a configuração de webhook em uma sessão da Evolution. Objetos e etapas materialmente diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627": {
+    "pair_id": "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal de VPS e seus atalhos. Direita: instalação do Redis via EasyPanel. Plataformas, objetos e etapas materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e": {
+    "pair_id": "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de digitar 'barra manager' ao acessar o Evolution API. Direita: passo de obter chave de API de Groq/OpenAI. Nenhuma substância comum.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1": {
+    "pair_id": "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: interface do portal de VPS. Direita: criação de chave de API na OpenAI. Plataformas e objetos materialmente distintos, sem sobreposição substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169": {
+    "pair_id": "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de hospedar o Evolution API em VPS para funcionamento contínuo. Direita: verificação de community nodes da Evolution api no n8n antes de criar workflow. Objetos e escopos distintos, apenas o nome compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0": {
+    "pair_id": "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda trata de hospedagem em VPS do Evolution API; direita trata da instalação de nodes da Evolution api no n8n. Escopos materialmente distintos e não aninháveis.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533": {
+    "pair_id": "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: colar a chave de API global no primeiro acesso do Evolution API. Direita: criar chave de API no Groq via menu 'API Keys'. Plataformas e chaves distintas; sobreposição apenas terminológica.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3": {
+    "pair_id": "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: arquitetura de conexão do Cloud Code com o Evolution API. Direita: verificação de community nodes no n8n antes de criar workflow. Plataformas e objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "816377768e948b28a2ca9cf6bcd40db164dbce10b198c760fa3c187395bdfee1": {
+    "pair_id": "816377768e948b28a2ca9cf6bcd40db164dbce10b198c760fa3c187395bdfee1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da necessidade de hospedar o Evolution API em VPS para operar 24h; a direita trata de obter chave de API de provedores de LLM (Groq/OpenAI). Objetos e escopos materialmente distintos, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "81bbe3ceeb0fe704b4d11a183c43799f0722903bc0723f5d6d513582333d583c": {
+    "pair_id": "81bbe3ceeb0fe704b4d11a183c43799f0722903bc0723f5d6d513582333d583c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Ambas mencionam 'chave de API', mas sao objetos diferentes: a esquerda e a chave global do Evolution API usada no primeiro acesso; a direita e a chave de provedores de modelo (Groq/OpenAI). Palavra compartilhada nao estabelece relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "840f070d8831e583447689a818fd6f50749fd9804757cea74d6919ee185ad74a": {
+    "pair_id": "840f070d8831e583447689a818fd6f50749fd9804757cea74d6919ee185ad74a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda afirma capacidade de conectar numero de WhatsApp via Evolution API; a direita descreve passos de configuracao de webhook (events webhook, colar URL) na Evolution. Mesma plataforma citada, mas proposicoes substantivas distintas e sem sobreposicao.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "860c4110e3166623c5354afd3d381802ac6e6a594aa1426ff497b24bb73480af": {
+    "pair_id": "860c4110e3166623c5354afd3d381802ac6e6a594aa1426ff497b24bb73480af",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da tela de primeiro acesso do Evolution API e chave global; a direita descreve a terceira peca de um agente (ferramentas disponiveis). Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "89cf3c59180f94404e38686af98d4d0fe38ca5f5f5d8a9888e88f652fba1e0e9": {
+    "pair_id": "89cf3c59180f94404e38686af98d4d0fe38ca5f5f5d8a9888e88f652fba1e0e9",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de escolha de plano de VPS (nivel NVMe dois) por usar so uma instancia; a direita lista campos de dados de mensagem, incluindo o campo 'Instancia'. A palavra 'instancia' refere-se a objetos diferentes; nao ha relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "8a588281cc3ebbb50be4fced93a7ddad99cb835b183d066ff8f75cd5e6aefb5b": {
+    "pair_id": "8a588281cc3ebbb50be4fced93a7ddad99cb835b183d066ff8f75cd5e6aefb5b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a conexao do Cloud Code via API com o Evolution API; a direita descreve instalacao de community nodes de Evolution api no n8n. Objetos e escopos distintos, apenas o nome 'Evolution api' e compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "8a7a911a9e0c5e69cb028ff5db2f2d3b4039c4dc4bac831d1b94baefb5ddba12": {
+    "pair_id": "8a7a911a9e0c5e69cb028ff5db2f2d3b4039c4dc4bac831d1b94baefb5ddba12",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conexao de numero de WhatsApp via Evolution API versus obtencao de chave de API de provedores de modelo. Substancias e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "8bd70e28a6cbb91c228d23645f4f0fab7bef2213bece9ca4d4bc4b631872cee5": {
+    "pair_id": "8bd70e28a6cbb91c228d23645f4f0fab7bef2213bece9ca4d4bc4b631872cee5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conexao de numero de WhatsApp via Evolution API nao tem sobreposicao material com a enumeracao das ferramentas que um agente pode utilizar.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "8e558d35e414275d3daac517803e816a805f38315a4f19bab940b5bdd8f62b47": {
+    "pair_id": "8e558d35e414275d3daac517803e816a805f38315a4f19bab940b5bdd8f62b47",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Lista de acoes de gerenciamento de grupos de WhatsApp versus localizacao do ID da mensagem em um caminho de payload. Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ]
+   },
+   "8ecc55b73a0d672821c3f30be425455b77ad11e7eca49089012e7150ec8a6c13": {
+    "pair_id": "8ecc55b73a0d672821c3f30be425455b77ad11e7eca49089012e7150ec8a6c13",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve criacao de instancia no Evolution API (nome, salvar, estado desconectado); a direita descreve configuracao de events webhook colando URL na sessao. Passos distintos, sem sobreposicao proposicional.",
+    "left_evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "914bc7eb3a6868f1c8c90bde49280ed70d3cc7dd52994be78aaffc663cce13ad": {
+    "pair_id": "914bc7eb3a6868f1c8c90bde49280ed70d3cc7dd52994be78aaffc663cce13ad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acoes de gerenciamento de grupos de WhatsApp versus enumeracao de cinco campos de dados de mensagem. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "926ef70739bba7f84964e2e949c6ce40debcb93b57892a70ea0fd893479d8ccd": {
+    "pair_id": "926ef70739bba7f84964e2e949c6ce40debcb93b57892a70ea0fd893479d8ccd",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de custo (nao pagar por API oficial do WhatsApp); a direita trata de instalar community nodes da Evolution api no n8n. Substancias distintas; o termo 'API' compartilhado nao gera relacao.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "938d0b7d892748bf656316003141623e04b36f457e8f6c360c23509f169d3a24": {
+    "pair_id": "938d0b7d892748bf656316003141623e04b36f457e8f6c360c23509f169d3a24",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acesso ao Evolution API pelo portal com necessidade de sufixo /manager versus descricao das ferramentas de um agente. Nenhuma sobreposicao material.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "95aea92f2d6d2fcd570fcc89ec2224978d3993a345186c70bba9f31b92b5031e": {
+    "pair_id": "95aea92f2d6d2fcd570fcc89ec2224978d3993a345186c70bba9f31b92b5031e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia do carrinho de compra de plano com Evolution API versus criacao de API Key nas configuracoes da OpenAI. Plataformas e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "960e5b962a52adc117229d0022dd9d35ec44ffc3783df3053e021e99d73b951a": {
+    "pair_id": "960e5b962a52adc117229d0022dd9d35ec44ffc3783df3053e021e99d73b951a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acoes de gerenciamento de grupos de WhatsApp versus localizacao do campo 'quem mandou' no payload (body data key remote JD). Sem substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0022",
+     "EV-0023"
+    ]
+   },
+   "969efef7fec695c87df70e548a120da69b4fbc46e76f96282c6fea31fe7692e4": {
+    "pair_id": "969efef7fec695c87df70e548a120da69b4fbc46e76f96282c6fea31fe7692e4",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Escolha de plano de VPS (nivel NVMe dois, uma instancia) versus localizacao do campo Instancia em Body instance no payload. O termo 'instancia' designa objetos diferentes; nao ha relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "9f636abac5fe62455b698a732caef4242fe8878b8ba193f6e7edec456e207580": {
+    "pair_id": "9f636abac5fe62455b698a732caef4242fe8878b8ba193f6e7edec456e207580",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia da tela de carrinho de compra do plano versus configuracao de events webhook na Evolution. Etapas e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "a13df05450ca5f53ca7e7c87a7a8503650f48ea96773bafc9f81543e42f78442": {
+    "pair_id": "a13df05450ca5f53ca7e7c87a7a8503650f48ea96773bafc9f81543e42f78442",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acesso a interface do Evolution API via /manager versus configuracao de events webhook na sessao da Evolution. Ambas citam Evolution mas tratam de acoes e telas diferentes, sem sobreposicao proposicional.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "a5a751fdcc67f3e40c10c6f60a4251d252cfeb45bed7f8df728fe8ddd007b62c": {
+    "pair_id": "a5a751fdcc67f3e40c10c6f60a4251d252cfeb45bed7f8df728fe8ddd007b62c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Capacidade anunciada do plano de VPS com Evolution pre-instalada (ate 20 numeros) versus verificacao de community nodes da Evolution api no n8n. Objetos e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "b0297aead02cdd2b1b16d80b44357bfe0b34e818cbca58cdca1a52e3703b3c68": {
+    "pair_id": "b0297aead02cdd2b1b16d80b44357bfe0b34e818cbca58cdca1a52e3703b3c68",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Custo da API nao oficial do WhatsApp versus obtencao de chave de API de provedores de modelo (Groq/OpenAI). Objetos de custo/chave distintos; nao ha incompatibilidade nem convergencia material.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "b880181835e8c76bf1655decbc9dbf8658d28097da86ecfcdb092b20a6242d9b": {
+    "pair_id": "b880181835e8c76bf1655decbc9dbf8658d28097da86ecfcdb092b20a6242d9b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conexao do numero via geracao e leitura de QR Code na instancia desconectada versus configuracao de events webhook colando URL. Passos distintos dentro da mesma plataforma, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "c470ffee0961f934b2a5051f031c566c3b11fb15b16dbd434bae7f89d6dee655": {
+    "pair_id": "c470ffee0961f934b2a5051f031c566c3b11fb15b16dbd434bae7f89d6dee655",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia da tela de carrinho de compra versus descricao das ferramentas de um agente. Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "c47f8ba0ff1ba28507b0b27ee6dcbad3c0157549047aa3467d6fff71d34598a3": {
+    "pair_id": "c47f8ba0ff1ba28507b0b27ee6dcbad3c0157549047aa3467d6fff71d34598a3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Navegacao no portal do provedor de VPS (servidor, acesso rapido, console) versus obtencao de chave de API de provedores de modelo. Escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "c686a54aaf2527554975bb011244d2a4a4e45c201c03d7f65146acd841a5a873": {
+    "pair_id": "c686a54aaf2527554975bb011244d2a4a4e45c201c03d7f65146acd841a5a873",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Capacidade de conectar numero de WhatsApp via Evolution API versus instalacao de community nodes da Evolution api no n8n. Objetos e escopos distintos; apenas o nome e compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "c71f58a895d5a2f98d7b4b23320770bcf8978877ed8f25c5f85e0122f6624cd3": {
+    "pair_id": "c71f58a895d5a2f98d7b4b23320770bcf8978877ed8f25c5f85e0122f6624cd3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acesso a pagina do Evolution API com sufixo /manager versus instalacao de nodes da Evolution api dentro do n8n. Plataformas e acoes materialmente diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   }
+  },
+  "calls": 5,
+  "judged": 75,
+  "status": "INVALID",
+  "motivo": "75/97 julgados"
+ },
+ "RUN-2": {
+  "control": {
+   "detail": [
+    {
+     "id": "J1",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J2",
+     "got": {
+      "relation": "CORROBORATES",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J3",
+     "got": {
+      "relation": "SPECIALIZES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J4",
+     "got": {
+      "relation": "CONTRADICTS",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J5",
+     "got": {
+      "relation": "SUPERSEDES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J6",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J7",
+     "got": {
+      "relation": "INDETERMINATE",
+      "direction": "NONE",
+      "scope_state": "AMBIGUOUS_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J8",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J9",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J10",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    }
+   ],
+   "ok": true,
+   "schema_errors": []
+  },
+  "batches": {
+   "BATCH-1": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-2": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-3": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-4": {
+    "status": "INVALID",
+    "errors": [
+     "R15_PAIR_MISSING"
+    ],
+    "recebidos": 21,
+    "faltando": [
+     "f5fa1fbc0bbb6b892845b967b2179364ba0a0642995c6755bb83c09bcb5dad76"
+    ],
+    "n_faltando": 1
+   }
+  },
+  "judgments": {
+   "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359": {
+    "pair_id": "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de etapa de verificacao/criacao de conta na HostGator; a direita trata de adicionar servico Redis no EasyPanel. Objetos, plataformas e etapas materialmente distintos, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8": {
+    "pair_id": "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conferencia do carrinho de compra do plano com Evolution API. Direita: obtencao de chave de API em provedor de LLM (Groq/OpenAI). Nao ha objeto ou proposicao comum.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a": {
+    "pair_id": "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda afirma capacidade do Evolution API de conectar numero de WhatsApp como WhatsApp Web. Direita instrui verificar instalacao de community nodes da Evolution api no n8n. O termo 'Evolution API' e compartilhado, mas os objetos e proposicoes sao distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1": {
+    "pair_id": "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve o portal do provedor de VPS e acesso rapido ao Evolution API. Direita descreve criacao de chave de API no Groq. Interfaces, plataformas e acoes distintas; nenhuma proposicao comum.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d": {
+    "pair_id": "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve papel do Cloud Code como orquestrador na stack. Direita indica a localizacao do campo da mensagem no payload (Body data message conversation). Nenhuma relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0004",
+     "EV-0005",
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f": {
+    "pair_id": "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: escolha da VPS HostGator com funcao de pre-instalacao. Direita: passos para instalar Redis no EasyPanel. Plataformas e objetos distintos, sem proposicao substantiva compartilhada.",
+    "left_evidence_refs_checked": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b": {
+    "pair_id": "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: criacao de instancia no Evolution API. Direita: reducao de campos apos clicar em teste em um node. Objetos e contextos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c": {
+    "pair_id": "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve conexao via API entre Cloud Code e Evolution API. Direita descreve criacao de chave de API na OpenAI. Apenas o termo generico 'API' e comum; objetos e plataformas diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e": {
+    "pair_id": "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: custo de API nao oficial do WhatsApp. Direita: descricao da terceira peca de um agente (ferramentas). Nenhuma sobreposicao material.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25": {
+    "pair_id": "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: geracao e escaneamento de QR Code para conectar instancia desconectada. Direita: enumeracao dos cinco campos de dados da mensagem. O termo 'Instancia' aparece nos dois, mas as proposicoes tratam de objetos diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1": {
+    "pair_id": "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: pagina do Evolution API exige sufixo /manager. Direita: criacao de chave de API no Groq. Interfaces e proposicoes materialmente distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6": {
+    "pair_id": "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: explicacao sobre a tela do apresentador ja estar com instancias conectadas versus tela de primeiro acesso. Direita: lista dos cinco campos de dados da mensagem. Sem relacao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0": {
+    "pair_id": "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexao Cloud Code com Evolution API. Direita: criacao de chave de API no Groq. Apenas o termo 'API' e compartilhado; objetos e plataformas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e": {
+    "pair_id": "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: tipos e tamanhos de servidores oferecidos na tela de escolha. Direita: passos para instalar Redis no EasyPanel. Objetos e etapas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c": {
+    "pair_id": "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: arquitetura de conexao Cloud Code/Evolution API. Direita: passo de obter chave de API de provedor de LLM. Nenhuma proposicao material comum.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051": {
+    "pair_id": "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de hospedar o Evolution API em VPS para operacao continua. Direita: criacao de chave de API na OpenAI. Objetos e escopos totalmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3": {
+    "pair_id": "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexao via API entre Cloud Code e Evolution API. Direita: ferramentas disponiveis a um agente de IA. Nao ha objeto comum nem proposicao sobreposta.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f": {
+    "pair_id": "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: elementos do portal do provedor de VPS. Direita: verificacao de community nodes no n8n. Plataformas e acoes materialmente distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed": {
+    "pair_id": "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem do Evolution API em VPS. Direita: criacao de chave de API no Groq. Nenhuma sobreposicao substantiva entre as proposicoes.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3": {
+    "pair_id": "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conferencia do carrinho de compra do plano. Direita: verificacao de nodes da Evolution api no n8n antes de criar workflow. O nome 'Evolution API' e compartilhado, mas os objetos e etapas sao distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557": {
+    "pair_id": "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de hospedar o Evolution API em VPS. Direita: configuracao de webhook na sessao da Evolution. Ambas mencionam Evolution, mas tratam de proposicoes materialmente diferentes (hospedagem versus configuracao de webhook).",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb": {
+    "pair_id": "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem do Evolution API em VPS. Direita: reducao dos campos apos clicar em teste no node. Nenhuma relacao material entre as proposicoes.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06": {
+    "pair_id": "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: acesso ao manager do Evolution API pela URL com /manager. Direita: verificacao de community nodes da Evolution api no n8n. Objetos e interfaces distintos apesar do nome compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d": {
+    "pair_id": "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: Evolution API e gratuito/open source e precisa ser hospedado. Direita: passos de criacao de chave de API no Groq. Gratuidade e mencionada em contextos de produtos distintos; nao ha proposicao comum.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c": {
+    "pair_id": "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: uso da chave de API global no primeiro acesso ao Evolution API. Direita: verificacao de community nodes no n8n antes de criar workflow. Etapas, plataformas e objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad": {
+    "pair_id": "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de custo por não usar a API oficial do WhatsApp; a direita descreve o procedimento de criação de chave de API na OpenAI. Objetos, plataformas e escopos materialmente distintos; a palavra 'API' compartilhada não estabelece relação.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0": {
+    "pair_id": "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: uso da chave de API global no primeiro acesso ao Evolution API. Direita: criação de nova chave nas configurações da OpenAI. Plataformas e objetos distintos; ambas mencionam 'chave de API', mas referem-se a chaves de sistemas diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc": {
+    "pair_id": "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda trata de hospedagem e gratuidade do Evolution API; direita trata da instalação de community nodes da Evolution api dentro do n8n. Mesmo nome de produto citado, mas objetos e escopos materialmente distintos, sem substância comum comparável.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854": {
+    "pair_id": "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e custo zero do Evolution API. Direita: passo de obter chave de API de Groq/OpenAI. Plataformas, objetos e etapas diferentes; não há proposição substantiva comum.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078": {
+    "pair_id": "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexão do número de WhatsApp via Evolution API como WhatsApp Web. Direita: criação de chave de API na OpenAI. Objetos e plataformas inteiramente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c": {
+    "pair_id": "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda lista ações de gerenciamento de grupos de WhatsApp; direita indica a localização de um campo de mensagem em um payload (Body data message conversation). Substâncias e escopos completamente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436": {
+    "pair_id": "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve a interface do portal de VPS (servidor, acesso rápido, console); direita descreve as ferramentas que um agente pode utilizar. Não há objeto ou proposição comum.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5": {
+    "pair_id": "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e custo do Evolution API. Direita: passos de configuração de webhook dentro da Evolution. Mesmo produto citado, mas proposições sobre objetos distintos (custo/hospedagem versus procedimento de UI), sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64": {
+    "pair_id": "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade anunciada de um plano com Evolution pré-instalada (até 20 números). Direita: instalação de community nodes da Evolution api no n8n. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645": {
+    "pair_id": "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: tela de primeiro acesso do Evolution API com chave global. Direita: instalação de nodes da Evolution api no n8n. Plataformas e etapas distintas, sem proposição substantiva comum.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5": {
+    "pair_id": "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve o portal do provedor de VPS e o atalho para o Evolution API; direita descreve instalação de nodes no n8n. Objetos, plataformas e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a": {
+    "pair_id": "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e gratuidade do Evolution API. Direita: descrição das ferramentas de um agente. Não há objeto comum nem sobreposição de substância.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad": {
+    "pair_id": "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade de números do plano com Evolution pré-instalada. Direita: procedimento de colar URL em events webhook na Evolution. Escopos materialmente distintos, sem proposição comum.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7": {
+    "pair_id": "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: opção 'gerenciar' no portal de VPS para ver detalhes. Direita: instalação do Redis via EasyPanel. Plataformas e objetos distintos; nenhuma substância compartilhada.",
+    "left_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef": {
+    "pair_id": "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: descrição da conexão do Cloud Code com o Evolution API como API não oficial do WhatsApp. Direita: passos de configuração de webhook na interface da Evolution. Mesma plataforma citada, mas objetos de discurso distintos (arquitetura de conexão versus procedimento de UI), sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8": {
+    "pair_id": "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: escolha de plano NVMe dois numa demonstração porque usará só uma instância. Direita: configuração de webhook na Evolution. A palavra 'instância' aparece só na esquerda e os objetos são distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496": {
+    "pair_id": "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: navegação no portal do provedor de VPS. Direita: passos dentro da Evolution para colar URL de webhook. Escopos e objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38": {
+    "pair_id": "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: diferença entre a tela do apresentador (instâncias já conectadas) e a tela de primeiro acesso do espectador. Direita: procedimento de webhook na Evolution. Não há proposição substantiva comum.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627": {
+    "pair_id": "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal do provedor de VPS com atalhos para console e Evolution API. Direita: instalação de Redis pelo EasyPanel. Plataformas e objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e": {
+    "pair_id": "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: página aparentemente de erro ao acessar o Evolution API e necessidade de digitar /manager. Direita: passo de obter chave de API de Groq ou OpenAI. Objetos e etapas totalmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1": {
+    "pair_id": "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: interface do portal de VPS. Direita: criação de chave de API na OpenAI. Nenhuma substância comum entre as proposições.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169": {
+    "pair_id": "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de hospedar o Evolution API em VPS para operação contínua. Direita: verificar community nodes da Evolution api no n8n antes de criar o workflow. Objetos e plataformas distintos, sem proposição comum.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0": {
+    "pair_id": "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem do Evolution API em VPS para funcionamento 24h. Direita: instalação de nodes da Evolution api no n8n quando ausentes. Escopos materialmente distintos apesar do nome compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533": {
+    "pair_id": "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: colar a chave de API global do Evolution API no primeiro acesso. Direita: criar uma nova chave em API Keys no Groq. Chaves de sistemas diferentes e etapas diferentes; apenas o termo 'chave de API' é compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3": {
+    "pair_id": "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: o Cloud Code conecta-se via API ao Evolution API, tida como API não oficial do WhatsApp. Direita: verificação de community nodes da Evolution api no n8n. Plataformas e objetos distintos, sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "816377768e948b28a2ca9cf6bcd40db164dbce10b198c760fa3c187395bdfee1": {
+    "pair_id": "816377768e948b28a2ca9cf6bcd40db164dbce10b198c760fa3c187395bdfee1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de hospedagem do Evolution API em VPS para uptime continuo; a direita trata de obter chave de API de provedores de LLM (Groq/OpenAI). Objetos e escopos materialmente distintos, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "81bbe3ceeb0fe704b4d11a183c43799f0722903bc0723f5d6d513582333d583c": {
+    "pair_id": "81bbe3ceeb0fe704b4d11a183c43799f0722903bc0723f5d6d513582333d583c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Ambas mencionam 'chave de API', mas de objetos diferentes: a esquerda e a chave global do Evolution API no primeiro acesso; a direita e a chave de provedores de LLM (Groq/OpenAI). Palavra compartilhada nao estabelece relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "840f070d8831e583447689a818fd6f50749fd9804757cea74d6919ee185ad74a": {
+    "pair_id": "840f070d8831e583447689a818fd6f50749fd9804757cea74d6919ee185ad74a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda afirma a capacidade do Evolution API de conectar o numero de WhatsApp como WhatsApp Web; a direita descreve o procedimento de colar URL de webhook em events webhook na sessao. Mesma plataforma citada, mas proposicoes e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "860c4110e3166623c5354afd3d381802ac6e6a594aa1426ff497b24bb73480af": {
+    "pair_id": "860c4110e3166623c5354afd3d381802ac6e6a594aa1426ff497b24bb73480af",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a tela de primeiro acesso do Evolution API com chave global; a direita enumera a terceira peca de um agente (ferramentas). Nao ha objeto nem substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "89cf3c59180f94404e38686af98d4d0fe38ca5f5f5d8a9888e88f652fba1e0e9": {
+    "pair_id": "89cf3c59180f94404e38686af98d4d0fe38ca5f5f5d8a9888e88f652fba1e0e9",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da escolha de plano NVMe dois por usar so uma instancia de VPS; a direita lista campos de dados de mensagem, incluindo 'Instancia' como campo de payload. O termo 'instancia' refere-se a objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "8a588281cc3ebbb50be4fced93a7ddad99cb835b183d066ff8f75cd5e6aefb5b": {
+    "pair_id": "8a588281cc3ebbb50be4fced93a7ddad99cb835b183d066ff8f75cd5e6aefb5b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a conexao do Cloud Code via API com o Evolution API (API nao oficial do WhatsApp); a direita descreve a instalacao de community nodes da Evolution api dentro do n8n. Plataformas e acoes materialmente distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "8a7a911a9e0c5e69cb028ff5db2f2d3b4039c4dc4bac831d1b94baefb5ddba12": {
+    "pair_id": "8a7a911a9e0c5e69cb028ff5db2f2d3b4039c4dc4bac831d1b94baefb5ddba12",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conectar numero de WhatsApp via Evolution API nao tem relacao material com obter chave de API de provedores de LLM (Groq/OpenAI). Escopos e objetos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "8bd70e28a6cbb91c228d23645f4f0fab7bef2213bece9ca4d4bc4b631872cee5": {
+    "pair_id": "8bd70e28a6cbb91c228d23645f4f0fab7bef2213bece9ca4d4bc4b631872cee5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Capacidade de conexao de WhatsApp via Evolution API versus enumeracao das pecas de um agente de IA (ferramentas). Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "8e558d35e414275d3daac517803e816a805f38315a4f19bab940b5bdd8f62b47": {
+    "pair_id": "8e558d35e414275d3daac517803e816a805f38315a4f19bab940b5bdd8f62b47",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Lista de acoes de gerenciamento de grupos de WhatsApp versus localizacao do campo ID da mensagem no payload. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ]
+   },
+   "8ecc55b73a0d672821c3f30be425455b77ad11e7eca49089012e7150ec8a6c13": {
+    "pair_id": "8ecc55b73a0d672821c3f30be425455b77ad11e7eca49089012e7150ec8a6c13",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda descreve a criacao de uma instancia no Evolution API (nome, salvar, status desconectado); a direita descreve a configuracao de webhook colando URL em events webhook. Procedimentos distintos dentro da mesma plataforma, sem sobreposicao substantiva nem aninhamento demonstrado.",
+    "left_evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "914bc7eb3a6868f1c8c90bde49280ed70d3cc7dd52994be78aaffc663cce13ad": {
+    "pair_id": "914bc7eb3a6868f1c8c90bde49280ed70d3cc7dd52994be78aaffc663cce13ad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acoes de gerenciamento de grupos de WhatsApp versus enumeracao dos cinco campos de dados a serem salvos de uma mensagem. Objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "926ef70739bba7f84964e2e949c6ce40debcb93b57892a70ea0fd893479d8ccd": {
+    "pair_id": "926ef70739bba7f84964e2e949c6ce40debcb93b57892a70ea0fd893479d8ccd",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Afirmacao sobre custo por ser API nao oficial do WhatsApp versus procedimento de instalacao de community nodes no n8n. Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "938d0b7d892748bf656316003141623e04b36f457e8f6c360c23509f169d3a24": {
+    "pair_id": "938d0b7d892748bf656316003141623e04b36f457e8f6c360c23509f169d3a24",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Comportamento da pagina do Evolution API exigindo barra manager na URL versus enumeracao das ferramentas que um agente pode utilizar. Objetos e escopos totalmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "95aea92f2d6d2fcd570fcc89ec2224978d3993a345186c70bba9f31b92b5031e": {
+    "pair_id": "95aea92f2d6d2fcd570fcc89ec2224978d3993a345186c70bba9f31b92b5031e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia do carrinho de compra do plano com Evolution API versus procedimento de criacao de API Key na OpenAI. Plataformas e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "960e5b962a52adc117229d0022dd9d35ec44ffc3783df3053e021e99d73b951a": {
+    "pair_id": "960e5b962a52adc117229d0022dd9d35ec44ffc3783df3053e021e99d73b951a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acoes de gerenciamento de grupos de WhatsApp versus caminho do campo 'quem mandou' no payload (body data Key remote JD). Sem substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0022",
+     "EV-0023"
+    ]
+   },
+   "969efef7fec695c87df70e548a120da69b4fbc46e76f96282c6fea31fe7692e4": {
+    "pair_id": "969efef7fec695c87df70e548a120da69b4fbc46e76f96282c6fea31fe7692e4",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Escolha de plano NVMe dois por usar so uma instancia versus localizacao do campo Instancia em Body instance no payload. O termo 'instancia' designa objetos diferentes nos dois lados.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "9f636abac5fe62455b698a732caef4242fe8878b8ba193f6e7edec456e207580": {
+    "pair_id": "9f636abac5fe62455b698a732caef4242fe8878b8ba193f6e7edec456e207580",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia da tela de carrinho ao contratar o plano versus configuracao de webhook dentro da Evolution. Etapas e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "a13df05450ca5f53ca7e7c87a7a8503650f48ea96773bafc9f81543e42f78442": {
+    "pair_id": "a13df05450ca5f53ca7e7c87a7a8503650f48ea96773bafc9f81543e42f78442",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acesso a URL do Evolution API com barra manager versus configuracao de events webhook na sessao. Ambos citam Evolution, mas tratam de acoes e escopos distintos sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "a5a751fdcc67f3e40c10c6f60a4251d252cfeb45bed7f8df728fe8ddd007b62c": {
+    "pair_id": "a5a751fdcc67f3e40c10c6f60a4251d252cfeb45bed7f8df728fe8ddd007b62c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Capacidade anunciada do plano (Evolution pre-instalada, ate 20 numeros de WhatsApp) versus verificacao de community nodes da Evolution api no n8n. Objetos e plataformas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "b0297aead02cdd2b1b16d80b44357bfe0b34e818cbca58cdca1a52e3703b3c68": {
+    "pair_id": "b0297aead02cdd2b1b16d80b44357bfe0b34e818cbca58cdca1a52e3703b3c68",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Custo da API nao oficial do WhatsApp versus obtencao de chave de API de provedores de LLM. O termo 'API' e compartilhado, mas os objetos e escopos sao distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "b880181835e8c76bf1655decbc9dbf8658d28097da86ecfcdb092b20a6242d9b": {
+    "pair_id": "b880181835e8c76bf1655decbc9dbf8658d28097da86ecfcdb092b20a6242d9b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conexao do numero de WhatsApp via QR Code em instancia desconectada versus configuracao de URL de webhook em events webhook. Procedimentos distintos, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "c470ffee0961f934b2a5051f031c566c3b11fb15b16dbd434bae7f89d6dee655": {
+    "pair_id": "c470ffee0961f934b2a5051f031c566c3b11fb15b16dbd434bae7f89d6dee655",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Conferencia do carrinho de contratacao do plano versus enumeracao das pecas/ferramentas de um agente. Nenhuma substancia comum.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "c47f8ba0ff1ba28507b0b27ee6dcbad3c0157549047aa3467d6fff71d34598a3": {
+    "pair_id": "c47f8ba0ff1ba28507b0b27ee6dcbad3c0157549047aa3467d6fff71d34598a3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Navegacao no portal da VPS (servidor, acesso rapido, console, link do Evolution API) versus obtencao de chave de API de provedores de LLM. Objetos e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "c686a54aaf2527554975bb011244d2a4a4e45c201c03d7f65146acd841a5a873": {
+    "pair_id": "c686a54aaf2527554975bb011244d2a4a4e45c201c03d7f65146acd841a5a873",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Capacidade de conectar numero de WhatsApp via Evolution API versus procedimento de instalacao de nodes da Evolution api no n8n. Nomes semelhantes, mas objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "c71f58a895d5a2f98d7b4b23320770bcf8978877ed8f25c5f85e0122f6624cd3": {
+    "pair_id": "c71f58a895d5a2f98d7b4b23320770bcf8978877ed8f25c5f85e0122f6624cd3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Acesso a interface do Evolution API pela URL com barra manager versus instalacao de community nodes da Evolution api no n8n. Plataformas e acoes distintas.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   }
+  },
+  "calls": 5,
+  "judged": 75,
+  "status": "INVALID",
+  "motivo": "75/97 julgados"
+ },
+ "RUN-3": {
+  "control": {
+   "detail": [
+    {
+     "id": "J1",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J2",
+     "got": {
+      "relation": "CORROBORATES",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J3",
+     "got": {
+      "relation": "SPECIALIZES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J4",
+     "got": {
+      "relation": "CONTRADICTS",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J5",
+     "got": {
+      "relation": "SUPERSEDES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J6",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J7",
+     "got": {
+      "relation": "INDETERMINATE",
+      "direction": "NONE",
+      "scope_state": "AMBIGUOUS_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J8",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J9",
+     "got": {
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE"
+     },
+     "ok": true
+    },
+    {
+     "id": "J10",
+     "got": {
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE"
+     },
+     "ok": true
+    }
+   ],
+   "ok": true,
+   "schema_errors": []
+  },
+  "batches": {
+   "BATCH-1": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-2": {
+    "status": "OK",
+    "n": 25
+   },
+   "BATCH-3": {
+    "status": "NAO_EXECUTADO"
+   },
+   "BATCH-4": {
+    "status": "NAO_EXECUTADO"
+   }
+  },
+  "judgments": {
+   "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359": {
+    "pair_id": "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata da etapa de verificacao/criacao de conta na HostGator; a direita trata de adicionar o servico Redis no EasyPanel. Objetos, plataformas e etapas materialmente distintos; a unica semelhanca e serem passos de interface.",
+    "left_evidence_refs_checked": [
+     "EV-0020",
+     "EV-0021"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8": {
+    "pair_id": "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conferencia do plano no carrinho de compra (Evolution API). Direita: obtencao de chave de API em Groq/OpenAI apos instalar Redis. Objetos e etapas materialmente diferentes, sem sobreposicao substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a": {
+    "pair_id": "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda afirma capacidade do Evolution API de conectar numero de WhatsApp como WhatsApp Web. Direita instrui verificar nodes da Evolution api instalados no n8n antes de criar workflow. Compartilham o termo 'Evolution api' mas tratam de objetos distintos (capacidade de conexao vs verificacao de nodes no n8n).",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1": {
+    "pair_id": "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve o portal do provedor de VPS com acesso rapido ao console/Evolution API. Direita descreve criacao de chave de API no site do Groq. Interfaces, plataformas e objetos diferentes; nenhuma relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d": {
+    "pair_id": "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve o papel do Cloud Code como orquestrador da stack. Direita indica o caminho do campo da mensagem no payload (Body data message conversation). Sem objeto comum nem substancia compartilhada.",
+    "left_evidence_refs_checked": [
+     "EV-0004",
+     "EV-0005",
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f": {
+    "pair_id": "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda identifica a VPS usada (HostGator, com pre-instalacao). Direita descreve instalacao do Redis via EasyPanel. Plataformas e objetos materialmente distintos; nenhuma proposicao comum.",
+    "left_evidence_refs_checked": [
+     "EV-0010",
+     "EV-0011"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b": {
+    "pair_id": "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: criacao de instancia no Evolution API e seu estado desconectado. Direita: apos clicar em teste, os dados reduzem-se a cinco campos (no contexto de mapeamento de payload). Objetos e telas distintos; o verbo 'clicar' compartilhado nao estabelece relacao.",
+    "left_evidence_refs_checked": [
+     "EV-0030",
+     "EV-0031"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c": {
+    "pair_id": "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexao via API entre Cloud Code e Evolution API (API nao oficial do WhatsApp). Direita: passos para criar chave de API na OpenAI. Plataformas e objetos distintos; apenas o termo generico 'API' e comum.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e": {
+    "pair_id": "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: custo — nao se paga API oficial por usar API nao oficial do WhatsApp. Direita: descricao da terceira peca de um agente (ferramentas). Nenhum objeto ou substancia em comum.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25": {
+    "pair_id": "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: geracao e escaneamento de QR Code para conectar o numero na instancia do Evolution API. Direita: enumeracao dos cinco campos de dados extraidos da mensagem. A palavra 'Instancia' aparece nos dois, mas os objetos sao diferentes (instancia a conectar vs campo de dados).",
+    "left_evidence_refs_checked": [
+     "EV-0031",
+     "EV-0032",
+     "EV-0033"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1": {
+    "pair_id": "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: acesso ao manager do Evolution API adicionando /manager na URL. Direita: criacao de chave de API no Groq. Plataformas, telas e objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6": {
+    "pair_id": "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda explica por que a tela do apresentador ja mostra instancias conectadas enquanto o espectador vera a tela de primeiro acesso. Direita lista os cinco campos de dados da mensagem. Sem objeto comum.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0021",
+     "EV-0022"
+    ]
+   },
+   "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0": {
+    "pair_id": "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexao via API entre Cloud Code e Evolution API. Direita: passos de UI para gerar chave de API no Groq. Objetos e plataformas distintos; apenas o termo 'API' e compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e": {
+    "pair_id": "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: tipos de servidores disponiveis (2, 4, 8 e alto desempenho) na tela de escolha. Direita: instalacao do Redis pelo EasyPanel. Objetos e etapas diferentes, sem sobreposicao material.",
+    "left_evidence_refs_checked": [
+     "EV-0012",
+     "EV-0013"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c": {
+    "pair_id": "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: arquitetura de conexao entre Cloud Code e Evolution API. Direita: proximo passo de obter chave de API de provedor LLM (Groq/OpenAI). Objetos distintos; 'API' compartilhado nao estabelece relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051": {
+    "pair_id": "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de hospedar o Evolution API em VPS para operacao 24h. Direita: criacao de chave de API na OpenAI. Nenhum objeto ou substancia em comum.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3": {
+    "pair_id": "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexao Cloud Code / Evolution API. Direita: terceira peca de um agente sao as ferramentas disponiveis. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f": {
+    "pair_id": "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal do provedor de VPS com acesso rapido ao console e ao Evolution API. Direita: verificacao de community nodes da Evolution api dentro do n8n. Interfaces e objetos distintos; termo compartilhado nao implica relacao.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed": {
+    "pair_id": "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem do Evolution API em VPS para funcionamento continuo. Direita: passos para criar chave de API no Groq. Objetos, plataformas e etapas distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3": {
+    "pair_id": "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conferir plano e produto na tela do carrinho de compra. Direita: verificar nodes da Evolution api instalados no n8n antes do workflow. Ambas mencionam 'Evolution api' mas tratam de objetos e etapas materialmente diferentes.",
+    "left_evidence_refs_checked": [
+     "EV-0018",
+     "EV-0019"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557": {
+    "pair_id": "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: exigencia de hospedar o Evolution API em VPS. Direita: configuracao do webhook na sessao da Evolution colando o URL. Mesmo produto mencionado, porem objetos e etapas distintos (hospedagem vs configuracao de webhook), sem sobreposicao proposicional.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb": {
+    "pair_id": "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem do Evolution API em VPS para operacao 24h. Direita: reducao dos dados a cinco campos apos clicar em teste. Nenhum objeto comum nem substancia compartilhada.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ]
+   },
+   "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06": {
+    "pair_id": "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: acesso ao manager do Evolution API via /manager na URL. Direita: verificacao de community nodes da Evolution api no n8n. Objetos e plataformas distintos; a mencao comum ao Evolution API nao cria relacao material.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d": {
+    "pair_id": "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: Evolution API e gratuito/open source e precisa ser hospedado. Direita: passos de UI para criar chave no Groq. Objetos distintos; a gratuidade do Groq aparece so na evidencia lateral e nao e a proposicao da Claim direita.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c": {
+    "pair_id": "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: primeiro acesso ao Evolution API colando a chave de API global recebida no Gmail. Direita: verificacao de community nodes da Evolution api no n8n antes de criar workflow. Objetos, plataformas e etapas materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad": {
+    "pair_id": "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "A esquerda trata de custo por não usar a API oficial do WhatsApp; a direita descreve o procedimento de criação de chave de API na OpenAI. Objetos e escopos materialmente distintos; a única sobreposição é a palavra 'API'.",
+    "left_evidence_refs_checked": [
+     "EV-0007",
+     "EV-0008"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0": {
+    "pair_id": "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: uso de chave de API global no primeiro acesso ao Evolution API. Direita: criação de chave na OpenAI. Plataformas e objetos diferentes; compartilham apenas o termo 'chave de API', o que não estabelece relação material.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc": {
+    "pair_id": "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda fala de hospedagem e gratuidade do Evolution API; direita fala de instalação de nodes de comunidade da Evolution api dentro do n8n. Objetos e escopos distintos, sem convergência substantiva além do nome compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854": {
+    "pair_id": "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem/custo do Evolution API. Direita: passo de obter chave de API de Groq/OpenAI. Nenhuma sobreposição de objeto ou condição material.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078": {
+    "pair_id": "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexão do número de WhatsApp via Evolution API como WhatsApp Web. Direita: criação de chave de API na OpenAI. Objetos, plataformas e escopos completamente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0007"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c": {
+    "pair_id": "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda lista ações de gerenciamento de grupos de WhatsApp; direita indica a localização de um campo de mensagem em um payload (Body data message conversation). Não há objeto material comum.",
+    "left_evidence_refs_checked": [
+     "EV-0001",
+     "EV-0002",
+     "EV-0003"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0023"
+    ]
+   },
+   "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436": {
+    "pair_id": "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve a interface do portal de VPS; direita descreve a terceira peça (ferramentas) de um agente. Assuntos completamente distintos, sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5": {
+    "pair_id": "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e gratuidade do Evolution API. Direita: passos de configuração de webhook dentro da Evolution. Mesmo produto nominal, mas escopos e proposições materialmente distintos, sem convergência nem conflito.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64": {
+    "pair_id": "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade anunciada de um plano com Evolution pré-instalada (até 20 números). Direita: instalação de nodes da Evolution api no n8n. Objetos e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645": {
+    "pair_id": "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: primeiro acesso ao Evolution API com chave global. Direita: instalação de nodes no n8n. Plataformas, condições e objetos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5": {
+    "pair_id": "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda descreve a navegação no portal do provedor de VPS; direita descreve instalação de nodes no n8n. Nenhuma substância comum além da menção ao nome Evolution.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a": {
+    "pair_id": "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem e custo do Evolution API. Direita: descrição das ferramentas como terceira peça de um agente. Proposições sem qualquer objeto material em comum.",
+    "left_evidence_refs_checked": [
+     "EV-0009",
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0029",
+     "EV-0030"
+    ]
+   },
+   "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad": {
+    "pair_id": "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: capacidade de números de WhatsApp em um plano com Evolution pré-instalada. Direita: passos de configuração de webhook na Evolution. Escopos materialmente distintos e não aninháveis.",
+    "left_evidence_refs_checked": [
+     "EV-0013",
+     "EV-0014"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7": {
+    "pair_id": "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: opção 'gerenciar' no portal de VPS mostra detalhes da VPS. Direita: instalação do Redis via EasyPanel. Interfaces e objetos distintos, sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0024",
+     "EV-0025"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef": {
+    "pair_id": "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexão do Cloud Code via API com o Evolution API. Direita: passos de configuração de webhook na interface da Evolution. Proposições sobre objetos e escopos diferentes, sem convergência substantiva.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8": {
+    "pair_id": "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: escolha de plano NVMe dois na demonstração. Direita: configuração de webhook na Evolution. Objetos e escopos totalmente distintos; 'instância' aparece só de um lado.",
+    "left_evidence_refs_checked": [
+     "EV-0016"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496": {
+    "pair_id": "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: acesso rápido no portal da VPS. Direita: configuração de webhook dentro da Evolution. Escopos materialmente distintos; apenas o nome Evolution é compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38": {
+    "pair_id": "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: diferença entre a tela do apresentador (instâncias já conectadas) e a tela de primeiro acesso do espectador. Direita: procedimento de webhook na Evolution. Não há proposição comum nem conflito.",
+    "left_evidence_refs_checked": [
+     "EV-0027",
+     "EV-0028"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0016",
+     "EV-0017"
+    ]
+   },
+   "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627": {
+    "pair_id": "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal do provedor de VPS e acesso rápido. Direita: instalação do Redis pelo EasyPanel. Plataformas e objetos distintos, sem sobreposição material.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0002",
+     "EV-0003"
+    ]
+   },
+   "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e": {
+    "pair_id": "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: necessidade de digitar '/manager' ao abrir a página do Evolution API. Direita: passo de obter chave de API do Groq/OpenAI. Nenhuma relação material entre as proposições.",
+    "left_evidence_refs_checked": [
+     "EV-0025",
+     "EV-0026"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0006",
+     "EV-0007"
+    ]
+   },
+   "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1": {
+    "pair_id": "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: portal do provedor de VPS e opções de acesso rápido. Direita: criação de chave de API na OpenAI. Objetos, plataformas e escopos distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0023",
+     "EV-0024"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0010"
+    ]
+   },
+   "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169": {
+    "pair_id": "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: requisito de hospedar o Evolution API em VPS para operação contínua. Direita: verificação de nodes da Evolution api em settings > community nodes do n8n. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   },
+   "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0": {
+    "pair_id": "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: hospedagem em VPS para funcionamento 24h. Direita: instalação dos nodes da Evolution api no n8n. Proposições sobre objetos diferentes, sem convergência nem incompatibilidade.",
+    "left_evidence_refs_checked": [
+     "EV-0010"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0014"
+    ]
+   },
+   "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533": {
+    "pair_id": "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: colar a chave de API global no primeiro acesso do Evolution API. Direita: criar uma chave nova em 'API Keys' no Groq. Plataformas e objetos distintos; apenas o termo 'chave de API' é compartilhado.",
+    "left_evidence_refs_checked": [
+     "EV-0028",
+     "EV-0029"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0008",
+     "EV-0009"
+    ]
+   },
+   "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3": {
+    "pair_id": "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3",
+    "relation": "UNRELATED",
+    "direction": "NONE",
+    "scope_state": "DIFFERENT_SCOPE",
+    "relation_why": "Esquerda: conexão do Cloud Code com o Evolution API via API. Direita: verificação de nodes da Evolution api no n8n antes de criar workflow. Objetos e escopos materialmente distintos.",
+    "left_evidence_refs_checked": [
+     "EV-0006"
+    ],
+    "right_evidence_refs_checked": [
+     "EV-0013"
+    ]
+   }
+  },
+  "calls": 3,
+  "judged": 50,
+  "status": "INVALID",
+  "motivo": "50/97 julgados"
+ }
+}

@@ -1,0 +1,95 @@
+{
+  "batch_id": "BATCH-1",
+  "judgments": [
+    {
+      "pair_id": "ed7a77a58f7b57354e52d48bf774bda8e8b87faf1698a50d30f623c09fed0cf7",
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE",
+      "relation_why": "Ambas afirmam a mesma proposicao substantiva: o acesso/entrada ao painel depende de autenticacao por token. A diferenca e apenas de formulacao (exigencia positiva vs. negacao de acesso sem token), sem qualificadores divergentes em nenhum dos lados. As evidencias sustentam o mesmo conteudo material.",
+      "left_evidence_refs_checked": ["EV-9301"],
+      "right_evidence_refs_checked": ["EV-9302"]
+    },
+    {
+      "pair_id": "5786fb558e5ca41da46d8f28f46a2c0baa1a7e0ddd7ac6f7103136fdee33057c",
+      "relation": "CORROBORATES",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Os objetos sao condicoes de hospedagem distintas: servidor proprio (esquerda) e maquina local (direita). Nao ha incompatibilidade — as duas convergem sobre a mesma substancia da continuidade de disponibilidade conforme o local de execucao, uma afirmando disponibilidade continua em servidor proprio e a outra queda quando a maquina local desliga. Nao e CONTRADICTS porque a diferenca se explica inteiramente pela condicao de hospedagem diferente. Nao e IDENTICAL nem SPECIALIZES porque nenhum escopo esta contido no outro.",
+      "left_evidence_refs_checked": ["EV-9303"],
+      "right_evidence_refs_checked": ["EV-9304"]
+    },
+    {
+      "pair_id": "cab2bc0948b79751565a3a910684bdc4cd396947bfeb5a9a880c42a5e20c0e8a",
+      "relation": "SPECIALIZES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE",
+      "relation_why": "A Claim da direita repete a exigencia de configurar webhook e acrescenta detalhes materiais (metodo POST e ativacao do evento de mensagem recebida), com qualificador de escopo 'eventos de mensagem' contido no escopo geral de 'eventos' da esquerda. Nao ha incompatibilidade entre elas; a direita e a versao mais especifica.",
+      "left_evidence_refs_checked": ["EV-9305"],
+      "right_evidence_refs_checked": ["EV-9306"]
+    },
+    {
+      "pair_id": "792c313233d1e909fec5dc5eebde9405fb0eeae48d30a7a9216263cdf53a8d2d",
+      "relation": "CONTRADICTS",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE",
+      "relation_why": "Mesmo objeto (limite maximo de instancias por conta), sem qualificadores diferenciadores em nenhum dos lados, e valores mutuamente exclusivos: dez versus tres. Nao ha plataforma, versao, populacao ou condicao distinta declarada que explique a divergencia, portanto a incompatibilidade e material sob escopo equivalente.",
+      "left_evidence_refs_checked": ["EV-9307"],
+      "right_evidence_refs_checked": ["EV-9308"]
+    },
+    {
+      "pair_id": "6045548a9857313841f93179b3266d16406814d4a9ac0c5c87780af04d84a721",
+      "relation": "SUPERSEDES",
+      "direction": "RIGHT_TO_LEFT",
+      "scope_state": "NESTED_COMPATIBLE_SCOPE",
+      "relation_why": "A Claim da direita traz evidencia EXPLICITA de substituicao e descontinuidade: a versao 2 'substitui a senha simples por token' e a versao 1 'nao e mais suportada'. A esquerda descreve o estado da versao 1. A substituicao e declarada no proprio material, nao inferida por suposta atualidade, e a direita e o lado substituto.",
+      "left_evidence_refs_checked": ["EV-9309"],
+      "right_evidence_refs_checked": ["EV-9310"]
+    },
+    {
+      "pair_id": "6555d7ac938a6544f5de669aadae396ea13d236d5d7e966faa78bb344161aa7e",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A esquerda trata de comparacao de preco entre planos de servidor por capacidade de memoria; a direita trata da localizacao do campo identificador do remetente no corpo do evento. Objetos, dominios e proposicoes sao inteiramente distintos, sem sobreposicao material que permita qualquer das relacoes substantivas.",
+      "left_evidence_refs_checked": ["EV-9311"],
+      "right_evidence_refs_checked": ["EV-9312"]
+    },
+    {
+      "pair_id": "f7211b79d193513e64cfa00d7bfe9429484eadabf35e725677e2f5f5205ddad9",
+      "relation": "INDETERMINATE",
+      "direction": "NONE",
+      "scope_state": "AMBIGUOUS_SCOPE",
+      "relation_why": "As Claims parecem opostas (obrigatorio versus dispensavel), mas as Evidence fornecidas declaram explicitamente que a fonte NAO define se o recurso X e obrigatorio, opcional ou dispensavel neste cenario. O material de apoio nega justamente aquilo que os textos das Claims afirmam, e 'este cenario' nao esta delimitado por nenhum qualificador. Assim nao ha base para afirmar incompatibilidade material nem convergencia; falta conteudo determinado para classificar.",
+      "left_evidence_refs_checked": ["EV-9313"],
+      "right_evidence_refs_checked": ["EV-9314"]
+    },
+    {
+      "pair_id": "0dc31dd17cad0282270facc05d28d389a075ca821a8fa8ea378f4b47d55e77a2",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A expressao compartilhada 'chave de API' nao prova relacao: os qualificadores de plataforma sao distintos ('painel de instancias' versus 'provedor de modelo') e os objetos sao chaves diferentes, obtidas por caminhos diferentes (e-mail de boas-vindas versus criacao no console do provedor). Nao ha proposicao comum sobre o mesmo objeto, logo nao cabe CONTRADICTS nem convergencia.",
+      "left_evidence_refs_checked": ["EV-9315"],
+      "right_evidence_refs_checked": ["EV-9316"]
+    },
+    {
+      "pair_id": "8d22bc3a1e425007ed587faa548c757186b5d8c9786dd883da0a688478370069",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "As recomendacoes tem qualificadores de audiencia materialmente distintos e nao aninhaveis ('iniciantes' versus 'operacao em escala') e recomendam ferramentas diferentes (painel simplificado versus gerenciador avancado). Cada uma vale para sua propria populacao, entao nao ha contradicao nem convergencia sobre a mesma substancia; a semelhanca e apenas de forma ('recomenda-se criar pelo...').",
+      "left_evidence_refs_checked": ["EV-9317"],
+      "right_evidence_refs_checked": ["EV-9318"]
+    },
+    {
+      "pair_id": "20bc565fff1980359278343ec46cbaafdb29228e83531247f51ebc46e9ca634d",
+      "relation": "IDENTICAL",
+      "direction": "NONE",
+      "scope_state": "EQUIVALENT_SCOPE",
+      "relation_why": "Mesma proposicao substantiva expressa por vocabulario diferente: o vinculo do numero e condicao previa para o envio/disparo de mensagem. 'Nao e possivel enviar sem antes vincular' e 'o vinculo e pre-requisito para qualquer disparo' sao equivalentes em conteudo e escopo, sem qualificadores divergentes.",
+      "left_evidence_refs_checked": ["EV-9319"],
+      "right_evidence_refs_checked": ["EV-9320"]
+    }
+  ]
+}
