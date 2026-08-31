@@ -1,0 +1,37 @@
+{
+ "policy_id": "MTX-POLICY-MS002-v1",
+ "version": "v1",
+ "declared_before": "qualquer classificacao de aplicabilidade",
+ "escopo": "SOMENTE a camada de Operationalization. PROIBIDO como input de Fusion, de Source Package ou de identidade (fusion_id).",
+ "channel_priority": [
+   {"rank": 1, "channel": "instagram",
+    "role": "ferramenta principal, especialmente video e imagem",
+    "surfaces": ["reels", "feed_video", "feed_image", "carousel", "stories"]},
+   {"rank": 2, "channel": "whatsapp",
+    "role": "conversacao e Status",
+    "surfaces": ["conversa_1a1", "grupos", "status", "atendimento"]},
+   {"rank": 3, "channel": "google_ads",
+    "role": "midia paga e creditos",
+    "surfaces": ["search", "display", "youtube_ads"]}
+ ],
+ "secondary_channels": {
+   "channels": ["email", "sms", "voz"],
+   "default_treatment": "REFERENCE_ONLY",
+   "excecao": "podem receber DIRECT_USE ou ADAPT_TO_MTX quando o material operacional atender uma necessidade especifica declarada e rastreada"
+ },
+ "applicability_classes": {
+   "DIRECT_USE": "aplicavel a MTX como esta, sem adaptacao material",
+   "ADAPT_TO_MTX": "aplicavel apos adaptacao declarada; a adaptacao deve ser registrada",
+   "REFERENCE_ONLY": "util como referencia/contexto, nao entra em workflow operacional",
+   "REJECT": "nao aplicavel a MTX; motivo registrado",
+   "NOT_YET_CLASSIFIED": "estado FAIL-CLOSED: decisao insuficiente. NUNCA promovido automaticamente."
+ },
+ "fail_closed": "Na duvida, NOT_YET_CLASSIFIED. Ausencia de decisao nunca vira DIRECT_USE.",
+ "regras_duras": [
+   "Uma decisao operacional NAO pode alterar, reescrever ou reinterpretar uma Claim, um Candidate source-local ou uma relation de Fusion.",
+   "Uma decisao operacional NAO pode ser escrita de volta em Source Package ou em Fusion.",
+   "Conteudo operacional que NAO exista literalmente nas fontes deve ser marcado MTX_DERIVED_OPERATIONAL_ARTIFACT e NUNCA apresentado como afirmacao de fonte.",
+   "Prioridade de canal orienta a Operationalization; NAO contamina a Fusion source-faithful.",
+   "Precedence permanece governanca: NUNCA derivada de data, autor, seguidores, canal, modelo ou confianca informal."
+ ]
+}

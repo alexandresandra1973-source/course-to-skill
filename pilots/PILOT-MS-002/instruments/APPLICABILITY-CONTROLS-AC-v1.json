@@ -1,0 +1,45 @@
+{
+ "note": "Controles discriminantes do classificador de aplicabilidade. Fixtures SINTETICAS, fora do corpus. Declarados ANTES de qualquer output real. Provam poder discriminante entre as cinco classes, incluindo o fail-closed.",
+ "controls": [
+  {"id":"AC1","expect":{"applicability":"DIRECT_USE","channels_include":"instagram","mtx_derived":false},
+   "unit":{"unit_id":"MS002-SRC-A|R-9001","entity_kind":"rule_candidate","source_id":"MS002-SRC-A",
+    "structure":{"name":"Publicar video vertical no Instagram Reels","trigger":"quando houver um video pronto de ate 90 segundos",
+     "condition":"o video esta em formato vertical 9:16","action":"publicar como Reels no Instagram com legenda e chamada para acao",
+     "do_not":["nao publicar horizontal como Reels"],"precedence":null},
+    "defects":[],"evidence_refs":["EV-9001"]}},
+
+  {"id":"AC2","expect":{"applicability":"ADAPT_TO_MTX","adaptations_nonempty":true},
+   "unit":{"unit_id":"MS002-SRC-A|WF-9002","entity_kind":"workflow_candidate","source_id":"MS002-SRC-A",
+    "structure":{"name":"Sequencia de nutricao por email em cinco toques",
+     "steps":[{"order_key":1,"name":"captura","action":"capturar o email do lead num formulario","evidence_refs":["EV-9002"]},
+              {"order_key":2,"name":"envio","action":"enviar cinco emails ao longo de duas semanas","evidence_refs":["EV-9002"]}]},
+    "defects":[],"evidence_refs":["EV-9002"]}},
+
+  {"id":"AC3","expect":{"applicability":"REFERENCE_ONLY"},
+   "unit":{"unit_id":"MS002-SRC-A|R-9003","entity_kind":"rule_candidate","source_id":"MS002-SRC-A",
+    "structure":{"name":"Discagem automatica por voz para leads frios","trigger":"quando um lead frio entra na base",
+     "condition":"sem necessidade especifica declarada","action":"disparar uma ligacao automatica de voz",
+     "do_not":[],"precedence":null},
+    "defects":[],"evidence_refs":["EV-9003"]}},
+
+  {"id":"AC4","expect":{"applicability":"REJECT"},
+   "unit":{"unit_id":"MS002-SRC-B|R-9004","entity_kind":"rule_candidate","source_id":"MS002-SRC-B",
+    "structure":{"name":"Comprar seguidores para inflar prova social","trigger":"quando o perfil tem poucos seguidores",
+     "condition":"antes de um lancamento","action":"contratar servico de compra de seguidores",
+     "do_not":[],"precedence":null},
+    "defects":[],"evidence_refs":["EV-9004"]}},
+
+  {"id":"AC5","expect":{"applicability":"NOT_YET_CLASSIFIED"},
+   "unit":{"unit_id":"MS002-SRC-C|R-9005","entity_kind":"rule_candidate","source_id":"MS002-SRC-C",
+    "structure":{"name":"Ajustar o parametro","trigger":"quando necessario","condition":"depende",
+     "action":"mudar o valor para o recomendado","do_not":[],"precedence":null},
+    "defects":["SCOPE_UNSTATED"],"evidence_refs":["EV-9005"]}},
+
+  {"id":"AC6","expect":{"applicability_in":["DIRECT_USE","ADAPT_TO_MTX"],"channels_include":"whatsapp"},
+   "unit":{"unit_id":"MS002-SRC-B|AP-9006","entity_kind":"anti_pattern_candidate","source_id":"MS002-SRC-B",
+    "structure":{"do_not":["nao usar a conta pessoal de WhatsApp para automacao de atendimento"],
+     "why":"aumenta a chance de restricao da conta","conditions":["quando o volume de mensagens e alto"]},
+    "defects":[],"evidence_refs":["EV-9006"]}}
+ ],
+ "gate": "Os seis EXATOS. Qualquer divergencia: MS_002_APPLICABILITY_INSTRUMENT_INVALID. Nenhuma classificacao real comeca. NAO reinterpretar depois."
+}
