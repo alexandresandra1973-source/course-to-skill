@@ -1,0 +1,42 @@
+POLITICA DE MODELO — MS-001B v2 (EXECUCAO 3). Auditada com P0 fora do corpus.
+
+  requested model        claude-opus-5
+  expected resolved      claude-opus-5
+  thinking               DESLIGADO via --settings {"alwaysThinkingEnabled":false}
+                         verificado por usage.output_tokens_details.thinking_tokens == 0
+  max_tokens             64000  (teto do harness; NAO configuravel)
+  temperature            OMITIDA — default, como no MS-001A e na politica v1
+  transporte             processo `claude -p` novo por chamada
+  Claude Code            2.1.251
+  credencial             OAuth da assinatura Claude Max — SEM API key
+
+  MUDANCA AUTORIZADA (unica):
+    OLD:  Python Anthropic SDK 0.121.0 + API key em ~/.anthropic_key
+    NEW:  fresh `claude -p` process + Claude Max OAuth
+
+  Classificacao: MODEL_TRANSPORT_RECOVERY. NAO e mudanca semantica.
+
+  NAO ALTERADO: semantic judge prompt, relation taxonomy, schema, J1-J10,
+  Source Packages, blocker, V1, pairset, Evidence, Candidate transport,
+  stability policy, Fusion semantics.
+
+  Prova de que o instrumento semantico e o mesmo:
+    SYSTEM sha256 = 37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9
+    identico ao system_sha256 registrado pela EXECUCAO 1 sob o transporte antigo.
+
+  RESOLUCAO DE MODELO:
+    Verificada em TODAS as 18 chamadas via modelUsage do JSON de saida.
+    modelUsage.keys() != ["claude-opus-5"]  ->  MS_001B_INVALID.
+    NENHUMA substituicao silenciosa. NENHUMA call de resolucao separada.
+    CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 elimina a chamada auxiliar de
+    geracao de titulo (claude-haiku-4-5), garantindo que modelUsage contenha
+    exclusivamente o modelo do julgamento.
+
+  PROIBIDO EM QUALQUER CIRCUNSTANCIA:
+    ~/.anthropic_key · ANTHROPIC_API_KEY · ANTHROPIC_AUTH_TOKEN · ANTHROPIC_BASE_URL
+    SDK Python da Anthropic · --bare · extra usage pago · Console API
+    Bedrock/Vertex/Foundry · apiKeyHelper · --continue · --resume
+
+  LIMITE DO PLANO:
+    Max plan exhaustion -> MS_001_PAUSED_MAX_PLAN_USAGE_LIMIT.
+    Nunca recorrer a API. Nunca habilitar extra usage.
