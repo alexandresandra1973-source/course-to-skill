@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-09
+boundaries: 9240.96s - 10383.439s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+where there's just more models than most human beings know what to do with that a point of value would actually be in the organization and um making available of those models to the general public. Like think about it, there's like a bajillion different models you could choose. There's a bajillion different platforms you could sign up to. Um you know, in an environment where it's just really confusing for people to get started, what they do is they basically just combine all that onto their platform and then you just need one API key and then it does it all. So this is what I'm going to be using. Uh you guys don't have to use it, but I really like them. It's a cool, you know, set of of people. Um it's also just uh yeah, it's a pretty straightforward platform. And I think Claude Code is really really good at driving this puppy um because they have like a really simple and easy sort of API endpoint structure called a model context protocol server. So if you guys don't end up using this, then just know that you'll probably have to do a little bit more work there if you want it to work like very similarly to what I'm showing you guys. But that's okay, right? Um, and you know, hopefully we've established now that video costs more money than photo. And, uh, I haven't made you guys feel like this is super unrealistic or anything like that. [gasps] Okay, cool. So, what do you do? Uh, well, first things first, you got to like make an account. So, I'm just going to open up an incognito window here and then go to higsfield.ai. What you have to do is you have to click sign up. They give you guys like a bunch of discounts and stuff right now. So, I'm just going to let's exit out of that. Sign up. I'll go continue with Google and I'm just going to add my email address. So, I've signed in. It's going to say verify that you are a human. So, I just did that. Keep in mind the interface is going to look very very different um by the time that you guys are using it probably. But anyway, we want to do UGC videos and we're maybe beginners so we want oneclick presets and I don't know uh what do we want to try? Probably MCP and then I'll just leave it at that because yeah, again this is just like a just an onboarding and there's many different ways you could do this. Okay, cool, cool, cool, cool. So yeah, we've now received some big fat offer and they'll give us a bunch of money off. That's cool. Um I'm just going to you know proceed without that account understanding that you do have to purchase some credits but um yeah anyway so what we want is basically we want two things. The first thing we want is uh we want to generate this locally just so you guys understand what is going on under the hood all the different parameters and stuff like that that you could use to tweak in order to generate your like high quality UGC. And then after that we're going to do this via program uh you know claude code via what's called MCP model context protocol. And this is where Claude can actually just like drive this whole thing. So we can actually just copy over a prompt here and basically say, "Hey, install this whole thing." And it'll work perfectly fine with no issues at all. So yeah, pretty cool. Uh I'm going to head over to video first and then I'm going to generate something pretty cool. You can see I've already done a couple of different gens here before. Um you know, one of the gens that I did was uh uh ash falling in a city, which is kind of cool. show you guys what that looks like. You can see it's slowly sort of going down to the ground. That was for a website that I made. This is sort of like a cool wheel that's zooming in and out. That's kind of neat, right? It's like a like an old church style theme. I've done a couple of other pretty badass ones, too. Here's a bunch of like people charging in like a more medieval battleground. You'll notice that some things are kind of weird, right? Like why are the horses going backwards? Well, it's because this model isn't perfect. And uh you know every now and then one of the gens will be sort of trash. So you just got to keep that in mind. Uh anyway, so what do we want to do? We basically want to create a video using some media over here, some user generated content stuff um of somebody talking about a product. And I think what a lot of people don't understand is that you can't just do this in one shot and expect it to work really well. What you need to do is you actually need to like vary it and have multiple different shots. And so what I'm going to do is I'm going to feed it an image of a product and then I'm also going to feed an image of like an influencer and then I'm going to get the influencer to like talk about the product. But if you think about that that's like that's actually multiple steps. Um so what I'm going to do first is I'm going to go actually not over to video but to image and this allows you to generate things using um image models. So as you can see that midnight clay thing that I generated is right over here. So, I'm actually going to reference this in an image flow. And then I'm actually going to go and I'm going to find some like UGC style influencer on Pinterest. So, I don't know. I'm just going to go like, as you can see, there's a lot of like UGC style influencers here talking about products and stuff. Um, I don't know. Let's use this one. You know, obviously most of the time, and I I don't want to stress this too much, but most of the time it's like a woman that is demoing a product of some kind. And that's just because mathematically they found that when they have women demo products, they do a lot better. So a lot of these UGC's are going to be um you know images and videos and stuff like that of women. But anyway, I'm just going to feed in this woman. And then what I want is I actually want to go to uh what do we have? GBT image 2. I don't know. I think we had GBT image somewhere here. So let me find it. There you go. 4K images. And uh we have a bunch of settings here. We can go high, best visual fidelity, 2K, 1K, 4K, auto size, which is important. So this is going to depend on how we how we're going to generate our videos. For the purposes of simplicity, I'm just going to go one one and assume that we're generating everything one. And then batch size. Batch size is just the total number of gens that I am going to create here with these two images. And so what I want to do first is I want to generate a woman that's kind of like this woman. Okay. Actually, so let me just go back. Generate a woman that contains all of the features that this woman has, but is ultimately different. Um I don't know, change her hair a little bit. Uh and then instead of outdoors, put her indoors. Uh the reason for that is I'm going to use her in like a product shoot later. So I want to generate I don't know three options which is going to cost me 21 credits. And the workflow is you know we're just going to take this woman who is I don't know if she's real. Maybe she's already an AI generated image or something. She might be. But we're going to take her and then we're going to stick her in a fake environment that I've made and it's going to be indoors and we're going to use this woman who is now fake. It's not like a real woman to advertise our products by turning that into a video. So that's sort of the three or fourstep flow. And uh yeah, I always like doing this manually at least once because it's important for you guys to understand how it works manually before you guys move to fully automating it with cloud code. If you guys don't know how to do the process manually, I find a lot of the time you're just misunderstanding the the different features and the different options that are available. Uh I generated this in 2K. You could just generate this in 1K, which is just 1024 pixels. Uh, but I find that, you know, if we want really high quality input images to be used for the purposes of video, it's better to, uh, you know, do this with like a high 2K. Um, yeah, and then, you know, there's a bunch of different models you could choose here, too. There's Higsfield Soul, Higsfield Soul Cinema, Cream 5.0 Pro. This one's actually pretty good. Um, they're also offering, at least as the time of this recording, a bunch of free usage. So, that's pretty neat. Uh, it's just like an advertising play where they're trying to, you know, make as much money as humanly possible by incentivizing models that are last gen, pretty cheap inference-wise to run. And it's kind of like a Costco chicken. You come in through the door, buy yourself a Costco chicken, and then you're like, well, I'm at Costco, I might as well buy myself some tomatoes. Yeah, that's their whole idea. This is not occurring instantly because it is quite computationally intensive. We are using GBT image 2 and generating, you know, 20 48 pixel x 20848 pixel images. So, I'm just going to circle back when this is done. Okay. And so, we now have a bunch. Uh, I like probably this one the best. I think it's like it's a little different from the original, right? It's a little different. I mean, like, yeah, the lips are a little bit different. She's wearing the same outfit. So, I'm looking at this one more and like this is obviously an AI image as well. So, we are just putting AI on AI on AI. But, uh, yeah, this is fine. So, I'm just going to download this now. Well, actually, you don't even need to download it to be honest. Uh, and then what I want to do is I want to use this as a reference. So, I'm going to reference this here. And then over here is going to be my generated woman. Okay. And then what I want is um make it so that the woman is holding my product. Uh maybe in like a bathroom or something like that where it would make sense to put on a midnight clay mask. She should be enthusiastic about using the product. Uh but don't like oversell it. The reason why last time we generated three is just because I wanted to provide myself a lot of um and I'm just going to do this 2K again is because I wanted to give myself a bunch of different options just to make sure that like you know we had diversity, but I'm finding that I don't really need that diversity. It does a pretty good job. So, I just one-shoted it and I'm going to see how it looks now when she's holding the element. Um yeah, and this is like a little bit different of an influencer than this chick. You can see like the features are slightly different. Very very slightly different. obviously hyper hyper exaggerated and stuff like that. Uh but yeah, we'll we'll we'll check out when see what the gen looks like. While we're waiting for that, I'm actually just going to go back to Claude. I'll go to new and then I will give it um a picture of this product and then I'll have it generate me a script for my VSSL. So, just scrolling down here to uh this midnight clay mask. Okay, actually I don't think I have the midnight clay mask set up yet. So, let me go and grab that. We're actually going to go here, download this. So now we've downloaded it. Go back to Claude Code. Going to go to Finder. And then this midnight clay mask is jumping in here. This is a product that I am about to record a UGC style ad for. I want you to generate me three scripts similar to what a real influencer would say talking about this product. Pretend the influencer is a young woman that's found a lot of value in our midnight clay mask. and then make it somewhere between 30 seconds or so. Okay, so now uh it's going to read the image and then generate me a bunch of different options. Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay Overnight Mask and I have combo skin that's oily in my T-zone but flaky everywhere else. So most clay masks either dry me out or don't do anything. This one's different cuz you can literally sleep in it. I put it on like a thin layer before bed, wake up, rinse it off, my skin just looks calm, like less redness, my pores look smaller, and it's not stripped at all. So, I mean, like, this is, you know, it's not really all that good. Yeah, I think I'm just going to like edit it slightly. So, I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the midnight clay overnight mask. I have combo skin that's oily in my T-zone but flake everywhere else. So, most clay zones either dry me out or don't do anything. But, this one changed the game for me. I can literally sleep in it. Or maybe you can literally sleep in it. You just put on a thin layer before bed like this. Then wake up and rinse it off. Your skin just looks really calm. Way less redness. My pores look smaller and it's not stripped at all. This is going to be my little script for the video. Uh let's go back and see how the gens are looking. Cool. So, she's now holding this, you know, in a in a bathroom supposedly. So, that's nice. I'm now going to turn it into a video just like this. Okay. All right. Okay. And what I want to do, there are a variety of different models you could choose for this. Uh, let's see. I think I'm probably going to do the Well, we can actually just go test a bunch of this to be honest. Uh, I'm going to try C dance 2.0 fast, but yeah, I'm just I'm going to test a bunch. So, this is a woman doing, let's say, a woman doing a UGC style. Let's say a woman influencer doing a UGC style ad talking about a product. Okay. And I think just for starters, I'm probably going to make it really small. And there's also a bunch of elements that you can reuse. So, what I'm going to do is I'm just going to upload that media from before. The reason why is because um if you don't upload media, sometimes it will like not actually keep the midnight clay mask in the right place. So, I'm just going to add this to my element. Here it is. Midnight clay mask. This is a clay mask used for product videography. Okay, so now it now it actually has access to the midnight clay mask for the video. So, we're just going to use this as our prop. It's actually added to the prompt box. Uh, and then cool. I mean, I I see cling here. I'm just going to try a bunch of different models. We'll see which ones work best. Okay. And now what I'm going to do is I'm going to turn on sound and then I'm just going to generate multiple. So, I'm going to do, you know, generate 10 with cling. What I'm going to do here just so I can test out a couple of different approaches. So I'll do the same thing with Cling Turbo and then I'm going to do the same thing with Cance 2.0. Okay. And after a little bit of playing around, uh, we now have a couple of different ads. So I'm going to turn this on. Hopefully you guys can hear this. >> Okay. So I need to talk about this because I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the midnight. I have combo. >> So as you guys can see, we generated a pretty short one here and I did that just as a test. I wanted to make sure that we could actually hear, you know, audio and it didn't seem super crazy. Um, but suffice to say, you can actually do Yeah, you can do a fair amount with this. assuming the woman's moving her mouth. She's like promoing the product. There's even a little zoom in which is kind of neat. Um, so I'm going to try this on a variety of different models and just see what the best one is, at least as the time of this recording. Uh, you can expect to spend maybe like $10 to $20 doing this initial test round. The whole idea is you just want like a reusable pipeline, right? >> Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay overnight mask. I have combo skin that's oily and >> Okay, so this is good. I mean, I like what we what we had here. This is probably a little bit better than Cling 3.0 Turbo. The issue is obviously the time here. Um, you know, that's just not enough time to actually do the ad. So, I think what I'm probably going to do is I'm just going to max it out at like 15 seconds. What was the Gemini Omni Flash good for? I think it's only 10 seconds. Yeah, it's only 10 seconds. So, basically, we need to like we need to make this a little bit shorter. Maybe instead it'll just be like you need to try this. This is the Midnight Clay Overnight Mask. It fixes oily skin without flakes. 10 out of 10. would recommend change the game for me. Sure. I don't know. Something like that. And looks like I'm doing 16 by9 which is kind of unfortunate, but I'm just going to do a couple of these now. Um, and then see if we can actually make it through the entire script. Then once we have that, we'll have the rule which we can use to generate using Gemini Omni Flash. All right. So, while that's working, let's scaffold out the skill that'll be used to generate these on demand. If you think about it, the idea is I'm going to feed it in a product. That's going to be like my initial step. It's then going to, I don't know, use some influencer that I've already sort of chosen um to represent that product. And then all we really need to do is we just need to come up with a bunch of, you know, scripts. And those scripts need to be pretty short. Um, you know, probably somewhere around, I don't know, like 150, 200 characters. So, just checking back on, you know, the gens here. It looks like >> you need to try this. This is the Midnight Clay Overnight Mask. It fixes oily skin without flakes. 1010 would recommend. Change the game for me. Okay. And this is just a little bit too long. You need to try this. This is >> She's looking all like, but I don't really need to just wait three hours. >> You need to try this. This is the Midnight Clay Overnight Mask. It fixes oily skin without flakes. 1010 would recommend. Change the game for me. >> Okay, so that one's much better. I think we could probably just rip this ad over and over and over again. Um, so yeah, this is this is good. I think what we need to do is we just need to time this. So, let's check out word counter and then figure out exactly how many words are here. [sighs and gasps] Looks like it's about 146 characters. I think we could probably go to like 170 characters. So, I think that's what I'll do. I'll say 170 character. Uh, well, why don't we just do words instead? 27 to Yeah, 27 to maybe like 30 words or so. So, I'm going to go back to Claude and I'm just going to voice dump all of this in as the process. Hey, I'm going to give you an image of a product. I then want you to use the provided image of the influencer to generate a picture or a starting frame of a woman holding the product uh somewhere in an environment that it would make sense. Then I want you to generate 10 script candidates. A script candidate is a script that espouses the virtues of the product, talks about the benefits in an influencer UGC style fashion. Uh, the script needs to be under 35 words or so in order to fit our time limit. After you're done, I want you to show me the uh, generated product image with GPT- image-2. And then I also want you to show me the scripts so that I can verify everything's good. After that, I'm going to add a couple more steps to the flow and we'll turn that into a skill. Cool. So, that is what we're going to do. Clearly, we verified that this works if we do it manually. So, let's make this work um digitally as well. Here's the influencer and here's the product. I'm going to feed both of these in. Voila. And you can call GPT image 2 using open AI API key. It's in the local environment. Okay. Uh and then going to circle back and just double check that now that we can, you know, we verified we can do this through like manual usage, we need to verify that we can also do this through claude. And then we we're just going to scale the hell out of this thing. I'm sure you guys can imagine we could take this further. Um, as this is building it, uh, just some brainstorming out loud. Rather than just using one woman, you could have, let's say, 20 or 30 people, men, women alike, people from different geographies, different ages, different ICPS, different like personas all all over the place. You would do this by using AI to pre-generate a bunch of images of or videos of influencers that you like. uh and then you would also kind of multiply or cross that by all the different products that they're holding in a bunch of different locations. So now what we're doing is we're just multiplying uh a bunch of different options. you then multiply those by a bunch of different scripts. And in that way, what you could do and what you know I I I like thinking about AI as what you could do is um you could basically choose let's say 10 influencers, okay? Multiply them by I don't know 10 settings, multiply them by 10 different scripts. Uh the resulting thing is you'll have 1,000 possible options. Now, it kind of sucks to look and watch through each, right? So, what you could also do, and I'm just brainstorming. I'm not going to do anything as complicated as this because I don't want to kind of put the cart before the horse. What you could do is you could have some sort of automated image check where every single one of these videos, which are all 10 seconds or so, you break down into 1 second frames. So, now it's like 1 second frame, 1 second frame, 1 second frame. You take screenshots of each. You feed that into an AI model like, you know, GPT uh or Claude Code. Have Claude Code take a look at the image and tell you, is there anything malformed that doesn't make sense? If so, just delete it from that problem set or from the option set entirely. After this process is done, maybe you have like I don't know, let's say 250 to 500 that are remaining and each of these are 10 seconds. So, what you can do is you can have a human being watch them all. That's 2500 to 5,000 seconds of watch time. And then, you know, if you do the math on two 2,500 seconds, I think that's like 40 minutes to, I don't know, 80 minutes. If you have somebody that then chooses the top, let's say 20 performers of those in the 40 to 80 minutes, you've effectively replaced an entire creative department for, you know, a thousand times the cost of generating this, which is not trivial, right? Uh, but now you have literally 20 new pieces of creative that can make it to the next step. So, I say all this just to show you guys, uh, this is extraordinarily possible right now. It's very economical and, you know, you can then test 20 with some small little ad budget, figure out what makes the most sense to scale. So, just going to take a look at this. Yeah, this is her now
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0481",
+  "excerpt": "where there's just more models than most human beings know what to do with that a point of value would actually be in the organization and um making available of those models to the general public. Like think about it, there's like a bajillion different models you could choose. There's a bajillion different platforms you could sign up to. Um you know, in an environment where it's just really"
+ },
+ {
+  "local_id": "EV-0482",
+  "excerpt": "confusing for people to get started, what they do is they basically just combine all that onto their platform and then you just need one API key and then it does it all. So this is what I'm going to be using. Uh you guys don't have to use it, but I really like them. It's a cool, you know, set of of people. Um it's also just uh yeah, it's a pretty straightforward platform. And I think"
+ },
+ {
+  "local_id": "EV-0483",
+  "excerpt": "Claude Code is really really good at driving this puppy um because they have like a really simple and easy sort of API endpoint structure called a model context protocol server. So if you guys don't end up using this, then just know that you'll probably have to do a little bit more work there if you want it to work like very similarly to what I'm showing you guys. But that's okay,"
+ },
+ {
+  "local_id": "EV-0484",
+  "excerpt": "right? Um, and you know, hopefully we've established now that video costs more money than photo. And, uh, I haven't made you guys feel like this is super unrealistic or anything like that. [gasps] Okay, cool. So, what do you do? Uh, well, first things first, you got to like make an account. So, I'm just going to open up an incognito window here and then go to higsfield.ai. What you have"
+ },
+ {
+  "local_id": "EV-0485",
+  "excerpt": "to do is you have to click sign up. They give you guys like a bunch of discounts and stuff right now. So, I'm just going to let's exit out of that. Sign up. I'll go continue with Google and I'm just going to add my email address. So, I've signed in. It's going to say verify that you are a human. So, I just did that. Keep in mind the interface is going to look very very different um by the time"
+ },
+ {
+  "local_id": "EV-0486",
+  "excerpt": "that you guys are using it probably. But anyway, we want to do UGC videos and we're maybe beginners so we want oneclick presets and I don't know uh what do we want to try? Probably MCP and then I'll just leave it at that because yeah, again this is just like a just an onboarding and there's many different ways you could do this. Okay, cool, cool, cool, cool. So yeah,"
+ },
+ {
+  "local_id": "EV-0487",
+  "excerpt": "we've now received some big fat offer and they'll give us a bunch of money off. That's cool. Um I'm just going to you know proceed without that account understanding that you do have to purchase some credits but um yeah anyway so what we want is basically we want two things. The first thing we want is uh we want to generate this locally just so you guys understand what is going on"
+ },
+ {
+  "local_id": "EV-0488",
+  "excerpt": "under the hood all the different parameters and stuff like that that you could use to tweak in order to generate your like high quality UGC. And then after that we're going to do this via program uh you know claude code via what's called MCP model context protocol. And this is where Claude can actually just like drive this whole thing. So we can actually just copy over"
+ },
+ {
+  "local_id": "EV-0489",
+  "excerpt": "a prompt here and basically say, \"Hey, install this whole thing.\" And it'll work perfectly fine with no issues at all. So yeah, pretty cool. Uh I'm going to head over to video first and then I'm going to generate something pretty cool. You can see I've already done a couple of different gens here before. Um you know, one of the gens that I did was uh uh ash falling in a city, which is kind"
+ },
+ {
+  "local_id": "EV-0490",
+  "excerpt": "of cool. show you guys what that looks like. You can see it's slowly sort of going down to the ground. That was for a website that I made. This is sort of like a cool wheel that's zooming in and out. That's kind of neat, right? It's like a like an old church style theme. I've done a couple of other pretty badass ones, too. Here's a bunch of like people"
+ },
+ {
+  "local_id": "EV-0491",
+  "excerpt": "charging in like a more medieval battleground. You'll notice that some things are kind of weird, right? Like why are the horses going backwards? Well, it's because this model isn't perfect. And uh you know every now and then one of the gens will be sort of trash. So you just got to keep that in mind. Uh anyway, so what do we want to do? We basically want to create a video"
+ },
+ {
+  "local_id": "EV-0492",
+  "excerpt": "using some media over here, some user generated content stuff um of somebody talking about a product. And I think what a lot of people don't understand is that you can't just do this in one shot and expect it to work really well. What you need to do is you actually need to like vary it and have multiple different shots. And so what I'm going to do is I'm going to feed it an image of a"
+ },
+ {
+  "local_id": "EV-0493",
+  "excerpt": "product and then I'm also going to feed an image of like an influencer and then I'm going to get the influencer to like talk about the product. But if you think about that that's like that's actually multiple steps. Um so what I'm going to do first is I'm going to go actually not over to video but to image and this allows you to generate things using um image models. So as you can see that"
+ },
+ {
+  "local_id": "EV-0494",
+  "excerpt": "midnight clay thing that I generated is right over here. So, I'm actually going to reference this in an image flow. And then I'm actually going to go and I'm going to find some like UGC style influencer on Pinterest. So, I don't know. I'm just going to go like, as you can see, there's a lot of like UGC style influencers here talking about products and stuff. Um, I don't know. Let's use"
+ },
+ {
+  "local_id": "EV-0495",
+  "excerpt": "this one. You know, obviously most of the time, and I I don't want to stress this too much, but most of the time it's like a woman that is demoing a product of some kind. And that's just because mathematically they found that when they have women demo products, they do a lot better. So a lot of these UGC's are going to be um you know images and videos and stuff like that of women. But"
+ },
+ {
+  "local_id": "EV-0496",
+  "excerpt": "anyway, I'm just going to feed in this woman. And then what I want is I actually want to go to uh what do we have? GBT image 2. I don't know. I think we had GBT image somewhere here. So let me find it. There you go. 4K images. And uh we have a bunch of settings here. We can go high, best visual fidelity, 2K, 1K, 4K, auto size, which is important. So this is going to depend on how we how"
+ },
+ {
+  "local_id": "EV-0497",
+  "excerpt": "we're going to generate our videos. For the purposes of simplicity, I'm just going to go one one and assume that we're generating everything one. And then batch size. Batch size is just the total number of gens that I am going to create here with these two images. And so what I want to do first is I want to generate a woman that's kind of like this woman. Okay. Actually, so let me"
+ },
+ {
+  "local_id": "EV-0498",
+  "excerpt": "just go back. Generate a woman that contains all of the features that this woman has, but is ultimately different. Um I don't know, change her hair a little bit. Uh and then instead of outdoors, put her indoors. Uh the reason for that is I'm going to use her in like a product shoot later. So I want to generate I don't know three options which is going to cost me 21"
+ },
+ {
+  "local_id": "EV-0499",
+  "excerpt": "credits. And the workflow is you know we're just going to take this woman who is I don't know if she's real. Maybe she's already an AI generated image or something. She might be. But we're going to take her and then we're going to stick her in a fake environment that I've made and it's going to be indoors and we're going to use this woman who is now fake. It's not like a real woman to"
+ },
+ {
+  "local_id": "EV-0500",
+  "excerpt": "advertise our products by turning that into a video. So that's sort of the three or fourstep flow. And uh yeah, I always like doing this manually at least once because it's important for you guys to understand how it works manually before you guys move to fully automating it with cloud code. If you guys don't know how to do the process manually, I find a lot of the time you're just"
+ },
+ {
+  "local_id": "EV-0501",
+  "excerpt": "misunderstanding the the different features and the different options that are available. Uh I generated this in 2K. You could just generate this in 1K, which is just 1024 pixels. Uh, but I find that, you know, if we want really high quality input images to be used for the purposes of video, it's better to, uh, you know, do this with like a high 2K. Um, yeah, and then, you know,"
+ },
+ {
+  "local_id": "EV-0502",
+  "excerpt": "there's a bunch of different models you could choose here, too. There's Higsfield Soul, Higsfield Soul Cinema, Cream 5.0 Pro. This one's actually pretty good. Um, they're also offering, at least as the time of this recording, a bunch of free usage. So, that's pretty neat. Uh, it's just like an advertising play where they're trying to, you know, make as much money as humanly possible"
+ },
+ {
+  "local_id": "EV-0503",
+  "excerpt": "by incentivizing models that are last gen, pretty cheap inference-wise to run. And it's kind of like a Costco chicken. You come in through the door, buy yourself a Costco chicken, and then you're like, well, I'm at Costco, I might as well buy myself some tomatoes. Yeah, that's their whole idea. This is not occurring instantly because it is quite computationally intensive. We are"
+ },
+ {
+  "local_id": "EV-0504",
+  "excerpt": "using GBT image 2 and generating, you know, 20 48 pixel x 20848 pixel images. So, I'm just going to circle back when this is done. Okay. And so, we now have a bunch. Uh, I like probably this one the best. I think it's like it's a little different from the original, right? It's a little different. I mean, like, yeah, the lips are a little bit different. She's wearing the same"
+ },
+ {
+  "local_id": "EV-0505",
+  "excerpt": "outfit. So, I'm looking at this one more and like this is obviously an AI image as well. So, we are just putting AI on AI on AI. But, uh, yeah, this is fine. So, I'm just going to download this now. Well, actually, you don't even need to download it to be honest. Uh, and then what I want to do is I want to use this as a reference. So, I'm going to"
+ },
+ {
+  "local_id": "EV-0506",
+  "excerpt": "reference this here. And then over here is going to be my generated woman. Okay. And then what I want is um make it so that the woman is holding my product. Uh maybe in like a bathroom or something like that where it would make sense to put on a midnight clay mask. She should be enthusiastic about using the product. Uh but don't like oversell it. The reason why last time we generated"
+ },
+ {
+  "local_id": "EV-0507",
+  "excerpt": "three is just because I wanted to provide myself a lot of um and I'm just going to do this 2K again is because I wanted to give myself a bunch of different options just to make sure that like you know we had diversity, but I'm finding that I don't really need that diversity. It does a pretty good job. So, I just one-shoted it and I'm going to see how it looks now when she's"
+ },
+ {
+  "local_id": "EV-0508",
+  "excerpt": "holding the element. Um yeah, and this is like a little bit different of an influencer than this chick. You can see like the features are slightly different. Very very slightly different. obviously hyper hyper exaggerated and stuff like that. Uh but yeah, we'll we'll we'll check out when see what the gen looks like. While we're waiting for that, I'm actually just going to go back"
+ },
+ {
+  "local_id": "EV-0509",
+  "excerpt": "to Claude. I'll go to new and then I will give it um a picture of this product and then I'll have it generate me a script for my VSSL. So, just scrolling down here to uh this midnight clay mask. Okay, actually I don't think I have the midnight clay mask set up yet. So, let me go and grab that. We're actually going to go here, download this. So now we've downloaded"
+ },
+ {
+  "local_id": "EV-0510",
+  "excerpt": "it. Go back to Claude Code. Going to go to Finder. And then this midnight clay mask is jumping in here. This is a product that I am about to record a UGC style ad for. I want you to generate me three scripts similar to what a real influencer would say talking about this product. Pretend the influencer is a young woman that's found a lot of value in our midnight clay mask. and then make"
+ },
+ {
+  "local_id": "EV-0511",
+  "excerpt": "it somewhere between 30 seconds or so. Okay, so now uh it's going to read the image and then generate me a bunch of different options. Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay Overnight Mask and I have combo skin that's oily in my T-zone but flaky everywhere else. So"
+ },
+ {
+  "local_id": "EV-0512",
+  "excerpt": "most clay masks either dry me out or don't do anything. This one's different cuz you can literally sleep in it. I put it on like a thin layer before bed, wake up, rinse it off, my skin just looks calm, like less redness, my pores look smaller, and it's not stripped at all. So, I mean, like, this is, you know, it's not really all that good. Yeah, I think I'm just going to like edit it"
+ },
+ {
+  "local_id": "EV-0513",
+  "excerpt": "slightly. So, I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the midnight clay overnight mask. I have combo skin that's oily in my T-zone but flake everywhere else. So, most clay zones either dry me out or don't do anything. But, this one changed the game for me. I can literally sleep in it. Or maybe you can literally"
+ },
+ {
+  "local_id": "EV-0514",
+  "excerpt": "sleep in it. You just put on a thin layer before bed like this. Then wake up and rinse it off. Your skin just looks really calm. Way less redness. My pores look smaller and it's not stripped at all. This is going to be my little script for the video. Uh let's go back and see how the gens are looking. Cool. So, she's now holding this, you know, in a in a bathroom supposedly. So, that's"
+ },
+ {
+  "local_id": "EV-0515",
+  "excerpt": "nice. I'm now going to turn it into a video just like this. Okay. All right. Okay. And what I want to do, there are a variety of different models you could choose for this. Uh, let's see. I think I'm probably going to do the Well, we can actually just go test a bunch of this to be honest. Uh, I'm going to try C dance 2.0 fast, but yeah, I'm just I'm going to test a bunch. So, this is"
+ },
+ {
+  "local_id": "EV-0516",
+  "excerpt": "a woman doing, let's say, a woman doing a UGC style. Let's say a woman influencer doing a UGC style ad talking about a product. Okay. And I think just for starters, I'm probably going to make it really small. And there's also a bunch of elements that you can reuse. So, what I'm going to do is I'm just going to upload that media from before. The"
+ },
+ {
+  "local_id": "EV-0517",
+  "excerpt": "reason why is because um if you don't upload media, sometimes it will like not actually keep the midnight clay mask in the right place. So, I'm just going to add this to my element. Here it is. Midnight clay mask. This is a clay mask used for product videography. Okay, so now it now it actually has access to the midnight clay mask for the video. So, we're just going to use this as our"
+ },
+ {
+  "local_id": "EV-0518",
+  "excerpt": "prop. It's actually added to the prompt box. Uh, and then cool. I mean, I I see cling here. I'm just going to try a bunch of different models. We'll see which ones work best. Okay. And now what I'm going to do is I'm going to turn on sound and then I'm just going to generate multiple. So, I'm going to do, you know, generate 10 with cling. What I'm going to do here just so I can test"
+ },
+ {
+  "local_id": "EV-0519",
+  "excerpt": "out a couple of different approaches. So I'll do the same thing with Cling Turbo and then I'm going to do the same thing with Cance 2.0. Okay. And after a little bit of playing around, uh, we now have a couple of different ads. So I'm going to turn this on. Hopefully you guys can hear this. >> Okay. So I need to talk about this because I've been sitting on it for like"
+ },
+ {
+  "local_id": "EV-0520",
+  "excerpt": "2 weeks and I'm mad I didn't try it sooner. This is the midnight. I have combo. >> So as you guys can see, we generated a pretty short one here and I did that just as a test. I wanted to make sure that we could actually hear, you know, audio and it didn't seem super crazy. Um, but suffice to say, you can actually do Yeah, you can do a fair amount with"
+ },
+ {
+  "local_id": "EV-0521",
+  "excerpt": "this. assuming the woman's moving her mouth. She's like promoing the product. There's even a little zoom in which is kind of neat. Um, so I'm going to try this on a variety of different models and just see what the best one is, at least as the time of this recording. Uh, you can expect to spend maybe like $10 to $20 doing this initial test round. The whole idea is you just want like a"
+ },
+ {
+  "local_id": "EV-0522",
+  "excerpt": "reusable pipeline, right? >> Okay, so I need to talk about this cuz I've been sitting on it for like 2 weeks and I'm mad I didn't try it sooner. This is the Midnight Clay overnight mask. I have combo skin that's oily and >> Okay, so this is good. I mean, I like what we what we had here. This is probably a little bit better than Cling 3.0 Turbo. The issue is obviously the"
+ },
+ {
+  "local_id": "EV-0523",
+  "excerpt": "time here. Um, you know, that's just not enough time to actually do the ad. So, I think what I'm probably going to do is I'm just going to max it out at like 15 seconds. What was the Gemini Omni Flash good for? I think it's only 10 seconds. Yeah, it's only 10 seconds. So, basically, we need to like we need to make this a little bit shorter. Maybe instead it'll just be like you need to"
+ },
+ {
+  "local_id": "EV-0524",
+  "excerpt": "try this. This is the Midnight Clay Overnight Mask. It fixes oily skin without flakes. 10 out of 10. would recommend change the game for me. Sure. I don't know. Something like that. And looks like I'm doing 16 by9 which is kind of unfortunate, but I'm just going to do a couple of these now. Um, and then see if we can actually make it through the entire script. Then once we"
+ },
+ {
+  "local_id": "EV-0525",
+  "excerpt": "have that, we'll have the rule which we can use to generate using Gemini Omni Flash. All right. So, while that's working, let's scaffold out the skill that'll be used to generate these on demand. If you think about it, the idea is I'm going to feed it in a product. That's going to be like my initial step. It's then going to, I don't know, use some influencer that I've already sort"
+ },
+ {
+  "local_id": "EV-0526",
+  "excerpt": "of chosen um to represent that product. And then all we really need to do is we just need to come up with a bunch of, you know, scripts. And those scripts need to be pretty short. Um, you know, probably somewhere around, I don't know, like 150, 200 characters. So, just checking back on, you know, the gens here. It looks like >> you need to try this. This is the"
+ },
+ {
+  "local_id": "EV-0527",
+  "excerpt": "Midnight Clay Overnight Mask. It fixes oily skin without flakes. 1010 would recommend. Change the game for me. Okay. And this is just a little bit too long. You need to try this. This is >> She's looking all like, but I don't really need to just wait three hours. >> You need to try this. This is the Midnight Clay Overnight Mask. It fixes oily skin without flakes. 1010 would"
+ },
+ {
+  "local_id": "EV-0528",
+  "excerpt": "recommend. Change the game for me. >> Okay, so that one's much better. I think we could probably just rip this ad over and over and over again. Um, so yeah, this is this is good. I think what we need to do is we just need to time this. So, let's check out word counter and then figure out exactly how many words are here. [sighs and gasps] Looks like it's about 146 characters. I think we"
+ },
+ {
+  "local_id": "EV-0529",
+  "excerpt": "could probably go to like 170 characters. So, I think that's what I'll do. I'll say 170 character. Uh, well, why don't we just do words instead? 27 to Yeah, 27 to maybe like 30 words or so. So, I'm going to go back to Claude and I'm just going to voice dump all of this in as the process. Hey, I'm going to give you an image of a product. I then want you to use the"
+ },
+ {
+  "local_id": "EV-0530",
+  "excerpt": "provided image of the influencer to generate a picture or a starting frame of a woman holding the product uh somewhere in an environment that it would make sense. Then I want you to generate 10 script candidates. A script candidate is a script that espouses the virtues of the product, talks about the benefits in an influencer UGC style fashion. Uh, the script needs to be"
+ },
+ {
+  "local_id": "EV-0531",
+  "excerpt": "under 35 words or so in order to fit our time limit. After you're done, I want you to show me the uh, generated product image with GPT- image-2. And then I also want you to show me the scripts so that I can verify everything's good. After that, I'm going to add a couple more steps to the flow and we'll turn that into a skill. Cool. So, that is what we're going to"
+ },
+ {
+  "local_id": "EV-0532",
+  "excerpt": "do. Clearly, we verified that this works if we do it manually. So, let's make this work um digitally as well. Here's the influencer and here's the product. I'm going to feed both of these in. Voila. And you can call GPT image 2 using open AI API key. It's in the local environment. Okay. Uh and then going to circle back and"
+ },
+ {
+  "local_id": "EV-0533",
+  "excerpt": "just double check that now that we can, you know, we verified we can do this through like manual usage, we need to verify that we can also do this through claude. And then we we're just going to scale the hell out of this thing. I'm sure you guys can imagine we could take this further. Um, as this is building it, uh, just some brainstorming out loud. Rather than just using one woman,"
+ },
+ {
+  "local_id": "EV-0534",
+  "excerpt": "you could have, let's say, 20 or 30 people, men, women alike, people from different geographies, different ages, different ICPS, different like personas all all over the place. You would do this by using AI to pre-generate a bunch of images of or videos of influencers that you like. uh and then you would also kind of multiply or cross that by all the different products that they're"
+ },
+ {
+  "local_id": "EV-0535",
+  "excerpt": "holding in a bunch of different locations. So now what we're doing is we're just multiplying uh a bunch of different options. you then multiply those by a bunch of different scripts. And in that way, what you could do and what you know I I I like thinking about AI as what you could do is um you could basically choose let's say 10 influencers, okay? Multiply them by I"
+ },
+ {
+  "local_id": "EV-0536",
+  "excerpt": "don't know 10 settings, multiply them by 10 different scripts. Uh the resulting thing is you'll have 1,000 possible options. Now, it kind of sucks to look and watch through each, right? So, what you could also do, and I'm just brainstorming. I'm not going to do anything as complicated as this because I don't want to kind of put the cart before the horse. What you"
+ },
+ {
+  "local_id": "EV-0537",
+  "excerpt": "could do is you could have some sort of automated image check where every single one of these videos, which are all 10 seconds or so, you break down into 1 second frames. So, now it's like 1 second frame, 1 second frame, 1 second frame. You take screenshots of each. You feed that into an AI model like, you know, GPT uh or Claude Code. Have Claude Code take a look at the image and tell"
+ },
+ {
+  "local_id": "EV-0538",
+  "excerpt": "you, is there anything malformed that doesn't make sense? If so, just delete it from that problem set or from the option set entirely. After this process is done, maybe you have like I don't know, let's say 250 to 500 that are remaining and each of these are 10 seconds. So, what you can do is you can have a human being watch them all. That's 2500 to 5,000 seconds of watch"
+ },
+ {
+  "local_id": "EV-0539",
+  "excerpt": "time. And then, you know, if you do the math on two 2,500 seconds, I think that's like 40 minutes to, I don't know, 80 minutes. If you have somebody that then chooses the top, let's say 20 performers of those in the 40 to 80 minutes, you've effectively replaced an entire creative department for, you know, a thousand times the cost of generating this, which is not trivial,"
+ },
+ {
+  "local_id": "EV-0540",
+  "excerpt": "right? Uh, but now you have literally 20 new pieces of creative that can make it to the next step. So, I say all this just to show you guys, uh, this is extraordinarily possible right now. It's very economical and, you know, you can then test 20 with some small little ad budget, figure out what makes the most sense to scale. So, just going to take a look at this. Yeah, this is her now"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-08
+boundaries: 8078.239s - 9242.319s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+the uh, local environment. So, we have everything we need to actually query GPT image 2. can you go out and get me like all of the programming APIs, functions, endpoints, everything that I need in order to like have you steer GPT image 2, similar to how you were steering the compositing um applications. Once we have all of this, I will then ask you to generate a couple for me. Uh for now, we don't need to do this skill. I just want to verify that this is feasible. So, we could do like a a basic generation to start. Okay. And then I just realized the last thing I need is I do need the socks. So, also going to feed in the socks. Just use these socks as templates. As a template product. Cool. I love how it got my uh in there. That's funny. Yeah. Never ever stutter or never um or uh it will be there forever. And it's saying GPT image one. Uh what I want is I want GPT image 2. So, I'm actually just going to stop this. If you see it make a mistake, you should just um you know correct it now as opposed to later because if you make the mistake later, unfortunately, it will have consumed a bunch of tokens by then and probably given you a bunch of shitty outputs that will have frustrated you. Better instead not to. Okay. And now what it's going to do next is it's going to read the API documentation, which is just like the sort of background programming um SOP on like how to actually call the API, how to actually generate an image without the front-end um you know, user interface. Okay. And now you will eventually get some sort of notification like this asking, hey, you know, can you give me access to the directory. That's fine. Now it's listing a bunch of files in there. Just let this thing steer all the way until the end. You can see it's actually now running a live test image edit, which was part of what I asked it to do. Um, it looks like it's going to be using the socks photo as an input image. Okay, so this thing went nuts. It generated five different variants as you guys could see here. Maker School cloud socks. Uh, that's sort of based off of that, I guess, like Marvel Bombas one. Same thing over here with the logo up top. I I like this one personally. Um, I mean, you know, I just gave it maker school. Obviously, it's not actually related or whatever, but yeah, I like how it put it in that box and it it does look quite clean. Same thing over here with the product. And then same thing over here with the product. I mean, the products are a little bit different from image to image and that's just because I gave it a rolled up version of the product. If you guys wanted to have a lot more, you know, product adherence, then you would actually just feed it like a unrolled photo, maybe something like this, and then it would actually be able to get the curves and the folds and stuff. But yeah, hopefully you guys see like I, you know, we basically have an image generator. However, um, the probability that this will be exactly what I'm looking for has gone way down simply because it now has a lot more uh, freedom and flexibility. And that, you know, takes me to an important point, which is that the more freedom and flexibility that you give a model, typically the more rope you're giving it to hang itself. And that's good in many ways because it's the freedom and the flexibility of these models that ultimately allow us to do cool things with them. Stuff that you could not have imagined doing just a few years ago with a Photoshop. Um, but it's also the the main downfall at least for business because with business you tend to want to have like very repeatable consistent processes as talked about that you know convert maybe a stranger into somebody that actually has paid you money for a product or service. Hard to do that when you have total crazy pixel um variants like this. you know, a photo that's on like a linen cloth to one where both of these are like hanging in the air. If you think about it, like these are very, very different pictures. The pixels are all over the place, very very fundamentally opposed. So, we, you know, what we want to do is we actually want to exert a little bit more top- down focus. Um, we want it to be a little bit clearer and closer to, you know, the the sample image. Uh, we don't want to copy the sample image, obviously, but we do, you know, we want to we want to extract the elements in the sample image that make sense to vary and then the ones that don't. And so what I'm going to do is I'm actually going to talk to it and ask it to do that. Hey, I thought this was a pretty solid job. However, I'm noticing wide variance over the input image. For instance, it looks to me like the crux of what you regenerated was the logo uh rather the two logos being opposed, Maker School and Cloud Socks. And that's fine, but it varies tremendously from that image ad that I gave you as an example. I think a better way of doing this would be you digest the image ad, then identify a bunch of different areas that we could tweak things, sort of like levers to pull, similar to the compositing workflow. Then you template out a bunch of changes and then we generate them that way. However, we do need more conformity with the main image. The idea is we just want a template that we can hot swap any product into and then be approximately 80% sure that what comes out is going to be okay. Okay, now I'm going to feed that in. We're going to go back and forth with the model until we get something reasonable. And to be clear, this is the prompting stage, right? This is the whole idea. We are um we're not automating this yet because we don't have the process in place. If we were to try and automate this like build a skill essentially, we would not be doing a very good job. Um now, what is this doing? It's actually coming out with the various things that it can change. So, the first thing is somewhere between 0 to 20% of the height, you know, we want some sort of a logo band. Okay. Then we need transition or negative space. Okay, that's important. Then we need uh the product band. Okay, and then finally at the bottom we need some other thing. So what this this is doing now is it's actually logically breaking down the template into its components and then it's you know actually going through and generating the stuff. Now it's asking me what would you do? Should I do a model plus some sort of overlay? Um generally speaking that's a bad idea because you are then adding you know a procedural compositing approach to an AI based generating pixel by pixel approach. So, I'm actually just going to use a pure prompt template basically every time. And you can see it even says I lean product option number two since text and image is the single biggest variant source and you already have a proven compositing pipeline for exactly that layer. Uh, I would agree with that. And so, yeah, it's just going to continue creating this stuff and uh I'll take a look at its results afterwards and then circle back. Okay, looks like it has finished one and now it is just waiting on the second. Both are done. So, I'm going to get to look at both of these images now. Let's take a look here at these pictures, shall we? Okay, you can see we're starting to get a lot closer in conformity. Uh, mainly we're now kind of comparing uh I think the photo was like kids wearing Spider-Man socks or something like that. Now we have something that's a lot closer to what it is that we wanted initially. Now we have people basically with their feet up wearing these socks showing off how cozy they are, which is kind of cool. Um, so this is more more the idea. I didn't want just a bunch of people doing whatever the hell they were doing back over here, which looks to me drinking coffee sort of solo because the only real element that was taken was the the logo in opposition. What we have now is we have something a lot closer to that initial, which is, you know, the feet on a couch or something like that comparing the two. Presumably, you know, in advertising, this gets closer to the core of what the product is about, which is, you know, getting cozy with somebody that you love or something, right? That's the whole idea. Just doing a little bit more tweaking here. Uh, we got a reasonable looking variance. Uh, this is more close to I think what I was looking for, which is I just want to take the product cloud socks and then apply them to a template. Uh, it's not one for one, but it's pretty good. And what I like is we basically have like a rainbow of different skin colors. Um, we have really cute looking socks with our logos and everything like that. Um, this this looks good. It's like it really took the horizontal idea, which is valuable. So, I'm still iterating on the generator, of course. Um, but you know, the generator is getting pretty close to where I want it to be. This is going to take some back and forth no matter what it is that you are doing. Hopefully you guys see now just how much more variable AI can be versus, let's say, a compositing sort of flow. Cool. And now we are building out the rest of the generator, which is just ensuring that this can work across the board. Um, this one looks like it kind of put this in tennis. I don't know if that's necessarily the way to do things. We'll see. Allight comfort and you're out playing tennis. This one over here though is basically exactly what we wanted. We wanted some sort of like collage based flow where we have like a bunch of different things. So we can see the texture of the sock. We can see a couple of the socks laid out. And then yeah, we have that other one. So what I'm going to do now is I'm just going to turn this from um this like built-in flow here which is occurring locally to a flow very similar to our HTML one where you could actually like click on the ones that you want. So that's what I did right here. just gave it a prompt with an abundance of ums and o's. Basically saying, now that we have the flow working inside of cloud code, turn it into that HTML flow we had with the little check boxes and the ability to mark the ones that we want. Also, instead of just generating three, generate a lot more variants. So, uh, kind of misunderstood me there, but every variant should or each template should generate at least five variants. So, that means if we're going to do three, we should have 15. And then we should actually like feed very different instructions into each so that you know a taste person, some sort of creative director can just select the winners. So that's what we're doing. Um we're adding a bunch of different like variation pools per template so that we can adjust uh the prompt that we're sending. Maybe some of them will be warm, some of them will be cool, some of them will be inside, some of them will be outside. But again, you know, we're just taking that template and adhering to it quite a bit. So you can imagine how for this template we'd probably have four distinct sections. This one here would be some sort of feet arrayed horizontally most likely. This one here maybe would show it in action in some way. Uh and then you know we just add as many of these ad variant inspir inspiration ads as humanly possible. We're done generating 12 out of 15 of the first batch. Okay, now we have our own little generator very similar to what we had before. It's like uh like another mini app. And the idea behind these mini apps of course is you know I want to show you guys how to build cloud codebased flows but the cool thing about cloud code is you can use them to build apps. And uh this could be a really cool internal tool for team members obviously based off of you offering the correct formatted um you know ad initially. Yeah, you can see how we have maker school cloud socks. We have these sort of brands uh opposed to each other. Now all of them are slightly different in their own way. We have a background colors. We have people's different skin colors. We have uh the socks themselves that look a little bit different from one to one. We have our little like ad collage here. If this was a really high performing template and we were just like ripping that template, you can imagine how we can just generate a thousand of these really easily and really straightforwardly. Uh none of these are going to win any awards. I think in the way that I've shown them here or done them, but suffice to say, you guys understand that I don't have like really high performing ad templates selling socks. You guys might for whatever your own company is. So this is how you would rip that format and then really expand the top of funnel uh to be able to select, you know, the the the the best variants for you. So, you know, this app allows you to very quickly and easily scaffold out, let's say, 20 and then you can just download selected. Um, maybe you you fill your template folder with like 500 ads or something and then just consistently rip the best ones until you get something that's nice. And you can change adherence, too. I mean, like in our case, we have it pretty strongly adhering to the same look, but we could also decrease that if we wanted to add diversity. So, I don't know, maybe instead of having these on like a uh the top right hand corner every time, maybe we just change it so that we can actually experiment with maybe triple collages instead of quadruples and so on and so forth. All right, so where do we go from here? Well, now we need to turn it into a skill. This looks great. Um, let's turn this into a skill. Looks like I was voice transcribing without realizing it. This into a skill now. Um, the whole idea being that we're going to go from prompt to skill, skill to loop, and then loop to routine. Skill's just about done. What I'm going to do while this is um wrapping up is I'm also going to turn it into a loop. So, I'm going to press and hold this to record. Hey, now that you've created the skill, I'd like you to turn this into a loop. I want the loop to fire at 5:59 a.m. every morning. Very similar flow to our Maker School ads flow. The idea is being uh we will have a link by you here that anybody can use to access a page that includes let's say five renders per variant in the ad format. Sorry, I don't know where I got 10 from. If we had 10 images, it' be time five or 50 in total. Generate three * 5 or 15 in total. Cool. And uh now that it's, you know, running this on a single image smoke test, I'm just going to feed this in. Uh what happens when you feed in something while it's working on something else is it finishes this thing before it starts this thing. So uh you know, now that this is sort of in the background here, it can start on the other task. Basically, just fire that off and it's now going to turn it into a loop. So that's kind of neat. Um obviously you could do the exact same thing now again by telling it to turn it into a routine once we've verified that the loop works. Now for the routine we have to go just one step further here. Um the reason why is because we are now going to be running a cloud environment that includes an API key. We don't uh currently have the ability to provide to cloud. So uh if you go back to your API keys here I'm just going to create a new one just out of simplicity and so that you know I forget I don't forget. This is going to be routine API key inside of GPT image. Just going to copy this. What I'm going to do is I'm going to go back to cloud, open up that routines tab, and then um as you see, there's a local routine, which is kind of a skill. There's also a cloud routine, which is kind of the one that we want. [gasps] And what we need in order to make this work is we need to set the environment such that it includes our OpenAI API key just like this. Okay, so that's in ENV format. This is our default environment. Uh this default environment will apply to all new sessions. So I'm just going to save changes. Now we actually have all that. And then if you think about it, what we need to do in each session is we just need to uh basically do the same thing that we did before just in the maker school ads. It's just we need to do this in um the GPT image non-compositing workflow. So you know it has the key. It has everything that it needs in the default environment. If I go back to routines then try creating a new one on cloud and then check the default environment you'll notice the key is still in there. So, it's now like inside of our thing, and now we can actually go back and like ask it to create the create the actual flow. So, I'm just going to jump back in here and then say uh well, uh what kind of ads did we have? We had I think product ad genen. Yeah, we did right over here. So, turn product ad genen into a routine. um for the routine mirror the maker school ads system that generates a Google drive folder and then a dated subfolder and then populates it with the gens do so using this structure for every ad in the template ad folder which is currently hosted at generate five variants. First take the ad formats for image generator and put it somewhere on my Google drive. Then uh build the structure that I talk about mirroring the maker school ad system. Um the maker school ad system is a routine. So query that routine first, get all the information and use it to scaffold out the new gen. I don't know why I can't type to save my life today, but hopefully this is going to be more than enough. Um oh and you know I should probably give it some context. I have also added the API key in the same format as our original skill. It's in the default environment under OpenAI API key default cloud environment. There you go. Um I'm just giving this it just in case it knows sort of how we're going to structure things. uh we need to be 100% clear because as mentioned it will not have access to the API key inside of the cloud environment simply by simply because rather of um you know security doesn't want to like show you the API keys everywhere because every single push it's not going to make any sense I think it's probably misunderstanding me too check the routine first there is a routine called you know maker school I don't know let me actually double check this what this thing called maker school daily ad batch daily ad batch This is what I want you to replicate just for our product aden skill. Yeah. And then we're just going to turn it from, you know, a local flow into a routine. Cool. And now it has the full spec. And it's just going to continue going down the top to bottom. And just like we did last time, we're going to create a new GitHub. And then did I already put a file on my Google Drive? Uh, no I do not. No, I don't. So you will create one. And voila. If I move my fat head and super cool Clairvo hat out of the way, you guys can see we now have both the product aden daily batch and we also have the Maker School daily batch. So, next run tomorrow at 5:59 a.m. If I jump in here, you guys will see we have more or less the exact same layout. You know, install the dependencies, run the script. All the stuff does not really require us. We don't have to be pros at programming to know what's going on. Um, has some scheduled runs. You can also trigger it manually. API web hook. I'll cover more about that later when we talk about weaving it into a pre-existing automation flow. But yeah, it has the Google Drive. It also has the clock code remote. And then it um has our API key again stored inside of the environment itself. So that's important. It's tough to get stuff in the environment unless you know how all of that works. Um I don't think they make the environment feature as straightforward as it could be. But anyway, that's that for both um you know, compositing workflows, which hopefully you see are pretty straightforward if you use a simple ad. Um image based workflows, which hopefully you guys can also see is pretty straightforward if you guys use a good image model. Why don't we talk a little bit now about video models? Now, video models need to be done quite differently. If I go back over here and then open up something like uh Higsfield, which is where the vast majority of all video models are currently hosted and uh you know people sort of use them, you guys could see that there is just tremendous tremendous um possibility for really high quality like adgen. The one issue I would say with most of this stuff is there is currently no like there's no captions on here. There's also no text and the reason why is because text just tends to perform kind of poorly. Um, also this model is like kind of an advanced model. It's not technically here yet and so on and so forth. Um, it's starting tomorrow as of the time of this recording, so I'm sure by the time you guys use it, it'll be really good. They're offering free C dance 2.0 4K, which is kind of neat. Um, core things to know before we get into this is, you know, like video models, just like image models, there's a lot more frames, and because there's a lot more frames, there's a lot more opportunity for it to screw up. And so, you just need to understand that what you are going to generate is not going to be perfect. And so long as you're okay with that, that's fine. Um, generally speaking, the flows that tend to work really well are like kind of UGC style, uh, user generated content style, uh, either testimonials or product reviews or that sort of thing. What I'm going to do is I'm going to show you guys how to use this particular vendor, Higsfield, which is quite a high quality vendor. It allows you to basically streamline the process of putting in like e-commerce style ads. You can uh add a product as well as a consistent character um to generate like UGC style advertisements. And I want you guys to know that like you can make this better. You could make this better by hard coding captions. You could make this better by, I don't know, like hard coding some sort of visuals and and having them pop up on the page. You could automate the process of like the dubbing and stuff if you wanted to be better. You could add noise layers to the background to make it more realistic. I have a few friends that spend several tens of thousands of dollars a day right now running like totally AI generated ads using the flows that I'm going to show you. They just touch them up a little bit more. And for time purposes, I'm not going to get into all of that, but it is very straightforward. You literally just talk cloud code through what it is that you want and then yeah, that's that's more or less it. So, let me show you guys more or less how how this is going to work. Um, yeah, for those of you guys that don't know, Higsfield is just like a major model aggregator. Basically, it just combines a variety of other models that you guys could use. So, all the video models, all the image models, everything that we've already touched at uh touched on, as well as even like text models and stuff into one place. And it kind of makes sense in an environment
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0421",
+  "excerpt": "the uh, local environment. So, we have everything we need to actually query GPT image 2. can you go out and get me like all of the programming APIs, functions, endpoints, everything that I need in order to like have you steer GPT image 2, similar to how you were steering the compositing um applications. Once we have all of this, I will then ask you to generate a couple for me. Uh for now, we"
+ },
+ {
+  "local_id": "EV-0422",
+  "excerpt": "don't need to do this skill. I just want to verify that this is feasible. So, we could do like a a basic generation to start. Okay. And then I just realized the last thing I need is I do need the socks. So, also going to feed in the socks. Just use these socks as templates. As a template product. Cool. I love how it got my uh in there. That's"
+ },
+ {
+  "local_id": "EV-0423",
+  "excerpt": "funny. Yeah. Never ever stutter or never um or uh it will be there forever. And it's saying GPT image one. Uh what I want is I want GPT image 2. So, I'm actually just going to stop this. If you see it make a mistake, you should just um you know correct it now as opposed to later because if you make the mistake later, unfortunately, it will have consumed a bunch of tokens by"
+ },
+ {
+  "local_id": "EV-0424",
+  "excerpt": "then and probably given you a bunch of shitty outputs that will have frustrated you. Better instead not to. Okay. And now what it's going to do next is it's going to read the API documentation, which is just like the sort of background programming um SOP on like how to actually call the API, how to actually generate an image without the front-end um you know, user"
+ },
+ {
+  "local_id": "EV-0425",
+  "excerpt": "interface. Okay. And now you will eventually get some sort of notification like this asking, hey, you know, can you give me access to the directory. That's fine. Now it's listing a bunch of files in there. Just let this thing steer all the way until the end. You can see it's actually now running a live test image edit, which was part of what I asked it to do. Um, it looks like it's going to"
+ },
+ {
+  "local_id": "EV-0426",
+  "excerpt": "be using the socks photo as an input image. Okay, so this thing went nuts. It generated five different variants as you guys could see here. Maker School cloud socks. Uh, that's sort of based off of that, I guess, like Marvel Bombas one. Same thing over here with the logo up top. I I like this one personally. Um, I mean, you know, I just gave it maker school. Obviously, it's not actually"
+ },
+ {
+  "local_id": "EV-0427",
+  "excerpt": "related or whatever, but yeah, I like how it put it in that box and it it does look quite clean. Same thing over here with the product. And then same thing over here with the product. I mean, the products are a little bit different from image to image and that's just because I gave it a rolled up version of the product. If you guys wanted to have a lot more, you know, product adherence,"
+ },
+ {
+  "local_id": "EV-0428",
+  "excerpt": "then you would actually just feed it like a unrolled photo, maybe something like this, and then it would actually be able to get the curves and the folds and stuff. But yeah, hopefully you guys see like I, you know, we basically have an image generator. However, um, the probability that this will be exactly what I'm looking for has gone way down simply because it now has a lot more uh,"
+ },
+ {
+  "local_id": "EV-0429",
+  "excerpt": "freedom and flexibility. And that, you know, takes me to an important point, which is that the more freedom and flexibility that you give a model, typically the more rope you're giving it to hang itself. And that's good in many ways because it's the freedom and the flexibility of these models that ultimately allow us to do cool things with them. Stuff that you could not have"
+ },
+ {
+  "local_id": "EV-0430",
+  "excerpt": "imagined doing just a few years ago with a Photoshop. Um, but it's also the the main downfall at least for business because with business you tend to want to have like very repeatable consistent processes as talked about that you know convert maybe a stranger into somebody that actually has paid you money for a product or service. Hard to do that when you have total crazy pixel um variants"
+ },
+ {
+  "local_id": "EV-0431",
+  "excerpt": "like this. you know, a photo that's on like a linen cloth to one where both of these are like hanging in the air. If you think about it, like these are very, very different pictures. The pixels are all over the place, very very fundamentally opposed. So, we, you know, what we want to do is we actually want to exert a little bit more top- down focus. Um, we want it to be a little bit"
+ },
+ {
+  "local_id": "EV-0432",
+  "excerpt": "clearer and closer to, you know, the the sample image. Uh, we don't want to copy the sample image, obviously, but we do, you know, we want to we want to extract the elements in the sample image that make sense to vary and then the ones that don't. And so what I'm going to do is I'm actually going to talk to it and ask it to do that. Hey, I thought this was a pretty solid"
+ },
+ {
+  "local_id": "EV-0433",
+  "excerpt": "job. However, I'm noticing wide variance over the input image. For instance, it looks to me like the crux of what you regenerated was the logo uh rather the two logos being opposed, Maker School and Cloud Socks. And that's fine, but it varies tremendously from that image ad that I gave you as an example. I think a better way of doing this would be you digest the image ad, then identify a"
+ },
+ {
+  "local_id": "EV-0434",
+  "excerpt": "bunch of different areas that we could tweak things, sort of like levers to pull, similar to the compositing workflow. Then you template out a bunch of changes and then we generate them that way. However, we do need more conformity with the main image. The idea is we just want a template that we can hot swap any product into and then be approximately 80% sure that what comes"
+ },
+ {
+  "local_id": "EV-0435",
+  "excerpt": "out is going to be okay. Okay, now I'm going to feed that in. We're going to go back and forth with the model until we get something reasonable. And to be clear, this is the prompting stage, right? This is the whole idea. We are um we're not automating this yet because we don't have the process in place. If we were to try and automate this like build a skill essentially, we would not be"
+ },
+ {
+  "local_id": "EV-0436",
+  "excerpt": "doing a very good job. Um now, what is this doing? It's actually coming out with the various things that it can change. So, the first thing is somewhere between 0 to 20% of the height, you know, we want some sort of a logo band. Okay. Then we need transition or negative space. Okay, that's important. Then we need uh the product band. Okay, and then finally at the bottom we need"
+ },
+ {
+  "local_id": "EV-0437",
+  "excerpt": "some other thing. So what this this is doing now is it's actually logically breaking down the template into its components and then it's you know actually going through and generating the stuff. Now it's asking me what would you do? Should I do a model plus some sort of overlay? Um generally speaking that's a bad idea because you are then adding you know a procedural compositing"
+ },
+ {
+  "local_id": "EV-0438",
+  "excerpt": "approach to an AI based generating pixel by pixel approach. So, I'm actually just going to use a pure prompt template basically every time. And you can see it even says I lean product option number two since text and image is the single biggest variant source and you already have a proven compositing pipeline for exactly that layer. Uh, I would agree with that. And so, yeah, it's just going"
+ },
+ {
+  "local_id": "EV-0439",
+  "excerpt": "to continue creating this stuff and uh I'll take a look at its results afterwards and then circle back. Okay, looks like it has finished one and now it is just waiting on the second. Both are done. So, I'm going to get to look at both of these images now. Let's take a look here at these pictures, shall we? Okay, you can see we're starting to get a lot closer in conformity. Uh, mainly"
+ },
+ {
+  "local_id": "EV-0440",
+  "excerpt": "we're now kind of comparing uh I think the photo was like kids wearing Spider-Man socks or something like that. Now we have something that's a lot closer to what it is that we wanted initially. Now we have people basically with their feet up wearing these socks showing off how cozy they are, which is kind of cool. Um, so this is more more the idea. I didn't want just a bunch of"
+ },
+ {
+  "local_id": "EV-0441",
+  "excerpt": "people doing whatever the hell they were doing back over here, which looks to me drinking coffee sort of solo because the only real element that was taken was the the logo in opposition. What we have now is we have something a lot closer to that initial, which is, you know, the feet on a couch or something like that comparing the two. Presumably, you know, in advertising, this gets closer to the"
+ },
+ {
+  "local_id": "EV-0442",
+  "excerpt": "core of what the product is about, which is, you know, getting cozy with somebody that you love or something, right? That's the whole idea. Just doing a little bit more tweaking here. Uh, we got a reasonable looking variance. Uh, this is more close to I think what I was looking for, which is I just want to take the product cloud socks and then apply them to a template. Uh, it's not"
+ },
+ {
+  "local_id": "EV-0443",
+  "excerpt": "one for one, but it's pretty good. And what I like is we basically have like a rainbow of different skin colors. Um, we have really cute looking socks with our logos and everything like that. Um, this this looks good. It's like it really took the horizontal idea, which is valuable. So, I'm still iterating on the generator, of course. Um, but you know, the generator is getting pretty close to"
+ },
+ {
+  "local_id": "EV-0444",
+  "excerpt": "where I want it to be. This is going to take some back and forth no matter what it is that you are doing. Hopefully you guys see now just how much more variable AI can be versus, let's say, a compositing sort of flow. Cool. And now we are building out the rest of the generator, which is just ensuring that this can work across the board. Um, this one looks like it kind of put this in"
+ },
+ {
+  "local_id": "EV-0445",
+  "excerpt": "tennis. I don't know if that's necessarily the way to do things. We'll see. Allight comfort and you're out playing tennis. This one over here though is basically exactly what we wanted. We wanted some sort of like collage based flow where we have like a bunch of different things. So we can see the texture of the sock. We can see a couple of the socks laid out. And then"
+ },
+ {
+  "local_id": "EV-0446",
+  "excerpt": "yeah, we have that other one. So what I'm going to do now is I'm just going to turn this from um this like built-in flow here which is occurring locally to a flow very similar to our HTML one where you could actually like click on the ones that you want. So that's what I did right here. just gave it a prompt with an abundance of ums and o's. Basically saying, now that we have the"
+ },
+ {
+  "local_id": "EV-0447",
+  "excerpt": "flow working inside of cloud code, turn it into that HTML flow we had with the little check boxes and the ability to mark the ones that we want. Also, instead of just generating three, generate a lot more variants. So, uh, kind of misunderstood me there, but every variant should or each template should generate at least five variants. So, that means if we're going to do"
+ },
+ {
+  "local_id": "EV-0448",
+  "excerpt": "three, we should have 15. And then we should actually like feed very different instructions into each so that you know a taste person, some sort of creative director can just select the winners. So that's what we're doing. Um we're adding a bunch of different like variation pools per template so that we can adjust uh the prompt that we're sending. Maybe some of them will be warm, some of them"
+ },
+ {
+  "local_id": "EV-0449",
+  "excerpt": "will be cool, some of them will be inside, some of them will be outside. But again, you know, we're just taking that template and adhering to it quite a bit. So you can imagine how for this template we'd probably have four distinct sections. This one here would be some sort of feet arrayed horizontally most likely. This one here maybe would show it in action in some"
+ },
+ {
+  "local_id": "EV-0450",
+  "excerpt": "way. Uh and then you know we just add as many of these ad variant inspir inspiration ads as humanly possible. We're done generating 12 out of 15 of the first batch. Okay, now we have our own little generator very similar to what we had before. It's like uh like another mini app. And the idea behind these mini apps of course is you know I want to show you guys how to build cloud"
+ },
+ {
+  "local_id": "EV-0451",
+  "excerpt": "codebased flows but the cool thing about cloud code is you can use them to build apps. And uh this could be a really cool internal tool for team members obviously based off of you offering the correct formatted um you know ad initially. Yeah, you can see how we have maker school cloud socks. We have these sort of brands uh opposed to each other. Now all of them are slightly different in"
+ },
+ {
+  "local_id": "EV-0452",
+  "excerpt": "their own way. We have a background colors. We have people's different skin colors. We have uh the socks themselves that look a little bit different from one to one. We have our little like ad collage here. If this was a really high performing template and we were just like ripping that template, you can imagine how we can just generate a thousand of these really easily and"
+ },
+ {
+  "local_id": "EV-0453",
+  "excerpt": "really straightforwardly. Uh none of these are going to win any awards. I think in the way that I've shown them here or done them, but suffice to say, you guys understand that I don't have like really high performing ad templates selling socks. You guys might for whatever your own company is. So this is how you would rip that format and then really expand the top of funnel uh to be"
+ },
+ {
+  "local_id": "EV-0454",
+  "excerpt": "able to select, you know, the the the the best variants for you. So, you know, this app allows you to very quickly and easily scaffold out, let's say, 20 and then you can just download selected. Um, maybe you you fill your template folder with like 500 ads or something and then just consistently rip the best ones until you get something that's nice. And you can change adherence, too. I mean,"
+ },
+ {
+  "local_id": "EV-0455",
+  "excerpt": "like in our case, we have it pretty strongly adhering to the same look, but we could also decrease that if we wanted to add diversity. So, I don't know, maybe instead of having these on like a uh the top right hand corner every time, maybe we just change it so that we can actually experiment with maybe triple collages instead of quadruples and so on and so forth. All right, so where do we"
+ },
+ {
+  "local_id": "EV-0456",
+  "excerpt": "go from here? Well, now we need to turn it into a skill. This looks great. Um, let's turn this into a skill. Looks like I was voice transcribing without realizing it. This into a skill now. Um, the whole idea being that we're going to go from prompt to skill, skill to loop, and then loop to routine. Skill's just about done. What I'm going to do while this is um wrapping up is I'm also going"
+ },
+ {
+  "local_id": "EV-0457",
+  "excerpt": "to turn it into a loop. So, I'm going to press and hold this to record. Hey, now that you've created the skill, I'd like you to turn this into a loop. I want the loop to fire at 5:59 a.m. every morning. Very similar flow to our Maker School ads flow. The idea is being uh we will have a link by you here that anybody can use to access a page that includes let's say five renders per variant in the ad"
+ },
+ {
+  "local_id": "EV-0458",
+  "excerpt": "format. Sorry, I don't know where I got 10 from. If we had 10 images, it' be time five or 50 in total. Generate three * 5 or 15 in total. Cool. And uh now that it's, you know, running this on a single image smoke test, I'm just going to feed this in. Uh what happens when you feed in something while it's working on something else is it finishes this thing before it starts this thing. So uh"
+ },
+ {
+  "local_id": "EV-0459",
+  "excerpt": "you know, now that this is sort of in the background here, it can start on the other task. Basically, just fire that off and it's now going to turn it into a loop. So that's kind of neat. Um obviously you could do the exact same thing now again by telling it to turn it into a routine once we've verified that the loop works. Now for the routine we have to go just one step further here."
+ },
+ {
+  "local_id": "EV-0460",
+  "excerpt": "Um the reason why is because we are now going to be running a cloud environment that includes an API key. We don't uh currently have the ability to provide to cloud. So uh if you go back to your API keys here I'm just going to create a new one just out of simplicity and so that you know I forget I don't forget. This is going to be routine API key inside of GPT image. Just going to copy this. What"
+ },
+ {
+  "local_id": "EV-0461",
+  "excerpt": "I'm going to do is I'm going to go back to cloud, open up that routines tab, and then um as you see, there's a local routine, which is kind of a skill. There's also a cloud routine, which is kind of the one that we want. [gasps] And what we need in order to make this work is we need to set the environment such that it includes our OpenAI API key just like this. Okay, so that's in ENV"
+ },
+ {
+  "local_id": "EV-0462",
+  "excerpt": "format. This is our default environment. Uh this default environment will apply to all new sessions. So I'm just going to save changes. Now we actually have all that. And then if you think about it, what we need to do in each session is we just need to uh basically do the same thing that we did before just in the maker school ads. It's just we need to do this in um the GPT image"
+ },
+ {
+  "local_id": "EV-0463",
+  "excerpt": "non-compositing workflow. So you know it has the key. It has everything that it needs in the default environment. If I go back to routines then try creating a new one on cloud and then check the default environment you'll notice the key is still in there. So, it's now like inside of our thing, and now we can actually go back and like ask it to create the create the actual flow. So,"
+ },
+ {
+  "local_id": "EV-0464",
+  "excerpt": "I'm just going to jump back in here and then say uh well, uh what kind of ads did we have? We had I think product ad genen. Yeah, we did right over here. So, turn product ad genen into a routine. um for the routine mirror the maker school ads system that generates a Google drive folder and then a dated subfolder and then populates it with the gens do so using this structure for every ad in the"
+ },
+ {
+  "local_id": "EV-0465",
+  "excerpt": "template ad folder which is currently hosted at generate five variants. First take the ad formats for image generator and put it somewhere on my Google drive. Then uh build the structure that I talk about mirroring the maker school ad system. Um the maker school ad system is a routine. So query that routine first, get all the information and use it to scaffold out"
+ },
+ {
+  "local_id": "EV-0466",
+  "excerpt": "the new gen. I don't know why I can't type to save my life today, but hopefully this is going to be more than enough. Um oh and you know I should probably give it some context. I have also added the API key in the same format as our original skill. It's in the default environment under OpenAI API key default cloud environment. There"
+ },
+ {
+  "local_id": "EV-0467",
+  "excerpt": "you go. Um I'm just giving this it just in case it knows sort of how we're going to structure things. uh we need to be 100% clear because as mentioned it will not have access to the API key inside of the cloud environment simply by simply because rather of um you know security doesn't want to like show you the API keys everywhere because every single push it's not going to make any sense I"
+ },
+ {
+  "local_id": "EV-0468",
+  "excerpt": "think it's probably misunderstanding me too check the routine first there is a routine called you know maker school I don't know let me actually double check this what this thing called maker school daily ad batch daily ad batch This is what I want you to replicate just for our product aden skill. Yeah. And then we're just going to turn it from, you know, a local flow into a"
+ },
+ {
+  "local_id": "EV-0469",
+  "excerpt": "routine. Cool. And now it has the full spec. And it's just going to continue going down the top to bottom. And just like we did last time, we're going to create a new GitHub. And then did I already put a file on my Google Drive? Uh, no I do not. No, I don't. So you will create one. And voila. If I move my fat head and super cool Clairvo hat out of the way, you guys can see we now have"
+ },
+ {
+  "local_id": "EV-0470",
+  "excerpt": "both the product aden daily batch and we also have the Maker School daily batch. So, next run tomorrow at 5:59 a.m. If I jump in here, you guys will see we have more or less the exact same layout. You know, install the dependencies, run the script. All the stuff does not really require us. We don't have to be pros at programming to know what's going on. Um, has some scheduled runs. You can also"
+ },
+ {
+  "local_id": "EV-0471",
+  "excerpt": "trigger it manually. API web hook. I'll cover more about that later when we talk about weaving it into a pre-existing automation flow. But yeah, it has the Google Drive. It also has the clock code remote. And then it um has our API key again stored inside of the environment itself. So that's important. It's tough to get stuff in the environment unless you know how all of that works. Um I"
+ },
+ {
+  "local_id": "EV-0472",
+  "excerpt": "don't think they make the environment feature as straightforward as it could be. But anyway, that's that for both um you know, compositing workflows, which hopefully you see are pretty straightforward if you use a simple ad. Um image based workflows, which hopefully you guys can also see is pretty straightforward if you guys use a good image model. Why don't we talk a"
+ },
+ {
+  "local_id": "EV-0473",
+  "excerpt": "little bit now about video models? Now, video models need to be done quite differently. If I go back over here and then open up something like uh Higsfield, which is where the vast majority of all video models are currently hosted and uh you know people sort of use them, you guys could see that there is just tremendous tremendous um possibility for really high quality"
+ },
+ {
+  "local_id": "EV-0474",
+  "excerpt": "like adgen. The one issue I would say with most of this stuff is there is currently no like there's no captions on here. There's also no text and the reason why is because text just tends to perform kind of poorly. Um, also this model is like kind of an advanced model. It's not technically here yet and so on and so forth. Um, it's starting tomorrow as of the time of this recording, so I'm"
+ },
+ {
+  "local_id": "EV-0475",
+  "excerpt": "sure by the time you guys use it, it'll be really good. They're offering free C dance 2.0 4K, which is kind of neat. Um, core things to know before we get into this is, you know, like video models, just like image models, there's a lot more frames, and because there's a lot more frames, there's a lot more opportunity for it to screw up. And so, you just need to understand that what"
+ },
+ {
+  "local_id": "EV-0476",
+  "excerpt": "you are going to generate is not going to be perfect. And so long as you're okay with that, that's fine. Um, generally speaking, the flows that tend to work really well are like kind of UGC style, uh, user generated content style, uh, either testimonials or product reviews or that sort of thing. What I'm going to do is I'm going to show you guys how to use this particular vendor,"
+ },
+ {
+  "local_id": "EV-0477",
+  "excerpt": "Higsfield, which is quite a high quality vendor. It allows you to basically streamline the process of putting in like e-commerce style ads. You can uh add a product as well as a consistent character um to generate like UGC style advertisements. And I want you guys to know that like you can make this better. You could make this better by hard coding captions. You could make this"
+ },
+ {
+  "local_id": "EV-0478",
+  "excerpt": "better by, I don't know, like hard coding some sort of visuals and and having them pop up on the page. You could automate the process of like the dubbing and stuff if you wanted to be better. You could add noise layers to the background to make it more realistic. I have a few friends that spend several tens of thousands of dollars a day right now running like"
+ },
+ {
+  "local_id": "EV-0479",
+  "excerpt": "totally AI generated ads using the flows that I'm going to show you. They just touch them up a little bit more. And for time purposes, I'm not going to get into all of that, but it is very straightforward. You literally just talk cloud code through what it is that you want and then yeah, that's that's more or less it. So, let me show you guys more or less how how this is going to"
+ },
+ {
+  "local_id": "EV-0480",
+  "excerpt": "work. Um, yeah, for those of you guys that don't know, Higsfield is just like a major model aggregator. Basically, it just combines a variety of other models that you guys could use. So, all the video models, all the image models, everything that we've already touched at uh touched on, as well as even like text models and stuff into one place. And it kind of makes sense in an environment"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

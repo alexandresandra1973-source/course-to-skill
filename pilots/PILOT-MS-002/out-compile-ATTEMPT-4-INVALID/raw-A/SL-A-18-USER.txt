@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-18
+boundaries: 19710.08s - 20932.958s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+verify the flag actually landed on the record. So now it's just going to double check that its job was done correctly. And now we should actually see what's going on. So it did match the 7day records. It then searched Gmail. It then selected the template high net quick nudge on the invoice. Then had an opt out check just to verify whether or not that worked. And then which recipients got uh went through this flow just cuz I want to verify that was actually those three. Um, why one? There were three with sevenday flags because I never put there were three real contacts. Yes, of course. I want you to run this for real using the info in the CRM. You'll find cloud will do stuff like this fairly often because it doesn't want to use tokens, which is generally reasonably positive behavior. So you guys could see here we're 44% of the way through our 5h hour limit which resets in 1 hour and 27 minutes. Um and that's you know just cuz we're on Opus 5 which is a little bit smarter than sonnet 5 which is the model we were using at the beginning of all this. And let's just take a look. How are things going? Hi Nick. How are things going on the invoice? Happy to help if anything's unclear. And then this one here is hey Nick. Just checking in on the invoice. Let me know if you have Q. So these were these were sent to our three records basically. Um, it actually went through and it found those three that each have 7-day days outstanding sent to them. Um, it's also then logged a bunch of information about them, I believe. So, this was the uh fake, hey, Nick, please stop emailing me about this. So, we obviously don't run into like crazy stop conditions. And now it's kind of letting us know, hey, you know, Chase stage is set to close, so we're not going to continue following up with them. And we did all this pretty easily just using like a demo CRM that I set up in just a few seconds. If you guys run your own real CRM through cloud like the way that I did so today, you can obviously get tremendous alpha. So, what are we going to do now? Well, I basically want to extend this and turn this into a full endto-end flow. So, uh I want to check all of those dates. Hey, this sounds great. I now want you to convert everything that we've talked about so far and all of the fixes therein into a skill. The idea is I will run the skill once every morning. For now, I'll do it myself, not as a loop. But we'll run the skill once every morning. And then it will go through uh 1 2 3 7 14 28 56 uh 84 and so on and then match to the templates as appropriately. Um we'll also make sure to do that opt out check and everything else that we talked about. Uh convert it into a simple bulleted SOP so that a future cloud instance that does not have the context of our conversation will still be able to execute this reliably. Excellent. So now I'm going to go from that prompt to a skill stage. And then I'm going to retest this. And it's mentioning that the connector is an MCP integration that only works inside a cloud session. That's great. That's basically exactly what we want. The skill is now a standard operating procedure that every time I run it is just going to look for that script. It's going to use its own built-in integration. It's going to run it and then we're basically good to go. Um, if you think about it, what we need to do now is we need to turn it into a loop. So this looks great. I'd like now to turn this into a loop that fires every morning at 5:59 a.m. On the local credential side, how could we turn this into a routine where we can run this using a cloud instance as opposed to locally on my computer? You mentioned the MCP integration for ClickUp. I know we can add that as a connector in the cloud environment. How can we do the same with the local uh script? Okay. And after all is said and done, we now have a routine set up for the daily invoice/proposal chase. I'm sure you guys could see how you could extend this virtually arbitrarily to whatever the heck you want. Um, I just did mine on that 1 2 3 74 218 56 and 84day schedule. Um, granted, if you are chasing people for more than 84 days and they still haven't got back to you, you probably got bigger issues like, are they even going to sign the deal? Are they even going to pay the invoice? Probably not. Anyway, we did all that with clawed code and we did it just a few minutes realistically. Um, so that's that. Some ways to make this better. We could absolutely do some sort of higher quality nudges. We could, you know, give people specific types of value like email sequences in newsletters that drop like case studies and assets. Um, we could we could give them insights. You know, we could go pre or postmeating. I just did proposal here because I thought it was probably the easiest to to verify and see. We could do some sort of customer story. We could also just rip and rinse and repeat a bunch of these gentle price objection check-ins that I've been doing. Um, but yeah, I mean like this is fairly straightforward, which officially marks us as having finished the last demo of our course. So hopefully you've learned a lot. Just to give you guys a brief uh revisiting, we started with creative generation. So I showed you guys how to generate ads, organics, uh, images, and videos all using AI. We started off with like very standardized um compositing workflow that used HTML to like generate something that looked really similar to Stripe and uh later I showed you guys how to do AI image generators like GPT image 2 and then video generators like you know Gemini Omni and then Cance and stuff like that. I also showed you top of funnel uh for personalized copy. So how to take like email newsletters and then personalize the hell out of them at significantly higher quality outreach to these people than just like hello welcome to my product. I actually then did that for a product that I'm currently running, Maker School, my AI automation community that teaches you how to sell this stuff. And uh as you guys saw, it was fairly straightforward. Then I showed you guys how to apply the same idea of automating text and templates through AI, which is something that I had a lot of experience with way back in the day when I was going door to door. Then uh for middle of funnel, I showed you guys how to incorporate speedtolebased email, SMS, and voice uh into a flow. Um very straightforward and easy to do as you guys saw earlier. All we really do is we just hook up um sort of an email polling system that checks our mailbox and then if you want to turn that into like a digitally run or like cloud-based routine um we do that via API call. And so we set that up on both email and SMS. Then for middle of funnel we did data collection and tracking and then visualizing all that in this cool sexy dashboard which you could host for your own business or you could sell to people. And then finally bottom of funnel automating high quality follow-ups via email. And I'm realizing now it actually I I said SMS. So, why don't I just round that out for SMS. Um, in order to do something like that, all you would have to do is basically add the Kuo connector, which I will jump on right over here, do some editing, and then um actually add that QUO connector. And then [snorts] over here, I'll also check for the phone number. So, I'm going to go here, hold this down. In addition to sending an email, I also want you to um draft and then send a message to their phone numbers using kuo quo. Awesome. You'll get the phone numbers from the local ClickUp scrape. Cool. I mean, that is really how easy it is to modify these sorts of flows to be clear. Um I will have to obviously test that if I did want to use that at scale. can't just assume that it's going to work perfectly. As you guys saw, a lot of bugs do crop up throughout the process. Okay, great. So, now that we've made it all the way to the end of the practical builds, where do we go from here? Well, there are two things that I want to talk about. The first is the maintenance and then the upgrading of these systems over time. And to be clear, when I talk upgrading of these systems, I mean like wholesale making this better um basically every time you run it. And there are a couple cool things that I'm going to touch on there in a second, but um for now uh I'm just going to give you guys probably like the 8020 and then you guys can apply these advanced tips if you want. And then speaking of advanced tips, the second is a bunch of advanced tips. Now the advanced tips are more about how to actually um run this sort of stuff in real organizations, less so academic. So uh yeah, I'm just going to give you guys more or less everything right now. And I've arranged my little worksheet here to essentially work like this. So, my first major uh point of advice on maintenance is, you know, if you're doing this for a client or your own business, it's going to be a little bit different, but I'm assuming right now that you're maintaining these systems, let's just say for somebody else. Um, what you're going to want to do is you're going to want to get all of your login and authentication upfront. And the reason why is because u login and authentication in practice actually end up being something like 70% of all of the maintenance requests and and problems that I've ever had. Um typically a pro you know a problem will go like this. Uh let me not use one. it'll be like service upgrades and you know when a service let's say some sort of Gmail or something upgrades you lose uh your connector after your connector breaks right then and I'm thinking about this in the context of a client client gets angry or client thinks system doesn't work that's not how you spell system so Then they call you in the middle of the night being like, "Hey, this thing isn't working." You build something that is inherently broken or wrong. And then you have to sort of do a fix last second. And then in doing your fix last second, you kind of have to get them on the call. You have to get some sort of communication with them. Um meaning you have to reauthenticate. So number one, it's a it's a bad look for you, but obviously it's also a bad look because this whole maintenance and upgrade loop could have been handled assuming you actually had the core credential um that we're talking about. What I mean by that is despite the fact that it is far more secure not to have credentials for all of your clients or all of the team members within your team's um login and so on and so forth, it is way easier to handle stuff like this on the fly if you actually have the core or root login. So much so that you can actually do what's called a debug flow. So, I don't know if you guys remember inside of Claude, just going back here, um, there was a, if we go to new and then go down to our local environment, okay, there is a section where you can actually store keys. And one thing that you could also do inside of this local environment is you could store usernames and passwords. So, what I mean by this is let's say, you know, we have some ClickUp fail that it just continues to occur. We could actually store clickup user equals, you know, nick at whatever.com. We could also store clickup_pw equals nick blah blah blah blah blah blah fan whatever you know 45 I don't know cuz nowadays they all require numbers and then what happens is you can actually store a line in your cloud routine or in you know your your your local environment because this isn't a local environment. So probably your loop in this case if you wanted to do in a cloud routine it would be the cloud environment. You could store a line that basically says um you know if o issue log in via whatever the creds are. Okay, navigate to you know location where all the stuff is and then ultimately regenerate API key. I don't know if you guys know, but these these models now have browsers, right? And so, as we saw with Claude, when it develops a website, it literally opens up a little browser on the right hand side. Well, it can legitimately use that to log into services for you. And so, what you can do is you can have like sort of a debug flow where if there is an issue, it can self-manage that issue. Um, but the only situation in which that is doable is if you already have all the login and authentication. And unfortunately, as mentioned, this is like 70% of all the problems with these sort of recurring loginins. And if you want something to be long-standing business infrastructure, a lot of the time you just sort of have to let go a little bit and say, "Okay, like take the login, log into the service yourself and then do everything you need to do." Okay, so that's the first thing. The second thing is um called self-healing. And I'll show you guys an example of self-healing in a second. But if other issue you know my recommendation is you give the model basically total cart blanch autonomy to fix and then rerun. This is called selfhealing and it's a really important part of like robust um skill loop or routine development. To make it much simpler for you guys to visualize, you can think of it as giving your AI systems the ability to rewrite their own instructions. If a step keeps failing in the skill, update that skills instructions and try again. So, for instance, you know, let's say I'm doing my usual, uh, creative generation flow or something like that. Um, and for whatever reason, it just can't access, [clears throat] you know, one of the API routes that it used to, uh, access. So, it calls this route over and over and over and over and over again, and then, you know, it says it's just tells me like, "Hey, Nick, so I'm sorry, this can't work." Well, rather than force the model to go through a bunch of the same attempts over and over and over again, if you just add a line somewhere at the very bottom of your skill or somewhere at the bottom of your looper routine that just says if you've tried doing this more than three times and it does not work, then odds are there's an issue with the actual core service, figure out what the issue is, see if maybe a route has changed or something like that, and then actually go through and update and add a log of everything that you've done in order to do it so future runs can work successfully. If you do that, um, the model will virtually never cause any problems for you again. So long as it has all the resources it needs to actually fix the problem, like maybe some login or something like that, it will heal itself. I've called this multiple things over the uh last year or so called a self annealing. That's a pretty cool term, but I think self-healing probably makes more sense. It's like kind of how Wolverine's body regenerates when somebody slashes him, right? Like that's that's sort of the idea here. Uh, and so typically what'll happen is you should have a phrase, and I'm not going to give you the exact phrase here because I don't think my phrase is perfect, and there are a variety of different things you could say, but basically if at any point you run into the same error more than three times, odds are something has materially changed in the systems that you are interacting with. Evaluate these changes, explore, and see if you can solve the problem. You have full agency autonomy. After you've solved the problem, report back and update your own skill or loop or routine, whatever it is that you're running, with a change log of upgrades, including the problem, your solution, and then update the actual skill itself. Append to this change log as you continue doing this. So we always have a breakdown of what happened and why. Okay. So this is just something you know this is one of those things you can just copy and paste and stick into literally every single uh window virtually ever and you will have a significantly better and higher performing system as a result. U so this is in practice how you sort of maintain the systems. You get ahead of the brakes by letting the model do more and more and more heavy lifting on its own. And I'm not going to say that this is like 100% foolproof. I've had some situations where I give them a little too much self-healing access and because of some spurious issue, maybe like a weird rate limit, it fundamentally changes itself and then it screws up. But those issues are far less common than um issues where, you know, the model just screws up due to some temporary rate limit and then ends up just calling it quits. The whole point of automation really is that it's hands-off, right? It's a system that just functions without humans. Obviously, we want to eliminate human labor completely where possible. We don't necessarily just want to minimize it. as such that we can redirect that human labor towards areas of the business that are more profitable and then ultimately probably better and more fulfilling for a human being. Like think about, I don't know, weaving a basket by hand 5,000 years ago. It's like, well, why would you weave a basket by hand uh and you know, try and make a livelihood off of if you could just build a basket weaving machine, you go up one level of abstraction, now you monitor the basket weaving machine, fix it, make improvements, and stuff like that. You're you're producing a net good for society, right? That's sort of how automation is. Imagine if that basket weaving machine could now clean itself and like avail itself of little bugs here or there if it had its own hands. That's basically what we're doing. So that's one of the changes. The second major thing I want to talk about on the maintenance end is error logging. You know because we're moving away now in automating you know marketing stuff from the old school platforms like you know make.com nadn these sort of drag and drop tools. Um, we're currently in like an erroring apocalypse where these things are failing constantly and we're just not seeing them because we don't have simple like notification routes available to let you know when something is or is not working. So, what do I mean by this? If you guys were using an old school tool, it's funny that this is old school cuz it's kind of where I started on YouTube talking about this platform which I was using to to automate my own marketing. But if you guys are using an old school platform like you know make.com or something like that basically what you get with a tool like this is you get automated error logging. And so every time there's an error inside of like one of these flows that's drag and drop based like this. You'll actually have like a full history log. You'll be able to see every change that has ever been made. And then you'll also be able to see all the errors, incomplete executions um physically literally on the diagram. You'll be able to see the errors and uh you'll also receive notifications. And you can set those notifications to send you emails. you can set those notifications to, I don't know, do push noteps or whatever. Now, same thing with like N8 even if there are issues on this more kind of modern uh builder, you know, they they'd be able to see these things. You'd be able to see tickets, you'd be able to have error logging flows, you'd be able to get emails. What I'm trying to say is like you would know when something screwed up. And the whole idea is because you know that something screwed up, you'd be able to fix it significantly faster, right? It's much more like observable and transparent um than than most things that we're doing now. Unfortunately, because AI has just moved so quickly and because we're all building slightly different things nowadays, we don't have that same standardized observability, we don't actually have the ability to like log errors. And so, what I like to do as a minimum is I basically like to give all of my actual routines, the ones that are running my business, the ability to log errors to a uh de facto error channel inside of my workspace. And so, what do I mean by this? What does this actually look like in practice? Well, um I'll show you guys. I'm actually going to wire up one of our flows to to do this. Um, but first of all, let's just call this error handling. And the very first kind of most important thing about error handling is you just have to make it visible. So, you know, you dump this stuff where you work. If your business works in WhatsApp, then dump it in WhatsApp. If your business works on Slack, dump it in Slack. If your business works on Discord, literally just dump it in Discord. Uh but basically every time that an error occurs, I recommend finding some place specifically for errors, like an errors channel, okay? And then wiring it up via um some logic, which I'll give you guys in a second, that just says like error with, you know, XYZ. And then what you can do is you actually weave in this self-healing, right? Air with XYZ tried XYZ to fix, you know, succeeded or failed, right? If you know it's a failure, something like this is totally fine and more than enough. Now every person in your organization will have basically full um top to bottom access and visibility into processes that you guys are doing. Okay. So how do you actually do this in something like you know um claude? It's actually fairly straightforward. What you do is you go down here and then right over here you see how you can add a connector. What you do is you just add slack and then at the very bottom you say something like if you have any errors send the error notification to the you know # error slack. Let's do this um slack chat. Okay. And so once we have the connector it'll be very very easy to do. Let me show you guys a quick example. Um just go back here and then down to the bottom I'll go settings. Then I'll scroll all the way down to connectors. And what do we want? We want Slack, right? So you can see it's one of the most popular ones to connect to because we can then send error messages. I'm not going to connect to it. Okay, now we're back here. Okay, so what I've done is inside of my Slack, I actually have a errors channel. Okay, and I just set this up here as a demo. Um, my actual errors channel is private, but um we're just going to use this public one for the sake of uh discussion. And I'm just
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-1021",
+  "excerpt": "verify the flag actually landed on the record. So now it's just going to double check that its job was done correctly. And now we should actually see what's going on. So it did match the 7day records. It then searched Gmail. It then selected the template high net quick nudge on the invoice. Then had an opt out check just to verify whether or"
+ },
+ {
+  "local_id": "EV-1022",
+  "excerpt": "not that worked. And then which recipients got uh went through this flow just cuz I want to verify that was actually those three. Um, why one? There were three with sevenday flags because I never put there were three real contacts. Yes, of course. I want you to run this for real using the info in the CRM. You'll find cloud will do stuff like this fairly often because it"
+ },
+ {
+  "local_id": "EV-1023",
+  "excerpt": "doesn't want to use tokens, which is generally reasonably positive behavior. So you guys could see here we're 44% of the way through our 5h hour limit which resets in 1 hour and 27 minutes. Um and that's you know just cuz we're on Opus 5 which is a little bit smarter than sonnet 5 which is the model we were using at the beginning of all this. And let's just take a look. How are things"
+ },
+ {
+  "local_id": "EV-1024",
+  "excerpt": "going? Hi Nick. How are things going on the invoice? Happy to help if anything's unclear. And then this one here is hey Nick. Just checking in on the invoice. Let me know if you have Q. So these were these were sent to our three records basically. Um, it actually went through and it found those three that each have 7-day days outstanding sent to them. Um, it's also then logged a bunch of"
+ },
+ {
+  "local_id": "EV-1025",
+  "excerpt": "information about them, I believe. So, this was the uh fake, hey, Nick, please stop emailing me about this. So, we obviously don't run into like crazy stop conditions. And now it's kind of letting us know, hey, you know, Chase stage is set to close, so we're not going to continue following up with them. And we did all this pretty easily just using like a demo CRM that I set up in just a"
+ },
+ {
+  "local_id": "EV-1026",
+  "excerpt": "few seconds. If you guys run your own real CRM through cloud like the way that I did so today, you can obviously get tremendous alpha. So, what are we going to do now? Well, I basically want to extend this and turn this into a full endto-end flow. So, uh I want to check all of those dates. Hey, this sounds great. I now want you to convert everything that we've talked about so"
+ },
+ {
+  "local_id": "EV-1027",
+  "excerpt": "far and all of the fixes therein into a skill. The idea is I will run the skill once every morning. For now, I'll do it myself, not as a loop. But we'll run the skill once every morning. And then it will go through uh 1 2 3 7 14 28 56 uh 84 and so on and then match to the templates as appropriately. Um we'll also make sure to do that opt out check and everything else that we talked"
+ },
+ {
+  "local_id": "EV-1028",
+  "excerpt": "about. Uh convert it into a simple bulleted SOP so that a future cloud instance that does not have the context of our conversation will still be able to execute this reliably. Excellent. So now I'm going to go from that prompt to a skill stage. And then I'm going to retest this. And it's mentioning that the connector is an MCP integration that only works inside a"
+ },
+ {
+  "local_id": "EV-1029",
+  "excerpt": "cloud session. That's great. That's basically exactly what we want. The skill is now a standard operating procedure that every time I run it is just going to look for that script. It's going to use its own built-in integration. It's going to run it and then we're basically good to go. Um, if you think about it, what we need to do now is we need to turn it into a loop."
+ },
+ {
+  "local_id": "EV-1030",
+  "excerpt": "So this looks great. I'd like now to turn this into a loop that fires every morning at 5:59 a.m. On the local credential side, how could we turn this into a routine where we can run this using a cloud instance as opposed to locally on my computer? You mentioned the MCP integration for ClickUp. I know we can add that as a connector in the cloud environment. How can we do the"
+ },
+ {
+  "local_id": "EV-1031",
+  "excerpt": "same with the local uh script? Okay. And after all is said and done, we now have a routine set up for the daily invoice/proposal chase. I'm sure you guys could see how you could extend this virtually arbitrarily to whatever the heck you want. Um, I just did mine on that 1 2 3 74 218 56 and 84day schedule. Um, granted, if you are chasing people for more than 84 days and they still"
+ },
+ {
+  "local_id": "EV-1032",
+  "excerpt": "haven't got back to you, you probably got bigger issues like, are they even going to sign the deal? Are they even going to pay the invoice? Probably not. Anyway, we did all that with clawed code and we did it just a few minutes realistically. Um, so that's that. Some ways to make this better. We could absolutely do some sort of higher quality nudges. We could, you know, give"
+ },
+ {
+  "local_id": "EV-1033",
+  "excerpt": "people specific types of value like email sequences in newsletters that drop like case studies and assets. Um, we could we could give them insights. You know, we could go pre or postmeating. I just did proposal here because I thought it was probably the easiest to to verify and see. We could do some sort of customer story. We could also just rip and rinse and repeat a bunch of these"
+ },
+ {
+  "local_id": "EV-1034",
+  "excerpt": "gentle price objection check-ins that I've been doing. Um, but yeah, I mean like this is fairly straightforward, which officially marks us as having finished the last demo of our course. So hopefully you've learned a lot. Just to give you guys a brief uh revisiting, we started with creative generation. So I showed you guys how to generate ads, organics, uh, images, and videos all"
+ },
+ {
+  "local_id": "EV-1035",
+  "excerpt": "using AI. We started off with like very standardized um compositing workflow that used HTML to like generate something that looked really similar to Stripe and uh later I showed you guys how to do AI image generators like GPT image 2 and then video generators like you know Gemini Omni and then Cance and stuff like that. I also showed you top of funnel uh for personalized copy. So"
+ },
+ {
+  "local_id": "EV-1036",
+  "excerpt": "how to take like email newsletters and then personalize the hell out of them at significantly higher quality outreach to these people than just like hello welcome to my product. I actually then did that for a product that I'm currently running, Maker School, my AI automation community that teaches you how to sell this stuff. And uh as you guys saw, it was fairly straightforward."
+ },
+ {
+  "local_id": "EV-1037",
+  "excerpt": "Then I showed you guys how to apply the same idea of automating text and templates through AI, which is something that I had a lot of experience with way back in the day when I was going door to door. Then uh for middle of funnel, I showed you guys how to incorporate speedtolebased email, SMS, and voice uh into a flow. Um very straightforward and easy to do as you guys saw earlier. All"
+ },
+ {
+  "local_id": "EV-1038",
+  "excerpt": "we really do is we just hook up um sort of an email polling system that checks our mailbox and then if you want to turn that into like a digitally run or like cloud-based routine um we do that via API call. And so we set that up on both email and SMS. Then for middle of funnel we did data collection and tracking and then visualizing all that in this cool sexy dashboard which you could host for"
+ },
+ {
+  "local_id": "EV-1039",
+  "excerpt": "your own business or you could sell to people. And then finally bottom of funnel automating high quality follow-ups via email. And I'm realizing now it actually I I said SMS. So, why don't I just round that out for SMS. Um, in order to do something like that, all you would have to do is basically add the Kuo connector, which I will jump on right over here, do some editing, and"
+ },
+ {
+  "local_id": "EV-1040",
+  "excerpt": "then um actually add that QUO connector. And then [snorts] over here, I'll also check for the phone number. So, I'm going to go here, hold this down. In addition to sending an email, I also want you to um draft and then send a message to their phone numbers using kuo quo. Awesome. You'll get the phone numbers from the local"
+ },
+ {
+  "local_id": "EV-1041",
+  "excerpt": "ClickUp scrape. Cool. I mean, that is really how easy it is to modify these sorts of flows to be clear. Um I will have to obviously test that if I did want to use that at scale. can't just assume that it's going to work perfectly. As you guys saw, a lot of bugs do crop up throughout the process. Okay, great. So, now that we've made it all the way to"
+ },
+ {
+  "local_id": "EV-1042",
+  "excerpt": "the end of the practical builds, where do we go from here? Well, there are two things that I want to talk about. The first is the maintenance and then the upgrading of these systems over time. And to be clear, when I talk upgrading of these systems, I mean like wholesale making this better um basically every time you run it. And there are a couple cool things that I'm going to touch on"
+ },
+ {
+  "local_id": "EV-1043",
+  "excerpt": "there in a second, but um for now uh I'm just going to give you guys probably like the 8020 and then you guys can apply these advanced tips if you want. And then speaking of advanced tips, the second is a bunch of advanced tips. Now the advanced tips are more about how to actually um run this sort of stuff in real organizations, less so academic. So uh yeah, I'm just going to give you guys"
+ },
+ {
+  "local_id": "EV-1044",
+  "excerpt": "more or less everything right now. And I've arranged my little worksheet here to essentially work like this. So, my first major uh point of advice on maintenance is, you know, if you're doing this for a client or your own business, it's going to be a little bit different, but I'm assuming right now that you're maintaining these systems, let's just say for somebody else. Um,"
+ },
+ {
+  "local_id": "EV-1045",
+  "excerpt": "what you're going to want to do is you're going to want to get all of your login and authentication upfront. And the reason why is because u login and authentication in practice actually end up being something like 70% of all of the maintenance requests and and problems that I've ever had. Um typically a pro you know a problem will go like this. Uh let me not use one."
+ },
+ {
+  "local_id": "EV-1046",
+  "excerpt": "it'll be like service upgrades and you know when a service let's say some sort of Gmail or something upgrades you lose uh your connector after your connector breaks right then and I'm thinking about this in the context of a client client gets angry or client thinks system doesn't work that's not how you spell system so Then they call you in the middle of"
+ },
+ {
+  "local_id": "EV-1047",
+  "excerpt": "the night being like, \"Hey, this thing isn't working.\" You build something that is inherently broken or wrong. And then you have to sort of do a fix last second. And then in doing your fix last second, you kind of have to get them on the call. You have to get some sort of communication with them. Um meaning you have to reauthenticate. So number one, it's a it's a bad look for you, but"
+ },
+ {
+  "local_id": "EV-1048",
+  "excerpt": "obviously it's also a bad look because this whole maintenance and upgrade loop could have been handled assuming you actually had the core credential um that we're talking about. What I mean by that is despite the fact that it is far more secure not to have credentials for all of your clients or all of the team members within your team's um login and so on and so forth, it is way easier to"
+ },
+ {
+  "local_id": "EV-1049",
+  "excerpt": "handle stuff like this on the fly if you actually have the core or root login. So much so that you can actually do what's called a debug flow. So, I don't know if you guys remember inside of Claude, just going back here, um, there was a, if we go to new and then go down to our local environment, okay, there is a section where you can actually store keys. And one thing that"
+ },
+ {
+  "local_id": "EV-1050",
+  "excerpt": "you could also do inside of this local environment is you could store usernames and passwords. So, what I mean by this is let's say, you know, we have some ClickUp fail that it just continues to occur. We could actually store clickup user equals, you know, nick at whatever.com. We could also store clickup_pw equals nick blah blah blah blah blah"
+ },
+ {
+  "local_id": "EV-1051",
+  "excerpt": "blah fan whatever you know 45 I don't know cuz nowadays they all require numbers and then what happens is you can actually store a line in your cloud routine or in you know your your your local environment because this isn't a local environment. So probably your loop in this case if you wanted to do in a cloud routine it would be the cloud environment. You could store a line that"
+ },
+ {
+  "local_id": "EV-1052",
+  "excerpt": "basically says um you know if o issue log in via whatever the creds are. Okay, navigate to you know location where all the stuff is and then ultimately regenerate API key. I don't know if you guys know, but these these models now have browsers, right? And so, as we saw with Claude, when it"
+ },
+ {
+  "local_id": "EV-1053",
+  "excerpt": "develops a website, it literally opens up a little browser on the right hand side. Well, it can legitimately use that to log into services for you. And so, what you can do is you can have like sort of a debug flow where if there is an issue, it can self-manage that issue. Um, but the only situation in which that is doable is if you already have all the login and authentication. And"
+ },
+ {
+  "local_id": "EV-1054",
+  "excerpt": "unfortunately, as mentioned, this is like 70% of all the problems with these sort of recurring loginins. And if you want something to be long-standing business infrastructure, a lot of the time you just sort of have to let go a little bit and say, \"Okay, like take the login, log into the service yourself and then do everything you need to do.\" Okay, so that's the first thing. The"
+ },
+ {
+  "local_id": "EV-1055",
+  "excerpt": "second thing is um called self-healing. And I'll show you guys an example of self-healing in a second. But if other issue you know my recommendation is you give the model basically total cart blanch autonomy to fix and then rerun."
+ },
+ {
+  "local_id": "EV-1056",
+  "excerpt": "This is called selfhealing and it's a really important part of like robust um skill loop or routine development. To make it much simpler for you guys to visualize, you can think of it as giving your AI systems the ability to rewrite their own instructions. If a step keeps failing in the skill, update that skills instructions and try again. So, for instance, you know, let's"
+ },
+ {
+  "local_id": "EV-1057",
+  "excerpt": "say I'm doing my usual, uh, creative generation flow or something like that. Um, and for whatever reason, it just can't access, [clears throat] you know, one of the API routes that it used to, uh, access. So, it calls this route over and over and over and over and over again, and then, you know, it says it's just tells me like, \"Hey, Nick, so I'm sorry, this can't work.\" Well, rather"
+ },
+ {
+  "local_id": "EV-1058",
+  "excerpt": "than force the model to go through a bunch of the same attempts over and over and over again, if you just add a line somewhere at the very bottom of your skill or somewhere at the bottom of your looper routine that just says if you've tried doing this more than three times and it does not work, then odds are there's an issue with the actual core service, figure out what the issue is,"
+ },
+ {
+  "local_id": "EV-1059",
+  "excerpt": "see if maybe a route has changed or something like that, and then actually go through and update and add a log of everything that you've done in order to do it so future runs can work successfully. If you do that, um, the model will virtually never cause any problems for you again. So long as it has all the resources it needs to actually fix the problem, like maybe"
+ },
+ {
+  "local_id": "EV-1060",
+  "excerpt": "some login or something like that, it will heal itself. I've called this multiple things over the uh last year or so called a self annealing. That's a pretty cool term, but I think self-healing probably makes more sense. It's like kind of how Wolverine's body regenerates when somebody slashes him, right? Like that's that's sort of the idea here. Uh, and so typically what'll"
+ },
+ {
+  "local_id": "EV-1061",
+  "excerpt": "happen is you should have a phrase, and I'm not going to give you the exact phrase here because I don't think my phrase is perfect, and there are a variety of different things you could say, but basically if at any point you run into the same error more than three times, odds are something has materially changed in the systems that you are interacting with. Evaluate"
+ },
+ {
+  "local_id": "EV-1062",
+  "excerpt": "these changes, explore, and see if you can solve the problem. You have full agency autonomy. After you've solved the problem, report back and update your own skill or loop or routine, whatever it is that you're running, with a change log of upgrades, including the problem, your solution, and then update the actual skill itself."
+ },
+ {
+  "local_id": "EV-1063",
+  "excerpt": "Append to this change log as you continue doing this. So we always have a breakdown of what happened and why. Okay. So this is just something you know this is one of those things you can just copy and paste and stick into literally every single uh window virtually ever and you will have a significantly better and higher performing system as a result. U so this is in practice how you"
+ },
+ {
+  "local_id": "EV-1064",
+  "excerpt": "sort of maintain the systems. You get ahead of the brakes by letting the model do more and more and more heavy lifting on its own. And I'm not going to say that this is like 100% foolproof. I've had some situations where I give them a little too much self-healing access and because of some spurious issue, maybe like a weird rate limit, it fundamentally changes itself and then it"
+ },
+ {
+  "local_id": "EV-1065",
+  "excerpt": "screws up. But those issues are far less common than um issues where, you know, the model just screws up due to some temporary rate limit and then ends up just calling it quits. The whole point of automation really is that it's hands-off, right? It's a system that just functions without humans. Obviously, we want to eliminate human labor completely where possible. We"
+ },
+ {
+  "local_id": "EV-1066",
+  "excerpt": "don't necessarily just want to minimize it. as such that we can redirect that human labor towards areas of the business that are more profitable and then ultimately probably better and more fulfilling for a human being. Like think about, I don't know, weaving a basket by hand 5,000 years ago. It's like, well, why would you weave a basket by hand uh and you know, try and make a livelihood"
+ },
+ {
+  "local_id": "EV-1067",
+  "excerpt": "off of if you could just build a basket weaving machine, you go up one level of abstraction, now you monitor the basket weaving machine, fix it, make improvements, and stuff like that. You're you're producing a net good for society, right? That's sort of how automation is. Imagine if that basket weaving machine could now clean itself and like avail itself of little bugs"
+ },
+ {
+  "local_id": "EV-1068",
+  "excerpt": "here or there if it had its own hands. That's basically what we're doing. So that's one of the changes. The second major thing I want to talk about on the maintenance end is error logging. You know because we're moving away now in automating you know marketing stuff from the old school platforms like you know make.com nadn these sort of drag and drop tools. Um, we're currently in like"
+ },
+ {
+  "local_id": "EV-1069",
+  "excerpt": "an erroring apocalypse where these things are failing constantly and we're just not seeing them because we don't have simple like notification routes available to let you know when something is or is not working. So, what do I mean by this? If you guys were using an old school tool, it's funny that this is old school cuz it's kind of where I started on YouTube talking about this platform"
+ },
+ {
+  "local_id": "EV-1070",
+  "excerpt": "which I was using to to automate my own marketing. But if you guys are using an old school platform like you know make.com or something like that basically what you get with a tool like this is you get automated error logging. And so every time there's an error inside of like one of these flows that's drag and drop based like this. You'll actually have like a full history log."
+ },
+ {
+  "local_id": "EV-1071",
+  "excerpt": "You'll be able to see every change that has ever been made. And then you'll also be able to see all the errors, incomplete executions um physically literally on the diagram. You'll be able to see the errors and uh you'll also receive notifications. And you can set those notifications to send you emails. you can set those notifications to, I don't know, do push noteps or whatever."
+ },
+ {
+  "local_id": "EV-1072",
+  "excerpt": "Now, same thing with like N8 even if there are issues on this more kind of modern uh builder, you know, they they'd be able to see these things. You'd be able to see tickets, you'd be able to have error logging flows, you'd be able to get emails. What I'm trying to say is like you would know when something screwed up. And the whole idea is because you know that something screwed"
+ },
+ {
+  "local_id": "EV-1073",
+  "excerpt": "up, you'd be able to fix it significantly faster, right? It's much more like observable and transparent um than than most things that we're doing now. Unfortunately, because AI has just moved so quickly and because we're all building slightly different things nowadays, we don't have that same standardized observability, we don't actually have the ability to like log"
+ },
+ {
+  "local_id": "EV-1074",
+  "excerpt": "errors. And so, what I like to do as a minimum is I basically like to give all of my actual routines, the ones that are running my business, the ability to log errors to a uh de facto error channel inside of my workspace. And so, what do I mean by this? What does this actually look like in practice? Well, um I'll show you guys. I'm actually going to wire up one of our flows to to do this."
+ },
+ {
+  "local_id": "EV-1075",
+  "excerpt": "Um, but first of all, let's just call this error handling. And the very first kind of most important thing about error handling is you just have to make it visible. So, you know, you dump this stuff where you work. If your business works in WhatsApp, then dump it in WhatsApp. If your business works on Slack, dump it in Slack. If your business works on"
+ },
+ {
+  "local_id": "EV-1076",
+  "excerpt": "Discord, literally just dump it in Discord. Uh but basically every time that an error occurs, I recommend finding some place specifically for errors, like an errors channel, okay? And then wiring it up via um some logic, which I'll give you guys in a second, that just says like error with, you know, XYZ. And then what you can do is you actually weave in this self-healing,"
+ },
+ {
+  "local_id": "EV-1077",
+  "excerpt": "right? Air with XYZ tried XYZ to fix, you know, succeeded or failed, right? If you know it's a failure, something like this is totally fine and more than enough. Now every person in your organization will have basically full um top to bottom access and visibility into processes that you guys are doing. Okay. So how do you actually do this in something like you know um"
+ },
+ {
+  "local_id": "EV-1078",
+  "excerpt": "claude? It's actually fairly straightforward. What you do is you go down here and then right over here you see how you can add a connector. What you do is you just add slack and then at the very bottom you say something like if you have any errors send the error notification to the you know # error slack."
+ },
+ {
+  "local_id": "EV-1079",
+  "excerpt": "Let's do this um slack chat. Okay. And so once we have the connector it'll be very very easy to do. Let me show you guys a quick example. Um just go back here and then down to the bottom I'll go settings. Then I'll scroll all the way down to connectors. And what do we want? We want Slack, right? So you can see it's one of the most popular"
+ },
+ {
+  "local_id": "EV-1080",
+  "excerpt": "ones to connect to because we can then send error messages. I'm not going to connect to it. Okay, now we're back here. Okay, so what I've done is inside of my Slack, I actually have a errors channel. Okay, and I just set this up here as a demo. Um, my actual errors channel is private, but um we're just going to use this public one for the sake of uh discussion. And I'm just"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

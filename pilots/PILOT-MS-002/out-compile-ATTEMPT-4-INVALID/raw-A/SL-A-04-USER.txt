@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-04
+boundaries: 3424.16s - 4625.36s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+invoices and stuff like that is simply because we haven't had the manpower to do that and provide a good experience. But what I really like about cloud code and AI is that it allows us the ability to produce the manpower to give every single person that works with our business a customized experience. They'll have customized creative, customized copy, customized outreach. Their speed to lead will look really customized. We'll we'll customize, you know, information by doing research automatically on people to enrich, you know, fields in our newsletter databases will u customize follow-ups. Everything will be super super unique and and also very personalized. Before we actually build things, you need to understand bottleneck thinking, just sort of constraintbased thinking. And this is quite important in marketing because what you'll find is a lot of the companies that you work with or maybe your own company um they have a lot of one of the things that we talked about. Okay? Maybe they have a lot of creative, maybe they have a lot of capacity around the follow-up end, but you'll find that there are certain parts of their funnel that just really suck. And the way that bottlenecks and pipelines work are the entire operation is always constrained by the narrowest step of that chain uh or like the weakest link in the chain is another way of thinking about it as well. The classic example is a factory. And for those of you guys that have played those like I don't know factorial games or whatever um you'll intuitively understand this but let's say I have a factory and the way it works is every day I get 100 units of some raw material. I don't know let's say it's a rock or something like that. And now this enters my big factory. Okay. And this is what my factory looks like. [sighs and gasps] And basically what happens is you know what we have to do every day is we have to put this raw good through two steps. We have step A and step A has a capacity of 100 units per day and step B has a capacity of 10 units per day. How many units in one day can we get through this pipeline? How many units can we get through this factory? Well, if we start with 100 units on the left side, okay, and then we pass it through A, A has a capacity of 100 units per day. So, what that means is the intermediate between, you know, A and B, like we'll we'll generate 100 units. That's fine. You know, we've made it past the first step. You'll see B only has 10 units per day, which means, you know, despite the fact that we're feeding in 100 units, we can't get all of them. Um what we can do is we can transform 10 units per day. What that means is what is the sum total daily output of the factory? It's 10 units per day. You know basically the entire factory can only work as quickly as the weakest step in their process. Now if I give you an mission to improve the total capacity of this product you know in total number of units generated per day um you know and then I say hey like which step would you improve in order to increase the total output of the factory would you improve step A or would you improve step B you know let's say I allow you to double any of these well if you doubled A you'd be at 200 units per day what would the total capacity of the factory now be well you wouldn't actually have changed anything because the bottle neck the thing that all other steps are sub subservient to is still 10 units per day. However, if you changed B from 10 to 20 units per day, then the total output of the factory would go up. Okay, so anyway, this is just a very simple and straightforward um analogy hopefully that allows you to think about how to optimize a marketing process. The reality is, you know, we have a lot of processes in our business that are very similar to what I just talked about. And in this hypothetical example, what we have is we have um you know a lot of capacity at the creative step. We have a lot of capacity at the lead step, but we don't have a lot of capacity the booking step. So this is sort of our you know uh example that is analogous to 10 units per day. It doesn't really matter if we improve our creative in this example. Doesn't really matter if we improve our follow-ups or the total number of leads we have. you know, none of that's going to matter because the pipeline, the narrowest part of our whole business is this booking stuff. So, what that means, too, is it's not bad. It's actually quite freeing. Um, we can spend zero work on creative leads or following up at this point. If we just improve our booking by a tiny little bit, our entire business will improve by that same multiple. For instance, if we can move it from 10 units a day of capacity to 20 units a day of capacity, what we've done is we've effectively doubled our business. Okay? Then we do it 30. you know, maybe we'll triple our business and so on. And so I I just bring you guys this analogy because I find a lot of the time people want to rush to automate literally everything that they can in a business. And despite the fact that that sounds nice and it's sexy, you'll make way more money for yourself or for the companies that you work with, if you spend a little bit of time trying to figure out what the bottleneck is and then building systems that alleviate that bottleneck versus just trying to do everything everywhere all at once. So all the systems that I'm going to show you from now on, I would like you to think of as solutions to bottlenecks. But don't just throw these systems at the companies that you work with because that isn't necessarily going to do anything unless that is actually the current constraining step. Like if creative for instance was a very narrow bottleneck in this instance, you know, if it looked maybe something more like this, right? Um and it was a lot more narrow, then widening it with the creative system that I'll show you guys in a minute would make sense. You know, if booking was really the bottleneck as mentioned here, then widening it, widening it with a booking system and doing more speed to lead, that would make sense. But if you guys are already really really good across the stack and everything that you guys are attempting to process automate is already sort of not the bottleneck in a process, you're not actually going to see uh much monetary return. Okay, so that takes us back to the five marketing functions we'll be automating today and the framework to do it. Why don't we now talk about how to prompt versus build skills versus schedule loops versus create routines? And once we're done with this, we can actually start the building of our cloud code systems. So, a simple and easy way for you to think about how we are going to progress through this course is for all of the systems that I'm going to be building with you guys, we're going to start them very simply as prompts. Now, prompts are sort of the first step in the automation pipeline. What they are is it's kind of like uh an old school Flintstones car where you know you would pick the car up and then in Flintstones they would sort of run with their feet because they supposedly hadn't invented wheels yet. It is manual every single time that you do the process you need to be in the driver's seat actually steering it and asking the AI to do the next step and getting the AI to you know do things in sort of a self-directed manner. And as a result, it's also quite slow. But obviously, I mean, if it's the first time you've done a process, how else are you going to do it? And so when we build all of our automations in our course, we're going to do them primarily through prompting to start. But after a while, obviously, business processes tend to be quite similar. We tend to just do the same thing over and over and over again, right? That's kind of how business works. We find a hack in the market that pays us more money than the work and money that went into it. And then we just repeat it over and over and over again. So we'll transform our prompts to the next stage which are skills. Now you can basically think about skills as just a saved and much more efficient instruction set that you can reuse. And so we showed you guys how to do that earlier through slash commands, right? There was that morning skill. Well, you can get really really granular with skills. And once you have a big set of skills, you can also just run those skills as a meta skill. uh and in that way chain together you know a process that might have previously taken many many man-h hours into one. So for example I have a bunch of skills that manage my YouTube channel and a lot of people wonder how I'm capable of self-managing such a large output. Well the reason why I can is because I have skills that manage everything for me now from the generation of title candidates to the generation of thumbnails to the generation of uh you know descriptions to the actual publishing of the content the selection of the keywords. It automatically adds things like uh end screen cards and so on and so forth. You know, this is stuff that previously every time I wanted to publish or record a video, I would have had to, you know, sit down and probably spend an extra hour or two uh doing. Well, now I I don't need to do any of that at all. And once I built all of those granular indivi individual skills, I then created master skills that just ran all of them in sequence, sort of one skill after the other, skill after the other skill, and in that way chained together small tasks, turned them into big ones, and eventually replaced entire roles. Okay. Now after the skills which are themselves quite powerful, we are still technically constrained by you running the skill. And so that takes us to the next step which is the loop. Now what a loop is is it's basically a skill except it's a skill that runs on its own without your involvement. And so in the example of, you know, that big like meta um skill that I talked about that like let's say manages my YouTube channel, you can imagine how me having to run the skill at the end of every big publishing session or whatever is kind of a pain in the butt, right? What if instead I just set a loop that automatically ran the skill on my computer once every day? And maybe, you know, my deadline was 12:00, so I just had it run every day at 12:00. Well, in that way, I'm no longer really in the driver's seat. What I've done is I've prompted built up a saved instruction set and now I have a scheduleuler that's just running that instruction set maybe on a set of resources. You could see that with like the morning brief idea, right? You could just set the morning brief to run completely autonomously without you maybe at like 5:00 a.m. every morning or maybe you know you're doing some sort of marketing role and you have to scrape a bunch of um competitor ads. Well, you can actually set a loop to scrape the competitor ads every morning at like 5:00 a.m. before you get into the office or before you start working on your own business. And that way, the second that you show up, you will have a list of all of the competitor ads. All you need to do logically is just figure out, okay, which ones am I going to try and duplicate and swoop. You could build loops like this across virtually every part of your marketing stack. And I will show you guys how to do so. But obviously, the first step here is you need you need the skill. And in order to build the skill, you need the prompt. Okay? And then once you are done with the loop, sort of takes us to the last step, which is the routine. Now, loops are great. The only issue with loops is that they need to be run on your computer. And so that that decreases your ability to share the loops with other people in your organization. And it also means that the loops are kind of brittle. If something changes in your computer, if maybe you change your I don't know login or whatever, um you change the plugins that your clot has access to your skills and MCP servers and whatnot, the loops can break and they cannot work. But if you really want to like expand things and make them you know institutional and actually add things to the organization not just your own work space uh you need to take them out of your computer and then put them on somebody else's computer. So if you guys remember we covered routines earlier and uh you know like the difference between local and cloud environments well routines just run in cloud environments and the idea is you will pay you know anthropic or another cloud provider some amount of money usually very little to be clear. I mean, we're just spending money on tokens at this point. And then it will do the task and then it will output some deliverable, which is, you know, a lot more money. And so, maybe this is the simplest ROI of your life. You spend, you know, $1 in tokens, then you get the equivalent in deliverables of um, I don't know, let's just say like $100 or something like that output. Um, it is entirely self-managed. Uh, you don't have to touch anything on it. It just occurs without your involvement. And so this is eventually where we are going to go with all of our systems to be clear. Um although you do need some sort of um input to that like a schedule, API, web hook, trigger, whatever the heck you want. Um but I'm just going to be approaching every single one of our steps through this four-step pipeline. So you guys are going to see that in our very first u automation, which is going to be using Cloud Code to create ads essentially wholesale. Uh, we're going to start by building out a step-by-step prompt where I walk Claude manually through a process to go and do what I want to do. I'm then going to convert that into standardized instruction sets and then show you guys how that runs over and over and over again. We're then going to run that a few times to make it perfect, make it very low likelihood of failing. Then we're going to convert that into a loop that works it without us. And then finally, we're also going to convert that into a routine. And I'll show you guys pricing and and stuff like that. A couple of simple rules. Uh, in general, the moment that you find yourself saying the same thing more than once, okay? I would turn it from a prompt into a skill. So, you guys are going to see me do that as we build all of these and get really, really hands-on and practical rather than you having to do the same thing over and over and over again, like saying act as an expert social media marketer and generate five LinkedIn post ideas about AI automation. You know, we're just going to save that as a skill and then just, I don't know, type ad batch or something like that and then do it. But um in general, you can also just do this like across the stack. Anytime that you find yourself asking AI to do something more than once uh and if it is like virtually the exact same ask, you should at least expend a tiny bit of time and effort to see if it is even turnable into a skill because you know not all things are turnable into skills. Um some things do require a human being in the driver's seat. I mean if they didn't, thank god we'd be essentially useless tomorrow. Uh so the idea is what you want to do is attempt to turn everything that you do often into a skill. see if it passes that, you know, totally autonomous barrier or not threshold. If it does, now it's a skill. It doesn't really concern you. You just run it. And then if not, you know, you're still in the driver's seat. In this way, you can very quickly and easily determine all of the tasks that you yourself are not necessary for in the business or in your marketing role and then ascend up through the ranking of abstraction and leverage and get to the point where, you know, you're overseeing a fleet of agents that do a bunch of economically valuable work for you as opposed to actually having to sit down and do everything yourself. Okay, so hopefully you guys are as excited as I am. Um, this is just a final review of the concepts. Prompts are triggered by you. Skills are triggered by you. Loops are a timer on your computer. And routines are on the cloud. Uh, prompts run when you type. Skills run when you press run. Loops run while your laptop is on. And routines work regardless of whether or not your laptop is on. Uh, prompts are great for quick experimentation and building things out. skills are great for repeat tasks that you still need to be in the loop for. Uh, speaking of loops, loops are best for monitoring things that automatically scrape a resource and stuff like that. And then routines are best for daily production. Um, and I think we've now done more than enough sort of explaining about these concepts, we can actually go build something. So, I'm going to head back up here and then just mark that puppy as done. And now we can build some actual creatives with Claude code. Okay. So, how are we actually going to put this creative generator together? Well, the first thing I want to dispel you of is the notion that you can just say, "Make me some great ads," and then it'll automatically work. Um, you need to be a lot clearer about what it is that you want the model to do. You also need to be a lot clearer about how you want the model to do things. Like, if you just say, "Make me great ads," you'll see that the model will instinctively just try asking you a bunch of questions to narrow down what it is that you want to do. Um, but that's not really enough. even if you answered all these questions, it take you on a wild goose chase and it probably wouldn't get anywhere despite the fact that it sounds like it knows what it's doing. You know, it really doesn't. So, my recommendation is you need a process that allows you to create ads already. Uh, and ideally, you would already have a process, right? Like you're not trying to come up with a new process today. What we are doing is we are taking a pre-existing process and then we are turning it into or we are basically process automating it. And sometimes we'll have to shift a few of the steps in a process in order to make it more amendable to automation. like we'll need to provide some sort of input data and so on and so forth. But um in general uh you know don't come to AI without a process. Try and sit down and think about the process yourself. Actually like whiteboard the process cuz if AI just picks the process for you um not only is it picking the process itself, it's also carrying out that process and then maybe it's even evaluating the results of that process. What you're doing is you're multiplying probabilities. And in general, if you multiply probabilities where somebody else is in control of the quality of the output, the end result goes way down. Um, just to, you know, demonstrate for you guys what I mean by that. You know, if I go back to, um, my little drawing pipeline here, if I had a couple of processes that were 0.8 aka, you know, 80% likely to work. Let's say I had three steps in my pipeline. Okay, that's 0.8 time 0.8 8 * 0.8. Um, let's say we had, you know, step one, step two, step three. Sure, the probability that step one resolves correctly might be 0.8. The probability that step two resolves correctly might be 0.8. And the probability that step three resolves correctly might be 0.8. But if you do the math on all of these, okay, the total result is not 0.8. the total result is 0.5 or basically 51.2% success rate. So what you want to do is you basically want to minimize the total number of steps involved in the creation of a good prompt, a good skill or a good process. And the way you do that is, you know, rather than have AI come up with the process for you, then rather have AI actually maybe judge the quality of the outputs for you. You want to do both of these yourself. All you want is for AI to do the thing in the middle, which is actually like carry out the process. And in that way, you can go from like a 51.2% success rate, maybe up to an 80% success rate. Okay. Also worth noting, you're probably not going to achieve 100% success rate with any sort of AI agent process, at least not of as of the time of this recording. Um, really, the way that AI works is it allows you to take a lot more shots at the net in any process, and then you can apply your own human intellect to just picking a bunch of the correct shots, if that makes sense. So, for instance, with our ad generator, what we're going to do is we're not going to aim to like make this thing just pop out perfect ads every single time. What we're going to do is we're going to have it generate dozens, hundreds, thousands of ads, okay? And then all you're going to do is you're just going to review them and then run them. And in that way, uh we're going to be able to generate a lot more top offunnel ads, which will alleviate the creative bottleneck, assuming that that is the bottleneck. So, anyway, this is the process right here that we're going to be um going through. We're going to save a bunch of high performing ad formats as templates. Then we're going to feed in a variable. So a niche, some sort of offer, some sort of angle, whatever it is for whatever product. I'll just come up with a hypothetical one. Claude will generate a bunch of different combinations of niche times ad format, offer time ad format, angle time ad format. And then we're just going to review, pick, and ship. Um, staying in the loop, uh, basically all the way up until the end where the taste matters. But actually before we even get there, I I hope you guys know just based off of that bottleneck thinking, um the only situation in which this would make sense to apply to a business is if creative is your bottleneck. Like a lot of companies are big on ideas and they also have the means to distribute those ideas via paid or organic. They just can't actually make the ads themselves. So this is this is the situation in which that would make sense. If your company has lots of ideas, if it has lots of distribution, but it doesn't have a lot of creative, um you could actually meaningfully improve the business significantly. um you know so if you're currently bottlenecked on designing and stuff like that like this the system will genuinely improve things but if you already have the ability to uh I don't know like make a bunch of ads or maybe you're really short on ideas or maybe you're really short on distribution you having the ability to create more ads won't necessarily improve things really all that much. Okay, but let's carry out this process. So this is something I sat down and I thought a little bit about because obviously I wanted to spend our time effectively. I didn't want to just like do a bunch of whiteboarding on ad processes. A lot of people have way better ad formats um and and ad systems than I do. Uh and I'm not like a professional, you know, advertiser by
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0181",
+  "excerpt": "invoices and stuff like that is simply because we haven't had the manpower to do that and provide a good experience. But what I really like about cloud code and AI is that it allows us the ability to produce the manpower to give every single person that works with our business a customized experience. They'll have customized creative, customized copy, customized outreach."
+ },
+ {
+  "local_id": "EV-0182",
+  "excerpt": "Their speed to lead will look really customized. We'll we'll customize, you know, information by doing research automatically on people to enrich, you know, fields in our newsletter databases will u customize follow-ups. Everything will be super super unique and and also very personalized. Before we actually build things, you need to understand bottleneck thinking, just sort of"
+ },
+ {
+  "local_id": "EV-0183",
+  "excerpt": "constraintbased thinking. And this is quite important in marketing because what you'll find is a lot of the companies that you work with or maybe your own company um they have a lot of one of the things that we talked about. Okay? Maybe they have a lot of creative, maybe they have a lot of capacity around the follow-up end, but you'll find that there are certain parts of their funnel"
+ },
+ {
+  "local_id": "EV-0184",
+  "excerpt": "that just really suck. And the way that bottlenecks and pipelines work are the entire operation is always constrained by the narrowest step of that chain uh or like the weakest link in the chain is another way of thinking about it as well. The classic example is a factory. And for those of you guys that have played those like I don't know factorial games or whatever um you'll intuitively"
+ },
+ {
+  "local_id": "EV-0185",
+  "excerpt": "understand this but let's say I have a factory and the way it works is every day I get 100 units of some raw material. I don't know let's say it's a rock or something like that. And now this enters my big factory. Okay. And this is what my factory looks like. [sighs and gasps] And basically what happens is you know what we have to do every day is we have to put this raw"
+ },
+ {
+  "local_id": "EV-0186",
+  "excerpt": "good through two steps. We have step A and step A has a capacity of 100 units per day and step B has a capacity of 10 units per day. How many units in one day can we get through this pipeline? How many units can we get through this factory? Well, if we start with 100 units on the left side, okay, and then we pass it through"
+ },
+ {
+  "local_id": "EV-0187",
+  "excerpt": "A, A has a capacity of 100 units per day. So, what that means is the intermediate between, you know, A and B, like we'll we'll generate 100 units. That's fine. You know, we've made it past the first step. You'll see B only has 10 units per day, which means, you know, despite the fact that we're feeding in 100 units, we can't get all of them. Um what we can do is we can"
+ },
+ {
+  "local_id": "EV-0188",
+  "excerpt": "transform 10 units per day. What that means is what is the sum total daily output of the factory? It's 10 units per day. You know basically the entire factory can only work as quickly as the weakest step in their process. Now if I give you an mission to improve the total capacity of this product you know in total number of units generated"
+ },
+ {
+  "local_id": "EV-0189",
+  "excerpt": "per day um you know and then I say hey like which step would you improve in order to increase the total output of the factory would you improve step A or would you improve step B you know let's say I allow you to double any of these well if you doubled A you'd be at 200 units per day what would the total capacity of the factory now be well you wouldn't actually have changed anything"
+ },
+ {
+  "local_id": "EV-0190",
+  "excerpt": "because the bottle neck the thing that all other steps are sub subservient to is still 10 units per day. However, if you changed B from 10 to 20 units per day, then the total output of the factory would go up. Okay, so anyway, this is just a very simple and straightforward um analogy hopefully that allows you to think about how to optimize a marketing process. The"
+ },
+ {
+  "local_id": "EV-0191",
+  "excerpt": "reality is, you know, we have a lot of processes in our business that are very similar to what I just talked about. And in this hypothetical example, what we have is we have um you know a lot of capacity at the creative step. We have a lot of capacity at the lead step, but we don't have a lot of capacity the booking step. So this is sort of our you know uh example that is analogous to 10 units"
+ },
+ {
+  "local_id": "EV-0192",
+  "excerpt": "per day. It doesn't really matter if we improve our creative in this example. Doesn't really matter if we improve our follow-ups or the total number of leads we have. you know, none of that's going to matter because the pipeline, the narrowest part of our whole business is this booking stuff. So, what that means, too, is it's not bad. It's actually quite freeing. Um, we can spend zero"
+ },
+ {
+  "local_id": "EV-0193",
+  "excerpt": "work on creative leads or following up at this point. If we just improve our booking by a tiny little bit, our entire business will improve by that same multiple. For instance, if we can move it from 10 units a day of capacity to 20 units a day of capacity, what we've done is we've effectively doubled our business. Okay? Then we do it 30. you know, maybe we'll triple our business"
+ },
+ {
+  "local_id": "EV-0194",
+  "excerpt": "and so on. And so I I just bring you guys this analogy because I find a lot of the time people want to rush to automate literally everything that they can in a business. And despite the fact that that sounds nice and it's sexy, you'll make way more money for yourself or for the companies that you work with, if you spend a little bit of time trying to figure out what the bottleneck is and"
+ },
+ {
+  "local_id": "EV-0195",
+  "excerpt": "then building systems that alleviate that bottleneck versus just trying to do everything everywhere all at once. So all the systems that I'm going to show you from now on, I would like you to think of as solutions to bottlenecks. But don't just throw these systems at the companies that you work with because that isn't necessarily going to do anything unless that is actually the"
+ },
+ {
+  "local_id": "EV-0196",
+  "excerpt": "current constraining step. Like if creative for instance was a very narrow bottleneck in this instance, you know, if it looked maybe something more like this, right? Um and it was a lot more narrow, then widening it with the creative system that I'll show you guys in a minute would make sense. You know, if booking was really the bottleneck as mentioned here, then widening it,"
+ },
+ {
+  "local_id": "EV-0197",
+  "excerpt": "widening it with a booking system and doing more speed to lead, that would make sense. But if you guys are already really really good across the stack and everything that you guys are attempting to process automate is already sort of not the bottleneck in a process, you're not actually going to see uh much monetary return. Okay, so that takes us back to the five marketing functions"
+ },
+ {
+  "local_id": "EV-0198",
+  "excerpt": "we'll be automating today and the framework to do it. Why don't we now talk about how to prompt versus build skills versus schedule loops versus create routines? And once we're done with this, we can actually start the building of our cloud code systems. So, a simple and easy way for you to think about how we are going to progress through this course is for all of the"
+ },
+ {
+  "local_id": "EV-0199",
+  "excerpt": "systems that I'm going to be building with you guys, we're going to start them very simply as prompts. Now, prompts are sort of the first step in the automation pipeline. What they are is it's kind of like uh an old school Flintstones car where you know you would pick the car up and then in Flintstones they would sort of run with their feet because they supposedly hadn't invented wheels yet."
+ },
+ {
+  "local_id": "EV-0200",
+  "excerpt": "It is manual every single time that you do the process you need to be in the driver's seat actually steering it and asking the AI to do the next step and getting the AI to you know do things in sort of a self-directed manner. And as a result, it's also quite slow. But obviously, I mean, if it's the first time you've done a process, how else are you going to do it? And so when we build"
+ },
+ {
+  "local_id": "EV-0201",
+  "excerpt": "all of our automations in our course, we're going to do them primarily through prompting to start. But after a while, obviously, business processes tend to be quite similar. We tend to just do the same thing over and over and over again, right? That's kind of how business works. We find a hack in the market that pays us more money than the work and money that went into it. And then we"
+ },
+ {
+  "local_id": "EV-0202",
+  "excerpt": "just repeat it over and over and over again. So we'll transform our prompts to the next stage which are skills. Now you can basically think about skills as just a saved and much more efficient instruction set that you can reuse. And so we showed you guys how to do that earlier through slash commands, right? There was that morning skill. Well, you can get really really granular with"
+ },
+ {
+  "local_id": "EV-0203",
+  "excerpt": "skills. And once you have a big set of skills, you can also just run those skills as a meta skill. uh and in that way chain together you know a process that might have previously taken many many man-h hours into one. So for example I have a bunch of skills that manage my YouTube channel and a lot of people wonder how I'm capable of self-managing such a large output. Well"
+ },
+ {
+  "local_id": "EV-0204",
+  "excerpt": "the reason why I can is because I have skills that manage everything for me now from the generation of title candidates to the generation of thumbnails to the generation of uh you know descriptions to the actual publishing of the content the selection of the keywords. It automatically adds things like uh end screen cards and so on and so forth. You know, this is stuff that previously"
+ },
+ {
+  "local_id": "EV-0205",
+  "excerpt": "every time I wanted to publish or record a video, I would have had to, you know, sit down and probably spend an extra hour or two uh doing. Well, now I I don't need to do any of that at all. And once I built all of those granular indivi individual skills, I then created master skills that just ran all of them in sequence, sort of one skill after the other, skill after the other skill, and"
+ },
+ {
+  "local_id": "EV-0206",
+  "excerpt": "in that way chained together small tasks, turned them into big ones, and eventually replaced entire roles. Okay. Now after the skills which are themselves quite powerful, we are still technically constrained by you running the skill. And so that takes us to the next step which is the loop. Now what a loop is is it's basically a skill except it's a skill that runs on its own"
+ },
+ {
+  "local_id": "EV-0207",
+  "excerpt": "without your involvement. And so in the example of, you know, that big like meta um skill that I talked about that like let's say manages my YouTube channel, you can imagine how me having to run the skill at the end of every big publishing session or whatever is kind of a pain in the butt, right? What if instead I just set a loop that automatically ran the skill on my computer once every day? And"
+ },
+ {
+  "local_id": "EV-0208",
+  "excerpt": "maybe, you know, my deadline was 12:00, so I just had it run every day at 12:00. Well, in that way, I'm no longer really in the driver's seat. What I've done is I've prompted built up a saved instruction set and now I have a scheduleuler that's just running that instruction set maybe on a set of resources. You could see that with like the morning brief idea, right? You could"
+ },
+ {
+  "local_id": "EV-0209",
+  "excerpt": "just set the morning brief to run completely autonomously without you maybe at like 5:00 a.m. every morning or maybe you know you're doing some sort of marketing role and you have to scrape a bunch of um competitor ads. Well, you can actually set a loop to scrape the competitor ads every morning at like 5:00 a.m. before you get into the office or before you start working on your own"
+ },
+ {
+  "local_id": "EV-0210",
+  "excerpt": "business. And that way, the second that you show up, you will have a list of all of the competitor ads. All you need to do logically is just figure out, okay, which ones am I going to try and duplicate and swoop. You could build loops like this across virtually every part of your marketing stack. And I will show you guys how to do so. But obviously, the first step here is you"
+ },
+ {
+  "local_id": "EV-0211",
+  "excerpt": "need you need the skill. And in order to build the skill, you need the prompt. Okay? And then once you are done with the loop, sort of takes us to the last step, which is the routine. Now, loops are great. The only issue with loops is that they need to be run on your computer. And so that that decreases your ability to share the loops with other people in your organization. And"
+ },
+ {
+  "local_id": "EV-0212",
+  "excerpt": "it also means that the loops are kind of brittle. If something changes in your computer, if maybe you change your I don't know login or whatever, um you change the plugins that your clot has access to your skills and MCP servers and whatnot, the loops can break and they cannot work. But if you really want to like expand things and make them you know institutional and actually add"
+ },
+ {
+  "local_id": "EV-0213",
+  "excerpt": "things to the organization not just your own work space uh you need to take them out of your computer and then put them on somebody else's computer. So if you guys remember we covered routines earlier and uh you know like the difference between local and cloud environments well routines just run in cloud environments and the idea is you will pay you know anthropic or another"
+ },
+ {
+  "local_id": "EV-0214",
+  "excerpt": "cloud provider some amount of money usually very little to be clear. I mean, we're just spending money on tokens at this point. And then it will do the task and then it will output some deliverable, which is, you know, a lot more money. And so, maybe this is the simplest ROI of your life. You spend, you know, $1 in tokens, then you get the equivalent in deliverables of um, I"
+ },
+ {
+  "local_id": "EV-0215",
+  "excerpt": "don't know, let's just say like $100 or something like that output. Um, it is entirely self-managed. Uh, you don't have to touch anything on it. It just occurs without your involvement. And so this is eventually where we are going to go with all of our systems to be clear. Um although you do need some sort of um input to that like a schedule, API, web hook, trigger, whatever the heck you"
+ },
+ {
+  "local_id": "EV-0216",
+  "excerpt": "want. Um but I'm just going to be approaching every single one of our steps through this four-step pipeline. So you guys are going to see that in our very first u automation, which is going to be using Cloud Code to create ads essentially wholesale. Uh, we're going to start by building out a step-by-step prompt where I walk Claude manually through a process to go and do what I"
+ },
+ {
+  "local_id": "EV-0217",
+  "excerpt": "want to do. I'm then going to convert that into standardized instruction sets and then show you guys how that runs over and over and over again. We're then going to run that a few times to make it perfect, make it very low likelihood of failing. Then we're going to convert that into a loop that works it without us. And then finally, we're also going to convert that into a routine. And I'll"
+ },
+ {
+  "local_id": "EV-0218",
+  "excerpt": "show you guys pricing and and stuff like that. A couple of simple rules. Uh, in general, the moment that you find yourself saying the same thing more than once, okay? I would turn it from a prompt into a skill. So, you guys are going to see me do that as we build all of these and get really, really hands-on and practical rather than you having to do the same thing over and over and over"
+ },
+ {
+  "local_id": "EV-0219",
+  "excerpt": "again, like saying act as an expert social media marketer and generate five LinkedIn post ideas about AI automation. You know, we're just going to save that as a skill and then just, I don't know, type ad batch or something like that and then do it. But um in general, you can also just do this like across the stack. Anytime that you find yourself asking AI to do something more than once uh and if"
+ },
+ {
+  "local_id": "EV-0220",
+  "excerpt": "it is like virtually the exact same ask, you should at least expend a tiny bit of time and effort to see if it is even turnable into a skill because you know not all things are turnable into skills. Um some things do require a human being in the driver's seat. I mean if they didn't, thank god we'd be essentially useless tomorrow. Uh so the idea is what you want to do is attempt to turn"
+ },
+ {
+  "local_id": "EV-0221",
+  "excerpt": "everything that you do often into a skill. see if it passes that, you know, totally autonomous barrier or not threshold. If it does, now it's a skill. It doesn't really concern you. You just run it. And then if not, you know, you're still in the driver's seat. In this way, you can very quickly and easily determine all of the tasks that you yourself are not necessary for in"
+ },
+ {
+  "local_id": "EV-0222",
+  "excerpt": "the business or in your marketing role and then ascend up through the ranking of abstraction and leverage and get to the point where, you know, you're overseeing a fleet of agents that do a bunch of economically valuable work for you as opposed to actually having to sit down and do everything yourself. Okay, so hopefully you guys are as excited as I am. Um, this is just a final review of"
+ },
+ {
+  "local_id": "EV-0223",
+  "excerpt": "the concepts. Prompts are triggered by you. Skills are triggered by you. Loops are a timer on your computer. And routines are on the cloud. Uh, prompts run when you type. Skills run when you press run. Loops run while your laptop is on. And routines work regardless of whether or not your laptop is on. Uh, prompts are great for quick experimentation and building things out."
+ },
+ {
+  "local_id": "EV-0224",
+  "excerpt": "skills are great for repeat tasks that you still need to be in the loop for. Uh, speaking of loops, loops are best for monitoring things that automatically scrape a resource and stuff like that. And then routines are best for daily production. Um, and I think we've now done more than enough sort of explaining about these concepts, we can actually go build something. So, I'm going to head"
+ },
+ {
+  "local_id": "EV-0225",
+  "excerpt": "back up here and then just mark that puppy as done. And now we can build some actual creatives with Claude code. Okay. So, how are we actually going to put this creative generator together? Well, the first thing I want to dispel you of is the notion that you can just say, \"Make me some great ads,\" and then it'll automatically work. Um, you need to be a lot clearer about what it is that you"
+ },
+ {
+  "local_id": "EV-0226",
+  "excerpt": "want the model to do. You also need to be a lot clearer about how you want the model to do things. Like, if you just say, \"Make me great ads,\" you'll see that the model will instinctively just try asking you a bunch of questions to narrow down what it is that you want to do. Um, but that's not really enough. even if you answered all these questions, it take you on a wild goose"
+ },
+ {
+  "local_id": "EV-0227",
+  "excerpt": "chase and it probably wouldn't get anywhere despite the fact that it sounds like it knows what it's doing. You know, it really doesn't. So, my recommendation is you need a process that allows you to create ads already. Uh, and ideally, you would already have a process, right? Like you're not trying to come up with a new process today. What we are doing is we are taking a pre-existing process and"
+ },
+ {
+  "local_id": "EV-0228",
+  "excerpt": "then we are turning it into or we are basically process automating it. And sometimes we'll have to shift a few of the steps in a process in order to make it more amendable to automation. like we'll need to provide some sort of input data and so on and so forth. But um in general uh you know don't come to AI without a process. Try and sit down and think about the process yourself."
+ },
+ {
+  "local_id": "EV-0229",
+  "excerpt": "Actually like whiteboard the process cuz if AI just picks the process for you um not only is it picking the process itself, it's also carrying out that process and then maybe it's even evaluating the results of that process. What you're doing is you're multiplying probabilities. And in general, if you multiply probabilities where somebody else is in control of the quality of the"
+ },
+ {
+  "local_id": "EV-0230",
+  "excerpt": "output, the end result goes way down. Um, just to, you know, demonstrate for you guys what I mean by that. You know, if I go back to, um, my little drawing pipeline here, if I had a couple of processes that were 0.8 aka, you know, 80% likely to work. Let's say I had three steps in my pipeline. Okay, that's 0.8 time 0.8 8 * 0.8."
+ },
+ {
+  "local_id": "EV-0231",
+  "excerpt": "Um, let's say we had, you know, step one, step two, step three. Sure, the probability that step one resolves correctly might be 0.8. The probability that step two resolves correctly might be 0.8. And the probability that step three resolves correctly might be 0.8. But if you do the math on all of these, okay, the total result is not 0.8. the total result is 0.5"
+ },
+ {
+  "local_id": "EV-0232",
+  "excerpt": "or basically 51.2% success rate. So what you want to do is you basically want to minimize the total number of steps involved in the creation of a good prompt, a good skill or a good process. And the way you do that is, you know, rather than have AI come up with the process for you, then rather have AI actually maybe judge the quality of the outputs for you. You want to do both of"
+ },
+ {
+  "local_id": "EV-0233",
+  "excerpt": "these yourself. All you want is for AI to do the thing in the middle, which is actually like carry out the process. And in that way, you can go from like a 51.2% success rate, maybe up to an 80% success rate. Okay. Also worth noting, you're probably not going to achieve 100% success rate with any sort of AI agent process, at least not of as of the time of this recording. Um, really, the"
+ },
+ {
+  "local_id": "EV-0234",
+  "excerpt": "way that AI works is it allows you to take a lot more shots at the net in any process, and then you can apply your own human intellect to just picking a bunch of the correct shots, if that makes sense. So, for instance, with our ad generator, what we're going to do is we're not going to aim to like make this thing just pop out perfect ads every single time. What we're going to do is"
+ },
+ {
+  "local_id": "EV-0235",
+  "excerpt": "we're going to have it generate dozens, hundreds, thousands of ads, okay? And then all you're going to do is you're just going to review them and then run them. And in that way, uh we're going to be able to generate a lot more top offunnel ads, which will alleviate the creative bottleneck, assuming that that is the bottleneck. So, anyway, this is the process right here that we're going"
+ },
+ {
+  "local_id": "EV-0236",
+  "excerpt": "to be um going through. We're going to save a bunch of high performing ad formats as templates. Then we're going to feed in a variable. So a niche, some sort of offer, some sort of angle, whatever it is for whatever product. I'll just come up with a hypothetical one. Claude will generate a bunch of different combinations of niche times ad format, offer time ad format, angle time"
+ },
+ {
+  "local_id": "EV-0237",
+  "excerpt": "ad format. And then we're just going to review, pick, and ship. Um, staying in the loop, uh, basically all the way up until the end where the taste matters. But actually before we even get there, I I hope you guys know just based off of that bottleneck thinking, um the only situation in which this would make sense to apply to a business is if creative is your bottleneck. Like a lot of companies"
+ },
+ {
+  "local_id": "EV-0238",
+  "excerpt": "are big on ideas and they also have the means to distribute those ideas via paid or organic. They just can't actually make the ads themselves. So this is this is the situation in which that would make sense. If your company has lots of ideas, if it has lots of distribution, but it doesn't have a lot of creative, um you could actually meaningfully improve the business significantly. um"
+ },
+ {
+  "local_id": "EV-0239",
+  "excerpt": "you know so if you're currently bottlenecked on designing and stuff like that like this the system will genuinely improve things but if you already have the ability to uh I don't know like make a bunch of ads or maybe you're really short on ideas or maybe you're really short on distribution you having the ability to create more ads won't necessarily improve things really all"
+ },
+ {
+  "local_id": "EV-0240",
+  "excerpt": "that much. Okay, but let's carry out this process. So this is something I sat down and I thought a little bit about because obviously I wanted to spend our time effectively. I didn't want to just like do a bunch of whiteboarding on ad processes. A lot of people have way better ad formats um and and ad systems than I do. Uh and I'm not like a professional, you know, advertiser by"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

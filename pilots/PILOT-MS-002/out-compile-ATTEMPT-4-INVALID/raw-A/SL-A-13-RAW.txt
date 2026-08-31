@@ -1,0 +1,1255 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-13",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "Right now, lowercase, very casual language tends to do well in cold email, because people are used to AI spam where the wording, terminology and vocabulary is perfect, with lots of M dashes and perfect grammar; when they see text that is intentionally or unintentionally not perfect they assume it is from a person and actually read it.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0723",
+        "EV-0724",
+        "EV-0725"
+      ],
+      "qualifiers": {
+        "scope": "cold email copy",
+        "condition": "current trends at time of recording; speaker notes trends may change",
+        "platform": null,
+        "stage": "top of funnel / personalized copy",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "The 'their thing in common / my thing in common' data is very valuable; you can reference whatever you want (e.g. they use Google Ads, DoubleClick, they are in Chicago and you spent time in Chicago), but make it relevant and make it real.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0725",
+        "EV-0726"
+      ],
+      "qualifiers": {
+        "scope": "personalization of cold email",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "Give the AI a big blurb about all the things about your life and let it do the matching between you and the prospect.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0726",
+        "EV-0735",
+        "EV-0736"
+      ],
+      "qualifiers": {
+        "scope": "generating commonality-based personalization",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Fuzzy (AI-based) variables are anything inside double curly brackets; they naturally weave into the context of the email so they don't seem like variables, they seem like real human personalized segments.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0727",
+        "EV-0728"
+      ],
+      "qualifiers": {
+        "scope": "cold email templates with AI variables",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "When testing with hypothetical demo prospects, tell the model they are hypothetical demo prospects so it does not waste effort researching them, because sometimes it does additional research on them too.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0730",
+        "EV-0731"
+      ],
+      "qualifiers": {
+        "scope": "testing the fuzzy variable concept with demo leads",
+        "condition": "leads are hypothetical/demo",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "The numeric claims in the cold email template are the kind of thing that gets outbound accounts suspended and can cross into deceptive claims territory if the underlying numbers aren't real or substantiated; you can't just pull numbers out of thin air and need actual case studies and proven growth.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0731",
+        "EV-0732"
+      ],
+      "qualifiers": {
+        "scope": "numeric performance claims in outbound email copy",
+        "condition": "if underlying numbers are not real or substantiated",
+        "platform": "outbound email accounts",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "You would be sending this personalized copy to people, but not publishing it on the internet, which the speaker considers a little bit different.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0736",
+        "EV-0737"
+      ],
+      "qualifiers": {
+        "scope": "distribution of personalized outbound copy",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "The enriched variables must be insertable directly into the email via merge variables and be 100% readable and contextually relevant.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0738"
+      ],
+      "qualifiers": {
+        "scope": "Google Sheet columns used as email merge variables",
+        "condition": null,
+        "platform": "Google Sheets",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "The skill's input is a lead list and its output is a totally enriched lead list containing four additional customization columns.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0740"
+      ],
+      "qualifiers": {
+        "scope": "lead enrichment skill",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "The CSV had too many fields which made it a pain to upload, so the speaker asked to cut it down to only the four customization fields plus first name, last name, email address, company name, company size, and so on, producing a trimmed version that is shorter and higher quality.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0741",
+        "EV-0742",
+        "EV-0743",
+        "EV-0744"
+      ],
+      "qualifiers": {
+        "scope": "lead list CSV fields",
+        "condition": null,
+        "platform": "CSV / Google Sheets",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "An input/output skill that only enriches a lead list you provide was not sufficient for the speaker; he extended it so the skill also scrapes the leads to begin with, bypassing the lead list entirely.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0745",
+        "EV-0746",
+        "EV-0749"
+      ],
+      "qualifiers": {
+        "scope": "speaker's personal preference for the skill design",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "To connect Apify to Claude, open the scraper's MCP configurator to get a URL, copy that URL, go to Claude Code settings under connectors, create a new custom connector called Apify and paste the link in; this logs into Apify and Claude can then see the MCP tools.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0751",
+        "EV-0752",
+        "EV-0753"
+      ],
+      "qualifiers": {
+        "scope": "connecting Apify scraper to Claude",
+        "condition": "as long as you have the MCP folder set up",
+        "platform": "Apify + Claude Code connectors",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "The speaker asked for the scrape test to start with 100 leads because he believes that is the minimum, and to enrich 10 of them to check whether it worked.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0750",
+        "EV-0751"
+      ],
+      "qualifiers": {
+        "scope": "testing the bundled scrape+enrich skill on a small subset",
+        "condition": null,
+        "platform": "Apify",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "It's always a good idea to think about the way that you personally do the task before structuring it for AI; the speaker articulated his own manual SOP and turned it into the skill.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0754",
+        "EV-0755",
+        "EV-0757",
+        "EV-0758"
+      ],
+      "qualifiers": {
+        "scope": "designing a skill from a manual process",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "The speaker's manual lead-scraping SOP is: create and set filters himself, scrape a list, check the list to ensure the leads match his ICP, and if fewer than 75% of the leads match (more than 25% are bad), redo it repeatedly.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0755",
+        "EV-0756"
+      ],
+      "qualifiers": {
+        "scope": "scraping leads for marketing purposes",
+        "condition": "less than 75% of leads match ICP",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "The instruction given to Claude was: scrape a list of 100, then evaluate 20 of those 100 leads for ICP match; if more than 15 out of 20 are in the ICP it's good, if less than 15 out of 20, go back and redo it.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0757"
+      ],
+      "qualifiers": {
+        "scope": "ICP quality gate inside the scraping skill",
+        "condition": "fewer than 15 of 20 sampled leads match ICP",
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "The skill ran four or five times redoing itself autonomously: first 9 out of 20, second 9 out of 20, third 15 out of 20, and the fourth 19 out of 20, entirely on its own after the speaker ran the skill once.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0758",
+        "EV-0759"
+      ],
+      "qualifiers": {
+        "scope": "observed run of the scraping skill",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "Instantly is a tool for sending emails for campaigns to a cold audience (people who have never heard of you), which differs from warm audience campaigns typically managed via tools like Mailchimp or Kit.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0760",
+        "EV-0761"
+      ],
+      "qualifiers": {
+        "scope": "cold vs warm email tooling",
+        "condition": null,
+        "platform": "Instantly / Mailchimp / Kit",
+        "stage": null,
+        "audience": "cold audience vs warm audience"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "In Instantly you can preview the filled variables for imported leads; the speaker used the preview to spot and fix defects such as an extra '2' in the campaign copy and to judge which generated lines sound AI-like.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0763",
+        "EV-0764",
+        "EV-0765",
+        "EV-0766"
+      ],
+      "qualifiers": {
+        "scope": "QA of merged variables before sending",
+        "condition": null,
+        "platform": "Instantly",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "You are never going to be able to fully escape some outputs sounding AI-generated.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0765"
+      ],
+      "qualifiers": {
+        "scope": "AI-generated personalization lines",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "Turning this skill into a loop/routine only makes sense if you knew every single day you were going to make a new campaign and needed leads available daily; otherwise you can just run it on demand — an example of bottleneck thinking.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0766",
+        "EV-0767",
+        "EV-0768"
+      ],
+      "qualifiers": {
+        "scope": "deciding whether to schedule a skill as a recurring routine",
+        "condition": "only if daily campaigns/leads are actually needed",
+        "platform": "Claude routines",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "To create a Claude routine you just tell Claude to turn it into a routine, specify the launch time (e.g. 5:59 a.m. every morning) and provide the Apify connector and everything else; the speaker's 'Daily Clervo Legion' routine runs every day at 5:59 a.m. PDT as a demonstration.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0768",
+        "EV-0769"
+      ],
+      "qualifiers": {
+        "scope": "converting a skill into a scheduled Claude routine",
+        "condition": null,
+        "platform": "Claude routines + Apify connector",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "Most companies that run advertisements do not treat their leads with the time, energy and respect needed, so they only get a small fraction of their lead spend back; e.g. spending $10,000 a month on leads and receiving $20,000, a 2x ROAS, which is quite poor.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0774",
+        "EV-0776",
+        "EV-0777"
+      ],
+      "qualifiers": {
+        "scope": "middle-of-funnel lead handling in marketing",
+        "condition": null,
+        "platform": null,
+        "stage": "middle of funnel",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "If you treat leads better — respond faster, make it feel more customized and personalized, and give them the best experience possible before they pay you — you can convert the same lead spend into much more revenue.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0777",
+        "EV-0778"
+      ],
+      "qualifiers": {
+        "scope": "lead conversion / speed to lead",
+        "condition": null,
+        "platform": null,
+        "stage": "middle of funnel",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "Once a lead is booked in your calendar you have already paid for them (e.g. a $30 cost per meeting), so you should check in with them immediately, call them ASAP within a few seconds of them filling out your form, send text messages and follow up.",
+      "source_language": "en",
+      "evidence_refs": [
+        "EV-0779",
+        "EV-0780"
+      ],
+      "qualifiers": {
+        "scope": "speed to lead after form fill / booked meeting",
+        "condition": null,
+        "platform": null,
+        "stage": "middle of funnel, appointment booking",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0723",
+        "EV-0724",
+        "EV-0725"
+      ],
+      "claim_temp_refs": [
+        "TC-001"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Use lowercase, casual, imperfect language in cold email",
+        "trigger": "Writing cold email copy",
+        "condition": "Current trend at time of recording; speaker notes trends may change again",
+        "action": "Write in lowercase, very casual language that is not perfectly polished, so recipients read it as written by a person rather than AI spam",
+        "do_not": [
+          "Do not use the perfect wording, terminology, vocabulary, M dashes and perfect grammar characteristic of AI spam"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0725",
+        "EV-0726",
+        "EV-0735",
+        "EV-0736"
+      ],
+      "claim_temp_refs": [
+        "TC-002",
+        "TC-003"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Feed AI a blurb about yourself and let it match commonalities",
+        "trigger": "Generating 'my thing in common / their thing in common' personalization",
+        "condition": null,
+        "action": "Give the AI a big blurb of information about yourself (life experiences, LinkedIn profile, other data) plus the lead data and let it find the similarities; make the commonality relevant and real",
+        "do_not": [
+          "Do not use commonalities that are not relevant or not real"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "A lead list containing data about the prospects"
+        ]
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0730",
+        "EV-0731"
+      ],
+      "claim_temp_refs": [
+        "TC-005"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Declare demo prospects as hypothetical to prevent wasted research",
+        "trigger": "Asking the model to test fuzzy variables on sample leads",
+        "condition": "The leads used are hypothetical demo prospects",
+        "action": "Tell the model the prospects are hypothetical demo prospects and that no amount of research on them will yield benefit, while allowing it to research you if needed",
+        "do_not": [
+          "Do not let the model spend effort doing additional research on demo prospects"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": [
+        "EV-0731",
+        "EV-0732"
+      ],
+      "claim_temp_refs": [
+        "TC-006"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not put numeric performance claims in outbound email copy when the underlying numbers are not real or substantiated",
+          "Do not pull numbers out of thin air"
+        ],
+        "why": "Those numeric claims are the kind of thing that gets outbound accounts suspended and can cross into deceptive claims territory",
+        "conditions": [
+          "Applies when the underlying numbers aren't real or substantiated",
+          "You need to actually have case studies and proven growth to back the claims"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0738"
+      ],
+      "claim_temp_refs": [
+        "TC-008"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Enriched variables must be merge-ready and contextually relevant",
+        "trigger": "Adding AI-generated variable columns to the Google Sheet",
+        "condition": null,
+        "action": "Require that each generated column can be inserted directly into the email via merge variables and be 100% readable and contextually relevant",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "A Google Sheet with the lead rows"
+        ]
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0741",
+        "EV-0742",
+        "EV-0743"
+      ],
+      "claim_temp_refs": [
+        "TC-010"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Trim the CSV to only needed fields",
+        "trigger": "The lead CSV has too many fields making it a pain to upload",
+        "condition": null,
+        "action": "Ask the model to cut the CSV down to the four customization fields plus first name, last name, email address, company name, company size and so on",
+        "do_not": [
+          "Do not keep superfluous fields in the lead list"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0754",
+        "EV-0755",
+        "EV-0757",
+        "EV-0758"
+      ],
+      "claim_temp_refs": [
+        "TC-014"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Articulate your own manual SOP before building the skill",
+        "trigger": "Structuring an automation/skill for a task you already do manually",
+        "condition": null,
+        "action": "Think about how you typically do the task yourself, explain that SOP and workflow to Claude, then turn it into the skill",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0757"
+      ],
+      "claim_temp_refs": [
+        "TC-016"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "ICP sampling quality gate on scraped lead lists",
+        "trigger": "A list of 100 leads has been scraped",
+        "condition": "Sample of 20 out of the 100 leads evaluated for ICP match",
+        "action": "If more than 15 out of 20 sampled leads are in the ICP, accept the list; if less than 15 out of 20, go back and redo the scrape",
+        "do_not": [
+          "Do not accept a list where fewer than 15 of 20 sampled leads match the ICP"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "A defined ICP (ideal customer persona)",
+          "Filters set for the scrape"
+        ]
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0766",
+        "EV-0767",
+        "EV-0768"
+      ],
+      "claim_temp_refs": [
+        "TC-021"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Only convert a skill into a loop/routine when there is a real recurring need (bottleneck thinking)",
+        "trigger": "Considering turning a working skill into a scheduled loop or routine",
+        "condition": "Only makes sense if you know every single day you will make a new campaign and need leads available daily",
+        "action": "Evaluate whether the task is actually a recurring bottleneck; if not, run the skill on demand instead of scheduling it",
+        "do_not": [
+          "Do not turn something into a routine just because you can, when you don't actually need it all the time"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": [
+        "EV-0779",
+        "EV-0780"
+      ],
+      "claim_temp_refs": [
+        "TC-025"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Respond to a paid lead immediately",
+        "trigger": "A lead fills out your form / lands in your calendar after you paid a cost per meeting",
+        "condition": null,
+        "action": "Check in with them immediately, call them ASAP within a few seconds of the form fill, send text messages and follow up",
+        "do_not": [
+          "Do not leave a paid lead unattended after they fill out the form"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      },
+      "defects": [
+        "PRECEDENCE_UNDEFINED"
+      ]
+    },
+    {
+      "temporary_candidate_id": "TX-011",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0727",
+        "EV-0728",
+        "EV-0729",
+        "EV-0730",
+        "EV-0731",
+        "EV-0737",
+        "EV-0738",
+        "EV-0739"
+      ],
+      "claim_temp_refs": [
+        "TC-004",
+        "TC-005",
+        "TC-008"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Add AI fuzzy variables to a cold email template and write them back into the Google Sheet",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Paste the working cold email template",
+            "action": "Copy the cold email template that has been sending and working well and dump it into the chat, explaining that anything in double curly brackets is an AI based variable",
+            "required_inputs": [
+              "Existing cold email template"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0727"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Explain the fuzzy variable goal",
+            "action": "State that the fuzzy variables should naturally weave into the context of the email so they seem like real human personalized segments rather than variables",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0727",
+              "EV-0728"
+            ]
+          },
+          {
+            "order_key": 3,
+            "name": "Grab and paste five leads",
+            "action": "Pick about five leads from the lead list and paste their data in, spacing it out",
+            "required_inputs": [
+              "Example lead list with lead data"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0729",
+              "EV-0730"
+            ]
+          },
+          {
+            "order_key": 4,
+            "name": "Request five email variants and set research boundaries",
+            "action": "Ask for five email variants to review, state that the model already knows what it needs about you (and may research you if needed), and that the prospects are hypothetical demo prospects so no research on them is useful",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0730",
+              "EV-0731"
+            ]
+          },
+          {
+            "order_key": 5,
+            "name": "Review generated variants",
+            "action": "Read the generated emails and check for any additional variables you did not notice, such as the qualified-prospect descriptors",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0733",
+              "EV-0734",
+              "EV-0735"
+            ]
+          },
+          {
+            "order_key": 6,
+            "name": "Point the model at the Google Sheet",
+            "action": "Paste in the Google Sheet and say this is exactly what was wanted but now the sheet must be actively updated with those variables",
+            "required_inputs": [
+              "Google Sheet with the leads"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0737",
+              "EV-0738"
+            ]
+          },
+          {
+            "order_key": 7,
+            "name": "Add and customize columns per row",
+            "action": "Have it add these columns to the Google Sheet and customize them for every row, so the variables can be inserted directly into the email via merge variables and be 100% readable and contextually relevant",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0738",
+              "EV-0739"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "A cold email template already being sent",
+          "A lead list / Google Sheet with lead data"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-012",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0739",
+        "EV-0740",
+        "EV-0741",
+        "EV-0742",
+        "EV-0743",
+        "EV-0744"
+      ],
+      "claim_temp_refs": [
+        "TC-009",
+        "TC-010"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Turn the lead enrichment flow into a skill and trim its output",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Acknowledge the working flow",
+            "action": "After the enrichment flow completes, tell the model the lead enrichment flow was good work",
+            "required_inputs": [
+              "A completed lead enrichment run"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0739",
+              "EV-0740"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Define the skill contract",
+            "action": "Ask to set up a skill where providing a list of leads triggers the entire process automatically: input is a lead list, output is a totally enriched lead list with the four additional columns",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0740"
+            ]
+          },
+          {
+            "order_key": 3,
+            "name": "Request field trimming",
+            "action": "Say the CSV currently has too many fields making it a pain to upload and specify the fields needed: the four customization fields plus first name, last name, email address, company name, company size and so on",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0741",
+              "EV-0742"
+            ]
+          },
+          {
+            "order_key": 4,
+            "name": "Answer the model's clarifying questions",
+            "action": "Walk through the questions it asks, such as which fields (e.g. location fields) to include and what the input format should be (Google Sheets link, CSV or pasted text)",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0742",
+              "EV-0743"
+            ]
+          },
+          {
+            "order_key": 5,
+            "name": "Verify the trimmed output",
+            "action": "Review the trimmed version that now runs via skill, confirming superfluous fields were removed and the remaining columns are my thing in common, their thing in common, paraphrase, company name and prospects with their specific terminology",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0743",
+              "EV-0744"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "A working lead enrichment flow"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-013",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0749",
+        "EV-0750",
+        "EV-0751",
+        "EV-0752",
+        "EV-0753",
+        "EV-0754",
+        "EV-0757"
+      ],
+      "claim_temp_refs": [
+        "TC-011",
+        "TC-012",
+        "TC-013",
+        "TC-016"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Extend the skill to scrape leads via Apify and self-check ICP fit",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Get the Apify MCP URL",
+            "action": "Open the scraper in Apify, go to the MCP configurator and copy the URL it gives you",
+            "required_inputs": [
+              "An Apify account and the chosen scraper"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0751",
+              "EV-0752"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Create the Claude custom connector",
+            "action": "Go back to Claude, open settings under Claude Code connectors, create a new custom connector called Apify and paste the link in so it logs into Apify",
+            "required_inputs": [
+              "The MCP URL"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0752",
+              "EV-0753"
+            ]
+          },
+          {
+            "order_key": 3,
+            "name": "Confirm MCP tools are visible",
+            "action": "Once it says connected, confirm it can see the MCP tools and let it get the inputs for the scraper so it can steer the scraper",
+            "required_inputs": [
+              "MCP folder set up"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0753"
+            ]
+          },
+          {
+            "order_key": 4,
+            "name": "Instruct it to steer Apify and bundle into the skill",
+            "action": "Tell it you do all lead scraping through Apify, that it should steer Apify to scrape the leads and then perform the enrichment flow on them so everything is done in one shot ready for the email campaign, and bundle that into the skill",
+            "required_inputs": [
+              "The existing enrichment skill",
+              "MCP and scraper information"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0749",
+              "EV-0750"
+            ]
+          },
+          {
+            "order_key": 5,
+            "name": "Give target roles",
+            "action": "Give more instructions about the roles to look for, such as founder, CEO, co-founder, owners, co-owners, partners, co-partners",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0754"
+            ]
+          },
+          {
+            "order_key": 6,
+            "name": "Encode the ICP self-check loop",
+            "action": "Instruct it to scrape a list of 100, evaluate 20 of those 100 for ICP match, accept if more than 15 out of 20 are in the ICP, and redo it if less than 15 out of 20",
+            "required_inputs": [
+              "A defined ICP"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0757"
+            ]
+          },
+          {
+            "order_key": 7,
+            "name": "Test on a small subset",
+            "action": "Test on a small subset: scrape 100 leads to start because that is believed to be the minimum, and enrich 10 of them to verify it worked",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0750",
+              "EV-0751"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "Apify account with a lead scraper",
+          "The MCP folder set up",
+          "An existing lead enrichment skill"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-014",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0760",
+        "EV-0761",
+        "EV-0762",
+        "EV-0763",
+        "EV-0764",
+        "EV-0765",
+        "EV-0766"
+      ],
+      "claim_temp_refs": [
+        "TC-018",
+        "TC-019"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Load the enriched list into Instantly and preview before sending",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Set up the campaign sequence",
+            "action": "In Instantly, set up the campaign and put the same copy you assembled manually into the sequence, with the subject line as first name and the variables in the body",
+            "required_inputs": [
+              "The cold email copy with variables"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0762",
+              "EV-0763"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Import the enriched list",
+            "action": "Import the lead list you just generated and enriched and plug it into the campaign",
+            "required_inputs": [
+              "Enriched lead list"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0763"
+            ]
+          },
+          {
+            "order_key": 3,
+            "name": "Preview filled variables",
+            "action": "Use the preview to see the filled variables for individual leads and read the email as the recipient would receive it",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0763",
+              "EV-0764"
+            ]
+          },
+          {
+            "order_key": 4,
+            "name": "Fix defects and re-preview",
+            "action": "Remove artifacts found in the preview, such as an extra '2' in the campaign copy, then preview again and check several other leads for quality",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0764",
+              "EV-0765"
+            ]
+          },
+          {
+            "order_key": 5,
+            "name": "Send",
+            "action": "With the campaign populated, send it",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0766"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "An Instantly account with campaigns",
+          "An enriched lead list"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-015",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0768",
+        "EV-0769"
+      ],
+      "claim_temp_refs": [
+        "TC-022"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Convert the skill into a scheduled Claude routine",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Ask Claude to create the routine",
+            "action": "Tell Claude to turn this into a routine, specify the launch time (e.g. 5:59 a.m. every morning) and supply the Apify connector and everything else it needs",
+            "required_inputs": [
+              "A working skill",
+              "Apify connector"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0768"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Verify the routine",
+            "action": "Check the routine in the routines area, confirming it runs on the intended schedule (e.g. every day at 5:59 a.m. PDT)",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0769"
+            ]
+          }
+        ],
+        "exceptions": [
+          "Speaker states this was done mainly as a demonstration and it does not necessarily make sense to turn this particular skill into a routine"
+        ],
+        "prerequisites": [
+          "An existing working skill"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-016",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": [
+        "EV-0755",
+        "EV-0756"
+      ],
+      "claim_temp_refs": [
+        "TC-015"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Speaker's manual lead scraping SOP",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Create filters",
+            "action": "Create a bunch of filters and set them yourself",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0755"
+            ]
+          },
+          {
+            "order_key": 2,
+            "name": "Scrape a list",
+            "action": "Scrape a list using those filters",
+            "required_inputs": [
+              "The filters"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0755"
+            ]
+          },
+          {
+            "order_key": 3,
+            "name": "Check ICP match",
+            "action": "Check the list to ensure the leads in it match your ICP (ideal customer persona)",
+            "required_inputs": [
+              "A defined ICP"
+            ],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0755",
+              "EV-0756"
+            ]
+          },
+          {
+            "order_key": 4,
+            "name": "Redo if quality is low",
+            "action": "If less than 75% of leads match the ICP (more than 25% are bad), redo the scrape, repeating over and over",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": [
+              "EV-0756"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "A defined ICP"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-017",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": [
+        "EV-0774",
+        "EV-0776",
+        "EV-0777"
+      ],
+      "claim_temp_refs": [
+        "TC-023",
+        "TC-024"
+      ],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not spend heavily on leads and then fail to treat them with the time, energy and respect they need"
+        ],
+        "why": "Most companies running ads do this and only get a small fraction of their lead spend back, e.g. $10,000 spent producing $20,000, a 2x ROAS which is quite poor and means acquisition cost is about 50% of what you make",
+        "conditions": [
+          "Applies to companies running advertisements of any kind, including organic brand-based advertising"
+        ]
+      },
+      "defects": []
+    }
+  ]
+}

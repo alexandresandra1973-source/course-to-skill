@@ -1,0 +1,1135 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-09",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "The presenter uses a platform that combines many models onto one platform so that you only need one API key and it does it all; viewers do not have to use it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0481", "EV-0482"],
+      "qualifiers": {
+        "scope": "the platform the presenter chose to use in this demo",
+        "condition": null,
+        "platform": "higsfield.ai (aggregator platform)",
+        "stage": null,
+        "audience": "viewers of the course"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Claude Code is really good at driving this platform because it has a simple API endpoint structure called a model context protocol (MCP) server.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0483"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code + MCP server of the chosen platform",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "If you don't end up using this platform, you'll probably have to do a little bit more work to get it to work very similarly to what is being shown.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0483"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if not using the presenter's chosen platform",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Video costs more money than photo.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0484"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "To start, you have to make an account: go to higsfield.ai, click sign up, continue with Google, add your email address, and verify that you are a human.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0484", "EV-0485"],
+      "qualifiers": {
+        "scope": "onboarding onto the platform",
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": "account setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "The interface is going to look very different by the time viewers are using it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0485"],
+      "qualifiers": {
+        "scope": "the platform interface",
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "During onboarding the presenter selects UGC videos, one-click presets (as a beginner), and MCP; he notes this is just an onboarding and there are many different ways you could do this.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0486"],
+      "qualifiers": {
+        "scope": "onboarding questionnaire choices",
+        "condition": "if you are maybe a beginner",
+        "platform": "higsfield.ai",
+        "stage": "onboarding",
+        "audience": "beginners"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "You do have to purchase some credits to use the platform.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0487"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "The plan is two things: first generate locally/manually so you understand what is going on under the hood and the parameters you could tweak, and after that do it programmatically via Claude Code using MCP, where Claude can drive the whole thing.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0487", "EV-0488"],
+      "qualifiers": {
+        "scope": "generating high quality UGC",
+        "condition": null,
+        "platform": "higsfield.ai + Claude Code MCP",
+        "stage": "manual first, then automated",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "You can copy over a prompt and basically say 'Hey, install this whole thing' and it'll work fine with no issues.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0488", "EV-0489"],
+      "qualifiers": {
+        "scope": "installing the MCP",
+        "condition": null,
+        "platform": "Claude Code / MCP",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "The video model isn't perfect and every now and then one of the gens will be sort of trash, so you have to keep that in mind (e.g. horses going backwards).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0491"],
+      "qualifiers": {
+        "scope": "video generations",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "You can't just do a UGC product video in one shot and expect it to work really well; you need to vary it and have multiple different shots.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0492"],
+      "qualifiers": {
+        "scope": "creating a UGC video of somebody talking about a product",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "The approach is to feed an image of a product plus an image of an influencer and get the influencer to talk about the product, which is actually multiple steps.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0492", "EV-0493"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "The first step is to go to image (not video) and generate using image models, referencing the previously generated product image and a UGC style influencer found on Pinterest.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0493", "EV-0494"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "higsfield.ai image section; Pinterest as source of influencer reference",
+        "stage": "image generation step",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "Most of the time UGC content features a woman demoing a product, because mathematically they found that when women demo products they do a lot better.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0495"],
+      "qualifiers": {
+        "scope": "UGC images and videos generally",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "Auto size is important because it depends on how you are going to generate your videos; for simplicity the presenter goes 1:1 and assumes everything is generated 1:1.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0496", "EV-0497"],
+      "qualifiers": {
+        "scope": "image generation settings",
+        "condition": "for the purposes of simplicity",
+        "platform": "GPT image 2 on the platform",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "Batch size is the total number of gens created with the two input images.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0497"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "The prompt used is to generate a woman that contains all of the features that the reference woman has but is ultimately different (change her hair a little), and to put her indoors instead of outdoors, because she will be used in a product shoot later.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0497", "EV-0498"],
+      "qualifiers": {
+        "scope": "influencer image generation prompt",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "Generating three options costs 21 credits.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0498", "EV-0499"],
+      "qualifiers": {
+        "scope": "this specific image generation",
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "The workflow is to take the reference woman, put her in a fake indoors environment that was made, and use that now-fake woman to advertise products by turning that into a video; that is a three or four step flow.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0499", "EV-0500"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "The presenter always likes doing this manually at least once, because it's important to understand how it works manually before moving to fully automating it with Claude Code; if you don't know the manual process you often misunderstand the different features and options available.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0500", "EV-0501"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code automation",
+        "stage": "before automating",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "The presenter generated in 2K rather than 1K (1024 pixels) because if you want really high quality input images to be used for video, it's better to do this with a high 2K.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0501"],
+      "qualifiers": {
+        "scope": "input images intended for video generation",
+        "condition": "if you want really high quality input images for video",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "There are several image models to choose from (Higsfield Soul, Higsfield Soul Cinema, Cream 5.0 Pro) and at the time of recording they offer a bunch of free usage on last-gen, cheap-inference models as an advertising play.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0502", "EV-0503"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": "at the time of this recording",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "Generation is not instant because it is quite computationally intensive, using GPT image 2 to generate roughly 2048 x 2048 pixel images.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0503", "EV-0504"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "GPT image 2",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "The chosen generated woman image is used as a reference alongside the product, with a prompt to make the woman hold the product in an environment like a bathroom where it would make sense, being enthusiastic about the product but not overselling it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0505", "EV-0506"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "product shot generation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "Three variations were generated previously to give a bunch of different options for diversity, but the presenter finds he doesn't really need that diversity because it does a pretty good job, so he one-shotted it this time (again at 2K).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0506", "EV-0507"],
+      "qualifiers": {
+        "scope": "batch count for image generation",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "The presenter gives Claude Code the product image and asks it to generate three scripts similar to what a real influencer would say, pretending the influencer is a young woman who found value in the product, roughly 30 seconds long.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0509", "EV-0510", "EV-0511"],
+      "qualifiers": {
+        "scope": "script generation",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "script step",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "The presenter judges the AI-generated script as not really all that good and edits it slightly to produce the final script for the video.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0512", "EV-0513", "EV-0514"],
+      "qualifiers": {
+        "scope": "AI generated ad scripts",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "script review",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "The generated image of the woman holding the product in a bathroom is then turned into a video.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0514", "EV-0515"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "video generation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-030",
+      "text": "There are a variety of video models to choose from and the presenter tests a bunch (C dance 2.0 fast, Cling, Cling Turbo) to see which ones work best.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0515", "EV-0518", "EV-0519"],
+      "qualifiers": {
+        "scope": "video model selection",
+        "condition": null,
+        "platform": "higsfield.ai",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-031",
+      "text": "The video prompt used is 'a woman influencer doing a UGC style ad talking about a product', starting really small.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0516"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "video generation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-032",
+      "text": "If you don't upload media as an element, sometimes it will not actually keep the midnight clay mask in the right place; adding the product as a named element with a description gives the video generation access to the product to use as a prop, and it is added to the prompt box.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0516", "EV-0517", "EV-0518"],
+      "qualifiers": {
+        "scope": "product consistency in generated video",
+        "condition": "if you don't upload media",
+        "platform": "higsfield.ai elements feature",
+        "stage": "video generation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-033",
+      "text": "The presenter turns on sound and generates multiple (e.g. generate 10 with Cling), repeating the same thing with Cling Turbo and C dance 2.0 to test a couple of different approaches.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0518", "EV-0519"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "video generation testing",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-034",
+      "text": "A short generation was made first as a test to make sure audio could actually be heard and didn't seem crazy.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0520"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "initial test",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-035",
+      "text": "You can expect to spend maybe $10 to $20 doing this initial test round across a variety of models, and the whole idea is that you want a reusable pipeline.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0521", "EV-0522"],
+      "qualifiers": {
+        "scope": "initial test round of video model comparison",
+        "condition": null,
+        "platform": null,
+        "stage": "initial testing",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-036",
+      "text": "Video length is a constraint: the presenter maxes out at around 15 seconds, and Gemini Omni Flash is only 10 seconds, so the script needs to be made shorter to fit.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0522", "EV-0523"],
+      "qualifiers": {
+        "scope": "script length vs model duration limit",
+        "condition": null,
+        "platform": "Gemini Omni Flash (10 seconds)",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-037",
+      "text": "The presenter times the working script with a word counter: about 146 characters, and decides on roughly 170 characters, or expressed in words, 27 to about 30 words.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0528", "EV-0529"],
+      "qualifiers": {
+        "scope": "script length target derived from a working generation",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-038",
+      "text": "The skill to be scaffolded takes a product as the initial input, then uses an already chosen influencer to represent that product, then comes up with a bunch of short scripts (around 150 to 200 characters).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0525", "EV-0526"],
+      "qualifiers": {
+        "scope": "skill design",
+        "condition": null,
+        "platform": "Claude Code skill",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-039",
+      "text": "The presenter voice dumps the process into Claude: give an image of a product, use the provided influencer image to generate a starting frame of a woman holding the product in an environment that makes sense, then generate 10 script candidates under about 35 words to fit the time limit, then show the generated product image (with GPT-image-2) and the scripts for verification, after which more steps will be added and turned into a skill.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0529", "EV-0530", "EV-0531"],
+      "qualifiers": {
+        "scope": "instructions given to Claude",
+        "condition": null,
+        "platform": "Claude Code, GPT-image-2",
+        "stage": "automation definition",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-040",
+      "text": "Having verified the process works manually, the next step is to make it work digitally, feeding in the influencer and product images; GPT image 2 can be called using the OpenAI API key which is in the local environment.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0532"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "GPT image 2 / OpenAI API key in local environment",
+        "stage": "automation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-041",
+      "text": "Having verified the process through manual usage, it must also be verified through Claude before scaling.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0533"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude",
+        "stage": "verification before scaling",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-042",
+      "text": "As brainstorming, rather than one woman you could pre-generate images or videos of 20 or 30 influencers of different geographies, ages, ICPs and personas, and cross-multiply them by different products, locations and scripts to produce many options (e.g. 10 influencers x 10 settings x 10 scripts = 1,000 options).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0533", "EV-0534", "EV-0535", "EV-0536"],
+      "qualifiers": {
+        "scope": "hypothetical scaling; explicitly labeled brainstorming",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-043",
+      "text": "The presenter states he is just brainstorming and will not do anything as complicated as the automated filtering idea because he doesn't want to put the cart before the horse.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0536"],
+      "qualifiers": {
+        "scope": "the proposed automated QA pipeline",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-044",
+      "text": "A proposed automated image check: break each ~10 second video into 1 second frames, take screenshots of each, feed them into an AI model like GPT or Claude Code, have it identify anything malformed that doesn't make sense, and delete those from the option set entirely.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0537", "EV-0538"],
+      "qualifiers": {
+        "scope": "hypothetical/brainstormed quality filter",
+        "condition": null,
+        "platform": "GPT or Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-045",
+      "text": "After the automated filter, roughly 250 to 500 ten-second videos remain, which is 2,500 to 5,000 seconds (about 40 to 80 minutes) for a human to watch and choose the top ~20 performers, effectively replacing an entire creative department.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0538", "EV-0539"],
+      "qualifiers": {
+        "scope": "hypothetical scaling math",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-046",
+      "text": "This is extraordinarily possible right now and very economical; you can then test the 20 selected creatives with a small ad budget and figure out what makes the most sense to scale.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0540"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0500", "EV-0501"],
+      "claim_temp_refs": ["TC-021"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Do the process manually at least once before automating with Claude Code",
+        "trigger": "Before fully automating a generation process with Claude Code",
+        "condition": null,
+        "action": "Run the process manually at least once so you understand how it works, the different features and the different options available",
+        "do_not": [
+          "Do not move to fully automating it with Claude Code without knowing how to do the process manually"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0501"],
+      "claim_temp_refs": ["TC-022"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Generate input images at high 2K when they will feed video",
+        "trigger": "When generating input images that will be used for the purposes of video",
+        "condition": "if you want really high quality input images",
+        "action": "Generate at a high 2K rather than 1K (1024 pixels)",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0516", "EV-0517", "EV-0518"],
+      "claim_temp_refs": ["TC-032"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Upload the product as a reusable element before generating the video",
+        "trigger": "When generating a product video where the product must stay consistent",
+        "condition": null,
+        "action": "Upload the product media and add it as a named element with a description (e.g. 'Midnight clay mask. This is a clay mask used for product videography') so the generation has access to the product and it is added to the prompt box as a prop",
+        "do_not": [
+          "Do not generate without uploading media, because sometimes it will not actually keep the product in the right place"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0522", "EV-0523", "EV-0528", "EV-0529"],
+      "claim_temp_refs": ["TC-036", "TC-037"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Keep the ad script short enough to fit the model's video duration limit",
+        "trigger": "When writing the script for a generated UGC video ad",
+        "condition": "given video models cap duration (max around 15 seconds; Gemini Omni Flash only 10 seconds)",
+        "action": "Shorten the script to fit the time limit; the presenter measures the working script at about 146 characters and settles on about 170 characters, i.e. 27 to about 30 words",
+        "do_not": [
+          "Do not use a script that is too long for the generated clip to make it through the entire script"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0532", "EV-0533"],
+      "claim_temp_refs": ["TC-040", "TC-041"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Verify manually, then verify through Claude, before scaling",
+        "trigger": "Before scaling the generation pipeline",
+        "condition": null,
+        "action": "After verifying the process works through manual usage, verify that it also works through Claude, and only then scale it",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "Process already verified manually"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0492"],
+      "claim_temp_refs": ["TC-012"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Do not try to create the UGC product video in one shot and expect it to work really well"
+        ],
+        "why": "A lot of people don't understand that you can't just do this in one shot; you actually need to vary it and have multiple different shots",
+        "conditions": [
+          "Creating a video of somebody talking about a product using UGC media"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0500", "EV-0501"],
+      "claim_temp_refs": ["TC-021"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Do not move to fully automating the flow with Claude Code without first knowing how to do the process manually"
+        ],
+        "why": "If you don't know how to do the process manually, a lot of the time you're just misunderstanding the different features and the different options that are available",
+        "conditions": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0516", "EV-0517"],
+      "claim_temp_refs": ["TC-032"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Do not skip uploading the product media as an element when generating the video"
+        ],
+        "why": "If you don't upload media, sometimes it will not actually keep the midnight clay mask in the right place",
+        "conditions": [
+          "Generating a product video where the product must appear correctly"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0506"],
+      "claim_temp_refs": ["TC-025"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Don't have the influencer oversell the product"
+        ],
+        "why": "The prompt specifies she should be enthusiastic about using the product, 'but don't like oversell it'",
+        "conditions": [
+          "Prompting the image generation of the influencer holding the product"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0484", "EV-0485", "EV-0486", "EV-0487"],
+      "claim_temp_refs": ["TC-005", "TC-007", "TC-008"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Create an account on the generation platform",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Open the site",
+            "action": "Open a window and go to higsfield.ai",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0484"]
+          },
+          {
+            "order_key": 2,
+            "name": "Sign up",
+            "action": "Click sign up, continue with Google and add your email address",
+            "required_inputs": ["Google account / email address"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0484", "EV-0485"]
+          },
+          {
+            "order_key": 3,
+            "name": "Human verification",
+            "action": "Complete the 'verify that you are a human' step",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0485"]
+          },
+          {
+            "order_key": 4,
+            "name": "Onboarding selections",
+            "action": "In onboarding select UGC videos, one-click presets (as a beginner) and MCP",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0486"]
+          },
+          {
+            "order_key": 5,
+            "name": "Proceed and buy credits",
+            "action": "Proceed past the discount offer, understanding that you do have to purchase some credits",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0487"]
+          }
+        ],
+        "exceptions": [
+          "The interface is going to look very different by the time viewers are using it",
+          "This is just an onboarding and there are many different ways you could do this"
+        ],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-011",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0493", "EV-0494", "EV-0496", "EV-0497", "EV-0498", "EV-0505", "EV-0506", "EV-0509", "EV-0510", "EV-0512", "EV-0513", "EV-0514", "EV-0515", "EV-0517", "EV-0518"],
+      "claim_temp_refs": ["TC-013", "TC-014", "TC-018", "TC-025", "TC-027", "TC-028", "TC-029", "TC-032", "TC-033"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Manual UGC product video generation flow",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Go to image generation, not video",
+            "action": "Go to the image section which allows you to generate things using image models, and reference the previously generated product image in an image flow",
+            "required_inputs": ["Product image (midnight clay mask)"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0493", "EV-0494"]
+          },
+          {
+            "order_key": 2,
+            "name": "Find an influencer reference",
+            "action": "Find a UGC style influencer image on Pinterest and feed that image in",
+            "required_inputs": ["Influencer reference image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0494", "EV-0495", "EV-0496"]
+          },
+          {
+            "order_key": 3,
+            "name": "Configure image model settings",
+            "action": "Select GPT image 2, set quality/size (presenter uses 2K, 1:1 for simplicity) and set batch size, which is the total number of gens created with the two images",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0496", "EV-0497"]
+          },
+          {
+            "order_key": 4,
+            "name": "Generate a derived influencer",
+            "action": "Prompt to generate a woman that contains all the features of the reference woman but is ultimately different (change her hair a little) and place her indoors instead of outdoors, generating three options (21 credits)",
+            "required_inputs": ["Influencer reference image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0498", "EV-0499"]
+          },
+          {
+            "order_key": 5,
+            "name": "Pick the best generation",
+            "action": "Review the generated options and select the one you like best",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0504", "EV-0505"]
+          },
+          {
+            "order_key": 6,
+            "name": "Generate the product shot",
+            "action": "Use the selected generated woman plus the product as references and prompt: make it so the woman is holding my product, in an environment like a bathroom where it would make sense, enthusiastic about using the product but not overselling it (generated at 2K, one shot)",
+            "required_inputs": ["Selected generated woman image", "Product image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0505", "EV-0506", "EV-0507"]
+          },
+          {
+            "order_key": 7,
+            "name": "Generate the script with Claude",
+            "action": "In Claude Code, drop in the product image and ask it to generate three scripts similar to what a real influencer would say, pretending the influencer is a young woman who found value in the product, around 30 seconds",
+            "required_inputs": ["Product image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0509", "EV-0510", "EV-0511"]
+          },
+          {
+            "order_key": 8,
+            "name": "Edit the script",
+            "action": "Review the generated script and edit it slightly to produce the final script for the video",
+            "required_inputs": ["Generated script"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0512", "EV-0513", "EV-0514"]
+          },
+          {
+            "order_key": 9,
+            "name": "Turn the image into a video",
+            "action": "Take the generated image of the woman holding the product and turn it into a video, choosing among the available video models",
+            "required_inputs": ["Generated product shot image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0514", "EV-0515"]
+          },
+          {
+            "order_key": 10,
+            "name": "Add the product as an element and prompt",
+            "action": "Prompt 'a woman influencer doing a UGC style ad talking about a product', upload the product media and add it as a named element with a description so it is used as a prop and added to the prompt box",
+            "required_inputs": ["Product media"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0516", "EV-0517", "EV-0518"]
+          },
+          {
+            "order_key": 11,
+            "name": "Turn on sound and generate multiple across models",
+            "action": "Turn on sound and generate multiple (e.g. 10 with Cling), then repeat with Cling Turbo and C dance 2.0 to test different approaches",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0518", "EV-0519"]
+          },
+          {
+            "order_key": 12,
+            "name": "Review and compare results",
+            "action": "Play back the generated ads to check audio and quality, compare models and pick the best one, expecting to spend maybe $10 to $20 on this initial test round",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0520", "EV-0521", "EV-0522"]
+          },
+          {
+            "order_key": 13,
+            "name": "Time the script",
+            "action": "Use a word counter on the script that worked to determine the length (about 146 characters), and set the target at about 170 characters or 27 to 30 words",
+            "required_inputs": ["Working script"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0528", "EV-0529"]
+          }
+        ],
+        "exceptions": [
+          "The model isn't perfect and every now and then one of the gens will be sort of trash"
+        ],
+        "prerequisites": [
+          "An account with purchased credits on the platform"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-012",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0529", "EV-0530", "EV-0531", "EV-0532", "EV-0533"],
+      "claim_temp_refs": ["TC-039", "TC-040", "TC-041"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Instruct Claude with the process to later turn into a skill",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Dump the process into Claude",
+            "action": "Go back to Claude and voice dump the whole process as instructions",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0529"]
+          },
+          {
+            "order_key": 2,
+            "name": "Provide the product image",
+            "action": "Give Claude an image of the product",
+            "required_inputs": ["Product image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0529", "EV-0532"]
+          },
+          {
+            "order_key": 3,
+            "name": "Generate the starting frame",
+            "action": "Use the provided image of the influencer to generate a picture or starting frame of a woman holding the product somewhere in an environment that would make sense",
+            "required_inputs": ["Influencer image", "Product image"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0530"]
+          },
+          {
+            "order_key": 4,
+            "name": "Generate script candidates",
+            "action": "Generate 10 script candidates that espouse the virtues of the product and talk about the benefits in an influencer UGC style, each under about 35 words in order to fit the time limit",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0530", "EV-0531"]
+          },
+          {
+            "order_key": 5,
+            "name": "Show outputs for verification",
+            "action": "Show the generated product image (made with GPT-image-2) and the scripts so the user can verify everything is good",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0531"]
+          },
+          {
+            "order_key": 6,
+            "name": "Enable the API call",
+            "action": "Call GPT image 2 using the OpenAI API key, which is in the local environment",
+            "required_inputs": ["OpenAI API key in local environment"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0532"]
+          },
+          {
+            "order_key": 7,
+            "name": "Verify through Claude",
+            "action": "Circle back and double check that, having verified it manually, it also works through Claude; then add a couple more steps to the flow and turn that into a skill",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0531", "EV-0533"]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "The process was already verified manually"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-013",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0533", "EV-0534", "EV-0535", "EV-0536", "EV-0537", "EV-0538", "EV-0539", "EV-0540"],
+      "claim_temp_refs": ["TC-042", "TC-043", "TC-044", "TC-045", "TC-046"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Brainstormed scaling and filtering pipeline (explicitly not implemented in this session)",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Pre-generate a roster of influencers",
+            "action": "Use AI to pre-generate a bunch of images or videos of 20 or 30 influencers you like — men and women, different geographies, ages, ICPs and personas",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0533", "EV-0534"]
+          },
+          {
+            "order_key": 2,
+            "name": "Cross-multiply the variables",
+            "action": "Multiply influencers by the different products they hold, by locations, and by different scripts (e.g. 10 influencers x 10 settings x 10 scripts = 1,000 possible options)",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0534", "EV-0535", "EV-0536"]
+          },
+          {
+            "order_key": 3,
+            "name": "Automated image check",
+            "action": "Break each ~10 second video into 1 second frames, take screenshots of each, feed them into an AI model like GPT or Claude Code and ask if there is anything malformed that doesn't make sense",
+            "required_inputs": ["Generated videos"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0537", "EV-0538"]
+          },
+          {
+            "order_key": 4,
+            "name": "Delete malformed options",
+            "action": "If something is malformed, delete it from the option set entirely, leaving maybe 250 to 500 remaining",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0538"]
+          },
+          {
+            "order_key": 5,
+            "name": "Human review",
+            "action": "Have a human being watch the remaining videos (2,500 to 5,000 seconds, about 40 to 80 minutes) and choose the top ~20 performers",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0538", "EV-0539"]
+          },
+          {
+            "order_key": 6,
+            "name": "Test with a small ad budget",
+            "action": "Test the 20 selected creatives with a small ad budget and figure out what makes the most sense to scale",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0540"]
+          }
+        ],
+        "exceptions": [
+          "The presenter states he is just brainstorming and is not going to do anything as complicated as this, because he doesn't want to put the cart before the horse"
+        ],
+        "prerequisites": []
+      }
+    }
+  ]
+}

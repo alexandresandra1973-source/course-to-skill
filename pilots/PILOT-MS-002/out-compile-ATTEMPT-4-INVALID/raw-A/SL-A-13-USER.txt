@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-13
+boundaries: 13795.6s - 14986.399s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+500K in the last 45 days. Real talk, I've done my research on you and I think Leftclick is fairly close to that number. If so, please hear me out. I want to guarantee you an additional 20 book meetings every month with qualified uh MSP vendors. It is probably another one to two million a year if we play our cards right. Would cost you $0 upfront and I would do all the work myself. And if I didn't hit that number, it would be free, no cost whatsoever. And past that, I get paid mostly a commission. I can guarantee you 20 appointments a month in perpetuity. Are you open to this? If so, let me know and I can start generating them for you right away. It would take no more than 30 minutes over the phone. As as mentioned, I'm serious and would guarantee you results. Thanks, Nick. So, is this going to, you know, win me any awards? No, but this sort of email is actually far better than the current state of affairs. Uh maybe by the time that you're watching this, you know, the trends will have changed again. But right now, um like lowercase, very casual language tends to do well. And the reason for that is because people are really used to AI spam where all of the wording and terminology and and vocabulary in the email is like perfect. They're used to like lots of M dashes. They're used to perfect grammar. So when they see stuff that's like intentionally or unintentionally not perfect, they start thinking like, okay, this is probably a person, you know? Sure, man. Maybe they suck at spelling, but it's probably a person. And so, they'll actually like read through your email and not just think it's AI garbage. Uh, which is kind of cool. So, believe it or not, what they don't know is we actually used AI for this. Their thing in common, my thing in common is very valuable here. So, uh, you know, there's a lot of data in this example lead list, right? I [snorts] don't know, man. I saw you guys use Google Ads or something or like I saw you guys have double click or I saw you guys are, I don't know, in Chicago, right? And like I spent some time in Chicago. Like like you could talk about whatever the heck you want. Obviously, make it relevant. Make it real. Just give AI like a big blurb about all the things about your life and let it do the matching. Uh, but yeah, that's that's about it. So, what we do is the exact same thing as before. I'm just going to copy this and then I'm going to dump this in. Then I'm going to say [gasps] above is a cold email template that I've been sending. It's been working quite well. However, I want to kick it up a notch with AI based variables. Anything in the two curly brackets here is an AI based variable. And what these fuzzy variables do is they naturally weave into the context of the email. They don't seem like variables. They just seem like real human personalized segments. What I want to do here is I want to feed you a bunch of information about five leads and I want to see how well you can weave in uh their information into an email like this. Okay, you'll be generating these fuzzy variables based off of a bunch of data basically. Okay, so now what I'm going to do is I'm going to go and actually grab like a bunch of our leads. So [sighs and gasps] I don't know, let's say we'll do one here. Okay, fine. Why don't we do one here? Then I'll do one here. Then I'll do one here. and we'll do another one here. Okay, so I'm just going to paste this in. Just space this out a bit. Um, here are the five leads that I want you to test this out on. Um, create five email variants so that I can take a look at them and uh I will let you know if the quality is okay. [gasps] You already know everything you need to know about me in order to make this happen. Nick Sarif, feel free to do a little bit of research on me if needed. These are hypothetical demo prospects, so no amount of research on them will yield any benefit. So, don't worry about that. just because I've noticed sometimes it does additional research on them too. Okay, so what are we doing? We are having it start doing the search. The leads are fine to test the fuzzy variable concept. Quick flag. The templates numeric claims are the kind of thing that gets outbound account suspended and can cross into deceptive claims territory if the underlying numbers aren't real or substantiated. Yes, yes, yes. Of course, the idea is you can't just pull numbers out of your ass. Like this is just a demo, right? But um you need to make sure that you actually have case studies and and proven uh growth and stuff like that. [gasps] Okay. Yo, Luke, saw you're running performance marketing out of Tampa. I've spent a lot of time in the Florida agency scene, too, and wanted to say hi. I run B2B Outbound for agencies that do run $5 million a year. We work with XCO and just helping close 500K in the last 45 days. Real talk. I've done my research on you and the Haven Group is fairly close to that number. If so, please hear me out. I want to book you an additional blah blah blah blah and blah blah blah blah. So, this looks pretty solid. Um, let me just see if there were any additional variables here that I didn't notice. Yeah, qualified prospects, right? Qualified western brands entering China. Qualified fintech wellness brands wanting SEO and PPC. Qualified agencies looking to automate their PPC management. Qualified hiring managers looking to build out search and social media teams. And qualified SEO and PPC clients ready to buy. Cool. So, do you see kind of the idea here? Um, we just have AI personalize it, but do so in a very fuzzy way. And I'm sure you guys can imagine if I fed in a big block of information about who I was, all of my life experiences, hell, my LinkedIn profile, a bunch of other stuff, and I said, "Here's data that you can use to pull similarities between me and the person, it would do quite quite well. Uh, I'm just not because I don't really want to showcase all of that right now." And, uh, hopefully it's clear. You know, you'd be sending this to people, but you wouldn't really be publishing on the internet, which I think is a little bit different. So, yeah. I mean, um, pretty cool, huh? Pretty cool. So, where do we go from here? Well, we actually need to weave this into, as mentioned, the Google sheet itself. So, what I'm going to do is I'm going to go back and I'm going to say, "Okay, great. This is the Google sheet." I'm going to paste it in. This is exactly what I wanted. However, I now need you to actually and actively update a Google sheet uh with those variables. Add these columns to this Google sheet and then customize them for every uh row. The idea is I should be able to insert those variables directly into the email via merge variables and have them be 100% readable and contextually relevant. It's the exact same thing that you just did. I'm just giving this to you in a more structured format. Cool. And now it's going to run through a flow very similar to what we were doing before with the newsletter um and the Google sheet except now we're doing it via outbound. Okay. So, it just actually wrapped that up and I ended up proceeding saying great work on the lead enrichment flow. It was quite nice. Uh what I want to do now is set up a skill where when I provide you a list of leads like this, you'll go through and do the entire process automatically. Basically, input to the skill is a lead list. Output of the skill is, you know, I want a totally enriched lead list. Enriched meaning um you know, a lead list that has these four additional columns. So, additionally, there were a lot of fields in the CSV. I don't know if you guys can tell, but like man, are these a lot of fields. And I don't really like going through all these fields all the time. So, in addition, I said we currently have a lot of fields in the CSV that make it a pain in my butt to upload. So, I'd like you to cut it down. The fields we need are the four customization fields as well as their first name, last name, email address, company name, company size, and so on. So, um yeah, I mean, I sent that out. Uh I did it about an hour ago. I was actually recording the video and for whatever reason, my audio cut off. Um so, I'll just give you guys sort of a transcript playbyplay. And [snorts] then it ended up asking me a bunch of questions like, "Hey, what sort of fields do I want? Location fields? what's the input format that I should do? Should it be a Google Sheets link or should it be CSV or pasted text? I ended up walking through it all the way up until we actually ended up getting um you know a trimmed version of this which is a lot shorter and a lot higher quality. And so this is what that trimmed version looks like that now runs via skill. First name Marcus, last name Hayes, Marcus and North partners. As we scroll through to the right, you'll see that most of the superfluous fields have now been removed and now we just have, you know, my thing in common, their thing in common, paraphrase, company name, prospects, but their specific terminology. It's very straightforward. Okay. So, you know, we have the skill, I guess, is what I'm trying to say. Um, but I I wanted to extend it and kind of take it a little bit further than just that. And the reason why is because I don't think it's sufficient for me personally just to have like an input output where I give it a lead list and then, you know, it does all the work on the lead list and returns it to me. I'd actually like to go further. And I want to go so far that in addition to generating me the lead list, it actually scrapes the leads to begin with. And that sounds kind of crazy, but it's actually fairly straightforward. If you go back over here to Ampify on one of the services that I was showing you guys earlier, um I'll show you guys can actually scrape the leads really easily u manually. And so I'm just going to pipe this in to the flow that we have so that in addition to enriching the leads with all this AI customized stuff. It actually goes and finds the freaking leads for me too. We do this thing inside of LeftClick all the time. Uh which is my AI automation agency. I basically build things with cloud code that economize various parts of growth mostly marketing based flows. And as you can see I just pumped in a brief query looking for founders and owners at businesses that were like agencies. So SEO agencies and so on and so forth. You see, we we actually just got a bunch of emails. I mean, I just did this. I just spent 18 cents and then I got a 100 freaking email addresses. What the heck can I do with that? I can do a lot with that, right? Anyway, so to make a long story short, um what I want to do is I want to have AI do all this for me. It's not enough for me to like give it a lead list. Um I prefer just to bypass the lead list entirely. And so what I did in addition to that is um you know, I gave it some instructions saying I do all of my lead scraping through a platform called Ampify. What I want you to do is actually steer Apify to scrape the leads for me and then perform this enrichment flow on the leads so that I can just have all of them done in one shot and ready for my email campaign. I'll give you all the information you need in order to connect it with Apify like the MCP and the scrapers themselves. And then all I want you to do is just bundle that into the skill and test it on a small subset. Let's do 100 leads to start scrapes because I think that's the minimum. And then you know I just wanted it to enrich 10 of them to tell me um whether or not it it actually ended up working. And so pretty crazy but you can just do this. Um, in my case, the way that you do this with Ampify is, uh, I think you have to go via API, uh, or maybe you have to do, if I go back to this actual scraper here, and then I go over here to where it says MCP configurator, it'll give me a URL. So, all you have to do is you actually just copy that URL, go back to cloud, then go settings under cloud codes, connectors. You can then create a new custom connector called Appify and paste that link in. And so, this will now just log into Appify for you. And you can see that I actually already ended up doing this earlier. It's the same link right over here. Okay, so that's about how easy it is. It's really not that difficult. Um, fairly straightforward as long as you have the the MCP folder set up. Immediately after it said a connected, it can see the MCP tools. Now, let me get the inputs for this scraper and then it actually steers scraper for me. So, I gave it some more instructions as to the sorts of roles that I look for. I usually look for founder, CEO, co-founder, owners, co-owners, partners, co-partners. You can see I kind of went all over the place and I settled on a new idea and my new idea um was as follows. You know, I was thinking about the best way to structure this and I said, you know, how do I typically do it? And it's always a good idea to kind of think about the way that you do it. What I do anytime I'm scraping leads for marketing purposes is I'll create a bunch of filters. I'll set them myself, right? Then I'll scrape a list. And then what I'll do is I'll check the list to ensure that the leads in the list um match my ICP which is you know your ideal customer persona and then usually if maybe less than 75% of the leads don't match my ICP you know maybe sorry if less than 75% of leads match basically more than 25% of leads suck, then I'll just redo it and I'll do it over and over and over again. And I've realized that this is how I work. So what I did is I explained this to Claude. And then I said, "What I want you to do is scrape a list of 100, then go through 20 out of those 100 leads and determine how many of them are in my ICP. As long as more than 15 out of 20 are in my ICP, we're good. If it's less than 15 out of 20, I want you to go back and I want you to redo it." So what we did is I basically took this SOP and workflow and then I just turned it into my skill. Okay? Okay. And you can actually see that right here. It got through. It asked me some questions about this PPC agencies. And then it went it went ahead and did it. And so I ended up actually running this like I think this ran four or five times just redoing it over and over and over again. The first time was 9 out of 20. I think the second time was 9 out of 20. The third time was 15 out of 20. And then finally the fourth time and it just did all this entirely on its own. Self-driving was 19 out of 20. So I just sat back. I ran the skill once and then went and actually scraped a giant list of leads for me. In addition to that, I went through and enriched a big list of leads for me with this. And so now we're at the point where it's like, okay, what the heck do we do with all of these leads? Where do we put them? Um, and that's the final step, which I'll show you guys how to do right now. And, uh, hope to god my dang microphone is working this time. Okay. [snorts] So, you know, I was talking about an app that's used to deal with leads like this. And, uh, the one that we like using is called Instantly. Instantly is basically a tool that allows you to send emails unass um for various campaigns entirely to a cold audience, people that haven't basically ever heard of you before. And that's different from like the warm audience campaigns which uh are typically managed via things like you know Mailchimp kit and so on and so forth. So, I have a bunch of email campaigns set up here for Clarvo, which is the startup, the namesake of this hat. And uh, you know, we're doing legal intake, staffing and recruiting, automotive, BDC, and so on and so forth. Up here, I set up a demo campaign just to show you guys what it would look like if we populated this sequence. And so, what we have here is the same copy that I put together manually is now here in the sequence. Subject line is first name. I have my variables in here. And you're probably wondering, okay, where do we go from here? Well, it's actually pretty easy. you can preview um the the forms or rather preview the variables that are filled. And so what I did was I imported that list that I just generated, okay, and enriched. And then I just plugged it in here cuz I wanted to see what it would look like. So Marcus receives an email in his mailbox called Marcus. It says, "Saw you're running a full service Amazon marketing shop. I spent a lot of time around Amazon seller agency circles 2 and wanted to say hi. Looks like our campaign has an extra two. So, I'm [clears throat] just going to remove that extra two. Preview that and then see how that how that goes. And that looks pretty good. Maybe I'm going to test somebody else. Um, so you're a Google badge partner running out of downtown Reno. Okay. How about Maya? Performance-based SEO for businesses with customuilt sites. How about rich marketing? Onetrack mind of clients, not just clicks. That one's kind of rough. That one sounds kind of AI, but you're never going to be able to fully escape this. saw you're running an SEO SEM shop out of uh Bissi. I've worked with a few agencies operating out of that region too. Wanted to say hi. So, we now have this actually like in our campaign. And what we could do now is we could just send it. And so, that's the skill. Now, obviously, we could turn this into a loop, [clears throat] but it depends on, you know, like would you even need it to be a loop? The only situation which would actually make sense to turn this into a loop is if you knew every single day you were going to make a new campaign. So, every day you needed a bunch of leads available. But this is a good example of like bottleneck thinking. To be honest, I don't actually need this all the time. Like I don't need one of my lead lists to be ready for me every morning. Um I could just do it on demand myself. Hopefully you guys see how quick it is. So yeah, you can very quickly and easily turn it into a routine. Cloud routine. You just tell Claude, "Hey man, turn this into a routine. I want it to launch at 5:59 a.m. every morning. Here's the Appify connector. Here's everything else." And I did so um you know in that previous video uh and you know it works well. Routine's right over here. Daily Clervo Legion, it's called. Here's this uh big block runs every day at 5:59 a.m. PDT, [gasps and sighs] but I did that more as just like a demonstration that, you know, you can turn anything into a routine. Not necessarily it makes sense for us to turn this one into a routine. Okay, so that that is it in a nutshell. That's how to go basically from a totally manual lead scraping process for marketing services to actually generating these marketing lists entirely autonomously. Um, it's also how to go from like standardized newsletters using kit.com and then turning into like a customized AI fuzzy variable-based newsletter. All very straightforward if you know what you're doing. And hopefully I've shown you guys how easy it is to to get out there and do it. And that takes us to, if you think about it, drum roll please, our next uh massive build. So we are now done with our personalized copy, which means we are done with the top of funnel. Nice job everybody. From here we can go down to middle of funnel which is speed to lead for appointment booking via email, SMS and voice. And I just want to outline the problem very quickly because I don't think enough people appreciate just how large of a problem it is. So the problem in marketing is a lot of the time you spend tons of money on leads. We're talking like thousands, tens of thousands of dollars. You do so in a variety of ways. I mean, one, you buy lead list, like I just showed you guys earlier, you can do with platforms like Ampify, but [clears throat] probably what you're doing more more likely is you're running ads, okay? And then after a certain number of clicks to that ad, somebody actually ends up booking a meeting with you and and doing some sort of intent, right? So, this is like a typical setting. It's like a booked meeting flow. And uh the issue is you spend lots of money on leads, okay? And then you only get a small fraction of that money back. The reason why is because most companies that run advertisements of any kind, hell, even organic brand-based advertisements like I do on my YouTube channel, is they do not treat their leads with the time, energy, and respect that they need in order to, you know, make a ton of money with it. I want you guys to think about leads, okay, this is just some lead as basically being directly convertible to money. This is money, man. And this is me drawing my little, you know, I don't know how to do it, but the dude's face, Thomas Jefferson or whatever. This is money. This is just a giant stack of bills. Um, this is a currency that is directly convertible to, you know, freedom dollars, Benjamins, Jefferson's. I'm not American. If it's not clear, I don't actually know what y'all call your money. Um, but you can convert gleeds to money. um if you know how to squeeze out every last drop of it. The issue is most people are just converting at a very low exchange rate right now. So they spend, you know, let's say $10,000 on leads a month and then they will receive maybe $20,000 on their leads a month, which is a 2x ros, which is quite poor. Uh means that you're spending 50% of every dollar you earn basically on the marketing to acquire that. It means your cost uh to acquire, you know, a lead is about 50% of what you make. [gasps] The the reality is if you treat your leads better, if you respond to them faster, if you make them think it's more customized and personalized, if you do everything in your power to give them the best experience possible before they pay you, ideally after they pay you, too. But that's definitely not marketing's job. You can turn that single solitary dollar sign into a lot of dollar bills, y'all. And so this is more or less what um I actually do all day. And when I mean all day, I mean, you know, like probably like 20 30% of my day. Um, I do it so much that I actually ended up starting a whole business around this with a friend of mine, uh, called Clearville. And the idea behind this is very similar to what I just talked about. You know, you paid for the lead. You just paid, I don't know, like a $30 cost per meeting or something, okay? And if they're in your calendar, you spent $30 on them. You might as well make as much money out of that person as humanly possible, right? Just makes sense. So, you know, check in with them immediately. Actually call them ASAP within a few seconds of them filling out your form. send them text messages, follow up and squeeze them like a damn wet rag. I mean, they gave
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0721",
+  "excerpt": "500K in the last 45 days. Real talk, I've done my research on you and I think Leftclick is fairly close to that number. If so, please hear me out. I want to guarantee you an additional 20 book meetings every month with qualified uh MSP vendors. It is probably another one to two million a year if we play our cards right. Would cost you $0 upfront and I would do all the work myself. And"
+ },
+ {
+  "local_id": "EV-0722",
+  "excerpt": "if I didn't hit that number, it would be free, no cost whatsoever. And past that, I get paid mostly a commission. I can guarantee you 20 appointments a month in perpetuity. Are you open to this? If so, let me know and I can start generating them for you right away. It would take no more than 30 minutes over the phone. As as mentioned, I'm serious and would guarantee you results. Thanks, Nick. So,"
+ },
+ {
+  "local_id": "EV-0723",
+  "excerpt": "is this going to, you know, win me any awards? No, but this sort of email is actually far better than the current state of affairs. Uh maybe by the time that you're watching this, you know, the trends will have changed again. But right now, um like lowercase, very casual language tends to do well. And the reason for that is because people are really used to AI spam where all of"
+ },
+ {
+  "local_id": "EV-0724",
+  "excerpt": "the wording and terminology and and vocabulary in the email is like perfect. They're used to like lots of M dashes. They're used to perfect grammar. So when they see stuff that's like intentionally or unintentionally not perfect, they start thinking like, okay, this is probably a person, you know? Sure, man. Maybe they suck at spelling, but it's probably a person. And so, they'll"
+ },
+ {
+  "local_id": "EV-0725",
+  "excerpt": "actually like read through your email and not just think it's AI garbage. Uh, which is kind of cool. So, believe it or not, what they don't know is we actually used AI for this. Their thing in common, my thing in common is very valuable here. So, uh, you know, there's a lot of data in this example lead list, right? I [snorts] don't know, man. I saw you guys use Google Ads or something or like I"
+ },
+ {
+  "local_id": "EV-0726",
+  "excerpt": "saw you guys have double click or I saw you guys are, I don't know, in Chicago, right? And like I spent some time in Chicago. Like like you could talk about whatever the heck you want. Obviously, make it relevant. Make it real. Just give AI like a big blurb about all the things about your life and let it do the matching. Uh, but yeah, that's that's about it. So, what we do"
+ },
+ {
+  "local_id": "EV-0727",
+  "excerpt": "is the exact same thing as before. I'm just going to copy this and then I'm going to dump this in. Then I'm going to say [gasps] above is a cold email template that I've been sending. It's been working quite well. However, I want to kick it up a notch with AI based variables. Anything in the two curly brackets here is an AI based variable. And what these fuzzy variables"
+ },
+ {
+  "local_id": "EV-0728",
+  "excerpt": "do is they naturally weave into the context of the email. They don't seem like variables. They just seem like real human personalized segments. What I want to do here is I want to feed you a bunch of information about five leads and I want to see how well you can weave in uh their information into an email like this. Okay, you'll be generating these fuzzy variables based off of a bunch of"
+ },
+ {
+  "local_id": "EV-0729",
+  "excerpt": "data basically. Okay, so now what I'm going to do is I'm going to go and actually grab like a bunch of our leads. So [sighs and gasps] I don't know, let's say we'll do one here. Okay, fine. Why don't we do one here? Then I'll do one here. Then I'll do one here. and we'll do another one here. Okay, so"
+ },
+ {
+  "local_id": "EV-0730",
+  "excerpt": "I'm just going to paste this in. Just space this out a bit. Um, here are the five leads that I want you to test this out on. Um, create five email variants so that I can take a look at them and uh I will let you know if the quality is okay. [gasps] You already know everything you need to know about me in order to make this happen. Nick Sarif, feel free to do a little bit of research"
+ },
+ {
+  "local_id": "EV-0731",
+  "excerpt": "on me if needed. These are hypothetical demo prospects, so no amount of research on them will yield any benefit. So, don't worry about that. just because I've noticed sometimes it does additional research on them too. Okay, so what are we doing? We are having it start doing the search. The leads are fine to test the fuzzy variable concept. Quick flag. The templates numeric claims"
+ },
+ {
+  "local_id": "EV-0732",
+  "excerpt": "are the kind of thing that gets outbound account suspended and can cross into deceptive claims territory if the underlying numbers aren't real or substantiated. Yes, yes, yes. Of course, the idea is you can't just pull numbers out of your ass. Like this is just a demo, right? But um you need to make sure that you actually have case studies and and proven uh growth and stuff like"
+ },
+ {
+  "local_id": "EV-0733",
+  "excerpt": "that. [gasps] Okay. Yo, Luke, saw you're running performance marketing out of Tampa. I've spent a lot of time in the Florida agency scene, too, and wanted to say hi. I run B2B Outbound for agencies that do run $5 million a year. We work with XCO and just helping close 500K in the last 45 days. Real talk. I've done my research on you and the Haven Group is fairly close to that number. If so,"
+ },
+ {
+  "local_id": "EV-0734",
+  "excerpt": "please hear me out. I want to book you an additional blah blah blah blah and blah blah blah blah. So, this looks pretty solid. Um, let me just see if there were any additional variables here that I didn't notice. Yeah, qualified prospects, right? Qualified western brands entering China. Qualified fintech wellness brands wanting SEO and PPC. Qualified agencies"
+ },
+ {
+  "local_id": "EV-0735",
+  "excerpt": "looking to automate their PPC management. Qualified hiring managers looking to build out search and social media teams. And qualified SEO and PPC clients ready to buy. Cool. So, do you see kind of the idea here? Um, we just have AI personalize it, but do so in a very fuzzy way. And I'm sure you guys can imagine if I fed in a big block of information about who I was, all of my"
+ },
+ {
+  "local_id": "EV-0736",
+  "excerpt": "life experiences, hell, my LinkedIn profile, a bunch of other stuff, and I said, \"Here's data that you can use to pull similarities between me and the person, it would do quite quite well. Uh, I'm just not because I don't really want to showcase all of that right now.\" And, uh, hopefully it's clear. You know, you'd be sending this to people, but you wouldn't really be publishing on the"
+ },
+ {
+  "local_id": "EV-0737",
+  "excerpt": "internet, which I think is a little bit different. So, yeah. I mean, um, pretty cool, huh? Pretty cool. So, where do we go from here? Well, we actually need to weave this into, as mentioned, the Google sheet itself. So, what I'm going to do is I'm going to go back and I'm going to say, \"Okay, great. This is the Google sheet.\" I'm going to paste it in."
+ },
+ {
+  "local_id": "EV-0738",
+  "excerpt": "This is exactly what I wanted. However, I now need you to actually and actively update a Google sheet uh with those variables. Add these columns to this Google sheet and then customize them for every uh row. The idea is I should be able to insert those variables directly into the email via merge variables and have them be 100% readable and contextually relevant. It's the exact"
+ },
+ {
+  "local_id": "EV-0739",
+  "excerpt": "same thing that you just did. I'm just giving this to you in a more structured format. Cool. And now it's going to run through a flow very similar to what we were doing before with the newsletter um and the Google sheet except now we're doing it via outbound. Okay. So, it just actually wrapped that up and I ended up proceeding saying great work on the lead"
+ },
+ {
+  "local_id": "EV-0740",
+  "excerpt": "enrichment flow. It was quite nice. Uh what I want to do now is set up a skill where when I provide you a list of leads like this, you'll go through and do the entire process automatically. Basically, input to the skill is a lead list. Output of the skill is, you know, I want a totally enriched lead list. Enriched meaning um you know, a lead list that has these four additional columns. So,"
+ },
+ {
+  "local_id": "EV-0741",
+  "excerpt": "additionally, there were a lot of fields in the CSV. I don't know if you guys can tell, but like man, are these a lot of fields. And I don't really like going through all these fields all the time. So, in addition, I said we currently have a lot of fields in the CSV that make it a pain in my butt to upload. So, I'd like you to cut it down. The fields we need are the four customization"
+ },
+ {
+  "local_id": "EV-0742",
+  "excerpt": "fields as well as their first name, last name, email address, company name, company size, and so on. So, um yeah, I mean, I sent that out. Uh I did it about an hour ago. I was actually recording the video and for whatever reason, my audio cut off. Um so, I'll just give you guys sort of a transcript playbyplay. And [snorts] then it ended up asking me a bunch of questions like, \"Hey, what"
+ },
+ {
+  "local_id": "EV-0743",
+  "excerpt": "sort of fields do I want? Location fields? what's the input format that I should do? Should it be a Google Sheets link or should it be CSV or pasted text? I ended up walking through it all the way up until we actually ended up getting um you know a trimmed version of this which is a lot shorter and a lot higher quality. And so this is what that trimmed version looks like that now runs"
+ },
+ {
+  "local_id": "EV-0744",
+  "excerpt": "via skill. First name Marcus, last name Hayes, Marcus and North partners. As we scroll through to the right, you'll see that most of the superfluous fields have now been removed and now we just have, you know, my thing in common, their thing in common, paraphrase, company name, prospects, but their specific terminology. It's very straightforward. Okay. So, you know, we have the skill, I"
+ },
+ {
+  "local_id": "EV-0745",
+  "excerpt": "guess, is what I'm trying to say. Um, but I I wanted to extend it and kind of take it a little bit further than just that. And the reason why is because I don't think it's sufficient for me personally just to have like an input output where I give it a lead list and then, you know, it does all the work on the lead list and returns it to me. I'd actually like to go further. And I want"
+ },
+ {
+  "local_id": "EV-0746",
+  "excerpt": "to go so far that in addition to generating me the lead list, it actually scrapes the leads to begin with. And that sounds kind of crazy, but it's actually fairly straightforward. If you go back over here to Ampify on one of the services that I was showing you guys earlier, um I'll show you guys can actually scrape the leads really easily u manually. And so I'm just going to"
+ },
+ {
+  "local_id": "EV-0747",
+  "excerpt": "pipe this in to the flow that we have so that in addition to enriching the leads with all this AI customized stuff. It actually goes and finds the freaking leads for me too. We do this thing inside of LeftClick all the time. Uh which is my AI automation agency. I basically build things with cloud code that economize various parts of growth mostly marketing based flows. And as you"
+ },
+ {
+  "local_id": "EV-0748",
+  "excerpt": "can see I just pumped in a brief query looking for founders and owners at businesses that were like agencies. So SEO agencies and so on and so forth. You see, we we actually just got a bunch of emails. I mean, I just did this. I just spent 18 cents and then I got a 100 freaking email addresses. What the heck can I do with that? I can do a lot with that, right? Anyway, so to make a long"
+ },
+ {
+  "local_id": "EV-0749",
+  "excerpt": "story short, um what I want to do is I want to have AI do all this for me. It's not enough for me to like give it a lead list. Um I prefer just to bypass the lead list entirely. And so what I did in addition to that is um you know, I gave it some instructions saying I do all of my lead scraping through a platform called Ampify. What I want you to do is actually steer Apify to scrape the leads"
+ },
+ {
+  "local_id": "EV-0750",
+  "excerpt": "for me and then perform this enrichment flow on the leads so that I can just have all of them done in one shot and ready for my email campaign. I'll give you all the information you need in order to connect it with Apify like the MCP and the scrapers themselves. And then all I want you to do is just bundle that into the skill and test it on a small subset. Let's do 100 leads to"
+ },
+ {
+  "local_id": "EV-0751",
+  "excerpt": "start scrapes because I think that's the minimum. And then you know I just wanted it to enrich 10 of them to tell me um whether or not it it actually ended up working. And so pretty crazy but you can just do this. Um, in my case, the way that you do this with Ampify is, uh, I think you have to go via API, uh, or maybe you have to do, if I go back to this actual scraper here, and then I go"
+ },
+ {
+  "local_id": "EV-0752",
+  "excerpt": "over here to where it says MCP configurator, it'll give me a URL. So, all you have to do is you actually just copy that URL, go back to cloud, then go settings under cloud codes, connectors. You can then create a new custom connector called Appify and paste that link in. And so, this will now just log into Appify for you. And you can see that I actually already ended up doing"
+ },
+ {
+  "local_id": "EV-0753",
+  "excerpt": "this earlier. It's the same link right over here. Okay, so that's about how easy it is. It's really not that difficult. Um, fairly straightforward as long as you have the the MCP folder set up. Immediately after it said a connected, it can see the MCP tools. Now, let me get the inputs for this scraper and then it actually steers scraper for me. So, I gave it some more"
+ },
+ {
+  "local_id": "EV-0754",
+  "excerpt": "instructions as to the sorts of roles that I look for. I usually look for founder, CEO, co-founder, owners, co-owners, partners, co-partners. You can see I kind of went all over the place and I settled on a new idea and my new idea um was as follows. You know, I was thinking about the best way to structure this and I said, you know, how do I typically do it? And it's always a"
+ },
+ {
+  "local_id": "EV-0755",
+  "excerpt": "good idea to kind of think about the way that you do it. What I do anytime I'm scraping leads for marketing purposes is I'll create a bunch of filters. I'll set them myself, right? Then I'll scrape a list. And then what I'll do is I'll check the list to ensure that the leads in the list"
+ },
+ {
+  "local_id": "EV-0756",
+  "excerpt": "um match my ICP which is you know your ideal customer persona and then usually if maybe less than 75% of the leads don't match my ICP you know maybe sorry if less than 75% of leads match basically more than 25% of leads suck, then I'll just redo it and I'll do it over and over and over again. And I've realized that this is how I work. So what I did is I explained this"
+ },
+ {
+  "local_id": "EV-0757",
+  "excerpt": "to Claude. And then I said, \"What I want you to do is scrape a list of 100, then go through 20 out of those 100 leads and determine how many of them are in my ICP. As long as more than 15 out of 20 are in my ICP, we're good. If it's less than 15 out of 20, I want you to go back and I want you to redo it.\" So what we did is I basically took this SOP and workflow and then I just turned it into"
+ },
+ {
+  "local_id": "EV-0758",
+  "excerpt": "my skill. Okay? Okay. And you can actually see that right here. It got through. It asked me some questions about this PPC agencies. And then it went it went ahead and did it. And so I ended up actually running this like I think this ran four or five times just redoing it over and over and over again. The first time was 9 out of 20. I think the second time was 9 out of 20. The"
+ },
+ {
+  "local_id": "EV-0759",
+  "excerpt": "third time was 15 out of 20. And then finally the fourth time and it just did all this entirely on its own. Self-driving was 19 out of 20. So I just sat back. I ran the skill once and then went and actually scraped a giant list of leads for me. In addition to that, I went through and enriched a big list of leads for me with this. And so now we're at the point where it's like, okay, what"
+ },
+ {
+  "local_id": "EV-0760",
+  "excerpt": "the heck do we do with all of these leads? Where do we put them? Um, and that's the final step, which I'll show you guys how to do right now. And, uh, hope to god my dang microphone is working this time. Okay. [snorts] So, you know, I was talking about an app that's used to deal with leads like this. And, uh, the one that we like using is called Instantly."
+ },
+ {
+  "local_id": "EV-0761",
+  "excerpt": "Instantly is basically a tool that allows you to send emails unass um for various campaigns entirely to a cold audience, people that haven't basically ever heard of you before. And that's different from like the warm audience campaigns which uh are typically managed via things like you know Mailchimp kit and so on and so forth. So, I have a bunch of email campaigns set up here for"
+ },
+ {
+  "local_id": "EV-0762",
+  "excerpt": "Clarvo, which is the startup, the namesake of this hat. And uh, you know, we're doing legal intake, staffing and recruiting, automotive, BDC, and so on and so forth. Up here, I set up a demo campaign just to show you guys what it would look like if we populated this sequence. And so, what we have here is the same copy that I put together manually is now here in the sequence."
+ },
+ {
+  "local_id": "EV-0763",
+  "excerpt": "Subject line is first name. I have my variables in here. And you're probably wondering, okay, where do we go from here? Well, it's actually pretty easy. you can preview um the the forms or rather preview the variables that are filled. And so what I did was I imported that list that I just generated, okay, and enriched. And then I just plugged it in here cuz I wanted to see what it"
+ },
+ {
+  "local_id": "EV-0764",
+  "excerpt": "would look like. So Marcus receives an email in his mailbox called Marcus. It says, \"Saw you're running a full service Amazon marketing shop. I spent a lot of time around Amazon seller agency circles 2 and wanted to say hi. Looks like our campaign has an extra two. So, I'm [clears throat] just going to remove that extra two. Preview that and then see how that how that goes. And that"
+ },
+ {
+  "local_id": "EV-0765",
+  "excerpt": "looks pretty good. Maybe I'm going to test somebody else. Um, so you're a Google badge partner running out of downtown Reno. Okay. How about Maya? Performance-based SEO for businesses with customuilt sites. How about rich marketing? Onetrack mind of clients, not just clicks. That one's kind of rough. That one sounds kind of AI, but you're never going to be able to fully escape"
+ },
+ {
+  "local_id": "EV-0766",
+  "excerpt": "this. saw you're running an SEO SEM shop out of uh Bissi. I've worked with a few agencies operating out of that region too. Wanted to say hi. So, we now have this actually like in our campaign. And what we could do now is we could just send it. And so, that's the skill. Now, obviously, we could turn this into a loop, [clears throat] but it depends on, you"
+ },
+ {
+  "local_id": "EV-0767",
+  "excerpt": "know, like would you even need it to be a loop? The only situation which would actually make sense to turn this into a loop is if you knew every single day you were going to make a new campaign. So, every day you needed a bunch of leads available. But this is a good example of like bottleneck thinking. To be honest, I don't actually need this all the time. Like I don't need one of my lead lists"
+ },
+ {
+  "local_id": "EV-0768",
+  "excerpt": "to be ready for me every morning. Um I could just do it on demand myself. Hopefully you guys see how quick it is. So yeah, you can very quickly and easily turn it into a routine. Cloud routine. You just tell Claude, \"Hey man, turn this into a routine. I want it to launch at 5:59 a.m. every morning. Here's the Appify connector. Here's everything else.\" And I did so um you know in that"
+ },
+ {
+  "local_id": "EV-0769",
+  "excerpt": "previous video uh and you know it works well. Routine's right over here. Daily Clervo Legion, it's called. Here's this uh big block runs every day at 5:59 a.m. PDT, [gasps and sighs] but I did that more as just like a demonstration that, you know, you can turn anything into a routine. Not necessarily it makes sense for us to turn this one into a routine. Okay, so that that is it in a nutshell."
+ },
+ {
+  "local_id": "EV-0770",
+  "excerpt": "That's how to go basically from a totally manual lead scraping process for marketing services to actually generating these marketing lists entirely autonomously. Um, it's also how to go from like standardized newsletters using kit.com and then turning into like a customized AI fuzzy variable-based newsletter. All very straightforward if you know what you're doing. And"
+ },
+ {
+  "local_id": "EV-0771",
+  "excerpt": "hopefully I've shown you guys how easy it is to to get out there and do it. And that takes us to, if you think about it, drum roll please, our next uh massive build. So we are now done with our personalized copy, which means we are done with the top of funnel. Nice job everybody. From here we can go down to middle of funnel which is speed to lead for appointment booking via email, SMS"
+ },
+ {
+  "local_id": "EV-0772",
+  "excerpt": "and voice. And I just want to outline the problem very quickly because I don't think enough people appreciate just how large of a problem it is. So the problem in marketing is a lot of the time you spend tons of money on leads. We're talking like thousands, tens of thousands of dollars. You do so in a variety of ways. I mean, one, you buy lead list, like I just showed you guys"
+ },
+ {
+  "local_id": "EV-0773",
+  "excerpt": "earlier, you can do with platforms like Ampify, but [clears throat] probably what you're doing more more likely is you're running ads, okay? And then after a certain number of clicks to that ad, somebody actually ends up booking a meeting with you and and doing some sort of intent, right? So, this is like a typical setting. It's like a booked meeting flow. And uh the issue is you"
+ },
+ {
+  "local_id": "EV-0774",
+  "excerpt": "spend lots of money on leads, okay? And then you only get a small fraction of that money back. The reason why is because most companies that run advertisements of any kind, hell, even organic brand-based advertisements like I do on my YouTube channel, is they do not treat their leads with the time, energy, and respect that they need in order to, you know,"
+ },
+ {
+  "local_id": "EV-0775",
+  "excerpt": "make a ton of money with it. I want you guys to think about leads, okay, this is just some lead as basically being directly convertible to money. This is money, man. And this is me drawing my little, you know, I don't know how to do it, but the dude's face, Thomas Jefferson or whatever. This is money. This is just a giant stack of bills. Um, this is a currency that is"
+ },
+ {
+  "local_id": "EV-0776",
+  "excerpt": "directly convertible to, you know, freedom dollars, Benjamins, Jefferson's. I'm not American. If it's not clear, I don't actually know what y'all call your money. Um, but you can convert gleeds to money. um if you know how to squeeze out every last drop of it. The issue is most people are just converting at a very low exchange rate right now. So they spend, you know, let's say $10,000 on leads a"
+ },
+ {
+  "local_id": "EV-0777",
+  "excerpt": "month and then they will receive maybe $20,000 on their leads a month, which is a 2x ros, which is quite poor. Uh means that you're spending 50% of every dollar you earn basically on the marketing to acquire that. It means your cost uh to acquire, you know, a lead is about 50% of what you make. [gasps] The the reality is if you treat your leads better, if you respond to them faster,"
+ },
+ {
+  "local_id": "EV-0778",
+  "excerpt": "if you make them think it's more customized and personalized, if you do everything in your power to give them the best experience possible before they pay you, ideally after they pay you, too. But that's definitely not marketing's job. You can turn that single solitary dollar sign into a lot of dollar bills, y'all. And so this is more or less what um I actually do all"
+ },
+ {
+  "local_id": "EV-0779",
+  "excerpt": "day. And when I mean all day, I mean, you know, like probably like 20 30% of my day. Um, I do it so much that I actually ended up starting a whole business around this with a friend of mine, uh, called Clearville. And the idea behind this is very similar to what I just talked about. You know, you paid for the lead. You just paid, I don't know, like a $30 cost per meeting or"
+ },
+ {
+  "local_id": "EV-0780",
+  "excerpt": "something, okay? And if they're in your calendar, you spent $30 on them. You might as well make as much money out of that person as humanly possible, right? Just makes sense. So, you know, check in with them immediately. Actually call them ASAP within a few seconds of them filling out your form. send them text messages, follow up and squeeze them like a damn wet rag. I mean, they gave"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

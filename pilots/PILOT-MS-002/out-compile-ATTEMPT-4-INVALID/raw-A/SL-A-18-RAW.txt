@@ -1,0 +1,784 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-18",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "After the flow runs, verify that the flag actually landed on the record and double check that the job was done correctly.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1021"],
+      "qualifiers": {
+        "scope": "invoice/proposal chase flow demo",
+        "condition": null,
+        "platform": "Claude / CRM",
+        "stage": "post-run verification",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "The run matched the 7-day records, searched Gmail, selected the template 'high net quick nudge on the invoice', and then had an opt-out check to verify whether that worked.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1021", "EV-1022"],
+      "qualifiers": {
+        "scope": "demo run of the chase flow",
+        "condition": null,
+        "platform": "Gmail / CRM",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "The presenter verifies which recipients went through the flow, wanting to confirm it was actually those three records with seven-day flags.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1022", "EV-1024"],
+      "qualifiers": {
+        "scope": "demo run",
+        "condition": null,
+        "platform": null,
+        "stage": "verification",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Claude will often avoid doing things for real because it doesn't want to use tokens, which the presenter describes as generally reasonably positive behavior; the fix is to instruct it to run for real using the info in the CRM.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1022", "EV-1023"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "The session was running on Opus 5, which is a little bit smarter than Sonnet 5, the model used at the beginning; usage was 44% of the way through a 5-hour limit resetting in 1 hour 27 minutes.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1023"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "When a contact replies asking to stop being emailed, or when the chase stage is set to closed, the system stops following up with them.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1025"],
+      "qualifiers": {
+        "scope": "demo CRM chase flow",
+        "condition": "stop condition detected / chase stage set to close",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Convert everything discussed and all the fixes into a skill that will be run once every morning, manually for now rather than as a loop.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1026", "EV-1027"],
+      "qualifiers": {
+        "scope": "invoice/proposal chase",
+        "condition": null,
+        "platform": "Claude skill",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "The skill goes through the day intervals 1, 2, 3, 7, 14, 28, 56, 84 and so on and matches to the templates as appropriate, including the opt-out check.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1027"],
+      "qualifiers": {
+        "scope": "invoice/proposal chase schedule",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "Convert the flow into a simple bulleted SOP so that a future Claude instance that does not have the context of the conversation will still be able to execute it reliably.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1028"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "future instance lacks conversation context",
+        "platform": "Claude",
+        "stage": "skill creation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "The connector is an MCP integration that only works inside a cloud session; the skill as SOP looks for the script and uses its own built-in integration each time it is run.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1028", "EV-1029"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude cloud session / MCP",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "The next step after the skill is to turn it into a loop that fires every morning at 5:59 a.m., running via a cloud instance rather than locally on the computer.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1029", "EV-1030"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude cloud",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "The ClickUp MCP integration can be added as a connector in the cloud environment; the presenter asks how to do the same for the local script.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1030", "EV-1031"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "ClickUp / MCP / cloud environment",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "If you are chasing people for more than 84 days and they still haven't got back to you, you probably have bigger issues, such as whether they will even sign the deal or pay the invoice.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1031", "EV-1032"],
+      "qualifiers": {
+        "scope": "invoice/proposal chase",
+        "condition": "more than 84 days without response",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "Ways to improve the follow-up flow include higher quality nudges, giving specific value like email sequences/newsletters with case studies and assets, insights, pre or post-meeting touches, customer stories, and gentle price objection check-ins.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1032", "EV-1033", "EV-1034"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "To add SMS to the follow-up flow, add the Klaviyo ('kuo/quo') connector, check for the phone number, and instruct the model to draft and send a message to their phone numbers, getting the phone numbers from the local ClickUp scrape.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1039", "EV-1040", "EV-1041"],
+      "qualifiers": {
+        "scope": "bottom-of-funnel follow-up flow",
+        "condition": null,
+        "platform": "Klaviyo connector / ClickUp",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "You must test a modified flow before using it at scale; you can't just assume it's going to work perfectly because a lot of bugs crop up throughout the process.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1041"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you want to use it at scale",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "The first major piece of maintenance advice is to get all of your login and authentication upfront, because login and authentication end up being something like 70% of all maintenance requests and problems the presenter has ever had.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1044", "EV-1045"],
+      "qualifiers": {
+        "scope": "maintaining systems, assumed for someone else / a client",
+        "condition": null,
+        "platform": null,
+        "stage": "maintenance",
+        "audience": "people maintaining systems for a client or their own business"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "A typical failure chain: a service upgrades, the connector breaks, the client gets angry or thinks the system doesn't work, calls in the middle of the night, and you have to do a last-second fix requiring getting them on a call to reauthenticate.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1046", "EV-1047"],
+      "qualifiers": {
+        "scope": "client context",
+        "condition": "service upgrade breaks connector",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "Despite it being far more secure not to have credentials for all your clients or team members, it is way easier to handle breakages on the fly if you actually have the core or root login.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1048", "EV-1049"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "maintenance",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "In Claude's local environment there is a section where you can store keys, and you can also store usernames and passwords there, such as clickup_user and clickup_pw.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1049", "EV-1050"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude local environment",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "You can store a line in your cloud routine or local environment that says: if there is an issue, log in via the stored credentials, navigate to the location where the stuff is, and regenerate the API key.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1051", "EV-1052"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "on issue / failure",
+        "platform": "Claude cloud routine or local environment",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "The models now have browsers and can use them to log into services for you, enabling a debug flow where the model self-manages an issue; the only situation in which that is doable is if you already have all the login and authentication.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1052", "EV-1053"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "only if you already have all login and authentication",
+        "platform": "Claude with browser",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "If you want something to be long-standing business infrastructure, a lot of the time you have to let go and tell the client to hand over the login so the system can log into the service itself.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1054"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you want long-standing business infrastructure",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "Self-healing means giving the model basically total carte blanche autonomy to fix and then rerun on other issues; it is described as giving AI systems the ability to rewrite their own instructions — if a step keeps failing in the skill, update that skill's instructions and try again.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1055", "EV-1056"],
+      "qualifiers": {
+        "scope": "robust skill, loop or routine development",
+        "condition": "on other issues / a step keeps failing",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "Add a line at the bottom of your skill or loop/routine saying that if you've tried doing this more than three times and it does not work, odds are there's an issue with the core service: figure out what the issue is, see if a route has changed, then update and add a log of everything done so future runs can work successfully.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1058", "EV-1059"],
+      "qualifiers": {
+        "scope": "skills, loops and routines",
+        "condition": "same attempt fails more than three times",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "If you do this, the model will virtually never cause problems again, so long as it has all the resources it needs to actually fix the problem, like a login.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1059", "EV-1060"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "so long as it has all the resources it needs, like a login",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "The recommended self-healing phrase, though the presenter says his phrasing is not perfect: if at any point you run into the same error more than three times, odds are something has materially changed in the systems you are interacting with; evaluate these changes, explore, and see if you can solve the problem, with full agency autonomy; after solving, report back and update your own skill/loop/routine with a change log of upgrades including the problem and your solution, update the actual skill itself, and append to this change log as you continue.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1061", "EV-1062", "EV-1063"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "same error more than three times",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "This self-healing phrase is something you can copy and paste into virtually every window and you will have a significantly better and higher performing system as a result.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1063"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "Self-healing is not 100% foolproof: with too much self-healing access, a spurious issue like a weird rate limit can cause the model to fundamentally change itself and screw up, though such cases are far less common than the model quitting due to a temporary rate limit.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1064", "EV-1065"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "when too much self-healing access is granted",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-030",
+      "text": "The whole point of automation is that it is hands-off — a system that functions without humans; the goal is to eliminate human labor completely where possible, not merely minimize it, redirecting labor to more profitable areas of the business.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1065", "EV-1066"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-031",
+      "text": "Old school drag-and-drop platforms like make.com and n8n give you automated error logging, full history logs, visible errors and incomplete executions on the diagram, and notifications by email or push, so you know when something screwed up and can fix it faster.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1070", "EV-1071", "EV-1072", "EV-1073"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "make.com / n8n",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-032",
+      "text": "Because AI moved so quickly and everyone builds slightly different things, there is no standardized observability and no built-in ability to log errors, leading to an 'erroring apocalypse' where things fail constantly unseen due to lack of notification routes.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1068", "EV-1069", "EV-1073", "EV-1074"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-033",
+      "text": "As a minimum, give all routines that run your business the ability to log errors to a de facto error channel inside your workspace.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1074"],
+      "qualifiers": {
+        "scope": "routines running your business",
+        "condition": null,
+        "platform": null,
+        "stage": "maintenance / error handling",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-034",
+      "text": "The first and most important thing about error handling is to make it visible: dump errors where you work — WhatsApp if your business works in WhatsApp, Slack if Slack, Discord if Discord — in a place specifically for errors like an errors channel.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1075", "EV-1076"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "every time an error occurs",
+        "platform": "WhatsApp / Slack / Discord",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-035",
+      "text": "Weave self-healing into the error message: report 'error with XYZ, tried XYZ to fix, succeeded or failed'; for a failure that format is totally fine and more than enough, giving everyone in the organization full visibility into processes.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1076", "EV-1077"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-036",
+      "text": "In Claude, add the Slack connector (via settings, scroll down to connectors) and at the very bottom of the prompt say something like: if you have any errors, send the error notification to the # error Slack channel.",
+      "source_language": "en",
+      "evidence_refs": ["EV-1078", "EV-1079", "EV-1080"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you have any errors",
+        "platform": "Claude connectors / Slack",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1021", "EV-1022", "EV-1024"],
+      "claim_temp_refs": ["TC-001", "TC-003"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Verify the flow's write-back and recipients after a run",
+        "trigger": "After the chase flow finishes running",
+        "condition": null,
+        "action": "Double check that the flag actually landed on the record and verify which recipients actually went through the flow (e.g. that it was those three with seven-day flags).",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1022", "EV-1023"],
+      "claim_temp_refs": ["TC-004"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Instruct the model to run for real when it avoids token usage",
+        "trigger": "Claude simulates or avoids executing because it doesn't want to use tokens",
+        "condition": null,
+        "action": "Tell it explicitly: run this for real using the info in the CRM.",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1025"],
+      "claim_temp_refs": ["TC-006"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Stop following up on opt-out or closed stage",
+        "trigger": "A recipient replies asking to stop being emailed, or the chase stage is set to closed",
+        "condition": null,
+        "action": "Do not continue following up with that contact.",
+        "do_not": ["Continue the chase sequence for contacts who opted out or whose chase stage is closed"],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1028"],
+      "claim_temp_refs": ["TC-009"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Write the skill as a simple bulleted SOP",
+        "trigger": "When converting a working conversation into a skill",
+        "condition": "A future Claude instance will not have the context of the conversation",
+        "action": "Convert it into a simple bulleted SOP so the future instance can still execute it reliably.",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-1026", "EV-1027", "EV-1028", "EV-1029", "EV-1030", "EV-1031"],
+      "claim_temp_refs": ["TC-007", "TC-008", "TC-009", "TC-010", "TC-011", "TC-012"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "From prompt to skill to daily loop for the invoice/proposal chase",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Convert conversation and fixes into a skill",
+            "action": "Ask Claude to convert everything discussed so far and all the fixes therein into a skill, to be run once every morning manually for now, not as a loop.",
+            "evidence_refs": ["EV-1026", "EV-1027"]
+          },
+          {
+            "order_key": 2,
+            "name": "Define the day schedule and template matching",
+            "action": "Have the skill go through 1, 2, 3, 7, 14, 28, 56, 84 days and so on, matching to the templates as appropriate, and include the opt-out check and everything else discussed.",
+            "evidence_refs": ["EV-1027"]
+          },
+          {
+            "order_key": 3,
+            "name": "Write it as a bulleted SOP",
+            "action": "Convert it into a simple bulleted SOP so that a future Claude instance without the conversation context can execute it reliably.",
+            "evidence_refs": ["EV-1028"]
+          },
+          {
+            "order_key": 4,
+            "name": "Retest the skill",
+            "action": "Go from the prompt to the skill stage and retest it; note that the connector is an MCP integration that only works inside a cloud session.",
+            "evidence_refs": ["EV-1028", "EV-1029"]
+          },
+          {
+            "order_key": 5,
+            "name": "Turn the skill into a loop",
+            "action": "Turn the skill into a loop that fires every morning at 5:59 a.m., running via a cloud instance instead of locally, adding the ClickUp MCP as a connector in the cloud environment and resolving the local script side.",
+            "evidence_refs": ["EV-1029", "EV-1030", "EV-1031"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-1039", "EV-1040", "EV-1041"],
+      "claim_temp_refs": ["TC-015", "TC-016"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Add SMS to the follow-up flow",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Add the connector",
+            "action": "Add the Klaviyo ('kuo/quo') connector.",
+            "evidence_refs": ["EV-1039", "EV-1040"]
+          },
+          {
+            "order_key": 2,
+            "name": "Check for the phone number",
+            "action": "Do some editing and check for the phone number.",
+            "evidence_refs": ["EV-1040"]
+          },
+          {
+            "order_key": 3,
+            "name": "Instruct drafting and sending of SMS",
+            "action": "Instruct: in addition to sending an email, also draft and then send a message to their phone numbers using Klaviyo, getting the phone numbers from the local ClickUp scrape.",
+            "required_inputs": ["phone numbers from the local ClickUp scrape"],
+            "evidence_refs": ["EV-1040", "EV-1041"]
+          },
+          {
+            "order_key": 4,
+            "name": "Test before scaling",
+            "action": "Test it before using it at scale; do not assume it is going to work perfectly, since a lot of bugs crop up throughout the process.",
+            "evidence_refs": ["EV-1041"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1041"],
+      "claim_temp_refs": ["TC-016"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED", "PASSO_UNICO"],
+      "structure": {
+        "name": "Test modified flows before using them at scale",
+        "trigger": "After modifying a flow",
+        "condition": "If you want to use it at scale",
+        "action": "Test it; do not assume it will work perfectly, because a lot of bugs crop up throughout the process.",
+        "do_not": ["Assume a modified flow works perfectly without testing"],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1044", "EV-1045", "EV-1053", "EV-1054"],
+      "claim_temp_refs": ["TC-017", "TC-019", "TC-022", "TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Get all login and authentication upfront",
+        "trigger": "When taking on maintenance of systems for a client or your own business",
+        "condition": null,
+        "action": "Get all of your login and authentication upfront, including the core or root login, because login and authentication account for roughly 70% of maintenance requests and problems, and a debug flow is only doable if you already have all the login and authentication.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": ["It is acknowledged as far more secure NOT to hold credentials for all clients or team members; the recommendation trades security for maintainability"]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1049", "EV-1050", "EV-1051", "EV-1052"],
+      "claim_temp_refs": ["TC-020", "TC-021"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Store credentials in the environment and add a re-auth debug line",
+        "trigger": "A recurring credential/connector failure (e.g. a ClickUp fail that continues to occur)",
+        "condition": null,
+        "action": "Store usernames and passwords (e.g. clickup_user, clickup_pw) alongside keys in the local or cloud environment, and store a line in the routine that says: on issue, log in via the creds, navigate to the location where the stuff is, and regenerate the API key.",
+        "do_not": [],
+        "precedence": null,
+        "prerequisites": ["Possession of the core or root login credentials"]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1055", "EV-1056", "EV-1058", "EV-1059", "EV-1061", "EV-1062", "EV-1063"],
+      "claim_temp_refs": ["TC-024", "TC-025", "TC-027", "TC-028"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Self-healing line at the bottom of every skill, loop or routine",
+        "trigger": "The same error or failed attempt occurs more than three times",
+        "condition": null,
+        "action": "Add a line at the bottom of the skill/loop/routine stating that odds are something has materially changed in the systems being interacted with: evaluate the changes, explore, and try to solve the problem with full agency autonomy; after solving, report back and update the skill/loop/routine itself with a change log of upgrades including the problem and the solution, appending to that change log over time.",
+        "do_not": ["Force the model to retry the same failing attempt over and over"],
+        "precedence": null,
+        "prerequisites": ["The model must have all the resources it needs to fix the problem, such as a login"]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-011",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-1064", "EV-1065"],
+      "claim_temp_refs": ["TC-029"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": ["Give the model too much self-healing access"],
+        "why": "The presenter has had situations where too much self-healing access, combined with a spurious issue like a weird rate limit, caused the model to fundamentally change itself and screw up — though such cases are far less common than the model quitting due to a temporary rate limit.",
+        "conditions": ["When granting autonomy to fix and rerun"]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-012",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-1074", "EV-1075", "EV-1076", "EV-1077"],
+      "claim_temp_refs": ["TC-033", "TC-034", "TC-035"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Log errors visibly to a dedicated errors channel where you work",
+        "trigger": "Every time an error occurs in a routine that runs your business",
+        "condition": null,
+        "action": "As a minimum, give the routine the ability to log the error to a de facto errors channel in the workspace where your business actually works (WhatsApp, Slack or Discord), with a message weaving in self-healing: 'error with XYZ, tried XYZ to fix, succeeded or failed'.",
+        "do_not": [],
+        "precedence": null
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-013",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-1078", "EV-1079", "EV-1080"],
+      "claim_temp_refs": ["TC-036"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Wire Claude error notifications into Slack",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Add the Slack connector",
+            "action": "In Claude, go to settings, scroll all the way down to connectors and add Slack.",
+            "evidence_refs": ["EV-1078", "EV-1079", "EV-1080"]
+          },
+          {
+            "order_key": 2,
+            "name": "Add the error notification instruction",
+            "action": "At the very bottom of the prompt, say something like: if you have any errors, send the error notification to the # error Slack channel.",
+            "evidence_refs": ["EV-1078"]
+          },
+          {
+            "order_key": 3,
+            "name": "Have an errors channel in Slack",
+            "action": "Set up an errors channel inside Slack to receive the error messages.",
+            "evidence_refs": ["EV-1080"]
+          }
+        ]
+      },
+      "defects": []
+    }
+  ]
+}

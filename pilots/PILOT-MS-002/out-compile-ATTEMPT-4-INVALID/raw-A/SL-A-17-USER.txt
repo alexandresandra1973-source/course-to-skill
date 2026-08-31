@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-17
+boundaries: 18527.12s - 19711.52s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+10 as well. Um but I think they were like so great that we're probably not seeing them on this dashboard. Point that I'm making is you guys can design basically your own apps at this point very easily and very um straightforwardly. I would encourage you guys have something like this at least for your own companies. Uh it's very easy to put together along with a data ingestion pipeline. You know you could do this thing in I don't know probably like 30 minutes or so just like I did here. Um and keep in mind I was also just using cheap models and I was being quite rate limited as well. um you know, like for my own companies because tokens are not a concern. You know, it's like a business expense and I'm happy to spend a tremendous amount. I think one month I spent like 14 or $15,000 on them. Um I'm I'm fine just like blasting everything with Fable 5, spawning multiple Fable 5 sub agents and then even using fast mode, which is a feature that allows the model, I think, to achieve somewhere around a 2x speed multiple. Um it doesn't really matter to me, but you know, in our case, I was trying to do it the way that everybody else does it because I want you to understand and be able to learn. Um, we still got something extraordinarily economically valuable done in just half an hour. And that takes me to that middle of funnel data collection and tracking item now done. All we really have left on the project side is a automation of highquality follow-ups again via email and SMS. We'll use the same um tools that we used back here to do our speed delete. It's just now instead of it being event driven, it's going to be schedule driven. We're basically going to come up with the cadence by which we are following up entirely on our own. And I'm going to show you guys that tomorrow. Okay, so today we're going to take everything that we learned in the previous set of builds and then apply it to a really practical marketing activity. And this one also does kind of verge on sales similar to the uh uh not the last one which is the dashboard one before which was speed to lead, but it's still really important and yeah, I think it's worth you guys spending at least a little bit of time internalizing that. Um what it's going to be is we're going to automate high quality follow-ups via email and SMS. And so just like last time I used this platform called Kuo, which I'm not affiliated with at all. You guys can do whatever the heck you want. I'm going to use Kuo for this one. Um, but I'm going to walk you guys through how to set it up on Twilio as well. And then over here, I'm just going to use my email connector, which I've shown you guys how to do, too. And this is a really, really high ROI sort of setup. What it looks like for people that are unacquainted with this sort of thing is um, most of the time sales and marketing functions within a company will work out of a CRM and that just stands for customer relationship management platform. customer relationship management platforms just have a bunch of leads that are arrayed sort of uh including all of the conversation history between you and the prospect and so on. And so I've actually like built out a really simple customer relationship manager right over here. As you guys could see, we have a bunch of different fields. Let me just make this a little easier to see. Um our hypothetical CRM, and this is actually pretty close to my real CRM. Um although it, you know, I made it a little bit different. I'm not just giving everything away. But basically, you'll have like a company name, let's say. You'll have a certain amount of money that the deal is pending for. So, maybe this is a $4,200 deal for Silver Birch Wellness. Uh you have the contact. You have, you know, the date that the invoice was sent. Maybe um I don't know, uh number of days outstanding before people pay you. Uh your due date, you know, when the [snorts] invoice was due and and when it eventually got paid, the various services therein, and so on and so forth. And what it really is, if you just think about it, is this is a glorified Google sheet, right? In our case, it's happening on a platform called ClickUp, but obviously you can do this on whatever platform you want. Typically, you'll separate them into different stages. So, these are clients that are actively in progress. These are clients whose invoices are upcoming, who we sent a while ago, and you know, we're like waiting for them to pay for us to start. And, you know, the question behind the CRM is basically, you know, after a while, man, this gets pretty complicated. There are a lot of people and a lot of them have different due dates. A lot of them are for different amounts and stuff like that. um how can we stay on top of it and actually make sure to actively follow up with all the people that need to be followed up with that are paying us and or not paying us. And that's where a system like what I'm proposing really comes in handy. So the reality is most people are not following up on their invoices anywhere near as robustly as they should. Also, people aren't checking in with prospects for any uh part of the marketing stack, whether it is beginning the business relationship or it's even just like, "Hey, are you making it to the to the meeting that we booked last week?" Um, so if you guys just follow up more, you'll usually make significantly more money. And I don't mean to say that you're going to like, you know, make 100 times the money or anything like that, but you can genuinely add 20 to 30% of the revenue of your organization um, simply by solidifying your follow-ups. And you can kind of think about this similarly to how we were thinking about speed to lead before. The whole promise of speed to lead, right? And I cannot draw to save my life today because it's kind of laggy because I'm doing a lot of stuff with agents in the background. The whole promise of speed to lead if you think about it is that we can squeeze out way more juice. So if you know before I would get 10 leads and then only I don't know three of them would come onto the call. Okay, that's a call rate of 30%. After because we're contacting them really really quickly and we're following up consistently and stuff like that. Maybe we can make it to six calls. Well this system basically does the same thing. If before, you know, we had 10 potential clients, okay? Uh and now we were only getting, I don't know, two clients, let's say, because I don't know, you know, only 20% of people actually end up signing the paperwork or something in the first place. That's before. Uh after the whole idea is because we're following up so robustly and everything like that, maybe we can turn 10 leads into three clients. This right over here is literally 150% improvement in rev. You know, this over here is a 200% improvement in Rev. If you attach these two together, 200* 150 uh or 1.5* 2 rather is 300% improvement in rev, which uh hopefully I'm, you know, not overstating is pretty insane. And if a company was previously making, I don't even know, let's just say $250,000 a month on average, and you apply these systems and take it to $750,000 a month on average, you are producing 500k a month in economic value. And you know, whether you're working for the company's marketing department or it is your company we're talking about here, um, you're going to be compensated a percentage of that. Even 10% of that, 50 grand a month is pretty huge, right? And so this is this is how I make my money. Hopefully I'm just showing you guys all the sauce because yeah, you can use automations like this to do tremendous tremendous uh things for companies. Okay. Anyway, so yeah, how does this work? We query the the CRM and basically we'll read through all the conversations between me and the prospect historically within my um um email. Then we'll check trigger conditions. So trigger conditions are just a set of things that we're going to put up like, you know, does this person actually need a nudge? Have they given us all the information that uh we need in order to determine that they're going to pay or they're not going to pay? What is outstanding? Then we'll just pick and choose a draft from a template library that we've created ahead of time. And then we'll send. And so we're just going to repeat this process over and over and over and over again. Um on my case, I like doing it on a daily schedule. So once a day, we're going to run a system that just loops this over. And as I'm sure you guys can imagine, we are literally going to use a loop for this. And in that way, we'll just check to see, you know, hey, who still needs a nudge? Who still needs a nudge? Who still needs a nudge? Because we're using a template library instead of just raw dogging it like most people will do with AI. The quality of the follow-ups tend to be a lot higher and they're closer to your tone of voice, too. So you'll find there are way fewer catastrophic screw-ups because you know the AI is just pulling from like your TVO all the time. And then you also get to send the cadence of how often you want. So for instance, let's say um I don't know if they've gone quiet and there's no reply 7 days after the proposal, you can actually check and see, okay, have they replied in the last 7 days? If they haven't, you know, sent any emails or something, then and only then I will send a brief nudge and I'm going to pick from my nudge pool. Um if they ghosted the question, we asked them and they didn't answer, then I'll send a nudge. the nudge will be a little bit different because now it's, you know, to do with them ghosting the question. Hey Pete, let me know if there's anything more I can clarify on this. Thank you. If they ask for later, okay, they said follow up next month and it is next month, then we will actually catch that and then we'll follow up then. Then if there's a warm signal, they open the last email a bunch of times, we can send them a nudge, too. These are all just ideas for how detailed you can make the system. Um, and yeah, I think I've just more or less given you guys everything that you need in order to make it work. Um, you can make the template libraries as complicated as you want. Um, so yeah, I'm going to do pretty simple ones to start, but hopefully you guys see just how you could evolve a system like this and turn it into somewhere really cool. Okay, so what do we actually do? Well, the first thing we need to do is we actually need to connect this CRM to Claude. And as mentioned, I'm using ClickUp, which is one of many CRM that you could use. Uh, you guys might be doing this in Notion, might be doing this in ASA, you might be doing this in Pipe Drive, you know, whatever it is that you're using. I want you to know that's okay. Um, processes are going to be quite similar. either you're going to connect to the MCP or you're going to connect to the API. And I'm going to try connecting to the MCP since obviously that's preferential. So, first thing I'm going to do, and uh this is just what I've gotten in the habit of doing with all my automations, is I'm going to go down to the connector library, and I'm just going to see, do we have a pre-created ClickUp connector somewhere here? I'm going to type ClickUp. If we have a ClickUp connector, we're just going to oneshot connect to that. If we don't have a ClickUp connector, then we'll have to do a little bit more complicated work. And as you guys can see here, we actually do have a oneshot ClickUp connector. So I can now just press this button and it'll immediately just ask me to log in. Okay. And so what I'm going to do now is I'm just going to log into Claude. And once I've logged into Claude, it will now try and do the same connection with ClickUp. So this is my workspace here called NSM. And I'm now going to connect to that. And now, if you guys think about it, we now have our MCP connector all good to go. It actually just connected to ClickUp, right? Cool. So what I also want to do is I want to find the specific place of this list of mine and uh you know in my CRM where this is is it's inside of the operations space and it's called invoice collection CRM. So what I'm going to do is I'm just going to copy this. I'm going to go back to Claude and then I'm going to say I just added and let me voice transcribe this. I keep on forgetting that I can do that. I just added a ClickUp connector. I want you to query a specific list within a space and then get me some of the information therein just to verify that you can actually connect and everything is okay. So as mentioned I always want to start at the end just by verifying can I actually get that information. This is the list and I'll say get me everyone that hasn't been let's see how do I frame this inside of the CRM. Get me anything with a days outstanding of seven days. let's say with a days outstanding equal to 7 days. So the whole idea will be this will now um demo my flow and sorry I just reached my usage limit for fable because I don't have any more usage credits if you guys remember from yesterday. So I had to switch that back to 5. Um what it's going to do is it's going to see can we pull tasks that are 7 days late. Uh 7 days late obviously is just like one of the many benchmarks I will use one of the many thresholds. So what it's doing is it's going to figure out how to do this and then we'll sort of have that prompted. We'll then be able to use this to build our skill later. Okay. And as we can see, we pulled a bunch of information here on the specific people. So, we have Erica Doyle, amount due on receipts, Dr. Nina Patel, and then Marcus Ben. And these are all different deals. So, what I want to do here is I'm just going to ignore this middle chunk here because there's a bunch of information uh that it looks like it misunderstood surrounding what field I wanted it to pull. I just want to verify, can I also get their email addresses? What are their email addresses? So, if I can get their email addresses, then I can actually send a check-in. And it looks like their email address is nickleclick.ai. The reason why is because I just added one of my emails. So, all contact emails route to my own email for demo purposes cuz I want to email them, right? Okay, cool. So, now that I have them, send Erica Doyle this message. Just going to verify this is possible. Hey, Erica, just wanted to check in. How are things going on the invoice? Let me know if you have cues. and I'll say thanks Nick. So, we should have an email to Erica aka Nickleftclick.ai with this. Now, it's saying we can't actually do this. We don't have the ability to send from my email. I'm just going to double check why. So, I'll say is there no sending uh tool inside of the Gmail connector. Ask it that question. We'll see how it goes. Let me actually check rather than rely on the tool name list. So, now it's actually going to look through the tools. I checked and my claim holds up. The Gmail connector exposes these tools. So, create draft, update draft, no send message, no send draft. Um, so, okay, after finagling it, it's given me three options that we could use to create emails and then actually send them. I was unaware. I thought you could do this in the Gmail connector. Um, doesn't look like you can, but that's okay. Uh, you know, the question is not will I get a bug or will I not be able to do it the way I want to do it, but when I will not be able to do it. So, let me show you guys how I deal with that. Um, first I asked, so what are our options? I had to do a bunch of research and now it's giving me Gmail API with your own OOTH client. Let's do Gmail API. What it's going to do now is build a brief pipeline that allows us to do this. It's then going to open up OOTH, which is that like, you know, check-in thing where it like stores my credentials. So, it's went it's found some libraries. It's now going to write an authentication script. After it's done authenticating me, I will have to um log in. Basically, still doing just a little bit of testing. Okay. Hey, and I'm now logging in to my email account. So, it was fairly straightforward. The model just asked me a couple questions, gave me a link to click to like give it my uh Google Cloud Console access. And now it's actually going to send a message to my own address to prove that the whole path works without actually touching a client. So, it sent one to me. Let me now take a look. And you can see that it has actually done this. Hey Nick, just wanted to check in. How are things going on with the invoice? Let me know if you have cues. Now, we said Erica, but uh you know, it's actually done uh uh you know, Nick. So, a couple things. I'm going to change the subject line now and then I'm going to change the message that we're sending. First, I'm going to say write 10 simple messages like the one you just sent me for checkin purposes. Use very light language. Nothing hard, just super soft nudges that fit on one line. Okay. And then um for subjects use straightforward ones like first name or maybe I don't know like invoice first name or you know how are things going etc. So these aren't you know the most pushy of follow-ups but the idea is it's going to run completely automatically on a loop so you might as well um you know be nicer as opposed to be super crazy harsh. I've done a lot of following up in my time. There's really smart ways to follow up and there's also kind of hard ways to follow up. So, all of these have m dashes. I'll say no m dashes. We're just going to fix all of that right now. Just checking on invoice. Uh, we don't need the number. Also, don't mention the invoice number. So, what else do we got? Cool. And then sign off all of them with thanks dashnick. Cool. That looks good. So, first name, how are things going? Invoice, first name, quick check-in, invoice, following up, hey, first name, anything you need. Check in, invoice. So, now it's just going to write all of these. And the idea is I'm going to I'm going to loop all 10 of these into a a follow-up flow. Cool. Looks good. Looks good. We're not seeing any of that invoice information. It's just all pretty simple. So, excellent. This will be our template pool. The idea is we can never send two of these in a row if they're the exact same. They always need to be different templates. So the flow will work like this. To start once per day, you will query ClickUp. You'll determine whether people are 1 day outstanding, 2 days outstanding, 3 days outstanding, 7 days outstanding, 14 days outstanding, 21 days outstanding, 28 days outstanding, uh 56 days outstanding, um 84 days outstanding. And what happens is every time that you find a person that is one of those days outstanding, you send an email template. um you fill in the information provided in the merge variables with the customer's actual or rather the prospect's actual uh information. So if it's being sent to a woman named Erica for instance, you should say hey Erica you should not say hey first name and we will slowly and reliably continuously nudge them towards the finish line. One more step just so that we don't end up sending the same email. After you um verify that it is matching one of the days outstanding thresholds, go through all of our email conversation history with the prospect to verify and see what sort of follow-ups we've um sent them. That way, we're not going to send them the exact same message twice. Okay, so kind of all over the place there, but I think I got what I wanted to say. Let's see how it performs. Looks like it's going to start by confirming the scopes of my quote unquote token. And uh the history check can't work with the token. So, we're just going to have to make a new one. So, I'll say add a read scope to verify. Basically, what we want to do is we just want to like actually check my the real live email to make sure that we're not sending the same thing twice. There are some situations as well in which it might make sense not to send the email at all. Like for instance, if a person says, "Please stop emailing me. I've received tons of emails from you. I don't want another one or something like that," then obviously I probably shouldn't email them. So, we'll uh we'll add that functionality in later just uh to verify that, you know, it's actually it's actually working. Cool. Anyway, we did that authentication. Let's double back. So, this is now going through and building uh the flow that I want. It's not actually a skill just yet, but yeah, let's actually run this thing and see what goes on. We're going to send to my email. Um I'm going to go back here first and then open up that. Okay. And so now we have, let me see, just running a manual check. Sunhill Property, Pace Orthodontics, Ridgeway Autodetailing. These are the three that should be followed up with. Okay. So I'm going to go back to Claude and I'll say, "Okay, let's run this on a 7day threshold. Again, I want you to go through the whole process end to end and actually tell me everything that you see so that I can verify if the flow is occurring the way I want it to occur." One more change before we do this. There will be some situations in which it doesn't make sense to continue it continue the nudging process. If the prospect explicitly tells us not to follow up with them for whatever reason, then flag that on the actual ClickUp task and then don't send the email logically. So now it's actually going to go through the opt- out detection flow and then narrate everything that it is doing. So what ClickUp fields are available for flagging, a notes, and a chase stage with a closed option. Looks like it'll use both of those, which is nice. And it'll actually start updating my CRM. Okay, now it's running the full flow. It's found a bunch of my own emails um to myself. So, it's just going to verify kind of what's what. And it looks like clean path earlier is working. So, it correctly remembered templates one and two from earlier selected number three. Now, it's testing the opt out path. Need a real inbound reply containing a stop phrase. So, now they've added that in there basically saying, "Hey man, please don't send me emails. Um, please stop emailing me about this. We are disputing this invoice through our lawyer." Okay, so that's what it came up with. If there are situations where that would occur, you should probably not continue emailing the person, right? Kind of makes sense. Um, if that does happen, then you've done something wrong. Okay. Chase stage to close a note and a comment for the audit trail. So now it's actually updating the flow. Let me
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0961",
+  "excerpt": "10 as well. Um but I think they were like so great that we're probably not seeing them on this dashboard. Point that I'm making is you guys can design basically your own apps at this point very easily and very um straightforwardly. I would encourage you guys have something like this at least for your own companies. Uh it's very easy to put together along with a data"
+ },
+ {
+  "local_id": "EV-0962",
+  "excerpt": "ingestion pipeline. You know you could do this thing in I don't know probably like 30 minutes or so just like I did here. Um and keep in mind I was also just using cheap models and I was being quite rate limited as well. um you know, like for my own companies because tokens are not a concern. You know, it's like a business expense and I'm happy to spend a tremendous amount. I think one month I"
+ },
+ {
+  "local_id": "EV-0963",
+  "excerpt": "spent like 14 or $15,000 on them. Um I'm I'm fine just like blasting everything with Fable 5, spawning multiple Fable 5 sub agents and then even using fast mode, which is a feature that allows the model, I think, to achieve somewhere around a 2x speed multiple. Um it doesn't really matter to me, but you know, in our case, I was trying to do it the way that everybody else does it"
+ },
+ {
+  "local_id": "EV-0964",
+  "excerpt": "because I want you to understand and be able to learn. Um, we still got something extraordinarily economically valuable done in just half an hour. And that takes me to that middle of funnel data collection and tracking item now done. All we really have left on the project side is a automation of highquality follow-ups again via email and SMS. We'll use the same um tools"
+ },
+ {
+  "local_id": "EV-0965",
+  "excerpt": "that we used back here to do our speed delete. It's just now instead of it being event driven, it's going to be schedule driven. We're basically going to come up with the cadence by which we are following up entirely on our own. And I'm going to show you guys that tomorrow. Okay, so today we're going to take everything that we learned in the previous set of builds and then apply it"
+ },
+ {
+  "local_id": "EV-0966",
+  "excerpt": "to a really practical marketing activity. And this one also does kind of verge on sales similar to the uh uh not the last one which is the dashboard one before which was speed to lead, but it's still really important and yeah, I think it's worth you guys spending at least a little bit of time internalizing that. Um what it's going to be is we're going to automate high quality follow-ups via"
+ },
+ {
+  "local_id": "EV-0967",
+  "excerpt": "email and SMS. And so just like last time I used this platform called Kuo, which I'm not affiliated with at all. You guys can do whatever the heck you want. I'm going to use Kuo for this one. Um, but I'm going to walk you guys through how to set it up on Twilio as well. And then over here, I'm just going to use my email connector, which I've shown you guys how to do, too. And this"
+ },
+ {
+  "local_id": "EV-0968",
+  "excerpt": "is a really, really high ROI sort of setup. What it looks like for people that are unacquainted with this sort of thing is um, most of the time sales and marketing functions within a company will work out of a CRM and that just stands for customer relationship management platform. customer relationship management platforms just have a bunch of leads that are arrayed"
+ },
+ {
+  "local_id": "EV-0969",
+  "excerpt": "sort of uh including all of the conversation history between you and the prospect and so on. And so I've actually like built out a really simple customer relationship manager right over here. As you guys could see, we have a bunch of different fields. Let me just make this a little easier to see. Um our hypothetical CRM, and this is actually pretty close to my real CRM. Um although"
+ },
+ {
+  "local_id": "EV-0970",
+  "excerpt": "it, you know, I made it a little bit different. I'm not just giving everything away. But basically, you'll have like a company name, let's say. You'll have a certain amount of money that the deal is pending for. So, maybe this is a $4,200 deal for Silver Birch Wellness. Uh you have the contact. You have, you know, the date that the invoice was sent. Maybe um I don't know,"
+ },
+ {
+  "local_id": "EV-0971",
+  "excerpt": "uh number of days outstanding before people pay you. Uh your due date, you know, when the [snorts] invoice was due and and when it eventually got paid, the various services therein, and so on and so forth. And what it really is, if you just think about it, is this is a glorified Google sheet, right? In our case, it's happening on a platform called ClickUp, but obviously you can do"
+ },
+ {
+  "local_id": "EV-0972",
+  "excerpt": "this on whatever platform you want. Typically, you'll separate them into different stages. So, these are clients that are actively in progress. These are clients whose invoices are upcoming, who we sent a while ago, and you know, we're like waiting for them to pay for us to start. And, you know, the question behind the CRM is basically, you know, after a while, man, this gets pretty"
+ },
+ {
+  "local_id": "EV-0973",
+  "excerpt": "complicated. There are a lot of people and a lot of them have different due dates. A lot of them are for different amounts and stuff like that. um how can we stay on top of it and actually make sure to actively follow up with all the people that need to be followed up with that are paying us and or not paying us. And that's where a system like what I'm proposing really comes in handy. So the"
+ },
+ {
+  "local_id": "EV-0974",
+  "excerpt": "reality is most people are not following up on their invoices anywhere near as robustly as they should. Also, people aren't checking in with prospects for any uh part of the marketing stack, whether it is beginning the business relationship or it's even just like, \"Hey, are you making it to the to the meeting that we booked last week?\" Um, so if you guys just follow up more,"
+ },
+ {
+  "local_id": "EV-0975",
+  "excerpt": "you'll usually make significantly more money. And I don't mean to say that you're going to like, you know, make 100 times the money or anything like that, but you can genuinely add 20 to 30% of the revenue of your organization um, simply by solidifying your follow-ups. And you can kind of think about this similarly to how we were thinking about speed to lead before. The whole promise"
+ },
+ {
+  "local_id": "EV-0976",
+  "excerpt": "of speed to lead, right? And I cannot draw to save my life today because it's kind of laggy because I'm doing a lot of stuff with agents in the background. The whole promise of speed to lead if you think about it is that we can squeeze out way more juice. So if you know before I would get 10 leads and then only I don't know three of them would come onto the call. Okay, that's a call"
+ },
+ {
+  "local_id": "EV-0977",
+  "excerpt": "rate of 30%. After because we're contacting them really really quickly and we're following up consistently and stuff like that. Maybe we can make it to six calls. Well this system basically does the same thing. If before, you know, we had 10 potential clients, okay? Uh and now we were only getting, I don't know, two clients, let's say, because I don't know, you know, only 20% of people"
+ },
+ {
+  "local_id": "EV-0978",
+  "excerpt": "actually end up signing the paperwork or something in the first place. That's before. Uh after the whole idea is because we're following up so robustly and everything like that, maybe we can turn 10 leads into three clients. This right over here is literally 150% improvement in rev. You know, this over here is a 200% improvement in Rev. If you attach these two together, 200* 150"
+ },
+ {
+  "local_id": "EV-0979",
+  "excerpt": "uh or 1.5* 2 rather is 300% improvement in rev, which uh hopefully I'm, you know, not overstating is pretty insane. And if a company was previously making, I don't even know, let's just say $250,000 a month on average, and you apply these systems and take it to $750,000 a month on average, you are producing 500k a month in economic value. And you"
+ },
+ {
+  "local_id": "EV-0980",
+  "excerpt": "know, whether you're working for the company's marketing department or it is your company we're talking about here, um, you're going to be compensated a percentage of that. Even 10% of that, 50 grand a month is pretty huge, right? And so this is this is how I make my money. Hopefully I'm just showing you guys all the sauce because yeah, you can use automations like this to do tremendous"
+ },
+ {
+  "local_id": "EV-0981",
+  "excerpt": "tremendous uh things for companies. Okay. Anyway, so yeah, how does this work? We query the the CRM and basically we'll read through all the conversations between me and the prospect historically within my um um email. Then we'll check trigger conditions. So trigger conditions are just a set of things that we're going to put up like, you know, does this person actually need a nudge?"
+ },
+ {
+  "local_id": "EV-0982",
+  "excerpt": "Have they given us all the information that uh we need in order to determine that they're going to pay or they're not going to pay? What is outstanding? Then we'll just pick and choose a draft from a template library that we've created ahead of time. And then we'll send. And so we're just going to repeat this process over and over and over and over again. Um on my case, I like doing it on"
+ },
+ {
+  "local_id": "EV-0983",
+  "excerpt": "a daily schedule. So once a day, we're going to run a system that just loops this over. And as I'm sure you guys can imagine, we are literally going to use a loop for this. And in that way, we'll just check to see, you know, hey, who still needs a nudge? Who still needs a nudge? Who still needs a nudge? Because we're using a template library instead of just raw dogging it like most people"
+ },
+ {
+  "local_id": "EV-0984",
+  "excerpt": "will do with AI. The quality of the follow-ups tend to be a lot higher and they're closer to your tone of voice, too. So you'll find there are way fewer catastrophic screw-ups because you know the AI is just pulling from like your TVO all the time. And then you also get to send the cadence of how often you want. So for instance, let's say um I don't know if they've gone quiet and"
+ },
+ {
+  "local_id": "EV-0985",
+  "excerpt": "there's no reply 7 days after the proposal, you can actually check and see, okay, have they replied in the last 7 days? If they haven't, you know, sent any emails or something, then and only then I will send a brief nudge and I'm going to pick from my nudge pool. Um if they ghosted the question, we asked them and they didn't answer, then I'll send a nudge. the nudge will be a little bit"
+ },
+ {
+  "local_id": "EV-0986",
+  "excerpt": "different because now it's, you know, to do with them ghosting the question. Hey Pete, let me know if there's anything more I can clarify on this. Thank you. If they ask for later, okay, they said follow up next month and it is next month, then we will actually catch that and then we'll follow up then. Then if there's a warm signal, they open the last email a bunch of times, we can send"
+ },
+ {
+  "local_id": "EV-0987",
+  "excerpt": "them a nudge, too. These are all just ideas for how detailed you can make the system. Um, and yeah, I think I've just more or less given you guys everything that you need in order to make it work. Um, you can make the template libraries as complicated as you want. Um, so yeah, I'm going to do pretty simple ones to start, but hopefully you guys see just how you could evolve a system like this"
+ },
+ {
+  "local_id": "EV-0988",
+  "excerpt": "and turn it into somewhere really cool. Okay, so what do we actually do? Well, the first thing we need to do is we actually need to connect this CRM to Claude. And as mentioned, I'm using ClickUp, which is one of many CRM that you could use. Uh, you guys might be doing this in Notion, might be doing this in ASA, you might be doing this in Pipe Drive, you know, whatever it is"
+ },
+ {
+  "local_id": "EV-0989",
+  "excerpt": "that you're using. I want you to know that's okay. Um, processes are going to be quite similar. either you're going to connect to the MCP or you're going to connect to the API. And I'm going to try connecting to the MCP since obviously that's preferential. So, first thing I'm going to do, and uh this is just what I've gotten in the habit of doing with all my automations, is I'm going to go"
+ },
+ {
+  "local_id": "EV-0990",
+  "excerpt": "down to the connector library, and I'm just going to see, do we have a pre-created ClickUp connector somewhere here? I'm going to type ClickUp. If we have a ClickUp connector, we're just going to oneshot connect to that. If we don't have a ClickUp connector, then we'll have to do a little bit more complicated work. And as you guys can see here, we actually do have a oneshot"
+ },
+ {
+  "local_id": "EV-0991",
+  "excerpt": "ClickUp connector. So I can now just press this button and it'll immediately just ask me to log in. Okay. And so what I'm going to do now is I'm just going to log into Claude. And once I've logged into Claude, it will now try and do the same connection with ClickUp. So this is my workspace here called NSM. And I'm now going to connect to that. And now, if you guys think about it, we"
+ },
+ {
+  "local_id": "EV-0992",
+  "excerpt": "now have our MCP connector all good to go. It actually just connected to ClickUp, right? Cool. So what I also want to do is I want to find the specific place of this list of mine and uh you know in my CRM where this is is it's inside of the operations space and it's called invoice collection CRM. So what I'm going to do is I'm just going to copy this. I'm going to go back to"
+ },
+ {
+  "local_id": "EV-0993",
+  "excerpt": "Claude and then I'm going to say I just added and let me voice transcribe this. I keep on forgetting that I can do that. I just added a ClickUp connector. I want you to query a specific list within a space and then get me some of the information therein just to verify that you can actually connect and everything is okay. So as mentioned I always want to start"
+ },
+ {
+  "local_id": "EV-0994",
+  "excerpt": "at the end just by verifying can I actually get that information. This is the list and I'll say get me everyone that hasn't been let's see how do I frame this inside of the CRM. Get me anything with a days outstanding of seven days. let's say with a days outstanding equal to 7 days. So the whole idea will be this will now um demo my flow and sorry I just reached my"
+ },
+ {
+  "local_id": "EV-0995",
+  "excerpt": "usage limit for fable because I don't have any more usage credits if you guys remember from yesterday. So I had to switch that back to 5. Um what it's going to do is it's going to see can we pull tasks that are 7 days late. Uh 7 days late obviously is just like one of the many benchmarks I will use one of the many thresholds. So what it's doing is it's going to figure out how to do"
+ },
+ {
+  "local_id": "EV-0996",
+  "excerpt": "this and then we'll sort of have that prompted. We'll then be able to use this to build our skill later. Okay. And as we can see, we pulled a bunch of information here on the specific people. So, we have Erica Doyle, amount due on receipts, Dr. Nina Patel, and then Marcus Ben. And these are all different deals. So, what I want to do here is I'm just going to ignore this middle chunk"
+ },
+ {
+  "local_id": "EV-0997",
+  "excerpt": "here because there's a bunch of information uh that it looks like it misunderstood surrounding what field I wanted it to pull. I just want to verify, can I also get their email addresses? What are their email addresses? So, if I can get their email addresses, then I can actually send a check-in. And it looks like their email address is"
+ },
+ {
+  "local_id": "EV-0998",
+  "excerpt": "nickleclick.ai. The reason why is because I just added one of my emails. So, all contact emails route to my own email for demo purposes cuz I want to email them, right? Okay, cool. So, now that I have them, send Erica Doyle this message. Just going to verify this is possible. Hey, Erica, just wanted to check in. How are things going on the invoice? Let me know if you"
+ },
+ {
+  "local_id": "EV-0999",
+  "excerpt": "have cues. and I'll say thanks Nick. So, we should have an email to Erica aka Nickleftclick.ai with this. Now, it's saying we can't actually do this. We don't have the ability to send from my email. I'm just going to double check why. So, I'll say is there no sending uh tool inside of the Gmail connector. Ask it that question. We'll see how it"
+ },
+ {
+  "local_id": "EV-1000",
+  "excerpt": "goes. Let me actually check rather than rely on the tool name list. So, now it's actually going to look through the tools. I checked and my claim holds up. The Gmail connector exposes these tools. So, create draft, update draft, no send message, no send draft. Um, so, okay, after finagling it, it's given me three options that we could use to create emails and then actually send them. I"
+ },
+ {
+  "local_id": "EV-1001",
+  "excerpt": "was unaware. I thought you could do this in the Gmail connector. Um, doesn't look like you can, but that's okay. Uh, you know, the question is not will I get a bug or will I not be able to do it the way I want to do it, but when I will not be able to do it. So, let me show you guys how I deal with that. Um, first I asked, so what are our options? I had to do a bunch of research and now it's"
+ },
+ {
+  "local_id": "EV-1002",
+  "excerpt": "giving me Gmail API with your own OOTH client. Let's do Gmail API. What it's going to do now is build a brief pipeline that allows us to do this. It's then going to open up OOTH, which is that like, you know, check-in thing where it like stores my credentials. So, it's went it's found some libraries. It's now going to write an authentication script. After it's done"
+ },
+ {
+  "local_id": "EV-1003",
+  "excerpt": "authenticating me, I will have to um log in. Basically, still doing just a little bit of testing. Okay. Hey, and I'm now logging in to my email account. So, it was fairly straightforward. The model just asked me a couple questions, gave me a link to click to like give it my uh Google Cloud Console access. And now it's actually going to send a message to my own address to prove that the whole"
+ },
+ {
+  "local_id": "EV-1004",
+  "excerpt": "path works without actually touching a client. So, it sent one to me. Let me now take a look. And you can see that it has actually done this. Hey Nick, just wanted to check in. How are things going on with the invoice? Let me know if you have cues. Now, we said Erica, but uh you know, it's actually done uh uh you know, Nick. So, a couple things. I'm going to change the subject line now and"
+ },
+ {
+  "local_id": "EV-1005",
+  "excerpt": "then I'm going to change the message that we're sending. First, I'm going to say write 10 simple messages like the one you just sent me for checkin purposes. Use very light language. Nothing hard, just super soft nudges that fit on one line. Okay. And then um for subjects use straightforward ones like first name or maybe I don't know like invoice first"
+ },
+ {
+  "local_id": "EV-1006",
+  "excerpt": "name or you know how are things going etc. So these aren't you know the most pushy of follow-ups but the idea is it's going to run completely automatically on a loop so you might as well um you know be nicer as opposed to be super crazy harsh. I've done a lot of following up in my time. There's really smart ways to"
+ },
+ {
+  "local_id": "EV-1007",
+  "excerpt": "follow up and there's also kind of hard ways to follow up. So, all of these have m dashes. I'll say no m dashes. We're just going to fix all of that right now. Just checking on invoice. Uh, we don't need the number. Also, don't mention the invoice number. So, what else do we got? Cool. And then sign off all of them with thanks dashnick."
+ },
+ {
+  "local_id": "EV-1008",
+  "excerpt": "Cool. That looks good. So, first name, how are things going? Invoice, first name, quick check-in, invoice, following up, hey, first name, anything you need. Check in, invoice. So, now it's just going to write all of these. And the idea is I'm going to I'm going to loop all 10 of these into a a follow-up flow. Cool. Looks good. Looks good. We're not seeing any of that invoice information."
+ },
+ {
+  "local_id": "EV-1009",
+  "excerpt": "It's just all pretty simple. So, excellent. This will be our template pool. The idea is we can never send two of these in a row if they're the exact same. They always need to be different templates. So the flow will work like this. To start once per day, you will query ClickUp. You'll determine whether people are 1 day outstanding, 2 days"
+ },
+ {
+  "local_id": "EV-1010",
+  "excerpt": "outstanding, 3 days outstanding, 7 days outstanding, 14 days outstanding, 21 days outstanding, 28 days outstanding, uh 56 days outstanding, um 84 days outstanding. And what happens is every time that you find a person that is one of those days outstanding, you send an email template. um you fill in the information provided in the merge variables with the"
+ },
+ {
+  "local_id": "EV-1011",
+  "excerpt": "customer's actual or rather the prospect's actual uh information. So if it's being sent to a woman named Erica for instance, you should say hey Erica you should not say hey first name and we will slowly and reliably continuously nudge them towards the finish line. One more step just so that we don't end up sending the same email. After you um verify"
+ },
+ {
+  "local_id": "EV-1012",
+  "excerpt": "that it is matching one of the days outstanding thresholds, go through all of our email conversation history with the prospect to verify and see what sort of follow-ups we've um sent them. That way, we're not going to send them the exact same message twice. Okay, so kind of all over the place there, but I think I got what I wanted to say. Let's see how it performs."
+ },
+ {
+  "local_id": "EV-1013",
+  "excerpt": "Looks like it's going to start by confirming the scopes of my quote unquote token. And uh the history check can't work with the token. So, we're just going to have to make a new one. So, I'll say add a read scope to verify. Basically, what we want to do is we just want to like actually check my the real live email to make sure that we're not sending the same thing twice."
+ },
+ {
+  "local_id": "EV-1014",
+  "excerpt": "There are some situations as well in which it might make sense not to send the email at all. Like for instance, if a person says, \"Please stop emailing me. I've received tons of emails from you. I don't want another one or something like that,\" then obviously I probably shouldn't email them. So, we'll uh we'll add that functionality in later just uh to verify that, you know, it's actually"
+ },
+ {
+  "local_id": "EV-1015",
+  "excerpt": "it's actually working. Cool. Anyway, we did that authentication. Let's double back. So, this is now going through and building uh the flow that I want. It's not actually a skill just yet, but yeah, let's actually run this thing and see what goes on. We're going to send to my email. Um I'm going to go back here first and then open up that. Okay. And so now we have, let me see, just running"
+ },
+ {
+  "local_id": "EV-1016",
+  "excerpt": "a manual check. Sunhill Property, Pace Orthodontics, Ridgeway Autodetailing. These are the three that should be followed up with. Okay. So I'm going to go back to Claude and I'll say, \"Okay, let's run this on a 7day threshold. Again, I want you to go through the whole process end to end and actually tell me everything that you see so that I can verify if the flow is occurring"
+ },
+ {
+  "local_id": "EV-1017",
+  "excerpt": "the way I want it to occur.\" One more change before we do this. There will be some situations in which it doesn't make sense to continue it continue the nudging process. If the prospect explicitly tells us not to follow up with them for whatever reason, then flag that on the actual ClickUp task and then don't send the email logically. So now it's actually going to go through the"
+ },
+ {
+  "local_id": "EV-1018",
+  "excerpt": "opt- out detection flow and then narrate everything that it is doing. So what ClickUp fields are available for flagging, a notes, and a chase stage with a closed option. Looks like it'll use both of those, which is nice. And it'll actually start updating my CRM. Okay, now it's running the full flow. It's found a bunch of my own emails um to myself. So, it's just going to verify"
+ },
+ {
+  "local_id": "EV-1019",
+  "excerpt": "kind of what's what. And it looks like clean path earlier is working. So, it correctly remembered templates one and two from earlier selected number three. Now, it's testing the opt out path. Need a real inbound reply containing a stop phrase. So, now they've added that in there basically saying, \"Hey man, please don't send me emails. Um, please stop emailing me about this. We are disputing"
+ },
+ {
+  "local_id": "EV-1020",
+  "excerpt": "this invoice through our lawyer.\" Okay, so that's what it came up with. If there are situations where that would occur, you should probably not continue emailing the person, right? Kind of makes sense. Um, if that does happen, then you've done something wrong. Okay. Chase stage to close a note and a comment for the audit trail. So now it's actually updating the flow. Let me"
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

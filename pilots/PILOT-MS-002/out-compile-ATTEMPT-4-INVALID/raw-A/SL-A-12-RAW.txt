@@ -1,0 +1,819 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-12",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "The method lets you send a single template and turn it into a thousand private letters, where only a small portion of text changes per recipient.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0661", "EV-0662"],
+      "qualifiers": {
+        "scope": "email personalization at scale",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Having AI write your entire email usually sucks; instead a human being writes the entire email using practices that work and only a couple of variables are inserted here or there.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0662", "EV-0663"],
+      "qualifiers": {
+        "scope": "email copywriting with AI",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "The strategy does not depend on where you get your data from; the only difference between a newsletter flow and a cold outreach flow is the first step of data acquisition (newsletter signup form vs. data scraped usually on LinkedIn Sales Navigator or an alternative).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0663", "EV-0664", "EV-0697", "EV-0698"],
+      "qualifiers": {
+        "scope": "newsletter vs cold outreach pipelines",
+        "condition": null,
+        "platform": "LinkedIn Sales Navigator or alternative",
+        "stage": "data collection",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Typically the fewer AI generated words you have in your email as a proportion of total words, the lower the probability that anybody would notice the email was AI written.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0666"],
+      "qualifiers": {
+        "scope": "AI-generated variable text inside emails",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "The revised short plausible reasons are described as far better and also way shorter than the previous versions.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0665", "EV-0666"],
+      "qualifiers": {
+        "scope": "generated personalization variables",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "In Kit you have to add what's called a custom field in order to use these expanded personalization variables, and the speaker thinks the same might be true for Mailchimp.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0668", "EV-0669"],
+      "qualifiers": {
+        "scope": "merge/personalization fields",
+        "condition": null,
+        "platform": "Kit (possibly Mailchimp)",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "The three fields wanted are: short plausible reason why they signed up, short custom reason why it's useful, and paraphrase challenge.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0670", "EV-0672", "EV-0673"],
+      "qualifiers": {
+        "scope": "newsletter welcome email personalization",
+        "condition": null,
+        "platform": "Kit",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "When variables did not render in the preview, the cause was that the variable syntax was different (a space between the two words, prefixed with subscriber and all lowercase).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0671", "EV-0672"],
+      "qualifiers": {
+        "scope": "merge variable troubleshooting",
+        "condition": "variables render empty in preview",
+        "platform": "Kit",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "It's always good to test these things: preview the email as specific subscribers to verify the personalization renders correctly.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0671", "EV-0675"],
+      "qualifiers": {
+        "scope": "email personalization verification",
+        "condition": null,
+        "platform": "Kit",
+        "stage": "pre-send",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "After proving the concept and verifying it works through a prompt, the next step is to systematize it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0676"],
+      "qualifiers": {
+        "scope": "building automated systems",
+        "condition": "proof of concept verified",
+        "platform": null,
+        "stage": "systematization",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "One simple systematization is connecting the Kit API key to Claude so that a skill runs once a day (a 24-hour loop), points at the new email subscribers from the previous 24 hours, enriches them with the custom fields, and puts them into the campaign that publishes the broadcast message.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0677", "EV-0678"],
+      "qualifiers": {
+        "scope": "newsletter welcome personalization automation",
+        "condition": null,
+        "platform": "Kit API + Claude",
+        "stage": "automation design",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "Claude's proposed approach creates a tag called 'maker school welcome pending', tags new subscribers with it via an API call, updates the draft broadcast to filter on that tag, sets send_at to now, and removes the tag after sending, which the speaker thinks prevents double messages.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0681", "EV-0682"],
+      "qualifiers": {
+        "scope": "daily broadcast automation",
+        "condition": null,
+        "platform": "Kit API",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "The MCP does not cover what was needed, so the API key route had to be used instead.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0683", "EV-0684"],
+      "qualifiers": {
+        "scope": "Kit integration",
+        "condition": "MCP lacks required coverage",
+        "platform": "Kit / MCP",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "If you want to use the API key route, you have to first disconnect the Kit API integration and make sure it's not part of your flow.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0684", "EV-0685"],
+      "qualifiers": {
+        "scope": "credential setup",
+        "condition": "using the API key route",
+        "platform": "Kit",
+        "stage": "setup",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "The API key was named 'for YouTube' and the speaker states he is going to change it immediately after the video.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0684"],
+      "qualifiers": {
+        "scope": "API key hygiene when shown on camera",
+        "condition": "key exposed in a recording",
+        "platform": "Kit",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "After adding the Kit API key as a local credential, verify it by asking the assistant to make a harmless read-only query against the Kit API in the new conversation thread, since the assistant cannot natively see the local environment variable.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0685", "EV-0686", "EV-0687", "EV-0688"],
+      "qualifiers": {
+        "scope": "credential verification",
+        "condition": "credential added in a new conversation thread",
+        "platform": "Kit API / local credentials",
+        "stage": "verification",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "Conversation context can be carried across threads by copying the entire conversation history from the previous thread and pasting it into the new one.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0688", "EV-0689"],
+      "qualifiers": {
+        "scope": "thread continuity",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "Blasting a bunch of fake emails is how you hurt your deliverability, so the speaker avoided sending to the fake emails he added.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0690", "EV-0691"],
+      "qualifiers": {
+        "scope": "email deliverability",
+        "condition": "test/fake emails present in the list",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "A skill that runs locally can be extended to a loop that runs locally on a schedule, or turned into a routine, and the routine requires manually provisioning the Kit API key access in the cloud environment via the gear icon.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0691", "EV-0692", "EV-0693", "EV-0694", "EV-0695"],
+      "qualifiers": {
+        "scope": "skill / loop / routine progression",
+        "condition": null,
+        "platform": "Claude local and cloud environments",
+        "stage": "automation",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "The recommended way to build these automated systems is to hammer it out manually over and over until you get what you want, then turn it into a repeatable process; start locally and eventually have it on the cloud.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0695", "EV-0696"],
+      "qualifiers": {
+        "scope": "building automated systems",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "viewers building automations"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "In the cold outreach flow, data is scraped from services like LinkedIn Sales Navigator and connected to services such as Vein, Air Scale, or Amplify, producing raw rows that Claude reads to write the fuzzy variables before inserting into a templated platform.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0698", "EV-0699"],
+      "qualifiers": {
+        "scope": "cold outreach data pipeline",
+        "condition": null,
+        "platform": "LinkedIn Sales Navigator, Vein, Air Scale, Amplify, Claude",
+        "stage": "data acquisition and enrichment",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "The big difference between the newsletter and cold outreach flows is that the templated platforms are different; instead of Kit, a cold email platform called Instantly is used, which does the exact same thing but sends to people who never opted in.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0699", "EV-0700"],
+      "qualifiers": {
+        "scope": "sending platform choice",
+        "condition": null,
+        "platform": "Kit vs Instantly",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "In the speaker's experience, the degree to which you personalized your comms was the number one determining variable of how likely people were to reply: totally templated messages got maybe 1 to 2% reply rate, while personalized ones got about 5%, roughly 200 to 250% of the revenue.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0701", "EV-0702", "EV-0703"],
+      "qualifiers": {
+        "scope": "cold outreach via emails and DMs",
+        "condition": null,
+        "platform": "email, X and Instagram DMs",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "By weaving some form of personalization into your process you can massively increase the profitability of a business doing door-to-door, cold emails, cold DMs or cold videos, and it is very much a reach-based activity.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0703", "EV-0704"],
+      "qualifiers": {
+        "scope": "outbound businesses",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "companies doing cold outreach"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "In cold outreach you will usually have the prospect's name, usually some company information, and sometimes scraped bios and posts from social platforms like LinkedIn, but the speaker will show how to do it without the scraped posts.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0704", "EV-0705"],
+      "qualifiers": {
+        "scope": "cold outreach input data",
+        "condition": null,
+        "platform": "LinkedIn",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "You can have AI take scraped post information and write a short punchy icebreaker (e.g. 'Hey, loved your post on hiring hygienists' or 'Congrats on the second crew'), which then goes right into the rest of your copy.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0705", "EV-0706", "EV-0707"],
+      "qualifiers": {
+        "scope": "cold email icebreaker generation",
+        "condition": "prospect post data available",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "The speaker's best email copy so far had over a 20% positive reply rate using a method like this combined with conference leads, and he has also had campaigns at a 2 to 4% reply rate that still made hundreds of thousands of dollars.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0708", "EV-0709", "EV-0710"],
+      "qualifiers": {
+        "scope": "speaker's own cold email results",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "You can make money from cold email at sufficient scale even if reply rates are poor, but you have to be smart about how you do the fuzzy variable generation.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0710", "EV-0711"],
+      "qualifiers": {
+        "scope": "cold email economics",
+        "condition": "sufficient scale",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "Leads can be obtained from a scraping platform like Amplify (Pipeline Labs Leadfinder with emails, Apollo, Zoom Info), filtering by job title, seniority, email status and phone status, at roughly $1.50 to $180 per 1,000 leads.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0712", "EV-0713"],
+      "qualifiers": {
+        "scope": "lead sourcing",
+        "condition": null,
+        "platform": "Amplify, Apollo, Zoom Info",
+        "stage": "lead acquisition",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-030",
+      "text": "A scrape can be expected to return fields such as annual revenue, company audience, city, country, description, domain, industry, LinkedIn URLs, company name, specialties, state, full name, function, city and the technologies the company uses.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0715", "EV-0716"],
+      "qualifiers": {
+        "scope": "scraped lead data fields",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-031",
+      "text": "The cold outreach flow is really similar to the newsletter one, with the difference being a cold list instead of a warm list, and usually the only thing needed in the email is an icebreaker.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0717", "EV-0718", "EV-0719"],
+      "qualifiers": {
+        "scope": "cold outreach flow",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-032",
+      "text": "A typical cold email opener follows the shape: 'hey/yo [first name], saw [thing in common], I'm [thing in common] too', as in 'yo Nick, saw you liked Labradors. I have one myself and wanted to say hi.'",
+      "source_language": "en",
+      "evidence_refs": ["EV-0719", "EV-0720"],
+      "qualifiers": {
+        "scope": "cold email opener structure",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0662", "EV-0663"],
+      "claim_temp_refs": ["TC-002"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Human writes the email, AI only fills variables",
+        "trigger": "Producing personalized outbound or newsletter email copy",
+        "condition": null,
+        "action": "Have a human being write the entire email using practices that work, then insert only a couple of AI-generated variables here or there",
+        "do_not": [
+          "Do not have AI write your entire email"
+        ],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0666"],
+      "claim_temp_refs": ["TC-004", "TC-005"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Minimize proportion of AI-generated words",
+        "trigger": "Generating personalization variables for an email",
+        "condition": null,
+        "action": "Keep the AI generated words as a small proportion of total words and keep the generated variables short, which lowers the probability that anybody notices AI wrote it",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"]
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0668", "EV-0669", "EV-0670"],
+      "claim_temp_refs": ["TC-006", "TC-007"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Add custom fields in Kit for expanded personalization variables",
+        "trigger": "Wanting to use expanded personalization variables in Kit",
+        "condition": "Working in Kit (speaker thinks the same might be true for Mailchimp)",
+        "action": "Go to the subscribers tab and add custom fields for short plausible reason why they signed up, short custom reason why it's useful, and paraphrase challenge",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0671", "EV-0672", "EV-0675"],
+      "claim_temp_refs": ["TC-008", "TC-009"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Preview and test merge variables before sending",
+        "trigger": "After importing subscribers with custom fields",
+        "condition": null,
+        "action": "Preview the email as specific subscribers to confirm the variables render; if expanded variables come back empty, check the variable syntax (in Kit: a space between the two words, prefixed with subscriber, all lowercase)",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0667", "EV-0668", "EV-0669", "EV-0670", "EV-0671", "EV-0672", "EV-0673", "EV-0674", "EV-0675", "EV-0676"],
+      "claim_temp_refs": ["TC-006", "TC-007", "TC-008", "TC-009", "TC-010"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Manual proof of concept for Kit newsletter personalization",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Have a prompt that reproduces the personalized variables",
+            "action": "Confirm you have a prompt that can reproduce the personalized fields",
+            "evidence_refs": ["EV-0667"]
+          },
+          {
+            "order_key": 2,
+            "name": "Add custom fields in Kit",
+            "action": "Go to the subscribers tab in Kit and add custom fields (first name, short plausible reason why they signed up, short custom reason why it's useful, paraphrase challenge)",
+            "evidence_refs": ["EV-0668", "EV-0669", "EV-0670"]
+          },
+          {
+            "order_key": 3,
+            "name": "Upload the list and tag the import",
+            "action": "Upload the list and identify the import with a new tag",
+            "required_inputs": ["subscriber list with the generated fields"],
+            "evidence_refs": ["EV-0667", "EV-0670"]
+          },
+          {
+            "order_key": 4,
+            "name": "Preview the email",
+            "action": "Preview the email to make sure the variables are actually populating",
+            "evidence_refs": ["EV-0671"]
+          },
+          {
+            "order_key": 5,
+            "name": "Fix variable syntax",
+            "action": "If expanded variables do not render, correct the variable syntax (space between words, subscriber prefix, all lowercase) and add them back into the template",
+            "missing_input_action": "double check why the variable did not resolve",
+            "evidence_refs": ["EV-0671", "EV-0672", "EV-0673"]
+          },
+          {
+            "order_key": 6,
+            "name": "Run additional previews as specific subscribers",
+            "action": "Preview as more than one subscriber (e.g. Marcus at North Partners, Rachel at LuminOps) to confirm the copy reads correctly",
+            "evidence_refs": ["EV-0673", "EV-0674", "EV-0675", "EV-0676"]
+          },
+          {
+            "order_key": 7,
+            "name": "Systematize",
+            "action": "Once the proof of concept is verified through a prompt, move on to systematizing it",
+            "evidence_refs": ["EV-0676"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0677", "EV-0678", "EV-0679", "EV-0680", "EV-0681", "EV-0682", "EV-0683", "EV-0684", "EV-0685", "EV-0686", "EV-0687", "EV-0688", "EV-0689", "EV-0690", "EV-0691", "EV-0692", "EV-0693", "EV-0694", "EV-0695"],
+      "claim_temp_refs": ["TC-011", "TC-012", "TC-013", "TC-014", "TC-015", "TC-016", "TC-017", "TC-019"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Turn the Kit personalization proof of concept into a skill and then a routine",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Voice dump the goal to Claude",
+            "action": "Keep the existing thread and voice dump the goal: turn this into a skill that queries the Kit API directly instead of using a Google Sheet, and ask Claude to find the endpoints needed to (1) every 24 hours check new subscribers, (2) run the query to create the three variables and update the custom fields for each new subscriber, (3) add them to the welcome broadcast",
+            "evidence_refs": ["EV-0679", "EV-0680"]
+          },
+          {
+            "order_key": 2,
+            "name": "Let Claude research an approach",
+            "action": "Let Claude research and propose the approach: create a 'maker school welcome pending' tag, tag new subscribers via API, update the draft broadcast to filter on that tag, set send_at to now, and remove the tag after sending",
+            "evidence_refs": ["EV-0681", "EV-0682"]
+          },
+          {
+            "order_key": 3,
+            "name": "Check MCP coverage",
+            "action": "Check whether MCP covers what is needed; here it did not, so the API key route is required",
+            "evidence_refs": ["EV-0683", "EV-0684"]
+          },
+          {
+            "order_key": 4,
+            "name": "Create the API key and disconnect the integration",
+            "action": "Go to the dev tools, create a V4 API key, then disconnect the Kit API integration so it is not part of your flow",
+            "evidence_refs": ["EV-0684", "EV-0685"]
+          },
+          {
+            "order_key": 5,
+            "name": "Add the key as a local credential",
+            "action": "Open a new conversation, go to local, and add kit API key as a local credential",
+            "evidence_refs": ["EV-0685", "EV-0686"]
+          },
+          {
+            "order_key": 6,
+            "name": "Verify the credential",
+            "action": "Ask the assistant to verify the kit API key exists by making a harmless read-only query against the Kit API, noting it cannot natively see the local environment variable",
+            "evidence_refs": ["EV-0686", "EV-0687", "EV-0688"]
+          },
+          {
+            "order_key": 7,
+            "name": "Carry over the conversation history",
+            "action": "Paste the entire conversation history from the previous thread into the new thread to continue the conversation",
+            "evidence_refs": ["EV-0688", "EV-0689"]
+          },
+          {
+            "order_key": 8,
+            "name": "Code review and read-only verification pass",
+            "action": "Do a code review first, then a read-only verification pass",
+            "evidence_refs": ["EV-0689", "EV-0690"]
+          },
+          {
+            "order_key": 9,
+            "name": "Promote the skill to a routine in the cloud",
+            "action": "Create the routine that runs the daily welcome email personalization batch against Kit contacts, and manually provision the kit API key access in the cloud environment via the gear icon next to cloud",
+            "evidence_refs": ["EV-0691", "EV-0692", "EV-0693", "EV-0694", "EV-0695"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0684", "EV-0685"],
+      "claim_temp_refs": ["TC-014", "TC-015"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "API key route requires disconnecting the integration",
+        "trigger": "Choosing the API key route for Kit",
+        "condition": "You want to use the API key route",
+        "action": "Disconnect the Kit API integration and make sure it is not part of your flow",
+        "do_not": [
+          "Do not leave the Kit API integration connected as part of your flow when using the API key route"
+        ],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0684", "EV-0711"],
+      "claim_temp_refs": ["TC-015"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Rotate an API key shown on camera",
+        "trigger": "An API key was created and displayed for a recording",
+        "condition": "The key was exposed in the video",
+        "action": "Change/resend the API key immediately after the video",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "PASSO_UNICO"]
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0690", "EV-0691"],
+      "claim_temp_refs": ["TC-018"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not blast a bunch of fake emails that you added to the list for testing"
+        ],
+        "why": "That is how you hurt your deliverability",
+        "conditions": [
+          "Fake/test emails were added to the list in order to build the system"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0662", "EV-0663"],
+      "claim_temp_refs": ["TC-002"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not have AI write your entire email"
+        ],
+        "why": "AI writing your entire email usually sucks; instead a human writes the email using practices that work and only a couple of variables are inserted"
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-011",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0701", "EV-0702", "EV-0703"],
+      "claim_temp_refs": ["TC-023"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "do_not": [
+          "Do not send totally templated cold DMs or emails with nothing personalized"
+        ],
+        "why": "In the speaker's experience totally templated messages got maybe 1 to 2% reply rate while personalized ones got around 5%, roughly 200 to 250% of the revenue",
+        "conditions": [
+          "Cold outreach via emails and DMs"
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-012",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0695", "EV-0696"],
+      "claim_temp_refs": ["TC-020"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Hammer it out manually before automating; start local then cloud",
+        "trigger": "Building an automated system",
+        "condition": null,
+        "action": "Hammer the process out manually over and over until you get what you want, then turn it into a repeatable process; start locally and eventually move it to the cloud",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-013",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0698", "EV-0699", "EV-0712", "EV-0713", "EV-0714", "EV-0715", "EV-0716", "EV-0717", "EV-0718", "EV-0719", "EV-0720"],
+      "claim_temp_refs": ["TC-021", "TC-022", "TC-026", "TC-029", "TC-030", "TC-031", "TC-032"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Cold outreach personalization pipeline",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Get leads",
+            "action": "Get leads from a scraping platform such as Amplify (Pipeline Labs Leadfinder with emails, Apollo, Zoom Info) or scrape from LinkedIn Sales Navigator",
+            "evidence_refs": ["EV-0698", "EV-0712"]
+          },
+          {
+            "order_key": 2,
+            "name": "Apply filters",
+            "action": "Enter filters such as job title, seniority, email status and phone status to select the leads",
+            "evidence_refs": ["EV-0713", "EV-0714"]
+          },
+          {
+            "order_key": 3,
+            "name": "Obtain the raw rows",
+            "action": "Scrape the leads and get raw rows with fields such as annual revenue, company description, industry, LinkedIn URL, company name, specialties, location, full name, function and technologies used",
+            "evidence_refs": ["EV-0714", "EV-0715", "EV-0716"]
+          },
+          {
+            "order_key": 4,
+            "name": "Generate fuzzy variables",
+            "action": "Have Claude read each row and write the fuzzy variables, in the cold case usually just an icebreaker",
+            "evidence_refs": ["EV-0699", "EV-0718", "EV-0719"]
+          },
+          {
+            "order_key": 5,
+            "name": "Insert into a templated platform",
+            "action": "Insert the variables into the templated sending platform; for cold outreach use a cold email platform such as Instantly instead of Kit",
+            "evidence_refs": ["EV-0699"]
+          }
+        ]
+      },
+      "defects": []
+    },
+    {
+      "temporary_candidate_id": "TX-014",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0705", "EV-0706", "EV-0707"],
+      "claim_temp_refs": ["TC-025", "TC-026"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Generate a short punchy icebreaker from prospect posts",
+        "trigger": "Writing a cold email to a prospect with scraped bios or posts",
+        "condition": "Scraped social posts or bios are available",
+        "action": "Have AI take that information and write a short punchy icebreaker (e.g. 'Hey, loved your post on hiring hygienists' or 'Congrats on the second crew') that leads directly into the rest of your copy",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED"]
+    },
+    {
+      "temporary_candidate_id": "TX-015",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0719", "EV-0720"],
+      "claim_temp_refs": ["TC-032"],
+      "claim_refs_applicability": "APPLICABLE",
+      "structure": {
+        "name": "Cold email opener template",
+        "trigger": "Writing the opening of a cold email",
+        "condition": null,
+        "action": "Open with 'hey/yo [first name], saw [thing in common], I'm [thing in common] too', then go into what you do",
+        "do_not": [],
+        "precedence": null
+      },
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"]
+    }
+  ]
+}

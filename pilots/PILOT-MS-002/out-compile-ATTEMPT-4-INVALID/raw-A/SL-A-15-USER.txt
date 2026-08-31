@@ -1,0 +1,575 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-15
+boundaries: 16181.92s - 17330.32s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+thermostat to. Unit is maybe 12 years old. So, this is all the information that we need. Let's see what happens. Hey, and if we check my sent mailbox, you can see that we just replied saying, "Hey, Dana, just saw you filled out a form. I hear the AC at your house needs a look. We'll happily help you with that. We'll call you in the next 5 minutes and sort this out. Thanks, Jonah." Again, you know, keep in mind, Jonah, Dana, Nicholas, we're all blending together into one formless entity. Um, I'm just using my own email. Ideally, this would be something different. One more thing. Now, I want to integrate that phone number flow. So, how am I going to do that? Um, I'm going to go and check to see if they have an API or an MCP that I can plug into. Just looking up MCP. Looks like they do have integrations with Claude and Chat GPT. So, let's see. Do we have an MCP here? It looks like we do. Just looking up the service. Um, oh, and it looks like they're actually part of Claude now. So, that's good. I can go back here and then go to settings. Go down to connectors. I'm actually going to type Qo. And it doesn't look like it has my connected one. And so I think that's cuz I need to search through their default ones instead. So I'm going to go back to connectors. Then what I want is browse. So I'm looking at theirs. I'm typing qo. I'm seeing this one. I'm connecting now. And this should allow the firing of SMS messages even without me. So there we go. Qo cloud connector is requesting permission to access my business workspace. It's now connected which looks great. Okay. And if I go back to this conversation, I'll also say, could you check to see if you have Kuo access? And if so, can you send a number, a text to my number? Okay. And I don't know if you guys could see this, but I just got a message from this number. U basically pretending that I was Dana. Um, hey Dana, just got your request. I know the AC house needs a look. Calling you in the next 5 minutes, Jonah. So, uh, this works, right? We just actually sent the SMS and it only really took me a few seconds. That's how easy it is to integrate different platforms if they are available in the Claude MCP sort of connector list. So, I'm going to go ahead and turn that from a series of prompts into a dedicated skill and then I'm going to show you guys how to loop this. Um, you guys can loop this locally. You can also do it via routine since we're cloud connected uh aka we have connector integrations. All of this stuff is capable of occurring entirely autonomously without any of us now. Cool, cool, cool. It's now doing one final test. I just had to reroute it away from building like a script. Uh it just usually wants to do this because it's more computationally efficient. But if you think about it, the whole idea here is we are going to run this like in a loop. We're just going to do it via routines. And speaking of routines, um we are going to set one up here. It's going to be cloud-based. As you can see, we have a Gmail connector. Uh we also have a Google Drive connector. We have a Gmail app. I'm going to take that out. A Higsfield. Going to take that out. And I think that's it. We just need Gmail. We need kuo. So with all that in mind, um I'm not going to set this up entirely just yet. I want to see the results of that last test, but I'm just going to have it generate copy for the routine and then run it. We just tested this on a new lead called Priya. Hey Priya, just saw you filled out a form. I hear upstairs is stuck at 80 even with the AC running. We'll happily help you with that. We'll call you in the next 5 minutes and sort this out. I also just got a text message saying, "Hi Priya, just got your request right over here." So both of these were basically done immediately, right? And ideally they are done in like a humanized way like this. Some snippet that is short, you know, not super overly long, but still written like a human being would write it. And now what it's also doing is creating me a routine. Um, I asked it to upgrade this and basically turn it into a clawed thing. So all of this is good. Everything looked basically perfect. And we are now actually generating the routine.md, which is right over here. I'm then going to paste this in. Just don't want to scroll too far down so I don't leak my damn phone number for the 4 days time. We'll call this speed to lead SMS and email. And then yeah, the connectors I want are um Gmail and Quo. And here we're going to want to do a couple different things um in addition. So I mean like we could do it scheduled where like every single time it'll pull, but routines are a little bit different. Like routines um they are capable of getting run via API. What that means is we can basically wait for a trigger and then only respond when we get a request. So if you think about it, what we really could do is we could trigger every time somebody fills out that form. Okay, wait a few seconds. That'll land in our inbox and then we'll fire the routine only then. And it's a lot more efficient uh to do it that way. So that's what I'm going to do. I'll go call via API. You could still run the polling approach like I was showing you guys how to do uh locally on your computer. Uh but I think this is probably like a much simpler way. can't really do this API thing if it's local, which is why it's more of a routine based thing. Yeah, this looks pretty solid to me. I'm just going to click create. Now, we have a token that'll allow us to fire the routine via post. So, just going to copy it here. I'm going to say here's the token. Please set this up. Cool. And you can actually see these runs working right now. Um, this is actually like literally firing off and being sent. So, initializing the session, starting Cloud Code. Here's a bunch of the the data and the information. And no, I did not leak my phone number. Thank goodness. Um, so it's just going to double check the connectors responsive and actually go ahead and fire them off. Searching for the send and label tools, confirming Gmail. Looks like it does have Gmail. And uh, yeah, I mean now we have our little speed delete system set up as a cloud routine and it runs um, via some remote trigger um, sort of API as opposed to something different. So that's that. I mean like we just built a speed delete system. You can obviously take this further if you want to by doing things like automatic call merging. The way that automatic call merging works um just for your convenience is it'll call both of us simultaneously. So there'll be some third phone number that'll call me and it'll call them at the same time and so we're both going to get rings on our phones. So ideally you would pick up fast, right? It's trigger based and the first person to pick up is going to be in the call. Um that way there won't be latency like when the other person comes onto the call. But yeah, you could do this with like big setting teams and stuff. And uh the presence of this versus not having the presence of like a call merge system for something that like makes sense to be dealt with over the phone and you know a lot of mid to high ticket offers do makes a real big difference. But think about it. You're now slapping them with an email. You're slapping them with an SMS. You're slapping them with a phone call. Really the only missing piece here before you get something that is kind of like Clarvo is just like tracking dispositions and then doing follow-ups. So, pump pumping this into some sort of CRM um you know, scheduling follow-up calls by people on your team and so on. That is more sales based. So, I'm not going to talk about that in today's course, probably in a future course. Um but yeah, I just wanted to make sure that we all knew how to squeeze the juice out of the leads to the biggest and best extent possible. And if you think about it, that now takes us to our next task, which you know, now that we've done our middle ofunnel speed to lead for appointment booking and I want to do middle ofunnel data collection and tracking, uh things like UTMs, things like actually building a dashboard and so on. All skills that are very important and will serve you quite well in your marketing journey. Uh but first, I am going to go eat a big fat dinner. I'll be right back. Okay, so dashboards. What the hell is the purpose of a dashboard? It's obviously to visualize [clears throat] a data. in our case, marketing data. And you know, a big question is how do we make dashboards that both showcase marketing data in like an effective and simple way while also making use of all of the really cool features of cloud code and uh AI agents in general um to, you know, make them not absolutely ask to look at. So, you know, this is like a naive approach that I think most people would probably do. They'd basically just pump in a bunch of their marketing data to cloud code, say visualize it, and then end up with something like this. We're going to make something that is far far better and far higher quality. And we're going to do so in a couple of ways. Um, you know, this is for a hypothetical company called North Beam Digital. If I zoom in here so you guys can maybe see a little bit better. It tracks uh the total ad spend, the sessions, the leads, the blended CPL, closed one deals, one. Um, but the problem is, you know, like when people visualize stuff like this, they're not really treating it like what it really is, which is a web design project. Uh, you know, dashboards nowadays are just like HTML. And HTML is hypertext markup language. It's essentially the language of websites and you go a lot further if you treat you know what you are building as uh like literally just like a glorified website um than you know is like necessarily a data showcase tool. So yeah, I'm going to show you guys how to make stuff like this way way better and I'm also going to show you guys how to visualize data in ways that allow you to share them with virtually everybody in your organization. If I scroll way down here to my little marketing um section, like you have access to virtually everything that you could possibly need already. You know, meta ads, your spend and clicks, Google Analytics, G4, Stripe, your revenue, CRM, email platforms, stuff like that. Your issue is they all tend to be spread between multiple platforms. And so, you know, like all of these realistically will live in different places. The whole idea of like a unified cloud code build dashboard is we get to create a bunch of connectors that connect to these platforms which hopefully you've already seen is fairly straightforward, right? You just get an MCP or something and go for it and then build what is technically referred to as an ingestion pipeline. Um, and then your ingestion pipeline just runs on like a daily, weekly or monthly sequence to pump into some sort of dashboard. So that you know that's sort of the idea here. U we're just going to get out of like the super disconnected dashboards and build like a single source of truth. Um what's really cool is you know back in the old days and I say this as somebody that used to run a marketing agency. It was our primary deliverable. Um you know we'd have like a report day once a month and uh the whole idea was you know at the end of the month we'd go through all our spreadsheets and stuff like that and put together really nice reports send those reports to the clients and the reports are almost like sales mechanisms. You know we we we try and tune them so that they look as sexy as possible. try and get the client to, you know, review it and be like, "Wow, I'm really getting good return on investment and stuff like that." Um, it was a massive pain in the butt to import data from all these different places. But now the idea is we're not necessarily going to have like a report day. It's just going to be a dynamic dashboard that does the ingestion automatically and then, you know, shows the data um pretty constantly. And I think you guys realistically have everything that you need in order to do that, right? Like we've now built loops. We know how to build routines. We know how to build systems that can essentially log into services and grab data without us. So, how far of like a leap is it realistically to like have an online asset that is automatically updated? It's really not that big of a leap at all. Um, in addition, I think would be really cool, at least for us, is to take the dashboard that we're building and then provide some sort of like AI questionnaire functionality where not only can we like, you know, talk to our AI about it, but maybe, you know, a client or something can come in on a dashboard and then query an AI maybe locally on the dashboard to tell us stuff about it. So, uh, I'm going to extend our own little marketing dashboard, which is going to look much, much better, into something like that. Make it a little bit more dynamic in that way. We'll have basically like an like an like an AI assistant. I'm capable of analyzing stuff. The actual flow itself up here is going to be fairly straightforward. Um, we're just going to build dashboards for a client based off of the information that, uh, we're tracking for them. So, all the KPIs of interest, you know, like meta ads, uh, total number of sessions of their website and stuff like that. It'll then read all the API docs on all the platforms, write the tests and the queries and then generate a dashboard page which is refreshed by a cloud routine. And yeah, I mean I don't want to make the whole basis of you know this part just a bunch of AI generated visuals. Hopefully you guys understand we are going to go from super sad frustrated guy over here on the left to super cool chill guy over here drinking his coffee uh with a cute little robot pointing at it. Okay, so that's the idea. How do we actually do so? Well, step one realistically is like assembling your data. Okay. So, um let me just move this a little bit over here otherwise it starts getting kind of laggy. Step one is assembling your data. So, I am going to use default sort of templated data here. Um our data is going to include a variety of sources. We're going to have like hypothetical Facebook ads. We're going to have hypothetical like website visits. Um we're going to have hypothetical sales data as well. Um, I know it's not marketing data necessarily, but we're going to have like logs from salespeople. I think we'll even have like email stats and we're going to combine all of this into um, you know, claude as mentioned. Worth noting mine is not going to exist on the cloud. Mine is going to exist in basically like a big CSV. CSV just stands for commaepparated value. It's basically like a Google sheet. And the reason why is because I I just don't want to actually pull all of my stats for you guys because a lot of that stuff uh as we saw with the kit marketing emails is sort of proprietary and it's also sort of private. So what I've done is I've just dumped in a bunch of fake data to you know a bunch of files that will just pretend to be our databases. Um now and then once we've assembled the data we're then going to visualize it. Um and what's really cool is we're actually going to generate like I don't know five or six different variants. Uh, and so, you know, I think the way most people do this is they'll just try and oneshot it and then they end up with like a really ugly design like this, right? Um, I don't know. I just I don't think this is a very efficient layout. I don't think this is very good for a client. I think you can do way better than that. So, what I'm going to do is I'm going to take that idea and then I'm actually just going to generate a variety of different variants. And then we're going to pick a variant that we really like, like B. And then what B is going to do is it's going to make a bunch of other variants. Maybe A, B, C, D. And then maybe we'll pick C. Then C will do a couple variants like A and then B. And then maybe we'll pick A. So now what we've done is we've basically gone through, you know, three different iteration periods to find like the best dashboard ever. And what's cool too is you can just repeat this process anytime if you wanted to visualize different data. Um, so that's going to be sort of my web design process. And then third, we're going to add some sort of like AI assistant functionality. [gasps] So why don't we start with the first, which is fairly straightforward, just assembling all of our data. Okay, so this is all of the data in uh my quote unquote database. And as you guys can see, we have a lot. We have DIM channels, clients, sales reps, fact activities, fact ad creatives, agency financials, attribution paths, backlinks, budget pacing, call tracking, uh, number of calls, channel daily. I mean, these are these are massive kind of data dumps, right? U we even have like client summaries and monthly time series. I will show you what a couple of these look like just for your own sanity, but uh you know just for you know I think the sake of time and and whatnot. Um I would recommend you just let's find something reasonably big activities. I'd recommend you just assume this is like Google Analytics or something like that. Just going to import this and show you guys what the spreadsheet realistically looks like. So this is fact activities which is going to show a bunch of activities um that include different reps that are doing things. This is total number of calls, emails replied and so on and so forth. This is basically like a time log. And so in this way, you know, I'm sure you guys can imagine if you guys have some sort of time logged data within your company. You could figure out, okay, like, you know, how much time has rep four spent, let's say, in the last 24 hours. Well, what I can do is I can sort or filter by activity date. I could clear all the values except for uh well, I guess this is about a year ago, but let's just hypothetically say it's today, which is um August the 6th, right? And then we can filter by, I don't know, rep one. And then we can actually add up their total time here. 2,940 seconds to determine how long they've actually spent. 2940 divided by 60 means they've actually only really logged 49 minutes of activities. Maybe then we can make some determination as to their productivity, right? Okay. So, this is the sort of data that we have. Uh a lot of other data as well, like um let me show you just one more that I think is probably a little bit more representative. Um, you know, we have a bunch of sales rep stuff, but I don't know, maybe we'll do G4 data. That probably makes more sense. This is going to be a really big one, mind you. 6.1 megabits. So, just uh bear with me here as I actually do the upload. I'm going to append this to the sheet just so that I could visualize both of these simultaneously. We just scroll down a tiny bit. You'll see what that actually looks like. We have over 10,000 rows, right? And so, this activity data was I think up to like 30,000 or something. Yeah, approximately. right about here, 50,000, sorry. And then here's where all the Google Analytics data starts. Check this out. I mean, we have like the client ID, the channel, we have the country, the number of sessions on their website, the number of engaged sessions, the bounce rate, the pages per session, and so on. I mean, we we have a lot of stuff here, right? Um, ideally, this would be interpretable to you, but just wanted to make sure you guys see saw like the degree of data we were working with here. It is honestly pretty freaking insane. [gasps] Okay. Anyway, so where do we go from here? Um, first things first, if I want to visualize stuff, I'm going to open um up Claude. And then what I'm going to do is in a new chat, okay, I'm going to go and find all of this data, which is in marketing dashboard data. Okay, and then I'm going to hold this button here, and I'm actually just going to feed it a brief description of all of the data, as well as the data folder itself. So now I'm going to say, hey, this is a super detailed um database that contains all of the information on a hypothetical set of companies that I am using to develop a dashboard for for a YouTube video that I'm recording. I want you to go through all of the data and for every bit of data, I want you to see if there are ways to combine the databases logically or if the databases are discussing, you know, things that are naturally linked together. Uh then create a highle structure using this. We're going to use this to create the pages of our database. For now, we'll scaffold them really simply. Just provide me a few candidate structures that I can look at and then determine, you know, how to how to lay it out. Okay. And just before I do that, um I want to talk a little bit about model intelligence. For most of the course, I've actually been using Sonnet 5, which is like a last generation model. It's not a very intelligent model whatsoever. Um the smarter that you know your needs get, the more intense like your design needs and stuff like that get typically the more intelligent the model you have to use. So I think like last video or maybe the module before I went from Sonnet 5 to Opus 5 just because I was I was wanting to see how much of the errors that the model was making was due to just like its model intelligence and it really wasn't all that much. However, for high quality design purposes, I really do recommend using the best models possible and they'll just save you a tremendous amount of time and energy. And so that's what I'm going to do with Fable 5. I'm just going to run it on usage credits. You can see that it's asking me to buy a certain number of credits over here. So, I don't know. I'm just going to buy, let's just say, $20 in credits. Uh, make my life a little easy. It'll initiate the purchase and go through. Uh, and you don't need to do this if you have, I think, um, like a max plan. You only need to do this if you're on a pro plan. I actually have like a max pro plan. It's just I've decided not to use it today cuz I want you guys to have the same experience that I do. And I presume most of you guys are probably going to be on, you know, the smaller plan, not like the super major plan. So, this is what that UX looks like if you actually buy one. Um, okay, cool. So, we have that. And I don't know, my monthly credit usage limits probably going to be 20 bucks. I'm not going to turn on auto reload. And then what I'll do is I'm just going to um basically rerun this with Fable 5. And then instead of medium, I'm going to go to high. Okay, which tends to be like reasonable. I just swapped to Fable 5.
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-0841",
+  "excerpt": "thermostat to. Unit is maybe 12 years old. So, this is all the information that we need. Let's see what happens. Hey, and if we check my sent mailbox, you can see that we just replied saying, \"Hey, Dana, just saw you filled out a form. I hear the AC at your house needs a look. We'll happily help you with that. We'll call you in the next 5 minutes and sort this out. Thanks,"
+ },
+ {
+  "local_id": "EV-0842",
+  "excerpt": "Jonah.\" Again, you know, keep in mind, Jonah, Dana, Nicholas, we're all blending together into one formless entity. Um, I'm just using my own email. Ideally, this would be something different. One more thing. Now, I want to integrate that phone number flow. So, how am I going to do that? Um, I'm going to go and check to see if they have an API or an MCP that I can plug into. Just"
+ },
+ {
+  "local_id": "EV-0843",
+  "excerpt": "looking up MCP. Looks like they do have integrations with Claude and Chat GPT. So, let's see. Do we have an MCP here? It looks like we do. Just looking up the service. Um, oh, and it looks like they're actually part of Claude now. So, that's good. I can go back here and then go to settings. Go down to connectors. I'm actually going to type Qo. And it doesn't look like it has my connected"
+ },
+ {
+  "local_id": "EV-0844",
+  "excerpt": "one. And so I think that's cuz I need to search through their default ones instead. So I'm going to go back to connectors. Then what I want is browse. So I'm looking at theirs. I'm typing qo. I'm seeing this one. I'm connecting now. And this should allow the firing of SMS messages even without me. So there we go. Qo cloud connector"
+ },
+ {
+  "local_id": "EV-0845",
+  "excerpt": "is requesting permission to access my business workspace. It's now connected which looks great. Okay. And if I go back to this conversation, I'll also say, could you check to see if you have Kuo access? And if so, can you send a number, a text to my number? Okay. And I don't know if you guys could see this, but I just got a message from this number. U basically"
+ },
+ {
+  "local_id": "EV-0846",
+  "excerpt": "pretending that I was Dana. Um, hey Dana, just got your request. I know the AC house needs a look. Calling you in the next 5 minutes, Jonah. So, uh, this works, right? We just actually sent the SMS and it only really took me a few seconds. That's how easy it is to integrate different platforms if they are available in the Claude MCP sort of connector list. So, I'm going to go"
+ },
+ {
+  "local_id": "EV-0847",
+  "excerpt": "ahead and turn that from a series of prompts into a dedicated skill and then I'm going to show you guys how to loop this. Um, you guys can loop this locally. You can also do it via routine since we're cloud connected uh aka we have connector integrations. All of this stuff is capable of occurring entirely autonomously without any of us now. Cool, cool, cool. It's now doing one"
+ },
+ {
+  "local_id": "EV-0848",
+  "excerpt": "final test. I just had to reroute it away from building like a script. Uh it just usually wants to do this because it's more computationally efficient. But if you think about it, the whole idea here is we are going to run this like in a loop. We're just going to do it via routines. And speaking of routines, um we are going to set one up here. It's going to be cloud-based. As you can see,"
+ },
+ {
+  "local_id": "EV-0849",
+  "excerpt": "we have a Gmail connector. Uh we also have a Google Drive connector. We have a Gmail app. I'm going to take that out. A Higsfield. Going to take that out. And I think that's it. We just need Gmail. We need kuo. So with all that in mind, um I'm not going to set this up entirely just yet. I want to see the results of that last test, but I'm just going to have it generate copy for the routine"
+ },
+ {
+  "local_id": "EV-0850",
+  "excerpt": "and then run it. We just tested this on a new lead called Priya. Hey Priya, just saw you filled out a form. I hear upstairs is stuck at 80 even with the AC running. We'll happily help you with that. We'll call you in the next 5 minutes and sort this out. I also just got a text message saying, \"Hi Priya, just got your request right over here.\" So both of these were basically done"
+ },
+ {
+  "local_id": "EV-0851",
+  "excerpt": "immediately, right? And ideally they are done in like a humanized way like this. Some snippet that is short, you know, not super overly long, but still written like a human being would write it. And now what it's also doing is creating me a routine. Um, I asked it to upgrade this and basically turn it into a clawed thing. So all of this is good. Everything looked basically perfect. And"
+ },
+ {
+  "local_id": "EV-0852",
+  "excerpt": "we are now actually generating the routine.md, which is right over here. I'm then going to paste this in. Just don't want to scroll too far down so I don't leak my damn phone number for the 4 days time. We'll call this speed to lead SMS and email. And then yeah, the connectors I want are um Gmail and Quo. And here we're going to want to do a couple different things um in addition."
+ },
+ {
+  "local_id": "EV-0853",
+  "excerpt": "So I mean like we could do it scheduled where like every single time it'll pull, but routines are a little bit different. Like routines um they are capable of getting run via API. What that means is we can basically wait for a trigger and then only respond when we get a request. So if you think about it, what we really could do is we could trigger every time somebody fills"
+ },
+ {
+  "local_id": "EV-0854",
+  "excerpt": "out that form. Okay, wait a few seconds. That'll land in our inbox and then we'll fire the routine only then. And it's a lot more efficient uh to do it that way. So that's what I'm going to do. I'll go call via API. You could still run the polling approach like I was showing you guys how to do uh locally on your computer. Uh but I think this is probably like a much simpler way. can't"
+ },
+ {
+  "local_id": "EV-0855",
+  "excerpt": "really do this API thing if it's local, which is why it's more of a routine based thing. Yeah, this looks pretty solid to me. I'm just going to click create. Now, we have a token that'll allow us to fire the routine via post. So, just going to copy it here. I'm going to say here's the token. Please set this up. Cool. And you can actually see these runs working right now. Um,"
+ },
+ {
+  "local_id": "EV-0856",
+  "excerpt": "this is actually like literally firing off and being sent. So, initializing the session, starting Cloud Code. Here's a bunch of the the data and the information. And no, I did not leak my phone number. Thank goodness. Um, so it's just going to double check the connectors responsive and actually go ahead and fire them off. Searching for the send and label tools, confirming"
+ },
+ {
+  "local_id": "EV-0857",
+  "excerpt": "Gmail. Looks like it does have Gmail. And uh, yeah, I mean now we have our little speed delete system set up as a cloud routine and it runs um, via some remote trigger um, sort of API as opposed to something different. So that's that. I mean like we just built a speed delete system. You can obviously take this further if you want to by doing things like automatic call"
+ },
+ {
+  "local_id": "EV-0858",
+  "excerpt": "merging. The way that automatic call merging works um just for your convenience is it'll call both of us simultaneously. So there'll be some third phone number that'll call me and it'll call them at the same time and so we're both going to get rings on our phones. So ideally you would pick up fast, right? It's trigger based and the first person to pick up is going to be"
+ },
+ {
+  "local_id": "EV-0859",
+  "excerpt": "in the call. Um that way there won't be latency like when the other person comes onto the call. But yeah, you could do this with like big setting teams and stuff. And uh the presence of this versus not having the presence of like a call merge system for something that like makes sense to be dealt with over the phone and you know a lot of mid to high ticket offers do makes a real big"
+ },
+ {
+  "local_id": "EV-0860",
+  "excerpt": "difference. But think about it. You're now slapping them with an email. You're slapping them with an SMS. You're slapping them with a phone call. Really the only missing piece here before you get something that is kind of like Clarvo is just like tracking dispositions and then doing follow-ups. So, pump pumping this into some sort of CRM um you know, scheduling follow-up"
+ },
+ {
+  "local_id": "EV-0861",
+  "excerpt": "calls by people on your team and so on. That is more sales based. So, I'm not going to talk about that in today's course, probably in a future course. Um but yeah, I just wanted to make sure that we all knew how to squeeze the juice out of the leads to the biggest and best extent possible. And if you think about it, that now takes us to our next task, which you"
+ },
+ {
+  "local_id": "EV-0862",
+  "excerpt": "know, now that we've done our middle ofunnel speed to lead for appointment booking and I want to do middle ofunnel data collection and tracking, uh things like UTMs, things like actually building a dashboard and so on. All skills that are very important and will serve you quite well in your marketing journey. Uh but first, I am going to go eat a big fat dinner. I'll be right back. Okay, so"
+ },
+ {
+  "local_id": "EV-0863",
+  "excerpt": "dashboards. What the hell is the purpose of a dashboard? It's obviously to visualize [clears throat] a data. in our case, marketing data. And you know, a big question is how do we make dashboards that both showcase marketing data in like an effective and simple way while also making use of all of the really cool features of cloud code and uh AI agents in general um to,"
+ },
+ {
+  "local_id": "EV-0864",
+  "excerpt": "you know, make them not absolutely ask to look at. So, you know, this is like a naive approach that I think most people would probably do. They'd basically just pump in a bunch of their marketing data to cloud code, say visualize it, and then end up with something like this. We're going to make something that is far far better and far higher quality. And we're going to do so in a couple of"
+ },
+ {
+  "local_id": "EV-0865",
+  "excerpt": "ways. Um, you know, this is for a hypothetical company called North Beam Digital. If I zoom in here so you guys can maybe see a little bit better. It tracks uh the total ad spend, the sessions, the leads, the blended CPL, closed one deals, one. Um, but the problem is, you know, like when people visualize stuff like this, they're not really treating it like what it really"
+ },
+ {
+  "local_id": "EV-0866",
+  "excerpt": "is, which is a web design project. Uh, you know, dashboards nowadays are just like HTML. And HTML is hypertext markup language. It's essentially the language of websites and you go a lot further if you treat you know what you are building as uh like literally just like a glorified website um than you know is like necessarily a data showcase tool. So yeah, I'm going to show you guys how"
+ },
+ {
+  "local_id": "EV-0867",
+  "excerpt": "to make stuff like this way way better and I'm also going to show you guys how to visualize data in ways that allow you to share them with virtually everybody in your organization. If I scroll way down here to my little marketing um section, like you have access to virtually everything that you could possibly need already. You know, meta ads, your spend and clicks, Google"
+ },
+ {
+  "local_id": "EV-0868",
+  "excerpt": "Analytics, G4, Stripe, your revenue, CRM, email platforms, stuff like that. Your issue is they all tend to be spread between multiple platforms. And so, you know, like all of these realistically will live in different places. The whole idea of like a unified cloud code build dashboard is we get to create a bunch of connectors that connect to these platforms which hopefully you've already"
+ },
+ {
+  "local_id": "EV-0869",
+  "excerpt": "seen is fairly straightforward, right? You just get an MCP or something and go for it and then build what is technically referred to as an ingestion pipeline. Um, and then your ingestion pipeline just runs on like a daily, weekly or monthly sequence to pump into some sort of dashboard. So that you know that's sort of the idea here. U we're just"
+ },
+ {
+  "local_id": "EV-0870",
+  "excerpt": "going to get out of like the super disconnected dashboards and build like a single source of truth. Um what's really cool is you know back in the old days and I say this as somebody that used to run a marketing agency. It was our primary deliverable. Um you know we'd have like a report day once a month and uh the whole idea was you know at the end of the month we'd go through all our"
+ },
+ {
+  "local_id": "EV-0871",
+  "excerpt": "spreadsheets and stuff like that and put together really nice reports send those reports to the clients and the reports are almost like sales mechanisms. You know we we we try and tune them so that they look as sexy as possible. try and get the client to, you know, review it and be like, \"Wow, I'm really getting good return on investment and stuff like that.\" Um, it was a massive pain in the"
+ },
+ {
+  "local_id": "EV-0872",
+  "excerpt": "butt to import data from all these different places. But now the idea is we're not necessarily going to have like a report day. It's just going to be a dynamic dashboard that does the ingestion automatically and then, you know, shows the data um pretty constantly. And I think you guys realistically have everything that you need in order to do that, right? Like"
+ },
+ {
+  "local_id": "EV-0873",
+  "excerpt": "we've now built loops. We know how to build routines. We know how to build systems that can essentially log into services and grab data without us. So, how far of like a leap is it realistically to like have an online asset that is automatically updated? It's really not that big of a leap at all. Um, in addition, I think would be really cool, at least for us, is to take"
+ },
+ {
+  "local_id": "EV-0874",
+  "excerpt": "the dashboard that we're building and then provide some sort of like AI questionnaire functionality where not only can we like, you know, talk to our AI about it, but maybe, you know, a client or something can come in on a dashboard and then query an AI maybe locally on the dashboard to tell us stuff about it. So, uh, I'm going to extend our own little marketing"
+ },
+ {
+  "local_id": "EV-0875",
+  "excerpt": "dashboard, which is going to look much, much better, into something like that. Make it a little bit more dynamic in that way. We'll have basically like an like an like an AI assistant. I'm capable of analyzing stuff. The actual flow itself up here is going to be fairly straightforward. Um, we're just going to build dashboards for a client based off of the information that, uh,"
+ },
+ {
+  "local_id": "EV-0876",
+  "excerpt": "we're tracking for them. So, all the KPIs of interest, you know, like meta ads, uh, total number of sessions of their website and stuff like that. It'll then read all the API docs on all the platforms, write the tests and the queries and then generate a dashboard page which is refreshed by a cloud routine. And yeah, I mean I don't want to make the whole basis of you know this"
+ },
+ {
+  "local_id": "EV-0877",
+  "excerpt": "part just a bunch of AI generated visuals. Hopefully you guys understand we are going to go from super sad frustrated guy over here on the left to super cool chill guy over here drinking his coffee uh with a cute little robot pointing at it. Okay, so that's the idea. How do we actually do so? Well, step one realistically is like assembling your data. Okay. So, um let"
+ },
+ {
+  "local_id": "EV-0878",
+  "excerpt": "me just move this a little bit over here otherwise it starts getting kind of laggy. Step one is assembling your data. So, I am going to use default sort of templated data here. Um our data is going to include a variety of sources. We're going to have like hypothetical Facebook ads. We're going to have hypothetical like website visits. Um we're going to have hypothetical sales"
+ },
+ {
+  "local_id": "EV-0879",
+  "excerpt": "data as well. Um, I know it's not marketing data necessarily, but we're going to have like logs from salespeople. I think we'll even have like email stats and we're going to combine all of this into um, you know, claude as mentioned. Worth noting mine is not going to exist on the cloud. Mine is going to exist in basically like a big CSV. CSV just stands for"
+ },
+ {
+  "local_id": "EV-0880",
+  "excerpt": "commaepparated value. It's basically like a Google sheet. And the reason why is because I I just don't want to actually pull all of my stats for you guys because a lot of that stuff uh as we saw with the kit marketing emails is sort of proprietary and it's also sort of private. So what I've done is I've just dumped in a bunch of fake data to you know a bunch of files that will just"
+ },
+ {
+  "local_id": "EV-0881",
+  "excerpt": "pretend to be our databases. Um now and then once we've assembled the data we're then going to visualize it. Um and what's really cool is we're actually going to generate like I don't know five or six different variants. Uh, and so, you know, I think the way most people do this is they'll just try and oneshot it and then they end up with like a really ugly design like this,"
+ },
+ {
+  "local_id": "EV-0882",
+  "excerpt": "right? Um, I don't know. I just I don't think this is a very efficient layout. I don't think this is very good for a client. I think you can do way better than that. So, what I'm going to do is I'm going to take that idea and then I'm actually just going to generate a variety of different variants. And then we're going to pick a variant that we really like, like B. And then what B is"
+ },
+ {
+  "local_id": "EV-0883",
+  "excerpt": "going to do is it's going to make a bunch of other variants. Maybe A, B, C, D. And then maybe we'll pick C. Then C will do a couple variants like A and then B. And then maybe we'll pick A. So now what we've done is we've basically gone through, you know, three different iteration periods to find like the best dashboard ever. And what's cool too is you can just repeat this process anytime"
+ },
+ {
+  "local_id": "EV-0884",
+  "excerpt": "if you wanted to visualize different data. Um, so that's going to be sort of my web design process. And then third, we're going to add some sort of like AI assistant functionality. [gasps] So why don't we start with the first, which is fairly straightforward, just assembling all of our data. Okay, so this is all of the data in uh my quote unquote database. And as you guys"
+ },
+ {
+  "local_id": "EV-0885",
+  "excerpt": "can see, we have a lot. We have DIM channels, clients, sales reps, fact activities, fact ad creatives, agency financials, attribution paths, backlinks, budget pacing, call tracking, uh, number of calls, channel daily. I mean, these are these are massive kind of data dumps, right? U we even have like client summaries and monthly time series. I will show you what a couple of"
+ },
+ {
+  "local_id": "EV-0886",
+  "excerpt": "these look like just for your own sanity, but uh you know just for you know I think the sake of time and and whatnot. Um I would recommend you just let's find something reasonably big activities. I'd recommend you just assume this is like Google Analytics or something like that. Just going to import this and show you guys what the spreadsheet realistically looks like. So"
+ },
+ {
+  "local_id": "EV-0887",
+  "excerpt": "this is fact activities which is going to show a bunch of activities um that include different reps that are doing things. This is total number of calls, emails replied and so on and so forth. This is basically like a time log. And so in this way, you know, I'm sure you guys can imagine if you guys have some sort of time logged data within your company. You could figure out, okay,"
+ },
+ {
+  "local_id": "EV-0888",
+  "excerpt": "like, you know, how much time has rep four spent, let's say, in the last 24 hours. Well, what I can do is I can sort or filter by activity date. I could clear all the values except for uh well, I guess this is about a year ago, but let's just hypothetically say it's today, which is um August the 6th, right? And then we can filter by, I don't know, rep one. And then we can"
+ },
+ {
+  "local_id": "EV-0889",
+  "excerpt": "actually add up their total time here. 2,940 seconds to determine how long they've actually spent. 2940 divided by 60 means they've actually only really logged 49 minutes of activities. Maybe then we can make some determination as to their productivity, right? Okay. So, this is the sort of data that we have. Uh a lot of other data as well, like um let me show you just one more that I"
+ },
+ {
+  "local_id": "EV-0890",
+  "excerpt": "think is probably a little bit more representative. Um, you know, we have a bunch of sales rep stuff, but I don't know, maybe we'll do G4 data. That probably makes more sense. This is going to be a really big one, mind you. 6.1 megabits. So, just uh bear with me here as I actually do the upload. I'm going to append this to the sheet just so that I could visualize both of these"
+ },
+ {
+  "local_id": "EV-0891",
+  "excerpt": "simultaneously. We just scroll down a tiny bit. You'll see what that actually looks like. We have over 10,000 rows, right? And so, this activity data was I think up to like 30,000 or something. Yeah, approximately. right about here, 50,000, sorry. And then here's where all the Google Analytics data starts. Check this out. I mean, we have like the client ID, the channel, we have the"
+ },
+ {
+  "local_id": "EV-0892",
+  "excerpt": "country, the number of sessions on their website, the number of engaged sessions, the bounce rate, the pages per session, and so on. I mean, we we have a lot of stuff here, right? Um, ideally, this would be interpretable to you, but just wanted to make sure you guys see saw like the degree of data we were working with here. It is honestly pretty freaking insane. [gasps] Okay. Anyway,"
+ },
+ {
+  "local_id": "EV-0893",
+  "excerpt": "so where do we go from here? Um, first things first, if I want to visualize stuff, I'm going to open um up Claude. And then what I'm going to do is in a new chat, okay, I'm going to go and find all of this data, which is in marketing dashboard data. Okay, and then I'm going to hold this button here, and I'm actually just going to feed it a brief description of all of the data, as well"
+ },
+ {
+  "local_id": "EV-0894",
+  "excerpt": "as the data folder itself. So now I'm going to say, hey, this is a super detailed um database that contains all of the information on a hypothetical set of companies that I am using to develop a dashboard for for a YouTube video that I'm recording. I want you to go through all of the data and for every bit of data, I want you to see if there are ways to combine the databases logically"
+ },
+ {
+  "local_id": "EV-0895",
+  "excerpt": "or if the databases are discussing, you know, things that are naturally linked together. Uh then create a highle structure using this. We're going to use this to create the pages of our database. For now, we'll scaffold them really simply. Just provide me a few candidate structures that I can look at and then determine, you know, how to how to lay it out. Okay. And just before I"
+ },
+ {
+  "local_id": "EV-0896",
+  "excerpt": "do that, um I want to talk a little bit about model intelligence. For most of the course, I've actually been using Sonnet 5, which is like a last generation model. It's not a very intelligent model whatsoever. Um the smarter that you know your needs get, the more intense like your design needs and stuff like that get typically the more intelligent the model you have to"
+ },
+ {
+  "local_id": "EV-0897",
+  "excerpt": "use. So I think like last video or maybe the module before I went from Sonnet 5 to Opus 5 just because I was I was wanting to see how much of the errors that the model was making was due to just like its model intelligence and it really wasn't all that much. However, for high quality design purposes, I really do recommend using the best models possible and they'll just save"
+ },
+ {
+  "local_id": "EV-0898",
+  "excerpt": "you a tremendous amount of time and energy. And so that's what I'm going to do with Fable 5. I'm just going to run it on usage credits. You can see that it's asking me to buy a certain number of credits over here. So, I don't know. I'm just going to buy, let's just say, $20 in credits. Uh, make my life a little easy. It'll initiate the purchase and go through. Uh, and you don't need"
+ },
+ {
+  "local_id": "EV-0899",
+  "excerpt": "to do this if you have, I think, um, like a max plan. You only need to do this if you're on a pro plan. I actually have like a max pro plan. It's just I've decided not to use it today cuz I want you guys to have the same experience that I do. And I presume most of you guys are probably going to be on, you know, the smaller plan, not like the super major plan. So, this is what that"
+ },
+ {
+  "local_id": "EV-0900",
+  "excerpt": "UX looks like if you actually buy one. Um, okay, cool. So, we have that. And I don't know, my monthly credit usage limits probably going to be 20 bucks. I'm not going to turn on auto reload. And then what I'll do is I'm just going to um basically rerun this with Fable 5. And then instead of medium, I'm going to go to high. Okay, which tends to be like reasonable. I just swapped to Fable 5."
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

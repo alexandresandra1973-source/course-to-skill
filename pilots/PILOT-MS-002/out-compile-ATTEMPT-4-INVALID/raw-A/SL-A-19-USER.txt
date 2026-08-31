@@ -1,0 +1,515 @@
+source_id: MS002-SRC-A
+slice_id: SL-A-19
+boundaries: 20931.04s - 21770.878s
+
+TRECHO (verbatim, transcricao automatica; erros de ASR podem existir e NAO devem ser
+"corrigidos" por voce ao citar):
+going to go errors and we'll go public. The reason why we're doing that is because I just want to make sure I have the public version of that and I don't forget it. And then here, what I want to do is I basically want to say, "Hey, I want you to send a sample error notification to and uh I'm going to do errors public in Slack." Okay. And then this will now have the ability to basically dump a brief little error message and log as it works. So, it's gone through the errors. Okay. I'm just going to say send it to show you guys what this looks like and then we can actually wire it into a real flow. So boom. Now we have error sample notification service invoice chase worker environment production time this cannot read properties of undefined count one occurrence. This is a test message to verify errors are alerting. Okay. So now that we've verified that this does work with the connector. All we have to do is I'm just going to say give me all the info to ensure you don't have to search this channel up again. I will add this to a routines prompt verbatim. Now we can actually just copy this whole message. Go to a routine. And why don't we do this first one here? Maker school daily ads batch. I'll just go up here and then um add my Slack notification. Then I'm going to paste this. And then I'll say for the sake of this demo, I want you to pretend there was an error in the flow. then report to Slack. Okay, I'm going to save this and then I'm just going to run this now. I don't know if you guys know, you guys can actually run these live like manually. So, that's what I'm doing here. Um, once you're done running it manually, you can actually go to the bottom here, go today at 10:30 a.m. And you'll see the very first thing it's going to do the second that it runs is it's going to clone the repository cuz that was part of our um our action. And then it's going to initialize the session. Uh you can also add a a setup script here if you want to that you know includes all the information in addition to the environment variables. So you can actually have like a script that runs every single time one of these things lo loads or launches which is kind of cool. We don't have to do that though. Um the thing that's worth noting is this will work slower than our uh physical cloud code session like the one that's local on our computer. And now it's saying I'm generating the ad batch uploading to drive first. Let me look at the structure. Okay, cool. So that's looking pretty good. It's going to install all the things it needs. Okay. And you can see we've just triggered an error here from our flow. Drive upload blocked for maker school ad batch service maker school ad batch render environment scheduled task. And then we don't have a time. So now we're saying the bulk upload of the PGs plus contact sheet HTML stalled. The drive connector only accepts blah blah blah. So now now what I'm trying to say is we have uh we actually have an error flow. And what's cool is because we have this now we have observability and we have logability. Um you can stop a lot of problems before they actually become problems. I mean, you know, if we're running a routine at 5:59 every morning and it just screws up once and the average person gets into the office and we'll need the outputs of that routine at, I don't know, 8 a.m., you know, you have like a solid 2 hours and 1 minute to actually solve that problem. Um, so if you didn't have the logging, you wouldn't have known until somebody does come into the office. then you would have had to bug fix and actually fix and uh eventually implement some sort of production update and then maybe it still would have taken an extra hour and before you know it now you've lagged that core person's um key deliverable the thing that they require in order to move forward their job like five or six hours. So yeah, that's that's my debug flow and um that's how I personally deal with these sorts of systems. Um I basically treat them as highly autonomous agents, hence the name that have the ability to rewrite their own code if needed. Now, on the advanced tips side of things, just want to share with you guys some learnings that I've had over the course of the last maybe twoish years of using this sort of AI agent workflows in real production systems for clients ranging from very small to mid-size businesses, maybe a few tens of thousands of dollars a month in revenue, all the way up to companies that legitimately make billions of dollars per year. The first is that effectiveness beats efficiency. So I see a lot of people on the internet trying everything in their life to be as efficient as possible. You know, they'll shave off tiny percentage points here there in a process um by I don't know like readjusting how they work. They will try and save tiny little 100 millisecond latencies in some system because they think that you know the more efficient this thing can work the better. They will reduce their margins as much as humanly possible for some core process because they're like well I'm saving more money. I'm spending less money in order to do it. And you know, at the end of the day, they look at their KPI metrics, whatever their logs are for marketing activities, and they're like, "Wa, this is way more efficient now than it ever used to be." But then they check out their revenue and they're like, "Wait a second, why is my revenue so low?" The reason why is because what you guys are doing is you are automating processes that probably aren't all that beneficial to your business in the first place. Efficiency is just doing things fast and cheap. Effectiveness on the other hand is what you should really be going for and that's about just doing the right things allocating your resources in places that actually you know move the needle of your organization. So I just want to give you guys a brief example. Um you know we do a lot of automation projects for a variety of small to mid mid-sized all the way up to enterprise businesses and I had this one private equity firm that had reached out a while back and for those of you guys that don't know you know in private equity a lot of the time what you're looking to do is you're looking to book meetings with qualified business owners that are either interested in investment or want to sell. And so this was a private equity company that works with um kind of bluecollar businesses and that just means like kind of home services, trades businesses, that sort of thing. Think electricians, think junk removal businesses, movers, that sort of deal. And so they came to me being like, "Hey, Nick, I want to automate stuff." And I'm like, "All right, sweet, man. What kind of work do you want to automate?" and they said,"Well, right now we're spending about an hour every week on the phones uh with prospective business owners trying to do due diligence on their business, meet them, and then build relationships with them. We want to automate that with a voice agent because we think it would save us a lot of money." And I remember thinking in my head about this and I was like, "Brother, you're going to be automating a single hour of your week. It's like uh I don't know that old trade offer meme. I don't know if you guys have like seen the trade alert meme, but basically it's like new trade offer detected. You know, I receive one hour per week of time back and then you receive literal like devastation to your business. What I mean by this is if you're automating literally the core thing that makes you money like this private equity firm is, you better ensure you're going to do a goddamn great job. And the harsh reality is if the only way you make money is by jumping on calls with prospective bluecollar businesses to determine their eligibility and to feel them out. If that is the only way that you actually make money in your business, it makes no sense to automate that for a small time savings gain of one hour a week. It's like if you can't spend one hour a week doing the most important thing in your business, the only thing that makes you money, you know, uh because you want to save a few bucks, then do you even have a business? No, I don't think so. So, what's really interesting is just in my own business, for instance, I do a lot of stuff manually. And people are always like, "Nick, why are you doing so many things manually?" And it's not that I'm doing everything manually. It's just the only work that I am actually doing is work that requires my full attention. It is recording videos like this for instance. It is going on sales calls with mid-market and enterprise businesses where my presence makes a material change to the probability of that sales call working out for us. Uh you know it's like applying my human meat brain, my stuffy sort of fluffy mind to real problems within my business. Uh and then thinking about those not thinking about how to do my bookkeeping or how to scrape the leads. sort of these wrote monotonous tasks but actually applying myself to things that are ultimately effective for my business. So if you're a business that is looking to integrate AI and automation, try to avoid efficiency. And I mean that seriously. Don't look for cost. Don't look for speed. Look for um hey, what can I automate that is currently pulling away from my time uh from being more effective. what can I automate away so that I have more time to actually spend on things that drive the the the top line of my business and ultimately the bottom line of my life. And on that vein, here are a bunch of things that usually fall under those camps. So things that you should automate, things like data entry, you know, think about it. We just automated a fair amount of my scraping flow, right? We built um a flow that automated the process of enriching personalized ice breakers with things that we have in common and stuff like that. That's pretty routine data entry. I'm not exactly winning any awards there if I do it or if I pass that off to some team member. And it takes a fair amount of my time. So yeah, I'm happy to automate processes like that. Why? Because it frees up maybe 40 to 50 minutes of my day and then I can spend that time actually focused on, you know, things like um sales conversations and client relationships. You can automate things like your first draft copy. You know, we automated a lot of ad creative here. I showed you guys how you guys could do this at scale and automate tens if not thousands of images, videos, and pieces of copy uh across the board. That's totally okay to have AI help you with. What you don't want to automate is you don't want to actually automate the production of the final asset itself. What you want to do is you want to use AI as an ideation and um sort of concept spec tool. Okay? And then you take those concepts and then ultimately you pick the ones that make the most sense. You know, upgrade them a little bit and then as mentioned push them live. So I would not automate client relationships, but I would automate first draft copy. How about reporting? As you guys have seen, you know, a lot of that reporting stuff that you guys typically previously had to do was pretty manual. was like logging into 5 million different platforms and then taking the data and like copying and pasting stuff from one sheet over to the other over and over and over again. Well, you you shouldn't do that. What you should do is you should, you know, have AI or uh some sort of procedural automated system manage the automation of that. Okay? And that's fine. Um so you can automate reporting, but what you should not do is you should not automate, you know, bad news from those reports. A terrible thing to do would be use that signals feature that we developed in the dashboard and then have that automatically sent to the client. Hey, here are your signals for the month. It's like no, no, no. That's probably one of the core things that you as a human being make or lose money on. You should be in charge of that and you should actually go sit down and meet with the client. And then ultimately scheduling. You can absolutely automate scheduling. Although I don't actually automate that much of my scheduling. Um, but what you should not do is automate anything where a client, a prospect, somebody that pays you money must feel valued. And a lot of the time that's not just like here is my calendar. Go ahead and book, you know, like a good appointment setting flow actually asks, "Hey, yeah, I think we have time on Tuesday or Wednesday. Uh, does 2 p.m. work for you?" Right? Cuz at least that that that makes you feel human. It's not disrespectful. It's not a robot answering uh, you know, and sort of weighing the costs of an interaction against what you stand to gain. The whole idea really is that automation should buy you more time with people. It should not replace the time that you have with people. This is sort of I mean this is an AI generated graphic and I think this is a good example. These AI generated graphics that I've been creating throughout this entire course. You know there some of them are kind of funky and cute here. There they save me a tremendous amount of time cuz I don't actually have to go through and make the thing. Do you know what that means? That means that I can actually spend my time talking to you and delivering value in that way which is probably the core way I deliver value. Contrast that with this fell over here who gets a text message from some happy smiley robot which you know took two cents in tokens to send. We value you. It's like no you don't really value me. And uh that's inherent in the medium and the way that you send me that message. You know, if you really did value me, you as a salesperson come down to the coffee shop and actually sit down and chat with me. A simple filter that you guys could use is just if you have a process you want to automate, ask yourself, does the customer actually feel this process? Is this like a firstline thing where we sit down and we like we we talk? Is is a relationship um at risk here? If the answer is no, you're usually good to automate it. Likewise, if it involves a real relationship like between you and your customer, then you should automate it, but you can QA it by hand. You know, you're happy I'm happy to have you automate processes up until some final filter like with ads and stuff like that, but there should still be a human element. You should have your taste applied to it. You should have your ability to actually uh uh uh, you know, be there for your clients if needed. You know, is a slight little like, "Hey, Pete, can you check in on the invoice?" Is that like a relationship based thing? Does the customer feel it? Probably not. That's more logistical. but a hey Pete I'd love to schedule a call with you to talk about X Y and Z I think I can really help you and really make a big deal you know big bottom line impact to your business that over there is something that's worth keeping human okay hopefully everything that I'm saying here makes sense um obviously I'm a big fan of automation that's kind of my whole business model right to be clear but as somebody that has done a lot of automation now I have realized that people will overmate tremendously and I've just seen a lot of downsides of that recently thank you guys so much for making it to the end of the course I really do hope that this was valuable and helpful. Uh, you know, I've worked with a lot of companies up to this point in my career. So, this course is basically me just trying to compress everything that I know into just a few hours for you. I I really hope I did a good job. Uh, and I'd love to hear your feedback. So, if you guys did enjoy, please do two things for me. The first is please subscribe to the channel. I put a lot of effort into these and for whatever reason, most of the people that watch aren't actually subscribed. I will, of course, continue doing this regardless of how many people are subscribed. So, don't think that I won't, but it obviously helps if I have support. And second, if you guys are considering using these tools to help other people, like other businesses or organizations, uh, please check out Maker School. It's my 90-day AI business program that guarantees you one customer or your money back. It includes a very comprehensive curriculum literally day by day about how to sell this stuff. And I will show up, you know, 7 days a week, 365, every single day, and respond to almost every post in the community. I do that literally every day. It's the very first thing I do when I wake up in the morning. I consider Maker School easily the most impactful thing I've ever done. So, if you guys want to be a part of that, then then check out the link in the description. Anywh who, thank you guys very much for sticking around. Hopefully, I'll catch you all in another course. I'm going to do a lot more of these. Thank you again and good luck. Get out there and crush it.
+
+CATALOGO FECHADO DE EVIDENCE — os unicos ids que voce pode citar:
+[
+ {
+  "local_id": "EV-1081",
+  "excerpt": "going to go errors and we'll go public. The reason why we're doing that is because I just want to make sure I have the public version of that and I don't forget it. And then here, what I want to do is I basically want to say, \"Hey, I want you to send a sample error notification to and uh I'm going to do errors public in Slack.\" Okay. And then this will now have the"
+ },
+ {
+  "local_id": "EV-1082",
+  "excerpt": "ability to basically dump a brief little error message and log as it works. So, it's gone through the errors. Okay. I'm just going to say send it to show you guys what this looks like and then we can actually wire it into a real flow. So boom. Now we have error sample notification service invoice chase worker environment production time this cannot read properties of undefined"
+ },
+ {
+  "local_id": "EV-1083",
+  "excerpt": "count one occurrence. This is a test message to verify errors are alerting. Okay. So now that we've verified that this does work with the connector. All we have to do is I'm just going to say give me all the info to ensure you don't have to search this channel up again. I will add this to a routines prompt verbatim. Now we can actually just copy this whole message. Go to a routine. And"
+ },
+ {
+  "local_id": "EV-1084",
+  "excerpt": "why don't we do this first one here? Maker school daily ads batch. I'll just go up here and then um add my Slack notification. Then I'm going to paste this. And then I'll say for the sake of this demo, I want you to pretend there was an error in the flow. then report to Slack. Okay, I'm going to save this and then I'm just"
+ },
+ {
+  "local_id": "EV-1085",
+  "excerpt": "going to run this now. I don't know if you guys know, you guys can actually run these live like manually. So, that's what I'm doing here. Um, once you're done running it manually, you can actually go to the bottom here, go today at 10:30 a.m. And you'll see the very first thing it's going to do the second that it runs is it's going to clone the repository cuz that was part of our um"
+ },
+ {
+  "local_id": "EV-1086",
+  "excerpt": "our action. And then it's going to initialize the session. Uh you can also add a a setup script here if you want to that you know includes all the information in addition to the environment variables. So you can actually have like a script that runs every single time one of these things lo loads or launches which is kind of cool. We don't have to do that though. Um the"
+ },
+ {
+  "local_id": "EV-1087",
+  "excerpt": "thing that's worth noting is this will work slower than our uh physical cloud code session like the one that's local on our computer. And now it's saying I'm generating the ad batch uploading to drive first. Let me look at the structure. Okay, cool. So that's looking pretty good. It's going to install all the things it needs. Okay. And you can see we've just triggered an error here"
+ },
+ {
+  "local_id": "EV-1088",
+  "excerpt": "from our flow. Drive upload blocked for maker school ad batch service maker school ad batch render environment scheduled task. And then we don't have a time. So now we're saying the bulk upload of the PGs plus contact sheet HTML stalled. The drive connector only accepts blah blah blah. So now now what I'm trying to say is we have uh we actually have an error flow. And what's"
+ },
+ {
+  "local_id": "EV-1089",
+  "excerpt": "cool is because we have this now we have observability and we have logability. Um you can stop a lot of problems before they actually become problems. I mean, you know, if we're running a routine at 5:59 every morning and it just screws up once and the average person gets into the office and we'll need the outputs of that routine at, I don't know, 8 a.m., you know, you have like a solid 2 hours"
+ },
+ {
+  "local_id": "EV-1090",
+  "excerpt": "and 1 minute to actually solve that problem. Um, so if you didn't have the logging, you wouldn't have known until somebody does come into the office. then you would have had to bug fix and actually fix and uh eventually implement some sort of production update and then maybe it still would have taken an extra hour and before you know it now you've lagged that core person's um key"
+ },
+ {
+  "local_id": "EV-1091",
+  "excerpt": "deliverable the thing that they require in order to move forward their job like five or six hours. So yeah, that's that's my debug flow and um that's how I personally deal with these sorts of systems. Um I basically treat them as highly autonomous agents, hence the name that have the ability to rewrite their own code if needed. Now, on the advanced tips side of things, just want to share"
+ },
+ {
+  "local_id": "EV-1092",
+  "excerpt": "with you guys some learnings that I've had over the course of the last maybe twoish years of using this sort of AI agent workflows in real production systems for clients ranging from very small to mid-size businesses, maybe a few tens of thousands of dollars a month in revenue, all the way up to companies that legitimately make billions of dollars per year. The first is that"
+ },
+ {
+  "local_id": "EV-1093",
+  "excerpt": "effectiveness beats efficiency. So I see a lot of people on the internet trying everything in their life to be as efficient as possible. You know, they'll shave off tiny percentage points here there in a process um by I don't know like readjusting how they work. They will try and save tiny little 100 millisecond latencies in some system because they think that you know the"
+ },
+ {
+  "local_id": "EV-1094",
+  "excerpt": "more efficient this thing can work the better. They will reduce their margins as much as humanly possible for some core process because they're like well I'm saving more money. I'm spending less money in order to do it. And you know, at the end of the day, they look at their KPI metrics, whatever their logs are for marketing activities, and they're like, \"Wa, this is way more"
+ },
+ {
+  "local_id": "EV-1095",
+  "excerpt": "efficient now than it ever used to be.\" But then they check out their revenue and they're like, \"Wait a second, why is my revenue so low?\" The reason why is because what you guys are doing is you are automating processes that probably aren't all that beneficial to your business in the first place. Efficiency is just doing things fast and cheap. Effectiveness on the other hand is what"
+ },
+ {
+  "local_id": "EV-1096",
+  "excerpt": "you should really be going for and that's about just doing the right things allocating your resources in places that actually you know move the needle of your organization. So I just want to give you guys a brief example. Um you know we do a lot of automation projects for a variety of small to mid mid-sized all the way up to enterprise businesses and I had this one private equity firm"
+ },
+ {
+  "local_id": "EV-1097",
+  "excerpt": "that had reached out a while back and for those of you guys that don't know you know in private equity a lot of the time what you're looking to do is you're looking to book meetings with qualified business owners that are either interested in investment or want to sell. And so this was a private equity company that works with um kind of bluecollar businesses and that just"
+ },
+ {
+  "local_id": "EV-1098",
+  "excerpt": "means like kind of home services, trades businesses, that sort of thing. Think electricians, think junk removal businesses, movers, that sort of deal. And so they came to me being like, \"Hey, Nick, I want to automate stuff.\" And I'm like, \"All right, sweet, man. What kind of work do you want to automate?\" and they said,\"Well, right now we're spending about an hour every week on the"
+ },
+ {
+  "local_id": "EV-1099",
+  "excerpt": "phones uh with prospective business owners trying to do due diligence on their business, meet them, and then build relationships with them. We want to automate that with a voice agent because we think it would save us a lot of money.\" And I remember thinking in my head about this and I was like, \"Brother, you're going to be automating a single hour of your week. It's like uh"
+ },
+ {
+  "local_id": "EV-1100",
+  "excerpt": "I don't know that old trade offer meme. I don't know if you guys have like seen the trade alert meme, but basically it's like new trade offer detected. You know, I receive one hour per week of time back and then you receive literal like devastation to your business. What I mean by this is if you're"
+ },
+ {
+  "local_id": "EV-1101",
+  "excerpt": "automating literally the core thing that makes you money like this private equity firm is, you better ensure you're going to do a goddamn great job. And the harsh reality is if the only way you make money is by jumping on calls with prospective bluecollar businesses to determine their eligibility and to feel them out. If that is the only way that you actually make money in your"
+ },
+ {
+  "local_id": "EV-1102",
+  "excerpt": "business, it makes no sense to automate that for a small time savings gain of one hour a week. It's like if you can't spend one hour a week doing the most important thing in your business, the only thing that makes you money, you know, uh because you want to save a few bucks, then do you even have a business? No, I don't think so. So, what's really interesting is just in my own business,"
+ },
+ {
+  "local_id": "EV-1103",
+  "excerpt": "for instance, I do a lot of stuff manually. And people are always like, \"Nick, why are you doing so many things manually?\" And it's not that I'm doing everything manually. It's just the only work that I am actually doing is work that requires my full attention. It is recording videos like this for instance. It is going on sales calls with mid-market and enterprise businesses"
+ },
+ {
+  "local_id": "EV-1104",
+  "excerpt": "where my presence makes a material change to the probability of that sales call working out for us. Uh you know it's like applying my human meat brain, my stuffy sort of fluffy mind to real problems within my business. Uh and then thinking about those not thinking about how to do my bookkeeping or how to scrape the leads. sort of these wrote monotonous tasks but actually applying"
+ },
+ {
+  "local_id": "EV-1105",
+  "excerpt": "myself to things that are ultimately effective for my business. So if you're a business that is looking to integrate AI and automation, try to avoid efficiency. And I mean that seriously. Don't look for cost. Don't look for speed. Look for um hey, what can I automate that is currently pulling away from my time uh from being more effective. what can I"
+ },
+ {
+  "local_id": "EV-1106",
+  "excerpt": "automate away so that I have more time to actually spend on things that drive the the the top line of my business and ultimately the bottom line of my life. And on that vein, here are a bunch of things that usually fall under those camps. So things that you should automate, things like data entry, you know, think about it. We just automated a fair amount of my scraping flow,"
+ },
+ {
+  "local_id": "EV-1107",
+  "excerpt": "right? We built um a flow that automated the process of enriching personalized ice breakers with things that we have in common and stuff like that. That's pretty routine data entry. I'm not exactly winning any awards there if I do it or if I pass that off to some team member. And it takes a fair amount of my time. So yeah, I'm happy to automate processes like that. Why? Because it"
+ },
+ {
+  "local_id": "EV-1108",
+  "excerpt": "frees up maybe 40 to 50 minutes of my day and then I can spend that time actually focused on, you know, things like um sales conversations and client relationships. You can automate things like your first draft copy. You know, we automated a lot of ad creative here. I showed you guys how you guys could do this at scale and automate tens if not thousands of images, videos, and pieces"
+ },
+ {
+  "local_id": "EV-1109",
+  "excerpt": "of copy uh across the board. That's totally okay to have AI help you with. What you don't want to automate is you don't want to actually automate the production of the final asset itself. What you want to do is you want to use AI as an ideation and um sort of concept spec tool. Okay? And then you take those concepts and then ultimately you pick the ones that make the most sense. You"
+ },
+ {
+  "local_id": "EV-1110",
+  "excerpt": "know, upgrade them a little bit and then as mentioned push them live. So I would not automate client relationships, but I would automate first draft copy. How about reporting? As you guys have seen, you know, a lot of that reporting stuff that you guys typically previously had to do was pretty manual. was like logging into 5 million different platforms and then taking the data and"
+ },
+ {
+  "local_id": "EV-1111",
+  "excerpt": "like copying and pasting stuff from one sheet over to the other over and over and over again. Well, you you shouldn't do that. What you should do is you should, you know, have AI or uh some sort of procedural automated system manage the automation of that. Okay? And that's fine. Um so you can automate reporting, but what you should not do is you should not automate, you know, bad"
+ },
+ {
+  "local_id": "EV-1112",
+  "excerpt": "news from those reports. A terrible thing to do would be use that signals feature that we developed in the dashboard and then have that automatically sent to the client. Hey, here are your signals for the month. It's like no, no, no. That's probably one of the core things that you as a human being make or lose money on. You should be in charge of that and you"
+ },
+ {
+  "local_id": "EV-1113",
+  "excerpt": "should actually go sit down and meet with the client. And then ultimately scheduling. You can absolutely automate scheduling. Although I don't actually automate that much of my scheduling. Um, but what you should not do is automate anything where a client, a prospect, somebody that pays you money must feel valued. And a lot of the time that's not just like here is my calendar. Go ahead"
+ },
+ {
+  "local_id": "EV-1114",
+  "excerpt": "and book, you know, like a good appointment setting flow actually asks, \"Hey, yeah, I think we have time on Tuesday or Wednesday. Uh, does 2 p.m. work for you?\" Right? Cuz at least that that that makes you feel human. It's not disrespectful. It's not a robot answering uh, you know, and sort of weighing the costs of an interaction against what you stand to gain. The"
+ },
+ {
+  "local_id": "EV-1115",
+  "excerpt": "whole idea really is that automation should buy you more time with people. It should not replace the time that you have with people. This is sort of I mean this is an AI generated graphic and I think this is a good example. These AI generated graphics that I've been creating throughout this entire course. You know there some of them are kind of funky and cute here. There they save me"
+ },
+ {
+  "local_id": "EV-1116",
+  "excerpt": "a tremendous amount of time cuz I don't actually have to go through and make the thing. Do you know what that means? That means that I can actually spend my time talking to you and delivering value in that way which is probably the core way I deliver value. Contrast that with this fell over here who gets a text message from some happy smiley robot which you know took two cents in tokens to send."
+ },
+ {
+  "local_id": "EV-1117",
+  "excerpt": "We value you. It's like no you don't really value me. And uh that's inherent in the medium and the way that you send me that message. You know, if you really did value me, you as a salesperson come down to the coffee shop and actually sit down and chat with me. A simple filter that you guys could use is just if you have a process you want to automate, ask yourself, does the customer actually"
+ },
+ {
+  "local_id": "EV-1118",
+  "excerpt": "feel this process? Is this like a firstline thing where we sit down and we like we we talk? Is is a relationship um at risk here? If the answer is no, you're usually good to automate it. Likewise, if it involves a real relationship like between you and your customer, then you should automate it, but you can QA it by hand. You know, you're happy I'm happy to have you"
+ },
+ {
+  "local_id": "EV-1119",
+  "excerpt": "automate processes up until some final filter like with ads and stuff like that, but there should still be a human element. You should have your taste applied to it. You should have your ability to actually uh uh uh, you know, be there for your clients if needed. You know, is a slight little like, \"Hey, Pete, can you check in on the invoice?\" Is that like a relationship based thing?"
+ },
+ {
+  "local_id": "EV-1120",
+  "excerpt": "Does the customer feel it? Probably not. That's more logistical. but a hey Pete I'd love to schedule a call with you to talk about X Y and Z I think I can really help you and really make a big deal you know big bottom line impact to your business that over there is something that's worth keeping human okay hopefully everything that I'm saying here makes sense um obviously I'm"
+ },
+ {
+  "local_id": "EV-1121",
+  "excerpt": "a big fan of automation that's kind of my whole business model right to be clear but as somebody that has done a lot of automation now I have realized that people will overmate tremendously and I've just seen a lot of downsides of that recently thank you guys so much for making it to the end of the course I really do hope that this was valuable and helpful. Uh, you know, I've worked"
+ },
+ {
+  "local_id": "EV-1122",
+  "excerpt": "with a lot of companies up to this point in my career. So, this course is basically me just trying to compress everything that I know into just a few hours for you. I I really hope I did a good job. Uh, and I'd love to hear your feedback. So, if you guys did enjoy, please do two things for me. The first is please subscribe to the channel. I put a lot of effort into these and for"
+ },
+ {
+  "local_id": "EV-1123",
+  "excerpt": "whatever reason, most of the people that watch aren't actually subscribed. I will, of course, continue doing this regardless of how many people are subscribed. So, don't think that I won't, but it obviously helps if I have support. And second, if you guys are considering using these tools to help other people, like other businesses or organizations, uh, please check out"
+ },
+ {
+  "local_id": "EV-1124",
+  "excerpt": "Maker School. It's my 90-day AI business program that guarantees you one customer or your money back. It includes a very comprehensive curriculum literally day by day about how to sell this stuff. And I will show up, you know, 7 days a week, 365, every single day, and respond to almost every post in the community. I do that literally every day. It's the very first thing I do when I wake up in the"
+ },
+ {
+  "local_id": "EV-1125",
+  "excerpt": "morning. I consider Maker School easily the most impactful thing I've ever done. So, if you guys want to be a part of that, then then check out the link in the description. Anywh who, thank you guys very much for sticking around. Hopefully, I'll catch you all in another course. I'm going to do a lot more of these. Thank you again and good luck. Get out there and crush it."
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOURCE-LOCAL-EXTRACTION-BUNDLE v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "slice_id",
+    "raw_claims",
+    "raw_candidates"
+  ],
+  "properties": {
+    "source_id": {
+      "enum": [
+        "MS002-SRC-A",
+        "MS002-SRC-B",
+        "MS002-SRC-C"
+      ]
+    },
+    "slice_id": {
+      "type": "string",
+      "pattern": "^SL-[ABC]-[0-9]{2}$"
+    },
+    "raw_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_claim_id",
+          "text",
+          "source_language",
+          "evidence_refs",
+          "qualifiers",
+          "status"
+        ],
+        "properties": {
+          "temporary_claim_id": {
+            "type": "string",
+            "pattern": "^TC-[0-9]{3}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 10
+          },
+          "source_language": {
+            "enum": [
+              "en",
+              "pt"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "qualifiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "condition": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "stage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "audience": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "SOURCE_EXPLICIT",
+              "SOURCE_IMPLIED"
+            ]
+          }
+        }
+      }
+    },
+    "raw_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "temporary_candidate_id",
+          "entity_kind",
+          "evidence_refs",
+          "claim_temp_refs",
+          "structure",
+          "defects"
+        ],
+        "properties": {
+          "temporary_candidate_id": {
+            "type": "string",
+            "pattern": "^TX-[0-9]{3}$"
+          },
+          "entity_kind": {
+            "enum": [
+              "rule_candidate",
+              "workflow_candidate",
+              "anti_pattern_candidate"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "claim_temp_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^TC-[0-9]{3}$"
+            }
+          },
+          "claim_refs_applicability": {
+            "enum": [
+              "APPLICABLE",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "defects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PRECEDENCE_UNDEFINED",
+                "PASSO_UNICO",
+                "SCOPE_UNSTATED"
+              ]
+            }
+          },
+          "structure": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "trigger",
+                  "condition",
+                  "action",
+                  "do_not",
+                  "precedence"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "trigger": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "condition": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "action": {
+                    "type": "string"
+                  },
+                  "do_not": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "precedence": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "steps"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "steps": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "order_key",
+                        "name",
+                        "action",
+                        "evidence_refs"
+                      ],
+                      "properties": {
+                        "order_key": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "action": {
+                          "type": "string"
+                        },
+                        "required_inputs": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "missing_input_action": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_refs": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string",
+                            "pattern": "^EV-[0-9]{4}$"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "exceptions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "prerequisites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "do_not",
+                  "why"
+                ],
+                "properties": {
+                  "do_not": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "why": {
+                    "type": "string"
+                  },
+                  "conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

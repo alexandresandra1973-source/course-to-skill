@@ -11,6 +11,7 @@ sys.path.insert(0, str(H / "lib"))
 import transport as T
 
 DRY  = "--dry" in sys.argv
+RESUME = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--resume=")), None)
 WHICH = [a for a in sys.argv[1:] if a in ("A", "B", "C", "ALL")] or ["ALL"]
 SRCS = ["A", "B", "C"] if "ALL" in WHICH else WHICH
 OUT  = H / "out-compile"; OUT.mkdir(exist_ok=True)
@@ -65,6 +66,18 @@ EMPTY_LIST_PATHS = [
 ]
 EMPTY_OBJ_PATHS = [("raw_claims", "*", "qualifiers")]
 
+def _declares(schema, path):
+    """True se o schema declara a propriedade no fim de path (ignorando '*')."""
+    node = schema
+    for k in path:
+        if k == "*":
+            node = node.get("items") if isinstance(node, dict) else None
+        else:
+            props = (node or {}).get("properties") if isinstance(node, dict) else None
+            if not props or k not in props: return False
+            node = props[k]
+    return node is not None
+
 def _apply(doc, path, empty, where):
     node, trail = doc, []
     for i, k in enumerate(path):
@@ -82,12 +95,14 @@ def _apply(doc, path, empty, where):
         if not isinstance(node, dict) or k not in node: return
         node = node[k]; trail.append(k)
 
-def default_empty(doc, where):
-    for p in EMPTY_LIST_PATHS: _apply(doc, p, "list", where)
-    for p in EMPTY_OBJ_PATHS: _apply(doc, p, "obj", where)
-    # structure.do_not so no ramo RULE, identificado por 'action' sem 'steps' e sem 'why'.
-    # Em workflow do_not nao existe no schema; em anti_pattern do_not exige minItems 1.
+def default_empty(doc, schema, where):
+    """SCHEMA-AWARE: so insere default para propriedade que ESTE schema declara."""
+    for p in EMPTY_LIST_PATHS:
+        if _declares(schema, p): _apply(doc, p, "list", where)
+    for p in EMPTY_OBJ_PATHS:
+        if _declares(schema, p): _apply(doc, p, "obj", where)
     for j, c in enumerate(doc.get("raw_candidates", []) or []):
+        if not _declares(schema, ("raw_candidates", "*", "structure")): break
         s = c.get("structure")
         if isinstance(s, dict) and "action" in s and "steps" not in s and "why" not in s and "do_not" not in s:
             s["do_not"] = []
@@ -97,7 +112,7 @@ def validate_strict(doc, schema, where):
     """Normaliza chaves-null desconhecidas, depois valida. Fail-closed no resto."""
     before = len(STRIPPED); dbefore = len(DEFAULTED)
     strip_null_unknown(doc, schema, where)
-    default_empty(doc, where)
+    default_empty(doc, schema, where)
     if len(DEFAULTED) - dbefore:
         print(f"      [ADDENDUM-03] {where}: {len(DEFAULTED)-dbefore} conjunto(s) vazio(s) inserido(s): "
               + ", ".join(x["path"] for x in DEFAULTED[dbefore:]))
@@ -178,6 +193,38 @@ def norm(s):
     return re.sub(r"[^a-z0-9 ]+", " ", s).strip()
 def sem_key(text, qual, sid):
     return sha(canon({"t": " ".join(norm(text).split()), "q": {k: (v or None) for k, v in sorted(qual.items())}, "s": sid}))
+
+def resume_source(src):
+    """Reaproveita bundles de extracao ja produzidos sob o MESMO instrumento congelado,
+    RE-VALIDANDO cada um sob o validador corrigido. Nao economiza validacao, so chamadas."""
+    d = pathlib.Path(RESUME) / f"raw-{src}"
+    if not d.exists(): return None, None
+    pkg = H / "packages" / f"pkg-{src}"
+    slices = json.loads((pkg / "SLICES.json").read_text(encoding="utf-8"))
+    ev = [json.loads(l) for l in (pkg / "EVIDENCE.jsonl").read_text(encoding="utf-8").splitlines()]
+    byslice = collections.defaultdict(set)
+    for e in ev: byslice[e["slice_id"]].add(e["local_id"])
+    bundles, trace = [], []
+    for sl in slices:
+        f = d / f'{sl["slice_id"]}-RAW.txt'
+        if not f.exists(): return None, None
+        b = json.loads(T.jparse(f.read_text(encoding="utf-8")))
+        validate_strict(b, EX_SCH, f"resume/{sl['slice_id']}")
+        if b["source_id"] != f"MS002-SRC-{src}" or b["slice_id"] != sl["slice_id"]:
+            raise SystemExit(f"X01_SLICE_MISMATCH em resume {sl['slice_id']}")
+        allow = byslice[sl["slice_id"]]
+        for c in b["raw_claims"] + b["raw_candidates"]:
+            if not set(c["evidence_refs"]) <= allow:
+                raise SystemExit(f"X02_INVENTED_EVIDENCE em resume {sl['slice_id']}")
+        tcs = {c["temporary_claim_id"] for c in b["raw_claims"]}
+        for c in b["raw_candidates"]:
+            if not set(c["claim_temp_refs"]) <= tcs:
+                raise SystemExit(f"X03_DANGLING_CLAIM_REF em resume {sl['slice_id']}")
+        bundles.append(b)
+        trace.append({"slice": sl["slice_id"], "claims": len(b["raw_claims"]),
+                      "candidates": len(b["raw_candidates"]), "source": "RESUMED_AND_REVALIDATED"})
+    print(f"    RESUME: {len(bundles)} bundles reaproveitados e revalidados de {d}")
+    return bundles, trace
 
 def extract_source(src):
     sid = f"MS002-SRC-{src}"
@@ -395,7 +442,11 @@ def main():
         state["controls"] = {"EC": ec, "JE": je}
     for src in SRCS:
         print(f"  === fonte {src} ===")
-        bundles, trace = extract_source(src)
+        bundles = trace = None
+        if RESUME:
+            bundles, trace = resume_source(src)
+        if bundles is None:
+            bundles, trace = extract_source(src)
         if DRY:
             state[src] = {"trace": trace}; continue
         (OUT / f"BUNDLES-{src}.json").write_text(json.dumps(bundles, ensure_ascii=False, indent=1), encoding="utf-8")

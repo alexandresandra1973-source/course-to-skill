@@ -1,0 +1,689 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-04",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "The entire operation is always constrained by the narrowest step of the chain (the weakest link).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0184", "EV-0188"],
+      "qualifiers": {
+        "scope": "bottlenecks and pipelines",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Improving a non-bottleneck step (e.g. doubling step A from 100 to 200 units/day) does not change total output; improving the bottleneck step (B from 10 to 20 units/day) raises total output.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0189", "EV-0190"],
+      "qualifiers": {
+        "scope": "factory analogy with step A 100 units/day and step B 10 units/day",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "You'll make way more money if you spend a little time figuring out what the bottleneck is and then build systems that alleviate that bottleneck, versus trying to do everything everywhere all at once.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0194", "EV-0195"],
+      "qualifiers": {
+        "scope": "automating processes in a business",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": "people who want to rush to automate everything",
+        "audience_note": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Throwing these systems at companies won't necessarily do anything unless the targeted step is actually the current constraining step; if everything you automate is already not the bottleneck you won't see much monetary return.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0195", "EV-0196", "EV-0197"],
+      "qualifiers": {
+        "scope": "applying the presented systems to companies",
+        "condition": "unless the step is the current constraining step",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "All the systems shown from now on should be thought of as solutions to bottlenecks.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0195"],
+      "qualifiers": {
+        "scope": "the systems presented in this course",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "All the systems in the course will be progressed through a four-step pipeline: prompt, then skill, then loop, then routine.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0198", "EV-0199", "EV-0202", "EV-0206", "EV-0211", "EV-0216"],
+      "qualifiers": {
+        "scope": "systems built in this course",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Prompts are the first step in the automation pipeline: manual every single time, requiring you to be in the driver's seat steering it, and quite slow.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0199", "EV-0200"],
+      "qualifiers": {
+        "scope": "prompts",
+        "condition": null,
+        "platform": null,
+        "stage": "first step",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "Skills are a saved and much more efficient instruction set that you can reuse, shown earlier through slash commands.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0202"],
+      "qualifiers": {
+        "scope": "skills",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "Once you have a big set of granular skills, you can run those skills as a meta skill / master skill that runs them in sequence, chaining small tasks into big ones and eventually replacing entire roles.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0203", "EV-0205", "EV-0206"],
+      "qualifiers": {
+        "scope": "skills",
+        "condition": "once the granular individual skills are built",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "A loop is a skill that runs on its own without your involvement, scheduled to run on your computer (e.g. every day at 12:00 or 5:00 a.m.).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0206", "EV-0207", "EV-0208", "EV-0209"],
+      "qualifiers": {
+        "scope": "loops",
+        "condition": null,
+        "platform": "your computer",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "To build a loop you first need the skill, and in order to build the skill you need the prompt.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0210", "EV-0211"],
+      "qualifiers": {
+        "scope": "building loops",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "Loops must be run on your computer, which decreases your ability to share them with others in the organization and makes them brittle: changes to your computer (login, plugins, skills, MCP servers) can break them.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0211", "EV-0212"],
+      "qualifiers": {
+        "scope": "loops",
+        "condition": null,
+        "platform": "local computer",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "If you want to make things institutional and add them to the organization rather than only your own workspace, you need to take them off your computer and put them elsewhere; routines run in cloud environments.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0212", "EV-0213"],
+      "qualifiers": {
+        "scope": "routines",
+        "condition": "if you want to expand things and make them institutional",
+        "platform": "cloud environments",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "Routines are entirely self-managed and occur without your involvement, but they do need some sort of input such as a schedule, API, webhook or trigger; you pay a cloud provider (e.g. Anthropic) usually very little in tokens and get a deliverable worth much more.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0213", "EV-0214", "EV-0215"],
+      "qualifiers": {
+        "scope": "routines",
+        "condition": "requires an input such as schedule, API, webhook or trigger",
+        "platform": "cloud",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "The moment you find yourself saying the same thing more than once, turn it from a prompt into a skill.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0218", "EV-0219"],
+      "qualifiers": {
+        "scope": "general rule across the stack",
+        "condition": "when the same ask repeats",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "Anytime you find yourself asking AI to do virtually the exact same thing more than once, you should expend a tiny bit of time to see whether it is turnable into a skill, because not all things are turnable into skills and some require a human in the driver's seat.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0219", "EV-0220"],
+      "qualifiers": {
+        "scope": "across the stack",
+        "condition": "when the ask is virtually the exact same more than once",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "Attempt to turn everything you do often into a skill and see if it passes the totally autonomous threshold; if it does it becomes a skill you just run, if not you are still in the driver's seat.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0220", "EV-0221"],
+      "qualifiers": {
+        "scope": "tasks done often",
+        "condition": "passes the totally autonomous threshold",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "Prompts are triggered by you and run when you type; skills are triggered by you and run when you press run; loops are a timer on your computer and run while your laptop is on; routines are on the cloud and work regardless of whether your laptop is on.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0223"],
+      "qualifiers": {
+        "scope": "final review of the four concepts",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "Prompts are great for quick experimentation and building things out; skills are great for repeat tasks you still need to be in the loop for; loops are best for monitoring things that automatically scrape a resource; routines are best for daily production.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0223", "EV-0224"],
+      "qualifiers": {
+        "scope": "fit-for-use of each of the four stages",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "Just saying 'Make me some great ads' will not automatically work; the model will instinctively ask a bunch of questions and even if answered it would take you on a wild goose chase.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0225", "EV-0226", "EV-0227"],
+      "qualifiers": {
+        "scope": "creative/ad generation with the model",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "You need to be clearer about what you want the model to do and how you want the model to do things.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0225", "EV-0226"],
+      "qualifiers": {
+        "scope": "prompting the model for ads",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "Don't come to AI without a process: you should already have a pre-existing process, sit down and whiteboard it yourself, and then process-automate it, sometimes shifting a few steps to make it more amenable to automation.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0227", "EV-0228", "EV-0229"],
+      "qualifiers": {
+        "scope": "process automation with AI",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "If AI picks the process, carries it out and also evaluates the results, you are multiplying probabilities: three steps at 0.8 each give about 51.2% success instead of 80%.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0229", "EV-0230", "EV-0231", "EV-0232"],
+      "qualifiers": {
+        "scope": "three-step pipeline example at 0.8 per step",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "Minimize the total number of steps involved in creating a good prompt, skill or process: you should choose the process yourself and judge the output quality yourself, letting AI only carry out the process in the middle, raising success from ~51.2% to ~80%.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0232", "EV-0233"],
+      "qualifiers": {
+        "scope": "creation of a good prompt, skill or process",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "You're probably not going to achieve 100% success rate with any AI agent process as of the time of this recording; AI lets you take more shots at the net and you apply your own human intellect to pick the correct shots.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0233", "EV-0234"],
+      "qualifiers": {
+        "scope": "AI agent processes",
+        "condition": "as of the time of this recording",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "The ad generator does not aim to pop out perfect ads every time; it generates dozens, hundreds or thousands of ads which you then review and run, alleviating the creative bottleneck assuming that is the bottleneck.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0234", "EV-0235"],
+      "qualifiers": {
+        "scope": "the ad generator system",
+        "condition": "assuming creative is the bottleneck",
+        "platform": null,
+        "stage": "top of funnel",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "The creative generation process is: save high performing ad formats as templates, feed in a variable (niche, offer, angle), have Claude generate combinations of variable times ad format, then review, pick and ship, staying in the loop until the end where taste matters.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0236", "EV-0237"],
+      "qualifiers": {
+        "scope": "creative generator with Claude",
+        "condition": null,
+        "platform": "Claude",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "The only situation in which applying the ad generator to a business makes sense is if creative is the bottleneck: a company with lots of ideas and lots of distribution but little creative could improve meaningfully; if you already can make ads, or are short on ideas or distribution, more ad creation won't improve things much.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0237", "EV-0238", "EV-0239"],
+      "qualifiers": {
+        "scope": "applying the creative system to a business",
+        "condition": "creative is the current bottleneck; company has ideas and distribution",
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "Claude Code and AI allow producing the manpower to give every person that works with the business a customized experience: customized creative, copy, outreach, speed to lead, enrichment research and follow-ups.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0181", "EV-0182"],
+      "qualifiers": {
+        "scope": "the speaker's business",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-030",
+      "text": "In the hypothetical business example with lots of capacity at creative and leads but not at booking, improving creative, follow-ups or lead count doesn't matter; improving booking capacity from 10 to 20 units/day effectively doubles the business.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0191", "EV-0192", "EV-0193"],
+      "qualifiers": {
+        "scope": "hypothetical business where booking is the narrowest step",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0194", "EV-0195", "EV-0196", "EV-0197"],
+      "claim_temp_refs": ["TC-003", "TC-004", "TC-005"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Automate the bottleneck first",
+        "trigger": "Before deciding what to automate in a business or client",
+        "condition": "The targeted step must be the current constraining step of the pipeline",
+        "action": "Spend a little bit of time figuring out what the bottleneck is, then build systems that alleviate that bottleneck; treat all presented systems as solutions to bottlenecks.",
+        "do_not": [
+          "Do not rush to automate literally everything in a business",
+          "Do not just throw these systems at companies when the targeted step is not the current constraining step"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0194", "EV-0195", "EV-0197"],
+      "claim_temp_refs": ["TC-003", "TC-004"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Rushing to automate literally everything you can in a business",
+          "Trying to do everything everywhere all at once instead of identifying the bottleneck",
+          "Process-automating steps that are already not the bottleneck"
+        ],
+        "why": "The entire operation is constrained by the narrowest step, so improving non-bottleneck steps changes nothing and you won't see much monetary return.",
+        "conditions": [
+          "Applies when you are already really good across the stack and the targeted step is not the constraining step"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0198", "EV-0199", "EV-0202", "EV-0206", "EV-0211", "EV-0216", "EV-0217"],
+      "claim_temp_refs": ["TC-006", "TC-007", "TC-008", "TC-010", "TC-011", "TC-014"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Four-step automation pipeline: prompt -> skill -> loop -> routine",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Build a step-by-step prompt",
+            "action": "Start the system very simply as a prompt: walk Claude manually through the process step by step, staying in the driver's seat each time.",
+            "required_inputs": [],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0199", "EV-0200", "EV-0216"]
+          },
+          {
+            "order_key": 2,
+            "name": "Convert into a skill (standardized instruction set)",
+            "action": "Transform the prompt into a saved, reusable and more efficient instruction set (skill), then run it a few times to make it near-perfect and very low likelihood of failing.",
+            "required_inputs": ["the prompt from step 1"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0202", "EV-0211", "EV-0217"]
+          },
+          {
+            "order_key": 3,
+            "name": "Convert into a loop",
+            "action": "Set a scheduler on your computer that runs the skill on its own without your involvement (e.g. every day at a set time).",
+            "required_inputs": ["the skill from step 2"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0206", "EV-0207", "EV-0208", "EV-0210", "EV-0211", "EV-0217"]
+          },
+          {
+            "order_key": 4,
+            "name": "Convert into a routine",
+            "action": "Move the automation off your computer into a cloud environment so it is entirely self-managed and runs regardless of your laptop, paying a cloud provider for tokens; it still needs an input such as a schedule, API, webhook or trigger.",
+            "required_inputs": ["the loop from step 3", "an input such as schedule, API, webhook or trigger"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0213", "EV-0214", "EV-0215", "EV-0217"]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "To build the skill you need the prompt; to build the loop you need the skill"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0218", "EV-0219", "EV-0220", "EV-0221"],
+      "claim_temp_refs": ["TC-015", "TC-016", "TC-017"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Promote repeated asks from prompt to skill",
+        "trigger": "The moment you find yourself saying the same thing / asking AI virtually the exact same thing more than once",
+        "condition": "The task must pass the totally autonomous threshold to become a skill; some things require a human being in the driver's seat",
+        "action": "Expend a tiny bit of time to test whether the repeated ask is turnable into a skill, and if it passes the autonomy threshold, save it as a skill you simply run.",
+        "do_not": [
+          "Do not keep re-typing the same instruction over and over as a prompt"
+        ],
+        "precedence": null,
+        "exceptions": [
+          "Not all things are turnable into skills; some require a human being in the driver's seat, in which case you stay in the driver's seat"
+        ],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0203", "EV-0205", "EV-0206"],
+      "claim_temp_refs": ["TC-009"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Chain granular skills into master/meta skills",
+        "trigger": "Once you have a big set of granular individual skills",
+        "condition": null,
+        "action": "Create master skills that run the individual skills in sequence, chaining small tasks into big ones and eventually replacing entire roles.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "Granular individual skills must be built first"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0227", "EV-0228", "EV-0229", "EV-0232", "EV-0233"],
+      "claim_temp_refs": ["TC-022", "TC-024"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Bring your own process; let AI only execute the middle",
+        "trigger": "Before automating a process with AI",
+        "condition": null,
+        "action": "Sit down and whiteboard the pre-existing process yourself, define the process and judge the quality of the outputs yourself, and let AI only carry out the process in the middle; minimize the total number of steps in the prompt, skill or process.",
+        "do_not": [
+          "Don't come to AI without a process",
+          "Don't have AI come up with the process for you",
+          "Don't have AI judge the quality of the outputs for you"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "A pre-existing process; sometimes shifting a few steps and providing input data to make it amenable to automation"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "anti_pattern_candidate",
+      "evidence_refs": ["EV-0225", "EV-0226", "EV-0227"],
+      "claim_temp_refs": ["TC-020", "TC-021"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "do_not": [
+          "Telling the model 'Make me some great ads' and expecting it to automatically work"
+        ],
+        "why": "The model will instinctively ask a bunch of narrowing questions, and even if you answer them it takes you on a wild goose chase and probably wouldn't get anywhere despite sounding like it knows what it's doing.",
+        "conditions": [
+          "Applies to creative/ad generation prompts"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-008",
+      "entity_kind": "workflow_candidate",
+      "evidence_refs": ["EV-0235", "EV-0236", "EV-0237"],
+      "claim_temp_refs": ["TC-026", "TC-027"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": [],
+      "structure": {
+        "name": "Creative generator process (ad wholesale generation)",
+        "steps": [
+          {
+            "order_key": 1,
+            "name": "Save ad formats as templates",
+            "action": "Save a bunch of high performing ad formats as templates.",
+            "required_inputs": ["high performing ad formats"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0236"]
+          },
+          {
+            "order_key": 2,
+            "name": "Feed in a variable",
+            "action": "Feed in a variable: a niche, an offer, an angle, whatever it is for whatever product.",
+            "required_inputs": ["niche, offer or angle"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0236"]
+          },
+          {
+            "order_key": 3,
+            "name": "Generate combinations",
+            "action": "Claude generates a bunch of different combinations of niche x ad format, offer x ad format, angle x ad format — dozens, hundreds or thousands of ads.",
+            "required_inputs": ["templates", "variables"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0235", "EV-0236", "EV-0237"]
+          },
+          {
+            "order_key": 4,
+            "name": "Review, pick and ship",
+            "action": "Review the generated ads, pick the good ones and run/ship them, staying in the loop up until the end where taste matters.",
+            "required_inputs": ["generated ads"],
+            "missing_input_action": null,
+            "evidence_refs": ["EV-0235", "EV-0237"]
+          }
+        ],
+        "exceptions": [],
+        "prerequisites": [
+          "Creative must be the current bottleneck for this system to meaningfully improve the business"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-009",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0237", "EV-0238", "EV-0239"],
+      "claim_temp_refs": ["TC-028"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Apply the creative system only when creative is the bottleneck",
+        "trigger": "Deciding whether to apply the ad/creative generator to a business",
+        "condition": "The company has lots of ideas and lots of distribution but not a lot of creative (i.e. it is bottlenecked on designing/making ads)",
+        "action": "Apply the creative generation system only in that situation, where it can meaningfully improve the business significantly.",
+        "do_not": [
+          "Do not apply it if you already have the ability to make a bunch of ads",
+          "Do not apply it if you are short on ideas or short on distribution"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-010",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0211", "EV-0212", "EV-0213"],
+      "claim_temp_refs": ["TC-012", "TC-013"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Move automations to the cloud when they must be institutional",
+        "trigger": "When you want to expand things, make them institutional and add them to the organization rather than only your own workspace",
+        "condition": "Loops only run on your computer, are hard to share and are brittle to computer changes (login, plugins, skills, MCP servers)",
+        "action": "Take the automation out of your computer and run it as a routine in a cloud environment.",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    }
+  ]
+}
