@@ -62,3 +62,52 @@ bloqueou na primeira chamada. Não há resultado de corpus a que ajustar.
 
 `MTX-POLICY-v1` (byte-idêntica) · prompt de aplicabilidade · schema de aplicabilidade ·
 AC1, AC3, AC4, AC5, AC6 · Source Packages · Fusion · transporte · proibição de PAYG.
+
+---
+
+## Tentativa 2 — preservada como INVALID
+
+    MS_002_APPLICABILITY_ATTEMPT_2 = INVALID
+    razão: AC7_FIXTURE_USES_UNLISTED_CHANNEL
+
+    AC1 OK · AC2 OK · AC3 OK · AC4 OK · AC5 OK · AC6 OK · AC7 FALHA(NOT_YET_CLASSIFIED)
+
+O AC2 corrigido passou. O AC7 que eu havia acabado de escrever falhou — e, de novo, o
+modelo estava certo e o fixture errado.
+
+O AC7 da tentativa 2 descrevia publicar **vídeo longo horizontal no YouTube**. A
+`MTX-POLICY-v1` **não lista YouTube** em canal algum: nem prioritário, nem secundário.
+O prompt do classificador manda, nessa situação, usar `NOT_YET_CLASSIFIED`:
+
+    NOT_YET_CLASSIFIED
+      FAIL-CLOSED. Use quando a unidade nao traz informacao suficiente para decidir, ou
+      quando decidir exigiria inventar contexto que a unidade nao da. NA DUVIDA, USE ESTA.
+
+Esperar que o modelo mapeasse YouTube para Instagram por conta própria era pedir
+exatamente a invenção que a regra 2 do mesmo prompt proíbe. **Eu escrevi um fixture que
+exigia violar o instrumento para passar.**
+
+### AC7 refeito — dentro de canal prioritário
+
+A unidade agora é uma regra de publicar a dica diária **no feed do Instagram** como post
+de **texto puro, sem imagem e sem vídeo**. Sob a política:
+
+* Instagram é rank 1 — logo, não é `REFERENCE_ONLY` nem `REJECT`;
+* a substância (publicar a dica diária no Instagram) se aplica — logo, não é `NOT_YET_CLASSIFIED`;
+* a forma **precisa** mudar, porque a política diz "especialmente vídeos e imagens" e
+  porque o canal não veicula texto puro — logo, não é `DIRECT_USE`.
+
+Resta `ADAPT_TO_MTX`, com adaptação concreta e não inventiva: renderizar a dica como
+imagem ou vídeo. A classe esperada decorre da política, sem depender de nada que o
+modelo tenha respondido.
+
+### Registro honesto
+
+Este é o **segundo** fixture meu, seguido, cuja expectativa não era sustentada pelas
+regras do próprio instrumento — depois do AC2 e, antes dele, do mesmo padrão em JE4/JE5
+no MS-001A. O padrão é meu, não do modelo: ao escrever controles, embuti o que eu
+queria que a resposta fosse em vez do que a política obriga. Registro isso porque é
+informação de auditoria, não ruído.
+
+Nenhuma classificação real foi produzida em nenhuma das duas tentativas: o portão
+bloqueou na primeira chamada das duas vezes. Não há resultado de corpus a que ajustar.

@@ -1,0 +1,118 @@
+{
+  "batch_id": "BATCH-1",
+  "decisions": [
+    {
+      "unit_id": "MS002-SRC-A|R-9001",
+      "applicability": "DIRECT_USE",
+      "rationale": "A regra descreve publicacao de video vertical 9:16 como Reels no Instagram, com trigger, condicao e acao completos e um do_not explicito. Instagram video e o canal de rank 1 da MTX e a superficie reels esta prevista na politica, portanto a unidade se aplica como esta, sem adaptacao material.",
+      "scope": "Publicacao organica de video vertical no Instagram Reels, quando ja existir video pronto de ate 90 segundos em 9:16.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao especifica frequencia de publicacao nem criterio de conteudo da legenda",
+        "Nao cobre videos horizontais nem videos acima de 90 segundos"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "instagram"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|WF-9002",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "O workflow opera integralmente sobre email (captura de email e envio de cinco emails em duas semanas). Email e canal secundario na politica MTX, com tratamento padrao REFERENCE_ONLY, e a unidade nao declara nenhuma necessidade especifica que ative a excecao prevista para DIRECT_USE ou ADAPT_TO_MTX.",
+      "scope": "Referencia conceitual sobre estrutura de nutricao em multiplos toques; nao entra em workflow operacional da MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Nao pode ser convertido em rotina operacional MTX sem necessidade especifica declarada e rastreada",
+        "A unidade nao descreve conteudo dos cinco emails nem criterio de saida da sequencia"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "email"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|R-9003",
+      "applicability": "REFERENCE_ONLY",
+      "rationale": "A acao e disparo de ligacao automatica de voz, canal secundario na politica MTX. A propria condicao da unidade registra 'sem necessidade especifica declarada', ou seja, a excecao que permitiria DIRECT_USE ou ADAPT_TO_MTX nao esta ativada. Aplica-se o tratamento padrao REFERENCE_ONLY.",
+      "scope": "Referencia sobre acionamento de leads frios; sem uso operacional em canal MTX.",
+      "adaptations": [],
+      "limitations": [
+        "Canal voz nao esta entre os canais prioritarios da MTX",
+        "Sem necessidade especifica declarada, nao pode ser promovido a uso operacional"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "voz"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-B|R-9004",
+      "applicability": "REJECT",
+      "rationale": "A acao consiste em contratar servico de compra de seguidores para inflar prova social. Trata-se de manipulacao artificial de metricas em canal de rank 1 (Instagram), pratica que viola os termos da plataforma e expoe a conta a restricao, portanto nao e aplicavel a operacao da MTX em nenhuma forma adaptada.",
+      "scope": "Nenhum escopo operacional na MTX; unidade excluida da camada de Operationalization.",
+      "adaptations": [],
+      "limitations": [
+        "Nao deve ser reaproveitada nem como referencia de tatica de prova social"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-C|R-9005",
+      "applicability": "NOT_YET_CLASSIFIED",
+      "rationale": "A unidade e integralmente indeterminada: 'ajustar o parametro' sem dizer qual parametro, trigger 'quando necessario', condicao 'depende' e acao 'mudar o valor para o recomendado' sem valor nem referencia. O proprio defect SCOPE_UNSTATED confirma a ausencia de escopo. Nao ha canal, objeto nem procedimento identificavel, e decidir exigiria inventar contexto que a unidade nao fornece. Fail-closed.",
+      "scope": "Escopo nao determinavel a partir da unidade.",
+      "adaptations": [],
+      "limitations": [
+        "Parametro, valor recomendado, ferramenta e canal nao estao declarados",
+        "Trigger e condicao nao sao verificaveis",
+        "Nao pode ser promovido automaticamente a nenhuma outra classe"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-B|AP-9006",
+      "applicability": "DIRECT_USE",
+      "rationale": "O anti-padrao proibe usar conta pessoal de WhatsApp para automacao de atendimento, com motivo (risco de restricao da conta) e condicao (volume alto de mensagens). WhatsApp e canal de rank 2 da MTX e atendimento e superficie prevista na politica, de modo que a proibicao se aplica como esta, sem adaptacao material.",
+      "scope": "Operacao de atendimento e automacao em WhatsApp na MTX, especialmente em cenarios de alto volume de mensagens.",
+      "adaptations": [],
+      "limitations": [
+        "A unidade nao define limiar numerico para 'volume alto'",
+        "Nao especifica qual alternativa de conta ou ferramenta deve ser usada no lugar"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "whatsapp"
+      ]
+    },
+    {
+      "unit_id": "MS002-SRC-A|WF-9007",
+      "applicability": "NOT_YET_CLASSIFIED",
+      "rationale": "O workflow descreve gravacao de video horizontal 16:9 de vinte minutos e publicacao em canal do YouTube. YouTube organico nao consta entre os canais prioritarios da MTX nem entre os secundarios; a politica so menciona youtube_ads como superficie de google_ads, que e midia paga e nao publicacao organica no canal. A unidade tambem nao indica reaproveitamento para Instagram. Classificar exigiria inventar contexto ou uma rota de adaptacao que a unidade nao declara. Fail-closed.",
+      "scope": "Escopo na MTX nao determinavel: canal de publicacao descrito nao esta coberto pela politica de canais.",
+      "adaptations": [],
+      "limitations": [
+        "Publicacao organica em YouTube nao esta prevista na politica de canais da MTX",
+        "A unidade nao declara reaproveitamento do material para Instagram ou outro canal prioritario",
+        "Nao pode ser promovido automaticamente a DIRECT_USE ou ADAPT_TO_MTX"
+      ],
+      "mtx_derived": false,
+      "derivation": null,
+      "channels": [
+        "none"
+      ]
+    }
+  ]
+}

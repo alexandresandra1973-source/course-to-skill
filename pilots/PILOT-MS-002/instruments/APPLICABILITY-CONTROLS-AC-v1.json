@@ -172,30 +172,23 @@
     "adaptations_nonempty": true,
     "channels_include": "instagram"
    },
-   "nota": "Substituto discriminante de ADAPT_TO_MTX: a substancia se aplica, mas o formato exige adaptacao ao canal prioritario.",
+   "nota": "Discriminante de ADAPT_TO_MTX DENTRO de canal prioritario. A versao anterior usava YouTube, canal que a MTX-POLICY nao lista; sob a regra de fail-closed do proprio prompt, NOT_YET_CLASSIFIED era a resposta correta ali. Aqui o canal e Instagram (rank 1) e a adaptacao e forcada pela politica e pela natureza do canal.",
    "unit": {
-    "unit_id": "MS002-SRC-A|WF-9007",
-    "entity_kind": "workflow_candidate",
+    "unit_id": "MS002-SRC-A|R-9007",
+    "entity_kind": "rule_candidate",
     "source_id": "MS002-SRC-A",
     "structure": {
-     "name": "Publicar video longo horizontal no YouTube",
-     "steps": [
-      {
-       "order_key": 1,
-       "name": "gravar",
-       "action": "gravar um video horizontal 16:9 de vinte minutos",
-       "evidence_refs": [
-        "EV-9007"
-       ]
-      },
-      {
-       "order_key": 2,
-       "name": "publicar",
-       "action": "publicar o video no canal do YouTube com titulo e descricao",
-       "evidence_refs": [
-        "EV-9007"
-       ]
-      }
+     "name": "Publicar a dica diaria como post de texto puro no feed",
+     "trigger": "todo dia util pela manha",
+     "condition": "quando houver uma dica escrita pronta",
+     "action": "publicar no feed do Instagram um post contendo apenas texto corrido, sem imagem e sem video",
+     "do_not": [
+      "nao publicar mais de uma dica por dia"
+     ],
+     "precedence": null,
+     "exceptions": [],
+     "prerequisites": [
+      "a dica escrita do dia"
      ]
     },
     "defects": [],

@@ -1,0 +1,4 @@
+MS-002 operationalization · unidades ELIGIBLE=271 · cap=25 · dry=False
+  controle AC (aplicabilidade)...
+    {'AC1': 'OK', 'AC2': 'OK', 'AC3': 'OK', 'AC4': 'OK', 'AC5': 'OK', 'AC6': 'OK', 'AC7': 'FALHA(NOT_YET_CLASSIFIED)'}
+MS_002_APPLICABILITY_INSTRUMENT_INVALID
