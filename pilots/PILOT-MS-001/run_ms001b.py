@@ -5,11 +5,11 @@ H = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(H / "lib"))
 import relation_validate as RV
 import anthropic
-MODEL="claude-opus-5"; THINKING={"type":"disabled"}; MAX_TOKENS=8000; HARD_CAP=15
-OUT=H/"out-ms001b"; RAW=OUT/"raw"; RAW.mkdir(parents=True,exist_ok=True)
+MODEL="claude-opus-5"; THINKING={"type":"disabled"}; MAX_TOKENS=8000; HARD_CAP=18
+OUT=H/"out-ms001b-exec2"; RAW=OUT/"raw"; RAW.mkdir(parents=True,exist_ok=True)
 PS=json.loads((H/"ms001b/PAIRSET-MS001B-V1.json").read_text(encoding="utf-8"))
 PI=json.loads((H/"ms001b/PAIR-INPUTS-MS001B.json").read_text(encoding="utf-8"))
-PROMPT=(H/"ms001b/RELATION-PROMPT-v1.txt").read_text(encoding="utf-8")
+PROMPT=(H/"ms001b/RELATION-PROMPT-v2.txt").read_text(encoding="utf-8")
 SCHEMA=(H/"ms001b/RELATION-SCHEMA-v1.json").read_text(encoding="utf-8")
 JC=json.loads((H/"ms001b/JUDGE-CONTROLS-J1-J10.json").read_text(encoding="utf-8"))
 canon=lambda o: json.dumps(o,sort_keys=True,ensure_ascii=False,separators=(",",":"))
@@ -19,7 +19,8 @@ def split(t):
     a=t.index("[SYSTEM]"); b=t.index("[USER]"); return t[a+8:b].strip(), t[b+6:].strip()
 SYS,USR=split(PROMPT)
 IDS=[p["pair_id"] for p in PS["pairs"]]
-BATCHES={f"BATCH-{i+1}":IDS[i*25:(i+1)*25] for i in range(4)}
+BATCHES={"BATCH-1":IDS[0:25],"BATCH-2":IDS[25:50],"BATCH-3":IDS[50:75],
+         "BATCH-4A":IDS[75:86],"BATCH-4B":IDS[86:97]}
 
 def call(client,run,label,system,user,meta):
     if _n["n"]>=HARD_CAP: raise SystemExit(f"HARD CAP {HARD_CAP} — MS_001B_INVALID")
@@ -62,7 +63,7 @@ def ctrl_payload():
 def main():
     key=pathlib.Path(os.path.expanduser("~/.anthropic_key")).read_text().strip()
     client=anthropic.Anthropic(api_key=key)
-    R={"pilot":"PILOT-MS-001B","hard_cap":HARD_CAP,"pairset_hash":PS["PAIRSET_HASH"],"runs":{}}
+    R={"pilot":"PILOT-MS-001B","execution":"EXEC-2","hard_cap":HARD_CAP,"pairset_hash":PS["PAIRSET_HASH"],"runs":{}}
     # controles: pair_id sintetico deterministico
     CP=[{"pair_id":sha("CTRL-"+c["id"]),"left":{"claim_ref":{"source_package_hash":"0"*64,"entity_kind":"claim","local_id":"CL-9000"},
           "text":c["left"]["text"],"language":"pt","qualifiers":c["left"]["qualifiers"],
@@ -75,8 +76,11 @@ def main():
                          "right":{e["evidence_id"] for e in x["right"]["evidence"]}} for x in CP}
     for run in ("RUN-1","RUN-2","RUN-3"):
         rr={"control":None,"batches":{},"judgments":{},"status":None}
-        u=USR.replace("{BATCH_ID}","BATCH-1").replace("{PAIRS_JSON}",
-             json.dumps([{k:v for k,v in x.items() if not k.startswith("_")} for x in CP],ensure_ascii=False,indent=1)).replace("{JSON_SCHEMA}",SCHEMA)
+        cids=[x["pair_id"] for x in CP]
+        u=(USR.replace("{BATCH_ID}","BATCH-1").replace("{EXPECTED_COUNT}",str(len(CP)))
+              .replace("{EXPECTED_IDS}",json.dumps(cids,ensure_ascii=False,indent=1))
+              .replace("{PAIRS_JSON}",json.dumps([{k:v for k,v in x.items() if not k.startswith("_")} for x in CP],ensure_ascii=False,indent=1))
+              .replace("{JSON_SCHEMA}",SCHEMA))
         txt=call(client,run,"CONTROL",SYS,u,{"controls":[c["_id"] for c in CP]})
         doc,errs=RV.validate(jparse(txt),"BATCH-1",CSENT)
         if doc is None:
@@ -100,8 +104,11 @@ def main():
         for bid,ids in BATCHES.items():
             sent={i:{"left":{e["evidence_id"] for e in PI[i]["left"]["evidence"]},
                      "right":{e["evidence_id"] for e in PI[i]["right"]["evidence"]}} for i in ids}
-            u=USR.replace("{BATCH_ID}",bid).replace("{PAIRS_JSON}",
-                 json.dumps([pair_payload(i) for i in ids],ensure_ascii=False,indent=1)).replace("{JSON_SCHEMA}",SCHEMA)
+            u=(USR.replace("{BATCH_ID}",bid)
+                  .replace("{EXPECTED_COUNT}",str(len(ids)))
+                  .replace("{EXPECTED_IDS}",json.dumps(ids,ensure_ascii=False,indent=1))
+                  .replace("{PAIRS_JSON}",json.dumps([pair_payload(i) for i in ids],ensure_ascii=False,indent=1))
+                  .replace("{JSON_SCHEMA}",SCHEMA))
             txt=call(client,run,bid,SYS,u,{"batch":bid,"pair_ids":ids})
             doc,errs=RV.validate(jparse(txt),bid,sent)
             if doc is None:
