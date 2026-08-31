@@ -1,0 +1,190 @@
+[
+ {
+  "canary": "RC00",
+  "desc": "output valido de referencia",
+  "expected": null,
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "RC01",
+  "desc": "JSON invalido",
+  "expected": "R01_JSON_UNPARSEABLE",
+  "got": [
+   "R01_JSON_UNPARSEABLE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC02",
+  "desc": "campo extra",
+  "expected": "R04_EXTRA_FIELD",
+  "got": [
+   "R04_EXTRA_FIELD"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC03",
+  "desc": "par desconhecido",
+  "expected": "R05_UNKNOWN_PAIR",
+  "got": [
+   "R05_UNKNOWN_PAIR",
+   "R15_PAIR_MISSING"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC04",
+  "desc": "par duplicado",
+  "expected": "R06_DUPLICATE_PAIR",
+  "got": [
+   "R06_DUPLICATE_PAIR"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC05",
+  "desc": "par omitido",
+  "expected": "R15_PAIR_MISSING",
+  "got": [
+   "R15_PAIR_MISSING"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC06",
+  "desc": "relation invalida",
+  "expected": "R07_INVALID_RELATION",
+  "got": [
+   "R07_INVALID_RELATION"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC07",
+  "desc": "direction invalida",
+  "expected": "R08_INVALID_DIRECTION",
+  "got": [
+   "R08_INVALID_DIRECTION"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC08",
+  "desc": "direction incompativel com relation",
+  "expected": "R09_DIRECTION_INCOMPATIBLE",
+  "got": [
+   "R09_DIRECTION_INCOMPATIBLE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC09",
+  "desc": "scope_state invalido",
+  "expected": "R10_INVALID_SCOPE",
+  "got": [
+   "R10_INVALID_SCOPE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC10",
+  "desc": "IDENTICAL com DIFFERENT_SCOPE",
+  "expected": "R11_SCOPE_INCOMPATIBLE",
+  "got": [
+   "R11_SCOPE_INCOMPATIBLE"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC11",
+  "desc": "evidence acrescentada",
+  "expected": "R13_EVIDENCE_ADDED_LEFT",
+  "got": [
+   "R13_EVIDENCE_ADDED_LEFT"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC12",
+  "desc": "evidence omitida/estrangeira",
+  "expected": "R14 ou R13",
+  "got": [
+   "R14_EVIDENCE_OMITTED_RIGHT"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC13",
+  "desc": "injecao de precedence",
+  "expected": "R12_FORBIDDEN_FIELD",
+  "got": [
+   "R04_EXTRA_FIELD",
+   "R12_FORBIDDEN_FIELD"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC14",
+  "desc": "injecao de MTX policy",
+  "expected": "R12_FORBIDDEN_FIELD",
+  "got": [
+   "R04_EXTRA_FIELD",
+   "R12_FORBIDDEN_FIELD"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC15",
+  "desc": "PAIRSET_HASH reproduz",
+  "expected": "igual",
+  "got": true,
+  "ok": true
+ },
+ {
+  "canary": "RC16",
+  "desc": "PAIRSET_DRIFT detectado",
+  "expected": "hash muda",
+  "got": true,
+  "ok": true
+ },
+ {
+  "canary": "RC17",
+  "desc": "zero ref nao tipada",
+  "expected": "0 refs nuas",
+  "got": 0,
+  "ok": true
+ },
+ {
+  "canary": "RC18",
+  "desc": "Source Package hash drift",
+  "expected": "nenhum",
+  "got": [],
+  "ok": true
+ },
+ {
+  "canary": "RC19",
+  "desc": "selos PASS",
+  "expected": "PASS PASS",
+  "got": [
+   "PASS",
+   "PASS"
+  ],
+  "ok": true
+ },
+ {
+  "canary": "RC20",
+  "desc": "97 pares exatos",
+  "expected": "97",
+  "got": 97,
+  "ok": true
+ },
+ {
+  "canary": "RC21",
+  "desc": "provenance de todos os 97 pares resolve a anchor",
+  "expected": "True",
+  "got": true,
+  "ok": true
+ }
+]
