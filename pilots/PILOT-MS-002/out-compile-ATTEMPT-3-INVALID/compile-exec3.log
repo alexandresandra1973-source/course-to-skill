@@ -1,0 +1,125 @@
+MS-002 compile · fontes=['A', 'B', 'C'] · dry=False · cap=95
+  controle EC (extrator)...
+    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
+  controle JE (entailment)...
+    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
+  === fonte A ===
+    SL-A-01: 23 claims, 10 candidates
+    SL-A-02: 44 claims, 14 candidates
+    SL-A-03: 49 claims, 7 candidates
+    SL-A-04: 33 claims, 9 candidates
+Traceback (most recent call last):
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 375, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 351, in main
+    bundles, trace = extract_source(src)
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 157, in extract_source
+    validate_strict(d, EX_SCH, f"extract/{sl['slice_id']}")
+  File "/home/mtx/course-to-skill-claude/pilots/PILOT-MS-002/run_compile.py", line 61, in validate_strict
+    jsonschema.validate(doc, schema)
+  File "/usr/lib/python3/dist-packages/jsonschema/validators.py", line 1080, in validate
+    raise error
+jsonschema.exceptions.ValidationError: 'defects' is a required property
+
+Failed validating 'required' in schema['properties']['raw_candidates']['items']:
+    {'additionalProperties': False,
+     'properties': {'claim_refs_applicability': {'enum': ['APPLICABLE',
+                                                          'NOT_APPLICABLE']},
+                    'claim_temp_refs': {'items': {'pattern': '^TC-[0-9]{3}$',
+                                                  'type': 'string'},
+                                        'type': 'array'},
+                    'defects': {'items': {'enum': ['PRECEDENCE_UNDEFINED',
+                                                   'PASSO_UNICO',
+                                                   'SCOPE_UNSTATED']},
+                                'type': 'array'},
+                    'entity_kind': {'enum': ['rule_candidate',
+                                             'workflow_candidate',
+                                             'anti_pattern_candidate']},
+                    'evidence_refs': {'items': {'pattern': '^EV-[0-9]{4}$',
+                                                'type': 'string'},
+                                      'minItems': 1,
+                                      'type': 'array'},
+                    'structure': {'oneOf': [{'additionalProperties': False,
+                                             'properties': {'action': {'type': 'string'},
+                                                            'condition': {'type': ['string',
+                                                                                   'null']},
+                                                            'do_not': {'items': {'type': 'string'},
+                                                                       'type': 'array'},
+                                                            'exceptions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'name': {'type': 'string'},
+                                                            'precedence': {'type': ['string',
+                                                                                    'null']},
+                                                            'prerequisites': {'items': {'type': 'string'},
+                                                                              'type': 'array'},
+                                                            'trigger': {'type': ['string',
+                                                                                 'null']}},
+                                             'required': ['name',
+                                                          'trigger',
+                                                          'condition',
+                                                          'action',
+                                                          'do_not',
+                                                          'precedence'],
+                                             'type': 'object'},
+                                            {'additionalProperties': False,
+                                             'properties': {'exceptions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'name': {'type': 'string'},
+                                                            'prerequisites': {'items': {'type': 'string'},
+                                                                              'type': 'array'},
+                                                            'steps': {'items': {'additionalProperties': False,
+                                                                                'properties': {'action': {'type': 'string'},
+                                                                                               'evidence_refs': {'items': {'pattern': '^EV-[0-9]{4}$',
+                                                                                                                           'type': 'string'},
+                                                                                                                 'minItems': 1,
+                                                                                                                 'type': 'array'},
+                                                                                               'missing_input_action': {'type': ['string',
+                                                                                                                                 'null']},
+                                                                                               'name': {'type': 'string'},
+                                                                                               'order_key': {'minimum': 1,
+                                                                                                             'type': 'integer'},
+                                                                                               'required_inputs': {'items': {'type': 'string'},
+                                                                                                                   'type': 'array'}},
+                                                                                'required': ['order_key',
+                                                                                             'name',
+                                                                                             'action',
+                                                                                             'evidence_refs'],
+                                                                                'type': 'object'},
+                                                                      'minItems': 1,
+                                                                      'type': 'array'}},
+                                             'required': ['name', 'steps'],
+                                             'type': 'object'},
+                                            {'additionalProperties': False,
+                                             'properties': {'conditions': {'items': {'type': 'string'},
+                                                                           'type': 'array'},
+                                                            'do_not': {'items': {'type': 'string'},
+                                                                       'minItems': 1,
+                                                                       'type': 'array'},
+                                                            'why': {'type': 'string'}},
+                                             'required': ['do_not', 'why'],
+                                             'type': 'object'}]},
+                    'temporary_candidate_id': {'pattern': '^TX-[0-9]{3}$',
+                                               'type': 'string'}},
+     'required': ['temporary_candidate_id',
+                  'entity_kind',
+                  'evidence_refs',
+                  'claim_temp_refs',
+                  'structure',
+                  'defects'],
+     'type': 'object'}
+
+On instance['raw_candidates'][10]:
+    {'claim_refs_applicability': 'APPLICABLE',
+     'claim_temp_refs': ['TC-009', 'TC-008'],
+     'entity_kind': 'anti_pattern_candidate',
+     'evidence_refs': ['EV-0257'],
+     'structure': {'conditions': ['When populating the ad formats folder '
+                                  'used as input'],
+                   'do_not': ['Do not fill the format library with a bunch '
+                              'of shitty ads'],
+                   'why': 'The idea is to fill it with the best formats '
+                          'ever, since those formats are then spun as much '
+                          'as humanly possible.'},
+     'temporary_candidate_id': 'TX-011'}

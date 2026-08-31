@@ -1,0 +1,828 @@
+{
+  "source_id": "MS002-SRC-A",
+  "slice_id": "SL-A-03",
+  "raw_claims": [
+    {
+      "temporary_claim_id": "TC-001",
+      "text": "Higher effort settings make Claude consume a lot more tokens, but the probability of a high quality answer goes up way more.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0121", "EV-0122"],
+      "qualifiers": {
+        "scope": "effort setting in Claude Code",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-002",
+      "text": "Speed changes with effort: when something is at effort low it usually works much faster than at higher effort; effort low might take like 2 seconds while effort ultra code might take like 5 minutes.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0122", "EV-0123"],
+      "qualifiers": {
+        "scope": "effort setting",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-003",
+      "text": "It is usually worth operating somewhere in the middle of the effort range; the speaker likes defaulting to medium or high for the most part.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0123"],
+      "qualifiers": {
+        "scope": "effort setting",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": "speaker's own default preference"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-004",
+      "text": "Sonnet high tends to work pretty quick while also delivering pretty good results.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0123"],
+      "qualifiers": {
+        "scope": "model + effort combination",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-005",
+      "text": "The context window shown in the bottom right hand corner is the total number of things that are consuming your tokens, including messages, system tools, system prompts, MCP tools, skills and memory files.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0123", "EV-0124", "EV-0125"],
+      "qualifiers": {
+        "scope": "Claude Code interface",
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-006",
+      "text": "Claude can only hold a certain amount of information in its head, and that information is currently bounded by tokens; a token is very similar to a word.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0125"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-007",
+      "text": "Sonnet 5, the model the speaker is using, can host 967,000 tokens; in the demo 112,000 had been consumed, which is 12% of the context window.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0126"],
+      "qualifiers": {
+        "scope": "Sonnet 5 as used at time of recording",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-008",
+      "text": "When you hit the context window, usually Claude will compact your context, rewriting it so it is way shorter and sticking that information at the very top, which lets you continue the conversation with a lot of the BS words taken out and usually get billed less.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0126", "EV-0127"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "when you hit the context window",
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-009",
+      "text": "The longer your context window is while you talk with Claude, the faster you will burn through your usage limit.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0127", "EV-0128"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-010",
+      "text": "The speaker's recommendation is to try not to keep a thread running all the 967,000 available tokens, and instead work somewhere between 0 and maybe 500k, which he finds is his performance sweet spot.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0128"],
+      "qualifiers": {
+        "scope": "single thread/conversation",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": "speaker's recommendation"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-011",
+      "text": "If you add more information than roughly 500k tokens, Claude starts to perform a little poorer because it gets confused and has a lot of instructions to juggle in its memory.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0128", "EV-0129"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "adding more information than ~500k tokens",
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-012",
+      "text": "A system prompt is a snippet of text you can define that will be prepended at the beginning of every conversation.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0129", "EV-0130"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-013",
+      "text": "MCP tools are skills that other people host for you; you can load external skills that other people have created via MCP tools.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0130"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-014",
+      "text": "In the top right hand corner you have the ability to spawn a terminal, and sometimes Claude actually needs to use this terminal in order to do things.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0132", "EV-0133"],
+      "qualifiers": {
+        "scope": "Claude Code desktop app interface",
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-015",
+      "text": "You have the ability to check your diff, which is the changes to the code you have made, which can be quite valuable if you are developing an application.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0133"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "if you're developing an application",
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-016",
+      "text": "There is a browser built into Claude that can access web pages, which can be used to automate browser activities.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0133", "EV-0134"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-017",
+      "text": "There is an iOS simulator so you can set up iPhone apps in Claude Code; you download Xcode via the Mac app store to do it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0134", "EV-0135"],
+      "qualifiers": {
+        "scope": "iPhone apps",
+        "condition": null,
+        "platform": "Claude Code desktop app on Mac",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-018",
+      "text": "You can open in a new window, VS Code or Finder, rename your transcript, and expand the transcript view to see all of the thinking that Claude has done.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0135", "EV-0136", "EV-0137"],
+      "qualifiers": {
+        "scope": "Claude Code desktop app interface",
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-019",
+      "text": "The summary option summarizes everything done in the whole conversation back and forth, and a full transcript of the conversation is available at any time.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0137", "EV-0138"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-020",
+      "text": "You can fork a conversation, which starts another conversation at the same place; you can also archive a conversation if you don't want to look at it anymore, and delete a conversation.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0139", "EV-0140"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code desktop app",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-021",
+      "text": "CLI stands for command line interface, which is just a different way of communicating with Claude Code.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0142"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-022",
+      "text": "Choosing between the CLI and the Claude desktop app is really just about what is simpler and easier for you.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0143"],
+      "qualifiers": {
+        "scope": "choice of interface",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-023",
+      "text": "Just like a website can be accessed through different browsers, Claude Code is accessible through the desktop app, terminal, VS Code or something else — a variety of different ways to get to the same resource.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0144", "EV-0145"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-024",
+      "text": "To access Claude from a terminal, the speaker opens Ghost TTY inside a folder and types 'cla-verbose'; he likes verbose because it allows him to see what Claude is thinking.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0146", "EV-0147"],
+      "qualifiers": {
+        "scope": "terminal access",
+        "condition": null,
+        "platform": "terminal (Ghost TTY)",
+        "stage": null,
+        "audience": "speaker's own practice"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-025",
+      "text": "The terminal version is the exact same product accessed in a different way; typing slash shows a variety of different skills that could be used.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0148"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "terminal",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-026",
+      "text": "The terminal is the speaker's preferred way of communicating with Claude Code because he has done a lot more development work over the last 6 or 12 months and is more used to a terminal style interface; but he says the Claude desktop app is a very strong and viable candidate and for simplicity's sake he will prefer that wherever possible.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0148", "EV-0149", "EV-0150"],
+      "qualifiers": {
+        "scope": "personal preference",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": "speaker's own preference"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-027",
+      "text": "Accessing the same underlying capability through a different interface will react and handle differently, like different browsers or different cars with the same horsepower.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0150", "EV-0151"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-028",
+      "text": "The speaker sees all businesses as a pipeline: marketing (get strangers to notice you / eyeballs on the brand), then a sales transformation event that turns eyeballs and interest into money, then fulfillment where you deliver what you promised, then an administrative wheel that keeps the machine running.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0152", "EV-0153", "EV-0154"],
+      "qualifiers": {
+        "scope": "speaker's view of businesses",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-029",
+      "text": "Going from top to bottom of the pipeline converts somebody who is a total stranger into some form of profit, and the same applies across different business stacks such as ecom; these four working in perfect concert is what makes profit.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0154", "EV-0155", "EV-0156"],
+      "qualifiers": {
+        "scope": "business pipeline model",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-030",
+      "text": "Marketing and sales work in tandem, not just one or the other; a lot of what is built for marketing with Claude Code will also be built for or with the sales department.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0157", "EV-0158"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-031",
+      "text": "The framework used for these Claude Code automations is RACE, which stands for reach, acquire, close and expand; everything to the left of the delineator is technically marketing and everything to the right is technically sales.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0159", "EV-0160"],
+      "qualifiers": {
+        "scope": "RACE framework as defined by the speaker",
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-032",
+      "text": "The course focuses on reach and acquire: how to get seen (impressions, views, brand in front of more eyeballs) and how to turn impressions and views into intent (booking meetings, form fills, newsletter signups, opt-ins).",
+      "source_language": "en",
+      "evidence_refs": ["EV-0160", "EV-0161"],
+      "qualifiers": {
+        "scope": "this course",
+        "condition": null,
+        "platform": null,
+        "stage": "reach and acquire",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-033",
+      "text": "If you race to implement automations that help with reach, acquisition, close, and expansion, typically you'll allocate your time a lot more effectively than otherwise.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0161", "EV-0162"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-034",
+      "text": "When clients want to start with a crazy admin or backend automation, the speaker instead starts with RACE (reach, acquire, close, expand) and worries about the other work later; he finds results are through the roof.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0162", "EV-0163"],
+      "qualifiers": {
+        "scope": "speaker's agency practice with clients",
+        "condition": "when someone wants to start with an admin/backend automation",
+        "platform": null,
+        "stage": null,
+        "audience": "AI automation agency clients"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-035",
+      "text": "People focus on revenue and growth way less than they realistically should, and RACE is how the speaker ties them back to revenue and growth levers constantly.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0163", "EV-0164"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": null,
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-036",
+      "text": "Close and expand sit past a sales transformation threshold: once a meeting is booked or intent is gained, it is not really a marketer's job to close and expand them.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0164", "EV-0165"],
+      "qualifiers": {
+        "scope": "marketer's responsibility boundary",
+        "condition": "once we've booked the meeting or gotten some sort of intent",
+        "platform": null,
+        "stage": "close and expand",
+        "audience": "marketers"
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-037",
+      "text": "Under reach there are three major places to build Claude automations; the first is creative — generation, using artificial intelligence and orchestrated by Claude, of images, videos, audio and so on, typically for advertising and also for organic brand reach and growth.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0165", "EV-0166", "EV-0167"],
+      "qualifiers": {
+        "scope": "reach stage",
+        "condition": null,
+        "platform": "Claude",
+        "stage": "reach",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-038",
+      "text": "You can significantly reduce bottlenecks at the creative stage by throwing a couple of different creative models to Claude and giving Claude the ability to press buttons and arrange prompts in its own way.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0167", "EV-0168"],
+      "qualifiers": {
+        "scope": "creative stage",
+        "condition": null,
+        "platform": "Claude",
+        "stage": "reach / creative",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-039",
+      "text": "The speaker says this is the same system he used at a company doing over a billion dollars a year in revenue to massively increase their top of funnel and the total number of pieces of content and ads they can get out.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0168"],
+      "qualifiers": {
+        "scope": "speaker's claimed track record",
+        "condition": null,
+        "platform": null,
+        "stage": "reach / creative",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-040",
+      "text": "Copy works in tandem with creative for advertising, and Claude Code can be used to customize copy in the marketing mix, for instance customizing newsletter copy, which the speaker sees as a big lever not many people are pulling.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0169"],
+      "qualifiers": {
+        "scope": "reach stage",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "reach / copy",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-041",
+      "text": "Instead of a newsletter saying 'my offer does X, Y and Z', you can customize it to reference something the recipient talked about (e.g., on LinkedIn last month) before presenting the offer; that sort of stuff does really really well and blurs the line with direct outreach.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0169", "EV-0170"],
+      "qualifiers": {
+        "scope": "newsletter copy",
+        "condition": null,
+        "platform": null,
+        "stage": "reach / copy",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-042",
+      "text": "Marketing is not all inbound; it can also be done outbound, where you have a product or service and actively look for customers for it.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0170", "EV-0171"],
+      "qualifiers": {
+        "scope": null,
+        "condition": null,
+        "platform": null,
+        "stage": "reach",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-043",
+      "text": "The speaker says applying AI and Claude Code to the outreach stack is a very high opportunity lever for outbound growth.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0172", "EV-0173"],
+      "qualifiers": {
+        "scope": "outreach stack",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "reach / outbound",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-044",
+      "text": "Speed to lead means responding to leads really quickly, capitalizing on interest between the reach and acquisition stages where somebody fills out a form to demonstrate interest; hundreds of millions of dollars are lost between these two stages.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0173", "EV-0174", "EV-0175"],
+      "qualifiers": {
+        "scope": "between reach and acquisition",
+        "condition": null,
+        "platform": null,
+        "stage": "acquire",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-045",
+      "text": "If you build systems that allow Claude to orchestrate a conversation within 30 seconds of somebody filling out a form, you can make companies 300 to 400%.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0175"],
+      "qualifiers": {
+        "scope": null,
+        "condition": "conversation orchestrated within 30 seconds of form fill",
+        "platform": "Claude",
+        "stage": "acquire / speed to lead",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-046",
+      "text": "The speaker runs a company that just does speed to lead and took a home services company from around $3 million a month in sales to $9 million a month, a 300% increase, by implementing a speed to lead system.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0176", "EV-0177"],
+      "qualifiers": {
+        "scope": "single reported client case (home services company)",
+        "condition": null,
+        "platform": null,
+        "stage": "acquire / speed to lead",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-047",
+      "text": "Booking percentage can be improved through speed to lead and also by economizing form fills; Claude can do research on the prospect to eliminate the total number of fields needed in an opt-in form.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0177", "EV-0178"],
+      "qualifiers": {
+        "scope": "opt-in forms",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "acquire",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-048",
+      "text": "Typically, if you have 10 questions in an opt-in form and break that down to three or four questions, you'll see a significant improvement in booking percentage, at the cost of qualification — but Claude Code can now do research on the prospect autonomously, which means you don't need all that much information.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0178", "EV-0179"],
+      "qualifiers": {
+        "scope": "opt-in forms",
+        "condition": "reducing from ~10 questions to three or four",
+        "platform": "Claude Code",
+        "stage": "acquire",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    },
+    {
+      "temporary_claim_id": "TC-049",
+      "text": "Claude Code can be used to orchestrate autonomous follow-ups (nurturing) in really customized ways so that prospects feel treated as people rather than dollar signs and more likely to feel they are being talked to directly.",
+      "source_language": "en",
+      "evidence_refs": ["EV-0179", "EV-0180"],
+      "qualifiers": {
+        "scope": "follow-up / nurturing",
+        "condition": null,
+        "platform": "Claude Code",
+        "stage": "acquire",
+        "audience": null
+      },
+      "status": "SOURCE_EXPLICIT"
+    }
+  ],
+  "raw_candidates": [
+    {
+      "temporary_candidate_id": "TX-001",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0121", "EV-0122", "EV-0123"],
+      "claim_temp_refs": ["TC-001", "TC-002", "TC-003", "TC-004"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Default to a middle effort setting (medium or high)",
+        "trigger": "Choosing the effort setting for a task in Claude Code",
+        "condition": "Low effort is much faster (~2 seconds) but guesses; ultra/high effort consumes a lot more tokens and can take ~5 minutes but raises the probability of a high quality answer",
+        "action": "Operate somewhere in the middle; the speaker likes defaulting to medium or high for the most part, noting sonnet high tends to work pretty quick while also delivering pretty good results",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-002",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0127", "EV-0128", "EV-0129"],
+      "claim_temp_refs": ["TC-009", "TC-010", "TC-011"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Keep thread context between 0 and ~500k tokens",
+        "trigger": "Running a conversation thread with Claude",
+        "condition": "The longer the context window while talking with Claude, the faster you burn through your usage limit; beyond ~500k Claude starts to perform a little poorer because it gets confused",
+        "action": "Try not to keep a thread running all the 967,000 available tokens; work somewhere between 0 and maybe 500k, which the speaker finds is his performance sweet spot",
+        "do_not": [
+          "Do not keep a single thread running through all 967,000 available tokens"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-003",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0143", "EV-0148", "EV-0149", "EV-0150"],
+      "claim_temp_refs": ["TC-022", "TC-023", "TC-026"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Pick the Claude Code interface that is simpler and easier for you",
+        "trigger": "Deciding whether to use the CLI/terminal, the desktop app or VS Code to access Claude Code",
+        "condition": "All of them are different ways to get to the same resource / the exact same product",
+        "action": "Choose based on what is simpler and easier for you; the speaker prefers the terminal for himself but says the Claude desktop app is a very strong and viable candidate and that for simplicity's sake he'll prefer it wherever possible",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [
+          "There are some situations in which the speaker does like diving into the terminal"
+        ],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-004",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0146", "EV-0147"],
+      "claim_temp_refs": ["TC-024"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED", "SCOPE_UNSTATED"],
+      "structure": {
+        "name": "Launch Claude from the terminal with verbose",
+        "trigger": "Wanting to access Claude from a terminal",
+        "condition": "You are inside the folder you want to work in",
+        "action": "Type 'cla-verbose' to access Claude; the speaker likes verbose because it allows him to see what Claude is thinking",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": [
+          "A terminal (the speaker uses Ghost TTY) opened inside the target folder"
+        ]
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-005",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0162", "EV-0163"],
+      "claim_temp_refs": ["TC-033", "TC-034", "TC-035"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Start with RACE before admin/backend automations",
+        "trigger": "A client wants to build a crazy admin automation or a backend thing",
+        "condition": "Speaker's experience at his AI automation agency (Leftclick)",
+        "action": "Start with RACE — reach, acquire, close and expand — and worry about the admin/backend work later; the speaker finds results are through the roof and uses RACE to tie people back to revenue and growth levers",
+        "do_not": [
+          "Do not start with the crazy admin automation / backend thing first"
+        ],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-006",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0177", "EV-0178", "EV-0179"],
+      "claim_temp_refs": ["TC-047", "TC-048"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Shrink opt-in forms and let Claude research the prospect",
+        "trigger": "Trying to improve booking percentage on an opt-in form",
+        "condition": "Typically a form with about 10 questions",
+        "action": "Break the form down to three or four questions to get a significant improvement in booking percentage, and have Claude Code do research on the prospect autonomously to compensate for the lost information",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    },
+    {
+      "temporary_candidate_id": "TX-007",
+      "entity_kind": "rule_candidate",
+      "evidence_refs": ["EV-0174", "EV-0175"],
+      "claim_temp_refs": ["TC-044", "TC-045"],
+      "claim_refs_applicability": "APPLICABLE",
+      "defects": ["PRECEDENCE_UNDEFINED"],
+      "structure": {
+        "name": "Respond to leads within 30 seconds (speed to lead)",
+        "trigger": "Somebody fills out a form to demonstrate interest, between the reach and acquisition stages",
+        "condition": null,
+        "action": "Build systems that allow Claude to orchestrate a conversation within 30 seconds of somebody filling out a form; the speaker says this can make companies 300 to 400%",
+        "do_not": [],
+        "precedence": null,
+        "exceptions": [],
+        "prerequisites": []
+      }
+    }
+  ]
+}

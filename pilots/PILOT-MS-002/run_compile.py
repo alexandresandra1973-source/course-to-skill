@@ -50,10 +50,57 @@ def strip_null_unknown(node, schema, path=""):
                 strip_null_unknown(it, sub["items"], f"{path}.{k}[{i}]")
     return node
 
+# ---------------------------------------------------------------------------
+# ADDENDUM-03 — DEFAULT DE CONJUNTO VAZIO, lista FECHADA e PRE-DECLARADA.
+# Regra declarada: um campo obrigatorio cujo valor e "o conjunto de X", e para o qual
+# o conjunto vazio e legitimo e nao carrega informacao, recebe o valor vazio quando
+# AUSENTE. Ausente e vazio sao indistinguiveis para esses campos.
+# NAO se aplica a nada que carregue provenance ou conteudo. Toda insercao e registrada.
+DEFAULTED = []
+EMPTY_LIST_PATHS = [
+    ("raw_claims",),                                   # arrays vazios sao resposta valida
+    ("raw_candidates",),
+    ("raw_candidates", "*", "claim_temp_refs"),
+    ("raw_candidates", "*", "defects"),
+]
+EMPTY_OBJ_PATHS = [("raw_claims", "*", "qualifiers")]
+
+def _apply(doc, path, empty, where):
+    node, trail = doc, []
+    for i, k in enumerate(path):
+        last = i == len(path) - 1
+        if k == "*":
+            if not isinstance(node, list): return
+            for j, it in enumerate(node):
+                _apply(it, path[i + 1:], empty, f"{where}.{'.'.join(trail)}[{j}]")
+            return
+        if last:
+            if isinstance(node, dict) and k not in node:
+                node[k] = [] if empty == "list" else {}
+                DEFAULTED.append({"path": f"{where}.{'.'.join(trail + [k])}", "inserted": empty})
+            return
+        if not isinstance(node, dict) or k not in node: return
+        node = node[k]; trail.append(k)
+
+def default_empty(doc, where):
+    for p in EMPTY_LIST_PATHS: _apply(doc, p, "list", where)
+    for p in EMPTY_OBJ_PATHS: _apply(doc, p, "obj", where)
+    # structure.do_not so no ramo RULE, identificado por 'action' sem 'steps' e sem 'why'.
+    # Em workflow do_not nao existe no schema; em anti_pattern do_not exige minItems 1.
+    for j, c in enumerate(doc.get("raw_candidates", []) or []):
+        s = c.get("structure")
+        if isinstance(s, dict) and "action" in s and "steps" not in s and "why" not in s and "do_not" not in s:
+            s["do_not"] = []
+            DEFAULTED.append({"path": f"{where}.raw_candidates[{j}].structure.do_not(rule)", "inserted": "list"})
+
 def validate_strict(doc, schema, where):
     """Normaliza chaves-null desconhecidas, depois valida. Fail-closed no resto."""
-    before = len(STRIPPED)
+    before = len(STRIPPED); dbefore = len(DEFAULTED)
     strip_null_unknown(doc, schema, where)
+    default_empty(doc, where)
+    if len(DEFAULTED) - dbefore:
+        print(f"      [ADDENDUM-03] {where}: {len(DEFAULTED)-dbefore} conjunto(s) vazio(s) inserido(s): "
+              + ", ".join(x["path"] for x in DEFAULTED[dbefore:]))
     n = len(STRIPPED) - before
     if n:
         print(f"      [ADDENDUM-01] {where}: {n} chave(s) desconhecida(s) de valor null removida(s): "
@@ -367,6 +414,7 @@ def main():
               f"{coh['candidates_total']} candidates ({coh['candidates_eligible']} eligible) · hash {h[:16]}…")
     state["calls"] = BUDGET.calls; state["executed_calls"] = BUDGET.n
     state["addendum_01_stripped_null_unknown_keys"] = STRIPPED
+    state["addendum_03_defaulted_empty_sets"] = DEFAULTED
     (OUT / ("COMPILE-STATE-dry.json" if DRY else "COMPILE-STATE.json")).write_text(
         json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  chamadas: {BUDGET.n}/{BUDGET.cap}")
