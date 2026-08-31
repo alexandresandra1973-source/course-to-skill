@@ -1,0 +1,38 @@
+MS-002 compile · fontes=['A', 'B', 'C'] · dry=False · cap=95
+  controle EC (extrator)...
+    {'EC1': 'OK', 'EC2': 'OK', 'EC3': 'OK', 'EC4': 'OK', 'EC5': 'OK', 'EC6': 'OK', 'EC0_no_invented_ev': 'OK'}
+  controle JE (entailment)...
+    {'JE1': 'OK', 'JE2': 'OK', 'JE3': 'OK', 'JE4': 'OK', 'JE5': 'OK'} {'CL-9201': 'ENTAILED', 'CL-9202': 'NOT_ENTAILED', 'CL-9203': 'NOT_ENTAILED', 'CL-9204': 'INDETERMINATE', 'CL-9205': 'NOT_ENTAILED'}
+  === fonte A ===
+      [ADDENDUM-03] resume/SL-A-01: 2 conjunto(s) vazio(s) inserido(s): resume/SL-A-01.raw_candidates[6].defects, resume/SL-A-01.raw_candidates[7].defects
+      [ADDENDUM-01] resume/SL-A-04: 1 chave(s) desconhecida(s) de valor null removida(s): resume/SL-A-04.raw_claims[2].qualifiers.audience_note
+      [ADDENDUM-03] resume/SL-A-06: 2 conjunto(s) vazio(s) inserido(s): resume/SL-A-06.raw_candidates[4].defects, resume/SL-A-06.raw_candidates[5].defects
+      [ADDENDUM-03] resume/SL-A-10: 3 conjunto(s) vazio(s) inserido(s): resume/SL-A-10.raw_candidates[11].defects, resume/SL-A-10.raw_candidates[12].defects, resume/SL-A-10.raw_candidates[13].defects
+      [ADDENDUM-03] resume/SL-A-17: 2 conjunto(s) vazio(s) inserido(s): resume/SL-A-17.raw_candidates[11].defects, resume/SL-A-17.raw_candidates[12].defects
+      [ADDENDUM-03] resume/SL-A-19: 1 conjunto(s) vazio(s) inserido(s): resume/SL-A-19.raw_candidates[10].defects
+    RESUME: 19 bundles reaproveitados e revalidados de out-compile-ATTEMPT-4-INVALID/raw-A
+    claims unicas: 649
+    ENTAIL-01: 25 claims julgadas
+    ENTAIL-02: 25 claims julgadas
+    ENTAIL-03: 25 claims julgadas
+    ENTAIL-04: 25 claims julgadas
+    ENTAIL-05: 25 claims julgadas
+    ENTAIL-06: 25 claims julgadas
+    ENTAIL-07: 25 claims julgadas
+    ENTAIL-08: 25 claims julgadas
+    ENTAIL-09: 25 claims julgadas
+    ENTAIL-10: 25 claims julgadas
+    ENTAIL-11: 25 claims julgadas
+    ENTAIL-12: 25 claims julgadas
+    ENTAIL-13: 25 claims julgadas
+    ENTAIL-14: 25 claims julgadas
+    ENTAIL-15: 25 claims julgadas
+    ENTAIL-16: 25 claims julgadas
+    ENTAIL-17: 25 claims julgadas
+    ENTAIL-18: 25 claims julgadas
+    ENTAIL-19: 25 claims julgadas
+    ENTAIL-20: 25 claims julgadas
+    ENTAIL-21: 25 claims julgadas
+    ENTAIL-22: 25 claims julgadas
+    ENTAIL-23: 25 claims julgadas
+E02_EVIDENCE_SET_MISMATCH CL-0591 — MS_002_INVALID

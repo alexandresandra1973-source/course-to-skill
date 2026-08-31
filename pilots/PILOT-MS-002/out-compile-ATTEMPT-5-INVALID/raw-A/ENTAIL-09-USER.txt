@@ -1,0 +1,358 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0201",
+  "claim_text": "When setting up the loop the model asks for scope parameters — batch size, copy pool, output location/delivery, and handling of old batches — which the speaker answers manually.",
+  "evidence": [
+   {
+    "local_id": "EV-0335",
+    "excerpt": "a.m., they could take a look through the ads and then identify and pick the winning um combinations. So now what we're going to do is we're going to turn this skill into said loop. It's going to run unattended every morning and ask me for some scope size. So batch size, why don't we do 20 copy pool, we will generate new copy every time. And you can see, you know, it's"
+   },
+   {
+    "local_id": "EV-0336",
+    "excerpt": "also asking me questions here. I'm just going to answer it manually because I think that's easier. Output location delivery. Um, we're going to generate locally. And then old batches. Um, don't clean up for now. Maybe later. Cool. So now what we're doing is we're converting this from that program that we've run into a selfgenerating or running program that does it all without me. Now in the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0202",
+  "claim_text": "Because the operator is not present when the loop runs, the loop needs more autonomy: instead of iterating fixed pieces of copy, it passes prior generated ads through itself each run and makes something new and time-based so output varies day to day.",
+  "evidence": [
+   {
+    "local_id": "EV-0337",
+    "excerpt": "process of converting from a skill to a loop, you know, some things will probably have to change because we're no longer here. If it needs to ask us some questions about, hey, you know, how should I generate the ads? Um, you know, obviously I I I I'm not around to actually like guide it at 5:59 a.m. Well, knowing me, I probably am, but uh we need to give it even more autonomy"
+   },
+   {
+    "local_id": "EV-0338",
+    "excerpt": "than it already has. And so what we did is rather than it using a bunch of fixed like pieces of copy that it had created and just ran through and iterated through a script, now it'll actually pass through itself every time when it runs. So it'll actually basically say like, \"Hey, here are all the ads that we've generated so far. You I want you to make this one different.\" and it's"
+   },
+   {
+    "local_id": "EV-0339",
+    "excerpt": "going to come through and then make something new, something timebased so that it actually runs and varies on a day-to-day basis. So, it's done a little bit of testing and now it's going to do a real batch render to show me how it works before actually instituting it on my computer uh via a platform called cron which you know actually goes through and then makes it happen. Here"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0203",
+  "claim_text": "Before installing the schedule, the model does some testing and a real batch render to show how it works, then sets it up on the computer via cron.",
+  "evidence": [
+   {
+    "local_id": "EV-0339",
+    "excerpt": "going to come through and then make something new, something timebased so that it actually runs and varies on a day-to-day basis. So, it's done a little bit of testing and now it's going to do a real batch render to show me how it works before actually instituting it on my computer uh via a platform called cron which you know actually goes through and then makes it happen. Here"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0204",
+  "claim_text": "When setting up the daily automation the model first checks a scheduling skill, because Claude has a built-in skill called schedule that outlines how to do this.",
+  "evidence": [
+   {
+    "local_id": "EV-0340",
+    "excerpt": "it's setting up the daily automation. First, it's going to check a scheduling skill because cloud actually has a built-in skill called schedule which outlines how to do all of this. And now it's going to actually run this. Okay, now it's asking me some final confirmation info like does this run every day or does it do it, you know, Monday to Friday instead. Um, just gave"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0205",
+  "claim_text": "The speaker describes a progression: prompts to skills, skills to loops, and loops to routines.",
+  "evidence": [
+   {
+    "local_id": "EV-0341",
+    "excerpt": "it that information and now it looks like it's good to go. It's going to run tomorrow morning at 559. Uh, just cuz right now we're already at 8:52. But as we know that is not enough, right? We went from prompts to skills, skills to loops, and now we need to go from loops to routines. The major difference between loops and routines being that just because this thing runs at 5:59"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0206",
+  "claim_text": "The stated difference between a loop and a routine is that a loop still runs on the speaker's own computer (requiring an office machine someone signs into daily), while a routine is cloud-based, runs autonomously on a schedule, and dumps output into a company-accessible folder.",
+  "evidence": [
+   {
+    "local_id": "EV-0341",
+    "excerpt": "it that information and now it looks like it's good to go. It's going to run tomorrow morning at 559. Uh, just cuz right now we're already at 8:52. But as we know that is not enough, right? We went from prompts to skills, skills to loops, and now we need to go from loops to routines. The major difference between loops and routines being that just because this thing runs at 5:59"
+   },
+   {
+    "local_id": "EV-0342",
+    "excerpt": "a.m., it's still doing so on my computer, meaning I'd need to have like an office computer, you know, uh, at my HQ that somebody signs into every day. That's kind of a pain in the ass. Rather than doing that, what I want to do now is convert this into basically a cloud-based skill that runs autonomously on a schedule and then dumps the information not into a local folder on"
+   },
+   {
+    "local_id": "EV-0343",
+    "excerpt": "my computer, but some company accessible folder that anybody in my company can use. The question is obviously, how the heck do I do that? You know, everything up until now has been done entirely locally on my computer, and now I'm considering giving it access to something else. Well, like most things in life, you can just talk to Claude about it."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0207",
+  "claim_text": "The speaker's prompt for converting the loop into a Claude routine states the current stage (prompt-to-skill and skill-to-loop done), the desired output location (a shareable Google Drive folder), who needs access, and asks Claude to walk through it step by step and set it up, noting platform access will be needed.",
+  "evidence": [
+   {
+    "local_id": "EV-0344",
+    "excerpt": "Hey, now that I have done the prompt to skill and skill to loop step, what I want to do is convert this from a loop into a Claude routine. My idea here is rather than generate these locally at 559, what I want to do is generate these in a Google Drive folder and then make that Google Drive folder accessible so that anybody that has the link can look at it. I'm then just going to give the"
+   },
+   {
+    "local_id": "EV-0345",
+    "excerpt": "link to a couple of team members so that when they come in at 6 a.m. they'll all have access to the exact same ad pool. Uh, walk me through how to do this step by step and then set it up for me. Um, I know we'll have to give some access to some platforms. That's totally okay. Okay, cool. Now that it has everything that it needs, we're going to convert this again up to uh the highest quality"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0208",
+  "claim_text": "When converting to a routine, the model proposes killing the local scheduled version and moving it to the internet, and asks for confirmation.",
+  "evidence": [
+   {
+    "local_id": "EV-0346",
+    "excerpt": "version of this, which is the architecture shift. Obviously, since I'm doing this, it's saying, \"Hey, okay, we should probably kill the local one that we're doing and then turn it into something on the internet. Um, does that sound okay with you? How should we do it?\" Well, now what I'm going to do is because we're on cloud, I need to figure out the time zone. It's also going to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0209",
+  "claim_text": "Setting up the cloud routine requires supplying a time zone, a GitHub repo (the speaker creates a new private repo), Google Drive information, and answers about routine one-time setup details.",
+  "evidence": [
+   {
+    "local_id": "EV-0346",
+    "excerpt": "version of this, which is the architecture shift. Obviously, since I'm doing this, it's saying, \"Hey, okay, we should probably kill the local one that we're doing and then turn it into something on the internet. Um, does that sound okay with you? How should we do it?\" Well, now what I'm going to do is because we're on cloud, I need to figure out the time zone. It's also going to"
+   },
+   {
+    "local_id": "EV-0347",
+    "excerpt": "ask about GitHub repos. So, what I'm going to do is I will create a new GitHub repo. um that for people that don't know is just like an online place to put code so that code can run without my involvement. What should we do? New dated subfolder and uh you know anything else here it's asking about like some routine information on one time setup and so on. So I need to give it some"
+   },
+   {
+    "local_id": "EV-0348",
+    "excerpt": "information in my Google Drive. I'm going to start with a private GitHub repo. I'm actually already authenticated but if I was not authenticated it would ask me to sign in. Uh as you guys could see it's not very big ask. It would just basically say hey do you want to sign in? I'd then click yes, sign in, and then I'd be in. Uh, if you don't have an account, it would then prompt you to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0210",
+  "claim_text": "A GitHub repo is described as an online place to put code so that the code can run without the speaker's involvement.",
+  "evidence": [
+   {
+    "local_id": "EV-0347",
+    "excerpt": "ask about GitHub repos. So, what I'm going to do is I will create a new GitHub repo. um that for people that don't know is just like an online place to put code so that code can run without my involvement. What should we do? New dated subfolder and uh you know anything else here it's asking about like some routine information on one time setup and so on. So I need to give it some"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0211",
+  "claim_text": "To connect Google Drive, the speaker opens claude.ai customize/connectors (via settings, connectors at the bottom), clicks connect, authorizes with the right Google account in the browser, then returns to the chat and tells it 'connected'.",
+  "evidence": [
+   {
+    "local_id": "EV-0350",
+    "excerpt": "And now, it's asking me some questions. Yeah, I did this earlier. Not a big deal. can remove. Eventually, it'll ask me about Google Drive. So, what I'm going to do is open cloud.ai/customize connectors in a browser, connect Google Drive, authorize with the right Google account, and then come back here. Um, so in order to do that, I'm just going to go to the top right hand corner, go"
+   },
+   {
+    "local_id": "EV-0351",
+    "excerpt": "settings, and underneath connectors, which is all the way down at the bottom. If you guys remember, I'm now going to connect to my Google Drive. So, just click that button. It'll now say, \"Hey, can we connect?\" So, it'll then open up a browser. I'm then going to give it access to my Google. I'll just say use all uh for now. Okay, now we can go back. So, we should be good. It says"
+   },
+   {
+    "local_id": "EV-0352",
+    "excerpt": "connected to Google Drive. So, I'm going to go back here and I'll say connected. And it should actually be able to set up the list and then create the folder. Cool. And it's gone through and actually added that information. And we now even have a folder called Maker School Ads, which I can click and open right over here. Uh worth noting we don't have information in there yet. The reason why"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0212",
+  "claim_text": "The connector cannot change sharing settings, so the speaker manually opens the created Google Drive folder, clicks share and sets it to anyone with the link can view, then tells the model 'good to go'.",
+  "evidence": [
+   {
+    "local_id": "EV-0352",
+    "excerpt": "connected to Google Drive. So, I'm going to go back here and I'll say connected. And it should actually be able to set up the list and then create the folder. Cool. And it's gone through and actually added that information. And we now even have a folder called Maker School Ads, which I can click and open right over here. Uh worth noting we don't have information in there yet. The reason why"
+   },
+   {
+    "local_id": "EV-0353",
+    "excerpt": "is because it's saying the connector can't change sharing settings. So you might have to do this once and uh that's fine. Uh so I'm just going to go to the top right hand corner, go to share, click share, and then change this to anyone with the link can now view the ads. So now I'm going to go back here and then I'll say good to go. So now team members will have access to this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0213",
+  "claim_text": "The Google Drive connection has to be made again inside the cloud routine, not only locally, before the routine is created.",
+  "evidence": [
+   {
+    "local_id": "EV-0354",
+    "excerpt": "folder cuz I'm just going to share it, you know, within my company or whatever. And then it'll actually build the routine that generates the batch. And the last thing we need to do is just give it access to the Google Drive itself. Um, and I say Google Drive itself, not as we haven't already done that because we have done that, but we've done that locally. If you think"
+   },
+   {
+    "local_id": "EV-0355",
+    "excerpt": "about it, what it needs to do is it now needs to connect Google Drive in the cloud routine instead of here. And it looks like it also connected the Google Drive connector too, which means we now have the routine created. It even kicked off a test run. It's going to check on the status um you know sort of as time goes on. If you go back to routines in the top lefthand corner you'll see that"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0214",
+  "claim_text": "Once created, the routine appears under 'routines' in the top left corner; it kicked off a test run and its status shows paused while testing.",
+  "evidence": [
+   {
+    "local_id": "EV-0355",
+    "excerpt": "about it, what it needs to do is it now needs to connect Google Drive in the cloud routine instead of here. And it looks like it also connected the Google Drive connector too, which means we now have the routine created. It even kicked off a test run. It's going to check on the status um you know sort of as time goes on. If you go back to routines in the top lefthand corner you'll see that"
+   },
+   {
+    "local_id": "EV-0356",
+    "excerpt": "we now actually have maker school daily ad batch. So I'm going to give that button a quick click and it's actually testing it right now which is why the status is still paused. So as you guys can see very similar um to the skill. It's just sort of done almost in like this I don't know cloud way. Generate today's maker school ad badge and upload it to Google Drive context. This repo is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0215",
+  "claim_text": "The routine definition contains the task, a context section describing the repo, connectors (Claude Code remote, Google Drive) and the GitHub repository.",
+  "evidence": [
+   {
+    "local_id": "EV-0356",
+    "excerpt": "we now actually have maker school daily ad batch. So I'm going to give that button a quick click and it's actually testing it right now which is why the status is still paused. So as you guys can see very similar um to the skill. It's just sort of done almost in like this I don't know cloud way. Generate today's maker school ad badge and upload it to Google Drive context. This repo is"
+   },
+   {
+    "local_id": "EV-0357",
+    "excerpt": "a stripe style ad creative generator for Maker School. It is a tuned visual profile and a batch script that generates ads with procedurally varied copy each run. Okay, there's a bunch of instructions down here where it runs it through how to do the thing. We then have cloud code remote Google Drive as connectors. Then we even have the GitHub repository which again is just like a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0216",
+  "claim_text": "When the cloud logo is shown, work is running in the cloud rather than on your computer, which means it does not depend on you.",
+  "evidence": [
+   {
+    "local_id": "EV-0358",
+    "excerpt": "it's like a Google Drive but for code and that allows it to do things. You can see that we've actually started running it. If I click on that run button at the background, it there's literally like a cloud chat going on with Claude. So, it's doing all of the work, but it's just not doing it on my computer. This is now in the cloud. And anytime you see this little cloud logo, you know that"
+   },
+   {
+    "local_id": "EV-0359",
+    "excerpt": "it's not occurring on your computer, which means that it also just doesn't depend on you. So, it's going through this whole process right now. And uh, you know, I'll check back in a minute to confirm that the routine is done. And once it's done, we can move on. Gone through and generated the ad successfully. Now, it's just going to verify the output directory contents"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0217",
+  "claim_text": "After generating the ads the routine verifies the output directory contents before uploading them, then creates a dated subfolder in Google Drive and uploads the ads there.",
+  "evidence": [
+   {
+    "local_id": "EV-0359",
+    "excerpt": "it's not occurring on your computer, which means that it also just doesn't depend on you. So, it's going through this whole process right now. And uh, you know, I'll check back in a minute to confirm that the routine is done. And once it's done, we can move on. Gone through and generated the ad successfully. Now, it's just going to verify the output directory contents"
+   },
+   {
+    "local_id": "EV-0360",
+    "excerpt": "before uploading it to the Google Drive. So, it's creating a dated subfolder in Google Drive, which I'm going to take a look at right now. Show you guys what's going on. You can see it's now created that. Okay. Now, if I double click on this, it's in the process of uploading the ads. So, we'll see them pop up as um you know, the advertisements get uploaded. Obviously, these are images,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0218",
+  "claim_text": "The speaker keeps the visual settings simple (linear gradient rather than radial bursts) and picks a non-default font because the default 'inter' look is what everyone else uses and he wants his ads to stand out.",
+  "evidence": [
+   {
+    "local_id": "EV-0301",
+    "excerpt": "I think. So, we'll stick with overlay. and then maybe do some color RGB static. Cool. So, I I really like this. I mean, I don't know if you guys could tell, but it just adds a tiny bit of additional finesse to it. Um, and then, you know, I'm just going to wait until it finishes with this, and then we can actually generate a thousand. It's also added um the ability to use radial bursts, which"
+   },
+   {
+    "local_id": "EV-0302",
+    "excerpt": "is kind of neat. So, you can even see like I don't know, you could add the gradient right over here or something like that. Um, which probably spices it up even more. Still, I think I'm going to keep it simple with just linear. And then I can just like adjust the colors and stuff like that as they will. Uh, nothing super special. Looks like we also now have the ability to change the"
+   },
+   {
+    "local_id": "EV-0303",
+    "excerpt": "fonts. So, this is what I wanted the first time. I think they tend to use inter for everything. So, I would I would just want mine to look a little bit different. Basically, we need to do is we just need to wait for this to stand out so it doesn't look like, you know, the rest of this. Um, I don't know. Man rope. Man's such a funny name for a Who comes up with that? Maybe"
+   },
+   {
+    "local_id": "EV-0304",
+    "excerpt": "we'll do this. I would say change the letter spacing so it's tight. I don't know. Could be distinctive. Sora, that's a little too big. Bricklage grotesque. I actually really like Red Hat display. I think that's probably the best we could get here. So, I'm actually just going to make it a tiny bit smaller. Maybe I'll add a period at the end of it. Okay. Land your first client in 90 days or"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0219",
+  "claim_text": "The speaker makes the ad elements bigger and zooms out to check legibility, citing that one of the biggest problems with ads is that people just can't see them, including people viewing on phones.",
+  "evidence": [
+   {
+    "local_id": "EV-0305",
+    "excerpt": "it's free. So, we'll just change the letter spacing a little bit. Make it nice and tight. And then now I'm just going to zoom out. And h maybe I'll actually just make everything just a tad bigger. You know, one of my friends once told me that literally like one of the biggest problems with ads is people just can't see them. Okay, zooming out now. You know, people looking at it on their"
+   },
+   {
+    "local_id": "EV-0306",
+    "excerpt": "phones. Maybe we'll do even a tiny bit bigger. Cool. That looks pretty nice to me. I like this. Um, cool. So, what I'm going to do now is just export this as JSON. Copy. And then go back here and I'll say, \"Great. I really like this. Now that we've created a format that looks pretty good, uh, I want you to apply these settings and then I just want you to generate like 50 different"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0220",
+  "claim_text": "Selected ads can be downloaded onto the computer and are then straightforward to upload to Google or Facebook ads or whatever ad library manager is being used.",
+  "evidence": [
+   {
+    "local_id": "EV-0321",
+    "excerpt": "we can do now is we can also select maybe the ones that we like. Obviously I'm just doing this with like two formats. Imagine if you had 50 and afterwards it'll actually download them all onto your computer. So, for instance, I've now downloaded all of these which hopefully you guys could see are now pretty straightforward and easy to like I don't know upload to uh Google"
+   },
+   {
+    "local_id": "EV-0322",
+    "excerpt": "uh Facebook ads or whatever ad library manager that you were using. Um but I I just want to turn this into a skill really quick uh before we proceed with the next step and then show you guys how also to loop it. And then we can also have like cloud routines do this for us too. So, you know, now that we've basically accomplished the um prompt done, would you run me through the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0221",
+  "claim_text": "Claude does not have any image or video generation built in; in the previous example Claude generated assets by driving compositing tools (such as Photoshop, Canva, or Microsoft Paint equivalents).",
+  "evidence": [
+   {
+    "local_id": "EV-0364",
+    "excerpt": "Claude logo in case you guys didn't know. U basically what we've done so far is we have one had Claude, you know, generate I'm just going to handr write here so I'm a little bit faster. um our assets. And for those of you guys that don't know, Claude doesn't actually have any image or or video generation built in. What we're doing is we're actually"
+   },
+   {
+    "local_id": "EV-0365",
+    "excerpt": "having Claude generate our assets by using kind of compositing tools. So, for instance, um there are variety of different tools that allow us to, you know, make things on the internet. One of them, for instance, might be, I don't know, Photoshop, right? Another that you guys might be familiar with is Canva. I don't know if we have any old heads in the building, but uh I don't know. How"
+   },
+   {
+    "local_id": "EV-0366",
+    "excerpt": "about Microsoft Paint? Well, what we had Claude do in that last example is we basically had Claude drive, you know, these tools or equivalents of these tools in order to generate um you know, our assets. And so Claude literally baked in a set of instructions similar to how you know you tweak your lighting and your your settings in Photoshop or whatever. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0222",
+  "claim_text": "In the compositing-tool approach, Claude baked in a set of instructions and steered the tools until outputs were produced, hardcoding every pixel, headline and text on the page.",
+  "evidence": [
+   {
+    "local_id": "EV-0366",
+    "excerpt": "about Microsoft Paint? Well, what we had Claude do in that last example is we basically had Claude drive, you know, these tools or equivalents of these tools in order to generate um you know, our assets. And so Claude literally baked in a set of instructions similar to how you know you tweak your lighting and your your settings in Photoshop or whatever. And"
+   },
+   {
+    "local_id": "EV-0367",
+    "excerpt": "then it just controlled or steered these until eventually we got, you know, a bunch of outputs, which is what we wanted. And so that is how we got those cool stripe images. It literally like locked in and hardcoded. Every single pixel on the page, right? Every single, you know, part of the the headline and the text and stuff like that was just hardcoded. And this is cool obviously,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0223",
+  "claim_text": "The procedural/compositing approach cannot be extended far past simple ads and the outputs are not always of the best quality.",
+  "evidence": [
+   {
+    "local_id": "EV-0368",
+    "excerpt": "but, you know, we can't really extend far past that. um you know obviously we can do okay things but they're going to be procedurally generated at the end of the uh day and you know they're just not always going to be of the best quality. So, what we're going to do instead is we're going to go from this sort of like, you know, version one with really simple ads, which you guys can obviously"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0224",
+  "claim_text": "Version two replaces Claude-generated assets with direct image and video models steered by Claude, the same way Photoshop, Canva and Microsoft Paint were steered.",
+  "evidence": [
+   {
+    "local_id": "EV-0369",
+    "excerpt": "do and I've done this and it works quite well instead to um kind of version number two where instead of claw generating our assets, okay, what's happening is we're using direct image and video models steered by Claude just like we were steering our Photoshop and our canvas and our Microsoft Paints."
+   },
+   {
+    "local_id": "EV-0370",
+    "excerpt": "Turns out we can have Claude steer direct image and video models too and you can do a pretty good job. But there's a big difference between you know uh Photoshop let's say which is a compositing tool and then um you know something like I'm just going to say GPT Image 2. For those of you guys that don't know you know Photoshop composits a bunch of different elements. You kind"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0225",
+  "claim_text": "A compositing tool like Photoshop composites a bunch of different elements that you control, whereas GPT Image 2 produces the pixels on the page directly, turning text into an array of pixels.",
+  "evidence": [
+   {
+    "local_id": "EV-0370",
+    "excerpt": "Turns out we can have Claude steer direct image and video models too and you can do a pretty good job. But there's a big difference between you know uh Photoshop let's say which is a compositing tool and then um you know something like I'm just going to say GPT Image 2. For those of you guys that don't know you know Photoshop composits a bunch of different elements. You kind"
+   },
+   {
+    "local_id": "EV-0371",
+    "excerpt": "of control them. GPT image 2 literally produces the pixels on the page directly. Like when you prompt a GPT image 2, you are legitimately turning your text into an array of pixels on the screen. Likewise, um you know there's also a bunch of video models out there, right? So I don't know how many people here do video editing, but I mean I do. So Premiere Pro is my chosen tool of"
+   }
+  ]
+ }
+]

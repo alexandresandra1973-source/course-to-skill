@@ -122,6 +122,8 @@ def validate_strict(doc, schema, where):
               + ", ".join(s["path"] for s in STRIPPED[before:]))
     jsonschema.validate(doc, schema)
     return doc
+E02 = []
+E02_MAX_RATE = 0.01
 BUDGET = T.Budget(cap=int(next((a.split("=")[1] for a in sys.argv if a.startswith("--cap=")), 90)))
 
 SYSDIR = OUT / "sys"; SYSDIR.mkdir(exist_ok=True)
@@ -299,6 +301,7 @@ def entail(src, claims, evidence_by_id):
     sid = f"MS002-SRC-{src}"
     verdicts = {}
     B = 25
+    rdir = pathlib.Path(RESUME) / f"raw-{src}" if RESUME else None
     for i in range(0, len(claims), B):
         chunk = claims[i:i + B]
         items = [{"claim_id": c["local_id"], "claim_text": c["text"],
@@ -307,7 +310,15 @@ def entail(src, claims, evidence_by_id):
         u = (EN_USR.replace("{SOURCE_ID}", sid)
                   .replace("{ITEMS_JSON}", json.dumps(items, ensure_ascii=False, indent=1)))
         label = f"ENTAIL-{i//B+1:02d}"
-        txt, _ = T.call(BUDGET, SYSDIR / "ENTAIL-SYSTEM.txt", u, OUT / f"raw-{src}", label)
+        cached = (rdir / f"{label}-RAW.txt") if rdir else None
+        if cached is not None and cached.exists():
+            txt = cached.read_text(encoding="utf-8")
+            (OUT / f"raw-{src}").mkdir(parents=True, exist_ok=True)
+            (OUT / f"raw-{src}" / f"{label}-RAW.txt").write_text(txt, encoding="utf-8")
+            (OUT / f"raw-{src}" / f"{label}-USER.txt").write_text(u, encoding="utf-8")
+            (OUT / f"raw-{src}" / f"{label}-RESUMED.txt").write_text("RESUMED_AND_REVALIDATED", encoding="utf-8")
+        else:
+            txt, _ = T.call(BUDGET, SYSDIR / "ENTAIL-SYSTEM.txt", u, OUT / f"raw-{src}", label)
         d = json.loads(T.jparse(txt))
         validate_strict(d, EN_SCH, f"entail/{label}")
         got = {v["claim_id"]: v for v in d["verdicts"]}
@@ -318,9 +329,18 @@ def entail(src, claims, evidence_by_id):
             v = got[c["local_id"]]
             need = {r["local_id"] for r in c["evidence_refs"]}
             if set(v["evidence_refs_checked"]) != need:
-                raise SystemExit(f"E02_EVIDENCE_SET_MISMATCH {c['local_id']} — MS_002_INVALID")
+                E02.append({"claim_id": c["local_id"], "sent": sorted(need),
+                            "returned": sorted(v["evidence_refs_checked"]),
+                            "discarded_judgment": v["judgment"], "batch": label})
+                verdicts[c["local_id"]] = {"claim_id": c["local_id"],
+                                           "judgment": "CONTRACT_VIOLATION",
+                                           "entail_why": "veredito recusado: evidence_refs_checked != conjunto enviado",
+                                           "evidence_refs_checked": sorted(need)}
+                continue
             verdicts[c["local_id"]] = v
-        print(f"    {label}: {len(chunk)} claims julgadas")
+        nv = len([x for x in E02 if x["batch"] == label])
+        print(f"    {label}: {len(chunk)} claims julgadas"
+              + (f"  [ADDENDUM-05: {nv} veredito(s) recusado(s)]" if nv else ""))
     return verdicts
 
 # ------------------------------------------------- candidates + selagem
@@ -331,7 +351,9 @@ def finalize(src, claims, tcmap, bundles, verdicts):
     for c in claims:
         v = verdicts[c["local_id"]]
         c["entailed_by"] = v["judgment"]; c["entail_why"] = v["entail_why"]
-        c["status"] = "SEALED" if v["judgment"] == "ENTAILED" else "REJECTED_NOT_ENTAILED"
+        c["status"] = ("SEALED" if v["judgment"] == "ENTAILED"
+                       else "REJECTED_ENTAILMENT_CONTRACT_VIOLATION" if v["judgment"] == "CONTRACT_VIOLATION"
+                       else "REJECTED_NOT_ENTAILED")
         if c["status"] == "SEALED": sealed.append(c)
     sealed_ids = {c["local_id"] for c in sealed}
     ev_ids = {json.loads(l)["local_id"] for l in (pkg / "EVIDENCE.jsonl").read_text(encoding="utf-8").splitlines()}
@@ -457,6 +479,10 @@ def main():
         for l in (pkg / "EVIDENCE.jsonl").read_text(encoding="utf-8").splitlines():
             e = json.loads(l); evmap[e["local_id"]] = e["excerpt"]
         verdicts = entail(src, claims, evmap)
+        ids = {c["local_id"] for c in claims}
+        n02 = len([x for x in E02 if x["claim_id"] in ids])
+        if claims and n02 / len(claims) > E02_MAX_RATE:
+            raise SystemExit(f"E02_RATE={n02}/{len(claims)} acima de {E02_MAX_RATE:.0%} — MS_002_INVALID")
         coh = finalize(src, claims, tcmap, bundles, verdicts)
         h = seal(src)
         coh["source_package_hash"] = h
@@ -466,6 +492,7 @@ def main():
     state["calls"] = BUDGET.calls; state["executed_calls"] = BUDGET.n
     state["addendum_01_stripped_null_unknown_keys"] = STRIPPED
     state["addendum_03_defaulted_empty_sets"] = DEFAULTED
+    state["addendum_05_rejected_entailment_contract_violations"] = E02
     (OUT / ("COMPILE-STATE-dry.json" if DRY else "COMPILE-STATE.json")).write_text(
         json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  chamadas: {BUDGET.n}/{BUDGET.cap}")

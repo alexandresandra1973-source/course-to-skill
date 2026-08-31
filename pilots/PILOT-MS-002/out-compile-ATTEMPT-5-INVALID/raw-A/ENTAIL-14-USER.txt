@@ -1,0 +1,326 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0326",
+  "claim_text": "The skill to be scaffolded takes a product as the initial input, then uses an already chosen influencer to represent that product, then comes up with a bunch of short scripts (around 150 to 200 characters).",
+  "evidence": [
+   {
+    "local_id": "EV-0525",
+    "excerpt": "have that, we'll have the rule which we can use to generate using Gemini Omni Flash. All right. So, while that's working, let's scaffold out the skill that'll be used to generate these on demand. If you think about it, the idea is I'm going to feed it in a product. That's going to be like my initial step. It's then going to, I don't know, use some influencer that I've already sort"
+   },
+   {
+    "local_id": "EV-0526",
+    "excerpt": "of chosen um to represent that product. And then all we really need to do is we just need to come up with a bunch of, you know, scripts. And those scripts need to be pretty short. Um, you know, probably somewhere around, I don't know, like 150, 200 characters. So, just checking back on, you know, the gens here. It looks like >> you need to try this. This is the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0327",
+  "claim_text": "The presenter voice dumps the process into Claude: give an image of a product, use the provided influencer image to generate a starting frame of a woman holding the product in an environment that makes sense, then generate 10 script candidates under about 35 words to fit the time limit, then show the generated product image (with GPT-image-2) and the scripts for verification, after which more steps will be added and turned into a skill.",
+  "evidence": [
+   {
+    "local_id": "EV-0529",
+    "excerpt": "could probably go to like 170 characters. So, I think that's what I'll do. I'll say 170 character. Uh, well, why don't we just do words instead? 27 to Yeah, 27 to maybe like 30 words or so. So, I'm going to go back to Claude and I'm just going to voice dump all of this in as the process. Hey, I'm going to give you an image of a product. I then want you to use the"
+   },
+   {
+    "local_id": "EV-0530",
+    "excerpt": "provided image of the influencer to generate a picture or a starting frame of a woman holding the product uh somewhere in an environment that it would make sense. Then I want you to generate 10 script candidates. A script candidate is a script that espouses the virtues of the product, talks about the benefits in an influencer UGC style fashion. Uh, the script needs to be"
+   },
+   {
+    "local_id": "EV-0531",
+    "excerpt": "under 35 words or so in order to fit our time limit. After you're done, I want you to show me the uh, generated product image with GPT- image-2. And then I also want you to show me the scripts so that I can verify everything's good. After that, I'm going to add a couple more steps to the flow and we'll turn that into a skill. Cool. So, that is what we're going to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0328",
+  "claim_text": "Having verified the process works manually, the next step is to make it work digitally, feeding in the influencer and product images; GPT image 2 can be called using the OpenAI API key which is in the local environment.",
+  "evidence": [
+   {
+    "local_id": "EV-0532",
+    "excerpt": "do. Clearly, we verified that this works if we do it manually. So, let's make this work um digitally as well. Here's the influencer and here's the product. I'm going to feed both of these in. Voila. And you can call GPT image 2 using open AI API key. It's in the local environment. Okay. Uh and then going to circle back and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0329",
+  "claim_text": "Having verified the process through manual usage, it must also be verified through Claude before scaling.",
+  "evidence": [
+   {
+    "local_id": "EV-0533",
+    "excerpt": "just double check that now that we can, you know, we verified we can do this through like manual usage, we need to verify that we can also do this through claude. And then we we're just going to scale the hell out of this thing. I'm sure you guys can imagine we could take this further. Um, as this is building it, uh, just some brainstorming out loud. Rather than just using one woman,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0330",
+  "claim_text": "As brainstorming, rather than one woman you could pre-generate images or videos of 20 or 30 influencers of different geographies, ages, ICPs and personas, and cross-multiply them by different products, locations and scripts to produce many options (e.g. 10 influencers x 10 settings x 10 scripts = 1,000 options).",
+  "evidence": [
+   {
+    "local_id": "EV-0533",
+    "excerpt": "just double check that now that we can, you know, we verified we can do this through like manual usage, we need to verify that we can also do this through claude. And then we we're just going to scale the hell out of this thing. I'm sure you guys can imagine we could take this further. Um, as this is building it, uh, just some brainstorming out loud. Rather than just using one woman,"
+   },
+   {
+    "local_id": "EV-0534",
+    "excerpt": "you could have, let's say, 20 or 30 people, men, women alike, people from different geographies, different ages, different ICPS, different like personas all all over the place. You would do this by using AI to pre-generate a bunch of images of or videos of influencers that you like. uh and then you would also kind of multiply or cross that by all the different products that they're"
+   },
+   {
+    "local_id": "EV-0535",
+    "excerpt": "holding in a bunch of different locations. So now what we're doing is we're just multiplying uh a bunch of different options. you then multiply those by a bunch of different scripts. And in that way, what you could do and what you know I I I like thinking about AI as what you could do is um you could basically choose let's say 10 influencers, okay? Multiply them by I"
+   },
+   {
+    "local_id": "EV-0536",
+    "excerpt": "don't know 10 settings, multiply them by 10 different scripts. Uh the resulting thing is you'll have 1,000 possible options. Now, it kind of sucks to look and watch through each, right? So, what you could also do, and I'm just brainstorming. I'm not going to do anything as complicated as this because I don't want to kind of put the cart before the horse. What you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0331",
+  "claim_text": "The presenter states he is just brainstorming and will not do anything as complicated as the automated filtering idea because he doesn't want to put the cart before the horse.",
+  "evidence": [
+   {
+    "local_id": "EV-0536",
+    "excerpt": "don't know 10 settings, multiply them by 10 different scripts. Uh the resulting thing is you'll have 1,000 possible options. Now, it kind of sucks to look and watch through each, right? So, what you could also do, and I'm just brainstorming. I'm not going to do anything as complicated as this because I don't want to kind of put the cart before the horse. What you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0332",
+  "claim_text": "A proposed automated image check: break each ~10 second video into 1 second frames, take screenshots of each, feed them into an AI model like GPT or Claude Code, have it identify anything malformed that doesn't make sense, and delete those from the option set entirely.",
+  "evidence": [
+   {
+    "local_id": "EV-0537",
+    "excerpt": "could do is you could have some sort of automated image check where every single one of these videos, which are all 10 seconds or so, you break down into 1 second frames. So, now it's like 1 second frame, 1 second frame, 1 second frame. You take screenshots of each. You feed that into an AI model like, you know, GPT uh or Claude Code. Have Claude Code take a look at the image and tell"
+   },
+   {
+    "local_id": "EV-0538",
+    "excerpt": "you, is there anything malformed that doesn't make sense? If so, just delete it from that problem set or from the option set entirely. After this process is done, maybe you have like I don't know, let's say 250 to 500 that are remaining and each of these are 10 seconds. So, what you can do is you can have a human being watch them all. That's 2500 to 5,000 seconds of watch"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0333",
+  "claim_text": "After the automated filter, roughly 250 to 500 ten-second videos remain, which is 2,500 to 5,000 seconds (about 40 to 80 minutes) for a human to watch and choose the top ~20 performers, effectively replacing an entire creative department.",
+  "evidence": [
+   {
+    "local_id": "EV-0538",
+    "excerpt": "you, is there anything malformed that doesn't make sense? If so, just delete it from that problem set or from the option set entirely. After this process is done, maybe you have like I don't know, let's say 250 to 500 that are remaining and each of these are 10 seconds. So, what you can do is you can have a human being watch them all. That's 2500 to 5,000 seconds of watch"
+   },
+   {
+    "local_id": "EV-0539",
+    "excerpt": "time. And then, you know, if you do the math on two 2,500 seconds, I think that's like 40 minutes to, I don't know, 80 minutes. If you have somebody that then chooses the top, let's say 20 performers of those in the 40 to 80 minutes, you've effectively replaced an entire creative department for, you know, a thousand times the cost of generating this, which is not trivial,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0334",
+  "claim_text": "This is extraordinarily possible right now and very economical; you can then test the 20 selected creatives with a small ad budget and figure out what makes the most sense to scale.",
+  "evidence": [
+   {
+    "local_id": "EV-0540",
+    "excerpt": "right? Uh, but now you have literally 20 new pieces of creative that can make it to the next step. So, I say all this just to show you guys, uh, this is extraordinarily possible right now. It's very economical and, you know, you can then test 20 with some small little ad budget, figure out what makes the most sense to scale. So, just going to take a look at this. Yeah, this is her now"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0335",
+  "claim_text": "To make Gemini Omni Flash accessible within Claude Code, the speaker uses the Higgsfield MCP and CLI feature: go to MCP and CLI, select Claude Code, copy the snippet and paste it into the Claude Code instance and run it, which installs the Higgsfield CLI globally.",
+  "evidence": [
+   {
+    "local_id": "EV-0542",
+    "excerpt": "primarily using Gemini Omni Flash. So the question is how do we you know take uh Gemini Omni Flash and then actually make it kind of accessible within Cloud Code. Well, it involves the MCP and CLI feature that we did before. So if I go to MCP and CLI, you'll see here we have Hixfield MCP and CLI for an AI. I'm just going to go to cloud code. Then what I'm going to do is I'm going to copy this"
+   },
+   {
+    "local_id": "EV-0543",
+    "excerpt": "and then go back to my cloud code instance here. And then I'm just going to paste this in. Okay. And so I think I actually already have, you know, some form of Higsfield MCP on. So that's okay. I'm just going to say run it. What it's going to do now is install the Higsfield CLI globally. And what you have to do after you install a command line interface or a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0336",
+  "claim_text": "After installing a CLI and making it accessible to Claude Code, you have to log in; that is how authentication is done.",
+  "evidence": [
+   {
+    "local_id": "EV-0543",
+    "excerpt": "and then go back to my cloud code instance here. And then I'm just going to paste this in. Okay. And so I think I actually already have, you know, some form of Higsfield MCP on. So that's okay. I'm just going to say run it. What it's going to do now is install the Higsfield CLI globally. And what you have to do after you install a command line interface or a"
+   },
+   {
+    "local_id": "EV-0544",
+    "excerpt": "CLI and make it accessible to cloud codes. You have to log in. And that's just how we're going to authenticate. If you think about it, previously we did so in kind of an inefficient way. We had to get the API key from Google uh from GPT uh image 2 directly, right? And then we had to like add that to our environment. Well, this is just a simpler and easier way of adding stuff to our environment."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0337",
+  "claim_text": "Logging in via CLI is described as simpler and easier than the previous approach of getting an API key directly (e.g., from Google / GPT image) and adding it to the environment.",
+  "evidence": [
+   {
+    "local_id": "EV-0544",
+    "excerpt": "CLI and make it accessible to cloud codes. You have to log in. And that's just how we're going to authenticate. If you think about it, previously we did so in kind of an inefficient way. We had to get the API key from Google uh from GPT uh image 2 directly, right? And then we had to like add that to our environment. Well, this is just a simpler and easier way of adding stuff to our environment."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0338",
+  "claim_text": "Anytime there is a CLI option, the speaker highly recommends it, because CLI options save a tremendous amount of time and are easy and straightforward.",
+  "evidence": [
+   {
+    "local_id": "EV-0545",
+    "excerpt": "So, anytime there is like a CLI option, I would highly recommend it. CLI options are awesome. They also save you just a tremendous amount of time. And uh, you know, it's a very easy and straightforward way of doing this. And so, one thing you guys don't see is it just asked me to sign into Higsfield right over here. So, here's where I'm going to do the sign in. I'm just going"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0339",
+  "claim_text": "After the sign-in and authorization flow completes and it says authenticated, the skills can install and everything needed to use Higgsfield is available.",
+  "evidence": [
+   {
+    "local_id": "EV-0545",
+    "excerpt": "So, anytime there is like a CLI option, I would highly recommend it. CLI options are awesome. They also save you just a tremendous amount of time. And uh, you know, it's a very easy and straightforward way of doing this. And so, one thing you guys don't see is it just asked me to sign into Higsfield right over here. So, here's where I'm going to do the sign in. I'm just going"
+   },
+   {
+    "local_id": "EV-0546",
+    "excerpt": "to go click um, you know, sign in and then go from there. Now, it's saying, you know, hey, we want to access this. Is this authorized? Yes, it's authorized. I can actually close this out. And now it's saying authenticated. Now, the skills can all install. So now we've authenticated inside of Higsfield and we have everything that we need in order to actually use it. Um so yeah,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0340",
+  "claim_text": "The speaker's prompt instructs the model to take the provided hero frame image and use it as a start frame for the Gemini Omni Flash model, set to 10-second total gen on a 16x9 aspect ratio.",
+  "evidence": [
+   {
+    "local_id": "EV-0547",
+    "excerpt": "this is fantastic. Now we can actually run this. So what is the next step after this? Well, the next step is we're just going to cross them. So what I'm going to do, okay, is I'm just going to voice transcribe. I want you now to take the provided image, the hero frame, and then I want you to use this as a start frame for the Gemini Omni Flash model. Set it to"
+   },
+   {
+    "local_id": "EV-0548",
+    "excerpt": "10second total gen on a 16x9 aspect ratio. The prompt I want you to provide is as follows. Eg. A woman influencer talking about a product. Ensure the provided scripts are reasonably short so we can get them in the whole 10-second gen. Um, every time that I ask you to do this, I'd like you to generate three candidate options. And for those of you guys that are probably wondering what's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0341",
+  "claim_text": "The prompt instructs that provided scripts must be reasonably short so they fit within the whole 10-second gen.",
+  "evidence": [
+   {
+    "local_id": "EV-0548",
+    "excerpt": "10second total gen on a 16x9 aspect ratio. The prompt I want you to provide is as follows. Eg. A woman influencer talking about a product. Ensure the provided scripts are reasonably short so we can get them in the whole 10-second gen. Um, every time that I ask you to do this, I'd like you to generate three candidate options. And for those of you guys that are probably wondering what's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0342",
+  "claim_text": "The speaker instructs that every time he asks for this, three candidate options should be generated.",
+  "evidence": [
+   {
+    "local_id": "EV-0548",
+    "excerpt": "10second total gen on a 16x9 aspect ratio. The prompt I want you to provide is as follows. Eg. A woman influencer talking about a product. Ensure the provided scripts are reasonably short so we can get them in the whole 10-second gen. Um, every time that I ask you to do this, I'd like you to generate three candidate options. And for those of you guys that are probably wondering what's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0343",
+  "claim_text": "The first time running this will realistically take more trial than expected, take more credits, and not be perfect, but over time it can be made cheaper and then consolidated as a skill.",
+  "evidence": [
+   {
+    "local_id": "EV-0550",
+    "excerpt": "use my own. Um same deal. So it's going to go through this whole process and it's actually going to select things for me. It's going to build them and so on and so forth. Um, you know, it's double checking with me that, you know, I'm okay with getting build for this. Obviously, I am okay getting build with this. The first time I think it'll probably realistically take uh a little"
+   },
+   {
+    "local_id": "EV-0551",
+    "excerpt": "bit more, you know, trial than you'll think. It'll take more credits. It'll just not be necessarily perfect. But over time, you'll be able to make this cheaper. And then once you consolidate it as a skill, uh, you can go. So, I'm going to say yes. And now it'll actually do the generation. And yeah, I mean, like check out these scripts. You need to try this. This is the midnight clay"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0344",
+  "claim_text": "Video generation jobs can be parallelized: three jobs (A, B, C) were sent simultaneously into the queue, then all three are grabbed once done and combined back into the output.",
+  "evidence": [
+   {
+    "local_id": "EV-0553",
+    "excerpt": "this. Midnight clay works overnight. So, you wake up matte, not greasy. It's the best skincare purchase I've ever made all year. Hands down. I could absolutely see, you know, some woman talk about it on like a UGC UGC style video at Crush. And what's cool is um you can parallelize these. So what we've done here is we've actually sent three jobs simultaneously. So we have job A in the"
+   },
+   {
+    "local_id": "EV-0554",
+    "excerpt": "queue at the same time as job B in the queue and job C. And we're just going to grab all three of these once they're all done and then combine them back into the output. Uh it's then going to present the output to me just to verify that like this did what I wanted it to do. And once I have verified that it has done what I wanted to do, I'm going to turn this into a skill. Anyway, we now"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0345",
+  "claim_text": "The output is presented to the speaker to verify it did what he wanted, and once verified he turns it into a skill.",
+  "evidence": [
+   {
+    "local_id": "EV-0554",
+    "excerpt": "queue at the same time as job B in the queue and job C. And we're just going to grab all three of these once they're all done and then combine them back into the output. Uh it's then going to present the output to me just to verify that like this did what I wanted it to do. And once I have verified that it has done what I wanted to do, I'm going to turn this into a skill. Anyway, we now"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0346",
+  "claim_text": "A script that is much shorter than the 10-second video length caused the model to invent filler and the woman to repeat herself, producing weird results.",
+  "evidence": [
+   {
+    "local_id": "EV-0555",
+    "excerpt": "have the jobs. So we have the videos right over here. >> You need to try this. This is the midnight clay mask. Fixes oily skin without any flakes. 10 out of 10. Would recommend. 10 out of 10. Would recommend. It changed the game for me. >> Okay, so we could see we had some weird things there cuz uh the script was a lot shorter than the 10-second video length"
+   },
+   {
+    "local_id": "EV-0559",
+    "excerpt": "we we basically have the skill, right? So, we're pretty good. Um, this is fantastic. We now have everything that we need in order to create a skill. Um, only one tiny change. I'm finding the script for the first video was just a little bit too short. So, the woman had to repeat herself a couple of times. Uh, we need to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0347",
+  "claim_text": "In one generated video the product physically disappeared from the shot, which the speaker says is the sort of thing you don't want to happen and is why you need some sort of Q&A.",
+  "evidence": [
+   {
+    "local_id": "EV-0557",
+    "excerpt": "purchase I have made. >> Okay, so see this is the sort of stuff that I'm talking about. That's like kind of weird. So we just went from having the product like physically like what happened there? >> So you wake up matte, not greasy. Best >> it just disappeared like >> in purchase >> vanishes. So I mean like this is the"
+   },
+   {
+    "local_id": "EV-0558",
+    "excerpt": "sort of thing you don't want to happen which is why you're going to need some sort of Q&A. Um that said, I mean people still rip it, right? Like it's not that crazy. Um, maybe she's just a a magician that can summon the midnight clay mask. >> Your hands >> like I'm more interested, girl, in how you summon the midnight clay mask to your hands. Anyway, um, cool. So, now we"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0348",
+  "claim_text": "Making scripts and video duration slightly shorter (e.g., 8 seconds instead of 10 for candidate A) also makes the process a lot more credit efficient.",
+  "evidence": [
+   {
+    "local_id": "EV-0560",
+    "excerpt": "make shorter scripts just a tiny bit shorter on the video side as well. Eg. candidate A could have been done in 8 seconds instead of 10. This will also make us a lot more credit efficient as well. Oh, and then once I'm done with that, I'm going to say, let's now turn this into a repeatable skill. I should be able to simply say, \"Generate me uh videos of this using the AI video"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0349",
+  "claim_text": "The repeatable skill is meant to be invoked by simply saying 'Generate me videos of this using the AI video generator product ad skill', taking supplied products and influencers and turning them into a set.",
+  "evidence": [
+   {
+    "local_id": "EV-0560",
+    "excerpt": "make shorter scripts just a tiny bit shorter on the video side as well. Eg. candidate A could have been done in 8 seconds instead of 10. This will also make us a lot more credit efficient as well. Oh, and then once I'm done with that, I'm going to say, let's now turn this into a repeatable skill. I should be able to simply say, \"Generate me uh videos of this using the AI video"
+   },
+   {
+    "local_id": "EV-0561",
+    "excerpt": "generator product ad skill.\" And then you should be able to take the products that I supply you, the influencer that I supply you, and then turn that into a set. Okay. And now it's just going to reconfirm the product pipeline with me. So what is the pipeline? We're going to take product images and influencer images as input. Prep resize each. Generate hero frames. Generate 10 script"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0350",
+  "claim_text": "The proposed pipeline is: take product images and influencer images as input, prep/resize each, generate hero frames, generate 10 script candidates, show hero frames and scripts for approval before spending video credits, generate three video candidates per approved script using the hero frame at 16x9, then download and deliver all video candidates.",
+  "evidence": [
+   {
+    "local_id": "EV-0561",
+    "excerpt": "generator product ad skill.\" And then you should be able to take the products that I supply you, the influencer that I supply you, and then turn that into a set. Okay. And now it's just going to reconfirm the product pipeline with me. So what is the pipeline? We're going to take product images and influencer images as input. Prep resize each. Generate hero frames. Generate 10 script"
+   },
+   {
+    "local_id": "EV-0562",
+    "excerpt": "candidates. Show the hero frames and scripts for approval before spending video credits on confirmation. Generate three video candidates per approved script via this model using the hero frame um 16x9 8second duration not 10. And then download and deliver all video candidates. So it's not actually correct. Uh we don't want it to uh we don't actually care about this step. So"
+   }
+  ]
+ }
+]

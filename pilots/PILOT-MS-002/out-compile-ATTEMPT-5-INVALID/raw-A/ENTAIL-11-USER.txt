@@ -1,0 +1,334 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0251",
+  "claim_text": "The speaker states listeners who are established marketers working on their own companies are probably better at PPC than he is, but that you can get pretty far with what is presented.",
+  "evidence": [
+   {
+    "local_id": "EV-0362",
+    "excerpt": "about. Okay, what I want to do next is I want to show you guys how to go from developing really straightforward um kind of simple image ads to using AI to generate some of the images. Then, after we've generated these images with AI, what I want to do is I want to go to video generation. And you know, as mentioned, none of these are going to like knock your socks off. you guys are"
+   },
+   {
+    "local_id": "EV-0363",
+    "excerpt": "probably going to be better at PPC than I am if you guys are established marketers that have been working on your own companies. Um, but you know, we can get pretty far with with where we're at and I'm going to run you guys through all of that now. Okay. So, how are we going to do this in practice? Well, first I just want to make it really clear what we've done so far. This is a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0252",
+  "claim_text": "Before generating, ask the model to go out and get all of the programming APIs, functions, endpoints and everything needed in order to steer GPT image 2, similar to how it was steering the compositing applications.",
+  "evidence": [
+   {
+    "local_id": "EV-0421",
+    "excerpt": "the uh, local environment. So, we have everything we need to actually query GPT image 2. can you go out and get me like all of the programming APIs, functions, endpoints, everything that I need in order to like have you steer GPT image 2, similar to how you were steering the compositing um applications. Once we have all of this, I will then ask you to generate a couple for me. Uh for now, we"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0253",
+  "claim_text": "For now we don't need to do this as a skill; the goal is just to verify that this is feasible, so we could do a basic generation to start.",
+  "evidence": [
+   {
+    "local_id": "EV-0421",
+    "excerpt": "the uh, local environment. So, we have everything we need to actually query GPT image 2. can you go out and get me like all of the programming APIs, functions, endpoints, everything that I need in order to like have you steer GPT image 2, similar to how you were steering the compositing um applications. Once we have all of this, I will then ask you to generate a couple for me. Uh for now, we"
+   },
+   {
+    "local_id": "EV-0422",
+    "excerpt": "don't need to do this skill. I just want to verify that this is feasible. So, we could do like a a basic generation to start. Okay. And then I just realized the last thing I need is I do need the socks. So, also going to feed in the socks. Just use these socks as templates. As a template product. Cool. I love how it got my uh in there. That's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0254",
+  "claim_text": "Feed in the socks and tell the model to use these socks as a template product.",
+  "evidence": [
+   {
+    "local_id": "EV-0422",
+    "excerpt": "don't need to do this skill. I just want to verify that this is feasible. So, we could do like a a basic generation to start. Okay. And then I just realized the last thing I need is I do need the socks. So, also going to feed in the socks. Just use these socks as templates. As a template product. Cool. I love how it got my uh in there. That's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0255",
+  "claim_text": "If you see the model make a mistake, stop it and correct it now rather than later, because a mistake caught later will have consumed a bunch of tokens and probably produced bad outputs.",
+  "evidence": [
+   {
+    "local_id": "EV-0423",
+    "excerpt": "funny. Yeah. Never ever stutter or never um or uh it will be there forever. And it's saying GPT image one. Uh what I want is I want GPT image 2. So, I'm actually just going to stop this. If you see it make a mistake, you should just um you know correct it now as opposed to later because if you make the mistake later, unfortunately, it will have consumed a bunch of tokens by"
+   },
+   {
+    "local_id": "EV-0424",
+    "excerpt": "then and probably given you a bunch of shitty outputs that will have frustrated you. Better instead not to. Okay. And now what it's going to do next is it's going to read the API documentation, which is just like the sort of background programming um SOP on like how to actually call the API, how to actually generate an image without the front-end um you know, user"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0256",
+  "claim_text": "The model then reads the API documentation, which is the background programming SOP on how to call the API and generate an image without the front-end user interface.",
+  "evidence": [
+   {
+    "local_id": "EV-0424",
+    "excerpt": "then and probably given you a bunch of shitty outputs that will have frustrated you. Better instead not to. Okay. And now what it's going to do next is it's going to read the API documentation, which is just like the sort of background programming um SOP on like how to actually call the API, how to actually generate an image without the front-end um you know, user"
+   },
+   {
+    "local_id": "EV-0425",
+    "excerpt": "interface. Okay. And now you will eventually get some sort of notification like this asking, hey, you know, can you give me access to the directory. That's fine. Now it's listing a bunch of files in there. Just let this thing steer all the way until the end. You can see it's actually now running a live test image edit, which was part of what I asked it to do. Um, it looks like it's going to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0257",
+  "claim_text": "You will eventually get a notification asking for access to the directory; that's fine, and you should just let the thing steer all the way until the end.",
+  "evidence": [
+   {
+    "local_id": "EV-0425",
+    "excerpt": "interface. Okay. And now you will eventually get some sort of notification like this asking, hey, you know, can you give me access to the directory. That's fine. Now it's listing a bunch of files in there. Just let this thing steer all the way until the end. You can see it's actually now running a live test image edit, which was part of what I asked it to do. Um, it looks like it's going to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0258",
+  "claim_text": "If you want more product adherence, feed the model an unrolled photo of the product instead of a rolled up version, so it can get the curves and the folds.",
+  "evidence": [
+   {
+    "local_id": "EV-0427",
+    "excerpt": "related or whatever, but yeah, I like how it put it in that box and it it does look quite clean. Same thing over here with the product. And then same thing over here with the product. I mean, the products are a little bit different from image to image and that's just because I gave it a rolled up version of the product. If you guys wanted to have a lot more, you know, product adherence,"
+   },
+   {
+    "local_id": "EV-0428",
+    "excerpt": "then you would actually just feed it like a unrolled photo, maybe something like this, and then it would actually be able to get the curves and the folds and stuff. But yeah, hopefully you guys see like I, you know, we basically have an image generator. However, um, the probability that this will be exactly what I'm looking for has gone way down simply because it now has a lot more uh,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0259",
+  "claim_text": "The more freedom and flexibility you give a model, typically the more rope you're giving it to hang itself; this is good because it enables cool things, but it is the main downfall for business, which wants very repeatable consistent processes.",
+  "evidence": [
+   {
+    "local_id": "EV-0428",
+    "excerpt": "then you would actually just feed it like a unrolled photo, maybe something like this, and then it would actually be able to get the curves and the folds and stuff. But yeah, hopefully you guys see like I, you know, we basically have an image generator. However, um, the probability that this will be exactly what I'm looking for has gone way down simply because it now has a lot more uh,"
+   },
+   {
+    "local_id": "EV-0429",
+    "excerpt": "freedom and flexibility. And that, you know, takes me to an important point, which is that the more freedom and flexibility that you give a model, typically the more rope you're giving it to hang itself. And that's good in many ways because it's the freedom and the flexibility of these models that ultimately allow us to do cool things with them. Stuff that you could not have"
+   },
+   {
+    "local_id": "EV-0430",
+    "excerpt": "imagined doing just a few years ago with a Photoshop. Um, but it's also the the main downfall at least for business because with business you tend to want to have like very repeatable consistent processes as talked about that you know convert maybe a stranger into somebody that actually has paid you money for a product or service. Hard to do that when you have total crazy pixel um variants"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0260",
+  "claim_text": "When outputs vary wildly from the sample image, exert more top-down focus: extract the elements in the sample image that make sense to vary and the ones that don't, without copying the sample image.",
+  "evidence": [
+   {
+    "local_id": "EV-0431",
+    "excerpt": "like this. you know, a photo that's on like a linen cloth to one where both of these are like hanging in the air. If you think about it, like these are very, very different pictures. The pixels are all over the place, very very fundamentally opposed. So, we, you know, what we want to do is we actually want to exert a little bit more top- down focus. Um, we want it to be a little bit"
+   },
+   {
+    "local_id": "EV-0432",
+    "excerpt": "clearer and closer to, you know, the the sample image. Uh, we don't want to copy the sample image, obviously, but we do, you know, we want to we want to extract the elements in the sample image that make sense to vary and then the ones that don't. And so what I'm going to do is I'm actually going to talk to it and ask it to do that. Hey, I thought this was a pretty solid"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0261",
+  "claim_text": "A better way of doing this is to have the model digest the image ad, identify a bunch of areas that could be tweaked (levers to pull, similar to the compositing workflow), template out a bunch of changes, and then generate from that, with more conformity to the main image.",
+  "evidence": [
+   {
+    "local_id": "EV-0433",
+    "excerpt": "job. However, I'm noticing wide variance over the input image. For instance, it looks to me like the crux of what you regenerated was the logo uh rather the two logos being opposed, Maker School and Cloud Socks. And that's fine, but it varies tremendously from that image ad that I gave you as an example. I think a better way of doing this would be you digest the image ad, then identify a"
+   },
+   {
+    "local_id": "EV-0434",
+    "excerpt": "bunch of different areas that we could tweak things, sort of like levers to pull, similar to the compositing workflow. Then you template out a bunch of changes and then we generate them that way. However, we do need more conformity with the main image. The idea is we just want a template that we can hot swap any product into and then be approximately 80% sure that what comes"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0262",
+  "claim_text": "The idea is to have a template you can hot swap any product into and be approximately 80% sure that what comes out is going to be okay.",
+  "evidence": [
+   {
+    "local_id": "EV-0434",
+    "excerpt": "bunch of different areas that we could tweak things, sort of like levers to pull, similar to the compositing workflow. Then you template out a bunch of changes and then we generate them that way. However, we do need more conformity with the main image. The idea is we just want a template that we can hot swap any product into and then be approximately 80% sure that what comes"
+   },
+   {
+    "local_id": "EV-0435",
+    "excerpt": "out is going to be okay. Okay, now I'm going to feed that in. We're going to go back and forth with the model until we get something reasonable. And to be clear, this is the prompting stage, right? This is the whole idea. We are um we're not automating this yet because we don't have the process in place. If we were to try and automate this like build a skill essentially, we would not be"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0263",
+  "claim_text": "Go back and forth with the model until you get something reasonable; this is the prompting stage and you should not automate or build a skill yet because the process is not in place, and doing so would not be a good job.",
+  "evidence": [
+   {
+    "local_id": "EV-0435",
+    "excerpt": "out is going to be okay. Okay, now I'm going to feed that in. We're going to go back and forth with the model until we get something reasonable. And to be clear, this is the prompting stage, right? This is the whole idea. We are um we're not automating this yet because we don't have the process in place. If we were to try and automate this like build a skill essentially, we would not be"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0264",
+  "claim_text": "The model logically breaks the template down into components: a logo band somewhere between 0 to 20% of the height, transition or negative space, the product band, and finally something else at the bottom.",
+  "evidence": [
+   {
+    "local_id": "EV-0436",
+    "excerpt": "doing a very good job. Um now, what is this doing? It's actually coming out with the various things that it can change. So, the first thing is somewhere between 0 to 20% of the height, you know, we want some sort of a logo band. Okay. Then we need transition or negative space. Okay, that's important. Then we need uh the product band. Okay, and then finally at the bottom we need"
+   },
+   {
+    "local_id": "EV-0437",
+    "excerpt": "some other thing. So what this this is doing now is it's actually logically breaking down the template into its components and then it's you know actually going through and generating the stuff. Now it's asking me what would you do? Should I do a model plus some sort of overlay? Um generally speaking that's a bad idea because you are then adding you know a procedural compositing"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0265",
+  "claim_text": "Combining a model plus an overlay is generally a bad idea because it adds a procedural compositing approach to an AI-based pixel-by-pixel generating approach; use a pure prompt template basically every time.",
+  "evidence": [
+   {
+    "local_id": "EV-0437",
+    "excerpt": "some other thing. So what this this is doing now is it's actually logically breaking down the template into its components and then it's you know actually going through and generating the stuff. Now it's asking me what would you do? Should I do a model plus some sort of overlay? Um generally speaking that's a bad idea because you are then adding you know a procedural compositing"
+   },
+   {
+    "local_id": "EV-0438",
+    "excerpt": "approach to an AI based generating pixel by pixel approach. So, I'm actually just going to use a pure prompt template basically every time. And you can see it even says I lean product option number two since text and image is the single biggest variant source and you already have a proven compositing pipeline for exactly that layer. Uh, I would agree with that. And so, yeah, it's just going"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0266",
+  "claim_text": "Iterating on the generator will take some back and forth no matter what you are doing, and AI is much more variable than a compositing flow.",
+  "evidence": [
+   {
+    "local_id": "EV-0443",
+    "excerpt": "one for one, but it's pretty good. And what I like is we basically have like a rainbow of different skin colors. Um, we have really cute looking socks with our logos and everything like that. Um, this this looks good. It's like it really took the horizontal idea, which is valuable. So, I'm still iterating on the generator, of course. Um, but you know, the generator is getting pretty close to"
+   },
+   {
+    "local_id": "EV-0444",
+    "excerpt": "where I want it to be. This is going to take some back and forth no matter what it is that you are doing. Hopefully you guys see now just how much more variable AI can be versus, let's say, a compositing sort of flow. Cool. And now we are building out the rest of the generator, which is just ensuring that this can work across the board. Um, this one looks like it kind of put this in"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0267",
+  "claim_text": "Turn the locally-occurring built-in flow into an HTML flow with check boxes and the ability to mark the ones you want, similar to the earlier HTML flow.",
+  "evidence": [
+   {
+    "local_id": "EV-0446",
+    "excerpt": "yeah, we have that other one. So what I'm going to do now is I'm just going to turn this from um this like built-in flow here which is occurring locally to a flow very similar to our HTML one where you could actually like click on the ones that you want. So that's what I did right here. just gave it a prompt with an abundance of ums and o's. Basically saying, now that we have the"
+   },
+   {
+    "local_id": "EV-0447",
+    "excerpt": "flow working inside of cloud code, turn it into that HTML flow we had with the little check boxes and the ability to mark the ones that we want. Also, instead of just generating three, generate a lot more variants. So, uh, kind of misunderstood me there, but every variant should or each template should generate at least five variants. So, that means if we're going to do"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0268",
+  "claim_text": "Each template should generate at least five variants, so three templates means 15 variants, and very different instructions should be fed into each so a taste person or creative director can select the winners.",
+  "evidence": [
+   {
+    "local_id": "EV-0447",
+    "excerpt": "flow working inside of cloud code, turn it into that HTML flow we had with the little check boxes and the ability to mark the ones that we want. Also, instead of just generating three, generate a lot more variants. So, uh, kind of misunderstood me there, but every variant should or each template should generate at least five variants. So, that means if we're going to do"
+   },
+   {
+    "local_id": "EV-0448",
+    "excerpt": "three, we should have 15. And then we should actually like feed very different instructions into each so that you know a taste person, some sort of creative director can just select the winners. So that's what we're doing. Um we're adding a bunch of different like variation pools per template so that we can adjust uh the prompt that we're sending. Maybe some of them will be warm, some of them"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0269",
+  "claim_text": "Add variation pools per template to adjust the prompt being sent (warm, cool, inside, outside) while still adhering quite a bit to the template.",
+  "evidence": [
+   {
+    "local_id": "EV-0448",
+    "excerpt": "three, we should have 15. And then we should actually like feed very different instructions into each so that you know a taste person, some sort of creative director can just select the winners. So that's what we're doing. Um we're adding a bunch of different like variation pools per template so that we can adjust uh the prompt that we're sending. Maybe some of them will be warm, some of them"
+   },
+   {
+    "local_id": "EV-0449",
+    "excerpt": "will be cool, some of them will be inside, some of them will be outside. But again, you know, we're just taking that template and adhering to it quite a bit. So you can imagine how for this template we'd probably have four distinct sections. This one here would be some sort of feet arrayed horizontally most likely. This one here maybe would show it in action in some"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0270",
+  "claim_text": "Add as many ad variant inspiration ads as humanly possible.",
+  "evidence": [
+   {
+    "local_id": "EV-0450",
+    "excerpt": "way. Uh and then you know we just add as many of these ad variant inspir inspiration ads as humanly possible. We're done generating 12 out of 15 of the first batch. Okay, now we have our own little generator very similar to what we had before. It's like uh like another mini app. And the idea behind these mini apps of course is you know I want to show you guys how to build cloud"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0271",
+  "claim_text": "With a high performing template you can rip that format, generate a thousand variants easily, expand the top of funnel, and select the best variants; you can fill your template folder with like 500 ads and consistently rip the best ones.",
+  "evidence": [
+   {
+    "local_id": "EV-0452",
+    "excerpt": "their own way. We have a background colors. We have people's different skin colors. We have uh the socks themselves that look a little bit different from one to one. We have our little like ad collage here. If this was a really high performing template and we were just like ripping that template, you can imagine how we can just generate a thousand of these really easily and"
+   },
+   {
+    "local_id": "EV-0453",
+    "excerpt": "really straightforwardly. Uh none of these are going to win any awards. I think in the way that I've shown them here or done them, but suffice to say, you guys understand that I don't have like really high performing ad templates selling socks. You guys might for whatever your own company is. So this is how you would rip that format and then really expand the top of funnel uh to be"
+   },
+   {
+    "local_id": "EV-0454",
+    "excerpt": "able to select, you know, the the the the best variants for you. So, you know, this app allows you to very quickly and easily scaffold out, let's say, 20 and then you can just download selected. Um, maybe you you fill your template folder with like 500 ads or something and then just consistently rip the best ones until you get something that's nice. And you can change adherence, too. I mean,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0272",
+  "claim_text": "You can change adherence: strong adherence keeps the same look, and decreasing it adds diversity, for example experimenting with triple collages instead of quadruples.",
+  "evidence": [
+   {
+    "local_id": "EV-0454",
+    "excerpt": "able to select, you know, the the the the best variants for you. So, you know, this app allows you to very quickly and easily scaffold out, let's say, 20 and then you can just download selected. Um, maybe you you fill your template folder with like 500 ads or something and then just consistently rip the best ones until you get something that's nice. And you can change adherence, too. I mean,"
+   },
+   {
+    "local_id": "EV-0455",
+    "excerpt": "like in our case, we have it pretty strongly adhering to the same look, but we could also decrease that if we wanted to add diversity. So, I don't know, maybe instead of having these on like a uh the top right hand corner every time, maybe we just change it so that we can actually experiment with maybe triple collages instead of quadruples and so on and so forth. All right, so where do we"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0273",
+  "claim_text": "The progression is prompt to skill, skill to loop, and then loop to routine.",
+  "evidence": [
+   {
+    "local_id": "EV-0456",
+    "excerpt": "go from here? Well, now we need to turn it into a skill. This looks great. Um, let's turn this into a skill. Looks like I was voice transcribing without realizing it. This into a skill now. Um, the whole idea being that we're going to go from prompt to skill, skill to loop, and then loop to routine. Skill's just about done. What I'm going to do while this is um wrapping up is I'm also going"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0274",
+  "claim_text": "You could turn the loop into a routine once you've verified that the loop works.",
+  "evidence": [
+   {
+    "local_id": "EV-0459",
+    "excerpt": "you know, now that this is sort of in the background here, it can start on the other task. Basically, just fire that off and it's now going to turn it into a loop. So that's kind of neat. Um obviously you could do the exact same thing now again by telling it to turn it into a routine once we've verified that the loop works. Now for the routine we have to go just one step further here."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0275",
+  "claim_text": "If you feed in a new instruction while the model is working on something else, it finishes the current thing before starting the new one.",
+  "evidence": [
+   {
+    "local_id": "EV-0458",
+    "excerpt": "format. Sorry, I don't know where I got 10 from. If we had 10 images, it' be time five or 50 in total. Generate three * 5 or 15 in total. Cool. And uh now that it's, you know, running this on a single image smoke test, I'm just going to feed this in. Uh what happens when you feed in something while it's working on something else is it finishes this thing before it starts this thing. So uh"
+   },
+   {
+    "local_id": "EV-0459",
+    "excerpt": "you know, now that this is sort of in the background here, it can start on the other task. Basically, just fire that off and it's now going to turn it into a loop. So that's kind of neat. Um obviously you could do the exact same thing now again by telling it to turn it into a routine once we've verified that the loop works. Now for the routine we have to go just one step further here."
+   }
+  ]
+ }
+]

@@ -1,0 +1,342 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0151",
+  "claim_text": "Minimize the total number of steps involved in creating a good prompt, skill or process: you should choose the process yourself and judge the output quality yourself, letting AI only carry out the process in the middle, raising success from ~51.2% to ~80%.",
+  "evidence": [
+   {
+    "local_id": "EV-0232",
+    "excerpt": "or basically 51.2% success rate. So what you want to do is you basically want to minimize the total number of steps involved in the creation of a good prompt, a good skill or a good process. And the way you do that is, you know, rather than have AI come up with the process for you, then rather have AI actually maybe judge the quality of the outputs for you. You want to do both of"
+   },
+   {
+    "local_id": "EV-0233",
+    "excerpt": "these yourself. All you want is for AI to do the thing in the middle, which is actually like carry out the process. And in that way, you can go from like a 51.2% success rate, maybe up to an 80% success rate. Okay. Also worth noting, you're probably not going to achieve 100% success rate with any sort of AI agent process, at least not of as of the time of this recording. Um, really, the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0152",
+  "claim_text": "You're probably not going to achieve 100% success rate with any AI agent process as of the time of this recording; AI lets you take more shots at the net and you apply your own human intellect to pick the correct shots.",
+  "evidence": [
+   {
+    "local_id": "EV-0233",
+    "excerpt": "these yourself. All you want is for AI to do the thing in the middle, which is actually like carry out the process. And in that way, you can go from like a 51.2% success rate, maybe up to an 80% success rate. Okay. Also worth noting, you're probably not going to achieve 100% success rate with any sort of AI agent process, at least not of as of the time of this recording. Um, really, the"
+   },
+   {
+    "local_id": "EV-0234",
+    "excerpt": "way that AI works is it allows you to take a lot more shots at the net in any process, and then you can apply your own human intellect to just picking a bunch of the correct shots, if that makes sense. So, for instance, with our ad generator, what we're going to do is we're not going to aim to like make this thing just pop out perfect ads every single time. What we're going to do is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0153",
+  "claim_text": "The ad generator does not aim to pop out perfect ads every time; it generates dozens, hundreds or thousands of ads which you then review and run, alleviating the creative bottleneck assuming that is the bottleneck.",
+  "evidence": [
+   {
+    "local_id": "EV-0234",
+    "excerpt": "way that AI works is it allows you to take a lot more shots at the net in any process, and then you can apply your own human intellect to just picking a bunch of the correct shots, if that makes sense. So, for instance, with our ad generator, what we're going to do is we're not going to aim to like make this thing just pop out perfect ads every single time. What we're going to do is"
+   },
+   {
+    "local_id": "EV-0235",
+    "excerpt": "we're going to have it generate dozens, hundreds, thousands of ads, okay? And then all you're going to do is you're just going to review them and then run them. And in that way, uh we're going to be able to generate a lot more top offunnel ads, which will alleviate the creative bottleneck, assuming that that is the bottleneck. So, anyway, this is the process right here that we're going"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0154",
+  "claim_text": "The creative generation process is: save high performing ad formats as templates, feed in a variable (niche, offer, angle), have Claude generate combinations of variable times ad format, then review, pick and ship, staying in the loop until the end where taste matters.",
+  "evidence": [
+   {
+    "local_id": "EV-0236",
+    "excerpt": "to be um going through. We're going to save a bunch of high performing ad formats as templates. Then we're going to feed in a variable. So a niche, some sort of offer, some sort of angle, whatever it is for whatever product. I'll just come up with a hypothetical one. Claude will generate a bunch of different combinations of niche times ad format, offer time ad format, angle time"
+   },
+   {
+    "local_id": "EV-0237",
+    "excerpt": "ad format. And then we're just going to review, pick, and ship. Um, staying in the loop, uh, basically all the way up until the end where the taste matters. But actually before we even get there, I I hope you guys know just based off of that bottleneck thinking, um the only situation in which this would make sense to apply to a business is if creative is your bottleneck. Like a lot of companies"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0155",
+  "claim_text": "The only situation in which applying the ad generator to a business makes sense is if creative is the bottleneck: a company with lots of ideas and lots of distribution but little creative could improve meaningfully; if you already can make ads, or are short on ideas or distribution, more ad creation won't improve things much.",
+  "evidence": [
+   {
+    "local_id": "EV-0237",
+    "excerpt": "ad format. And then we're just going to review, pick, and ship. Um, staying in the loop, uh, basically all the way up until the end where the taste matters. But actually before we even get there, I I hope you guys know just based off of that bottleneck thinking, um the only situation in which this would make sense to apply to a business is if creative is your bottleneck. Like a lot of companies"
+   },
+   {
+    "local_id": "EV-0238",
+    "excerpt": "are big on ideas and they also have the means to distribute those ideas via paid or organic. They just can't actually make the ads themselves. So this is this is the situation in which that would make sense. If your company has lots of ideas, if it has lots of distribution, but it doesn't have a lot of creative, um you could actually meaningfully improve the business significantly. um"
+   },
+   {
+    "local_id": "EV-0239",
+    "excerpt": "you know so if you're currently bottlenecked on designing and stuff like that like this the system will genuinely improve things but if you already have the ability to uh I don't know like make a bunch of ads or maybe you're really short on ideas or maybe you're really short on distribution you having the ability to create more ads won't necessarily improve things really all"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0156",
+  "claim_text": "Claude Code and AI allow producing the manpower to give every person that works with the business a customized experience: customized creative, copy, outreach, speed to lead, enrichment research and follow-ups.",
+  "evidence": [
+   {
+    "local_id": "EV-0181",
+    "excerpt": "invoices and stuff like that is simply because we haven't had the manpower to do that and provide a good experience. But what I really like about cloud code and AI is that it allows us the ability to produce the manpower to give every single person that works with our business a customized experience. They'll have customized creative, customized copy, customized outreach."
+   },
+   {
+    "local_id": "EV-0182",
+    "excerpt": "Their speed to lead will look really customized. We'll we'll customize, you know, information by doing research automatically on people to enrich, you know, fields in our newsletter databases will u customize follow-ups. Everything will be super super unique and and also very personalized. Before we actually build things, you need to understand bottleneck thinking, just sort of"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0157",
+  "claim_text": "In the hypothetical business example with lots of capacity at creative and leads but not at booking, improving creative, follow-ups or lead count doesn't matter; improving booking capacity from 10 to 20 units/day effectively doubles the business.",
+  "evidence": [
+   {
+    "local_id": "EV-0191",
+    "excerpt": "reality is, you know, we have a lot of processes in our business that are very similar to what I just talked about. And in this hypothetical example, what we have is we have um you know a lot of capacity at the creative step. We have a lot of capacity at the lead step, but we don't have a lot of capacity the booking step. So this is sort of our you know uh example that is analogous to 10 units"
+   },
+   {
+    "local_id": "EV-0192",
+    "excerpt": "per day. It doesn't really matter if we improve our creative in this example. Doesn't really matter if we improve our follow-ups or the total number of leads we have. you know, none of that's going to matter because the pipeline, the narrowest part of our whole business is this booking stuff. So, what that means, too, is it's not bad. It's actually quite freeing. Um, we can spend zero"
+   },
+   {
+    "local_id": "EV-0193",
+    "excerpt": "work on creative leads or following up at this point. If we just improve our booking by a tiny little bit, our entire business will improve by that same multiple. For instance, if we can move it from 10 units a day of capacity to 20 units a day of capacity, what we've done is we've effectively doubled our business. Okay? Then we do it 30. you know, maybe we'll triple our business"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0158",
+  "claim_text": "You should map out the process ahead of time and follow the series of steps shown, in order to convert your own marketing mix into something replicable.",
+  "evidence": [
+   {
+    "local_id": "EV-0242",
+    "excerpt": "give you guys like a cookie cutter process that is probably above average in terms of performance, but I also want you guys to know that you guys all have your own internal and successful marketing mix. So, you guys should do whatever the heck you want there. Just map out the process ahead of time and follow the series of steps that I'm going to show you to convert this into,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0159",
+  "claim_text": "The first thing is to find a bunch of high performing ad formats and then save them as templates.",
+  "evidence": [
+   {
+    "local_id": "EV-0243",
+    "excerpt": "you know, something that is replicable because the first thing is we need to find a bunch of high performing ad formats and then save them as templates. And so, ideally, you know, in your company, you would already have high performing ad formats. Okay? Okay, so you'd actually already have a bunch of things that are very good. They've worked before. You have high rorowass,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0160",
+  "claim_text": "Ideally your company would already have high performing ad formats with high ROAS and high LTV to CAC ratios that have worked before; when you don't have them, you go and find a bunch.",
+  "evidence": [
+   {
+    "local_id": "EV-0243",
+    "excerpt": "you know, something that is replicable because the first thing is we need to find a bunch of high performing ad formats and then save them as templates. And so, ideally, you know, in your company, you would already have high performing ad formats. Okay? Okay, so you'd actually already have a bunch of things that are very good. They've worked before. You have high rorowass,"
+   },
+   {
+    "local_id": "EV-0244",
+    "excerpt": "high uh I don't know, LTV to CAC ratios. You know, you'd already have a bunch of these. We don't. So, I'm just going to go and I'm going to find a bunch. And I don't know what the performance of these are, but you know, I need to basically show you guys the process of getting data into the system. So, bear with me. What I'll do is I'm just going to open up like Facebook ads library, and then"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0161",
+  "claim_text": "To collect ad formats when you don't have your own, open Facebook ads library and look through a bunch of ads that people are running for a variety of products.",
+  "evidence": [
+   {
+    "local_id": "EV-0244",
+    "excerpt": "high uh I don't know, LTV to CAC ratios. You know, you'd already have a bunch of these. We don't. So, I'm just going to go and I'm going to find a bunch. And I don't know what the performance of these are, but you know, I need to basically show you guys the process of getting data into the system. So, bear with me. What I'll do is I'm just going to open up like Facebook ads library, and then"
+   },
+   {
+    "local_id": "EV-0245",
+    "excerpt": "I'm just going to look through a bunch of ads that people are running for a variety of products. So, I'm in Canada, which is why it says that I don't want to stay in Canada, so I'm just going to go all. And then I'm also going to go all over here. Uh, we don't really care about the political ads, so we're just going to avoid those. Uh, I don't know. Keyword. I'm just going to do um let's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0162",
+  "claim_text": "In the Facebook ads library, set the country filter to 'all' and avoid political ads.",
+  "evidence": [
+   {
+    "local_id": "EV-0245",
+    "excerpt": "I'm just going to look through a bunch of ads that people are running for a variety of products. So, I'm in Canada, which is why it says that I don't want to stay in Canada, so I'm just going to go all. And then I'm also going to go all over here. Uh, we don't really care about the political ads, so we're just going to avoid those. Uh, I don't know. Keyword. I'm just going to do um let's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0163",
+  "claim_text": "Open the ad detail and make it as big as possible so you can see the image that needs to be fed into the model.",
+  "evidence": [
+   {
+    "local_id": "EV-0250",
+    "excerpt": "step just to show you guys how to automate really simple like image creative like it's it's super straightforward to automate this stuff. So maybe we'll start with that and then uh we'll get progressively more complicated. That probably makes sense. Okay, so we you know obviously need to grab the ad itself. So how am I going to do that? Well, I'm going to try um you"
+   },
+   {
+    "local_id": "EV-0251",
+    "excerpt": "know opening this ad detail and just seeing if I can get it as big as possible and I can right here. Okay, and you can see the images. This is an image ad. That is basically I don't know if I open up my little drawing tool. It's basically this is the bounds of the image, right? Uh probably up to about here, then up here. And so this is sort of what we need to feed into our model."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0164",
+  "claim_text": "Create a folder (named e.g. 'ad formats for claude') in Downloads via Finder and dump the collected ad screenshots into it.",
+  "evidence": [
+   {
+    "local_id": "EV-0252",
+    "excerpt": "Um if I go to the next ad here, like we'll just do why don't we do three to start. Um it looks like this is actually opening this little JavaScript segment. So why don't we actually go to Finder and I'll just make a folder and I'll start dumping all of them in now. And I'm full screen, so I just got to unfull here. Okay, we'll go downloads. I'm just"
+   },
+   {
+    "local_id": "EV-0253",
+    "excerpt": "going to make a folder. And why don't I call it um why don't I call it add formats for claude. Okay. And what I'm going to do is I'm just going to zoom in because I want this creative to be as high quality as possible. Obviously, it can't get super perfectly high quality, but we can get pretty close. And then I'm just going to take a screenshot and bump down to maybe here or so. This is"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0165",
+  "claim_text": "Zoom in before taking the screenshot because you want the creative to be as high quality as possible.",
+  "evidence": [
+   {
+    "local_id": "EV-0253",
+    "excerpt": "going to make a folder. And why don't I call it um why don't I call it add formats for claude. Okay. And what I'm going to do is I'm just going to zoom in because I want this creative to be as high quality as possible. Obviously, it can't get super perfectly high quality, but we can get pretty close. And then I'm just going to take a screenshot and bump down to maybe here or so. This is"
+   },
+   {
+    "local_id": "EV-0254",
+    "excerpt": "going to be an ad format that I'm going to attempt to replicate. It's not going to be perfect as mentioned, but uh we will attempt to replicate it and then spin it. Kind of do our own style. Okay. And then next up, I want to see the actual ads themselves. So, I'm just going to click on this one here. And then you can see, same idea. I'm going to zoom way in. And it looks like this"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0166",
+  "claim_text": "Start with about three ad formats and get more complicated later on.",
+  "evidence": [
+   {
+    "local_id": "EV-0252",
+    "excerpt": "Um if I go to the next ad here, like we'll just do why don't we do three to start. Um it looks like this is actually opening this little JavaScript segment. So why don't we actually go to Finder and I'll just make a folder and I'll start dumping all of them in now. And I'm full screen, so I just got to unfull here. Okay, we'll go downloads. I'm just"
+   },
+   {
+    "local_id": "EV-0255",
+    "excerpt": "one is specifically for mobile. So, it's a little bit taller, but that's okay. This should natively kind of figure out that I am attempting to run a little bit taller of an ad. Going to paste that in as well. Why don't we do just one more to start? and then we'll get more complicated later on. Uh, we need a good format. Yeah, there I am. We need a good format. Create a link. Sell anywhere."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0167",
+  "claim_text": "A mobile-specific ad is a little bit taller, and the system should natively figure out that you are attempting to run a taller ad.",
+  "evidence": [
+   {
+    "local_id": "EV-0254",
+    "excerpt": "going to be an ad format that I'm going to attempt to replicate. It's not going to be perfect as mentioned, but uh we will attempt to replicate it and then spin it. Kind of do our own style. Okay. And then next up, I want to see the actual ads themselves. So, I'm just going to click on this one here. And then you can see, same idea. I'm going to zoom way in. And it looks like this"
+   },
+   {
+    "local_id": "EV-0255",
+    "excerpt": "one is specifically for mobile. So, it's a little bit taller, but that's okay. This should natively kind of figure out that I am attempting to run a little bit taller of an ad. Going to paste that in as well. Why don't we do just one more to start? and then we'll get more complicated later on. Uh, we need a good format. Yeah, there I am. We need a good format. Create a link. Sell anywhere."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0168",
+  "claim_text": "You should fill the folder with your own high quality ad formats — the best formats ever — and then spin those formats as much as humanly possible; you don't want to make a bunch of shitty ads.",
+  "evidence": [
+   {
+    "local_id": "EV-0256",
+    "excerpt": "Okay, cool. I like this one. This is pretty solid. I mean, these guys obviously they crush it with ads. They're um and they're they're really really pretty, too, which I like. Then why don't I take this little photo? Okay. And then go back to my folder and then stick that in there. Cool. So, you would fill this with whatever your high quality ad formats are. Um, you know, in"
+   },
+   {
+    "local_id": "EV-0257",
+    "excerpt": "my case, I'm just I'm assuming that Stripe is performing well with these ads. I don't know for sure. Uh, obviously, you don't want to make a bunch of shitty ads, but the idea is fill this with like the best formats ever. And then we're just going to spin these formats as much as humanly possible. Uh, okay. So, once we're done with that, we can go back to draw. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0169",
+  "claim_text": "The next thing needed after collecting formats is some sort of variable angle to feed in, which requires a bunch of information about your business.",
+  "evidence": [
+   {
+    "local_id": "EV-0258",
+    "excerpt": "I'm just going to pretend now that I'm done with this. The next thing we need to do is we need some sort of variable angle to feed in. So, here's where, you know, you need a bunch of information about your business. So in my case, you know, uh I'm running uh a couple of different products. I'm running like a um Claro, which is a software as a service product. Uh Clarvo is basically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0170",
+  "claim_text": "Voice dump a bunch of information into Claude and have it come up with niches, offers, and angles.",
+  "evidence": [
+   {
+    "local_id": "EV-0262",
+    "excerpt": "next is I'm just going to voice dump a bunch of stuff into a cloud and then I'm going to have it come up with, you know, niches, offers, and angles. And actually, just to get ahead of things, I'm also going to take a screenshot of this picture right here. Okay. Then feed that directly into Claude. So what I'm going to do here is I'm going to see if I can clear this. So we're back to a"
+   },
+   {
+    "local_id": "EV-0263",
+    "excerpt": "base conversation. I'm going to paste this in. And then I'm going to press this little voice transcript button and then just talk. So I'm going to press and hold to record. [gasps] Hey, my goal is to create a creative pipeline skill. Before we create a skill, I'm going to prompt with you back and forth to determine how best to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0171",
+  "claim_text": "Clear the conversation so you are back to a base conversation before pasting in the reference image and prompting.",
+  "evidence": [
+   {
+    "local_id": "EV-0262",
+    "excerpt": "next is I'm just going to voice dump a bunch of stuff into a cloud and then I'm going to have it come up with, you know, niches, offers, and angles. And actually, just to get ahead of things, I'm also going to take a screenshot of this picture right here. Okay. Then feed that directly into Claude. So what I'm going to do here is I'm going to see if I can clear this. So we're back to a"
+   },
+   {
+    "local_id": "EV-0263",
+    "excerpt": "base conversation. I'm going to paste this in. And then I'm going to press this little voice transcript button and then just talk. So I'm going to press and hold to record. [gasps] Hey, my goal is to create a creative pipeline skill. Before we create a skill, I'm going to prompt with you back and forth to determine how best to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0172",
+  "claim_text": "Before creating the skill, prompt back and forth with Claude to determine how best to structure the skill and eventually arrive at a set of high quality outputs.",
+  "evidence": [
+   {
+    "local_id": "EV-0263",
+    "excerpt": "base conversation. I'm going to paste this in. And then I'm going to press this little voice transcript button and then just talk. So I'm going to press and hold to record. [gasps] Hey, my goal is to create a creative pipeline skill. Before we create a skill, I'm going to prompt with you back and forth to determine how best to"
+   },
+   {
+    "local_id": "EV-0264",
+    "excerpt": "structure the skill and then uh you know eventually arrive at a set of highquality outputs that we like. So here's the situation. Um I have a bunch of ads in a folder called ad formats that I'm going to feed you. What I want you to do is I want you to apply a bunch of information about Maker School, which is my AI automation program that helps people get their first client in 90 days"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0173",
+  "claim_text": "You can't just use Stripe's logo or whatever company's logo you are feeding in as ad format inspiration; it needs to be replaced with your own brand.",
+  "evidence": [
+   {
+    "local_id": "EV-0268",
+    "excerpt": "scaffold out virtually the exact same ads. Um I know that it's not going to be perfect to start because we're going to do so procedurally, but u we're going to go back and forth until we get like the highest quality um ad version or variant as possible. Um, last thing is we can't just use, you know, Stripe's logo or whatever company's logo that we're feeding in as an ad format inspo. So,"
+   },
+   {
+    "local_id": "EV-0269",
+    "excerpt": "uh, because this is a demo, I just went and I found like a random set of ads. I'm not using my own ads. Uh, so we're going to need to replace that with Maker School. But aside from that, I want very similar styled ads. I want them to look quite similar. Um, we just need to change sort of the image up at the top. Instead of the stripe gradient, I want something different. And then we'll turn"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0174",
+  "claim_text": "You can feed in a folder to Claude, plus a big prompt and an image, in the same conversation.",
+  "evidence": [
+   {
+    "local_id": "EV-0270",
+    "excerpt": "this into a repeatable engine to generate dozens if not hundreds of these ads uh very quickly. Okay. And then what I'm going to do is I'm actually going to go and feed in this folder too. If you guys remember, you have the ability to feed in a folder. So now I've given it the folder. I've also given it a big prompt. And at the very end of it, I've also given it an image. And hopefully"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0175",
+  "claim_text": "Claude does not have an inherent ability to generate images, so the approach is to build a series of templates which are rules that let Claude generate the images on demand using cheap old-school image processing platforms like ImageMagick.",
+  "evidence": [
+   {
+    "local_id": "EV-0275",
+    "excerpt": "actually going through and building a template spec. Now, you guys should know that Claude does not have an inherent ability to generate images. So, what we're doing this time is we're actually just building out a a series of templates. Okay. And these templates are basically rules that allow Claude to generate um these things on demand using very cheap old school image processing"
+   },
+   {
+    "local_id": "EV-0276",
+    "excerpt": "platforms like image magic and stuff like that. So, these aren't going to be like the highest quality things right off the bat. We're going to have to massage them a little bit. But, the idea is at the end of it, we're going to have a pretty repeatable template and then anytime we want to come up with a different ad, boom, we're just going to like say, \"Hey, you know, come up with"
+   }
+  ]
+ }
+]

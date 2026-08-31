@@ -1,0 +1,346 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0526",
+  "claim_text": "The recommended approach is: get the data on the page first; once the data is on the page, then skin it and select high-quality iterations.",
+  "evidence": [
+   {
+    "local_id": "EV-0910",
+    "excerpt": "different font sizes uh and also autocasting them. You know, this over here is like a sexy architecture website with like cool effects, right? You can do pretty crazy stuff these days. This one's like cool typography stuff. So, we don't need to feel constrained by design really to any extent and um Fable 5 can do a really really good job. It's just important to approach it in a specific"
+   },
+   {
+    "local_id": "EV-0911",
+    "excerpt": "way. Get the data on the page. Once you have the data on the page, then you skin it and select high-quality iterations. You can see the example that it has put together uh which is very in-depth. It's an extremely extremely detailed database. And I mean the design is far better than whatever we uh did before with that much dumber model. As you can see, you also have the ability to click"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0527",
+  "claim_text": "One does not need to feel constrained by design to any extent, because Fable 5 can do a really good job, but it is important to approach it in a specific way.",
+  "evidence": [
+   {
+    "local_id": "EV-0910",
+    "excerpt": "different font sizes uh and also autocasting them. You know, this over here is like a sexy architecture website with like cool effects, right? You can do pretty crazy stuff these days. This one's like cool typography stuff. So, we don't need to feel constrained by design really to any extent and um Fable 5 can do a really really good job. It's just important to approach it in a specific"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0528",
+  "claim_text": "The dashboard uses naive SQL threshold detection over the engagement window: if something drops off or rises very quickly it is surfaced, with roughly a 5x difference threshold used to determine whether something is weird.",
+  "evidence": [
+   {
+    "local_id": "EV-0912",
+    "excerpt": "into a specific client, which is kind of neat. And you can see the leads per day. You can see the traffic collapse. Uh what they do is they have naive SQL threshold detection over the engagement window. Basically, if something drops off or comes up really really quickly, um you can see it right here. It'll actually show you like it'll say, for instance, hey, there's a weird lead flow"
+   },
+   {
+    "local_id": "EV-0913",
+    "excerpt": "collapse happening for CL10, that's client 10 on the week of, I don't know, March uh I don't know, 9th, 2026. On average, you guys normally get 57 leads. Now, you guys are getting three leads. So, I think it's like a 5x difference threshold or something like that. And uh that's how you determine whether or not something is weird. But then you also have a breakdown of areas that it kind"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0529",
+  "claim_text": "The anomaly output is phrased concretely, e.g. a lead flow collapse for CL10 on the week of March 9th 2026 where the usual 57 leads dropped to three.",
+  "evidence": [
+   {
+    "local_id": "EV-0912",
+    "excerpt": "into a specific client, which is kind of neat. And you can see the leads per day. You can see the traffic collapse. Uh what they do is they have naive SQL threshold detection over the engagement window. Basically, if something drops off or comes up really really quickly, um you can see it right here. It'll actually show you like it'll say, for instance, hey, there's a weird lead flow"
+   },
+   {
+    "local_id": "EV-0913",
+    "excerpt": "collapse happening for CL10, that's client 10 on the week of, I don't know, March uh I don't know, 9th, 2026. On average, you guys normally get 57 leads. Now, you guys are getting three leads. So, I think it's like a 5x difference threshold or something like that. And uh that's how you determine whether or not something is weird. But then you also have a breakdown of areas that it kind"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0530",
+  "claim_text": "The dashboard also breaks out positive signals such as a conversion rate jump from a 1.65% baseline to 2.23%, which is good information to present to a client.",
+  "evidence": [
+   {
+    "local_id": "EV-0914",
+    "excerpt": "of makes sense to point out. So, hey, you know, here's a conversion rate jump. The baseline percentage is 1.65. Okay, so 1.65% and now it's 2.23. So, what we've done is we basically 1.25 or 1.5xed total results. You can see that sort of law hold across the board here. And so, this is like good information for you to like present to a client. Then down at the very bottom, you can"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0531",
+  "claim_text": "The dashboard reports rep win rates against team average, e.g. a rep with a 15.6% win rate versus a 24.2% team average, prompting the user to consider doing something about it.",
+  "evidence": [
+   {
+    "local_id": "EV-0915",
+    "excerpt": "see they're also doing a bunch of stuff on rep rate wins. So, you know, like these are sales representatives and uh you know, this guy has, I don't know, a win rate of 15.6% on deals, so about one in seven calls. Um, team average percentage is, oh, sorry, this guy's not a winner. He's a he's a loser. The team average percentage is 24.2%. His win rate is 15.6%. So, it's like, hm, okay,"
+   },
+   {
+    "local_id": "EV-0916",
+    "excerpt": "maybe maybe I should do something about that. So, Fable is going through this with me and basically doing the evaluation to try and figure out what's going on. Um, we're clicking through all these different clients. Just making sure that like nothing here is is weird. End of all of this. It has gone through and done all of the testing. Um, I just want to verify that I haven't actually"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0532",
+  "claim_text": "The speaker clicks through all the different clients with Fable to verify nothing is weird, and verifies the session did not exceed the Fable usage limit.",
+  "evidence": [
+   {
+    "local_id": "EV-0916",
+    "excerpt": "maybe maybe I should do something about that. So, Fable is going through this with me and basically doing the evaluation to try and figure out what's going on. Um, we're clicking through all these different clients. Just making sure that like nothing here is is weird. End of all of this. It has gone through and done all of the testing. Um, I just want to verify that I haven't actually"
+   },
+   {
+    "local_id": "EV-0917",
+    "excerpt": "ended up using more than my fable usage limit. [sighs and gasps] So, it's looking like the cost of this session was 94% fable $13. I just want to make 100% sure that as something that um just worked out. Let me actually go through usage credits. you know, we realistically didn't burn through them. And it looks like for that dashboard, which to be"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0533",
+  "claim_text": "The session cost was 94% Fable, about $13, and the dashboard covering roughly 20 clients and tens of thousands of rows of data cost $18 Canadian, about $12-13 US.",
+  "evidence": [
+   {
+    "local_id": "EV-0917",
+    "excerpt": "ended up using more than my fable usage limit. [sighs and gasps] So, it's looking like the cost of this session was 94% fable $13. I just want to make 100% sure that as something that um just worked out. Let me actually go through usage credits. you know, we realistically didn't burn through them. And it looks like for that dashboard, which to be"
+   },
+   {
+    "local_id": "EV-0918",
+    "excerpt": "clear is, you know, this controls like 20 clients or something like that and tens of thousands upon tens of thousands upon tens of thousands of rows of data. Like, it's not a it's not a trivial build. That cost me $18 Canadian dollars or about 13 12 or 13 American, which I think you guys are probably more used to. So, that's big, right? I mean, we just spent a lot of money. But the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0534",
+  "claim_text": "The reason for doing this with Fable is that it produces the scaffold and architecture, which can then be spun into many different variants.",
+  "evidence": [
+   {
+    "local_id": "EV-0919",
+    "excerpt": "reason why I did this with Fable is because now we have basically the scaffold. We have the architecture here. And what we can do is we can take this extraordinarily detailed super in-depth um dashboard and now we can just spin it into like 20 different variants. What do I mean by this? Well, what I'm going to do now is I'm going to go from Fable 5"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0535",
+  "claim_text": "For the variant generation the speaker switches from Fable 5 to Opus 5 at high reasoning, noting that Opus 5 work is billed as part of the usage limits rather than extra credits, and that fast mode allows the model to operate a little bit faster.",
+  "evidence": [
+   {
+    "local_id": "EV-0919",
+    "excerpt": "reason why I did this with Fable is because now we have basically the scaffold. We have the architecture here. And what we can do is we can take this extraordinarily detailed super in-depth um dashboard and now we can just spin it into like 20 different variants. What do I mean by this? Well, what I'm going to do now is I'm going to go from Fable 5"
+   },
+   {
+    "local_id": "EV-0920",
+    "excerpt": "to Opus 5. Okay. And I'll keep it at um high just for simplicity. And let me just see if I can make this fast. I don't know if I can. Yeah, it doesn't look like I can. That's okay. Fast mode just allows your model to operate a little bit faster. Now, I'm going to go back to Opus 5, which um is not being built as part of my usage limits. Uh sorry, it's not being built as like"
+   },
+   {
+    "local_id": "EV-0921",
+    "excerpt": "extra credit. It's being built as part of my usage limits. And now I can spin it. Hey, now that we've built this extremely um highquality scaffold, what I want to do is I want to spin this in five different designs. Aka, I want you to generate five highly different variants each. I'd like you to spawn five sub agents all working on this project"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0536",
+  "claim_text": "The prompt asks the model to spawn five sub agents working on the project simultaneously in HTML to generate five highly different variants, with key focus on interpretability, usability and practical UX.",
+  "evidence": [
+   {
+    "local_id": "EV-0921",
+    "excerpt": "extra credit. It's being built as part of my usage limits. And now I can spin it. Hey, now that we've built this extremely um highquality scaffold, what I want to do is I want to spin this in five different designs. Aka, I want you to generate five highly different variants each. I'd like you to spawn five sub agents all working on this project"
+   },
+   {
+    "local_id": "EV-0922",
+    "excerpt": "simultaneously using HTML. Um, go nuts here. Really demonstrate the diversity and range of your visual uh design appeal and give me something that just looks really really awesome and interesting on all of them. Key focus should be interpretability obviously uh usability and practical UX. UX that actually does serve uh the user. Okay, sorry it turns out you can't use extra"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0537",
+  "claim_text": "You can spawn multiple sub agents simultaneously working at the same time; this consumes vastly more usage limit than doing it in serial or linear manner, but allows designing things far faster.",
+  "evidence": [
+   {
+    "local_id": "EV-0923",
+    "excerpt": "high on Opus 5, I don't think. Um, in case you guys didn't know, you can actually spawn multiple sub agents simultaneously that are all working on things for you at the same time. This consumes vastly more usage limit than if you were to do it in serial or a linear manner like most of us are used to, but it also allows you when you're doing something like creating five different"
+   },
+   {
+    "local_id": "EV-0924",
+    "excerpt": "designs to design things far faster. The whole principle here is parallelization. And I'm glad we're doing a design project cuz I I did want to talk about this at some point in the program. Um, but basically what we want to do is, you know, if you think about it, the way that we were doing things before is we had one process. Okay, maybe make this a little bit bigger. And why don't I"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0538",
+  "claim_text": "Doing things in a linear manner with agents has a time cost: five sequential 5-minute steps total 20 minutes.",
+  "evidence": [
+   {
+    "local_id": "EV-0925",
+    "excerpt": "actually draw this on the uh dashboard here? That'll allow you guys to see this um in perpetuity and then we can come back to it. You know what we're doing before is we have one process, okay? And then we want to do another process, we want to do another process, and then maybe we want to do a couple more. What we were doing is we were proceeding in like a linear manner."
+   },
+   {
+    "local_id": "EV-0926",
+    "excerpt": "And when you do things in a linear manner with agents, there is a certain time cost. So maybe in order to go from 1 to 2 takes 5 minutes. In order to go from 2 to 3 takes 5 minutes. In order to go from 3 to 4, it takes 5 minutes. In order to go from 4 to 5, it takes 5 minutes. What that means logically speaking is if you add up the total amount of time"
+   },
+   {
+    "local_id": "EV-0927",
+    "excerpt": "that is 5 + 5 + 5 + 5 20 minutes in total. Well, when you have um parallelizable uh processes and I define a parallelizable process with agents as a process where you can spawn multiple agents working on the same data resource but whose actions are independent and do not impact the actions of other agents. Then you can do something really cool."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0539",
+  "claim_text": "The speaker defines a parallelizable process with agents as a process where you can spawn multiple agents working on the same data resource but whose actions are independent and do not impact the actions of other agents.",
+  "evidence": [
+   {
+    "local_id": "EV-0927",
+    "excerpt": "that is 5 + 5 + 5 + 5 20 minutes in total. Well, when you have um parallelizable uh processes and I define a parallelizable process with agents as a process where you can spawn multiple agents working on the same data resource but whose actions are independent and do not impact the actions of other agents. Then you can do something really cool."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0540",
+  "claim_text": "In the parallel version, step one fans out into several simultaneous processes that are then combined into a next process, reducing the illustrative total from 20 minutes to 10 minutes.",
+  "evidence": [
+   {
+    "local_id": "EV-0928",
+    "excerpt": "You could start with step one, but then you know what you can do? You can spawn, you know, two, three, four. Well, I guess probably just one more here. And then you can immediately combine those into some next process six such that okay, from 1 to 2 3 4 and 5, it's only 5 minutes. And from 2 3 4 5 and 6 to 2 3 4 5 26, it's only another 5 minutes. So now if you think about it, this whole"
+   },
+   {
+    "local_id": "EV-0929",
+    "excerpt": "process here, okay, this is only uh 10 minutes long. And so we're comparing it to a process that's previously 20 minutes that has a lot of weight times. Well, now we're just doing that waiting kind of in one shot. We're just immediately generating all of the variants that we want. And this second half might not even be necessary as we will see. But generally speaking, what"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0541",
+  "claim_text": "Generally the speaker will try to combine the best portions of each variant and stick them in one, though the combining second half might not even be necessary.",
+  "evidence": [
+   {
+    "local_id": "EV-0929",
+    "excerpt": "process here, okay, this is only uh 10 minutes long. And so we're comparing it to a process that's previously 20 minutes that has a lot of weight times. Well, now we're just doing that waiting kind of in one shot. We're just immediately generating all of the variants that we want. And this second half might not even be necessary as we will see. But generally speaking, what"
+   },
+   {
+    "local_id": "EV-0930",
+    "excerpt": "I'll do is I'll I'll try and combine the best portions of each of these variants and then um stick them in one. So the upside obviously okay if we look at the pro of parallelization it's it's way faster okay it also allows you to search a lot of what's called the solution space which is the space of all possible solutions to your problem the cons are you know it's much more expensive so I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0542",
+  "claim_text": "The pros of parallelization are that it is way faster and it lets you search a lot of the solution space, the space of all possible solutions to your problem.",
+  "evidence": [
+   {
+    "local_id": "EV-0930",
+    "excerpt": "I'll do is I'll I'll try and combine the best portions of each of these variants and then um stick them in one. So the upside obviously okay if we look at the pro of parallelization it's it's way faster okay it also allows you to search a lot of what's called the solution space which is the space of all possible solutions to your problem the cons are you know it's much more expensive so I'm"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0543",
+  "claim_text": "The cons of parallelization are that it is not cheap, and that each of the processes must inherently be non-monitored, which means a higher risk of failure.",
+  "evidence": [
+   {
+    "local_id": "EV-0930",
+    "excerpt": "I'll do is I'll I'll try and combine the best portions of each of these variants and then um stick them in one. So the upside obviously okay if we look at the pro of parallelization it's it's way faster okay it also allows you to search a lot of what's called the solution space which is the space of all possible solutions to your problem the cons are you know it's much more expensive so I'm"
+   },
+   {
+    "local_id": "EV-0931",
+    "excerpt": "just going to say not cheap [laughter] because you are doing a lot of this and two um in order for you to be able to do this each of these processes need to inherently be like non-moniitored Um, and what that means is, you know, it's like higher I'm going to say higher risk of failure. But it's okay if there's a higher risk of failure because logically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0544",
+  "claim_text": "A higher risk of failure is acceptable because, as long as the models can do these things reasonably autonomously, if you do it five times only one of those needs to actually work or be sufficient to your taste.",
+  "evidence": [
+   {
+    "local_id": "EV-0931",
+    "excerpt": "just going to say not cheap [laughter] because you are doing a lot of this and two um in order for you to be able to do this each of these processes need to inherently be like non-moniitored Um, and what that means is, you know, it's like higher I'm going to say higher risk of failure. But it's okay if there's a higher risk of failure because logically"
+   },
+   {
+    "local_id": "EV-0932",
+    "excerpt": "speaking um we don't really mind uh you know as long as the models are capable of I don't know going out and doing these things um you know reasonably autonomously like it's okay if we do it five times only like one of those actually need to work right or be sufficient to our taste. But anyway yeah that's that's more or less the process. Okay so checking back in on our model"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0545",
+  "claim_text": "Five sub agents were spawned, each doing a different style: editorial, terminal, Swiss, dense operation, and warm print.",
+  "evidence": [
+   {
+    "local_id": "EV-0932",
+    "excerpt": "speaking um we don't really mind uh you know as long as the models are capable of I don't know going out and doing these things um you know reasonably autonomously like it's okay if we do it five times only like one of those actually need to work right or be sufficient to our taste. But anyway yeah that's that's more or less the process. Okay so checking back in on our model"
+   },
+   {
+    "local_id": "EV-0933",
+    "excerpt": "you can see that we've now spawned five sub agents. One is doing an editorial style design. Another is doing a terminal style design. Another is doing a Swiss style design. Another is doing a dense operation style design. And the last is doing a warm print style design. And two things that built into the brief that matter for the video that I'm recording. Every variant must find the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0546",
+  "claim_text": "The brief required that every variant must find the same seven anomalies.",
+  "evidence": [
+   {
+    "local_id": "EV-0933",
+    "excerpt": "you can see that we've now spawned five sub agents. One is doing an editorial style design. Another is doing a terminal style design. Another is doing a Swiss style design. Another is doing a dense operation style design. And the last is doing a warm print style design. And two things that built into the brief that matter for the video that I'm recording. Every variant must find the"
+   },
+   {
+    "local_id": "EV-0934",
+    "excerpt": "same seven anomalies, which is pretty interesting. I guess it's trying to like improve my ability to make this video because I'd be able to cut between each of these and show you guys what each of the data sources are. [gasps] Okay, so this is the reference scaffold right over here. This is what we were looking at before. Okay. And it's just like bare bones. It's kind of a very neat and kind"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0547",
+  "claim_text": "A monitor on the right hand side shows all current agents in progress, including the main agent and the five variant agents, with transcripts and tools visible and the ability to jump into any of them at any point in time.",
+  "evidence": [
+   {
+    "local_id": "EV-0935",
+    "excerpt": "of sleek design. It's not doing a lot of BS here, uh, which I like. But, uh, I wanted I want to kick this up a notch and I want to show us all of the same information just at much higher quality and levels of granularity. Now, what's really cool here on the right hand side, you can see we actually have a monitor that's showing all of the current agents that are in progress. Um if I move my"
+   },
+   {
+    "local_id": "EV-0936",
+    "excerpt": "head just a little bit so you guys could see this my my luscious head. Um we can see here we have one called Northbeam. Now this is actually the main agent. This is build editorial variant that's agent one. Terminal variant agent two. Swiss variant agent three. Dense ops variant agent four and warm print variant agent 5. So we actually have transcripts of all of these. We can see"
+   },
+   {
+    "local_id": "EV-0937",
+    "excerpt": "the tools that and we can actually just jump into this at any point in time to see what's going on. And you can see sort of what's happening here, right? It's actually designing like this editorial thing as like a quarterly review style, um, you know, uh, design, which is kind of neat. You can see how deep we're going with some of these designs. Um, I mean, look at"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0548",
+  "claim_text": "The 5-minute figure was not a prescription; in this case the sub agents ran to different times (854, 841, 827, 812, 756), lagging behind each other.",
+  "evidence": [
+   {
+    "local_id": "EV-0938",
+    "excerpt": "that. That is next level. We have basically the same data. It's just being shown to us and sort of portrayed a little bit differently. Dare I say, you know, a little bit better. Um, so I'm looking forward to seeing all these when they are done. I will be real with you. This doesn't occur immediately. I mean, I was saying 5 minutes there, not as a uh prescription. Like, it's not going to"
+   },
+   {
+    "local_id": "EV-0939",
+    "excerpt": "take exactly 5 minutes. In this case, it's 854, 841, 827, 812, and 756. They're all just like lagging behind each other a little bit. Um, but yeah, that's more or less where we're at. Okay. And it's now just doing some final checks. You can see down over here, we are approaching our usage limit, which means we have used a lot of cloud. Um, however, this one is basically finished."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0549",
+  "claim_text": "During the parallel run the usage limit was being approached, meaning a lot of cloud/Claude usage was consumed.",
+  "evidence": [
+   {
+    "local_id": "EV-0939",
+    "excerpt": "take exactly 5 minutes. In this case, it's 854, 841, 827, 812, and 756. They're all just like lagging behind each other a little bit. Um, but yeah, that's more or less where we're at. Okay. And it's now just doing some final checks. You can see down over here, we are approaching our usage limit, which means we have used a lot of cloud. Um, however, this one is basically finished."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0550",
+  "claim_text": "The dense ops variant presents overview on the left with channels underneath across all clients, sales metrics (team win rate, total deals won, revenue closed, average sales cycle) and signals, plus per-client pages with performance, traffic, pipeline, rep performance and search.",
+  "evidence": [
+   {
+    "local_id": "EV-0942",
+    "excerpt": "to see if I can go back to number one. But there's now V1's, V2s, V3s, V4s, and then V5s. Um they're unfortunately titled kind of annoyingly. So let me see if I can just copy and paste this. This is dense ops. Take a look at this. I like dense ops. uh looks far better in light mode. I'd say what we see here is overview on the lefth hand side channels underneath. So we can see all the"
+   },
+   {
+    "local_id": "EV-0943",
+    "excerpt": "different channels that are contributing or not contributing to uh the economics. And this is across all of our clients, not just one of them. Our sales, so our team win rate, total deals won, revenue, closed, average sales cycle, and then signals as well. These signals are the ones that I was mentioning pop up essentially anytime that you um you know have a major increase or decrease in"
+   },
+   {
+    "local_id": "EV-0944",
+    "excerpt": "something. So there's wins with conversion rate jumps, but also losses with traffic collapse. Then you have specific client pages. You can actually see their performance, their traffic, you can see the pipeline, you could see um you know rep performance on the account, see who's the best, who's the worst, and then search. Like I I hope it's clear this is like a full product"
+   }
+  ]
+ }
+]

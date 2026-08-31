@@ -1,0 +1,342 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0351",
+  "claim_text": "The speaker corrects the pipeline: remove the human-approval step (step five, self-select the winner scripts), and do not use a fixed 8-second duration — use 10 seconds if the script is a little longer and 8 seconds if it is a little shorter.",
+  "evidence": [
+   {
+    "local_id": "EV-0562",
+    "excerpt": "candidates. Show the hero frames and scripts for approval before spending video credits on confirmation. Generate three video candidates per approved script via this model using the hero frame um 16x9 8second duration not 10. And then download and deliver all video candidates. So it's not actually correct. Uh we don't want it to uh we don't actually care about this step. So"
+   },
+   {
+    "local_id": "EV-0563",
+    "excerpt": "we'll say no step five self select the winner scripts no fixed 8second duration. Sometimes if the uh script is a little longer use 10 seconds if it's a little shorter use 8 seconds. And then if I supply multiple influencers in a folder plus multiple products cross them. eg have influencer A on both product A and product B and"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0352",
+  "claim_text": "If multiple influencers in a folder plus multiple products are supplied, they should be crossed (influencer A on product A and product B; influencer B on product A and product B), generated autonomously and delivered in a folder, with no human oversight until the last step and parallelized where possible.",
+  "evidence": [
+   {
+    "local_id": "EV-0563",
+    "excerpt": "we'll say no step five self select the winner scripts no fixed 8second duration. Sometimes if the uh script is a little longer use 10 seconds if it's a little shorter use 8 seconds. And then if I supply multiple influencers in a folder plus multiple products cross them. eg have influencer A on both product A and product B and"
+   },
+   {
+    "local_id": "EV-0564",
+    "excerpt": "influencer B on both product A and product B. Then generate them autonomously and deliver to me in a folder. No human oversight until the last step and parallelize where possible. Okay. So, what I'm now going to do is I'm just going to make a folder here. And I'm just going to call this um I don't know, video add gens video add assets. Okay."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0353",
+  "claim_text": "The duration rule by word count is: fewer than 22 words uses 8 seconds, more than 22 words uses 10 seconds; script A was 28 words and worked fine at 10 seconds but felt short.",
+  "evidence": [
+   {
+    "local_id": "EV-0565",
+    "excerpt": "And then we're just going to combine both of these in here for now. And then the duration rule. What's the actual word count threshold? So, less than 22 words, 8 seconds. More than 22 words, 10 seconds. Script A was 28 words and worked fine at tech 10 seconds, but felt short. Okay. So, as part of me now testing the skill on multiple gens, um we have two products. We have the woman"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0354",
+  "claim_text": "The skill was tested by feeding a folder (video ad assets) containing two influencers and two products, and the agent looks at each image and classifies them; the speaker notes he could have created a subfolder structure to do that instead.",
+  "evidence": [
+   {
+    "local_id": "EV-0566",
+    "excerpt": "with the midnight clay, but we also have a man with uh what looks to be some rosemary scalp oil. So, the idea is we're going to cross them. Um she's going to do this and she's also going to do this and then he's going to do this and he's also going to do this. This should allow us to test what the kind of cross functionality is like and whether or not that works. So, I'm just going to"
+   },
+   {
+    "local_id": "EV-0567",
+    "excerpt": "feed this into the skill that we just generated and make sure that this is fine, that we have the skill. It's a simple product uh byproduct of just checking to see, hey, you know, can you do this on the video add assets folder and it's just going to look at each image and classify them. I could probably actually have created a subfolder structure that does this. So"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0355",
+  "claim_text": "The agent misunderstood the first time and wanted to generate nine videos per person instead of three, which was cut down to about 360 credits.",
+  "evidence": [
+   {
+    "local_id": "EV-0568",
+    "excerpt": "yeah, we'll give that a try and then have it run. It looks like it misunderstood me the first time. It wanted to generate nine videos per person instead of three, which would have been like,00 credits or something like that. So we've uh cut that down to 360. And it's actually going to be less than 360. I think it's probably going to be like 300"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0356",
+  "claim_text": "A concurrency limit was hit: only about eight jobs can run at the same time while 12 were fired at once (four pairings times three candidates), so the skill was updated so that candidates within a script submit and wait in parallel capped at three concurrent.",
+  "evidence": [
+   {
+    "local_id": "EV-0571",
+    "excerpt": "this is kind of neat. You can see we're actually implementing that logic where the shorter word ones are 8 seconds, the longer word ones are 10. So, yeah, we're we're going through and generating. It looks like there was some issues with some sort of concurrency limit. Looks like you can only have eight jobs at the same time, whereas it is firing 12 at once cuz we did four pairings times"
+   },
+   {
+    "local_id": "EV-0572",
+    "excerpt": "three candidates. So, that's okay. We're just going to kind of update the skill to reflect that. And it looks like that's what it is doing. Um, candidates within a script should submit and wait in parallel for speed capped at three concurrent. So, we're already six done. We're just going to retry the two failed man pairings one at a time to avoid the concurrency cap, which is kind of neat."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0357",
+  "claim_text": "The two failed man pairings were retried one at a time to avoid the concurrency cap.",
+  "evidence": [
+   {
+    "local_id": "EV-0572",
+    "excerpt": "three candidates. So, that's okay. We're just going to kind of update the skill to reflect that. And it looks like that's what it is doing. Um, candidates within a script should submit and wait in parallel for speed capped at three concurrent. So, we're already six done. We're just going to retry the two failed man pairings one at a time to avoid the concurrency cap, which is kind of neat."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0358",
+  "claim_text": "The speaker observes there is less training data on men, and as a result male ads tend to be worse.",
+  "evidence": [
+   {
+    "local_id": "EV-0578",
+    "excerpt": "looking like I actually slept well and startardy. I was >> don't know what the hell that was. You know what's really interesting? I think there's just less training data out there on men. Um and so as a result, the the male ads tend to always >> I was skeptical about clay >> kind of suck more. This audio is really good"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0359",
+  "claim_text": "Multiple candidates need to be generated, otherwise good shots will not be obtained.",
+  "evidence": [
+   {
+    "local_id": "EV-0579",
+    "excerpt": ">> masks, but this one's different. Midnight clay works overnight, no mess, and I wake up looking like I actually slept well. >> That's cool. Yeah, I like this one the best. So, you can see how, you know, we need to generate multiple, otherwise we're not going to get like good good uh shots. And who knows, maybe this works better. Maybe having some handsome dude,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0360",
+  "claim_text": "The speaker suggests possible improvements: adding a slight background audio track, making it noisy, adding grain to remove characteristic AI components, and automated checks for text legibility on the product, anomalies with the person, and the start frame (e.g., cutting the first three frames of every video).",
+  "evidence": [
+   {
+    "local_id": "EV-0581",
+    "excerpt": "like every morning, let's say, on something like 10 gens, and then by the end of the month, you would have significantly alleviated the bottleneck in a lot of ad uh production flows. And yeah, you know, well, you can experiment with making this better. You could have like some slight audio track in the background. You could make it a little bit noisy. You could add like grain to"
+   },
+   {
+    "local_id": "EV-0582",
+    "excerpt": "the videos to maybe remove some of the more characteristic AI components. Like I'd say his skin is just a tiny bit too smooth. It's almost like a little too real. Um yeah, you could have like automated processes that check to see, hey, you know, is the text totally legible on the midnight clay mask? Hey, anything weird going on with the person? What's the start frame here? Right? Like"
+   },
+   {
+    "local_id": "EV-0583",
+    "excerpt": "cuz it looks like for whatever reason it screws up the start frame on this one. Maybe it's like, oh, every video cut in like three frames so that we always start at a good one. Or I don't know, like if a person doesn't have anything to say, just kind of smile and like wave, right? >> [sighs and gasps] >> I'll leave it there because I think you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0361",
+  "claim_text": "To connect Higgsfield to Claude, go to MCP and CLI, copy the URL, go back to Claude, scroll down to connectors, under add choose add custom connector, add the URL and name it Higgsfield, which then connects via their OAuth flow requiring login in a popup window.",
+  "evidence": [
+   {
+    "local_id": "EV-0585",
+    "excerpt": "prompts, skills, loops, and routines. Okay. Now, in order to connect HGfield, what you have to do is go up here to MCP and CLI, copy this URL. Okay. Then go back to Claude. What we'll do is we'll scroll all the way down to connectors. Under add, we'll go add custom connector. Add this as the URL and call it Higsfield. And then you will now essentially automatically connect to"
+   },
+   {
+    "local_id": "EV-0586",
+    "excerpt": "Higsfield via their OOTH flow. That just means it's going to open up a little window, which it just did in my other screen. So I'm just going to bring that puppy over here. Then you can actually proceed with the login. And now this is just another version of what we did earlier. It's just now we actually have the ability to connect to this through um our cloud routines as well. Okay,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0362",
+  "claim_text": "To create the routine, go to routines, click new routine in the top right, choose Claude, connect the Higgsfield connector (which auto-populates), then in the prompt ask it to make this a routine.",
+  "evidence": [
+   {
+    "local_id": "EV-0587",
+    "excerpt": "great. So now that we have this uh if we go back to routines and then at the top right hand corner go new routine can then go cloud. And what's cool is we now have the ability to connect our Higsfield connector. It'll actually automatically populate um every time we do this. And so then I can go down here to our prompt and then I can just ask it hey make this a routine. Awesome. And"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0363",
+  "claim_text": "When making the routine, the agent creates a top-level Google Drive folder to store the information and uploads the raw source images, downsizing the images and base64 encoding them for upload.",
+  "evidence": [
+   {
+    "local_id": "EV-0588",
+    "excerpt": "now I just told it make me the routine. What it's doing is creating a tople Google Drive folder for me. This is where all of this information is going to be stored. Now, it's actually uploading the raw source images. Um, the ones that I was showing you guys earlier of the men and the woman and then the clay mask and then the rosemary oil. So, what it's doing is it's going to upload"
+   },
+   {
+    "local_id": "EV-0589",
+    "excerpt": "via some tool. Uh, this is I guess some base 64 representation of my file. I don't know. You can turn images into like big long strings and then you can send them over over the wire. Um, and that's what this tried to do. It didn't do it a very good job though. Uh, and now it's actually downsizing the images, sending them over, and then it's going to, you know, base 64 encode, upload"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0364",
+  "claim_text": "The resulting routine steps are: list files in the asset drive folder, determine which assets are new since the last run by checking for a dated subfolder within the AI video gens drive folder, and if there is no dated subfolder build the cross of every influencer times product (two influencers times two products equals four pairings); for each pairing generate a hero frame, write 10 ad script candidates, select the best ones, determine video duration by word count using a rule, generate three video candidates for the pairing, and insert all of it into the Google Drive link.",
+  "evidence": [
+   {
+    "local_id": "EV-0591",
+    "excerpt": "you want to be able to contact it. Um, and you can see the step-by-step file. So, list the files in the asset drive folder. Uh, for simplicity, that is this folder right here. So, you can see that like they're images that we are providing of the rosemary oil of the product and the people. So, maybe we could make it easier by subdividing that. I don't know. Determine which"
+   },
+   {
+    "local_id": "EV-0592",
+    "excerpt": "assets are new since the last run. So, it actually checks to see is there a dated uh subfolder that exists within the AI video gens in drive. So, it's not this folder, it's another folder. If there is no dated subfolder, it'll actually go through and then build the cross of every influencer times product. So two influencers, two products means four pairings. For each pairing, it'll"
+   },
+   {
+    "local_id": "EV-0593",
+    "excerpt": "generate a hero frame, write 10 adcript candidates, select the best ones, determine the video duration by word count using a rule, generate three video candidates for the pairing, then actually insert all of that into the Google Drive link. So this is how you develop a small granular application in your company using cloud code. Uh this is going to run for cents on the dollar"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0365",
+  "claim_text": "The speaker says this is how you develop a small granular application in your company using Claude Code, and that it runs for cents on the dollar every day, with Higgsfield generation credits costing more but still cheaper than a production studio finding influencers.",
+  "evidence": [
+   {
+    "local_id": "EV-0593",
+    "excerpt": "generate a hero frame, write 10 adcript candidates, select the best ones, determine the video duration by word count using a rule, generate three video candidates for the pairing, then actually insert all of that into the Google Drive link. So this is how you develop a small granular application in your company using cloud code. Uh this is going to run for cents on the dollar"
+   },
+   {
+    "local_id": "EV-0594",
+    "excerpt": "every day. The credits that we're spending on Higsfield gens are going to cost more than that obviously. Um but that's okay. Uh you know this is still way cheaper than actually having like a production studio go find influencers to do this with, right? And uh yeah you know you guys now have essentially a full endto-end pipeline allowing you guys to do this for whatever product you"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0366",
+  "claim_text": "The overall progression demonstrated is prompt to skill, skill to loop, and loop to routine, and once understood the full process does not need to be repeated every single time; instead the speaker will make it a skill and automate turning it into a routine using a little prompt template.",
+  "evidence": [
+   {
+    "local_id": "EV-0584",
+    "excerpt": "guys probably know where to go. Um, all I'm going to do now is do the same thing. Transform it from a loop uh from a skill into a loop and then from a loop into a routine. Exact same idea just with the Higsfield connector instead. And um yeah, then when we're done uh I will have successfully walked you guys through the process end to end of generating a very in-depth series of"
+   },
+   {
+    "local_id": "EV-0596",
+    "excerpt": "everything involved in the actual production process. Future ones are going to be a lot faster because now that you guys understand how to go from a prompt to a skill, a skill to a loop, and a loop to a routine, we don't actually need to do this whole process every single time. Instead, what I'll do is I'll math it out, make it a skill, and then just automate the process of"
+   },
+   {
+    "local_id": "EV-0597",
+    "excerpt": "turning it into a routine, just using a little prompt template. I'm also going to just proceed a little bit faster, and maybe explain things a little bit less, and just show you guys what the process of building it looks like. Um, just so that you know, you guys aren't sitting here forever waiting for an agent to finish. Uh, and now that you guys understand how kind of realistic the"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0367",
+  "claim_text": "Long-term campaigns and nurturing sequences suffer from the problem that usually the only real personalization data you have is a first name, and sometimes not even that.",
+  "evidence": [
+   {
+    "local_id": "EV-0601",
+    "excerpt": "long-term campaigns, nurturing sequences and whatnot. These are pretty great from a marketing perspective, of course, but they suffer from the major problem that usually the only real personalization data you have is you have like a first name. So it's like, hey, Nick, sometimes it's not even hey Nick, sometimes just like hello. um you know we're running a last second flash sale from this time to"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0368",
+  "claim_text": "The cost of the tokens used to personalize emails with AI is way lower than what you're currently missing by not doing so.",
+  "evidence": [
+   {
+    "local_id": "EV-0602",
+    "excerpt": "that time and you know you need to sign up now to get 20% off [gasps] and this works okay but what if I told you you could immediately make all of these campaigns work like 5% better right off the bat just through some very basic AI personalization obviously you'd probably do it right the cost of the tokens used to you know personalize these emails is way lower than whatever you're currently"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0369",
+  "claim_text": "With cold outreach, typically you scrape databases and places like LinkedIn Sales Navigator, getting information on people that they may or may not have actually given you.",
+  "evidence": [
+   {
+    "local_id": "EV-0604",
+    "excerpt": "just in the context of my own business. The second big thing is cold outreach. So, you know, instead of somebody signing up and entering a bunch of information into some form, right, to sign up to your newsletter. With cold outreach, typically what happens is you'll scrape databases, you'll scrape places like LinkedIn Sales Navigator and so on and so forth. And in doing so,"
+   },
+   {
+    "local_id": "EV-0605",
+    "excerpt": "you'll get a bunch of information on uh you know, people that they may or may not have actually given you and that you may have just like stolen from the internet. And so, this is a good example of that. Um here's a big list of people with email addresses that I'm not going to leak. They're on the right hand side. But I've basically gone through and I've and I've scraped, you know, about a"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0370",
+  "claim_text": "Personalized outreach that references the specific business and a problem you can solve performs better than a generic 'Hello, I would like to sell you something' message.",
+  "evidence": [
+   {
+    "local_id": "EV-0608",
+    "excerpt": "personalized outreach. You didn't just want to say, \"Hello, I would like to sell you something.\" Instead, you wanted to say like, \"Hey, Walt, I love Walt go and I've been following you guys for the better part of the last like couple of months. I uh think I could probably solve a major problem for you. Here is the problem that I can solve and here's how I would solve it. Let me know if"
+   },
+   {
+    "local_id": "EV-0609",
+    "excerpt": "there's any interest in your end. I'd be happy to do it, you know, upfront for the first 30 days, no charge.\" Which one do you think would do better? Obviously, the latter, right? So, AI affords you the ability to do that. And sorry, my camera just died. But um yeah, I'll I'll loop back around after I've spent some time charging this thing. And that's that's what I want to do here. I just"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0371",
+  "claim_text": "AI can be used to customize both outbound and inbound marketing, because both are powerful levers.",
+  "evidence": [
+   {
+    "local_id": "EV-0609",
+    "excerpt": "there's any interest in your end. I'd be happy to do it, you know, upfront for the first 30 days, no charge.\" Which one do you think would do better? Obviously, the latter, right? So, AI affords you the ability to do that. And sorry, my camera just died. But um yeah, I'll I'll loop back around after I've spent some time charging this thing. And that's that's what I want to do here. I just"
+   },
+   {
+    "local_id": "EV-0610",
+    "excerpt": "want to show you guys how to essentially use AI both to customize not only, you know, outbound, um not only inbound, but both of them as well, because they're both very powerful levers. Right? So, let's start with the very first thing we'll be doing today, which is automating newsletter customization. I'm going to be using a platform called Kit for this, which is a very"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0372",
+  "claim_text": "Kit is the email newsletter platform used in the demonstration; the speaker states he is not affiliated with them and it is one of many options.",
+  "evidence": [
+   {
+    "local_id": "EV-0610",
+    "excerpt": "want to show you guys how to essentially use AI both to customize not only, you know, outbound, um not only inbound, but both of them as well, because they're both very powerful levers. Right? So, let's start with the very first thing we'll be doing today, which is automating newsletter customization. I'm going to be using a platform called Kit for this, which is a very"
+   },
+   {
+    "local_id": "EV-0611",
+    "excerpt": "straightforward email newsletter platform that, as you guys can see, a lot of cool people use. What's going on, Ali? Um, essentially what this does is the same thing that most other email newsletter platforms do. Just allows you to, you know, add your subscribers, get a bunch of information from them. You know, first name, email address, last name, why they signed up, all this"
+   },
+   {
+    "local_id": "EV-0612",
+    "excerpt": "stuff, and then send blasts and email campaigns. So, yes, that's right. I am among Matthew McConna, Ali Abdal, and the rest of the greats. Uh, it's the platform I'm going to be using today. I'm not affiliated with them at all. Just um, you know, it's one of the many you guys could use obviously for marketing. So, yeah, I'm signed in right over here and I don't want to scroll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0373",
+  "claim_text": "Email newsletter platforms let you add subscribers, collect information from them (first name, email address, last name, why they signed up), and then send blasts and email campaigns.",
+  "evidence": [
+   {
+    "local_id": "EV-0611",
+    "excerpt": "straightforward email newsletter platform that, as you guys can see, a lot of cool people use. What's going on, Ali? Um, essentially what this does is the same thing that most other email newsletter platforms do. Just allows you to, you know, add your subscribers, get a bunch of information from them. You know, first name, email address, last name, why they signed up, all this"
+   },
+   {
+    "local_id": "EV-0612",
+    "excerpt": "stuff, and then send blasts and email campaigns. So, yes, that's right. I am among Matthew McConna, Ali Abdal, and the rest of the greats. Uh, it's the platform I'm going to be using today. I'm not affiliated with them at all. Just um, you know, it's one of the many you guys could use obviously for marketing. So, yeah, I'm signed in right over here and I don't want to scroll"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0374",
+  "claim_text": "In the speaker's business, newsletter growth is mostly done through LinkedIn and Instagram, using a ManyChat comment-to-DM flow that trades an asset for the person's email address.",
+  "evidence": [
+   {
+    "local_id": "EV-0614",
+    "excerpt": "38,100 people on the mail list. We started this, I don't know, 6 months ago or so. So, we've grown at like an okay pace. The way that we currently do our email newsletter growth for the most part is through LinkedIn and through Instagram. On Instagram, I'll publish videos that are uh basically like lists of tools that you could use. So, like, hey, here's a free AI tool that attacks"
+   },
+   {
+    "local_id": "EV-0615",
+    "excerpt": "your vibecoded app and does all this cool crazy stuff. And then up here I have a typical many chat flow where I say comment code to get this free and open source to secure your vibecoded app. You then scroll down, you can see a bunch of people are commenting things. Uh I think we might have changed the name in this particular case because we're not getting open codes. We're"
+   },
+   {
+    "local_id": "EV-0616",
+    "excerpt": "getting um I don't know like hands or something like that. [gasps] Uh yeah, so this you know agent and then what we'll do is we'll actually comment just message you to the person immediately after. And then um we then start a DM flow with them where we will give them the asset usually in exchange for like their email address or something to my mailing list. Okay, so that's that's"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0375",
+  "claim_text": "The moment someone signs up, an email blast such as a 'Maker School welcome' is sent to them.",
+  "evidence": [
+   {
+    "local_id": "EV-0617",
+    "excerpt": "kind of the context. And then um we also have a bunch of other things that occur. Uh you know the second that they sign up, what we'll typically do is we'll send them an email blast. And the email blast is like a Maker School welcome for instance, which you know Maker School is my product. So uh we'll do like a Maker School welcome. A Maker School welcome just looks like this. Um, hi. Welcome to"
+   },
+   {
+    "local_id": "EV-0618",
+    "excerpt": "Maker School. This won't be one of those bloated stuffy onboarding emails. Just the essentials. First, thanks for joining. Make sure to read through our onboarding guide. You'll see them in Maker School every day. Just the classics, right? Sort of like the post purchase email that you would see in any major big business. Okay, great. And I I show all you guys this because I find it"
+   }
+  ]
+ }
+]

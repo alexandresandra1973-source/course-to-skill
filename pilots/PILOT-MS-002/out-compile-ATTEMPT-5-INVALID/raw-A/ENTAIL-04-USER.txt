@@ -1,0 +1,322 @@
+source_id: MS002-SRC-A
+ITENS:
+[
+ {
+  "claim_id": "CL-0076",
+  "claim_text": "The model selector offers Fable 5 (which requires usage credits right now), Opus 5, Sonnet 5, Haiku 4.5 and a variety of older last generation models; the speaker uses Sonnet 5 because it is pretty smart and does most of what they want.",
+  "evidence": [
+   {
+    "local_id": "EV-0119",
+    "excerpt": "I'll show you guys some as we build. Anyway, you can change your microphones and stuff like that right over here if you want. Then we have the actual model. So, there's Fable 5, which requires usage credits right now. There's Opus 5, which is not Sonnet 5, Haiku 4.5. Variety of different ones here, too, that are kind of old last generation ones. Uh, I'm just going to use Sonnet 5"
+   },
+   {
+    "local_id": "EV-0120",
+    "excerpt": "right now because it is pretty smart. Does most of what I want it to do, and I'm not super worried about, I don't know, solving the mathematical formulas of the galaxy. Finally, we have the effort tab, which is basically a slider that allows you to um define how hard you want Claude to work on one of your tasks. This allows you to basically say like,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0077",
+  "claim_text": "The effort tab is a slider that allows you to define how hard you want Claude to work on one of your tasks.",
+  "evidence": [
+   {
+    "local_id": "EV-0120",
+    "excerpt": "right now because it is pretty smart. Does most of what I want it to do, and I'm not super worried about, I don't know, solving the mathematical formulas of the galaxy. Finally, we have the effort tab, which is basically a slider that allows you to um define how hard you want Claude to work on one of your tasks. This allows you to basically say like,"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0078",
+  "claim_text": "Higher effort settings make Claude consume a lot more tokens, but the probability of a high quality answer goes up way more.",
+  "evidence": [
+   {
+    "local_id": "EV-0121",
+    "excerpt": "\"Hey, like is this work that I'm doing today super important? If not, I don't want you to think too hard. I just kind of want you to go with your best guess. Whereas, you know, if you go all the way to the right, it's like, hey, I don't want you to try guessing at anything. I actually want you to triple, quadruple, sex tuple check everything that you tell me.\" And in doing so, um, cloud will"
+   },
+   {
+    "local_id": "EV-0122",
+    "excerpt": "consume a lot more tokens, but the probability of a high quality answer goes up way more. It's also note also worth noting that the speed changes quite a bit here. Um, when something is at effort low, it usually works much much faster than when something is at effort smarter. So, keep that in mind. If you're going ultra code, it'll take, I don't know, like way way longer than"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0079",
+  "claim_text": "Speed changes with effort level: at effort low it usually works much much faster than at effort smarter; effort low might take like 2 seconds while effort ultra code might take like 5 minutes.",
+  "evidence": [
+   {
+    "local_id": "EV-0122",
+    "excerpt": "consume a lot more tokens, but the probability of a high quality answer goes up way more. It's also note also worth noting that the speed changes quite a bit here. Um, when something is at effort low, it usually works much much faster than when something is at effort smarter. So, keep that in mind. If you're going ultra code, it'll take, I don't know, like way way longer than"
+   },
+   {
+    "local_id": "EV-0123",
+    "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0080",
+  "claim_text": "It is worth usually operating somewhere in the middle of the effort range; the speaker likes defaulting to medium or high for the most part.",
+  "evidence": [
+   {
+    "local_id": "EV-0123",
+    "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0081",
+  "claim_text": "Sonnet high tends to work pretty quick while also delivering pretty good results.",
+  "evidence": [
+   {
+    "local_id": "EV-0123",
+    "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0082",
+  "claim_text": "The context window indicator in the bottom right hand corner shows the total number of things that are consuming your tokens, including messages, system tools, system prompts, MCP tools, skills and memory files.",
+  "evidence": [
+   {
+    "local_id": "EV-0123",
+    "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand"
+   },
+   {
+    "local_id": "EV-0124",
+    "excerpt": "corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools,"
+   },
+   {
+    "local_id": "EV-0125",
+    "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0083",
+  "claim_text": "Claude can only hold a certain amount of information in its head, and that information is currently bounded by tokens; a token is very similar to a word.",
+  "evidence": [
+   {
+    "local_id": "EV-0125",
+    "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0084",
+  "claim_text": "Sonnet 5, the model the speaker is using, can host 967,000 tokens; the session had consumed 112,000, which is 12% of the entirety of Sonnet 5's context window.",
+  "evidence": [
+   {
+    "local_id": "EV-0126",
+    "excerpt": "different. Uh right now, you know, sonnet 5, which is the model that I'm using, can host 967,000 of those tokens. We've consumed 112,000, which puts us as 12% of the way to the entirety of Sonnet 5's context window. When you hit the context window, usually what'll happen is Claude will compact your context, meaning it will just like try rewriting it so that it's way shorter and then"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0085",
+  "claim_text": "When you hit the context window, usually Claude will compact your context, rewriting it so that it is way shorter and sticking that information at the very top, which lets you continue the conversation with the BS words taken out and usually get billed less.",
+  "evidence": [
+   {
+    "local_id": "EV-0126",
+    "excerpt": "different. Uh right now, you know, sonnet 5, which is the model that I'm using, can host 967,000 of those tokens. We've consumed 112,000, which puts us as 12% of the way to the entirety of Sonnet 5's context window. When you hit the context window, usually what'll happen is Claude will compact your context, meaning it will just like try rewriting it so that it's way shorter and then"
+   },
+   {
+    "local_id": "EV-0127",
+    "excerpt": "stick all that information up at the very top. The reason why that's valuable is now you can continue the conversation, but a lot of the BS words are sort of taken out of your context and you'll usually get build less for it, too. And that does take me to the sort of billing and usage aspect. The longer your context window is while you talk with Claude, the faster you will"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0086",
+  "claim_text": "The longer your context window is while you talk with Claude, the faster you will burn through your usage limit.",
+  "evidence": [
+   {
+    "local_id": "EV-0127",
+    "excerpt": "stick all that information up at the very top. The reason why that's valuable is now you can continue the conversation, but a lot of the BS words are sort of taken out of your context and you'll usually get build less for it, too. And that does take me to the sort of billing and usage aspect. The longer your context window is while you talk with Claude, the faster you will"
+   },
+   {
+    "local_id": "EV-0128",
+    "excerpt": "burn through your usage limit. So, my recommendation is try not to keep a thread running all the 967,000 tokens uh that are available. I'd like working somewhere between 0 to maybe 500k or so. I find that's also my performance sweet spot. If you add more information than that, cloud starts to perform a little poorer. That's just because it gets confused. It doesn't"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0087",
+  "claim_text": "The speaker's recommendation is to try not to keep a thread running all the 967,000 available tokens, and instead work somewhere between 0 and maybe 500k, which he finds is his performance sweet spot.",
+  "evidence": [
+   {
+    "local_id": "EV-0128",
+    "excerpt": "burn through your usage limit. So, my recommendation is try not to keep a thread running all the 967,000 tokens uh that are available. I'd like working somewhere between 0 to maybe 500k or so. I find that's also my performance sweet spot. If you add more information than that, cloud starts to perform a little poorer. That's just because it gets confused. It doesn't"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0088",
+  "claim_text": "If you add more information than roughly 500k tokens, Claude starts to perform a little poorer because it gets confused and has many instructions to juggle in its memory.",
+  "evidence": [
+   {
+    "local_id": "EV-0128",
+    "excerpt": "burn through your usage limit. So, my recommendation is try not to keep a thread running all the 967,000 tokens uh that are available. I'd like working somewhere between 0 to maybe 500k or so. I find that's also my performance sweet spot. If you add more information than that, cloud starts to perform a little poorer. That's just because it gets confused. It doesn't"
+   },
+   {
+    "local_id": "EV-0129",
+    "excerpt": "fully know what it is it's doing. You've given it a lot of instructions at that point that it needs to juggle around in its memory and obviously that can be pretty tough. Okay, so that context window can be consumed of messages. As mentioned, system tools are just different things that it internally has access to. System prompt is uh basically a little snippet of text that you can"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0089",
+  "claim_text": "System prompt is a little snippet of text that you can define that will be prepended at the beginning of every conversation.",
+  "evidence": [
+   {
+    "local_id": "EV-0129",
+    "excerpt": "fully know what it is it's doing. You've given it a lot of instructions at that point that it needs to juggle around in its memory and obviously that can be pretty tough. Okay, so that context window can be consumed of messages. As mentioned, system tools are just different things that it internally has access to. System prompt is uh basically a little snippet of text that you can"
+   },
+   {
+    "local_id": "EV-0130",
+    "excerpt": "define that will be prepunded at the beginning of every conversation. MCP tools is another sort of thing like a skill. It's just skills that other people host for you. So what you can do is you can load basically external skills via MCP tools that other people have created very easily. And then memory files are the things that I showed you guys earlier that basically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0090",
+  "claim_text": "MCP tools are skills that other people host for you, and you can load external skills via MCP tools that other people have created very easily.",
+  "evidence": [
+   {
+    "local_id": "EV-0130",
+    "excerpt": "define that will be prepunded at the beginning of every conversation. MCP tools is another sort of thing like a skill. It's just skills that other people host for you. So what you can do is you can load basically external skills via MCP tools that other people have created very easily. And then memory files are the things that I showed you guys earlier that basically"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0091",
+  "claim_text": "Memory files are files that define persistent facts about the user, such as the speaker's height of 6'2.",
+  "evidence": [
+   {
+    "local_id": "EV-0130",
+    "excerpt": "define that will be prepunded at the beginning of every conversation. MCP tools is another sort of thing like a skill. It's just skills that other people host for you. So what you can do is you can load basically external skills via MCP tools that other people have created very easily. And then memory files are the things that I showed you guys earlier that basically"
+   },
+   {
+    "local_id": "EV-0131",
+    "excerpt": "define I don't know like in my my case my height earlier 6'2 and stuff, right? The rest of the stuff not super valuable. Obviously that's free space. We're just going to skip out of that and you have your plan usage limits. Okay, so I told you this would be comprehensive, didn't I? Yeah, we've covered uh probably 90% of the entire interface. There's just one more thing."
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0092",
+  "claim_text": "At the top right hand corner you have the ability to spawn a terminal, and sometimes Claude actually needs to use this terminal in order to do things.",
+  "evidence": [
+   {
+    "local_id": "EV-0132",
+    "excerpt": "At the top right hand corner, you have the ability to spawn a terminal. You're probably not going to do this, but for those of you guys that don't know, a terminal is just um kind of the way that we used to interact with computers back in the day. We had a variety of different commands that you could, you know, access cdls, print working directory and stuff like that. You could"
+   },
+   {
+    "local_id": "EV-0133",
+    "excerpt": "see all the files that are in this directory and so on. Um, but anyway, sometimes cloud actually needs to use this terminal in order to do things. We also have the ability to check your diff, which is just the changes to the code that you have made. If you're developing an application, that can be quite valuable. You also then have a browser. So we now have a browser built"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0093",
+  "claim_text": "You have the ability to check your diff, which is the changes to the code that you have made, and that can be quite valuable if you are developing an application.",
+  "evidence": [
+   {
+    "local_id": "EV-0133",
+    "excerpt": "see all the files that are in this directory and so on. Um, but anyway, sometimes cloud actually needs to use this terminal in order to do things. We also have the ability to check your diff, which is just the changes to the code that you have made. If you're developing an application, that can be quite valuable. You also then have a browser. So we now have a browser built"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0094",
+  "claim_text": "There is a browser built into Claude that can access web pages for you, which is valuable because you can use it to automate browser activities.",
+  "evidence": [
+   {
+    "local_id": "EV-0133",
+    "excerpt": "see all the files that are in this directory and so on. Um, but anyway, sometimes cloud actually needs to use this terminal in order to do things. We also have the ability to check your diff, which is just the changes to the code that you have made. If you're developing an application, that can be quite valuable. You also then have a browser. So we now have a browser built"
+   },
+   {
+    "local_id": "EV-0134",
+    "excerpt": "into cloud that can do things like access web pages for you. That's pretty valuable as I'm sure you can imagine because you can use that to automate browser activities. And then finally at the top right hand corner you also have a couple of things that are pretty cool. One is an iOS simulator. So you can actually set up like apps in cloud code. Now um these are iPhone apps and they're"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0095",
+  "claim_text": "There is an iOS simulator so you can set up iPhone apps in Claude Code; you do it by downloading Xcode from the Mac app store.",
+  "evidence": [
+   {
+    "local_id": "EV-0134",
+    "excerpt": "into cloud that can do things like access web pages for you. That's pretty valuable as I'm sure you can imagine because you can use that to automate browser activities. And then finally at the top right hand corner you also have a couple of things that are pretty cool. One is an iOS simulator. So you can actually set up like apps in cloud code. Now um these are iPhone apps and they're"
+   },
+   {
+    "local_id": "EV-0135",
+    "excerpt": "fairly cool. Um you can like download you know Xcode which is how you do it. Open up the Mac app store and so on and so forth. I won't do that just for uh my own sanity. I don't like looking at the app store any more than I have to. Uh but anyway, you can you can create like iPhone apps now, which is pretty badass. Uh and then you can also open in whatever you want. You can open in a new"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0096",
+  "claim_text": "You can open in a new window, VS Code or Finder, and you can rename your transcript from the top right hand corner by clicking rename.",
+  "evidence": [
+   {
+    "local_id": "EV-0135",
+    "excerpt": "fairly cool. Um you can like download you know Xcode which is how you do it. Open up the Mac app store and so on and so forth. I won't do that just for uh my own sanity. I don't like looking at the app store any more than I have to. Uh but anyway, you can you can create like iPhone apps now, which is pretty badass. Uh and then you can also open in whatever you want. You can open in a new"
+   },
+   {
+    "local_id": "EV-0136",
+    "excerpt": "window, VS Code Finder. You can rename your transcript. You see this Nyx Drive web page right over here. Well, if I go to the top rightand corner and I click rename, I'll say Nyx demo. You can see we've actually fundamentally and foundationally changed that. Uh you can also see the transcripts. you can actually like see all of the thinking that Claude has done if you just expand"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0097",
+  "claim_text": "You can see all of the thinking that Claude has done by expanding the transcript view, and you can get a summary that summarizes the whole conversation as well as a full transcript at any time.",
+  "evidence": [
+   {
+    "local_id": "EV-0136",
+    "excerpt": "window, VS Code Finder. You can rename your transcript. You see this Nyx Drive web page right over here. Well, if I go to the top rightand corner and I click rename, I'll say Nyx demo. You can see we've actually fundamentally and foundationally changed that. Uh you can also see the transcripts. you can actually like see all of the thinking that Claude has done if you just expand"
+   },
+   {
+    "local_id": "EV-0137",
+    "excerpt": "this transcript view. So, in my case, I'm just going to do summary. And what it'll do is it'll just summarize everything that we have done, our whole conversation back and forth. I'm now going to get a summary, which is pretty cool. Uh, as well as a full transcript of the conversation at any time. So, transcripts over here, summaries over here. This is going to take a fair"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0098",
+  "claim_text": "You can fork a conversation, which starts another conversation at the same place; you can archive a conversation if you do not want to look at it anymore; and you can delete a conversation.",
+  "evidence": [
+   {
+    "local_id": "EV-0139",
+    "excerpt": "up happening in the session. Well, the next drive artifact is now done and sharable, right? Then you can fork a conversation where you just start another conversation at the same place. So that's me forking the conversation right now. And then you can also archive a conversation if you don't want to look at it anymore. So that's what I just did to that Nyx demo fork. And then uh you"
+   },
+   {
+    "local_id": "EV-0140",
+    "excerpt": "can also delete a conversation if you want to. That's what I just did to Nick's demo. Okay, we are now done. Virtually every button in this godforsaken interface. Just kidding. Uh there's a lot and that's because the Anthropic team has added a tremendous amount of value to their app in just uh I don't know maybe 3 or 4 months. So the app was not always"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0099",
+  "claim_text": "The app will probably look a little bit different from what viewers see because the Anthropic team is consistently and constantly updating it.",
+  "evidence": [
+   {
+    "local_id": "EV-0140",
+    "excerpt": "can also delete a conversation if you want to. That's what I just did to Nick's demo. Okay, we are now done. Virtually every button in this godforsaken interface. Just kidding. Uh there's a lot and that's because the Anthropic team has added a tremendous amount of value to their app in just uh I don't know maybe 3 or 4 months. So the app was not always"
+   },
+   {
+    "local_id": "EV-0141",
+    "excerpt": "like this. The app is very high quality now. The app will probably look a little bit different from what you guys see just because they are consistently and constantly updating it. But now that you guys know how to use the app, you have no excuses. we know every little literal button on this entire interface. Um it'll be very very easy for you to navigate and do virtually everything"
+   }
+  ]
+ },
+ {
+  "claim_id": "CL-0100",
+  "claim_text": "CLI stands for command line interface, which is just a different way of communicating with Claude Code, and setting it up is presented as an optional task.",
+  "evidence": [
+   {
+    "local_id": "EV-0142",
+    "excerpt": "that you need in order to make something cool happen. Which takes us to learning the interface right here which is now check. We have an optional task here called set up the CLI. CLI in case you didn't know stands for command line interface which is just a different way of communicating with cloud code. As"
+   }
+  ]
+ }
+]
