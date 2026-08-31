@@ -1,0 +1,2328 @@
+batch_id: BATCH-2
+expected_pair_count: 25
+expected_pair_ids:
+[
+ "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+ "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+ "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+ "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+ "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+ "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+ "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+ "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+ "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+ "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+ "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+ "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+ "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+ "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+ "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+ "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+ "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+ "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+ "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+ "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+ "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+ "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+ "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+ "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+ "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UM resultado para CADA pair_id recebido, sem omitir e sem duplicar.
+ANTES de finalizar a resposta, verifique que o numero de objetos em "judgments" e igual a
+expected_pair_count e que o conjunto de pair_id emitidos e IGUAL a expected_pair_ids.
+Se voce nao conseguir classificar um par, emita INDETERMINATE para ele — mas NUNCA o omita.
+
+PARES:
+[
+ {
+  "pair_id": "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "quem participa de vários grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0093",
+     "excerpt": "Você e outras pessoas vai sempre aumentando aí essa quantidade de pessoas. Então, beleza, isso aqui é uma função muito interessante, porque eu tô",
+     "anchor": {
+      "local_id": "AN-0093",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0094",
+     "excerpt": "falando aqui de um grupo, mas imagina que você tenha aí um 20 grupos, por exemplo, um lançamento que você faz, onde é que tu tem eh vários grupos de",
+     "anchor": {
+      "local_id": "AN-0094",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0095",
+     "excerpt": "clientes e você quer puxar esses dados, então já é uma coisa interessante a se fazer, tá? Até mesmo se você quiser buscar tem vários grupos ali presentes,",
+     "anchor": {
+      "local_id": "AN-0095",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0096",
+     "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você",
+     "anchor": {
+      "local_id": "AN-0096",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0098",
+     "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em",
+     "anchor": {
+      "local_id": "AN-0098",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0099",
+     "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função",
+     "anchor": {
+      "local_id": "AN-0099",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "text": "No nó de enviar texto, o nome da instância vem do node de dados e o número vem do número de quem mandou a mensagem.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de envio de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0070",
+     "excerpt": "adicionar mais um agora da Evolution de novo e dessa vez vai ser para enviar a resposta então vai ser aqui o recurso mensagem enviar texto na operação e o",
+     "anchor": {
+      "local_id": "AN-0070",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0071",
+     "excerpt": "nome da instância a mesma coisa pega lá do node dados um número pega aqui o quem mandou o número da pessoa que mandou e a mensagem é aqui que muita gente estava",
+     "anchor": {
+      "local_id": "AN-0071",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "text": "O token do Evolution deve ser copiado e salvo em algum local, porque será necessário depois.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0031",
+     "excerpt": "tá? Da HostGator, com aparecendo aqui dados de acesso ao seu VPS. Pode clicar aqui, já vai direto pro portal e tem aqui o token do seu Evolution, tá? Cara,",
+     "anchor": {
+      "local_id": "AN-0031",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0032",
+     "excerpt": "copia isso aqui, ó, e salva em algum local, beleza? Você vai precisar dele. Vocês vão entender. Aí você vem aqui, ó, em VPS e dedicados, né? Que já entrou",
+     "anchor": {
+      "local_id": "AN-0032",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "text": "The context window indicator in the bottom right hand corner shows the total number of things that are consuming your tokens, including messages, system tools, system prompts, MCP tools, skills and memory files.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude Code desktop app",
+    "scope": "interface element",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0123",
+     "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand",
+     "anchor": {
+      "local_id": "AN-0123",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0124",
+     "excerpt": "corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools,",
+     "anchor": {
+      "local_id": "AN-0124",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0125",
+     "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit",
+     "anchor": {
+      "local_id": "AN-0125",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "integração via API vs. webhooks",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0118",
+     "excerpt": "pode ser tema também de um outro vídeo meu, né? Senão vou fazer aqui senão vai ficar muito longo. Que já é a parte é passiva, né? Aqui, já falando, ele",
+     "anchor": {
+      "local_id": "AN-0118",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0119",
+     "excerpt": "está chamando via API. Então, eu dou um comando aqui no no Cloud Code e aí ele usa a API para fazer alguma ação. Mas a gente pode estar criando scripts que que",
+     "anchor": {
+      "local_id": "AN-0119",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0120",
+     "excerpt": "online 24 horas por dia e que recebem webhooks, ou seja, ah, o cara entrou num grupo, aí tu vai lá e manda uma mensagem no privado da pessoa dando boas-vindas,",
+     "anchor": {
+      "local_id": "AN-0120",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0121",
+     "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que",
+     "anchor": {
+      "local_id": "AN-0121",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0492"
+   },
+   "text": "The speed to lead system runs as a cloud routine fired via a remote API trigger.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude cloud routines",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0857",
+     "excerpt": "Gmail. Looks like it does have Gmail. And uh, yeah, I mean now we have our little speed delete system set up as a cloud routine and it runs um, via some remote trigger um, sort of API as opposed to something different. So that's that. I mean like we just built a speed delete system. You can obviously take this further if you want to by doing things like automatic call",
+     "anchor": {
+      "local_id": "AN-0857",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "integração via API vs. webhooks",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0118",
+     "excerpt": "pode ser tema também de um outro vídeo meu, né? Senão vou fazer aqui senão vai ficar muito longo. Que já é a parte é passiva, né? Aqui, já falando, ele",
+     "anchor": {
+      "local_id": "AN-0118",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0119",
+     "excerpt": "está chamando via API. Então, eu dou um comando aqui no no Cloud Code e aí ele usa a API para fazer alguma ação. Mas a gente pode estar criando scripts que que",
+     "anchor": {
+      "local_id": "AN-0119",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0120",
+     "excerpt": "online 24 horas por dia e que recebem webhooks, ou seja, ah, o cara entrou num grupo, aí tu vai lá e manda uma mensagem no privado da pessoa dando boas-vindas,",
+     "anchor": {
+      "local_id": "AN-0120",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0121",
+     "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que",
+     "anchor": {
+      "local_id": "AN-0121",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "text": "Com a instância desconectada, vai-se em configurações e gerar QR Code para escanear pelo celular como se fosse um WhatsApp Web.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "quando a instância aparece como desconectada",
+    "platform": "Evolution API manager",
+    "scope": null,
+    "stage": "passo 2"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0041",
+     "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,",
+     "anchor": {
+      "local_id": "AN-0041",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0042",
+     "excerpt": "vocês vão vir aqui em configurações e gerar QR Code. Vai aparecer o QR Code aqui para que vocês possam tá escaneando pelo seu celular como se fosse um",
+     "anchor": {
+      "local_id": "AN-0042",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0043",
+     "excerpt": "WhatsApp Web. Ó, se for iPhone, você vem aqui em configurações, aí vem aqui em dispositivos conectados,",
+     "anchor": {
+      "local_id": "AN-0043",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "text": "Na Evolution, clique na sua sessão, vá em events webhook, cole a URL, e as três opções enabled, base 64 e o evento messages upsert têm que estar ativas; depois clique em salvar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": "configuração do webhook"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0021",
+     "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento",
+     "anchor": {
+      "local_id": "AN-0021",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0022",
+     "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode",
+     "anchor": {
+      "local_id": "AN-0022",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "text": "Para criar a instância, clica-se em instância, coloca-se um nome e salva; ela aparece como desconectada.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API manager",
+    "scope": null,
+    "stage": "passo 2"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0040",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0040",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0041",
+     "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,",
+     "anchor": {
+      "local_id": "AN-0041",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "text": "Com o método ensinado é possível criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / WhatsApp",
+    "scope": "gerenciamento de grupos de WhatsApp com Cloud Code",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0001",
+     "excerpt": "Nesse vídeo, eu vou mostrar para vocês como vocês podem estar gerenciando seus vários grupos de WhatsApp utilizando o Cloud Code. Seja criar vários grupos em",
+     "anchor": {
+      "local_id": "AN-0001",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0002",
+     "excerpt": "massa, é mudar foto de perfil, botar mudando a descrição desse grupo, adicionando pessoas, enviando uma mensagem para os grupos, dando",
+     "anchor": {
+      "local_id": "AN-0002",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0003",
+     "excerpt": "relatórios de membros desse grupo também. Então, tudo isso você consegue estar fazendo com esse método que eu vou te ensinar nesse vídeo. Então, fica até",
+     "anchor": {
+      "local_id": "AN-0003",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "text": "No nó de ler mensagem, o nome da instância é o nome dado na Evolution ao criar a instância, o contato é o número de quem mandou e o ID da mensagem é o ID já colocado no set.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de leitura de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0067",
+     "excerpt": "aqui no recurso eu vou colocar chat a operação vai ser ler mensag vou clicar aqui para trazer os dados anteriores e vamos lá o nome da",
+     "anchor": {
+      "local_id": "AN-0067",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0068",
+     "excerpt": "instância vai ser a Instância que é o nome que a gente dá lá na Evolution quando cria ela o contato vai ser o número de quem mandou e o ID da mensagem",
+     "anchor": {
+      "local_id": "AN-0068",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0069",
+     "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos",
+     "anchor": {
+      "local_id": "AN-0069",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0033"
+   },
+   "text": "O nome da instância do Evolution é próprio de cada usuário: no exemplo é 'YouTube teste', e a de outras pessoas será diferente.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": "configuração de credenciais"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0070",
+     "excerpt": "Ctrl S. Tudo de bola. E agora, a instância do Evolution. A instância está aqui, ó, YouTube teste, que é a minha que eu coloquei. A de vocês vai estar",
+     "anchor": {
+      "local_id": "AN-0070",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0071",
+     "excerpt": "diferente. Aí, você vem aqui, ó, Ctrl V, Ctrl S e pronto. Já colocou as credenciais. E agora, vamos fazer um teste, só para ver se está funcionando.",
+     "anchor": {
+      "local_id": "AN-0071",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0290"
+   },
+   "text": "Claude Code is really good at driving this platform because it has a simple API endpoint structure called a model context protocol (MCP) server.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude Code + MCP server of the chosen platform",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0483",
+     "excerpt": "Claude Code is really really good at driving this puppy um because they have like a really simple and easy sort of API endpoint structure called a model context protocol server. So if you guys don't end up using this, then just know that you'll probably have to do a little bit more work there if you want it to work like very similarly to what I'm showing you guys. But that's okay,",
+     "anchor": {
+      "local_id": "AN-0483",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "quem participa de vários grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0093",
+     "excerpt": "Você e outras pessoas vai sempre aumentando aí essa quantidade de pessoas. Então, beleza, isso aqui é uma função muito interessante, porque eu tô",
+     "anchor": {
+      "local_id": "AN-0093",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0094",
+     "excerpt": "falando aqui de um grupo, mas imagina que você tenha aí um 20 grupos, por exemplo, um lançamento que você faz, onde é que tu tem eh vários grupos de",
+     "anchor": {
+      "local_id": "AN-0094",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0095",
+     "excerpt": "clientes e você quer puxar esses dados, então já é uma coisa interessante a se fazer, tá? Até mesmo se você quiser buscar tem vários grupos ali presentes,",
+     "anchor": {
+      "local_id": "AN-0095",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0096",
+     "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você",
+     "anchor": {
+      "local_id": "AN-0096",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0098",
+     "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em",
+     "anchor": {
+      "local_id": "AN-0098",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0099",
+     "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função",
+     "anchor": {
+      "local_id": "AN-0099",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "text": "Após o pagamento, chega um e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "depois de realizar o pagamento",
+    "platform": "HostGator",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "clica em realizar pagamento. E aí, depois que realizar o pagamento, você vai acessar lá o painel. Você recebe um e-mail dessa forma aqui,",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0031",
+     "excerpt": "tá? Da HostGator, com aparecendo aqui dados de acesso ao seu VPS. Pode clicar aqui, já vai direto pro portal e tem aqui o token do seu Evolution, tá? Cara,",
+     "anchor": {
+      "local_id": "AN-0031",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "text": "Para instalar localmente: baixar a pasta deixada, abrir ela, abrir um terminal nela e digitar ./start.ps1 (para quem está no Windows), responder as perguntas do script (senha do postgres, senha do Redis, e-mail de admin do PG Admin) e esperar ele baixar e subir os containers; ao final você tem uma Evolution com n8n instalado localmente.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": "quem não tem VPS",
+    "condition": "comando pon barst pps1 indicado para quem está no Windows",
+    "platform": "Docker / Windows",
+    "scope": "instalação local via docker compose",
+    "stage": "instalação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0089",
+     "excerpt": "baixar essa pasta que o deixei abri ela abrir um terminal nela e digitar pon barst pps1 para quem tá no Windows aí você dá as respostas que o script vai",
+     "anchor": {
+      "local_id": "AN-0089",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0090",
+     "excerpt": "pedir por exemplo a sua senha do postgress sua senha do Heads o seu e-mail de admin do PG admin espera ele baixar e subir os containers e pronto",
+     "anchor": {
+      "local_id": "AN-0090",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0091",
+     "excerpt": "você tem uma Evolution com n8n instalado aí localmente quando eu fiz o script eu esqueci de configurar uma senha para Evolution mas a senha padrão vai est aí",
+     "anchor": {
+      "local_id": "AN-0091",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "No primeiro acesso ao manager, deve-se colar a chave de API global que está no e-mail (Gmail) e clicar em conectar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "no primeiro acesso",
+    "platform": "Evolution API manager",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0038",
+     "excerpt": "áudio, tive que regravar. Então, no caso de vocês vai aparecer assim, ó, dessa forma. Seu primeiro acesso. E aqui tu vai colocar aquela chave de API global",
+     "anchor": {
+      "local_id": "AN-0038",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0039",
+     "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu",
+     "anchor": {
+      "local_id": "AN-0039",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "text": "Após o pagamento, chega um e-mail da HostGator com os dados de acesso ao VPS e o token do Evolution.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "depois de realizar o pagamento",
+    "platform": "HostGator",
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "clica em realizar pagamento. E aí, depois que realizar o pagamento, você vai acessar lá o painel. Você recebe um e-mail dessa forma aqui,",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0031",
+     "excerpt": "tá? Da HostGator, com aparecendo aqui dados de acesso ao seu VPS. Pode clicar aqui, já vai direto pro portal e tem aqui o token do seu Evolution, tá? Cara,",
+     "anchor": {
+      "local_id": "AN-0031",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "text": "Com o Cloud Code tendo acesso ao WhatsApp, é possível acessar grupos, verificar membros, editar o grupo, enviar mensagens e fazer relatórios.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / WhatsApp",
+    "scope": "gerenciamento de grupos de WhatsApp",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0013",
+     "excerpt": "ideia aqui é ser ser simplificado. E a partir disso, seu Cloud Code vai ter acesso ao WhatsApp, tá? Então, ele vai conseguir acessar grupos, enviar",
+     "anchor": {
+      "local_id": "AN-0013",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0014",
+     "excerpt": "mensagens, coisas do tipo, né? Aí aqui tá o final, que seria realmente acessar os grupos, verificar membros, é editar o grupo, enviar mensagens, fazer",
+     "anchor": {
+      "local_id": "AN-0014",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0046"
+   },
+   "text": "Ao clicar para testar o nó de ler mensagem, ele visualiza a mensagem no WhatsApp.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de leitura de mensagem",
+    "stage": "teste"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0069",
+     "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos",
+     "anchor": {
+      "local_id": "AN-0069",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "text": "The context window indicator in the bottom right hand corner shows the total number of things that are consuming your tokens, including messages, system tools, system prompts, MCP tools, skills and memory files.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude Code desktop app",
+    "scope": "interface element",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0123",
+     "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand",
+     "anchor": {
+      "local_id": "AN-0123",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0124",
+     "excerpt": "corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools,",
+     "anchor": {
+      "local_id": "AN-0124",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0125",
+     "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit",
+     "anchor": {
+      "local_id": "AN-0125",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "text": "Com o contexto no cloud.md, tudo que for perguntado relacionado a grupo faz o Cloud saber que deve usar o Evolution, e ele consulta a documentação para ver como usar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "perguntas relacionadas a grupo",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0080",
+     "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como",
+     "anchor": {
+      "local_id": "AN-0080",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0037"
+   },
+   "text": "Não é preciso explicar ao Cloud que ele deve usar o Evolution porque esse contexto inicial já foi colocado no cloud.md; por isso é bom ter um cloud.md.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "desde que o contexto esteja no cloud.md",
+    "platform": "Cloud Code",
+    "scope": "perguntas relacionadas a grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0078",
+     "excerpt": "eu faço parte e também me lista ali os grupos que eu sou admin. E bora aguardar aqui o resultado. Então, olha só, nem preciso explicar para ele que eu quero",
+     "anchor": {
+      "local_id": "AN-0078",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0079",
+     "excerpt": "que ele use o Evolution, que não sei o quê. Não, porque eu já coloquei no cloud.md essa parte, esse contexto inicial, tá? Por isso que é legal ter um",
+     "anchor": {
+      "local_id": "AN-0079",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0080",
+     "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como",
+     "anchor": {
+      "local_id": "AN-0080",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "text": "No nó de enviar texto, o nome da instância vem do node de dados e o número vem do número de quem mandou a mensagem.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de envio de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0070",
+     "excerpt": "adicionar mais um agora da Evolution de novo e dessa vez vai ser para enviar a resposta então vai ser aqui o recurso mensagem enviar texto na operação e o",
+     "anchor": {
+      "local_id": "AN-0070",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0071",
+     "excerpt": "nome da instância a mesma coisa pega lá do node dados um número pega aqui o quem mandou o número da pessoa que mandou e a mensagem é aqui que muita gente estava",
+     "anchor": {
+      "local_id": "AN-0071",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "text": "Com o Cloud Code tendo acesso ao WhatsApp, é possível acessar grupos, verificar membros, editar o grupo, enviar mensagens e fazer relatórios.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / WhatsApp",
+    "scope": "gerenciamento de grupos de WhatsApp",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0013",
+     "excerpt": "ideia aqui é ser ser simplificado. E a partir disso, seu Cloud Code vai ter acesso ao WhatsApp, tá? Então, ele vai conseguir acessar grupos, enviar",
+     "anchor": {
+      "local_id": "AN-0013",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0014",
+     "excerpt": "mensagens, coisas do tipo, né? Aí aqui tá o final, que seria realmente acessar os grupos, verificar membros, é editar o grupo, enviar mensagens, fazer",
+     "anchor": {
+      "local_id": "AN-0014",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "text": "No nó de ler mensagem, o nome da instância é o nome dado na Evolution ao criar a instância, o contato é o número de quem mandou e o ID da mensagem é o ID já colocado no set.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de leitura de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0067",
+     "excerpt": "aqui no recurso eu vou colocar chat a operação vai ser ler mensag vou clicar aqui para trazer os dados anteriores e vamos lá o nome da",
+     "anchor": {
+      "local_id": "AN-0067",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0068",
+     "excerpt": "instância vai ser a Instância que é o nome que a gente dá lá na Evolution quando cria ela o contato vai ser o número de quem mandou e o ID da mensagem",
+     "anchor": {
+      "local_id": "AN-0068",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0069",
+     "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos",
+     "anchor": {
+      "local_id": "AN-0069",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0037"
+   },
+   "text": "Não é preciso explicar ao Cloud que ele deve usar o Evolution porque esse contexto inicial já foi colocado no cloud.md; por isso é bom ter um cloud.md.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "desde que o contexto esteja no cloud.md",
+    "platform": "Cloud Code",
+    "scope": "perguntas relacionadas a grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0078",
+     "excerpt": "eu faço parte e também me lista ali os grupos que eu sou admin. E bora aguardar aqui o resultado. Então, olha só, nem preciso explicar para ele que eu quero",
+     "anchor": {
+      "local_id": "AN-0078",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0079",
+     "excerpt": "que ele use o Evolution, que não sei o quê. Não, porque eu já coloquei no cloud.md essa parte, esse contexto inicial, tá? Por isso que é legal ter um",
+     "anchor": {
+      "local_id": "AN-0079",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0080",
+     "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como",
+     "anchor": {
+      "local_id": "AN-0080",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "text": "Para instalar localmente: baixar a pasta deixada, abrir ela, abrir um terminal nela e digitar ./start.ps1 (para quem está no Windows), responder as perguntas do script (senha do postgres, senha do Redis, e-mail de admin do PG Admin) e esperar ele baixar e subir os containers; ao final você tem uma Evolution com n8n instalado localmente.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": "quem não tem VPS",
+    "condition": "comando pon barst pps1 indicado para quem está no Windows",
+    "platform": "Docker / Windows",
+    "scope": "instalação local via docker compose",
+    "stage": "instalação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0089",
+     "excerpt": "baixar essa pasta que o deixei abri ela abrir um terminal nela e digitar pon barst pps1 para quem tá no Windows aí você dá as respostas que o script vai",
+     "anchor": {
+      "local_id": "AN-0089",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0090",
+     "excerpt": "pedir por exemplo a sua senha do postgress sua senha do Heads o seu e-mail de admin do PG admin espera ele baixar e subir os containers e pronto",
+     "anchor": {
+      "local_id": "AN-0090",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0091",
+     "excerpt": "você tem uma Evolution com n8n instalado aí localmente quando eu fiz o script eu esqueci de configurar uma senha para Evolution mas a senha padrão vai est aí",
+     "anchor": {
+      "local_id": "AN-0091",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0001"
+   },
+   "text": "O Cloud Code atua como orquestrador: é com ele que se conversa e a quem se pede para fazer determinadas ações.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "gerenciador de grupos de WhatsApp",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0005",
+     "excerpt": "de grupos, né? Como que vai funcionar. Então, primeiro de tudo, Cloud Code, né? Ele que vai ser o orquestrador, é com ele que eu vou estar conversando, eu vou",
+     "anchor": {
+      "local_id": "AN-0005",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0045"
+   },
+   "text": "No nó de ler mensagem, o nome da instância é o nome dado na Evolution ao criar a instância, o contato é o número de quem mandou e o ID da mensagem é o ID já colocado no set.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de leitura de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0067",
+     "excerpt": "aqui no recurso eu vou colocar chat a operação vai ser ler mensag vou clicar aqui para trazer os dados anteriores e vamos lá o nome da",
+     "anchor": {
+      "local_id": "AN-0067",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0068",
+     "excerpt": "instância vai ser a Instância que é o nome que a gente dá lá na Evolution quando cria ela o contato vai ser o número de quem mandou e o ID da mensagem",
+     "anchor": {
+      "local_id": "AN-0068",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0069",
+     "excerpt": "vai ser o ID da mensagem que a gente já colocou aqui no set pode clicar para testar que ele vai visualizar lá no WhatsApp se você for lá conferir vamos",
+     "anchor": {
+      "local_id": "AN-0069",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "quem participa de vários grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0093",
+     "excerpt": "Você e outras pessoas vai sempre aumentando aí essa quantidade de pessoas. Então, beleza, isso aqui é uma função muito interessante, porque eu tô",
+     "anchor": {
+      "local_id": "AN-0093",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0094",
+     "excerpt": "falando aqui de um grupo, mas imagina que você tenha aí um 20 grupos, por exemplo, um lançamento que você faz, onde é que tu tem eh vários grupos de",
+     "anchor": {
+      "local_id": "AN-0094",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0095",
+     "excerpt": "clientes e você quer puxar esses dados, então já é uma coisa interessante a se fazer, tá? Até mesmo se você quiser buscar tem vários grupos ali presentes,",
+     "anchor": {
+      "local_id": "AN-0095",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0096",
+     "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você",
+     "anchor": {
+      "local_id": "AN-0096",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0098",
+     "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em",
+     "anchor": {
+      "local_id": "AN-0098",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0099",
+     "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função",
+     "anchor": {
+      "local_id": "AN-0099",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "text": "Os campos ficam em: quem mandou em body data key remoteJid, a instância em body instance, a mensagem em body data message conversation, o ID da mensagem em body data key id e o nome da pessoa em body data pushName.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API webhook payload",
+    "scope": null,
+    "stage": "node Set"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "número da pessoa que mandou a mensagem fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "conversation o ID da mensagem Fica em B data Key id e o nome da pessoa fica em Body data push name Esses são os dados que nós vamos precisar clique em teste e",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "text": "Com o Cloud Code tendo acesso ao WhatsApp, é possível acessar grupos, verificar membros, editar o grupo, enviar mensagens e fazer relatórios.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / WhatsApp",
+    "scope": "gerenciamento de grupos de WhatsApp",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0013",
+     "excerpt": "ideia aqui é ser ser simplificado. E a partir disso, seu Cloud Code vai ter acesso ao WhatsApp, tá? Então, ele vai conseguir acessar grupos, enviar",
+     "anchor": {
+      "local_id": "AN-0013",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0014",
+     "excerpt": "mensagens, coisas do tipo, né? Aí aqui tá o final, que seria realmente acessar os grupos, verificar membros, é editar o grupo, enviar mensagens, fazer",
+     "anchor": {
+      "local_id": "AN-0014",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0048"
+   },
+   "text": "No nó de enviar texto, o nome da instância vem do node de dados e o número vem do número de quem mandou a mensagem.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution / WhatsApp",
+    "scope": "nó Evolution de envio de mensagem",
+    "stage": "resposta ao usuário"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0070",
+     "excerpt": "adicionar mais um agora da Evolution de novo e dessa vez vai ser para enviar a resposta então vai ser aqui o recurso mensagem enviar texto na operação e o",
+     "anchor": {
+      "local_id": "AN-0070",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0071",
+     "excerpt": "nome da instância a mesma coisa pega lá do node dados um número pega aqui o quem mandou o número da pessoa que mandou e a mensagem é aqui que muita gente estava",
+     "anchor": {
+      "local_id": "AN-0071",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "text": "O arquivo {ponto} env é onde se colocam as credenciais do Evolution: a URL, a chave API global e o nome da instância.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": "configuração"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0065",
+     "excerpt": "arquivo {ponto} env, que é onde você vai colocar suas credenciais do Evolution, tá? A URL, chave API global e o nome da instância.",
+     "anchor": {
+      "local_id": "AN-0065",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "text": "Na Evolution, clique na sua sessão, vá em events webhook, cole a URL, e as três opções enabled, base 64 e o evento messages upsert têm que estar ativas; depois clique em salvar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": "configuração do webhook"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0021",
+     "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento",
+     "anchor": {
+      "local_id": "AN-0021",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0022",
+     "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode",
+     "anchor": {
+      "local_id": "AN-0022",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "text": "Com o contexto no cloud.md, tudo que for perguntado relacionado a grupo faz o Cloud saber que deve usar o Evolution, e ele consulta a documentação para ver como usar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "perguntas relacionadas a grupo",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0080",
+     "excerpt": "cloud.md. Então, tudo que tu perguntar relacionado a grupo, ele já vai saber que é para usar o Evolution. Ele consulta lá a documentação para ver como",
+     "anchor": {
+      "local_id": "AN-0080",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0062"
+   },
+   "text": "Para instalar localmente: baixar a pasta deixada, abrir ela, abrir um terminal nela e digitar ./start.ps1 (para quem está no Windows), responder as perguntas do script (senha do postgres, senha do Redis, e-mail de admin do PG Admin) e esperar ele baixar e subir os containers; ao final você tem uma Evolution com n8n instalado localmente.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": "quem não tem VPS",
+    "condition": "comando pon barst pps1 indicado para quem está no Windows",
+    "platform": "Docker / Windows",
+    "scope": "instalação local via docker compose",
+    "stage": "instalação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0089",
+     "excerpt": "baixar essa pasta que o deixei abri ela abrir um terminal nela e digitar pon barst pps1 para quem tá no Windows aí você dá as respostas que o script vai",
+     "anchor": {
+      "local_id": "AN-0089",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0090",
+     "excerpt": "pedir por exemplo a sua senha do postgress sua senha do Heads o seu e-mail de admin do PG admin espera ele baixar e subir os containers e pronto",
+     "anchor": {
+      "local_id": "AN-0090",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0091",
+     "excerpt": "você tem uma Evolution com n8n instalado aí localmente quando eu fiz o script eu esqueci de configurar uma senha para Evolution mas a senha padrão vai est aí",
+     "anchor": {
+      "local_id": "AN-0091",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0082"
+   },
+   "text": "The context window indicator in the bottom right hand corner shows the total number of things that are consuming your tokens, including messages, system tools, system prompts, MCP tools, skills and memory files.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude Code desktop app",
+    "scope": "interface element",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0123",
+     "excerpt": "if something is effort low. Effort low might take like 2 seconds. Uh, effort ultra code might take like 5 minutes. So, worth usually operating somewhere in the middle. I like defaulting to medium or high for the most part. Um, sonnet high tends to work pretty quick while also delivering pretty good results. Now, you can also see your context window here in the bottom right hand",
+     "anchor": {
+      "local_id": "AN-0123",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0124",
+     "excerpt": "corner. What that is is the total number of things that are consuming your tokens. So, I just move my again fat head out of the way so you guys could see this a little better. Um, as you can see, we have a certain number of messages up here at the top that are consuming a certain section of our context window. Certain number of system tools, system prompts, MCP tools,",
+     "anchor": {
+      "local_id": "AN-0124",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0125",
+     "excerpt": "skills, memory files. You don't need to know what all these things mean. What you do need to know though is that Claude can only hold a certain amount of information in its head. And that information is currently bounded by tokens. And so a token is very similar to a word. And pretty soon, I'm sure they will just be called words. But for now, they're just a little bit",
+     "anchor": {
+      "local_id": "AN-0125",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0044"
+   },
+   "text": "Se a pessoa faz parte de vários grupos, é possível fazer a mesma extração de dados/contatos em vários grupos, por exemplo em um lançamento com vários grupos de clientes.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code / Evolution API",
+    "scope": "quem participa de vários grupos",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0093",
+     "excerpt": "Você e outras pessoas vai sempre aumentando aí essa quantidade de pessoas. Então, beleza, isso aqui é uma função muito interessante, porque eu tô",
+     "anchor": {
+      "local_id": "AN-0093",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0094",
+     "excerpt": "falando aqui de um grupo, mas imagina que você tenha aí um 20 grupos, por exemplo, um lançamento que você faz, onde é que tu tem eh vários grupos de",
+     "anchor": {
+      "local_id": "AN-0094",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0095",
+     "excerpt": "clientes e você quer puxar esses dados, então já é uma coisa interessante a se fazer, tá? Até mesmo se você quiser buscar tem vários grupos ali presentes,",
+     "anchor": {
+      "local_id": "AN-0095",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0096",
+     "excerpt": "você quer puxar ali eh os contatos dessa galera, você pode fazer também. Então, pode já é o já seria aqui um um segundo caso a ser feito, né? Eu quero que você",
+     "anchor": {
+      "local_id": "AN-0096",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0098",
+     "excerpt": "numa planilha e a partir disso fazer alguma campanha, algo do tipo, tá? Repito, se você tem, faz parte de vários grupos aí, você consegue fazer isso em",
+     "anchor": {
+      "local_id": "AN-0098",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0099",
+     "excerpt": "vários grupos, então também bem interessante. E enquanto ele tá gerando aqui, eu já vou abrir aqui um outro chat e vou fazendo outra função",
+     "anchor": {
+      "local_id": "AN-0099",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "text": "Para criar a instância, clica-se em instância, coloca-se um nome e salva; ela aparece como desconectada.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API manager",
+    "scope": null,
+    "stage": "passo 2"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0040",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0040",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0041",
+     "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,",
+     "anchor": {
+      "local_id": "AN-0041",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "eb833bacc1ebf5517c1757cc1c13f0d2bfc2185d5595621286a7f236bb3bf0df",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "text": "Na Evolution, clique na sua sessão, vá em events webhook, cole a URL, e as três opções enabled, base 64 e o evento messages upsert têm que estar ativas; depois clique em salvar.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": null,
+    "stage": "configuração do webhook"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0021",
+     "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento",
+     "anchor": {
+      "local_id": "AN-0021",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0022",
+     "excerpt": "chamado messages up search essas três opções têm que estar ativas clique em salvar e pode voltar pro n8n clica para ouvir um evento de teste agora e pode",
+     "anchor": {
+      "local_id": "AN-0022",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0281"
+   },
+   "text": "The resulting routine has scheduled runs (next run tomorrow at 5:59 a.m.), can also be triggered manually, has an API web hook, Google Drive, cloud code remote, and the API key stored inside the environment itself.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "cloud routines",
+    "scope": "the created daily batch routines",
+    "stage": "post-setup"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0469",
+     "excerpt": "routine. Cool. And now it has the full spec. And it's just going to continue going down the top to bottom. And just like we did last time, we're going to create a new GitHub. And then did I already put a file on my Google Drive? Uh, no I do not. No, I don't. So you will create one. And voila. If I move my fat head and super cool Clairvo hat out of the way, you guys can see we now have",
+     "anchor": {
+      "local_id": "AN-0469",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0470",
+     "excerpt": "both the product aden daily batch and we also have the Maker School daily batch. So, next run tomorrow at 5:59 a.m. If I jump in here, you guys will see we have more or less the exact same layout. You know, install the dependencies, run the script. All the stuff does not really require us. We don't have to be pros at programming to know what's going on. Um, has some scheduled runs. You can also",
+     "anchor": {
+      "local_id": "AN-0470",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0471",
+     "excerpt": "trigger it manually. API web hook. I'll cover more about that later when we talk about weaving it into a pre-existing automation flow. But yeah, it has the Google Drive. It also has the clock code remote. And then it um has our API key again stored inside of the environment itself. So that's important. It's tough to get stuff in the environment unless you know how all of that works. Um I",
+     "anchor": {
+      "local_id": "AN-0471",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "integração via API vs. webhooks",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0118",
+     "excerpt": "pode ser tema também de um outro vídeo meu, né? Senão vou fazer aqui senão vai ficar muito longo. Que já é a parte é passiva, né? Aqui, já falando, ele",
+     "anchor": {
+      "local_id": "AN-0118",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0119",
+     "excerpt": "está chamando via API. Então, eu dou um comando aqui no no Cloud Code e aí ele usa a API para fazer alguma ação. Mas a gente pode estar criando scripts que que",
+     "anchor": {
+      "local_id": "AN-0119",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0120",
+     "excerpt": "online 24 horas por dia e que recebem webhooks, ou seja, ah, o cara entrou num grupo, aí tu vai lá e manda uma mensagem no privado da pessoa dando boas-vindas,",
+     "anchor": {
+      "local_id": "AN-0120",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0121",
+     "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que",
+     "anchor": {
+      "local_id": "AN-0121",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MS-002 RELATION JUDGMENT v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "judgments"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "judgments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pair_id",
+          "relation",
+          "direction",
+          "scope_state",
+          "relation_why",
+          "left_evidence_refs_checked",
+          "right_evidence_refs_checked"
+        ],
+        "properties": {
+          "pair_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "relation": {
+            "enum": [
+              "IDENTICAL",
+              "CORROBORATES",
+              "SPECIALIZES",
+              "CONTRADICTS",
+              "SUPERSEDES",
+              "UNRELATED",
+              "INDETERMINATE"
+            ]
+          },
+          "direction": {
+            "enum": [
+              "NONE",
+              "LEFT_TO_RIGHT",
+              "RIGHT_TO_LEFT"
+            ]
+          },
+          "scope_state": {
+            "enum": [
+              "EQUIVALENT_SCOPE",
+              "NESTED_COMPATIBLE_SCOPE",
+              "DIFFERENT_SCOPE",
+              "AMBIGUOUS_SCOPE"
+            ]
+          },
+          "relation_why": {
+            "type": "string",
+            "minLength": 15
+          },
+          "left_evidence_refs_checked": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "right_evidence_refs_checked": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "direction_compatibility_MECANICA": {
+    "IDENTICAL": [
+      "NONE"
+    ],
+    "CORROBORATES": [
+      "NONE"
+    ],
+    "CONTRADICTS": [
+      "NONE"
+    ],
+    "UNRELATED": [
+      "NONE"
+    ],
+    "INDETERMINATE": [
+      "NONE"
+    ],
+    "SPECIALIZES": [
+      "LEFT_TO_RIGHT",
+      "RIGHT_TO_LEFT"
+    ],
+    "SUPERSEDES": [
+      "LEFT_TO_RIGHT",
+      "RIGHT_TO_LEFT"
+    ]
+  },
+  "scope_compatibility_MECANICA": {
+    "IDENTICAL": [
+      "EQUIVALENT_SCOPE"
+    ],
+    "SPECIALIZES": [
+      "NESTED_COMPATIBLE_SCOPE",
+      "EQUIVALENT_SCOPE"
+    ],
+    "CONTRADICTS": [
+      "EQUIVALENT_SCOPE",
+      "NESTED_COMPATIBLE_SCOPE"
+    ],
+    "outros": "qualquer"
+  },
+  "evidence_equality": "set(left_evidence_refs_checked) == set(refs fornecidas do lado LEFT); idem RIGHT. Acrescimo, omissao ou estrangeira = INVALID."
+}

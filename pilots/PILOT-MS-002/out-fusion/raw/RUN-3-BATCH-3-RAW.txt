@@ -1,0 +1,22 @@
+{
+  "batch_id": "BATCH-3",
+  "judgments": [
+    {
+      "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A Claim da esquerda descreve um ato concreto de verificacao de um conector recem-adicionado no Claude/Qo (pedir na conversa que envie um SMS e confirmar a chegada da mensagem). A Claim da direita descreve uma distincao conceitual entre uso ativo via API a partir do Cloud Code e uma abordagem passiva com scripts online 24h recebendo webhooks, apresentada como possivel tema futuro. Os objetos sao distintos (validacao pratica de conector versus taxonomia ativo/passivo de integracao), as plataformas citadas sao diferentes e o unico ponto comum e a mencao generica a envio de mensagem, o que nao constitui relacao material. Nao ha convergencia substantiva, aninhamento de escopo, nem incompatibilidade sobre a mesma condicao.",
+      "left_evidence_refs_checked": [
+        "EV-0845",
+        "EV-0846"
+      ],
+      "right_evidence_refs_checked": [
+        "EV-0118",
+        "EV-0119",
+        "EV-0120",
+        "EV-0121"
+      ]
+    }
+  ]
+}

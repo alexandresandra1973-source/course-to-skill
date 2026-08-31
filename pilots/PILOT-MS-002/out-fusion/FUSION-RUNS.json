@@ -1,0 +1,3101 @@
+{
+ "pilot": "PILOT-MS-002",
+ "stage": "FUSION",
+ "transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+ "payg_api_used": 0,
+ "pairset_hash": "62293fb3544c313cb7aee8c13b34a7d4ba2dfcc2598b9ace9472e8883121c159",
+ "n_pairs": 51,
+ "blocker_variant": "V6",
+ "runs": {
+  "RUN-1": {
+   "control": {
+    "detail": [
+     {
+      "id": "J1",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J2",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J3",
+      "ok": true,
+      "got": {
+       "relation": "SPECIALIZES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "NESTED_COMPATIBLE_SCOPE"
+      }
+     },
+     {
+      "id": "J4",
+      "ok": true,
+      "got": {
+       "relation": "CONTRADICTS",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J5",
+      "ok": true,
+      "got": {
+       "relation": "SUPERSEDES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J6",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J7",
+      "ok": true,
+      "got": {
+       "relation": "INDETERMINATE",
+       "direction": "NONE",
+       "scope_state": "AMBIGUOUS_SCOPE"
+      }
+     },
+     {
+      "id": "J8",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J9",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J10",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     }
+    ],
+    "ok": true
+   },
+   "batches": {
+    "BATCH-1": {
+     "n": 25
+    },
+    "BATCH-2": {
+     "n": 25
+    },
+    "BATCH-3": {
+     "n": 1
+    }
+   },
+   "judgments": {
+    "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3": {
+     "pair_id": "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de onde colocar credenciais (URL, chave API global, nome da instancia) num arquivo .env; a direita trata dos caminhos de campos no payload do webhook. Compartilham apenas a palavra 'instancia', objetos e etapas materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc": {
+     "pair_id": "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades de gerenciamento de grupos via Cloud Code; a direita relata um teste pontual de um fluxo enviando mensagem no WhatsApp. Objetos e escopos materialmente distintos, sem proposicao comum.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48": {
+     "pair_id": "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda fala de capacidade do plano de VPS (Evolution pre-instalada, ate 20 numeros); a direita descreve preenchimento de campos num no de leitura de mensagem. Nenhuma proposicao material comum alem do termo 'instancia'.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b": {
+     "pair_id": "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve conectar a instancia via QR Code no manager da Evolution; a direita descreve mapeamento de campos no no de envio de texto. Etapas e objetos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c": {
+     "pair_id": "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Conectar instancia por QR Code nao guarda relacao material com o preenchimento de nome de instancia, contato e ID no no de leitura de mensagem; o termo comum 'instancia' nao estabelece relacao.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e": {
+     "pair_id": "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que a Evolution conecta o numero como WhatsApp Web sendo API nao oficial (natureza/custo); a direita descreve configuracao de parametros de um no de leitura. Substancias diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9": {
+     "pair_id": "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Natureza da conexao via Evolution (API nao oficial, WhatsApp Web) versus mapeamento de campos no no de envio de texto: nao ha proposicao substantiva compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28": {
+     "pair_id": "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidade do plano de VPS (ate 20 numeros, Evolution pre-instalada) nao se relaciona materialmente com a origem dos campos no no de envio de texto.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c": {
+     "pair_id": "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Teste de credenciais perguntando ao Cloud Code quais instancias estao conectadas versus configuracao de webhook events na Evolution: procedimentos e objetos distintos, sem convergencia proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b": {
+     "pair_id": "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Geracao de QR Code para conectar instancia desconectada nao tem relacao material com os caminhos de campos no payload do webhook.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e": {
+     "pair_id": "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uma descreve um sistema speed-to-lead rodando como rotina em nuvem acionada por trigger remoto; a outra descreve extracao de contatos de varios grupos de WhatsApp. Objetos, plataformas e substancias distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163": {
+     "pair_id": "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o Claude Code opera bem a plataforma por causa da estrutura MCP; a direita afirma que contexto no cloud.md faz o Cloud usar o Evolution para perguntas sobre grupos e consultar a documentacao. Mecanismos e objetos diferentes; nao ha proposicao comum verificavel apenas com este material.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7": {
+     "pair_id": "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uma descreve o dashboard de uso de tokens/sessoes da janela de chat do Claude Code; a outra descreve um painel HTML gerado com estatisticas de membros de um grupo de WhatsApp. Apenas a palavra 'dashboard' e comum; objetos totalmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0072",
+      "EV-0073"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f": {
+     "pair_id": "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Enumeracao de capacidades de gerenciamento de grupos com Cloud Code versus configuracao de parametros do no de envio de texto: escopos materialmente distintos, sem convergencia substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51": {
+     "pair_id": "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata da natureza do conector MCP restrito a sessao cloud e do skill como SOP; a direita trata de um teste de credenciais do Evolution no Cloud Code. Objetos e proposicoes distintos.",
+     "left_evidence_refs_checked": [
+      "EV-1028",
+      "EV-1029"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ]
+    },
+    "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992": {
+     "pair_id": "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Contexto no cloud.md direcionando o Cloud a usar o Evolution nao guarda relacao material com os caminhos de campos no payload do webhook num node Set.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab": {
+     "pair_id": "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uso do cloud.md como contexto para acionar o Evolution em perguntas sobre grupos versus origem de campos no no de envio de texto: substancias distintas, sem sobreposicao proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c": {
+     "pair_id": "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades do Cloud Code sobre grupos de WhatsApp versus instrucao de teste do webhook no n8n enviando mensagem para si mesmo: objetos e etapas materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0022",
+      "EV-0023"
+     ]
+    },
+    "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59": {
+     "pair_id": "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Origem da chave API (recebida por e-mail) nao se relaciona materialmente com os caminhos dos campos no payload do webhook; apenas a plataforma nominal e proxima.",
+     "left_evidence_refs_checked": [
+      "EV-0069"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34": {
+     "pair_id": "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Extracao de dados em varios grupos de WhatsApp versus procedimento de instalacao local via script Docker no Windows: proposicoes e escopos completamente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f": {
+     "pair_id": "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Lista de capacidades de gerenciamento de grupos com Cloud Code versus relato de teste pontual de um fluxo de agente no WhatsApp: nao ha substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7": {
+     "pair_id": "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o nome da instancia e proprio de cada usuario no preenchimento de credenciais; a direita descreve a configuracao de events webhook na sessao da Evolution. Etapas e proposicoes distintas.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731": {
+     "pair_id": "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do Cloud Code como orquestrador conversacional nao tem relacao material com a origem dos campos do no de envio de texto na Evolution.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1": {
+     "pair_id": "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Janela de contexto e consumo de tokens do Sonnet 5 versus conteudo de um dashboard de membros de grupo de WhatsApp: objetos e proposicoes sem qualquer sobreposicao material.",
+     "left_evidence_refs_checked": [
+      "EV-0126"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb": {
+     "pair_id": "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Teste de conexao de credenciais no Cloud Code versus mapeamento de campos do payload do webhook num node Set: apenas o termo 'instancia' e compartilhado, sem relacao substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac": {
+     "pair_id": "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de extrair dados/contatos de varios grupos de WhatsApp; a direita trata da configuracao de campos (instancia e numero) no no de envio de texto. Objetos e escopos materialmente distintos; apenas vocabulario de plataforma em comum.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f": {
+     "pair_id": "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda fala em copiar e salvar o token do Evolution; a direita descreve caminhos de campos no payload do webhook. Nenhuma proposicao substantiva compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0031",
+      "EV-0032"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6": {
+     "pair_id": "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uma descreve o indicador de janela de contexto na interface do Claude Code; a outra descreve a distincao entre integracao ativa via API e passiva via webhooks. Objetos totalmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df": {
+     "pair_id": "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que um sistema especifico (speed to lead) roda como rotina em nuvem disparada por trigger remoto de API; a direita distingue integracao ativa por comando no Cloud Code de scripts passivos com webhooks. Compartilham apenas o termo API, sem mesma proposicao substantiva nem objeto comum.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f": {
+     "pair_id": "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve gerar QR Code para conectar instancia desconectada; a direita descreve configurar o webhook de eventos na sessao. Passos e objetos diferentes dentro do mesmo produto, sem sobreposicao proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca": {
+     "pair_id": "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Criacao da instancia no manager versus localizacao dos campos no payload do webhook. A palavra 'instancia' aparece nos dois, mas refere-se a objetos e etapas distintas.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309": {
+     "pair_id": "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda lista capacidades de gerenciamento de grupos com o metodo ensinado; a direita detalha parametros do no de leitura de mensagem. Objetos e escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0": {
+     "pair_id": "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o nome da instancia e proprio de cada usuario ao configurar credenciais; a direita indica caminhos de campos no payload do webhook. Sobreposicao apenas lexical no termo instancia.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db": {
+     "pair_id": "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o Claude Code opera bem a plataforma por causa da estrutura MCP; a direita afirma possibilidade de extrair contatos de varios grupos. Proposicoes e objetos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0": {
+     "pair_id": "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o e-mail da HostGator com acesso ao VPS apos pagamento; a direita descreve instalacao local via script Docker para quem nao tem VPS. Caminhos de provisionamento diferentes, sem afirmacao incompativel sobre o mesmo objeto.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd": {
+     "pair_id": "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Primeiro acesso ao manager com chave de API global versus localizacao de campos no payload do webhook. Objetos e etapas distintas.",
+     "left_evidence_refs_checked": [
+      "EV-0038",
+      "EV-0039"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5": {
+     "pair_id": "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "E-mail de contratacao com dados de VPS e token versus mapeamento de campos do payload de webhook. Nenhuma substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257": {
+     "pair_id": "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades gerais de gerenciamento de grupos pelo Cloud Code versus o efeito de testar um no de leitura de mensagem que marca a mensagem como visualizada. Objetos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0069"
+     ]
+    },
+    "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd": {
+     "pair_id": "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Indicador de janela de contexto na interface versus efeito do contexto registrado no cloud.md para acionar o Evolution. Ambos citam contexto, mas em sentidos e objetos diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f": {
+     "pair_id": "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uso do cloud.md para dispensar explicacao ao Cloud versus configuracao de parametros do no de envio de texto. Sem substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea": {
+     "pair_id": "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades gerais do Cloud Code com acesso ao WhatsApp versus configuracao especifica de campos no no de leitura de mensagem. Objetos e escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50": {
+     "pair_id": "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Contexto no cloud.md para o Cloud Code versus procedimento de instalacao local com Docker no Windows. Nenhuma proposicao compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3": {
+     "pair_id": "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do Cloud Code como orquestrador versus preenchimento de parametros do no de leitura de mensagem. Objetos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322": {
+     "pair_id": "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Extracao de dados em varios grupos versus mapeamento de campos do payload de webhook. Sem substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617": {
+     "pair_id": "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades gerais de gerenciamento de grupos versus configuracao de parametros do no de envio de texto. Escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a": {
+     "pair_id": "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Arquivo .env com credenciais (URL, chave global, nome da instancia) versus configuracao do webhook de eventos na sessao da Evolution. A palavra URL aparece nos dois, mas referida a objetos diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18": {
+     "pair_id": "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Efeito do contexto no cloud.md sobre perguntas de grupo versus procedimento de instalacao local com script Docker. Nenhuma substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39": {
+     "pair_id": "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Indicador de janela de contexto na interface do Claude Code versus extracao de contatos em varios grupos de WhatsApp. Objetos totalmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7": {
+     "pair_id": "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Criacao da instancia com nome e estado desconectado versus configuracao do webhook de eventos. Etapas e objetos diferentes; ambas mencionam salvar, o que nao estabelece relacao material.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187": {
+     "pair_id": "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve componentes e agendamento de rotinas em nuvem ja criadas; a direita distingue integracao ativa por comando de scripts passivos com webhooks. Compartilham o termo webhook, mas tratam de objetos e proposicoes distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0469",
+      "EV-0470",
+      "EV-0471"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691": {
+     "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A Claim da esquerda descreve um ato concreto de verificacao de um conector recem-adicionado no Claude/Qo, pedindo o envio de um SMS e confirmando o recebimento. A da direita descreve uma distincao conceitual entre uso ativo da API via comando no Cloud Code e uma abordagem passiva com scripts online recebendo webhooks, apresentada como possivel tema de outro video. Objetos, plataformas e proposicoes substantivas sao distintos: verificacao pontual de integracao versus taxonomia ativo/passivo de integracao. A coincidencia de vocabulario (integracao, envio de mensagem) nao estabelece relacao material, e nao ha incompatibilidade nem aninhamento entre os escopos.",
+     "left_evidence_refs_checked": [
+      "EV-0845",
+      "EV-0846"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    }
+   },
+   "status": "VALID"
+  },
+  "RUN-2": {
+   "control": {
+    "detail": [
+     {
+      "id": "J1",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J2",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J3",
+      "ok": true,
+      "got": {
+       "relation": "SPECIALIZES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "NESTED_COMPATIBLE_SCOPE"
+      }
+     },
+     {
+      "id": "J4",
+      "ok": true,
+      "got": {
+       "relation": "CONTRADICTS",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J5",
+      "ok": true,
+      "got": {
+       "relation": "SUPERSEDES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J6",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J7",
+      "ok": true,
+      "got": {
+       "relation": "INDETERMINATE",
+       "direction": "NONE",
+       "scope_state": "AMBIGUOUS_SCOPE"
+      }
+     },
+     {
+      "id": "J8",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J9",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J10",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     }
+    ],
+    "ok": true
+   },
+   "batches": {
+    "BATCH-1": {
+     "n": 25
+    },
+    "BATCH-2": {
+     "n": 25
+    },
+    "BATCH-3": {
+     "n": 1
+    }
+   },
+   "judgments": {
+    "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3": {
+     "pair_id": "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de onde colocar credenciais (URL, chave global, nome da instância) num arquivo .env; a direita trata dos caminhos de campos dentro do payload de webhook num node Set. Objetos e etapas materialmente distintos; apenas o termo 'instância' é compartilhado.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc": {
+     "pair_id": "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades de gerenciamento de grupos via Cloud Code; a direita relata um teste pontual de fluxo com envio de mensagem no WhatsApp. Objetos e escopos materialmente distintos, sem substância comum além da menção a WhatsApp.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48": {
+     "pair_id": "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda fala de plano de VPS com Evolution pré-instalada e limite de 20 números; a direita descreve o preenchimento de campos num nó de leitura de mensagem. Nenhuma proposição substantiva comum.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b": {
+     "pair_id": "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve conexão da instância via QR Code no manager; a direita descreve mapeamento de campos no nó de envio de texto. Etapas e objetos diferentes; a palavra 'instância' não estabelece relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c": {
+     "pair_id": "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Conexão da instância por QR Code (esquerda) versus preenchimento de parâmetros do nó de leitura de mensagem (direita). Substâncias distintas, apenas termo 'instância' em comum.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e": {
+     "pair_id": "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda caracteriza a natureza da Evolution API (não oficial, conexão tipo WhatsApp Web); a direita detalha campos de um nó de leitura de mensagem. Não há proposição substantiva compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9": {
+     "pair_id": "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Natureza e custo da API não oficial (esquerda) versus configuração de campos do nó de envio de texto (direita). Objetos materiais distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28": {
+     "pair_id": "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Plano de hospedagem com limite de números (esquerda) e mapeamento de campos no nó de envio (direita) não compartilham objeto nem condição material.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c": {
+     "pair_id": "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve um teste de credenciais via pergunta ao Cloud Code; a direita descreve a configuração de webhook (events webhook, enabled, base64, messages upsert) na Evolution. Etapas e procedimentos distintos, sem sobreposição substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b": {
+     "pair_id": "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Geração de QR Code para conectar a instância (esquerda) versus localização de campos no payload do webhook (direita). Objetos e estágios materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e": {
+     "pair_id": "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve um sistema de speed to lead rodando como rotina em nuvem disparada por trigger remoto; a direita trata de extrair contatos de vários grupos de WhatsApp. Nenhuma substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163": {
+     "pair_id": "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o Claude Code dirige bem uma plataforma por causa da estrutura MCP; a direita afirma que o contexto no cloud.md faz o Cloud usar o Evolution para perguntas de grupo. Mecanismos e objetos distintos; nenhuma proposição comum além da menção genérica ao agente.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7": {
+     "pair_id": "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Dashboard de uso de tokens/sessões do Claude Code (esquerda) e dashboard HTML de membros de grupo de WhatsApp gerado no exemplo (direita) são objetos completamente diferentes; a palavra 'dashboard' não cria relação.",
+     "left_evidence_refs_checked": [
+      "EV-0072",
+      "EV-0073"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f": {
+     "pair_id": "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Enumeração de capacidades de gerenciamento de grupos (esquerda) versus configuração de parâmetros do nó de envio de texto (direita). Escopos materialmente distintos e não aninháveis.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51": {
+     "pair_id": "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de conector MCP restrito à sessão cloud e da skill como SOP; a direita trata de um teste de credenciais do Evolution no Cloud Code. Objetos e procedimentos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-1028",
+      "EV-1029"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ]
+    },
+    "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992": {
+     "pair_id": "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Uso do cloud.md como contexto para acionar o Evolution (esquerda) versus caminhos de campos no payload do webhook (direita). Nenhuma substância compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab": {
+     "pair_id": "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Contexto do cloud.md direcionando o uso do Evolution (esquerda) e mapeamento de campos no nó de envio de texto (direita) tratam de objetos e estágios diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c": {
+     "pair_id": "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades do Cloud Code sobre grupos de WhatsApp (esquerda) versus procedimento de teste de webhook no n8n (direita). Escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0022",
+      "EV-0023"
+     ]
+    },
+    "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59": {
+     "pair_id": "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Origem da chave API (recebida por e-mail) na configuração de credenciais (esquerda) nada tem em comum com os caminhos dos campos no payload do webhook (direita).",
+     "left_evidence_refs_checked": [
+      "EV-0069"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34": {
+     "pair_id": "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Extração de contatos em vários grupos (esquerda) versus procedimento de instalação local via script/docker (direita). Objetos e estágios completamente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f": {
+     "pair_id": "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Lista de capacidades de gerenciamento de grupos (esquerda) versus relato de teste de um fluxo de agente com mensagem no WhatsApp (direita). Não há proposição substantiva comum.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7": {
+     "pair_id": "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Nome próprio da instância na configuração de credenciais (esquerda) versus configuração do webhook com opções enabled, base64 e messages upsert (direita). Procedimentos distintos dentro da mesma plataforma, sem substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731": {
+     "pair_id": "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do Cloud Code como orquestrador (esquerda) versus mapeamento de campos no nó de envio de texto (direita). Objetos e escopos materialmente diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1": {
+     "pair_id": "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Janela de contexto e consumo de tokens do Sonnet 5 (esquerda) versus conteúdo de um dashboard de membros de grupo de WhatsApp (direita). Nenhuma relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0126"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb": {
+     "pair_id": "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Teste de conexão de credenciais via pergunta ao Cloud Code (esquerda) versus localização dos campos no payload do webhook no node Set (direita). Estágios e objetos distintos; apenas 'instância' aparece nos dois.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac": {
+     "pair_id": "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de extrair dados/contatos de varios grupos de WhatsApp; a direita descreve a configuracao dos campos instancia e numero num no de envio de texto. Objetos e escopos materialmente distintos; apenas vocabulario de plataforma em comum.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f": {
+     "pair_id": "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda fala em copiar e salvar o token do Evolution recebido; a direita lista caminhos de campos no payload do webhook. Nao ha proposicao substantiva comum, apenas mencao generica a Evolution.",
+     "left_evidence_refs_checked": [
+      "EV-0031",
+      "EV-0032"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6": {
+     "pair_id": "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o indicador de janela de contexto na interface do Claude Code; a direita distingue integracao ativa via API e passiva via webhooks. Objetos completamente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df": {
+     "pair_id": "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que um sistema especifico de speed to lead roda como rotina em nuvem disparada por trigger remoto de API; a direita contrasta uso ativo do Cloud Code via API com scripts passivos que recebem webhooks. Sao objetos e sistemas diferentes; a coincidencia de termos API/trigger nao estabelece relacao material.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f": {
+     "pair_id": "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve gerar QR Code para conectar uma instancia desconectada; a direita descreve configurar events webhook na sessao. Sao passos distintos com objetos distintos dentro da mesma ferramenta, sem convergencia substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca": {
+     "pair_id": "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Criar instancia no manager e a localizacao de campos no payload do webhook sao proposicoes sobre objetos diferentes; a palavra instancia aparece em ambos mas com papel distinto.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309": {
+     "pair_id": "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades de gerenciamento de grupos com o metodo ensinado; a direita descreve o preenchimento de campos de um no de leitura de mensagem. Escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0": {
+     "pair_id": "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o nome da instancia e proprio de cada usuario; a direita informa em que caminho do payload o campo instancia aparece. Proposicoes sobre aspectos diferentes, sem convergencia nem conflito.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db": {
+     "pair_id": "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o Claude Code opera bem a plataforma por causa da estrutura MCP; a direita fala de extracao de contatos em varios grupos de WhatsApp. Objetos e escopos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0": {
+     "pair_id": "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "E-mail da HostGator com dados do VPS e token versus procedimento de instalacao local via script no Windows sao caminhos e objetos distintos; nao ha substancia comum nem conflito declarado neste par.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd": {
+     "pair_id": "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Colar a chave de API global no primeiro acesso ao manager nao tem relacao material com a localizacao dos campos no payload do webhook; objetos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0038",
+      "EV-0039"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5": {
+     "pair_id": "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Recebimento de e-mail com dados de VPS e token nao guarda relacao substantiva com o mapeamento de campos do payload do webhook.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257": {
+     "pair_id": "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades gerais do Cloud Code sobre grupos de WhatsApp versus o comportamento de teste de um no de leitura de mensagem que marca a mensagem como visualizada; objetos e escopos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0069"
+     ]
+    },
+    "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd": {
+     "pair_id": "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Indicador de janela de contexto na interface nao se relaciona materialmente com o efeito de um arquivo cloud.md em direcionar o uso do Evolution para perguntas sobre grupos. Mencionar arquivos de memoria nao basta para vincular.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f": {
+     "pair_id": "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Contexto inicial no cloud.md dispensando explicacao ao Cloud e configuracao de campos num no de envio de texto sao proposicoes sobre objetos diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea": {
+     "pair_id": "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades do Cloud Code com acesso ao WhatsApp versus preenchimento de campos de um no de leitura de mensagem; escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50": {
+     "pair_id": "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do cloud.md como contexto inicial nada tem em comum com o procedimento de instalacao local de containers via script; objetos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3": {
+     "pair_id": "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do Cloud Code como orquestrador conversacional nao se relaciona materialmente com o preenchimento de campos de um no de leitura de mensagem.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322": {
+     "pair_id": "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Extracao de contatos em multiplos grupos versus caminhos de campos no payload do webhook: objetos e escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617": {
+     "pair_id": "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Enumeracao de capacidades gerais sobre grupos de WhatsApp versus origem dos campos instancia e numero num no de envio de texto; nao ha substancia comum.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a": {
+     "pair_id": "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "O arquivo .env com credenciais do Evolution e a configuracao de events webhook na sessao sao artefatos e passos diferentes; a palavra URL aparece em ambos mas designa coisas distintas.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18": {
+     "pair_id": "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Efeito do contexto no cloud.md sobre perguntas de grupo nao tem relacao material com o procedimento de instalacao local de Evolution e n8n via script.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39": {
+     "pair_id": "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Indicador de janela de contexto na interface versus extracao de contatos em varios grupos de WhatsApp: objetos totalmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7": {
+     "pair_id": "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Criacao de instancia com nome e estado desconectado versus configuracao de webhook com opcoes enabled, base64 e messages upsert; passos e objetos distintos, apenas ambos na mesma ferramenta.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187": {
+     "pair_id": "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve atributos de rotinas em nuvem ja criadas (agendamento, trigger manual, webhook de API, Drive, chave no ambiente); a direita distingue integracao ativa por comando e passiva por webhooks em outro contexto. A palavra webhook nao estabelece relacao material entre os objetos.",
+     "left_evidence_refs_checked": [
+      "EV-0469",
+      "EV-0470",
+      "EV-0471"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691": {
+     "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A Claim da esquerda descreve um ato concreto de verificacao de um conector recem-adicionado no Claude, pedindo na conversa o envio de um SMS e confirmando o recebimento. A Claim da direita descreve uma distincao conceitual no Cloud Code entre uma parte ativa (comando que chama a API) e uma parte passiva ainda nao mostrada (scripts online 24h recebendo webhooks, ex.: boas-vindas a quem entra num grupo). Os objetos sao diferentes: teste de conector versus taxonomia ativa/passiva de integracao; a mencao comum a envio de mensagem e vocabulario compartilhado, nao substancia comum. Nao ha convergencia, aninhamento nem incompatibilidade material entre as proposicoes.",
+     "left_evidence_refs_checked": [
+      "EV-0845",
+      "EV-0846"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    }
+   },
+   "status": "VALID"
+  },
+  "RUN-3": {
+   "control": {
+    "detail": [
+     {
+      "id": "J1",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J2",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J3",
+      "ok": true,
+      "got": {
+       "relation": "SPECIALIZES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "NESTED_COMPATIBLE_SCOPE"
+      }
+     },
+     {
+      "id": "J4",
+      "ok": true,
+      "got": {
+       "relation": "CONTRADICTS",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     },
+     {
+      "id": "J5",
+      "ok": true,
+      "got": {
+       "relation": "SUPERSEDES",
+       "direction": "RIGHT_TO_LEFT",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J6",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J7",
+      "ok": true,
+      "got": {
+       "relation": "INDETERMINATE",
+       "direction": "NONE",
+       "scope_state": "AMBIGUOUS_SCOPE"
+      }
+     },
+     {
+      "id": "J8",
+      "ok": true,
+      "got": {
+       "relation": "UNRELATED",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J9",
+      "ok": true,
+      "got": {
+       "relation": "CORROBORATES",
+       "direction": "NONE",
+       "scope_state": "DIFFERENT_SCOPE"
+      }
+     },
+     {
+      "id": "J10",
+      "ok": true,
+      "got": {
+       "relation": "IDENTICAL",
+       "direction": "NONE",
+       "scope_state": "EQUIVALENT_SCOPE"
+      }
+     }
+    ],
+    "ok": true
+   },
+   "batches": {
+    "BATCH-1": {
+     "n": 25
+    },
+    "BATCH-2": {
+     "n": 25
+    },
+    "BATCH-3": {
+     "n": 1
+    }
+   },
+   "judgments": {
+    "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3": {
+     "pair_id": "1441930d67987c24d85285f98d3ee41660ce0eb2365c0f4d40d740ca3949b9c3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda trata de onde colocar credenciais (URL, chave API, nome da instância) num arquivo .env; direita descreve caminhos de campos no payload do webhook. Objetos e etapas materialmente distintos; só compartilham a palavra 'instância'.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc": {
+     "pair_id": "bc473f805824eb3291242bd543bcdd3c9673c3540359a0c913ceb91e6e6b0ecc",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda enumera capacidades de gerenciamento de grupos via Cloud Code; direita relata um teste pontual de um fluxo respondendo mensagem no WhatsApp. Substâncias distintas, sem convergência material.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48": {
+     "pair_id": "0e37f77eeb36b973b66d435018e7cf2ddea8e5f92765e04bf0c61c64ba0b2d48",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda fala de plano de VPS com Evolution pré-instalada e limite de 20 números; direita descreve preenchimento de campos de um nó de leitura de mensagem. Nenhuma proposição material comum.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b": {
+     "pair_id": "38d0f6f7afc98f93a1025380a7a4ffb4b2c72c3d0ea4ecfbb56c872869a71c3b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda trata de conectar instância via QR Code no manager da Evolution; direita trata de mapear campos num nó de envio de texto. Etapas e objetos diferentes; apenas o termo 'instância' é compartilhado.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c": {
+     "pair_id": "3ef9408378a264324d4b42d51b0aa7816ee4b47b85dd84e995845a331ba9e54c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Conexão da instância por QR Code versus preenchimento de parâmetros do nó de leitura de mensagem são assuntos distintos; o nome da instância aparece em ambos apenas incidentalmente.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e": {
+     "pair_id": "534514018e0690c932a9afcedfd0fa6c4c87a7694466a3f763e69b36438c675e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda é sobre a natureza da conexão (API não oficial, como WhatsApp Web, sem custo de API oficial); direita é sobre parâmetros de um nó de leitura de mensagem. Sem substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9": {
+     "pair_id": "8a6cf79403533904b52c4e43fd1a888aa9f9fe1073cfeed5b5a4817107b0eca9",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Descrição conceitual da conexão via Evolution API não oficial versus configuração concreta de campos do nó de envio de texto. Objetos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0007",
+      "EV-0008"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28": {
+     "pair_id": "d7f0411e8ce8e88b8425226fce78be014461cc4f2babf78948b9a227f6140b28",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Plano de hospedagem com limite de números de WhatsApp não guarda relação material com o mapeamento de campos do nó de envio de texto.",
+     "left_evidence_refs_checked": [
+      "EV-0020",
+      "EV-0021"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c": {
+     "pair_id": "1288e993696f72d2f4d057db3995d453194cc6a923d01b7a46877d8860d7fb1c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda é um teste de credenciais perguntando ao Cloud Code quais instâncias estão conectadas; direita é a configuração do webhook de eventos na Evolution. Etapas e objetos distintos, sem convergência proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b": {
+     "pair_id": "1781ce8d7615534ca4f29a035228d2040b6d0fd9351ec6a0e5ba6d3c926adf0b",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Geração de QR Code para conectar instância versus localização de campos no payload do webhook. Não há proposição comum; apenas o termo 'instância' aparece nos dois.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e": {
+     "pair_id": "1f6c5a91006c8e46e1355332952b358385ef1385c0f93cb970aff3ec8ca7813e",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda descreve um sistema de speed-to-lead rodando como rotina em nuvem via trigger de API; direita trata de extração de contatos de vários grupos de WhatsApp. Domínios materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163": {
+     "pair_id": "2171de11affa5bdc1d3272a7a5307df18bc639a17de3927b4c9de9953e3e1163",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda afirma que o Claude Code conduz bem a plataforma por ela expor servidor MCP; direita afirma que o contexto em cloud.md faz o Cloud usar o Evolution para perguntas sobre grupos. Mecanismos e objetos diferentes; não há proposição substantiva comum além de mencionar o Claude/Cloud Code.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7": {
+     "pair_id": "2961f2512d71e94ef6acaebc8a65dfb97627ce6eb40458605fc3f556a6d8e3e7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda descreve o dashboard nativo de uso de tokens/sessões do Claude Code; direita descreve um painel HTML gerado com estatísticas de membros de um grupo de WhatsApp. Artefatos e conteúdos completamente distintos, apesar da palavra 'dashboard'.",
+     "left_evidence_refs_checked": [
+      "EV-0072",
+      "EV-0073"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f": {
+     "pair_id": "29b7d59679ccfd1997e594a015755fd85532634e594ab763d378f503a8435c3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Lista de capacidades de gerenciamento de grupos via Cloud Code versus configuração de parâmetros de um nó de envio de texto. Sem sobreposição material da proposição.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51": {
+     "pair_id": "330722d51b144b224e8032a8cdd822e2cbc63b82e24d12fc368dc771fee1aa51",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda trata de conector MCP restrito a sessão de nuvem e de skill como SOP; direita trata de teste de credenciais do Evolution no Cloud Code. Objetos e condições distintos, sem proposição comum.",
+     "left_evidence_refs_checked": [
+      "EV-1028",
+      "EV-1029"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ]
+    },
+    "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992": {
+     "pair_id": "34e683eecf6d669368a6bf674be7a456e1893d9487126df1637592bb7d3e9992",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Contexto em cloud.md direcionando o Cloud a usar o Evolution não tem relação material com a localização de campos no payload do webhook.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab": {
+     "pair_id": "34f0aead9cd515252438ee0f706007e5249fd784719897b59b894dccbdf9d8ab",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Instrução de contexto no cloud.md versus mapeamento de parâmetros do nó de envio de texto são proposições sobre objetos e etapas diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c": {
+     "pair_id": "373bea5b997313f2ef0f5f5a6c37f70d044b13d41f1ba5ffbf736976bd58f07c",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Capacidades do Cloud Code sobre grupos de WhatsApp versus procedimento de teste de webhook no n8n. Não há substância comum além da menção genérica a WhatsApp.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0022",
+      "EV-0023"
+     ]
+    },
+    "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59": {
+     "pair_id": "397dacc4c157240baa89cf7cbe57af176bbd9c5633957cc303ac4a41d93c4c59",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Origem da chave API (recebida por e-mail) não tem relação material com os caminhos dos campos no payload do webhook.",
+     "left_evidence_refs_checked": [
+      "EV-0069"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34": {
+     "pair_id": "4c64ca67ca8e76d2f600376b536be9769fe4ccc535c5b391af3301b8bcff4a34",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Extração de dados de múltiplos grupos versus procedimento de instalação local via script Docker no Windows. Assuntos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f": {
+     "pair_id": "4cc1ea5861513e62ec008ad23d28b07bc44f15fa8e42c4d67ef4a4ca2fa85e3f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Lista de capacidades de gerenciamento de grupos versus relato de um teste pontual de fluxo respondendo mensagem. Não há proposição substantiva compartilhada.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0075",
+      "EV-0076",
+      "EV-0077"
+     ]
+    },
+    "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7": {
+     "pair_id": "4eb6b577bfcdaf5c9cf6d6be6120c2edc8977e4450ee2304458fc132944befa7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda diz que o nome da instância é próprio de cada usuário no contexto de credenciais; direita descreve passos de configuração do webhook de eventos. Ambas na Evolution, mas com objetos e etapas distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731": {
+     "pair_id": "4ec2651aecd278ae91d993b16aa24ed197073ba0965ae6d995dd27c10f473731",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Papel do Cloud Code como orquestrador não guarda relação material com o mapeamento de instância e número no nó de envio de texto.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1": {
+     "pair_id": "4f6b184e97dbca12a19ebbb8ed116ca72638058ab83f8a3aa6439692093fc9b1",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Esquerda trata de janela de contexto e consumo de tokens do Sonnet 5; direita descreve conteúdo de um dashboard de membros de grupo. Objetos totalmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0126"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0087",
+      "EV-0088",
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb": {
+     "pair_id": "52c8de2d7da1411da888266ef2476ce59aa63ead59dfbb5b795edb1b9a1d1cfb",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "Teste de credenciais perguntando quais instâncias estão conectadas versus localização de campos no payload do webhook. Apenas o termo 'instância' é comum; proposições materialmente distintas.",
+     "left_evidence_refs_checked": [
+      "EV-0071",
+      "EV-0072",
+      "EV-0073",
+      "EV-0074"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac": {
+     "pair_id": "5bcfa1e9246d5469d7d1abe0fbca2c0a10f29dbad768ca5b81b58f6760442fac",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de extrair dados/contatos de vários grupos de WhatsApp; a direita trata da configuração de campos (instância e número) em um nó de envio de texto. Objetos e escopos materialmente distintos; apenas o termo 'Evolution' é compartilhado.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f": {
+     "pair_id": "623e0fffd19992388efb041178f24829c226fbf493209fa60acd483895aa0d4f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda instrui copiar e salvar o token do Evolution recebido; a direita descreve caminhos de campos no payload do webhook. São proposições sobre objetos diferentes, sem sobreposição substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0031",
+      "EV-0032"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6": {
+     "pair_id": "684b4e9a5e1c99f9084e53b750329a4ce2a6b03a674766df6b4022ff192c24c6",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o indicador de janela de contexto na interface do Claude Code; a direita distingue integração ativa via API de integração passiva por webhooks. Não há substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df": {
+     "pair_id": "6f89472b4d2da8dd90fe6c6d5b964cb4f3ea98b72bd253b45e9507e1940158df",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que um sistema específico (speed to lead) roda como cloud routine acionada por trigger remoto de API; a direita distingue conceitualmente uso ativo via API no Cloud Code versus scripts passivos com webhooks para grupos de WhatsApp. Objetos e escopos distintos; a menção comum a 'API' não estabelece relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0857"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f": {
+     "pair_id": "7dfed23fa86b11be25f11a88e3cd778a84ff947d6b67cae3212bf35f69fe712f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de conectar a instância via QR Code quando desconectada; a direita trata da configuração de webhook (events webhook, enabled, base64, messages upsert). São etapas e objetos distintos dentro da mesma ferramenta, sem sobreposição proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0041",
+      "EV-0042",
+      "EV-0043"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca": {
+     "pair_id": "7e2d9f10349f61f4e92c84694326985f53b5db70dc4c159f87a3a7f7727745ca",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o procedimento de criação da instância no manager; a direita descreve os caminhos dos campos no payload do webhook. A palavra 'instância' aparece em ambas, mas designa objetos e contextos distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309": {
+     "pair_id": "8042b77ac413e7389f5de5956f2a16c1cf807372384608fdb0509cc14d4ac309",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades de gerenciamento de grupos via método com Cloud Code; a direita especifica os parâmetros de um nó de leitura de mensagem. Escopos e objetos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0001",
+      "EV-0002",
+      "EV-0003"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0": {
+     "pair_id": "82ce7dbe5f9de03f58faee60fcc4c7d2aaed0e2601aaf4fcf2df54ea9a6066d0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o nome da instância é próprio de cada usuário (exemplo 'YouTube teste'); a direita lista caminhos de campos no payload do webhook, incluindo onde a instância aparece. São proposições sobre aspectos diferentes: nomeação/credencial versus localização de campo no JSON, sem convergência substantiva suficiente.",
+     "left_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db": {
+     "pair_id": "86709f5eccafa99b3434fd9d5a1bed0c52330ae84db1d307d356d02beccee7db",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda afirma que o Claude Code opera bem uma plataforma por causa da estrutura MCP; a direita trata da extração de dados de vários grupos de WhatsApp. Nenhuma substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0483"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0": {
+     "pair_id": "90c3bdad9ef1e6e286a0dee7973619062a8921df92e5a361481568aa351a90a0",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o e-mail da HostGator com dados de VPS e token após pagamento; a direita descreve a instalação local via script Docker para quem não tem VPS. Escopos distintos (provisionamento em VPS contratada vs. instalação local), sem incompatibilidade afirmada nem sobreposição proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd": {
+     "pair_id": "9abe18f717bf9dbba0576dcb6ebb27eb94b0cd365e42905cceaefebd95e1a9cd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata do primeiro acesso ao manager com a chave de API global; a direita trata dos caminhos de campos no payload do webhook. Objetos e etapas distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0038",
+      "EV-0039"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5": {
+     "pair_id": "a87279d702a437888c8268946cf43d79f9d0b8445493fb8fc14e72acb59e16a5",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata do e-mail de provisionamento com token e acesso ao VPS; a direita trata de caminhos de campos no payload do webhook. Não há substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0030",
+      "EV-0031"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257": {
+     "pair_id": "af33a5574d9bf46e529348ccfd3dbfee2641d31b97aa12d615f8618918dc1257",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades do Cloud Code sobre grupos de WhatsApp; a direita afirma que o teste do nó de ler mensagem marca a mensagem como visualizada no WhatsApp. Objetos e escopos distintos; apenas 'WhatsApp' é compartilhado.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0069"
+     ]
+    },
+    "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd": {
+     "pair_id": "b332081fd388a3a2ca9e5610f86ff5348b17c07bf624e605867a0b8448b6d0dd",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o indicador de janela de contexto e o que consome tokens; a direita descreve o efeito do contexto no cloud.md para perguntas sobre grupos. Ambas mencionam arquivos de memória/contexto, mas as proposições são sobre objetos diferentes (indicador de UI vs. comportamento de roteamento para o Evolution).",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0080"
+     ]
+    },
+    "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f": {
+     "pair_id": "b3aba1213808a022bf64802cdee2c3a683387981ebb1b12f93ff9867f2dbc66f",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata do cloud.md fornecer contexto ao Cloud Code; a direita trata dos parâmetros do nó de envio de texto. Sem substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea": {
+     "pair_id": "b43bc65331300d60d125b4ed6110f9a3970cb337aac7ba93d79a861bf05c85ea",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades do Cloud Code com acesso ao WhatsApp; a direita especifica campos do nó de leitura de mensagem. Objetos e escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50": {
+     "pair_id": "ba3f37cb04235f9b5449c6796dddb5e15180a7f2e6505e6aa15032a7c6dd8a50",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata do papel do cloud.md no Cloud Code; a direita descreve procedimento de instalação local via script Docker. Nenhuma sobreposição proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0078",
+      "EV-0079",
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3": {
+     "pair_id": "c0ab811ee9142b761467239d2498ea891cd89668ae888b07780bcbefdbf5dfb3",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda define o Cloud Code como orquestrador da conversa; a direita especifica campos de um nó de leitura de mensagem. Objetos distintos, sem relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0005"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0067",
+      "EV-0068",
+      "EV-0069"
+     ]
+    },
+    "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322": {
+     "pair_id": "c2faab287b72a57f260a203eb8b3f59da727f5fcc662a019083c3db0af526322",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata de extração de dados/contatos em múltiplos grupos; a direita lista caminhos de campos no payload do webhook. Sem substância comum.",
+     "left_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0027",
+      "EV-0028"
+     ]
+    },
+    "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617": {
+     "pair_id": "c85120167668f913d0274f01d0e1aaecb2c77e97ba22fe4a7c75be2c24eba617",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda enumera capacidades gerais do Cloud Code sobre grupos; a direita especifica parâmetros do nó de envio de texto. Escopos materialmente distintos.",
+     "left_evidence_refs_checked": [
+      "EV-0013",
+      "EV-0014"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0070",
+      "EV-0071"
+     ]
+    },
+    "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a": {
+     "pair_id": "e12a1596181f90bf45504c29c1e22f910474953a8b776542e5a4908da3c32d9a",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o arquivo .env onde se colocam URL, chave API global e nome da instância; a direita descreve a configuração do webhook na Evolution (colar URL do webhook, ativar enabled/base64/messages upsert). Ambas mencionam 'URL', mas são URLs e objetos de configuração diferentes.",
+     "left_evidence_refs_checked": [
+      "EV-0065"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18": {
+     "pair_id": "e1f87e09e165e6b78ec81541f25b64a1a060abac8637992ce682aba980ce5d18",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda trata do efeito do contexto no cloud.md sobre perguntas de grupo; a direita descreve procedimento de instalação local de Evolution com n8n. Sem sobreposição substantiva.",
+     "left_evidence_refs_checked": [
+      "EV-0080"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0089",
+      "EV-0090",
+      "EV-0091"
+     ]
+    },
+    "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39": {
+     "pair_id": "e2cd4f2b1bbea5c7da67c0314db1f175743a1fe55fe4b7a6db0d464916495a39",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve o indicador de janela de contexto no Claude Code; a direita trata da extração de dados em múltiplos grupos de WhatsApp. Nenhuma relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0123",
+      "EV-0124",
+      "EV-0125"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0093",
+      "EV-0094",
+      "EV-0095",
+      "EV-0096",
+      "EV-0098",
+      "EV-0099"
+     ]
+    },
+    "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7": {
+     "pair_id": "f057d5a8b18c010d8eaa31b8640d16119e52ab06eaaa397310d9f28f766dfee7",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve criação da instância e seu estado desconectado; a direita descreve a configuração de webhook na sessão. Etapas e objetos distintos, sem sobreposição proposicional.",
+     "left_evidence_refs_checked": [
+      "EV-0040",
+      "EV-0041"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0021",
+      "EV-0022"
+     ]
+    },
+    "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187": {
+     "pair_id": "f6d7aaca62bdc707988a7ef1af25ed9327d769849dc5917b11ba684a7c521187",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A esquerda descreve as propriedades concretas de uma rotina criada (execuções agendadas, trigger manual, webhook de API, Google Drive, chave no ambiente); a direita distingue conceitualmente uso ativo via API e uso passivo por webhooks em grupos de WhatsApp. Objetos e escopos distintos; a menção comum a 'web hook' não caracteriza relação material.",
+     "left_evidence_refs_checked": [
+      "EV-0469",
+      "EV-0470",
+      "EV-0471"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    },
+    "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691": {
+     "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+     "relation": "UNRELATED",
+     "direction": "NONE",
+     "scope_state": "DIFFERENT_SCOPE",
+     "relation_why": "A Claim da esquerda descreve um ato concreto de verificacao de um conector recem-adicionado no Claude/Qo (pedir na conversa que envie um SMS e confirmar a chegada da mensagem). A Claim da direita descreve uma distincao conceitual entre uso ativo via API a partir do Cloud Code e uma abordagem passiva com scripts online 24h recebendo webhooks, apresentada como possivel tema futuro. Os objetos sao distintos (validacao pratica de conector versus taxonomia ativo/passivo de integracao), as plataformas citadas sao diferentes e o unico ponto comum e a mencao generica a envio de mensagem, o que nao constitui relacao material. Nao ha convergencia substantiva, aninhamento de escopo, nem incompatibilidade sobre a mesma condicao.",
+     "left_evidence_refs_checked": [
+      "EV-0845",
+      "EV-0846"
+     ],
+     "right_evidence_refs_checked": [
+      "EV-0118",
+      "EV-0119",
+      "EV-0120",
+      "EV-0121"
+     ]
+    }
+   },
+   "status": "VALID"
+  }
+ },
+ "calls": [
+  {
+   "call_seq": 1,
+   "label": "RUN-1-CONTROL",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 9871,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 2243,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "85a7b8075f11bd1f74ae79f3db12859d18f15a278169188bf0beb3b4cad5fc80",
+   "output_sha256": "fdab5005d91b4776849f97b99d51f95844449aaf875201f31e7e388e4f5cf13c",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:47:08.124372-03:00",
+   "finished_at": "2026-08-31T11:47:49.492771-03:00",
+   "cost_estimate_usd_list_price": 0.15479500000000002,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 2,
+   "label": "RUN-1-BATCH-1",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 35362,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 5796,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "f711d1fa5fcd688808cc0e6d2a7934ea3f4008712b3ee2c1d4518c7c10bbc83a",
+   "output_sha256": "da386e15cac359af58bf72e500bc59a933b936c784a4958ca849b48adb408dde",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:47:49.496717-03:00",
+   "finished_at": "2026-08-31T11:49:24.270414-03:00",
+   "cost_estimate_usd_list_price": 0.499407,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 3,
+   "label": "RUN-1-BATCH-2",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 36830,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 5683,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "68a0d9c4770bc8833b4c33f6a97eb011d62a9a2f75e6fe42d597d000d5187d4c",
+   "output_sha256": "2c63a9ddf2068b7def742996e542b6793908ff3d27ddb36488948eb5a1db38ce",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:49:24.285447-03:00",
+   "finished_at": "2026-08-31T11:50:58.191952-03:00",
+   "cost_estimate_usd_list_price": 0.511262,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 4,
+   "label": "RUN-1-BATCH-3",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3602,
+    "cache_read_input_tokens": 1754,
+    "output_tokens": 439,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "ed3bff4ee3167c38485926c30e464a367c78cecab96f0df0aaa259bd26198490",
+   "output_sha256": "29c1c88512fd356cd3252f13af2911c055e1e65c49a94ec356f87e568b684b86",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:50:58.194735-03:00",
+   "finished_at": "2026-08-31T11:51:07.353846-03:00",
+   "cost_estimate_usd_list_price": 0.047882,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 5,
+   "label": "RUN-2-CONTROL",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 9871,
+    "output_tokens": 2365,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "85a7b8075f11bd1f74ae79f3db12859d18f15a278169188bf0beb3b4cad5fc80",
+   "output_sha256": "89e20126c899d6b16b4f55b2eff58964d4e9646588599629cd8e1427bdcf95cc",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:51:07.357261-03:00",
+   "finished_at": "2026-08-31T11:51:50.998583-03:00",
+   "cost_estimate_usd_list_price": 0.0640705,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 6,
+   "label": "RUN-2-BATCH-1",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 37116,
+    "output_tokens": 5805,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "f711d1fa5fcd688808cc0e6d2a7934ea3f4008712b3ee2c1d4518c7c10bbc83a",
+   "output_sha256": "7ec9e531bc9ac54cf637c41672f4d7468f36d3f947c5d36c676a09557c0add10",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:51:51.004320-03:00",
+   "finished_at": "2026-08-31T11:53:23.511160-03:00",
+   "cost_estimate_usd_list_price": 0.163693,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 7,
+   "label": "RUN-2-BATCH-2",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 38584,
+    "output_tokens": 5741,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "68a0d9c4770bc8833b4c33f6a97eb011d62a9a2f75e6fe42d597d000d5187d4c",
+   "output_sha256": "330762bb61055bd5e3aa932182b30cd7929dbaafc00b0c6872a73b2f950bdb3f",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:53:23.515360-03:00",
+   "finished_at": "2026-08-31T11:54:59.345985-03:00",
+   "cost_estimate_usd_list_price": 0.162827,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 8,
+   "label": "RUN-2-BATCH-3",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 5356,
+    "output_tokens": 450,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "ed3bff4ee3167c38485926c30e464a367c78cecab96f0df0aaa259bd26198490",
+   "output_sha256": "12738f423425fc0127c27533c2fc5862e06ca20497c548198db9bdb03c1c23f2",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:54:59.349188-03:00",
+   "finished_at": "2026-08-31T11:55:08.445107-03:00",
+   "cost_estimate_usd_list_price": 0.013937999999999999,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 9,
+   "label": "RUN-3-CONTROL",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 9871,
+    "output_tokens": 2351,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "85a7b8075f11bd1f74ae79f3db12859d18f15a278169188bf0beb3b4cad5fc80",
+   "output_sha256": "903795991eced2f84d2f517d98c2c01e0685b595b3db1201cf06129e5f8a7705",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:55:08.446859-03:00",
+   "finished_at": "2026-08-31T11:55:50.559114-03:00",
+   "cost_estimate_usd_list_price": 0.0637205,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 10,
+   "label": "RUN-3-BATCH-1",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 37116,
+    "output_tokens": 5673,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "f711d1fa5fcd688808cc0e6d2a7934ea3f4008712b3ee2c1d4518c7c10bbc83a",
+   "output_sha256": "6f7661809394182452eb97a7beb69448b600c4fd60097b41cd03b00c6da098f0",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:55:50.562514-03:00",
+   "finished_at": "2026-08-31T11:57:22.354703-03:00",
+   "cost_estimate_usd_list_price": 0.160393,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 11,
+   "label": "RUN-3-BATCH-2",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 38584,
+    "output_tokens": 6051,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "68a0d9c4770bc8833b4c33f6a97eb011d62a9a2f75e6fe42d597d000d5187d4c",
+   "output_sha256": "cdc66837d3f0738215885d2e0ea83e671e060e1cf18720f617d6edc2a289d95a",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:57:22.368965-03:00",
+   "finished_at": "2026-08-31T11:58:56.981188-03:00",
+   "cost_estimate_usd_list_price": 0.170577,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  },
+  {
+   "call_seq": 12,
+   "label": "RUN-3-BATCH-3",
+   "model_requested": "claude-opus-5",
+   "model_resolved": "claude-opus-5",
+   "stop_reason": "end_turn",
+   "num_turns": 1,
+   "thinking_tokens": 0,
+   "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 5356,
+    "output_tokens": 523,
+    "service_tier": "standard"
+   },
+   "system_sha256": "37dc021103d168d6a86ee45ee4068979de866f8cd4a89e7715bac6888f7bf1e9",
+   "user_sha256": "ed3bff4ee3167c38485926c30e464a367c78cecab96f0df0aaa259bd26198490",
+   "output_sha256": "00598c6eb58a9987bad9671fc063817d7d8b669bcb58bfcf48bb3f62117d9105",
+   "exit_code": 0,
+   "started_at": "2026-08-31T11:58:56.986694-03:00",
+   "finished_at": "2026-08-31T11:59:07.042132-03:00",
+   "cost_estimate_usd_list_price": 0.015763,
+   "auth_path": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+   "payg": false
+  }
+ ],
+ "executed_calls": 12
+}

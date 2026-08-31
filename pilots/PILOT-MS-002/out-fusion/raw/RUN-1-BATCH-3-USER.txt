@@ -1,0 +1,261 @@
+batch_id: BATCH-3
+expected_pair_count: 1
+expected_pair_ids:
+[
+ "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UM resultado para CADA pair_id recebido, sem omitir e sem duplicar.
+ANTES de finalizar a resposta, verifique que o numero de objetos em "judgments" e igual a
+expected_pair_count e que o conjunto de pair_id emitidos e IGUAL a expected_pair_ids.
+Se voce nao conseguir classificar um par, emita INDETERMINATE para ele — mas NUNCA o omita.
+
+PARES:
+[
+ {
+  "pair_id": "ff827d275be238106e43bbd19bac1bf205024d40ddc470b789b57e27530d4691",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "0f1ba2cd631eb30e46c899a7fd5984be240a50e4616fd71cd56815698cb7e8dc",
+    "entity_kind": "claim",
+    "local_id": "CL-0480"
+   },
+   "text": "The speaker verifies the integration by asking in the conversation whether it has Kuo access and, if so, to send a text to his number, then confirms the SMS arrived.",
+   "language": "en",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Claude / Qo",
+    "scope": "verifying a newly added connector",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0845",
+     "excerpt": "is requesting permission to access my business workspace. It's now connected which looks great. Okay. And if I go back to this conversation, I'll also say, could you check to see if you have Kuo access? And if so, can you send a number, a text to my number? Okay. And I don't know if you guys could see this, but I just got a message from this number. U basically",
+     "anchor": {
+      "local_id": "AN-0845",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0846",
+     "excerpt": "pretending that I was Dana. Um, hey Dana, just got your request. I know the AC house needs a look. Calling you in the next 5 minutes, Jonah. So, uh, this works, right? We just actually sent the SMS and it only really took me a few seconds. That's how easy it is to integrate different platforms if they are available in the Claude MCP sort of connector list. So, I'm going to go",
+     "anchor": {
+      "local_id": "AN-0846",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "73e03ac76856edbc6adb25717ed9a6ece285a94d63921a6ad6a508dd9bfe0889",
+    "entity_kind": "claim",
+    "local_id": "CL-0057"
+   },
+   "text": "O que foi mostrado é a parte ativa: o autor dá um comando no Cloud Code e ele usa a API para fazer alguma ação; a outra parte, passiva, seria criar scripts que ficam online 24 horas por dia e recebem webhooks, por exemplo, quando alguém entra num grupo, mandar mensagem no privado dando boas-vindas.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Cloud Code",
+    "scope": "integração via API vs. webhooks",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0118",
+     "excerpt": "pode ser tema também de um outro vídeo meu, né? Senão vou fazer aqui senão vai ficar muito longo. Que já é a parte é passiva, né? Aqui, já falando, ele",
+     "anchor": {
+      "local_id": "AN-0118",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0119",
+     "excerpt": "está chamando via API. Então, eu dou um comando aqui no no Cloud Code e aí ele usa a API para fazer alguma ação. Mas a gente pode estar criando scripts que que",
+     "anchor": {
+      "local_id": "AN-0119",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0120",
+     "excerpt": "online 24 horas por dia e que recebem webhooks, ou seja, ah, o cara entrou num grupo, aí tu vai lá e manda uma mensagem no privado da pessoa dando boas-vindas,",
+     "anchor": {
+      "local_id": "AN-0120",
+      "start_s": 0,
+      "end_s": 1
+     }
+    },
+    {
+     "evidence_id": "EV-0121",
+     "excerpt": "é um exemplo, tá? Então, dá para fazer isso também. Pode ser tema para outro vídeo, se vocês tiverem interesse, deixa nos comentários aí. Eu recomendo que",
+     "anchor": {
+      "local_id": "AN-0121",
+      "start_s": 0,
+      "end_s": 1
+     }
+    }
+   ]
+  }
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MS-002 RELATION JUDGMENT v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "batch_id",
+    "judgments"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "BATCH-1",
+        "BATCH-2",
+        "BATCH-3",
+        "BATCH-4",
+        "BATCH-5",
+        "BATCH-6",
+        "BATCH-7",
+        "BATCH-8",
+        "BATCH-9",
+        "BATCH-10",
+        "BATCH-11",
+        "BATCH-12",
+        "BATCH-13",
+        "BATCH-14",
+        "BATCH-15",
+        "BATCH-16",
+        "BATCH-17",
+        "BATCH-18",
+        "BATCH-19",
+        "BATCH-20",
+        "BATCH-21",
+        "BATCH-22",
+        "BATCH-23",
+        "BATCH-24"
+      ]
+    },
+    "judgments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pair_id",
+          "relation",
+          "direction",
+          "scope_state",
+          "relation_why",
+          "left_evidence_refs_checked",
+          "right_evidence_refs_checked"
+        ],
+        "properties": {
+          "pair_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "relation": {
+            "enum": [
+              "IDENTICAL",
+              "CORROBORATES",
+              "SPECIALIZES",
+              "CONTRADICTS",
+              "SUPERSEDES",
+              "UNRELATED",
+              "INDETERMINATE"
+            ]
+          },
+          "direction": {
+            "enum": [
+              "NONE",
+              "LEFT_TO_RIGHT",
+              "RIGHT_TO_LEFT"
+            ]
+          },
+          "scope_state": {
+            "enum": [
+              "EQUIVALENT_SCOPE",
+              "NESTED_COMPATIBLE_SCOPE",
+              "DIFFERENT_SCOPE",
+              "AMBIGUOUS_SCOPE"
+            ]
+          },
+          "relation_why": {
+            "type": "string",
+            "minLength": 15
+          },
+          "left_evidence_refs_checked": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          },
+          "right_evidence_refs_checked": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^EV-[0-9]{4}$"
+            }
+          }
+        }
+      }
+    }
+  },
+  "direction_compatibility_MECANICA": {
+    "IDENTICAL": [
+      "NONE"
+    ],
+    "CORROBORATES": [
+      "NONE"
+    ],
+    "CONTRADICTS": [
+      "NONE"
+    ],
+    "UNRELATED": [
+      "NONE"
+    ],
+    "INDETERMINATE": [
+      "NONE"
+    ],
+    "SPECIALIZES": [
+      "LEFT_TO_RIGHT",
+      "RIGHT_TO_LEFT"
+    ],
+    "SUPERSEDES": [
+      "LEFT_TO_RIGHT",
+      "RIGHT_TO_LEFT"
+    ]
+  },
+  "scope_compatibility_MECANICA": {
+    "IDENTICAL": [
+      "EQUIVALENT_SCOPE"
+    ],
+    "SPECIALIZES": [
+      "NESTED_COMPATIBLE_SCOPE",
+      "EQUIVALENT_SCOPE"
+    ],
+    "CONTRADICTS": [
+      "EQUIVALENT_SCOPE",
+      "NESTED_COMPATIBLE_SCOPE"
+    ],
+    "outros": "qualquer"
+  },
+  "evidence_equality": "set(left_evidence_refs_checked) == set(refs fornecidas do lado LEFT); idem RIGHT. Acrescimo, omissao ou estrangeira = INVALID."
+}
