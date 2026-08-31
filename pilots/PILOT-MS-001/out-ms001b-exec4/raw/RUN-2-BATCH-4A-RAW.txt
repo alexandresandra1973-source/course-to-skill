@@ -1,0 +1,104 @@
+{
+  "batch_id": "BATCH-4A",
+  "judgments": [
+    {
+      "pair_id": "cbacf98d38b5461066673aa6f49182b5171c24123c23d786c04d3d1d1bd82def",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A esquerda trata da conferencia do plano e do produto na tela de carrinho de contratacao do Evolution API; a direita trata da instalacao de community nodes 'n8n nodes Evolution api' dentro do n8n. Objetos, plataformas e etapas materialmente distintos; apenas a expressao 'Evolution API' e compartilhada, o que nao estabelece relacao.",
+      "left_evidence_refs_checked": ["EV-0018", "EV-0019"],
+      "right_evidence_refs_checked": ["EV-0014"]
+    },
+    {
+      "pair_id": "d4ce7eba9b469402c796a0d1f2922c0154867ef5c335abf34342ce67495b50c0",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "A esquerda descreve o procedimento de gerar e escanear QR Code para conectar o numero do WhatsApp a uma instancia desconectada; a direita afirma apenas a localizacao do campo 'instancia' na estrutura de dados (Body instance) de um payload. A palavra 'instancia' e compartilhada, mas os objetos (procedimento de conexao versus caminho de campo em payload) sao distintos.",
+      "left_evidence_refs_checked": ["EV-0031", "EV-0032", "EV-0033"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "d5c1356fdba6232ce338a49b420d0b69d4b64374a2096ca5e6e176a321eeba80",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: passos de UI para criar uma instancia no Evolution API e seu estado inicial desconectado. Direita: caminho do campo 'instancia' dentro de Body instance no payload. Compartilham somente o termo 'instancia'; nao ha proposicao substantiva comum, nem aninhamento de escopo.",
+      "left_evidence_refs_checked": ["EV-0030", "EV-0031"],
+      "right_evidence_refs_checked": ["EV-0023"]
+    },
+    {
+      "pair_id": "db1935a05138fbd71280bf75eb4e3e8753943a041a2f149a5b5c47ea2faa714e",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda trata de hospedagem e gratuidade do Evolution API (open source). Direita trata do procedimento de criacao de chave de API na OpenAI. Plataformas, objetos e etapas completamente distintos; nenhuma substancia comum.",
+      "left_evidence_refs_checked": ["EV-0009", "EV-0010"],
+      "right_evidence_refs_checked": ["EV-0010"]
+    },
+    {
+      "pair_id": "dbfecbcf92f8d66f5ce1d7e7a8256709884d5a15640f43b33d38c56e4ac50885",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: requisito de hospedar o Evolution API em VPS para operacao continua. Direita: enumeracao conceitual das pecas de um agente, especificamente as ferramentas que ele pode utilizar. Objetos e escopos materialmente distintos, sem sobreposicao proposicional.",
+      "left_evidence_refs_checked": ["EV-0010"],
+      "right_evidence_refs_checked": ["EV-0029", "EV-0030"]
+    },
+    {
+      "pair_id": "e13558771db4c23ba9382b756b8d37e8fcffbcc5140fb8cfbae5fce30c0b69f5",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda descreve o papel do Cloud Code como orquestrador na stack do gerenciador de grupos. Direita descreve a memoria de chat como segunda peca de um agente. Objetos distintos (componente orquestrador versus componente de memoria), sem afirmacao comum nem aninhamento.",
+      "left_evidence_refs_checked": ["EV-0004", "EV-0005", "EV-0006"],
+      "right_evidence_refs_checked": ["EV-0028", "EV-0029"]
+    },
+    {
+      "pair_id": "e199d662177c5867c3db1bef8d694181435fe6b04858942ad34be15a03b2c93f",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda afirma que, por usar API nao oficial do WhatsApp, nao se paga pela API oficial. Direita descreve passos de UI para gerar uma chave de API no Groq. O termo 'API' e compartilhado, mas os objetos (custo de API do WhatsApp versus criacao de chave no Groq) sao distintos.",
+      "left_evidence_refs_checked": ["EV-0007", "EV-0008"],
+      "right_evidence_refs_checked": ["EV-0008", "EV-0009"]
+    },
+    {
+      "pair_id": "e35c2c973e3acca85c641c54862ff31105809830691a24479d87486660069372",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: conexao do numero de WhatsApp via Evolution API como WhatsApp Web. Direita: passos para criar chave de API no Groq. Plataformas e objetos materialmente diferentes; coincidencia lexical em 'API' nao estabelece relacao.",
+      "left_evidence_refs_checked": ["EV-0007"],
+      "right_evidence_refs_checked": ["EV-0008", "EV-0009"]
+    },
+    {
+      "pair_id": "e3a4265b587a1d080db47c0c82bfb041b34eb8a4c924fd259c1560d6940e91a0",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: acesso ao painel do Evolution API exigindo sufixo '/manager' na URL apos pagina aparentemente de erro. Direita: criacao de chave de API na OpenAI. Plataformas, objetos e etapas distintos, sem substancia comum.",
+      "left_evidence_refs_checked": ["EV-0025", "EV-0026"],
+      "right_evidence_refs_checked": ["EV-0010"]
+    },
+    {
+      "pair_id": "e6eafc32dc7c64a25373fd9f2ed8412914427f397aa26d299b84cf99cc6b5211",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: passos de criacao de instancia no Evolution API. Direita: enumeracao dos cinco campos a serem salvos (quem mandou, instancia, mensagem, ID e nome). O termo 'instancia' aparece nos dois, mas designam objetos diferentes (entidade criada na UI versus campo de dado a armazenar); nao ha proposicao comum.",
+      "left_evidence_refs_checked": ["EV-0030", "EV-0031"],
+      "right_evidence_refs_checked": ["EV-0021", "EV-0022"]
+    },
+    {
+      "pair_id": "e74173ee58c74a2cf1c56d69a39b49eda097ebae2bbc0955cdded1c41e05c62d",
+      "relation": "UNRELATED",
+      "direction": "NONE",
+      "scope_state": "DIFFERENT_SCOPE",
+      "relation_why": "Esquerda: requisito de hospedagem e gratuidade/open source do Evolution API. Direita: verificacao de community nodes da Evolution api em settings do n8n antes de criar o workflow. Plataformas e objetos distintos; a mencao comum a 'Evolution api' nao gera relacao material.",
+      "left_evidence_refs_checked": ["EV-0009", "EV-0010"],
+      "right_evidence_refs_checked": ["EV-0013"]
+    }
+  ]
+}

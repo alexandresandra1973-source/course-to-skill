@@ -1,0 +1,842 @@
+batch_id: BATCH-4B
+expected_pair_count: 11
+expected_pair_ids:
+[
+ "ec0f3b3643ee1d532fc281f6f7a07c29ec057f462df6a2430885ce629585aa84",
+ "f033e675db9cb8f6d953033a1688c560c75c7253e21a68fabb825161ae16b24b",
+ "f04188bbc8be111143331feabdb7b5d98f9571064969c7f4893011c4783bafa9",
+ "f058b53383c0f56216415571941eb3e763578fff748829ebb3f06747552e3653",
+ "f41d01863f32035940237c5c6dd1fba5be189cd719865420ad7cf5066501b1c8",
+ "f5fa1fbc0bbb6b892845b967b2179364ba0a0642995c6755bb83c09bcb5dad76",
+ "f8cfcbf4de2a2ca6167cbb62fcfddcf68e88c899b011d36686ddf21b25e7310f",
+ "f90bc6da7597ce4195d293755d127329d4ea71d873c65b5ee8fb1ad9336764b0",
+ "f9b19a103d851e5412e1bf875d628bdfa6d50ef145dd2a3bd3c5cbd51ad0f148",
+ "fa48b553b7abac9c253785ff186968ad852f3be400e950459c6c6419dea2d136",
+ "fa899ac75958c770c2962905af9a910c67ccb5748c92f5c71488837c5aaca7a3"
+]
+
+COMPLETUDE — OBRIGATORIA:
+Retorne EXATAMENTE UM resultado para CADA pair_id recebido, sem omitir e sem duplicar.
+ANTES de finalizar a resposta, verifique que o numero de objetos em "judgments" e igual a
+expected_pair_count e que o conjunto de pair_id emitidos e IGUAL a expected_pair_ids.
+Se voce nao conseguir classificar um par, emita INDETERMINATE para ele — mas NUNCA o omita.
+
+PARES:
+[
+ {
+  "pair_id": "ec0f3b3643ee1d532fc281f6f7a07c29ec057f462df6a2430885ce629585aa84",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "text": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "tela do carrinho",
+    "stage": "carrinho"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0018",
+     "excerpt": "lá depois, enfim, fica legal. Vindo aqui em continuar para carrinho, aqui primeiro você vai só conferir se tá tudo certo, né? Se realmente tá o plano",
+     "anchor": {
+      "local_id": "AN-0018",
+      "start_s": 201.84,
+      "end_s": 214.16
+     }
+    },
+    {
+     "evidence_id": "EV-0019",
+     "excerpt": "correto, se tá aqui, ó, Evolution API, tá? O servidor tu você mantém aqui São Paulo, que é o mais próximo, tem no Brasil, né? Se tu tiver fora do Brasil,",
+     "anchor": {
+      "local_id": "AN-0019",
+      "start_s": 211.48,
+      "end_s": 222.68
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0026"
+   },
+   "text": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Groq",
+    "scope": null,
+    "stage": "obtenção de chave de API"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0008",
+     "excerpt": "aqui como uma opção porque o grock é gratuito então aqui no site do grock você Você vai vir em Dev console aqui no cantinho vai fazer seu login com o",
+     "anchor": {
+      "local_id": "AN-0008",
+      "start_s": 85.84,
+      "end_s": 95.399
+     }
+    },
+    {
+     "evidence_id": "EV-0009",
+     "excerpt": "Google e aqui do lado esquerdo Você vai vir em API Case clica para criar uma nova e dá um nome para ela marca essa caixinha clica em submit e agora ele vai",
+     "anchor": {
+      "local_id": "AN-0009",
+      "start_s": 93.439,
+      "end_s": 104.64
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f033e675db9cb8f6d953033a1688c560c75c7253e21a68fabb825161ae16b24b",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0010"
+   },
+   "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "após conectar com a chave de API global",
+    "stage": "próxima etapa"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0029",
+     "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu",
+     "anchor": {
+      "local_id": "AN-0029",
+      "start_s": 320.36,
+      "end_s": 332.64
+     }
+    },
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 330.28,
+      "end_s": 340.24
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0031"
+   },
+   "text": "A Instância fica em Body instance.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": null,
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0023",
+     "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B",
+     "anchor": {
+      "local_id": "AN-0023",
+      "start_s": 226.319,
+      "end_s": 244.56
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f04188bbc8be111143331feabdb7b5d98f9571064969c7f4893011c4783bafa9",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0012"
+   },
+   "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "se estiver fora do Brasil, verificar se o do México é mais próximo",
+    "platform": null,
+    "scope": "escolha da localidade do servidor no carrinho",
+    "stage": "carrinho"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0019",
+     "excerpt": "correto, se tá aqui, ó, Evolution API, tá? O servidor tu você mantém aqui São Paulo, que é o mais próximo, tem no Brasil, né? Se tu tiver fora do Brasil,",
+     "anchor": {
+      "local_id": "AN-0019",
+      "start_s": 211.48,
+      "end_s": 222.68
+     }
+    },
+    {
+     "evidence_id": "EV-0020",
+     "excerpt": "tu vê aqui se o do México aqui ele chega a ser mais mais próximo. Então, conferiu, vem aqui para continuar para verificação, aí aqui tu vai colocar aqui",
+     "anchor": {
+      "local_id": "AN-0020",
+      "start_s": 219.8,
+      "end_s": 231.72
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "EasyPanel",
+    "scope": null,
+    "stage": "instalação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0002",
+     "excerpt": "vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo",
+     "anchor": {
+      "local_id": "AN-0002",
+      "start_s": 38.48,
+      "end_s": 47.64
+     }
+    },
+    {
+     "evidence_id": "EV-0003",
+     "excerpt": "serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em",
+     "anchor": {
+      "local_id": "AN-0003",
+      "start_s": 45.32,
+      "end_s": 56.44
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f058b53383c0f56216415571941eb3e763578fff748829ebb3f06747552e3653",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "text": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "WhatsApp",
+    "scope": "ações de gerenciamento de grupos de WhatsApp",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0001",
+     "excerpt": "Nesse vídeo, eu vou mostrar para vocês como vocês podem estar gerenciando seus vários grupos de WhatsApp utilizando o Cloud Code. Seja criar vários grupos em",
+     "anchor": {
+      "local_id": "AN-0001",
+      "start_s": 0.0,
+      "end_s": 9.72
+     }
+    },
+    {
+     "evidence_id": "EV-0002",
+     "excerpt": "massa, é mudar foto de perfil, botar mudando a descrição desse grupo, adicionando pessoas, enviando uma mensagem para os grupos, dando",
+     "anchor": {
+      "local_id": "AN-0002",
+      "start_s": 7.72,
+      "end_s": 16.4
+     }
+    },
+    {
+     "evidence_id": "EV-0003",
+     "excerpt": "relatórios de membros desse grupo também. Então, tudo isso você consegue estar fazendo com esse método que eu vou te ensinar nesse vídeo. Então, fica até",
+     "anchor": {
+      "local_id": "AN-0003",
+      "start_s": 14.64,
+      "end_s": 23.0
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "text": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": null,
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "se fosse o cérebro do nosso agente a segunda peça é a memória de chat dele é nessa memória que ele vai guardar um histórico de mensagens que ele teve com",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 276.919,
+      "end_s": 286.96
+     }
+    },
+    {
+     "evidence_id": "EV-0029",
+     "excerpt": "alguma pessoa a terceira peça é uma muito legal que são as ferramentas que o agente pode utilizar por exemplo pesquisar na internet alterar planilhas",
+     "anchor": {
+      "local_id": "AN-0029",
+      "start_s": 284.8,
+      "end_s": 294.479
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f41d01863f32035940237c5c6dd1fba5be189cd719865420ad7cf5066501b1c8",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "para ficar funcionando 24 horas por dia",
+    "platform": "Evolution API / VPS",
+    "scope": "hospedagem do Evolution API",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0010",
+     "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da",
+     "anchor": {
+      "local_id": "AN-0010",
+      "start_s": 76.88,
+      "end_s": 88.44
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "text": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "n8n",
+    "scope": "início do workflow",
+    "stage": "construção do workflow"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0016",
+     "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na",
+     "anchor": {
+      "local_id": "AN-0016",
+      "start_s": 158.16,
+      "end_s": 171.56
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f5fa1fbc0bbb6b892845b967b2179364ba0a0642995c6755bb83c09bcb5dad76",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0027"
+   },
+   "text": "Por ser API não oficial, não se paga por API oficial.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "por ser API não oficial",
+    "platform": "WhatsApp",
+    "scope": "custo de API",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0007",
+     "excerpt": "seja, através dele, a gente vai conseguir estar conectando o nosso número do WhatsApp como se fosse um WhatsApp Web, tá? Então, é API não",
+     "anchor": {
+      "local_id": "AN-0007",
+      "start_s": 51.08,
+      "end_s": 61.92
+     }
+    },
+    {
+     "evidence_id": "EV-0008",
+     "excerpt": "oficial, ou seja, tu não vai pagar por API oficial. E após escanear lá, o Cloud Code vai ter acesso ao nosso WhatsApp de acordo com as coisas que a gente for",
+     "anchor": {
+      "local_id": "AN-0008",
+      "start_s": 59.56,
+      "end_s": 70.96
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0015"
+   },
+   "text": "Antes de criar o workflow no n8n, deve-se ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "n8n",
+    "scope": "antes de criar o workflow",
+    "stage": "preparação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0013",
+     "excerpt": "ver agora nós vamos criar o workflow aqui no n8n mas antes vem aqui em settings community nodes e veja se você tem os nodes da Evolution api instalados",
+     "anchor": {
+      "local_id": "AN-0013",
+      "start_s": 129.119,
+      "end_s": 140.8
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f8cfcbf4de2a2ca6167cbb62fcfddcf68e88c899b011d36686ddf21b25e7310f",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0005"
+   },
+   "text": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "criação de instância no Evolution API",
+    "stage": "criar instância"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 330.28,
+      "end_s": 340.24
+     }
+    },
+    {
+     "evidence_id": "EV-0031",
+     "excerpt": "Aqui tu coloca algum nome, por exemplo, eu vou colocar aqui YouTube teste. Venho aqui em salvar. Aparece aqui como desconectado, tá? Nesse caso aqui,",
+     "anchor": {
+      "local_id": "AN-0031",
+      "start_s": 338.64,
+      "end_s": 350.12
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "text": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "n8n",
+    "scope": "início do workflow",
+    "stage": "construção do workflow"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0016",
+     "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na",
+     "anchor": {
+      "local_id": "AN-0016",
+      "start_s": 158.16,
+      "end_s": 171.56
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f90bc6da7597ce4195d293755d127329d4ea71d873c65b5ee8fb1ad9336764b0",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0010"
+   },
+   "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "após conectar com a chave de API global",
+    "stage": "próxima etapa"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0029",
+     "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu",
+     "anchor": {
+      "local_id": "AN-0029",
+      "start_s": 320.36,
+      "end_s": 332.64
+     }
+    },
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 330.28,
+      "end_s": 340.24
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0036"
+   },
+   "text": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": null,
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0021",
+     "excerpt": "cinco que são os campos quem mandou que vai ser o número da pessoa o outro Campo vai ser a Instância que recebeu a mensagem o outro Campo vai ser a",
+     "anchor": {
+      "local_id": "AN-0021",
+      "start_s": 210.12,
+      "end_s": 220.799
+     }
+    },
+    {
+     "evidence_id": "EV-0022",
+     "excerpt": "mensagem depois o ID da mensagem e por último o nome da pessoa o campo quem mandou que é onde a gente vai salvar o número da pessoa que mandou a mensagem",
+     "anchor": {
+      "local_id": "AN-0022",
+      "start_s": 218.04,
+      "end_s": 230.92
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "f9b19a103d851e5412e1bf875d628bdfa6d50ef145dd2a3bd3c5cbd51ad0f148",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "text": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "primeiro acesso",
+    "platform": "Evolution API",
+    "scope": "diferença entre a tela do apresentador e a do espectador",
+    "stage": "primeiro acesso"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0027",
+     "excerpt": "acessar aqui, tá? No meu caso aqui, tá conectado as instâncias aqui porque eu tava gravando um vídeo pro YouTube, acabou dando um problema aqui com o",
+     "anchor": {
+      "local_id": "AN-0027",
+      "start_s": 306.64,
+      "end_s": 314.84
+     }
+    },
+    {
+     "evidence_id": "EV-0028",
+     "excerpt": "áudio, tive que regravar. Então, no caso de vocês vai aparecer assim, ó, dessa forma. Seu primeiro acesso. E aqui tu vai colocar aquela chave de API global",
+     "anchor": {
+      "local_id": "AN-0028",
+      "start_s": 312.12,
+      "end_s": 322.36
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0031"
+   },
+   "text": "A Instância fica em Body instance.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": null,
+    "scope": null,
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0023",
+     "excerpt": "fica dentro de body data Key remote JD a Instância fica em Body instance a mensagem fica em Body data message conversation o ID da mensagem Fica em B",
+     "anchor": {
+      "local_id": "AN-0023",
+      "start_s": 226.319,
+      "end_s": 244.56
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "fa48b553b7abac9c253785ff186968ad852f3be400e950459c6c6419dea2d136",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": "para ficar funcionando 24 horas por dia",
+    "platform": "Evolution API / VPS",
+    "scope": "hospedagem do Evolution API",
+    "stage": null
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0010",
+     "excerpt": "porque ele é open source, porém você precisa hospedar em uma VPS para ele ficar lá 24 horas por dia funcionando. E a VPS que a gente utiliza é a da",
+     "anchor": {
+      "local_id": "AN-0010",
+      "start_s": 76.88,
+      "end_s": 88.44
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "EasyPanel",
+    "scope": null,
+    "stage": "instalação"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0002",
+     "excerpt": "vida então ele é ideal para essas operações que nós vamos fazer para instalar Você vai no eas panel e clica nesse maizinho para adicionar um novo",
+     "anchor": {
+      "local_id": "AN-0002",
+      "start_s": 38.48,
+      "end_s": 47.64
+     }
+    },
+    {
+     "evidence_id": "EV-0003",
+     "excerpt": "serviço no seu projeto o ris fica aqui em cima nessa opção redis clica aqui e coloca um nome pro serviço eu vou colocar n8n redis vou deixar a senha em",
+     "anchor": {
+      "local_id": "AN-0003",
+      "start_s": 45.32,
+      "end_s": 56.44
+     }
+    }
+   ]
+  }
+ },
+ {
+  "pair_id": "fa899ac75958c770c2962905af9a910c67ccb5748c92f5c71488837c5aaca7a3",
+  "left": {
+   "claim_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0010"
+   },
+   "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution API",
+    "scope": "após conectar com a chave de API global",
+    "stage": "próxima etapa"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0029",
+     "excerpt": "que tá lá no seu Gmail. Você vai colar aqui, conectar e pronto. Tu vai acessar essa página aqui, certo? E a partir daqui você vai poder tá conectando o seu",
+     "anchor": {
+      "local_id": "AN-0029",
+      "start_s": 320.36,
+      "end_s": 332.64
+     }
+    },
+    {
+     "evidence_id": "EV-0030",
+     "excerpt": "número do WhatsApp, que é justamente, ó, a próxima etapa, criar uma instância e conectar o número do WhatsApp. Então, você vem aqui, clica aqui em instância.",
+     "anchor": {
+      "local_id": "AN-0030",
+      "start_s": 330.28,
+      "end_s": 340.24
+     }
+    }
+   ]
+  },
+  "right": {
+   "claim_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0011"
+   },
+   "text": "Na Evolution, clica-se na sessão, vai-se em events webhook e cola-se o URL ali.",
+   "language": "pt",
+   "qualifiers": {
+    "audience": null,
+    "condition": null,
+    "platform": "Evolution api",
+    "scope": null,
+    "stage": "configuração do webhook"
+   },
+   "evidence": [
+    {
+     "evidence_id": "EV-0016",
+     "excerpt": "à pessoa isso tudo através do WhatsApp então para começar adiciona um node de web Hook configura o método dele como post e copia o URL de teste vamos lá na",
+     "anchor": {
+      "local_id": "AN-0016",
+      "start_s": 158.16,
+      "end_s": 171.56
+     }
+    },
+    {
+     "evidence_id": "EV-0017",
+     "excerpt": "Evolution clica na sua sessão vem events web Hook e cola o URL aqui aqui veja se a opção enabled está ligada a opção de base 64 também e lá embaixo o evento",
+     "anchor": {
+      "local_id": "AN-0017",
+      "start_s": 168.239,
+      "end_s": 183.959
+     }
+    }
+   ]
+  }
+ }
+]
+
+SCHEMA DE SAIDA:
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MS-001B RELATION JUDGMENT v2",
+  "type": "object", "additionalProperties": false,
+  "required": ["batch_id", "judgments"],
+  "properties": {
+    "batch_id": {"type": "string", "enum": ["BATCH-1", "BATCH-2", "BATCH-3", "BATCH-4A", "BATCH-4B"]},
+    "judgments": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["pair_id", "relation", "direction", "scope_state", "relation_why",
+                     "left_evidence_refs_checked", "right_evidence_refs_checked"],
+        "properties": {
+          "pair_id": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "relation": {"enum": ["IDENTICAL","CORROBORATES","SPECIALIZES","CONTRADICTS",
+                                "SUPERSEDES","UNRELATED","INDETERMINATE"]},
+          "direction": {"enum": ["NONE","LEFT_TO_RIGHT","RIGHT_TO_LEFT"]},
+          "scope_state": {"enum": ["EQUIVALENT_SCOPE","NESTED_COMPATIBLE_SCOPE",
+                                   "DIFFERENT_SCOPE","AMBIGUOUS_SCOPE"]},
+          "relation_why": {"type": "string", "minLength": 15},
+          "left_evidence_refs_checked": {"type":"array","minItems":1,
+            "items":{"type":"string","pattern":"^EV-[0-9]{4}$"}},
+          "right_evidence_refs_checked": {"type":"array","minItems":1,
+            "items":{"type":"string","pattern":"^EV-[0-9]{4}$"}}
+        }
+      }
+    }
+  },
+  "direction_compatibility_MECANICA": {
+    "IDENTICAL": ["NONE"], "CORROBORATES": ["NONE"], "CONTRADICTS": ["NONE"],
+    "UNRELATED": ["NONE"], "INDETERMINATE": ["NONE"],
+    "SPECIALIZES": ["LEFT_TO_RIGHT","RIGHT_TO_LEFT"],
+    "SUPERSEDES": ["LEFT_TO_RIGHT","RIGHT_TO_LEFT"]
+  },
+  "scope_compatibility_MECANICA": {
+    "IDENTICAL": ["EQUIVALENT_SCOPE"],
+    "SPECIALIZES": ["NESTED_COMPATIBLE_SCOPE","EQUIVALENT_SCOPE"],
+    "CONTRADICTS": ["EQUIVALENT_SCOPE","NESTED_COMPATIBLE_SCOPE"],
+    "outros": "qualquer"
+  },
+  "evidence_equality": "set(left_evidence_refs_checked) == set(refs fornecidas do lado LEFT); idem RIGHT. Acrescimo, omissao ou estrangeira = INVALID."
+}

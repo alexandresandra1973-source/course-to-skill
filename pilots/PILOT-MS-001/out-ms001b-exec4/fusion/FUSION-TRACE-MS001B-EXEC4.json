@@ -1,0 +1,2091 @@
+{
+ "execution": "EXEC-4",
+ "transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+ "all_runs_valid": true,
+ "completeness": {
+  "RUN-1": {
+   "status": "VALID",
+   "n_judgments": 97,
+   "control_ok": true,
+   "batches": {
+    "BATCH-1": 25,
+    "BATCH-2": 25,
+    "BATCH-3": 25,
+    "BATCH-4A": 11,
+    "BATCH-4B": 11
+   },
+   "unknown_pairs": null,
+   "missing": 0,
+   "duplicates": null
+  },
+  "RUN-2": {
+   "status": "VALID",
+   "n_judgments": 97,
+   "control_ok": true,
+   "batches": {
+    "BATCH-1": 25,
+    "BATCH-2": 25,
+    "BATCH-3": 25,
+    "BATCH-4A": 11,
+    "BATCH-4B": 11
+   },
+   "unknown_pairs": null,
+   "missing": 0,
+   "duplicates": null
+  },
+  "RUN-3": {
+   "status": "VALID",
+   "n_judgments": 97,
+   "control_ok": true,
+   "batches": {
+    "BATCH-1": 25,
+    "BATCH-2": 25,
+    "BATCH-3": 25,
+    "BATCH-4A": 11,
+    "BATCH-4B": 11
+   },
+   "unknown_pairs": null,
+   "missing": 0,
+   "duplicates": null
+  }
+ },
+ "relation_distribution": {
+  "RUN-1": {
+   "UNRELATED": 97
+  },
+  "RUN-2": {
+   "UNRELATED": 97
+  },
+  "RUN-3": {
+   "UNRELATED": 97
+  }
+ },
+ "direction_distribution": {
+  "RUN-1": {
+   "NONE": 97
+  },
+  "RUN-2": {
+   "NONE": 97
+  },
+  "RUN-3": {
+   "NONE": 97
+  }
+ },
+ "scope_distribution": {
+  "RUN-1": {
+   "DIFFERENT_SCOPE": 97
+  },
+  "RUN-2": {
+   "DIFFERENT_SCOPE": 97
+  },
+  "RUN-3": {
+   "DIFFERENT_SCOPE": 97
+  }
+ },
+ "stability_counts": {
+  "STABLE": 97
+ },
+ "stability": {
+  "0301f2981c5ef91c19f11d116a89b25c015cfe6d334e0863f6cf4b0d878e2359": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "036db4af3e74f00434b73a26e3a57e7611fa9882d879bb46d07856cdc86dc2a8": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "09d971e1348856a2addd7f7c051fdea081881003f6cfd0bc829ea7299ce52a2a": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "0ae11c79bdf3c3cf1bf9a69af605b52f023e4d581a0aeaeeb756ef11d36f56f1": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "0c0ecad08a7df85e8c170f15213d5cade36c4c5ddf449ddeb0c9eb9829152b4d": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "0da616b460f32df1071009b83fdca2eba86a54b9d8fb3dabf327bf99e700c43f": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "0ddaf6497e30aa67276cf6b984f3604e2ce1b244ff1953146247ad857e1ccf7b": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "0e02b090fd601c05089667f9f9787af0374701fb138e4969f79a1baaaf76391c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "10a58452d96f5b81de0d1bac95e01d3d83a61b8efdb9a3313f446ba82582730e": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "1a2a8b485ebcb0764a931a68111b2529bea01fe7cf5d0094aaf31e77b24e4f25": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "1a419d9da8476a7e91fa72471c0bf08740673d1685fafa468be10210782714d1": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "1f0647376eee7b813483b784d58805b10af4eb706bbe53bea165f0692b4c75a6": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "21aa6cc90cd8085217d760c98563a4d3a23b66b32faab9be72e7d9f13aed9af0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "26351b3614c516ee7f35750809b19ac289be497a2897bb0f066d0c3c1eff312e": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "27d2d37ca60cc596561bf421ff0aeabad1187939885e9ad8970e7653b31ade4c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "28c32ef3a75f7aeb92390b742208cb588530357d41ce86ca2cc95db2cbf1b051": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "29c79f6049ceb789af44a41225fbfcdc9ac02e4ad24cf3eb906ae2bbe6e70cf3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "2a1d429b6bad615be8f4c74bba0ba9ca8f9c6712ba4b5fc62e758d719a20618f": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "2a1fa96851d2b5bd19b7b0cbae49d9cafe17675a2214ec025209c05e7257a7ed": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "2b4f3623c54b4ea7ada4c814dcbdab84079ded60f1a90663baf644368612b7e3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "2d642d3881edbd10ed8da0a0c9836ab503193b684e73bd449c65cf33713ce557": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "2de6e86e33865e0ff52bca7ddee9265e5b78569a9ecfb418c1178bd022109ebb": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "34a84ac79e580d1ca2c38c647bcccc9b6c7eb1fd05592d106fad282a923d1f06": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "37a45a86fae8acd2ffde1cfdfac2c3b2db2b95301988ebc928fd9d107332931d": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "380d3655883c093808c2229db12c773b7bd1ba3f521961bd8a2aca47411d414c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "3b7e86d884e4cecfb1985228b558b56df485fcad0e3f1c7939ed3226fc87ffad": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "3cd9b6fe3f4b2b51e3cb07d5c91a3097af357dd81f1866c3f06b009607419bd0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "3f2ec913f2613d4c8def5240ef6f3b74a6c0f34d92e3c0e9c2cba00808551ecc": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "405ba540c9bff19cd7bdaf58ebb433e195749cb13b55320b25ed132867a6d854": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "4b4b26661bdca61a5d51db1c23dee2c832df1de6a270b2226967f33549a9f078": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "4eb32b0d19cebb6c83f59ad38b62657613028ad9af731e69f8d6c249711e9d3c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "4ed1bc89ac4db8bc3306e5594bf1f1303669946bbca2cc7440a36e24c7385436": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "508f94cd36f217586b4140954cdf22a00ba373e25dcdbec76c1ee9470f8719a5": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "558cdd6194743a2677c04d2c9fb5f03031dae7bea48945770ca71bca00da0c64": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "56e213a2429847f1a15c77071f6ba504e063ebee4baf15a62571c07aea34b645": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "588186057088f10b370114bccc2b411e131d6b6eba2acf8ebfcd25a7aee9abe5": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "5b665f12c8b290fc18a108a4906ff062c75dc81aa5f967a4d85d393442eed07a": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "5c7259c2055bef70336b5c8b6d027edf8fa9ef18b378cdcf407334c2f9f0fdad": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "5c99e9ed3fc9d3ced1e12700f84c0087c1f21dfe1676ac6764b50a1b6cbd63a7": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "5d7450f858af55c6bb1f7fbaa6eb3170849ab989439089d293dae4cef93f7eef": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "63d47b3faad24a755ea1e2ed2050b14caa202b83fd9343903c14b3aa5fe548c8": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "646aff13dc5b36ebfb54cfe329f0a60063b14452e1fcea83a7f0a03a4f93f496": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "64f65fd19f8abb75449077cbe3debde209064e390fce2d74764bf925121e1f38": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "6b5aebf19399a0c4e4b20dfa34a8cb1ada3b2ca28584afe0bedb840ca18fa627": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "6e2efe8c69276abdda0e5d01a29804e91bd005550b84f161457561dab5e4206e": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "6e6d285597cabad85a42b9c83784939d2f394cc58a9691018cb2fe9043376af1": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "7108209e9c7a6956bc689ff09679dc0a7551faae51eaedd87ec7741a99bea169": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "73a7eb7306e314a81e469108127d2ecbf5c66c49d02bcb3ee5aad887daee5ca0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "7814bc52c97a687f7e799591d82fcf74c725398e87cf4408e66cb7bd610a0533": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "7c01f1728d32dcd36782b4d05cf9a8b500a257463e2fc63dd9f2dc1d5a3619f3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "816377768e948b28a2ca9cf6bcd40db164dbce10b198c760fa3c187395bdfee1": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "81bbe3ceeb0fe704b4d11a183c43799f0722903bc0723f5d6d513582333d583c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "840f070d8831e583447689a818fd6f50749fd9804757cea74d6919ee185ad74a": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "860c4110e3166623c5354afd3d381802ac6e6a594aa1426ff497b24bb73480af": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "89cf3c59180f94404e38686af98d4d0fe38ca5f5f5d8a9888e88f652fba1e0e9": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "8a588281cc3ebbb50be4fced93a7ddad99cb835b183d066ff8f75cd5e6aefb5b": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "8a7a911a9e0c5e69cb028ff5db2f2d3b4039c4dc4bac831d1b94baefb5ddba12": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "8bd70e28a6cbb91c228d23645f4f0fab7bef2213bece9ca4d4bc4b631872cee5": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "8e558d35e414275d3daac517803e816a805f38315a4f19bab940b5bdd8f62b47": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "8ecc55b73a0d672821c3f30be425455b77ad11e7eca49089012e7150ec8a6c13": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "914bc7eb3a6868f1c8c90bde49280ed70d3cc7dd52994be78aaffc663cce13ad": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "926ef70739bba7f84964e2e949c6ce40debcb93b57892a70ea0fd893479d8ccd": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "938d0b7d892748bf656316003141623e04b36f457e8f6c360c23509f169d3a24": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "95aea92f2d6d2fcd570fcc89ec2224978d3993a345186c70bba9f31b92b5031e": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "960e5b962a52adc117229d0022dd9d35ec44ffc3783df3053e021e99d73b951a": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "969efef7fec695c87df70e548a120da69b4fbc46e76f96282c6fea31fe7692e4": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "9f636abac5fe62455b698a732caef4242fe8878b8ba193f6e7edec456e207580": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "a13df05450ca5f53ca7e7c87a7a8503650f48ea96773bafc9f81543e42f78442": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "a5a751fdcc67f3e40c10c6f60a4251d252cfeb45bed7f8df728fe8ddd007b62c": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "b0297aead02cdd2b1b16d80b44357bfe0b34e818cbca58cdca1a52e3703b3c68": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "b880181835e8c76bf1655decbc9dbf8658d28097da86ecfcdb092b20a6242d9b": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "c470ffee0961f934b2a5051f031c566c3b11fb15b16dbd434bae7f89d6dee655": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "c47f8ba0ff1ba28507b0b27ee6dcbad3c0157549047aa3467d6fff71d34598a3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "c686a54aaf2527554975bb011244d2a4a4e45c201c03d7f65146acd841a5a873": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "c71f58a895d5a2f98d7b4b23320770bcf8978877ed8f25c5f85e0122f6624cd3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "cbacf98d38b5461066673aa6f49182b5171c24123c23d786c04d3d1d1bd82def": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "d4ce7eba9b469402c796a0d1f2922c0154867ef5c335abf34342ce67495b50c0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "d5c1356fdba6232ce338a49b420d0b69d4b64374a2096ca5e6e176a321eeba80": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "db1935a05138fbd71280bf75eb4e3e8753943a041a2f149a5b5c47ea2faa714e": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "dbfecbcf92f8d66f5ce1d7e7a8256709884d5a15640f43b33d38c56e4ac50885": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e13558771db4c23ba9382b756b8d37e8fcffbcc5140fb8cfbae5fce30c0b69f5": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e199d662177c5867c3db1bef8d694181435fe6b04858942ad34be15a03b2c93f": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e35c2c973e3acca85c641c54862ff31105809830691a24479d87486660069372": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e3a4265b587a1d080db47c0c82bfb041b34eb8a4c924fd259c1560d6940e91a0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e6eafc32dc7c64a25373fd9f2ed8412914427f397aa26d299b84cf99cc6b5211": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "e74173ee58c74a2cf1c56d69a39b49eda097ebae2bbc0955cdded1c41e05c62d": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "ec0f3b3643ee1d532fc281f6f7a07c29ec057f462df6a2430885ce629585aa84": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f033e675db9cb8f6d953033a1688c560c75c7253e21a68fabb825161ae16b24b": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f04188bbc8be111143331feabdb7b5d98f9571064969c7f4893011c4783bafa9": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f058b53383c0f56216415571941eb3e763578fff748829ebb3f06747552e3653": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f41d01863f32035940237c5c6dd1fba5be189cd719865420ad7cf5066501b1c8": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f5fa1fbc0bbb6b892845b967b2179364ba0a0642995c6755bb83c09bcb5dad76": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f8cfcbf4de2a2ca6167cbb62fcfddcf68e88c899b011d36686ddf21b25e7310f": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f90bc6da7597ce4195d293755d127329d4ea71d873c65b5ee8fb1ad9336764b0": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "f9b19a103d851e5412e1bf875d628bdfa6d50ef145dd2a3bd3c5cbd51ad0f148": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "fa48b553b7abac9c253785ff186968ad852f3be400e950459c6c6419dea2d136": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  },
+  "fa899ac75958c770c2962905af9a910c67ccb5748c92f5c71488837c5aaca7a3": {
+   "state": "STABLE",
+   "relations": [
+    "UNRELATED",
+    "UNRELATED",
+    "UNRELATED"
+   ],
+   "directions": [
+    "NONE",
+    "NONE",
+    "NONE"
+   ],
+   "scope_states": [
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE",
+    "DIFFERENT_SCOPE"
+   ],
+   "scope_materially_compatible": true
+  }
+ },
+ "bc_bucket_descriptive": {
+  "BC1_genuine_overlap": {
+   "semantics": "blocker retention / coverage probe — SEM expected relation por par",
+   "declared_pairs": 45,
+   "cartesian_product": 45,
+   "retained_pairs_in_pairset_v1": 27,
+   "relation_distribution_per_run": {
+    "RUN-1": {
+     "UNRELATED": 27
+    },
+    "RUN-2": {
+     "UNRELATED": 27
+    },
+    "RUN-3": {
+     "UNRELATED": 27
+    }
+   },
+   "stability_distribution": {
+    "STABLE": 27
+   }
+  },
+  "BC2_scope_difference": {
+   "semantics": "blocker retention / coverage probe — SEM expected relation por par",
+   "declared_pairs": 24,
+   "cartesian_product": 24,
+   "retained_pairs_in_pairset_v1": 7,
+   "relation_distribution_per_run": {
+    "RUN-1": {
+     "UNRELATED": 7
+    },
+    "RUN-2": {
+     "UNRELATED": 7
+    },
+    "RUN-3": {
+     "UNRELATED": 7
+    }
+   },
+   "stability_distribution": {
+    "STABLE": 7
+   }
+  },
+  "BC3_specialization": {
+   "semantics": "blocker retention / coverage probe — SEM expected relation por par",
+   "declared_pairs": 78,
+   "cartesian_product": 78,
+   "retained_pairs_in_pairset_v1": 55,
+   "relation_distribution_per_run": {
+    "RUN-1": {
+     "UNRELATED": 55
+    },
+    "RUN-2": {
+     "UNRELATED": 55
+    },
+    "RUN-3": {
+     "UNRELATED": 55
+    }
+   },
+   "stability_distribution": {
+    "STABLE": 55
+   }
+  },
+  "BC4_false_conflict": {
+   "semantics": "blocker retention / coverage probe — SEM expected relation por par",
+   "declared_pairs": 21,
+   "cartesian_product": 21,
+   "retained_pairs_in_pairset_v1": 9,
+   "relation_distribution_per_run": {
+    "RUN-1": {
+     "UNRELATED": 9
+    },
+    "RUN-2": {
+     "UNRELATED": 9
+    },
+    "RUN-3": {
+     "UNRELATED": 9
+    }
+   },
+   "stability_distribution": {
+    "STABLE": 9
+   }
+  },
+  "BC5_unrelated": {
+   "semantics": "blocker retention / coverage probe — SEM expected relation por par",
+   "declared_pairs": 36,
+   "cartesian_product": 36,
+   "retained_pairs_in_pairset_v1": 0
+  },
+  "(sem bucket)": {
+   "retained_pairs_in_pairset_v1": 20,
+   "relation_distribution_per_run": {
+    "RUN-1": {
+     "UNRELATED": 20
+    },
+    "RUN-2": {
+     "UNRELATED": 20
+    },
+    "RUN-3": {
+     "UNRELATED": 20
+    }
+   }
+  }
+ },
+ "contradiction_registry": [],
+ "candidate_transport": {
+  "B": {
+   "n_eligible": 8,
+   "n_not_eligible": 0
+  },
+  "C": {
+   "n_eligible": 8,
+   "n_not_eligible": 4
+  }
+ },
+ "typed_identity": {
+  "pairset_refs": true,
+  "candidate_refs": true,
+  "pair_inputs_refs": true,
+  "all": true
+ },
+ "provenance_ledger": {
+  "source_package_hash_B": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+  "source_package_hash_C": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+  "seal_registry_sha256": "c77e5112dfea9153e94d6546300d3a48d6b0be4b9b3a9715237277208c34c3bd",
+  "blocker_design_hash": "fa62c8159f2cef53ce435d56b3f7f68aedea950acb6ea47822bff8767059cba8",
+  "blocker_version": "v0.3",
+  "blocker_variant": "V1",
+  "pairset_hash": "a0b116d93f754576cf8fbbbf6eb1757b2837b7ea18b415f8e2bce30c1ee517f5",
+  "pairset_n": 97,
+  "relation_taxonomy_hash": "377879d2cd6a3e5460279466842b7549eda3898ab070b13aae64ab7e0dd3f5eb",
+  "relation_prompt_hash": "0324219d1f62bbba9578894c41599794e7563be4a3d952d787a9ee61c5c34500",
+  "relation_schema_hash": "62f37d6d889c923d88505a6d4b6d3cee09f7a0a74d9bd55b6bf217ea7a2c5fba",
+  "relation_schema_version": "v2",
+  "judge_controls_hash": "761785cd26e07764ad06ab09fdd512ede78a24dbd7d70c5a09e867a8ad1879ff",
+  "partition_hash": "62c3fccae8b4acdff984e68bce9e33499e37bea94daec813f6eff6835538debc",
+  "model_policy_hash": "031103510cd0ae150e934d6fee1de45989371faacd0cdc7c95b0ac883c0a960a",
+  "validator_hash": "7283a123dd59dda2205a1e47a486fef94f279eed4ef1197fb273b1350cbb6dd5",
+  "orchestrator_hash": "c53f88fd6d0ab89b82c7fd477c14dde1fee20b13432e5a74fa3cd89496148e31",
+  "opening_record_exec4_hash": "628a122de66352035f99adf71221357b99da49430d23ddb0e6850a66b52b3955",
+  "bc_errata_hash": "737d74b5e6b021c5a1e8ada43b93418e87cb1dc1371f6e7b4bd181258931088e",
+  "model_transport": "CLAUDE_CODE_MAX_OAUTH_PRINT_MODE",
+  "claude_code_version": "2.1.251",
+  "payg_api_used": 0,
+  "provenance_complete": true,
+  "pairs_without_anchor": []
+ },
+ "kills": {
+  "PAIRSET_DRIFT": false,
+  "PACKAGE_DRIFT": false,
+  "SILENT_MAJORITY": false,
+  "MTX_IN_FUSION": false,
+  "HARD_CAP_EXCEEDED": false,
+  "MODEL_DRIFT": false,
+  "PAYG_API_USED": false,
+  "POST_RESULT_TUNING": false
+ },
+ "fusion_id": "345fd8fc6d5fbdf5d164ddd290aef3cd6a2d4c7d451e722b392cd0f024c08306",
+ "executed_calls": 18,
+ "hard_cap": 18
+}
