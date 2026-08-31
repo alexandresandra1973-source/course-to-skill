@@ -1,0 +1,315 @@
+{
+ "metrics": {
+  "V1": {
+   "raw": 1080,
+   "retained": 97,
+   "blocked": 983,
+   "reduction_pct": 91.02,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 27,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 7,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 55,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 9,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 1,
+   "dist_concepts": {
+    "1": 83,
+    "2": 14
+   },
+   "dist_nonproc": {
+    "1": 40,
+    "2": 25,
+    "4": 5,
+    "3": 9,
+    "0": 18
+   },
+   "judge_calls_b20": 5,
+   "judge_calls_b25": 4
+  },
+  "V2": {
+   "raw": 1080,
+   "retained": 79,
+   "blocked": 1001,
+   "reduction_pct": 92.69,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 23,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 4,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 55,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 9,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 0,
+   "dist_concepts": {
+    "1": 65,
+    "2": 14
+   },
+   "dist_nonproc": {
+    "1": 40,
+    "2": 25,
+    "4": 5,
+    "3": 9
+   },
+   "judge_calls_b20": 4,
+   "judge_calls_b25": 4
+  },
+  "V3": {
+   "raw": 1080,
+   "retained": 39,
+   "blocked": 1041,
+   "reduction_pct": 96.39,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 11,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 3,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 32,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 6,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 0,
+   "dist_concepts": {
+    "2": 14,
+    "1": 25
+   },
+   "dist_nonproc": {
+    "2": 25,
+    "4": 5,
+    "3": 9
+   },
+   "judge_calls_b20": 2,
+   "judge_calls_b25": 2
+  },
+  "V4": {
+   "raw": 1080,
+   "retained": 14,
+   "blocked": 1066,
+   "reduction_pct": 98.7,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 6,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": false
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 14,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": false
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 0,
+   "dist_concepts": {
+    "2": 14
+   },
+   "dist_nonproc": {
+    "2": 3,
+    "4": 4,
+    "3": 7
+   },
+   "judge_calls_b20": 1,
+   "judge_calls_b25": 1
+  },
+  "V5": {
+   "raw": 1080,
+   "retained": 79,
+   "blocked": 1001,
+   "reduction_pct": 92.69,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 23,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 4,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 55,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 9,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 0,
+   "dist_concepts": {
+    "1": 65,
+    "2": 14
+   },
+   "dist_nonproc": {
+    "1": 40,
+    "2": 25,
+    "4": 5,
+    "3": 9
+   },
+   "judge_calls_b20": 4,
+   "judge_calls_b25": 4
+  },
+  "V6": {
+   "raw": 1080,
+   "retained": 14,
+   "blocked": 1066,
+   "reduction_pct": 98.7,
+   "controls": {
+    "BC1_genuine_overlap": {
+     "n_pairs": 45,
+     "retained": 6,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC2_scope_difference": {
+     "n_pairs": 24,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": false
+    },
+    "BC3_specialization": {
+     "n_pairs": 78,
+     "retained": 14,
+     "status": "RETAIN",
+     "ok": true
+    },
+    "BC4_false_conflict": {
+     "n_pairs": 21,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": false
+    },
+    "BC5_unrelated": {
+     "n_pairs": 36,
+     "retained": 0,
+     "status": "BLOCK",
+     "ok": true
+    }
+   },
+   "retained_only_procedural": 0,
+   "dist_concepts": {
+    "2": 14
+   },
+   "dist_nonproc": {
+    "2": 3,
+    "4": 4,
+    "3": 7
+   },
+   "judge_calls_b20": 1,
+   "judge_calls_b25": 1
+  }
+ },
+ "satisfying": [
+  "V1",
+  "V5",
+  "V2",
+  "V3"
+ ],
+ "chosen": "V3",
+ "provenance_all_resolve": true,
+ "provenance_failures": []
+}

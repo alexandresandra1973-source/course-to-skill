@@ -1,0 +1,497 @@
+{
+ "design_id": "MS-001-CLAIM-BLOCKER-DESIGN",
+ "version": "v0.3",
+ "phase": "A_DESIGN_FREEZE",
+ "declared_before": "qualquer medicao da v0.3",
+ "derivacao_explicita_da_v0_1": {
+  "sha256_v0_1": "08e689f826f4b3da854134bad49a5f76d0516855bba663c865c30605f87ea28b",
+  "herdado_sem_alteracao": [
+   "FROZEN_CONCEPTS e aliases",
+   "NAMED_OBJECTS",
+   "PROCEDURAL_LOW_INFORMATION_TOKENS",
+   "stopwords_pt (lista semantica)",
+   "variants V1-V6",
+   "control_mapping_algorithm",
+   "selection_rule",
+   "ZERO_CONTROL_OVERRIDES",
+   "population",
+   "audit_sample"
+  ],
+  "tokenizer_min_len": "RESTAURADO para 4, como na v0.1, mas SOMENTE no Channel C"
+ },
+ "historico": {
+  "v0_1": {
+   "sha256": "08e689f826f4b3da854134bad49a5f76d0516855bba663c865c30605f87ea28b",
+   "classificacao": "NON_QUALIFYING_INTERNAL_FEATURE_CONTRADICTION",
+   "motivo": "conceitos/objetos congelados api, vps, qr e n8n eram simultaneamente eliminados por min_len=4"
+  },
+  "v0_2": {
+   "sha256": "3add33b38f1017ed3198c041dba06a19acbe47e63a7f4d8418361debbbcfcf30",
+   "classificacao": "NON_QUALIFYING_DIAGNOSTIC_RECOVERY",
+   "motivo": "min_len=2 recuperou os aliases curtos mas abriu o canal de content-token para palavras funcionais de baixo valor; 23 de 39 pares retidos de V3 dependiam de em/no/um/nao"
+  }
+ },
+ "PRINCIPIO_v0_3": "tres canais de feature SEPARADOS. A ordem logica e: texto normalizado -> deteccao de conceito congelado -> deteccao de objeto nomeado congelado -> tokenizacao generica de conteudo. NAO e tokenizar com min_len e depois procurar conceito no que sobrou.",
+ "CHANNEL_A_FROZEN_CONCEPTS": {
+  "deteccao": "por catalogo congelado, sobre o TEXTO NORMALIZADO, por fronteira de palavra",
+  "sujeito_a_min_len": false,
+  "conceitos": {
+   "evolution_api": [
+    "evolution"
+   ],
+   "whatsapp": [
+    "whatsapp",
+    "whats",
+    "zap"
+   ],
+   "automation": [
+    "automacao",
+    "automatizar",
+    "automatiza",
+    "orquestracao",
+    "fluxo",
+    "workflow"
+   ],
+   "message": [
+    "mensagem",
+    "mensagens"
+   ],
+   "conversation": [
+    "conversa",
+    "conversas",
+    "chat"
+   ],
+   "api_tool": [
+    "api",
+    "ferramenta",
+    "ferramentas",
+    "endpoint"
+   ],
+   "vps_hosting": [
+    "vps",
+    "servidor",
+    "servidores",
+    "hospedar",
+    "hospedagem",
+    "hostinger",
+    "hostgator",
+    "easypanel"
+   ],
+   "qr_instance": [
+    "qr",
+    "qrcode",
+    "instancia",
+    "instancias",
+    "sessao",
+    "sessoes"
+   ],
+   "test_validate": [
+    "testar",
+    "teste",
+    "validar",
+    "funcionou",
+    "funciona"
+   ]
+  },
+  "catalog_hash": "efaf27d04c66960119f63e933bd5d003b7b8591c9cb926182f6fd57bb672553c",
+  "nenhum_alias_novo": true
+ },
+ "CHANNEL_B_NAMED_OBJECTS": {
+  "deteccao": "por catalogo congelado, sobre o TEXTO NORMALIZADO, por fronteira de palavra",
+  "sujeito_a_min_len": false,
+  "objetos": [
+   "evolution",
+   "whatsapp",
+   "instagram",
+   "facebook",
+   "claude",
+   "n8n",
+   "redis",
+   "docker",
+   "groq",
+   "openai",
+   "webhook",
+   "pixel",
+   "vps",
+   "hostgator",
+   "hostinger",
+   "easypanel",
+   "qr"
+  ],
+  "catalog_hash": "430248be71b959958cc1a14403d93cd9e55817da1824f1794d0099e9f9c4a7a0",
+  "nenhum_objeto_novo": true
+ },
+ "CHANNEL_C_CONTENT_TOKENS": {
+  "deteccao": "tokenizador lexical geral",
+  "min_len": 4,
+  "nota": "SOMENTE este canal usa min_len. Restaurado ao valor da v0.1.",
+  "procedural_filter": [
+   "clica",
+   "clicar",
+   "clique",
+   "clicando",
+   "coloca",
+   "colocar",
+   "coloque",
+   "colocando",
+   "cria",
+   "criar",
+   "crie",
+   "criando",
+   "criado",
+   "criada",
+   "nome",
+   "nomes",
+   "configuracao",
+   "configuracoes",
+   "configurar",
+   "configura",
+   "gera",
+   "gerar",
+   "gere",
+   "gerando",
+   "teste",
+   "testes",
+   "testar",
+   "botao",
+   "opcao",
+   "opcoes",
+   "aba",
+   "tela",
+   "painel",
+   "campo",
+   "campos",
+   "aparece",
+   "aparecer",
+   "seleciona",
+   "selecionar",
+   "digita",
+   "digitar",
+   "abre",
+   "abrir",
+   "vem",
+   "venha",
+   "aqui",
+   "embaixo",
+   "cima",
+   "lado",
+   "dentro"
+  ],
+  "procedural_hash": "c2c8a1137ca815e92da9fc24faaf95cf2471bc42adf6e21c05b56e2b16276f32"
+ },
+ "tokenizer": {
+  "unicode_normalization": "NFC",
+  "case": "casefold",
+  "accents": "PRESERVADOS — 'publico' e 'publico' nao sao unificados; acento e informacao em pt",
+  "punctuation": "removida nas BORDAS do token; hifen e digito internos PRESERVADOS",
+  "token_boundary": "regex [a-z0-9à-ÿ][a-z0-9à-ÿ_-]* sobre o texto casefolded",
+  "numbers": "preservados como tokens",
+  "nota": "mesma disciplina do tokenizer corrigido do MS-000B Round 2: pontuacao periferica sai, estrutura interna fica",
+  "min_len_channel_C": 4,
+  "nota_v0_3": "acentos continuam PRESERVADOS no token; a insensibilidade a acento existe SOMENTE na chave de comparacao de stopword"
+ },
+ "STOPWORDS": {
+  "lista": [
+   "de",
+   "da",
+   "do",
+   "das",
+   "dos",
+   "para",
+   "com",
+   "por",
+   "uma",
+   "que",
+   "nao",
+   "mais",
+   "como",
+   "mas",
+   "ou",
+   "se",
+   "sua",
+   "seu",
+   "suas",
+   "seus",
+   "este",
+   "esta",
+   "isso",
+   "essa",
+   "esse",
+   "aqui",
+   "ali",
+   "entao",
+   "tambem",
+   "sobre",
+   "entre",
+   "quando",
+   "onde",
+   "porque",
+   "depois",
+   "antes",
+   "cada",
+   "todo",
+   "toda",
+   "todos",
+   "todas",
+   "pode",
+   "deve",
+   "ser",
+   "estar",
+   "tem",
+   "ter",
+   "fazer",
+   "vai",
+   "vou",
+   "ele",
+   "ela",
+   "voce",
+   "nos",
+   "muito",
+   "bem",
+   "ja",
+   "agora",
+   "apenas",
+   "ainda",
+   "assim",
+   "ate",
+   "pelo",
+   "pela"
+  ],
+  "hash": "2e301e96c25496e082d7d2c6f8a4551be99849a171c35b6040fbb94d73bc81e9",
+  "NAO_REDESENHADA": "nenhuma stopword foi acrescentada ou removida",
+  "unica_correcao_mecanica": "a chave de comparacao passa a ser casefold + accent-insensitive, de modo que 'nao' na lista case com 'nao' no texto. Isso NAO altera a lista semantica; corrige o lookup que a v0.1 e a v0.2 faziam com acento, deixando 'nao' escapar.",
+  "declarado_antes_da_medicao": true
+ },
+ "NEGATION": {
+  "regra": "mesmo tratada como stopword no Channel C, a negacao e PRESERVADA separadamente como qualifier_token e permanece INTACTA na Claim e nos qualifiers",
+  "tokens": [
+   "nao",
+   "nunca",
+   "nenhum",
+   "nenhuma",
+   "jamais",
+   "sem"
+  ],
+  "blocker_usa_negacao_como_sinal_de_topico": false,
+  "futuro_judge_recebe_negacao_na_claim_original": true
+ },
+ "variants": {
+  "V1": "shared_frozen_concepts >= 1",
+  "V2": "shared_frozen_concepts >= 1 AND shared_nonprocedural_tokens >= 1",
+  "V3": "shared_frozen_concepts >= 1 AND shared_nonprocedural_tokens >= 2",
+  "V4": "shared_frozen_concepts >= 2",
+  "V5": "shared_named_objects >= 1 OR (V2)",
+  "V6": "shared_frozen_concepts >= 2 AND shared_nonprocedural_tokens >= 1",
+  "nota": "conjunto FINITO, parametros EXPLICITOS, nenhum threshold continuo ajustado depois"
+ },
+ "variants_inalteradas": true,
+ "control_mapping_algorithm": {
+  "principio": "mapeia por PROVENIENCIA e VOCABULARIO CONGELADO, nunca por resultado semantico desejado",
+  "passos": [
+   "1. cada controle do Corpus Design declara: slice(s) de origem em cada fonte + termos congelados",
+   "2. candidato = toda SEALED Claim cuja slice_provenance esteja nas slices declaradas E que contenha >=1 dos termos congelados do controle",
+   "3. o par de controle e o produto cartesiano dos candidatos B x candidatos C",
+   "4. RETAIN do controle = existe >=1 par do produto retido pela variante",
+   "5. BLOCK do controle = TODOS os pares do produto sao bloqueados",
+   "6. nenhuma Claim e escolhida a mao; se o passo 2 devolver zero de um lado, o controle e NAO MAPEAVEL e isso e reportado, nao contornado"
+  ],
+  "controles": {
+   "BC1_genuine_overlap": {
+    "slices_B": [
+     "SL-B-02",
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-02",
+     "SL-C-03"
+    ],
+    "termos": [
+     "evolution",
+     "instancia",
+     "instancias",
+     "sessao",
+     "whatsapp",
+     "qr",
+     "qrcode"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC2_scope_difference": {
+    "slices_B": [
+     "SL-B-01"
+    ],
+    "slices_C": [
+     "SL-C-02",
+     "SL-C-03"
+    ],
+    "termos": [
+     "grupo",
+     "grupos",
+     "mensagem",
+     "mensagens",
+     "responder",
+     "recebe",
+     "webhook",
+     "enviar",
+     "envia"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC3_specialization": {
+    "slices_B": [
+     "SL-B-01",
+     "SL-B-02",
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-01",
+     "SL-C-02"
+    ],
+    "termos": [
+     "claude",
+     "cloud",
+     "n8n",
+     "evolution",
+     "api"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC4_false_conflict": {
+    "slices_B": [
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-01"
+    ],
+    "termos": [
+     "chave",
+     "api",
+     "key",
+     "global",
+     "groq",
+     "openai"
+    ],
+    "esperado": "RETAIN (positivo do BLOCKER, negativo do futuro JUDGE)"
+   },
+   "BC5_unrelated": {
+    "slices_B": [
+     "SL-B-02"
+    ],
+    "slices_C": [
+     "SL-C-03"
+    ],
+    "termos_B": [
+     "servidor",
+     "servidores",
+     "plano",
+     "planos",
+     "cartao",
+     "credito",
+     "memoria",
+     "disco"
+    ],
+    "termos_C": [
+     "campo",
+     "campos",
+     "remote",
+     "push",
+     "body",
+     "instancia"
+    ],
+    "esperado": "BLOCK"
+   }
+  }
+ },
+ "mappings_inalterados": "os mesmos BC1-BC5, sem remapear Claim, sem trocar Claim porque um controle falhou",
+ "selection_rule": {
+  "declarada_antes_da_medicao": true,
+  "regra": "escolher a variante MAIS RESTRITIVA que satisfaca TODAS as condicoes: (1) retenha >=1 par valido para cada um de BC1, BC2, BC3 e BC4; (2) bloqueie TODOS os mapeamentos validos de BC5; (3) nao dependa de override por claim_id; (4) produza reducao real do espaco de 1.080 pares, isto e, retained < 1080. Ordem de restritividade declarada agora, do menos ao mais restritivo: V1, V5, V2, V4, V3, V6. Empate resolvido pelo menor numero de pares retidos.",
+  "se_nenhuma_satisfizer": "CLAIM_BLOCKER_NOT_QUALIFIED",
+  "imutavel": "a regra NAO muda depois de ver os numeros"
+ },
+ "selection_rule_inalterada": true,
+ "sem_cobertura_minima": "coverage e reducao sao REPORTADOS, nunca usados retroativamente como criterio",
+ "FUNCTIONAL_BRIDGE_TEST": {
+  "natureza": "METRICA, nao threshold de selecao",
+  "estados": [
+   "CONCEPT_OR_OBJECT_SUPPORTED",
+   "GENERIC_CONTENT_SUPPORTED",
+   "FUNCTIONAL_OR_LOW_INFORMATION_SUSPECT"
+  ],
+  "lista_funcional_pre_declarada": [
+   "em",
+   "no",
+   "na",
+   "um",
+   "uma",
+   "os",
+   "as",
+   "ao",
+   "se",
+   "ou",
+   "nao",
+   "que",
+   "por",
+   "com",
+   "dos",
+   "das"
+  ],
+  "nao_altera_retencao_nesta_rodada": true
+ },
+ "SHORT_TOKEN_AUDIT": {
+  "regra": "todo token de comprimento < 4 que influencie qualquer decisao tem de vir EXCLUSIVAMENTE de Channel A ou Channel B",
+  "se_token_curto_generico_influenciar": "FEATURE_CHANNEL_LEAK -> v0.3 NAO qualifica"
+ },
+ "ZERO_CONTROL_OVERRIDES": {
+  "proibido": "qualquer forma de 'if pair in controls: retain' ou 'if pair in BC5: block'",
+  "razao": "o controle MEDE o blocker; nao pode fazer parte da regra de blocking"
+ },
+ "blocker_output": [
+  "PAIR_ELIGIBLE_FOR_SEMANTIC_JUDGMENT",
+  "BLOCKED_WITHOUT_JUDGMENT"
+ ],
+ "blocker_nao_emite": [
+  "IDENTICAL",
+  "CORROBORATES",
+  "SPECIALIZES",
+  "CONTRADICTS",
+  "SUPERSEDES",
+  "UNRELATED",
+  "INDETERMINATE"
+ ],
+ "audit_sample": {
+  "deterministico": true,
+  "N": 4,
+  "estratos": [
+   "primeiros N por pair key",
+   "N do meio",
+   "ultimos N",
+   "top N por blocker score",
+   "N imediatamente abaixo do limiar"
+  ],
+  "nao_cherry_picked": "estratos fixos, ordenacao por chave de par, sem escolha manual"
+ },
+ "population": {
+  "left": {
+   "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+   "n": 30
+  },
+  "right": {
+   "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+   "n": 36
+  },
+  "raw_pairs": 1080,
+  "inclui": "somente SEALED CLAIMS",
+  "exclui": [
+   "NOT_ENTAILED",
+   "INDETERMINATE",
+   "raw rejeitadas",
+   "Candidates",
+   "Evidence"
+  ]
+ },
+ "sem_embedding": true,
+ "sem_llm": true,
+ "sem_web": true,
+ "DIVULGACAO": "a v0.3 foi criada APOS observar v0.1 e v0.2. Nenhum conceito, objeto, alias, stopword, variante, mapeamento ou regra de selecao foi acrescentado, removido ou reordenado. A unica mudanca arquitetural e a separacao em tres canais; a unica mudanca mecanica e a chave de lookup de stopword."
+}

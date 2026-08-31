@@ -1,0 +1,450 @@
+{
+ "design_id": "MS-001-CLAIM-BLOCKER-DESIGN",
+ "version": "v0.2",
+ "phase": "A_DESIGN_FREEZE",
+ "declared_before": "qualquer calculo de retencao dos controles",
+ "unit": "CLAIM",
+ "population": {
+  "left": {
+   "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+   "n": 30
+  },
+  "right": {
+   "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+   "n": 36
+  },
+  "raw_pairs": 1080,
+  "inclui": "somente SEALED CLAIMS",
+  "exclui": [
+   "NOT_ENTAILED",
+   "INDETERMINATE",
+   "raw rejeitadas",
+   "Candidates",
+   "Evidence"
+  ]
+ },
+ "tokenizer": {
+  "unicode_normalization": "NFC",
+  "case": "casefold",
+  "accents": "PRESERVADOS — 'publico' e 'publico' nao sao unificados; acento e informacao em pt",
+  "punctuation": "removida nas BORDAS do token; hifen e digito internos PRESERVADOS",
+  "token_boundary": "regex [a-z0-9à-ÿ][a-z0-9à-ÿ_-]* sobre o texto casefolded",
+  "numbers": "preservados como tokens",
+  "min_len": 2,
+  "nota": "mesma disciplina do tokenizer corrigido do MS-000B Round 2: pontuacao periferica sai, estrutura interna fica",
+  "nota_v0_2": "min_len=2 para que os NAMED_OBJECTS curtos declarados na propria v0.1 sejam alcancaveis"
+ },
+ "stopwords_pt": [
+  "de",
+  "da",
+  "do",
+  "das",
+  "dos",
+  "para",
+  "com",
+  "por",
+  "uma",
+  "que",
+  "nao",
+  "mais",
+  "como",
+  "mas",
+  "ou",
+  "se",
+  "sua",
+  "seu",
+  "suas",
+  "seus",
+  "este",
+  "esta",
+  "isso",
+  "essa",
+  "esse",
+  "aqui",
+  "ali",
+  "entao",
+  "tambem",
+  "sobre",
+  "entre",
+  "quando",
+  "onde",
+  "porque",
+  "depois",
+  "antes",
+  "cada",
+  "todo",
+  "toda",
+  "todos",
+  "todas",
+  "pode",
+  "deve",
+  "ser",
+  "estar",
+  "tem",
+  "ter",
+  "fazer",
+  "vai",
+  "vou",
+  "ele",
+  "ela",
+  "voce",
+  "nos",
+  "muito",
+  "bem",
+  "ja",
+  "agora",
+  "apenas",
+  "ainda",
+  "assim",
+  "ate",
+  "pelo",
+  "pela"
+ ],
+ "PROCEDURAL_LOW_INFORMATION_TOKENS": {
+  "derivacao": "os sete termos identificados no CONTROLLED CORPUS DESIGN REPORT como dominantes do ruido procedural, mais suas flexoes verbais diretas e o mesmo campo lexical de acao de interface. NENHUM outro.",
+  "origem_congelada": [
+   "clicar",
+   "colocar",
+   "criar",
+   "nome",
+   "configuracoes",
+   "gerar",
+   "teste"
+  ],
+  "lista": [
+   "clica",
+   "clicar",
+   "clique",
+   "clicando",
+   "coloca",
+   "colocar",
+   "coloque",
+   "colocando",
+   "cria",
+   "criar",
+   "crie",
+   "criando",
+   "criado",
+   "criada",
+   "nome",
+   "nomes",
+   "configuracao",
+   "configuracoes",
+   "configurar",
+   "configura",
+   "gera",
+   "gerar",
+   "gere",
+   "gerando",
+   "teste",
+   "testes",
+   "testar",
+   "botao",
+   "opcao",
+   "opcoes",
+   "aba",
+   "tela",
+   "painel",
+   "campo",
+   "campos",
+   "aparece",
+   "aparecer",
+   "seleciona",
+   "selecionar",
+   "digita",
+   "digitar",
+   "abre",
+   "abrir",
+   "vem",
+   "venha",
+   "aqui",
+   "embaixo",
+   "cima",
+   "lado",
+   "dentro"
+  ],
+  "regra": "CONGELADA. NAO pode ser expandida depois da medicao para derrubar par inconveniente."
+ },
+ "FROZEN_CONCEPTS": {
+  "origem": "concept-matrix.json do Controlled Corpus Design, SOMENTE os 9 PRESENT_BOTH",
+  "conceitos": {
+   "evolution_api": [
+    "evolution"
+   ],
+   "whatsapp": [
+    "whatsapp",
+    "whats",
+    "zap"
+   ],
+   "automation": [
+    "automacao",
+    "automatizar",
+    "automatiza",
+    "orquestracao",
+    "fluxo",
+    "workflow"
+   ],
+   "message": [
+    "mensagem",
+    "mensagens"
+   ],
+   "conversation": [
+    "conversa",
+    "conversas",
+    "chat"
+   ],
+   "api_tool": [
+    "api",
+    "ferramenta",
+    "ferramentas",
+    "endpoint"
+   ],
+   "vps_hosting": [
+    "vps",
+    "servidor",
+    "servidores",
+    "hospedar",
+    "hospedagem",
+    "hostinger",
+    "hostgator",
+    "easypanel"
+   ],
+   "qr_instance": [
+    "qr",
+    "qrcode",
+    "instancia",
+    "instancias",
+    "sessao",
+    "sessoes"
+   ],
+   "test_validate": [
+    "testar",
+    "teste",
+    "validar",
+    "funcionou",
+    "funciona"
+   ]
+  },
+  "regra": "NENHUM conceito novo pode ser inventado depois de ver quais pares queremos salvar."
+ },
+ "NAMED_OBJECTS": {
+  "derivacao": "objetos nomeados canonicos que aparecem literalmente no corpus congelado",
+  "lista": [
+   "evolution",
+   "whatsapp",
+   "instagram",
+   "facebook",
+   "claude",
+   "n8n",
+   "redis",
+   "docker",
+   "groq",
+   "openai",
+   "webhook",
+   "pixel",
+   "vps",
+   "hostgator",
+   "hostinger",
+   "easypanel",
+   "qr"
+  ],
+  "regra": "CONGELADA antes da medicao."
+ },
+ "claim_features": [
+  "typed_ref",
+  "normalized_text",
+  "content_tokens",
+  "procedural_filtered_tokens",
+  "frozen_concept_hits",
+  "named_object_hits",
+  "qualifier_tokens",
+  "slice_provenance",
+  "evidence_refs"
+ ],
+ "features_ficam": "FORA dos Source Packages. Nenhuma Claim e alterada.",
+ "variants": {
+  "V1": "shared_frozen_concepts >= 1",
+  "V2": "shared_frozen_concepts >= 1 AND shared_nonprocedural_tokens >= 1",
+  "V3": "shared_frozen_concepts >= 1 AND shared_nonprocedural_tokens >= 2",
+  "V4": "shared_frozen_concepts >= 2",
+  "V5": "shared_named_objects >= 1 OR (V2)",
+  "V6": "shared_frozen_concepts >= 2 AND shared_nonprocedural_tokens >= 1",
+  "nota": "conjunto FINITO, parametros EXPLICITOS, nenhum threshold continuo ajustado depois"
+ },
+ "control_mapping_algorithm": {
+  "principio": "mapeia por PROVENIENCIA e VOCABULARIO CONGELADO, nunca por resultado semantico desejado",
+  "passos": [
+   "1. cada controle do Corpus Design declara: slice(s) de origem em cada fonte + termos congelados",
+   "2. candidato = toda SEALED Claim cuja slice_provenance esteja nas slices declaradas E que contenha >=1 dos termos congelados do controle",
+   "3. o par de controle e o produto cartesiano dos candidatos B x candidatos C",
+   "4. RETAIN do controle = existe >=1 par do produto retido pela variante",
+   "5. BLOCK do controle = TODOS os pares do produto sao bloqueados",
+   "6. nenhuma Claim e escolhida a mao; se o passo 2 devolver zero de um lado, o controle e NAO MAPEAVEL e isso e reportado, nao contornado"
+  ],
+  "controles": {
+   "BC1_genuine_overlap": {
+    "slices_B": [
+     "SL-B-02",
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-02",
+     "SL-C-03"
+    ],
+    "termos": [
+     "evolution",
+     "instancia",
+     "instancias",
+     "sessao",
+     "whatsapp",
+     "qr",
+     "qrcode"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC2_scope_difference": {
+    "slices_B": [
+     "SL-B-01"
+    ],
+    "slices_C": [
+     "SL-C-02",
+     "SL-C-03"
+    ],
+    "termos": [
+     "grupo",
+     "grupos",
+     "mensagem",
+     "mensagens",
+     "responder",
+     "recebe",
+     "webhook",
+     "enviar",
+     "envia"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC3_specialization": {
+    "slices_B": [
+     "SL-B-01",
+     "SL-B-02",
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-01",
+     "SL-C-02"
+    ],
+    "termos": [
+     "claude",
+     "cloud",
+     "n8n",
+     "evolution",
+     "api"
+    ],
+    "esperado": "RETAIN"
+   },
+   "BC4_false_conflict": {
+    "slices_B": [
+     "SL-B-03"
+    ],
+    "slices_C": [
+     "SL-C-01"
+    ],
+    "termos": [
+     "chave",
+     "api",
+     "key",
+     "global",
+     "groq",
+     "openai"
+    ],
+    "esperado": "RETAIN (positivo do BLOCKER, negativo do futuro JUDGE)"
+   },
+   "BC5_unrelated": {
+    "slices_B": [
+     "SL-B-02"
+    ],
+    "slices_C": [
+     "SL-C-03"
+    ],
+    "termos_B": [
+     "servidor",
+     "servidores",
+     "plano",
+     "planos",
+     "cartao",
+     "credito",
+     "memoria",
+     "disco"
+    ],
+    "termos_C": [
+     "campo",
+     "campos",
+     "remote",
+     "push",
+     "body",
+     "instancia"
+    ],
+    "esperado": "BLOCK"
+   }
+  }
+ },
+ "selection_rule": {
+  "declarada_antes_da_medicao": true,
+  "regra": "escolher a variante MAIS RESTRITIVA que satisfaca TODAS as condicoes: (1) retenha >=1 par valido para cada um de BC1, BC2, BC3 e BC4; (2) bloqueie TODOS os mapeamentos validos de BC5; (3) nao dependa de override por claim_id; (4) produza reducao real do espaco de 1.080 pares, isto e, retained < 1080. Ordem de restritividade declarada agora, do menos ao mais restritivo: V1, V5, V2, V4, V3, V6. Empate resolvido pelo menor numero de pares retidos.",
+  "se_nenhuma_satisfizer": "CLAIM_BLOCKER_NOT_QUALIFIED",
+  "imutavel": "a regra NAO muda depois de ver os numeros"
+ },
+ "ZERO_CONTROL_OVERRIDES": {
+  "proibido": "qualquer forma de 'if pair in controls: retain' ou 'if pair in BC5: block'",
+  "razao": "o controle MEDE o blocker; nao pode fazer parte da regra de blocking"
+ },
+ "blocker_output": [
+  "PAIR_ELIGIBLE_FOR_SEMANTIC_JUDGMENT",
+  "BLOCKED_WITHOUT_JUDGMENT"
+ ],
+ "blocker_nao_emite": [
+  "IDENTICAL",
+  "CORROBORATES",
+  "SPECIALIZES",
+  "CONTRADICTS",
+  "SUPERSEDES",
+  "UNRELATED",
+  "INDETERMINATE"
+ ],
+ "true_conflict": "REAL_TRUE_CONFLICT_RETENTION = NOT_REQUIRED nesta calibracao. As slices NAO sao alteradas. O futuro J4 sintetico testa CONTRADICTS.",
+ "audit_sample": {
+  "deterministico": true,
+  "N": 4,
+  "estratos": [
+   "primeiros N por pair key",
+   "N do meio",
+   "ultimos N",
+   "top N por blocker score",
+   "N imediatamente abaixo do limiar"
+  ],
+  "nao_cherry_picked": "estratos fixos, ordenacao por chave de par, sem escolha manual"
+ },
+ "sem_embedding": true,
+ "sem_llm": true,
+ "sem_web": true,
+ "supersedes": {
+  "version": "v0.1",
+  "sha256": "08e689f826f4b3da854134bad49a5f76d0516855bba663c865c30605f87ea28b"
+ },
+ "v0_2_change": {
+  "unica_mudanca": "tokenizer.min_len de 4 para 2",
+  "motivo": "AUTO-CONTRADICAO INTERNA da v0.1: o mesmo documento declarava NAMED_OBJECTS incluindo 'api', 'vps', 'qr' e 'n8n' — todos com 2 ou 3 caracteres — e simultaneamente fixava min_len=4, o que os tornava INDETECTAVEIS. A variante V5 depende de shared_named>=1 e nunca poderia disparar sobre eles. O conceito api_tool tem alias 'api' e tambem estava morto.",
+  "o_que_NAO_muda": [
+   "FROZEN_CONCEPTS e seus aliases",
+   "NAMED_OBJECTS",
+   "PROCEDURAL_LOW_INFORMATION_TOKENS",
+   "stopwords",
+   "variantes V1-V6",
+   "control_mapping_algorithm",
+   "selection_rule",
+   "ZERO_CONTROL_OVERRIDES"
+  ],
+  "DIVULGACAO_HONESTA": "esta correcao FOI DESCOBERTA porque BC4 falhou, e ela DE FATO resgata BC4, porque BC4 e o caso da 'chave de API'. NAO afirmo que seja neutra. Afirmo que e uma contradicao interna da propria v0.1, que o efeito e GLOBAL sobre os 1080 pares e nao dirigido a BC4, e que nenhum conceito, alias ou termo procedural foi acrescentado, removido ou reordenado. As duas medicoes sao reportadas lado a lado.",
+  "efeito_esperado": "aumenta o recall de TODAS as variantes; V5 passa a poder disparar"
+ }
+}

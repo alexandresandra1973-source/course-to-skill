@@ -1,0 +1,3219 @@
+{
+ "B": [
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0001"
+   },
+   "local_id": "CL-0001",
+   "text": "O autor recomenda ir no plano anual, dizendo que depois é possível dividir e que fica legal.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "anual",
+    "autor",
+    "dividir",
+    "dizendo",
+    "fica",
+    "legal",
+    "plano",
+    "possível",
+    "recomenda"
+   ],
+   "channel_c_nonprocedural": [
+    "anual",
+    "autor",
+    "dividir",
+    "dizendo",
+    "fica",
+    "legal",
+    "plano",
+    "possível",
+    "recomenda"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0002"
+   },
+   "local_id": "CL-0002",
+   "text": "O vídeo mostra como gerenciar vários grupos de WhatsApp utilizando o Cloud Code.",
+   "channel_a_concepts": [
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ]
+   },
+   "channel_b_named": [
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "cloud",
+    "code",
+    "gerenciar",
+    "grupos",
+    "mostra",
+    "utilizando",
+    "vários",
+    "vídeo",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "cloud",
+    "code",
+    "gerenciar",
+    "grupos",
+    "mostra",
+    "utilizando",
+    "vários",
+    "vídeo",
+    "whatsapp"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0001"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0003"
+   },
+   "local_id": "CL-0003",
+   "text": "Através do Evolution API é possível conectar o número do WhatsApp como se fosse um WhatsApp Web.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api",
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "através",
+    "conectar",
+    "evolution",
+    "fosse",
+    "número",
+    "possível",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "através",
+    "conectar",
+    "evolution",
+    "fosse",
+    "número",
+    "possível",
+    "whatsapp"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0007"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0004"
+   },
+   "local_id": "CL-0004",
+   "text": "No portal aparece o servidor do usuário e, em acesso rápido, é possível abrir o console ou clicar no Evolution API direto.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api",
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ],
+    "vps_hosting": [
+     "servidor"
+    ]
+   },
+   "channel_b_named": [
+    "evolution"
+   ],
+   "channel_c_tokens": [
+    "abrir",
+    "acesso",
+    "aparece",
+    "clicar",
+    "console",
+    "direto",
+    "evolution",
+    "portal",
+    "possível",
+    "rápido",
+    "servidor",
+    "usuário"
+   ],
+   "channel_c_nonprocedural": [
+    "acesso",
+    "console",
+    "direto",
+    "evolution",
+    "portal",
+    "possível",
+    "rápido",
+    "servidor",
+    "usuário"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0005"
+   },
+   "local_id": "CL-0005",
+   "text": "Para criar a instância, o usuário clica em instância, coloca algum nome (por exemplo YouTube teste) e clica em salvar; ela aparece como desconectado.",
+   "channel_a_concepts": [
+    "qr_instance",
+    "test_validate"
+   ],
+   "channel_a_evidence": {
+    "qr_instance": [
+     "instancia"
+    ],
+    "test_validate": [
+     "teste"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "algum",
+    "aparece",
+    "clica",
+    "coloca",
+    "criar",
+    "desconectado",
+    "exemplo",
+    "instância",
+    "nome",
+    "salvar",
+    "teste",
+    "usuário",
+    "youtube"
+   ],
+   "channel_c_nonprocedural": [
+    "algum",
+    "desconectado",
+    "exemplo",
+    "instância",
+    "salvar",
+    "usuário",
+    "youtube"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0030",
+    "EV-0031"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0006"
+   },
+   "local_id": "CL-0006",
+   "text": "Clicando em gerenciar, o usuário consegue ver mais detalhes da sua VPS.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "vps"
+    ]
+   },
+   "channel_b_named": [
+    "vps"
+   ],
+   "channel_c_tokens": [
+    "clicando",
+    "consegue",
+    "detalhes",
+    "gerenciar",
+    "usuário"
+   ],
+   "channel_c_nonprocedural": [
+    "consegue",
+    "detalhes",
+    "gerenciar",
+    "usuário"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0007"
+   },
+   "local_id": "CL-0007",
+   "text": "Após escanear, o Cloud Code terá acesso ao WhatsApp de acordo com as coisas às quais se der permissão e que se pedir que ele faça.",
+   "channel_a_concepts": [
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ]
+   },
+   "channel_b_named": [
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "acesso",
+    "acordo",
+    "após",
+    "cloud",
+    "code",
+    "coisas",
+    "escanear",
+    "faça",
+    "pedir",
+    "permissão",
+    "quais",
+    "terá",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "acesso",
+    "acordo",
+    "após",
+    "cloud",
+    "code",
+    "coisas",
+    "escanear",
+    "faça",
+    "pedir",
+    "permissão",
+    "quais",
+    "terá",
+    "whatsapp"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "local_id": "CL-0008",
+   "text": "É preciso hospedar o Evolution API em uma VPS para que ele fique funcionando 24 horas por dia.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api",
+    "test_validate",
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ],
+    "vps_hosting": [
+     "hospedar",
+     "vps"
+    ],
+    "test_validate": [
+     "funciona"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "vps"
+   ],
+   "channel_c_tokens": [
+    "evolution",
+    "fique",
+    "funcionando",
+    "horas",
+    "hospedar",
+    "preciso"
+   ],
+   "channel_c_nonprocedural": [
+    "evolution",
+    "fique",
+    "funcionando",
+    "horas",
+    "hospedar",
+    "preciso"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0010"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0009"
+   },
+   "local_id": "CL-0009",
+   "text": "Depois de conferir, deve-se ir em continuar para verificação e colocar a conta da HostGator, podendo criar a conta com o Google.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "hostgator"
+    ]
+   },
+   "channel_b_named": [
+    "hostgator"
+   ],
+   "channel_c_tokens": [
+    "colocar",
+    "conferir",
+    "conta",
+    "continuar",
+    "criar",
+    "deve-se",
+    "google",
+    "hostgator",
+    "podendo",
+    "verificação"
+   ],
+   "channel_c_nonprocedural": [
+    "conferir",
+    "conta",
+    "continuar",
+    "deve-se",
+    "google",
+    "hostgator",
+    "podendo",
+    "verificação"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0020",
+    "EV-0021"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0010"
+   },
+   "local_id": "CL-0010",
+   "text": "A partir da página acessada, a próxima etapa é conectar o número do WhatsApp, criando uma instância e conectando o número.",
+   "channel_a_concepts": [
+    "qr_instance",
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ],
+    "qr_instance": [
+     "instancia"
+    ]
+   },
+   "channel_b_named": [
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "acessada",
+    "conectando",
+    "conectar",
+    "criando",
+    "etapa",
+    "instância",
+    "número",
+    "partir",
+    "próxima",
+    "página",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "acessada",
+    "conectando",
+    "conectar",
+    "etapa",
+    "instância",
+    "número",
+    "partir",
+    "próxima",
+    "página",
+    "whatsapp"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0011"
+   },
+   "local_id": "CL-0011",
+   "text": "O Evolution API precisa ser hospedado em algum lugar; ele é gratuito e open source, não se paga por nada.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution"
+   ],
+   "channel_c_tokens": [
+    "algum",
+    "evolution",
+    "gratuito",
+    "hospedado",
+    "lugar",
+    "nada",
+    "open",
+    "paga",
+    "precisa",
+    "source"
+   ],
+   "channel_c_nonprocedural": [
+    "algum",
+    "evolution",
+    "gratuito",
+    "hospedado",
+    "lugar",
+    "nada",
+    "open",
+    "paga",
+    "precisa",
+    "source"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0009",
+    "EV-0010"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0012"
+   },
+   "local_id": "CL-0012",
+   "text": "O servidor deve ser mantido em São Paulo, que é o mais próximo e está no Brasil; se a pessoa estiver fora do Brasil, deve verificar se o do México chega a ser mais próximo.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "servidor"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "brasil",
+    "chega",
+    "estiver",
+    "fora",
+    "mantido",
+    "méxico",
+    "paulo",
+    "pessoa",
+    "próximo",
+    "servidor",
+    "verificar"
+   ],
+   "channel_c_nonprocedural": [
+    "brasil",
+    "chega",
+    "estiver",
+    "fora",
+    "mantido",
+    "méxico",
+    "paulo",
+    "pessoa",
+    "próximo",
+    "servidor",
+    "verificar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "local_id": "CL-0013",
+   "text": "Com a instância aparecendo como desconectado, o usuário vai em configurações e gera QR Code, que deve ser escaneado pelo celular como se fosse um WhatsApp Web.",
+   "channel_a_concepts": [
+    "qr_instance",
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ],
+    "qr_instance": [
+     "instancia",
+     "qr"
+    ]
+   },
+   "channel_b_named": [
+    "qr",
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "aparecendo",
+    "celular",
+    "code",
+    "configurações",
+    "desconectado",
+    "escaneado",
+    "fosse",
+    "gera",
+    "instância",
+    "usuário",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "aparecendo",
+    "celular",
+    "code",
+    "configurações",
+    "desconectado",
+    "escaneado",
+    "fosse",
+    "instância",
+    "usuário",
+    "whatsapp"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0031",
+    "EV-0032",
+    "EV-0033"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "local_id": "CL-0014",
+   "text": "No primeiro acesso o usuário deve colocar a chave de API global que está no seu Gmail, colar e conectar.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "acesso",
+    "chave",
+    "colar",
+    "colocar",
+    "conectar",
+    "global",
+    "gmail",
+    "primeiro",
+    "usuário"
+   ],
+   "channel_c_nonprocedural": [
+    "acesso",
+    "chave",
+    "colar",
+    "conectar",
+    "global",
+    "gmail",
+    "primeiro",
+    "usuário"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0015"
+   },
+   "local_id": "CL-0015",
+   "text": "Os tipos de servidores mostrados incluem os padrões de dois, quatro e oito, e também existe opção de alto desempenho caso a pessoa queira algo mais parrudo.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "servidor",
+     "servidores"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "algo",
+    "alto",
+    "caso",
+    "desempenho",
+    "dois",
+    "existe",
+    "incluem",
+    "mostrados",
+    "oito",
+    "opção",
+    "padrões",
+    "parrudo",
+    "pessoa",
+    "quatro",
+    "queira",
+    "servidores",
+    "tipos"
+   ],
+   "channel_c_nonprocedural": [
+    "algo",
+    "alto",
+    "caso",
+    "desempenho",
+    "dois",
+    "existe",
+    "incluem",
+    "mostrados",
+    "oito",
+    "opção",
+    "padrões",
+    "parrudo",
+    "pessoa",
+    "quatro",
+    "queira",
+    "servidores",
+    "tipos"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0016"
+   },
+   "local_id": "CL-0016",
+   "text": "A oferta indica \"Evolution pré-instalada e cabe até 20 números de WhatsApp\", ou seja, é possível conectar até 20 números de WhatsApp sem problema.",
+   "channel_a_concepts": [
+    "evolution_api",
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "cabe",
+    "conectar",
+    "evolution",
+    "indica",
+    "números",
+    "oferta",
+    "possível",
+    "problema",
+    "pré-instalada",
+    "seja",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "cabe",
+    "conectar",
+    "evolution",
+    "indica",
+    "números",
+    "oferta",
+    "possível",
+    "problema",
+    "pré-instalada",
+    "seja",
+    "whatsapp"
+   ],
+   "negation_tokens": [
+    "sem"
+   ],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0013",
+    "EV-0014"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "local_id": "CL-0017",
+   "text": "Se for usar muito, muito, muito, é legal pegar uma peça melhor; para esse tipo de caso o NVMe quatro é o padrão.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "caso",
+    "legal",
+    "melhor",
+    "nvme",
+    "padrão",
+    "pegar",
+    "peça",
+    "quatro",
+    "tipo",
+    "usar"
+   ],
+   "channel_c_nonprocedural": [
+    "caso",
+    "legal",
+    "melhor",
+    "nvme",
+    "padrão",
+    "pegar",
+    "peça",
+    "quatro",
+    "tipo",
+    "usar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0014",
+    "EV-0015"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0018"
+   },
+   "local_id": "CL-0018",
+   "text": "O Cloud Code se conecta via API com o Evolution API, que é a API não oficial do WhatsApp.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api",
+    "whatsapp"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "whatsapp": [
+     "whats",
+     "whatsapp"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "whatsapp"
+   ],
+   "channel_c_tokens": [
+    "cloud",
+    "code",
+    "conecta",
+    "evolution",
+    "oficial",
+    "whatsapp"
+   ],
+   "channel_c_nonprocedural": [
+    "cloud",
+    "code",
+    "conecta",
+    "evolution",
+    "oficial",
+    "whatsapp"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0006"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "local_id": "CL-0019",
+   "text": "No exemplo demonstrado o autor pega o nível NVMe dois, porque vai usar só uma instância mesmo.",
+   "channel_a_concepts": [
+    "qr_instance"
+   ],
+   "channel_a_evidence": {
+    "qr_instance": [
+     "instancia"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "autor",
+    "demonstrado",
+    "dois",
+    "exemplo",
+    "instância",
+    "mesmo",
+    "nvme",
+    "nível",
+    "pega",
+    "usar"
+   ],
+   "channel_c_nonprocedural": [
+    "autor",
+    "demonstrado",
+    "dois",
+    "exemplo",
+    "instância",
+    "mesmo",
+    "nvme",
+    "nível",
+    "pega",
+    "usar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0016"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "local_id": "CL-0020",
+   "text": "Na stack do gerenciador de grupos, o Cloud Code é o orquestrador, é com ele que o autor conversa e pede para fazer determinadas ações.",
+   "channel_a_concepts": [
+    "conversation"
+   ],
+   "channel_a_evidence": {
+    "conversation": [
+     "conversa"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "autor",
+    "ações",
+    "cloud",
+    "code",
+    "conversa",
+    "determinadas",
+    "gerenciador",
+    "grupos",
+    "orquestrador",
+    "pede",
+    "stack"
+   ],
+   "channel_c_nonprocedural": [
+    "autor",
+    "ações",
+    "cloud",
+    "code",
+    "conversa",
+    "determinadas",
+    "gerenciador",
+    "grupos",
+    "orquestrador",
+    "pede",
+    "stack"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0004",
+    "EV-0005",
+    "EV-0006"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0021"
+   },
+   "local_id": "CL-0021",
+   "text": "A VPS que o autor utiliza é a da HostGator, que já tem a função de pré-instalar.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "hostgator",
+     "vps"
+    ]
+   },
+   "channel_b_named": [
+    "hostgator",
+    "vps"
+   ],
+   "channel_c_tokens": [
+    "autor",
+    "função",
+    "hostgator",
+    "pré-instalar",
+    "utiliza"
+   ],
+   "channel_c_nonprocedural": [
+    "autor",
+    "função",
+    "hostgator",
+    "pré-instalar",
+    "utiliza"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0022"
+   },
+   "local_id": "CL-0022",
+   "text": "O plano de um mês custa 54,98 por mês, e a partir de um ano há uma promoção de 27,89 o mês.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "custa",
+    "partir",
+    "plano",
+    "promoção"
+   ],
+   "channel_c_nonprocedural": [
+    "custa",
+    "partir",
+    "plano",
+    "promoção"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0023"
+   },
+   "local_id": "CL-0023",
+   "text": "Após fazer o login e preencher os dados pedidos, chega-se à tela de pagamento, onde é possível selecionar cartão de crédito.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "após",
+    "cartão",
+    "chega-se",
+    "crédito",
+    "dados",
+    "login",
+    "pagamento",
+    "pedidos",
+    "possível",
+    "preencher",
+    "selecionar",
+    "tela"
+   ],
+   "channel_c_nonprocedural": [
+    "após",
+    "cartão",
+    "chega-se",
+    "crédito",
+    "dados",
+    "login",
+    "pagamento",
+    "pedidos",
+    "possível",
+    "preencher"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "local_id": "CL-0024",
+   "text": "As ações possíveis mencionadas incluem criar vários grupos em massa, mudar foto de perfil, mudar a descrição do grupo, adicionar pessoas, enviar mensagem para os grupos e dar relatórios de membros do grupo.",
+   "channel_a_concepts": [
+    "message"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagem"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "adicionar",
+    "ações",
+    "criar",
+    "descrição",
+    "enviar",
+    "foto",
+    "grupo",
+    "grupos",
+    "incluem",
+    "massa",
+    "membros",
+    "mencionadas",
+    "mensagem",
+    "mudar",
+    "perfil",
+    "pessoas",
+    "possíveis",
+    "relatórios",
+    "vários"
+   ],
+   "channel_c_nonprocedural": [
+    "adicionar",
+    "ações",
+    "descrição",
+    "enviar",
+    "foto",
+    "grupo",
+    "grupos",
+    "incluem",
+    "massa",
+    "membros",
+    "mencionadas",
+    "mensagem",
+    "mudar",
+    "perfil",
+    "pessoas",
+    "possíveis",
+    "relatórios",
+    "vários"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0001",
+    "EV-0002",
+    "EV-0003"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "local_id": "CL-0025",
+   "text": "Ao continuar para o carrinho, primeiro deve-se conferir se está tudo certo: se o plano está correto e se está Evolution API.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution"
+   ],
+   "channel_c_tokens": [
+    "carrinho",
+    "certo",
+    "conferir",
+    "continuar",
+    "correto",
+    "deve-se",
+    "evolution",
+    "plano",
+    "primeiro",
+    "tudo"
+   ],
+   "channel_c_nonprocedural": [
+    "carrinho",
+    "certo",
+    "conferir",
+    "continuar",
+    "correto",
+    "deve-se",
+    "evolution",
+    "plano",
+    "primeiro",
+    "tudo"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0018",
+    "EV-0019"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0026"
+   },
+   "local_id": "CL-0026",
+   "text": "Ao clicar em Evolution API, abre uma página que aparenta ser um erro, mas não é erro: é porque se deve digitar barra manager no final.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution"
+   ],
+   "channel_c_tokens": [
+    "abre",
+    "aparenta",
+    "barra",
+    "clicar",
+    "digitar",
+    "erro",
+    "evolution",
+    "final",
+    "manager",
+    "página"
+   ],
+   "channel_c_nonprocedural": [
+    "aparenta",
+    "barra",
+    "erro",
+    "evolution",
+    "final",
+    "manager",
+    "página"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0027"
+   },
+   "local_id": "CL-0027",
+   "text": "Por ser API não oficial, não se paga por API oficial.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "oficial",
+    "paga"
+   ],
+   "channel_c_nonprocedural": [
+    "oficial",
+    "paga"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-B-01"
+   ],
+   "evidence_refs": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "local_id": "CL-0028",
+   "text": "Na tela do apresentador as instâncias já aparecem conectadas porque ele estava gravando um vídeo e teve que regravar; no caso do espectador vai aparecer a tela de primeiro acesso.",
+   "channel_a_concepts": [
+    "qr_instance"
+   ],
+   "channel_a_evidence": {
+    "qr_instance": [
+     "instancia",
+     "instancias"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "acesso",
+    "aparecem",
+    "aparecer",
+    "apresentador",
+    "caso",
+    "conectadas",
+    "espectador",
+    "estava",
+    "gravando",
+    "instâncias",
+    "primeiro",
+    "regravar",
+    "tela",
+    "teve",
+    "vídeo"
+   ],
+   "channel_c_nonprocedural": [
+    "acesso",
+    "aparecem",
+    "apresentador",
+    "caso",
+    "conectadas",
+    "espectador",
+    "estava",
+    "gravando",
+    "instâncias",
+    "primeiro",
+    "regravar",
+    "teve",
+    "vídeo"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0029"
+   },
+   "local_id": "CL-0029",
+   "text": "Após digitar barra manager no final, o usuário de fato acessa a página.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "acessa",
+    "após",
+    "barra",
+    "digitar",
+    "fato",
+    "final",
+    "manager",
+    "página",
+    "usuário"
+   ],
+   "channel_c_nonprocedural": [
+    "acessa",
+    "após",
+    "barra",
+    "fato",
+    "final",
+    "manager",
+    "página",
+    "usuário"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-03"
+   ],
+   "evidence_refs": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "a0a73dde03410d5c744129bf8ba635815a678dbf5ce46cd124e6a31f8f67dc1f",
+    "entity_kind": "claim",
+    "local_id": "CL-0030"
+   },
+   "local_id": "CL-0030",
+   "text": "A capacidade de conexão depende também da forma que a pessoa vai utilizar.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "capacidade",
+    "conexão",
+    "depende",
+    "forma",
+    "pessoa",
+    "utilizar"
+   ],
+   "channel_c_nonprocedural": [
+    "capacidade",
+    "conexão",
+    "depende",
+    "forma",
+    "pessoa",
+    "utilizar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-B-02"
+   ],
+   "evidence_refs": [
+    "EV-0014"
+   ],
+   "provenance_resolves": true
+  }
+ ],
+ "C": [
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0001"
+   },
+   "local_id": "CL-0001",
+   "text": "A terceira peça são as ferramentas que o agente pode utilizar, por exemplo pesquisar na internet, alterar planilhas e buscar em um banco de dados.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "ferramenta",
+     "ferramentas"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "alterar",
+    "banco",
+    "buscar",
+    "dados",
+    "exemplo",
+    "ferramentas",
+    "internet",
+    "pesquisar",
+    "peça",
+    "planilhas",
+    "terceira",
+    "utilizar"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "alterar",
+    "banco",
+    "buscar",
+    "dados",
+    "exemplo",
+    "ferramentas",
+    "internet",
+    "pesquisar",
+    "peça",
+    "planilhas",
+    "terceira",
+    "utilizar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0029",
+    "EV-0030"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0002"
+   },
+   "local_id": "CL-0002",
+   "text": "O próximo passo é pegar uma chave de API do Groq ('grock'), da OpenAI ou de qualquer outro que você tiver.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "groq",
+    "openai"
+   ],
+   "channel_c_tokens": [
+    "chave",
+    "grock",
+    "groq",
+    "openai",
+    "outro",
+    "passo",
+    "pegar",
+    "próximo",
+    "qualquer",
+    "tiver"
+   ],
+   "channel_c_nonprocedural": [
+    "chave",
+    "grock",
+    "groq",
+    "openai",
+    "outro",
+    "passo",
+    "pegar",
+    "próximo",
+    "qualquer",
+    "tiver"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0006",
+    "EV-0007"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0004"
+   },
+   "local_id": "CL-0004",
+   "text": "O Redis Commander é um painel de gerenciamento do Redis no qual você pode visualizar os dados que estão lá dentro e editar ou apagar através do navegador.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "apagar",
+    "através",
+    "commander",
+    "dados",
+    "dentro",
+    "editar",
+    "estão",
+    "gerenciamento",
+    "navegador",
+    "painel",
+    "qual",
+    "redis",
+    "visualizar"
+   ],
+   "channel_c_nonprocedural": [
+    "apagar",
+    "através",
+    "commander",
+    "dados",
+    "editar",
+    "estão",
+    "gerenciamento",
+    "navegador",
+    "qual",
+    "redis",
+    "visualizar"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0005",
+    "EV-0006"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0006"
+   },
+   "local_id": "CL-0006",
+   "text": "É preciso copiar a chave/credencial e salvar num bloco de notas assim que ela é exibida, porque ao sair dessa tela não há mais como vê-la.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "bloco",
+    "chave",
+    "copiar",
+    "credencial",
+    "dessa",
+    "exibida",
+    "notas",
+    "preciso",
+    "sair",
+    "salvar",
+    "tela",
+    "vê-la"
+   ],
+   "channel_c_nonprocedural": [
+    "bloco",
+    "chave",
+    "copiar",
+    "credencial",
+    "dessa",
+    "exibida",
+    "notas",
+    "preciso",
+    "sair",
+    "salvar",
+    "vê-la"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0012",
+    "EV-0013"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0007"
+   },
+   "local_id": "CL-0007",
+   "text": "A quarta peça é o agente em si, onde você coloca as instruções do que ele deve fazer.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "coloca",
+    "instruções",
+    "peça",
+    "quarta"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "instruções",
+    "peça",
+    "quarta"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0030"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0008"
+   },
+   "local_id": "CL-0008",
+   "text": "Para instalar o Redis, você vai no EasyPanel ('eas panel') e clica no '+' para adicionar um novo serviço no seu projeto.",
+   "channel_a_concepts": [
+    "vps_hosting"
+   ],
+   "channel_a_evidence": {
+    "vps_hosting": [
+     "easypanel"
+    ]
+   },
+   "channel_b_named": [
+    "easypanel",
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "adicionar",
+    "clica",
+    "easypanel",
+    "instalar",
+    "novo",
+    "panel",
+    "projeto",
+    "redis",
+    "serviço"
+   ],
+   "channel_c_nonprocedural": [
+    "adicionar",
+    "easypanel",
+    "instalar",
+    "novo",
+    "panel",
+    "projeto",
+    "redis",
+    "serviço"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0002",
+    "EV-0003"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0009"
+   },
+   "local_id": "CL-0009",
+   "text": "O ID da mensagem fica em B data Key id.",
+   "channel_a_concepts": [
+    "message"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagem"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "data",
+    "fica",
+    "mensagem"
+   ],
+   "channel_c_nonprocedural": [
+    "data",
+    "fica",
+    "mensagem"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0023",
+    "EV-0024"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0010"
+   },
+   "local_id": "CL-0010",
+   "text": "A mensagem fica em Body data message conversation.",
+   "channel_a_concepts": [
+    "conversation",
+    "message"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagem"
+    ],
+    "conversation": [
+     "conversa"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "body",
+    "conversation",
+    "data",
+    "fica",
+    "mensagem",
+    "message"
+   ],
+   "channel_c_nonprocedural": [
+    "body",
+    "conversation",
+    "data",
+    "fica",
+    "mensagem",
+    "message"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0023"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0011"
+   },
+   "local_id": "CL-0011",
+   "text": "Na Evolution, clica-se na sessão, vai-se em events webhook e cola-se o URL ali.",
+   "channel_a_concepts": [
+    "evolution_api",
+    "qr_instance"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "qr_instance": [
+     "sessao"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "webhook"
+   ],
+   "channel_c_tokens": [
+    "clica-se",
+    "cola-se",
+    "events",
+    "evolution",
+    "sessão",
+    "vai-se",
+    "webhook"
+   ],
+   "channel_c_nonprocedural": [
+    "clica-se",
+    "cola-se",
+    "events",
+    "evolution",
+    "sessão",
+    "vai-se",
+    "webhook"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0016",
+    "EV-0017"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0012"
+   },
+   "local_id": "CL-0012",
+   "text": "A primeira peça do agente é o modelo de Inteligência Artificial que ele usa; o modelo é como se fosse o cérebro do agente.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "artificial",
+    "cérebro",
+    "fosse",
+    "inteligência",
+    "modelo",
+    "peça",
+    "primeira"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "artificial",
+    "cérebro",
+    "fosse",
+    "inteligência",
+    "modelo",
+    "peça",
+    "primeira"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0027",
+    "EV-0028"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0013"
+   },
+   "local_id": "CL-0013",
+   "text": "O campo quem mandou, onde se salva o número da pessoa que mandou a mensagem, fica dentro de body data Key remote JD.",
+   "channel_a_concepts": [
+    "message"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagem"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "body",
+    "campo",
+    "data",
+    "dentro",
+    "fica",
+    "mandou",
+    "mensagem",
+    "número",
+    "pessoa",
+    "quem",
+    "remote",
+    "salva"
+   ],
+   "channel_c_nonprocedural": [
+    "body",
+    "data",
+    "fica",
+    "mandou",
+    "mensagem",
+    "número",
+    "pessoa",
+    "quem",
+    "remote",
+    "salva"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0022",
+    "EV-0023"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0014"
+   },
+   "local_id": "CL-0014",
+   "text": "A segunda peça é a memória de chat do agente, onde ele guarda um histórico de mensagens que teve com alguma pessoa.",
+   "channel_a_concepts": [
+    "conversation",
+    "message"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagens"
+    ],
+    "conversation": [
+     "chat"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "alguma",
+    "chat",
+    "guarda",
+    "histórico",
+    "memória",
+    "mensagens",
+    "pessoa",
+    "peça",
+    "segunda",
+    "teve"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "alguma",
+    "chat",
+    "guarda",
+    "histórico",
+    "memória",
+    "mensagens",
+    "pessoa",
+    "peça",
+    "segunda",
+    "teve"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0028",
+    "EV-0029"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0015"
+   },
+   "local_id": "CL-0015",
+   "text": "Antes de criar o workflow no n8n, deve-se ir em settings > community nodes e verificar se os nodes da Evolution api estão instalados.",
+   "channel_a_concepts": [
+    "api_tool",
+    "automation",
+    "evolution_api"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "automation": [
+     "workflow"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "n8n"
+   ],
+   "channel_c_tokens": [
+    "community",
+    "criar",
+    "deve-se",
+    "estão",
+    "evolution",
+    "instalados",
+    "nodes",
+    "settings",
+    "verificar",
+    "workflow"
+   ],
+   "channel_c_nonprocedural": [
+    "community",
+    "deve-se",
+    "estão",
+    "evolution",
+    "instalados",
+    "nodes",
+    "settings",
+    "verificar",
+    "workflow"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0013"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0016"
+   },
+   "local_id": "CL-0016",
+   "text": "O agente de IA é composto por quatro peças.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "composto",
+    "peças",
+    "quatro"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "composto",
+    "peças",
+    "quatro"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0027"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0017"
+   },
+   "local_id": "CL-0017",
+   "text": "Se os nodes da Evolution api não estiverem instalados, deve-se clicar em Install, digitar 'n8n nodes Evolution api' e depois clicar em instalar.",
+   "channel_a_concepts": [
+    "api_tool",
+    "evolution_api"
+   ],
+   "channel_a_evidence": {
+    "evolution_api": [
+     "evolution"
+    ],
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "evolution",
+    "n8n"
+   ],
+   "channel_c_tokens": [
+    "clicar",
+    "deve-se",
+    "digitar",
+    "estiverem",
+    "evolution",
+    "instalados",
+    "instalar",
+    "install",
+    "nodes"
+   ],
+   "channel_c_nonprocedural": [
+    "deve-se",
+    "estiverem",
+    "evolution",
+    "instalados",
+    "instalar",
+    "install",
+    "nodes"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0014"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0018"
+   },
+   "local_id": "CL-0018",
+   "text": "Deve-se renomear esse node para dados.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "dados",
+    "deve-se",
+    "node",
+    "renomear"
+   ],
+   "channel_c_nonprocedural": [
+    "dados",
+    "deve-se",
+    "node",
+    "renomear"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0025"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0019"
+   },
+   "local_id": "CL-0019",
+   "text": "Nunca se usa diretamente os dados que vêm no webhook; sempre se adiciona um node set depois do webhook para organizá-los de uma forma melhor.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "webhook"
+   ],
+   "channel_c_tokens": [
+    "adiciona",
+    "dados",
+    "diretamente",
+    "forma",
+    "melhor",
+    "node",
+    "nunca",
+    "organizá-los",
+    "sempre",
+    "webhook"
+   ],
+   "channel_c_nonprocedural": [
+    "adiciona",
+    "dados",
+    "diretamente",
+    "forma",
+    "melhor",
+    "node",
+    "nunca",
+    "organizá-los",
+    "sempre",
+    "webhook"
+   ],
+   "negation_tokens": [
+    "nunca"
+   ],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0019",
+    "EV-0020"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0020"
+   },
+   "local_id": "CL-0020",
+   "text": "O autor apresenta o Groq ('grock') como uma opção porque o Groq é gratuito.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "groq"
+   ],
+   "channel_c_tokens": [
+    "apresenta",
+    "autor",
+    "gratuito",
+    "grock",
+    "groq",
+    "opção"
+   ],
+   "channel_c_nonprocedural": [
+    "apresenta",
+    "autor",
+    "gratuito",
+    "grock",
+    "groq",
+    "opção"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0007",
+    "EV-0008"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0021"
+   },
+   "local_id": "CL-0021",
+   "text": "O Redis é ideal para as operações que serão feitas (as apresentadas pelo autor).",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "apresentadas",
+    "autor",
+    "feitas",
+    "ideal",
+    "operações",
+    "redis",
+    "serão"
+   ],
+   "channel_c_nonprocedural": [
+    "apresentadas",
+    "autor",
+    "feitas",
+    "ideal",
+    "operações",
+    "redis",
+    "serão"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0002"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0022"
+   },
+   "local_id": "CL-0022",
+   "text": "No Redis é possível configurar dados que vão ter um tempo de vida.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "configurar",
+    "dados",
+    "possível",
+    "redis",
+    "tempo",
+    "vida"
+   ],
+   "channel_c_nonprocedural": [
+    "dados",
+    "possível",
+    "redis",
+    "tempo",
+    "vida"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0001",
+    "EV-0002"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0024"
+   },
+   "local_id": "CL-0024",
+   "text": "Após clicar em teste, aquele monte de coisa vira só esses cinco campos.",
+   "channel_a_concepts": [
+    "test_validate"
+   ],
+   "channel_a_evidence": {
+    "test_validate": [
+     "teste"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "após",
+    "aquele",
+    "campos",
+    "cinco",
+    "clicar",
+    "coisa",
+    "esses",
+    "monte",
+    "teste",
+    "vira"
+   ],
+   "channel_c_nonprocedural": [
+    "após",
+    "aquele",
+    "cinco",
+    "coisa",
+    "esses",
+    "monte",
+    "vira"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0024",
+    "EV-0025"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0025"
+   },
+   "local_id": "CL-0025",
+   "text": "O nome da pessoa fica em Body data push name.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "body",
+    "data",
+    "fica",
+    "name",
+    "nome",
+    "pessoa",
+    "push"
+   ],
+   "channel_c_nonprocedural": [
+    "body",
+    "data",
+    "fica",
+    "name",
+    "pessoa",
+    "push"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0024"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0026"
+   },
+   "local_id": "CL-0026",
+   "text": "No lado esquerdo você vai em 'API Keys' ('API Case'), clica para criar uma nova, dá um nome para ela, marca a caixinha e clica em submit.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "caixinha",
+    "case",
+    "clica",
+    "criar",
+    "esquerdo",
+    "keys",
+    "lado",
+    "marca",
+    "nome",
+    "nova",
+    "submit"
+   ],
+   "channel_c_nonprocedural": [
+    "caixinha",
+    "case",
+    "esquerdo",
+    "keys",
+    "marca",
+    "nova",
+    "submit"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0008",
+    "EV-0009"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0027"
+   },
+   "local_id": "CL-0027",
+   "text": "No site do Groq, você vai em 'Dev console' no canto e faz login com o Google.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "groq"
+   ],
+   "channel_c_tokens": [
+    "canto",
+    "console",
+    "google",
+    "groq",
+    "login",
+    "site"
+   ],
+   "channel_c_nonprocedural": [
+    "canto",
+    "console",
+    "google",
+    "groq",
+    "login",
+    "site"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0008"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0028"
+   },
+   "local_id": "CL-0028",
+   "text": "O Redis fica na opção 'redis' na parte de cima da lista de serviços; clica nela e coloca um nome para o serviço.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "cima",
+    "clica",
+    "coloca",
+    "fica",
+    "lista",
+    "nela",
+    "nome",
+    "opção",
+    "parte",
+    "redis",
+    "serviço",
+    "serviços"
+   ],
+   "channel_c_nonprocedural": [
+    "fica",
+    "lista",
+    "nela",
+    "opção",
+    "parte",
+    "redis",
+    "serviço",
+    "serviços"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0003"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0029"
+   },
+   "local_id": "CL-0029",
+   "text": "Na OpenAI é preciso colocar 5 (créditos/dólares, conforme dito na fonte) para poder gerar uma chave.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "openai"
+   ],
+   "channel_c_tokens": [
+    "chave",
+    "colocar",
+    "conforme",
+    "créditos",
+    "dito",
+    "dólares",
+    "fonte",
+    "gerar",
+    "openai",
+    "poder",
+    "preciso"
+   ],
+   "channel_c_nonprocedural": [
+    "chave",
+    "conforme",
+    "créditos",
+    "dito",
+    "dólares",
+    "fonte",
+    "openai",
+    "poder",
+    "preciso"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0010",
+    "EV-0011"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0030"
+   },
+   "local_id": "CL-0030",
+   "text": "O Redis é um banco de dados não relacional que utiliza chaves e valores para guardar os dados.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "banco",
+    "chaves",
+    "dados",
+    "guardar",
+    "redis",
+    "relacional",
+    "utiliza",
+    "valores"
+   ],
+   "channel_c_nonprocedural": [
+    "banco",
+    "chaves",
+    "dados",
+    "guardar",
+    "redis",
+    "relacional",
+    "utiliza",
+    "valores"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0001"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0031"
+   },
+   "local_id": "CL-0031",
+   "text": "A Instância fica em Body instance.",
+   "channel_a_concepts": [
+    "qr_instance"
+   ],
+   "channel_a_evidence": {
+    "qr_instance": [
+     "instancia"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "body",
+    "fica",
+    "instance",
+    "instância"
+   ],
+   "channel_c_nonprocedural": [
+    "body",
+    "fica",
+    "instance",
+    "instância"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0023"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0032"
+   },
+   "local_id": "CL-0032",
+   "text": "Ative a opção do Redis Commander porque ele é muito útil para o desenvolvimento.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [
+    "redis"
+   ],
+   "channel_c_tokens": [
+    "ative",
+    "commander",
+    "desenvolvimento",
+    "opção",
+    "redis",
+    "útil"
+   ],
+   "channel_c_nonprocedural": [
+    "ative",
+    "commander",
+    "desenvolvimento",
+    "opção",
+    "redis",
+    "útil"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0005"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0033"
+   },
+   "local_id": "CL-0033",
+   "text": "O autor deixa a senha em branco para que o sistema gere uma senha aleatória, e não mexe na versão.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "aleatória",
+    "autor",
+    "branco",
+    "deixa",
+    "gere",
+    "mexe",
+    "senha",
+    "sistema",
+    "versão"
+   ],
+   "channel_c_nonprocedural": [
+    "aleatória",
+    "autor",
+    "branco",
+    "deixa",
+    "mexe",
+    "senha",
+    "sistema",
+    "versão"
+   ],
+   "negation_tokens": [
+    "não"
+   ],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0003",
+    "EV-0004"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0034"
+   },
+   "local_id": "CL-0034",
+   "text": "Antes de criar o agente de IA, deve-se colocar um set vazio, porque isso vai ser melhor para nós no futuro.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agente",
+    "colocar",
+    "criar",
+    "deve-se",
+    "futuro",
+    "melhor",
+    "vazio"
+   ],
+   "channel_c_nonprocedural": [
+    "agente",
+    "deve-se",
+    "futuro",
+    "melhor",
+    "vazio"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0025",
+    "EV-0026"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0035"
+   },
+   "local_id": "CL-0035",
+   "text": "As três opções — enabled, base 64 e o evento 'messages up search' — têm que estar ativas, e depois deve-se clicar em salvar.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "ativas",
+    "base",
+    "clicar",
+    "deve-se",
+    "enabled",
+    "evento",
+    "messages",
+    "opções",
+    "salvar",
+    "search",
+    "três"
+   ],
+   "channel_c_nonprocedural": [
+    "ativas",
+    "base",
+    "deve-se",
+    "enabled",
+    "evento",
+    "messages",
+    "opções",
+    "salvar",
+    "search",
+    "três"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0017",
+    "EV-0018"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0036"
+   },
+   "local_id": "CL-0036",
+   "text": "Os cinco campos necessários são: quem mandou (o número da pessoa), a Instância que recebeu a mensagem, a mensagem, o ID da mensagem e o nome da pessoa.",
+   "channel_a_concepts": [
+    "message",
+    "qr_instance"
+   ],
+   "channel_a_evidence": {
+    "message": [
+     "mensagem"
+    ],
+    "qr_instance": [
+     "instancia"
+    ]
+   },
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "campos",
+    "cinco",
+    "instância",
+    "mandou",
+    "mensagem",
+    "necessários",
+    "nome",
+    "número",
+    "pessoa",
+    "quem",
+    "recebeu"
+   ],
+   "channel_c_nonprocedural": [
+    "cinco",
+    "instância",
+    "mandou",
+    "mensagem",
+    "necessários",
+    "número",
+    "pessoa",
+    "quem",
+    "recebeu"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0021",
+    "EV-0022"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0037"
+   },
+   "local_id": "CL-0037",
+   "text": "Depois desse set vazio pode-se colocar o ai Agent e fazer as configurações dele.",
+   "channel_a_concepts": [],
+   "channel_a_evidence": {},
+   "channel_b_named": [],
+   "channel_c_tokens": [
+    "agent",
+    "colocar",
+    "configurações",
+    "dele",
+    "desse",
+    "pode-se",
+    "vazio"
+   ],
+   "channel_c_nonprocedural": [
+    "agent",
+    "configurações",
+    "dele",
+    "desse",
+    "pode-se",
+    "vazio"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-03"
+   ],
+   "evidence_refs": [
+    "EV-0026",
+    "EV-0027"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0038"
+   },
+   "local_id": "CL-0038",
+   "text": "Para começar o workflow, adiciona-se um node de webhook, configura-se o método dele como post e copia-se o URL de teste.",
+   "channel_a_concepts": [
+    "automation",
+    "test_validate"
+   ],
+   "channel_a_evidence": {
+    "automation": [
+     "workflow"
+    ],
+    "test_validate": [
+     "teste"
+    ]
+   },
+   "channel_b_named": [
+    "webhook"
+   ],
+   "channel_c_tokens": [
+    "adiciona-se",
+    "começar",
+    "configura-se",
+    "copia-se",
+    "dele",
+    "método",
+    "node",
+    "post",
+    "teste",
+    "webhook",
+    "workflow"
+   ],
+   "channel_c_nonprocedural": [
+    "adiciona-se",
+    "começar",
+    "configura-se",
+    "copia-se",
+    "dele",
+    "método",
+    "node",
+    "post",
+    "webhook",
+    "workflow"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-02"
+   ],
+   "evidence_refs": [
+    "EV-0016"
+   ],
+   "provenance_resolves": true
+  },
+  {
+   "typed_ref": {
+    "source_package_hash": "5959b4ea1e8b91f570c17d61d03c4f2b6d00698801056a72a53c8e02b5a1d6c2",
+    "entity_kind": "claim",
+    "local_id": "CL-0039"
+   },
+   "local_id": "CL-0039",
+   "text": "Na OpenAI você vai nas configurações, em 'API Keys', clica para criar uma nova, dá um nome para ela e seleciona de qual projeto ela é.",
+   "channel_a_concepts": [
+    "api_tool"
+   ],
+   "channel_a_evidence": {
+    "api_tool": [
+     "api"
+    ]
+   },
+   "channel_b_named": [
+    "openai"
+   ],
+   "channel_c_tokens": [
+    "clica",
+    "configurações",
+    "criar",
+    "keys",
+    "nome",
+    "nova",
+    "openai",
+    "projeto",
+    "qual",
+    "seleciona"
+   ],
+   "channel_c_nonprocedural": [
+    "configurações",
+    "keys",
+    "nova",
+    "openai",
+    "projeto",
+    "qual"
+   ],
+   "negation_tokens": [],
+   "slice_provenance": [
+    "SL-C-01"
+   ],
+   "evidence_refs": [
+    "EV-0010"
+   ],
+   "provenance_resolves": true
+  }
+ ]
+}

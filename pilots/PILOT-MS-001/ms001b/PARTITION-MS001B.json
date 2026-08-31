@@ -1,0 +1,33 @@
+{
+ "pairset_hash": "a0b116d93f754576cf8fbbbf6eb1757b2837b7ea18b415f8e2bce30c1ee517f5",
+ "batch_size": 25,
+ "n_batches": 4,
+ "ordering": "deterministica por pair_id ascendente",
+ "batches": {
+  "BATCH-1": {
+   "n": 25,
+   "first": "0301f2981c5ef91c",
+   "last": "380d3655883c0938",
+   "batch_hash": "1ad77b474888e50e2197c052433eb17e0635ed0f1d0c8a50a3de8d555d4dddc8"
+  },
+  "BATCH-2": {
+   "n": 25,
+   "first": "3b7e86d884e4cecf",
+   "last": "7c01f1728d32dcd3",
+   "batch_hash": "062f9d83e6930a996985995479012a7968a21074308d00744a7ecbcb1d1d61ad"
+  },
+  "BATCH-3": {
+   "n": 25,
+   "first": "816377768e948b28",
+   "last": "c71f58a895d5a2f9",
+   "batch_hash": "2fe38932be5a1c3880a565292961bdcfb94abf22bacb3aa28d0a801fec9e5780"
+  },
+  "BATCH-4": {
+   "n": 22,
+   "first": "cbacf98d38b54610",
+   "last": "fa899ac75958c770",
+   "batch_hash": "14f2af24e883e3088c1b764962defa340551e639b284c107e4db69b080008792"
+  }
+ },
+ "regra": "as TRES runs usam os MESMOS quatro batches; proibido rebalancear conforme outputs"
+}

@@ -1,0 +1,93 @@
+DESENHO DO FUSION PACKAGE E DA IDENTIDADE — MS-001B. Nenhum Fusion e criado nesta rodada.
+
+=========================================================================
+ESTABILIDADE ENTRE RUNS — NENHUMA ARBITRAGEM SILENCIOSA
+=========================================================================
+Os TRES judgments sao PERSISTIDOS por (run_id, pair_id). relation_result NUNCA e campo
+mutavel compartilhado. RUN-2 nao sobrescreve RUN-1.
+
+Por par, apos as tres runs, um ESTADO DE ESTABILIDADE e derivado mecanicamente:
+
+  STABLE             3/3 com a MESMA relation, MESMA direction e scope_state
+                     materialmente compativel
+  PARTIALLY_STABLE   2/3 de acordo
+  UNSTABLE           tres divergentes, ou divergencia material nao resolvida
+
+PROIBIDO escolher automaticamente "a maioria" como verdade final. O estado de estabilidade
+e um FATO REGISTRADO, nao uma resolucao. Para o MS-001 experimental, o Fusion registra
+STABLE / PARTIALLY_STABLE / UNSTABLE e os tres judgments. Nenhuma arbitragem.
+
+=========================================================================
+EIXO DE GOVERNANCA — SEPARADO
+=========================================================================
+Toda relation que possa exigir decisao futura recebe, FORA do output do juiz:
+  governance_state = NOT_YET_ADJUDICATED
+CONTRADICTS NAO implica resolucao. Nenhuma relation produz precedence automatica.
+PROIBIDO escolher B ou C por data, autor, canal, modelo ou confianca informal.
+
+=========================================================================
+TRANSPORTE DE CANDIDATE — SEPARADO DA CAMADA DE CLAIM
+=========================================================================
+Os 16 Candidates ELIGIBLE (B=8, C=8) NAO entram no juiz semantico de Claims.
+O Fusion Package transporta essas estruturas source-local SEPARADAMENTE.
+NENHUMA relation de Claim reescreve Candidate source-local.
+Os 4 NOT_ELIGIBLE de C permanecem no Source Package e NAO sao transportados a populacao
+cross-source.
+
+=========================================================================
+MEMBROS DO FUSION PACKAGE EXPERIMENTAL
+=========================================================================
+  source_package_hash_B, source_package_hash_C
+  blocker_design_hash (v0.3) e selected_variant (V1)
+  pairset_hash e o PAIRSET completo com refs TIPADAS
+  blocker_trace (retidos e bloqueados, com reason codes)
+  judgments de TODAS as tres runs, por (run_id, pair_id)
+  relation_stability_state por par
+  governance_state por par
+  eligible_candidate_refs TIPADAS (B=8, C=8)
+  transported source-local structures (rules, workflows, anti-patterns)
+  provenance_ledger
+  unresolved_relation_states
+  open_questions
+  FUSION-CONFIG, FUSION-TRACE, fusion_id
+
+  ZERO Operationalization. ZERO MTX-POLICY.
+
+=========================================================================
+FORMULA DE fusion_id — EXATA
+=========================================================================
+  fusion_id = sha256(canon({
+     "source_package_hash_B":     "...",
+     "source_package_hash_C":     "...",
+     "blocker_design_hash":       "...",   # v0.3
+     "blocker_variant":           "V1",
+     "pairset_hash":              "...",
+     "relation_taxonomy_hash":    "...",
+     "relation_prompt_hash":      "...",
+     "relation_schema_hash":      "...",
+     "judge_model_policy_hash":   "...",
+     "relation_outputs_hash":     "..."    # canon dos tres runs persistidos
+  }))
+
+  NAO INCLUI: mtx_policy_hash · timestamp operacional · numero de run isolado ·
+              qualquer estado de governanca
+
+=========================================================================
+KILLS
+=========================================================================
+  PAIRSET_DRIFT   qualquer run que adicione, remova, troque par, ou reordene de forma
+                  semanticamente relevante -> INVALID
+  PACKAGE_DRIFT   source_package_hash diferente entre runs -> INVALID
+  SILENT_MAJORITY arbitragem automatica da maioria sem policy declarada -> proibido
+  MTX_IN_FUSION   mtx_policy_hash como input identitario -> INVALID
+
+=========================================================================
+AUDITORIA POS-HOC DOS CONTROLES DE CORPUS REAL
+=========================================================================
+BC1-BC4 NAO entram no prompt. O juiz nao sabe se um par vem de mapeamento de controle.
+DEPOIS dos resultados, auditar:
+  - como o juiz tratou os 27 pares de BC1, 7 de BC2, 55 de BC3 e 9 de BC4 presentes no
+    pairset V1;
+  - BC4 NAO deve produzir falsa contradicao por vocabulario compartilhado.
+BC5 tem 0 pares no pairset V1, porque o blocker funcionou; logo nao e julgado.
+Isso e MEDICAO DE CAPACIDADE POS-HOC, nunca input do juiz.

@@ -1,0 +1,16 @@
+POLITICA DE MODELO — MS-001B. Auditada SEM chamar.
+
+  requested model        claude-opus-5
+  expected resolved      claude-opus-5
+  thinking               {"type": "disabled"}
+  max_tokens             8000
+  temperature            OMITIDA — default do SDK, como no MS-001A
+  SDK                    anthropic 0.121.0, venv do projeto
+  credencial             ~/.anthropic_key
+
+  Ultima resolucao observada neste ambiente: MS-001A Execucao 2, 2026-08-30, DEZ chamadas
+  com model_resolved == model_requested == claude-opus-5 em todas.
+
+  A PRIMEIRA control call da RUN-1 verifica a resolucao AO VIVO.
+  resolved_model != claude-opus-5  ->  MS_001B_INVALID.
+  NENHUMA substituicao silenciosa. NENHUMA call de resolucao separada.

@@ -1,0 +1,67 @@
+{
+ "nota": "fixtures SINTETICOS fechados, fora do corpus real. Uma control call por run carrega J1-J10.",
+ "convencao_de_direcao": "LEFT_TO_RIGHT = a Claim da ESQUERDA tem a propriedade em relacao a DIREITA",
+ "controls": [
+  {"id":"J1","expect":{"relation":"IDENTICAL","direction":"NONE","scope_state":"EQUIVALENT_SCOPE"},
+   "left":{"text":"O acesso ao painel exige autenticacao por token.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9301","excerpt":"O painel so aceita a requisicao apos autenticacao por token."}]},
+   "right":{"text":"Para entrar no painel e necessario um token de autenticacao.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9302","excerpt":"Nao se entra no painel sem apresentar um token de autenticacao."}]}},
+
+  {"id":"J2","expect":{"relation":"CORROBORATES","direction":"NONE"},
+   "left":{"text":"Hospedar o servico em servidor proprio mantem o servico disponivel continuamente.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9303","excerpt":"Em servidor proprio o servico fica no ar o tempo todo."}]},
+   "right":{"text":"Rodar o servico apenas na maquina local faz o servico cair quando a maquina desliga.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9304","excerpt":"Rodando local, quando voce desliga a maquina o servico para."}]}},
+
+  {"id":"J3","expect":{"relation":"SPECIALIZES","direction":"RIGHT_TO_LEFT","scope_state":"NESTED_COMPATIBLE_SCOPE"},
+   "left":{"text":"E preciso configurar um webhook para receber eventos.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9305","excerpt":"Sem webhook configurado nenhum evento chega."}]},
+   "right":{"text":"E preciso configurar um webhook com metodo POST e ativar o evento de mensagem recebida.","qualifiers":{"scope":"eventos de mensagem"},
+            "evidence":[{"evidence_id":"EV-9306","excerpt":"Configure o webhook como POST e ative o evento de mensagem recebida."}]}},
+
+  {"id":"J4","expect":{"relation":"CONTRADICTS","direction":"NONE","scope_state":"EQUIVALENT_SCOPE"},
+   "left":{"text":"O limite maximo de instancias por conta e dez.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9307","excerpt":"Cada conta suporta no maximo dez instancias."}]},
+   "right":{"text":"O limite maximo de instancias por conta e tres.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9308","excerpt":"Cada conta suporta no maximo tres instancias."}]}},
+
+  {"id":"J5","expect":{"relation":"SUPERSEDES","direction":"RIGHT_TO_LEFT"},
+   "left":{"text":"Na versao 1 a autenticacao usa senha simples.","qualifiers":{"scope":"versao 1"},
+           "evidence":[{"evidence_id":"EV-9309","excerpt":"Na versao 1 a autenticacao era por senha simples."}]},
+   "right":{"text":"A versao 2 substitui a senha simples por token e a versao 1 deixa de ser suportada.","qualifiers":{"scope":"versao 2"},
+            "evidence":[{"evidence_id":"EV-9310","excerpt":"A versao 2 substitui a senha simples por token; a versao 1 nao e mais suportada."}]}},
+
+  {"id":"J6","expect":{"relation":"UNRELATED","direction":"NONE"},
+   "left":{"text":"O plano de servidor de oito gigabytes custa mais que o de dois.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9311","excerpt":"O plano de oito gigabytes e mais caro que o de dois."}]},
+   "right":{"text":"O campo que identifica quem enviou a mensagem fica dentro do corpo do evento.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9312","excerpt":"Quem enviou fica no corpo do evento."}]}},
+
+  {"id":"J7","expect":{"relation":"INDETERMINATE","direction":"NONE"},
+   "left":{"text":"O recurso X e obrigatorio neste cenario.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9313","excerpt":"A fonte informa que nao esta definido se o recurso X e obrigatorio ou opcional neste cenario."}]},
+   "right":{"text":"O recurso X pode ser dispensado neste cenario.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9314","excerpt":"Tambem nao esta definido se o recurso X pode ser dispensado."}]}},
+
+  {"id":"J8","expect":{"relation_not":"CONTRADICTS","preferred":"UNRELATED"},
+   "left":{"text":"A chave de API global do painel fica no e-mail de boas-vindas.","qualifiers":{"platform":"painel de instancias"},
+           "evidence":[{"evidence_id":"EV-9315","excerpt":"A chave de API global do painel chega no e-mail de boas-vindas."}]},
+   "right":{"text":"A chave de API do provedor de modelo e criada no console do provedor.","qualifiers":{"platform":"provedor de modelo"},
+            "evidence":[{"evidence_id":"EV-9316","excerpt":"No console do provedor de modelo voce cria a chave de API."}]}},
+
+  {"id":"J9","expect":{"relation_not":"CONTRADICTS","scope_state":"DIFFERENT_SCOPE"},
+   "left":{"text":"Para quem esta comecando, recomenda-se criar pelo painel simplificado.","qualifiers":{"audience":"iniciantes"},
+           "evidence":[{"evidence_id":"EV-9317","excerpt":"Para quem esta comecando, o painel simplificado e o recomendado."}]},
+   "right":{"text":"Para operacoes em escala, recomenda-se criar pelo gerenciador avancado.","qualifiers":{"audience":"operacao em escala"},
+            "evidence":[{"evidence_id":"EV-9318","excerpt":"Em escala, use o gerenciador avancado."}]}},
+
+  {"id":"J10","expect":{"relation":"IDENTICAL","direction":"NONE","scope_state":"EQUIVALENT_SCOPE"},
+   "left":{"text":"Nao e possivel enviar mensagem sem antes vincular o numero.","qualifiers":{},
+           "evidence":[{"evidence_id":"EV-9319","excerpt":"Sem vincular o numero, o envio de mensagem nao funciona."}]},
+   "right":{"text":"O vinculo do numero e pre-requisito para qualquer disparo de mensagem.","qualifiers":{},
+            "evidence":[{"evidence_id":"EV-9320","excerpt":"Qualquer disparo de mensagem depende de o numero estar vinculado."}]}}
+ ],
+ "gate": "os dez precisam passar integralmente. Falha em qualquer um: a RUN e INVALID, seus quatro batches avaliativos NAO sao queimados, e nao ha retry dentro da run.",
+ "J8_e_J9_sao_negativos": "J8 e J9 nao exigem label unico; exigem NAO-CONTRADICTS. J8 tem preferencia UNRELATED no fixture sintetico."
+}
