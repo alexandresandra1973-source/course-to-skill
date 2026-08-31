@@ -1,0 +1,10 @@
+POST-TEST EVIDENCE  2026-08-31T00:55:36-03:00
+--- env ---
+ANTHROPIC_API_KEY=UNSET
+ANTHROPIC_AUTH_TOKEN=UNSET
+ANTHROPIC_BASE_URL=UNSET
+--- ~/.anthropic_key stat ---
+atime=2026-08-30 03:19:56.449976008 -0300
+--- python processes ---
+(none)
+--- git status (must be clean) ---

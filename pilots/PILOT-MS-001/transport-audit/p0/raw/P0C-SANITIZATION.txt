@@ -1,0 +1,3 @@
+P0C-STDOUT.raw.sha256 = 2cffaaf2283829af6b4733493b2aa28bcb4d42fbb22134b6b9b4a9836b054d17
+P0C-STDOUT.sanitized.sha256 = c7ab18317230aaf6d7bbba307727ac97127cabeaaf744a74714325a63e2f4fef
+nota: a raw nao sanitizada NAO foi persistida no repo (continha o bearer OAuth).

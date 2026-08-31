@@ -1,0 +1,128 @@
+2026-08-31T04:07:58.445Z [DEBUG] MDM settings load completed in 22ms
+2026-08-31T04:07:58.474Z [DEBUG] Broken symlink or missing file encountered for settings.json at path: /etc/claude-code/managed-settings.json
+2026-08-31T04:07:58.475Z [DEBUG] CA certs: Config fallback - globalEnv keys: , settingsEnv keys: none
+2026-08-31T04:07:58.477Z [DEBUG] [init] configureGlobalMTLS starting
+2026-08-31T04:07:58.477Z [DEBUG] [init] configureGlobalMTLS complete
+2026-08-31T04:07:58.477Z [DEBUG] [init] configureGlobalAgents starting
+2026-08-31T04:07:58.477Z [DEBUG] CA certs: stores=bundled,system, extraCertsPath=undefined
+2026-08-31T04:07:58.477Z [DEBUG] CA certs: Loaded 121 bundled root certificates
+2026-08-31T04:07:58.490Z [DEBUG] CA certs: Loaded 243 system CA certificates
+2026-08-31T04:07:58.490Z [DEBUG] mTLS: Creating HTTPS agent with custom certificates
+2026-08-31T04:07:58.490Z [DEBUG] [init] configureGlobalAgents complete
+2026-08-31T04:07:58.492Z [DEBUG] Git remote URL: null
+2026-08-31T04:07:58.492Z [DEBUG] No git remote URL found
+2026-08-31T04:07:58.493Z [DEBUG] Error log sink initialized
+2026-08-31T04:07:58.583Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-08-31T04:07:58.583Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-08-31T04:07:58.589Z [DEBUG] [ToolSearch:optimistic] mode=tst, ENABLE_TOOL_SEARCH=undefined, result=true
+2026-08-31T04:07:58.594Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-08-31T04:07:58.603Z [DEBUG] [STARTUP] Running setup()...
+2026-08-31T04:07:58.610Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-08-31T04:07:58.610Z [DEBUG] Total plugin workflows loaded: 0
+2026-08-31T04:07:58.611Z [DEBUG] Total plugin commands loaded: 0
+2026-08-31T04:07:58.611Z [DEBUG] Total plugin skills loaded: 0 (0 duplicate/user-owned entries skipped)
+2026-08-31T04:07:58.618Z [DEBUG] Loading skills from: managed=/etc/claude-code/.claude/skills, user=/home/mtx/.claude/skills, project=[]
+2026-08-31T04:07:58.619Z [DEBUG] Git remote URL: null
+2026-08-31T04:07:58.619Z [DEBUG] No git remote URL found
+2026-08-31T04:07:58.619Z [DEBUG] Failed to stat directory /etc/claude-code/.claude/agents: ENOENT: no such file or directory, stat '/etc/claude-code/.claude/agents'
+2026-08-31T04:07:58.619Z [DEBUG] Total plugin agents loaded: 0
+2026-08-31T04:07:58.623Z [DEBUG] Failed to stat directory /etc/claude-code/.claude/commands: ENOENT: no such file or directory, stat '/etc/claude-code/.claude/commands'
+2026-08-31T04:07:58.623Z [DEBUG] Loaded 0 unique skills (0 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 0)
+2026-08-31T04:07:58.626Z [INFO] [uds-messaging] Listening: /run/user/1000/cc-socks/82125.sock
+2026-08-31T04:07:58.626Z [INFO] [uds-messaging] Inject messages (auth line optional here): { echo '{"type":"auth","token":"[REDACTED]"$CLAUDE_CODE_MESSAGING_TOKEN"'"}'; echo '{"type":"user","message":{"role":"user","content":"hello"}}'; } | socat - UNIX-CONNECT:/run/user/1000/cc-socks/82125.sock
+2026-08-31T04:07:58.627Z [INFO] [uds-messaging] Connect when the data is ready (e.g. out=$(cmd); printf '%s\n' "$out" | nc -N -U "$CLAUDE_CODE_MESSAGING_SOCKET" — or the socat form above): a connection that sends no complete line within 30000 ms is closed
+2026-08-31T04:07:58.629Z [DEBUG] Broken symlink or missing file encountered for settings.json at path: /etc/claude-code/managed-settings.json
+2026-08-31T04:07:58.630Z [DEBUG] Error log sink initialized
+2026-08-31T04:07:58.630Z [DEBUG] Broken symlink or missing file encountered for settings.json at path: /tmp/claude-1000/-home-mtx-course-to-skill-claude/c8ca79b3-91ac-4bb3-a289-ccb76967a053/scratchpad/p0run/.claude/settings.json
+2026-08-31T04:07:58.634Z [DEBUG] hooks modules not loaded: rollout flag (tengu_plugin_hooks_modules) is off, from the default (a cold GrowthBook cache, no payload yet)
+2026-08-31T04:07:58.636Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-08-31T04:07:58.644Z [DEBUG] Cannot acquire lock for 2.1.251 - held by PID 2914
+2026-08-31T04:07:58.644Z [ERROR] NON-FATAL: Lock acquisition failed for /home/mtx/.local/share/claude/versions/2.1.251 (expected in multi-process scenarios): Lock already held by another process
+2026-08-31T04:07:58.647Z [DEBUG] [STARTUP] setup() completed in 44ms
+2026-08-31T04:07:58.647Z [DEBUG] Cleared mTLS configuration cache
+2026-08-31T04:07:58.647Z [DEBUG] Cleared proxy agent cache
+2026-08-31T04:07:58.647Z [DEBUG] mTLS: Creating HTTPS agent with custom certificates
+2026-08-31T04:07:58.648Z [DEBUG] Broken symlink or missing file encountered for settings.json at path: /tmp/claude-1000/-home-mtx-course-to-skill-claude/c8ca79b3-91ac-4bb3-a289-ccb76967a053/scratchpad/p0run/.claude/settings.local.json
+2026-08-31T04:07:58.649Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-08-31T04:07:58.652Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills, 42 bundled skills, 0 builtin plugin skills
+2026-08-31T04:07:58.658Z [DEBUG] [STARTUP] Commands and agents loaded in 9ms
+2026-08-31T04:07:58.659Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-08-31T04:07:58.659Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-08-31T04:07:58.659Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-08-31T04:07:58.659Z [DEBUG] Starting background startup prefetches
+2026-08-31T04:07:58.660Z [DEBUG] [Bootstrap] Fetching
+2026-08-31T04:07:58.673Z [DEBUG] Passes: Using fresh cached eligibility data
+2026-08-31T04:07:58.678Z [DEBUG] [STARTUP] MCP configs resolved in 0ms (awaited at +84ms)
+2026-08-31T04:07:58.688Z [DEBUG] Total LSP servers loaded: 0
+2026-08-31T04:07:58.689Z [DEBUG] Cleared mTLS configuration cache
+2026-08-31T04:07:58.689Z [DEBUG] Cleared proxy agent cache
+2026-08-31T04:07:58.689Z [DEBUG] mTLS: Creating HTTPS agent with custom certificates
+2026-08-31T04:07:58.689Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-08-31T04:07:58.689Z [DEBUG] LSP manager initialized with 0 servers
+2026-08-31T04:07:58.689Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-08-31T04:07:58.690Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:58.691Z [DEBUG] [MCP] --mcp-config servers running fully async (nonblocking)
+2026-08-31T04:07:58.691Z [DEBUG] [MCP] claude.ai connectors running fully async (nonblocking)
+2026-08-31T04:07:58.691Z [DEBUG] LSP server manager initialized successfully
+2026-08-31T04:07:58.691Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-08-31T04:07:58.696Z [DEBUG] [servedCatalog] off (flag)
+2026-08-31T04:07:58.733Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-08-31T04:07:58.733Z [DEBUG] [3P telemetry] isTelemetryEnabled=false (CLAUDE_CODE_ENABLE_TELEMETRY=undefined)
+2026-08-31T04:07:58.734Z [DEBUG] [event-loop-stall] detector started (interval=200ms, threshold=500ms)
+2026-08-31T04:07:58.741Z [DEBUG] Grove: Using fresh cached config
+2026-08-31T04:07:58.750Z [DEBUG] [sessionRegistry] sweep declined by isRegistrySweepPermitted() — dead records are left in place (neither counted nor deleted)
+2026-08-31T04:07:58.762Z [DEBUG] [sessionRegistry] sweep declined by isRegistrySweepPermitted() — dead records are left in place (neither counted nor deleted)
+2026-08-31T04:07:58.763Z [DEBUG] Ripgrep first use test: PASSED (mode=embedded, path=/home/mtx/.local/share/claude/versions/2.1.251)
+2026-08-31T04:07:58.764Z [DEBUG] "rg error (signal=undefined, code=2, stderr: rg: /home/mtx/.claude/plugins/cache: IO error for operation on /home/mtx/.claude/plugins/cache: No such file or directory (os error 2)\n), 0 results"
+2026-08-31T04:07:58.765Z [DEBUG] Failed to stat directory /etc/claude-code/.claude/skills: ENOENT: no such file or directory, stat '/etc/claude-code/.claude/skills'
+2026-08-31T04:07:58.766Z [DEBUG] Watching for changes in setting files /home/mtx/.claude/settings.json...
+2026-08-31T04:07:58.880Z [DEBUG] [auto-mode] verifyAutoModeGateAccess: enabledState=enabled disabledBySettings=false model=claude-opus-5 modelSupported=true disableFastModeBreakerFires=false carouselAvailable=true canEnterAuto=true
+2026-08-31T04:07:58.888Z [DEBUG] Preserving file permissions: 100600
+2026-08-31T04:07:58.888Z [DEBUG] Writing to temp file: /home/mtx/.claude.json.tmp.82125.ff26ab78cebb
+2026-08-31T04:07:58.889Z [DEBUG] Applied original permissions to temp file
+2026-08-31T04:07:58.892Z [DEBUG] Temp file written successfully, size: 62371 bytes
+2026-08-31T04:07:58.892Z [DEBUG] Renaming /home/mtx/.claude.json.tmp.82125.ff26ab78cebb to /home/mtx/.claude.json
+2026-08-31T04:07:58.892Z [DEBUG] File /home/mtx/.claude.json written atomically
+2026-08-31T04:07:58.995Z [DEBUG] Org fast mode: disabled (extra_usage_disabled)
+2026-08-31T04:07:59.028Z [DEBUG] [Bootstrap] Fetch ok
+2026-08-31T04:07:59.030Z [DEBUG] [Bootstrap] Cache updated, persisting to disk
+2026-08-31T04:07:59.041Z [DEBUG] Preserving file permissions: 100600
+2026-08-31T04:07:59.041Z [DEBUG] Writing to temp file: /home/mtx/.claude.json.tmp.82125.4cfb72d4fd2e
+2026-08-31T04:07:59.042Z [DEBUG] Applied original permissions to temp file
+2026-08-31T04:07:59.044Z [DEBUG] Temp file written successfully, size: 62712 bytes
+2026-08-31T04:07:59.044Z [DEBUG] Renaming /home/mtx/.claude.json.tmp.82125.4cfb72d4fd2e to /home/mtx/.claude.json
+2026-08-31T04:07:59.044Z [DEBUG] File /home/mtx/.claude.json written atomically
+2026-08-31T04:07:59.096Z [DEBUG] [print] turns run on the engine session (createHeadlessSession)
+2026-08-31T04:07:59.106Z [DEBUG] [ScheduledTasks] scheduler start() — enabled=false, hasTasks=false
+2026-08-31T04:07:59.124Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.251.5ff; cc_entrypoint=sdk-cli; cch=00000;
+2026-08-31T04:07:59.125Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.126Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.135Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-08-31T04:07:59.136Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-08-31T04:07:59.138Z [WARN] [3P telemetry] Event dropped (no event logger initialized): user_prompt
+2026-08-31T04:07:59.146Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.146Z [DEBUG] [session-notices] advertise=false mode=dontAsk flag=false(fallback) pollChannel=false remote=false remoteEnv=false nonInteractive=true
+2026-08-31T04:07:59.147Z [DEBUG] [engine] turn 1 start
+2026-08-31T04:07:59.157Z [DEBUG] attribution header x-anthropic-billing-header: cc_version=2.1.251.eec; cc_entrypoint=sdk-cli; cch=00000; cc_prompt_id=d247e314-7c44-40e7-9428-12d51dc0013e;
+2026-08-31T04:07:59.157Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.158Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.159Z [DEBUG] [claudeai-mcp] Fetching from https://api.anthropic.com/v1/mcp_servers?limit=1000
+2026-08-31T04:07:59.159Z [DEBUG] mcp runtime arm: v2 (source: growthbook)
+2026-08-31T04:07:59.163Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.163Z [DEBUG] [API:timing] dispatching to firstParty model=claude-haiku-4-5-20251001
+2026-08-31T04:07:59.164Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:07:59.164Z [DEBUG] [API:timing] dispatching to firstParty model=claude-opus-5
+2026-08-31T04:07:59.167Z [DEBUG] [API REQUEST] /v1/messages x-client-request-id=e0eb0646-e588-4fda-b2d9-901c66c865ff source=generate_session_title
+2026-08-31T04:07:59.169Z [DEBUG] [API REQUEST] /v1/messages x-client-request-id=8c6f1812-2a4e-4419-b1b1-cc8b61b15100 source=sdk
+2026-08-31T04:07:59.523Z [DEBUG] [claudeai-mcp] Fetched 4 servers
+2026-08-31T04:07:59.528Z [DEBUG] installPluginsForHeadless: starting
+2026-08-31T04:07:59.529Z [DEBUG] installPluginsForHeadless: no marketplaces declared
+2026-08-31T04:07:59.899Z [DEBUG] Stream started - received first chunk
+2026-08-31T04:07:59.899Z [DEBUG] [API:timing] first byte after 736ms
+2026-08-31T04:08:00.962Z [DEBUG] Stream started - received first chunk
+2026-08-31T04:08:00.962Z [DEBUG] [API:timing] first byte after 1798ms
+2026-08-31T04:08:01.198Z [DEBUG] [engine] turn 1 end (turns=1 usage in=1322 out=34 cost=$0.0035 api=2974ms stop=end_turn resultLen=14)
+2026-08-31T04:08:01.199Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-08-31T04:08:01.208Z [DEBUG] [uds-messaging] Shutting down
+2026-08-31T04:08:01.211Z [DEBUG] LSP server manager shut down successfully
+2026-08-31T04:09:16.326Z [WARN] [event-loop-stall] blocked for 0ms monotonic (wall drift 74912ms, clock jump 74912ms, expected 200ms). Total stalls: 1, cumulative: 0ms monotonic / 74912ms wall [likely sleep/wake] blocked_write=false sigcont=false cpu=46ms majflt=0 rss=224MB heap=69MB ext=29MB

@@ -1,0 +1,14 @@
+PRE-TEST EVIDENCE  2026-08-31T00:55:12-03:00
+--- env ---
+ANTHROPIC_API_KEY=UNSET
+ANTHROPIC_AUTH_TOKEN=UNSET
+ANTHROPIC_BASE_URL=UNSET
+--- ~/.anthropic_key stat ---
+atime=2026-08-30 03:19:56.449976008 -0300/home/mtx/.anthropic_keymtime=2026-08-27 15:19:34.568145972 -0300/home/mtx/.anthropic_keyctime=2026-08-27 15:19:34.568145972 -0300
+--- ~/.claude/.credentials.json stat ---
+mtime=2026-08-30 20:31:38.814169130 -0300
+--- python processes ---
+   2706  105245 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+--- claude processes ---
+   2914  105219 claude
+  80691     220 claude
